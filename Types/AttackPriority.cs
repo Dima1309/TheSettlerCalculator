@@ -1,6 +1,6 @@
 ﻿namespace TheSettlersCalculator.Types
 {
-	internal enum AttackPriority
+	public enum AttackPriority
 	{
 		AvantGarde,
 		Normal,

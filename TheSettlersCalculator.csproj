@@ -73,6 +73,9 @@
     <Compile Include="Types\PlayerUnits.cs" />
     <Compile Include="Types\Squad.cs" />
     <Compile Include="Types\Unit.cs" />
+    <Compile Include="WpfTypes\AttackPriorityVisibilityConverter.cs" />
+    <Compile Include="WpfTypes\BoolVisibilityConverter.cs" />
+    <Compile Include="WpfTypes\ByteVisibilityConverter.cs" />
     <Compile Include="WpfTypes\CampTypeConverter.cs" />
     <Compile Include="WpfTypes\EnemyCamp.cs" />
     <Compile Include="WpfTypes\Losses.cs" />

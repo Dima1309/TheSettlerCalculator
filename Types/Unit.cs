@@ -2,7 +2,7 @@
 
 namespace TheSettlersCalculator.Types
 {
-	internal struct Unit
+	public struct Unit
 	{
 		#region Fields
 		private string m_name;

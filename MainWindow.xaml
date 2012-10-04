@@ -4,6 +4,41 @@
     <Window.Resources>
         <src:CampTypeConverter x:Key="campTypeConverter"/>
         <src:TowerBonusConverter x:Key="towerBonusConverter"/>
+        <src:BoolVisibilityConverter x:Key="boolVisibilityConverter"/>
+        <src:ByteVisibilityConverter x:Key="byteVisibilityConverter"/>
+        <src:AttackPriorityVisibilityConverter x:Key="attackPriorityVisibilityConverter"/>
+        <StackPanel Orientation="Vertical" x:Key="UnitTooltipTemplate">
+            <Label Content="{Binding Unit.Name}" FontWeight="Bold"></Label>
+            <StackPanel Orientation="Horizontal">
+                <Label Content="Здоровье"></Label>
+                <Label Content="{Binding Unit.Health}"></Label>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Label Content="Мин. урон"></Label>
+                <Label Content="{Binding Unit.MinDamage}"></Label>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Label Content="Макс. урон"></Label>
+                <Label Content="{Binding Unit.MaxDamage}"></Label>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Label Content="Точность"></Label>
+                <Label Content="{Binding Unit.Accuracy}"></Label>
+            </StackPanel>
+            <StackPanel Visibility="{Binding IgnoreTowerBonus}" Orientation="Horizontal">
+                <Label Content="Опыт"></Label>
+                <Label Content="{Binding Unit.Experience}"></Label>
+            </StackPanel>
+            <Label Visibility="{Binding Unit.AttackPriority, Converter={StaticResource attackPriorityVisibilityConverter}, ConverterParameter=first}" Content="Нападает первым"></Label>
+            <Label Visibility="{Binding Unit.AttackPriority, Converter={StaticResource attackPriorityVisibilityConverter}, ConverterParameter=last}" Content="Нападает последним"></Label>
+            <Label Visibility="{Binding Unit.AttackWeaknessTarget, Converter={StaticResource boolVisibilityConverter}}" Content="Атакует слабейщукю цель"></Label>
+            <Label Visibility="{Binding Unit.TowerBonus, Converter={StaticResource boolVisibilityConverter}}" Content="Бонус к защите в башне"></Label>
+            <Label Visibility="{Binding Unit.AttackOnArea, Converter={StaticResource boolVisibilityConverter}}" Content="Урон по площади"></Label>
+            <StackPanel Visibility="{Binding Unit.IgnoreTowerBonus, Converter={StaticResource byteVisibilityConverter}}" Orientation="Horizontal">
+                <Label Content="Игнорирует зашиту в башне"></Label>
+                <Label Content="{Binding Unit.IgnoreTowerBonus}"></Label>
+            </StackPanel>
+        </StackPanel>
     </Window.Resources>
     <Grid>        
         <Grid.ColumnDefinitions>
@@ -75,7 +110,6 @@
                 <RadioButton Margin="3" VerticalAlignment="Center"></RadioButton>
                 <RadioButton Margin="3" VerticalAlignment="Center"></RadioButton>
                 <RadioButton Margin="3" VerticalAlignment="Center"></RadioButton>
-                <Button Margin="3" VerticalAlignment="Center">+</Button>
             </StackPanel>
             <ItemsControl ItemsSource="{Binding Model.PlayerUnits,ElementName=Win}">
                 <ItemsControl.ItemTemplate>
@@ -86,7 +120,7 @@
                                 <ColumnDefinition Width="*"></ColumnDefinition>
                                 <ColumnDefinition Width="60"></ColumnDefinition>
                             </Grid.ColumnDefinitions>
-                            <Image Width="30" Height="30" Grid.Column="0" Source="{Binding Icon}"></Image>
+                            <Image Width="30" Height="30" Grid.Column="0" Source="{Binding Icon}" ToolTip="{StaticResource UnitTooltipTemplate}"></Image>
                             <Label Grid.Column="1" Content="{Binding Name}"/>
                             <TextBox MaxWidth="50" MinWidth="50" Margin="0,5" Grid.Column="2" Text="{Binding Count}"/>
                         </Grid>                    
@@ -122,7 +156,7 @@
                                 <ColumnDefinition Width="*"></ColumnDefinition>
                                 <ColumnDefinition Width="60"></ColumnDefinition>
                             </Grid.ColumnDefinitions>
-                            <Image Width="30" Height="30" Grid.Column="0" Source="{Binding Icon}"></Image>
+                            <Image Width="30" Height="30" Grid.Column="0" Source="{Binding Icon}"  ToolTip="{StaticResource UnitTooltipTemplate}"></Image>
                             <Label Grid.Column="1"  Content="{Binding Name}"/>
                             <TextBox MaxWidth="50" MinWidth="50" Margin="0,5" Grid.Column="2" Text="{Binding Count}"/>
                         </Grid>

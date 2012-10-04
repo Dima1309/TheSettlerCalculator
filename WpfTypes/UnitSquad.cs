@@ -49,7 +49,7 @@ namespace TheSettlersCalculator.WpfTypes
             }
         }
 
-    	internal Unit Unit
+		public Unit Unit
     	{
     		get { return m_unit; }
     	}
