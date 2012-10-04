@@ -170,7 +170,7 @@
         
             <StackPanel Orientation="Vertical">
                 <Label>Игрок:</Label>
-                <Grid>
+                        <Grid>
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="*" />
                         <ColumnDefinition Width="60" />

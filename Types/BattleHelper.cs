@@ -182,18 +182,10 @@ namespace TheSettlersCalculator.Types
 			}
 
 			Shuffle(originalDamages, random);
-			int[] damages = GetDamageWithTargetUnitReduction(
-				battle.Sides[(int)defenderSideType].Units[targetIndex],
-				originalDamages,
-				reducedDamages);
 
 			if (targetIndex < 0)
 			{
 				targetIndex = GetTargetIndex(unit, defenderSideStep.Counts, defenderSideStep.Healts);
-				damages = GetDamageWithTargetUnitReduction(
-					battle.Sides[(int)defenderSideType].Units[targetIndex],
-					originalDamages,
-					reducedDamages);
 			}
 
 			if (targetIndex < 0)
@@ -201,6 +193,11 @@ namespace TheSettlersCalculator.Types
 				// no more targets
 				return -1;
 			}
+
+            int[] damages = GetDamageWithTargetUnitReduction(
+                battle.Sides[(int)defenderSideType].Units[targetIndex],
+                originalDamages,
+                reducedDamages);
 
 			foreach(int temp in damages)
 			{
@@ -252,15 +249,16 @@ namespace TheSettlersCalculator.Types
 					if(unit.AttackWeaknessTarget || defenderSideStep.Counts[targetIndex] == 0)
 					{
 						targetIndex = GetTargetIndex(unit, defenderSideStep.Counts, defenderSideStep.Healts);
-						damages = GetDamageWithTargetUnitReduction(
-							battle.Sides[(int)defenderSideType].Units[targetIndex],
-							originalDamages,
-							reducedDamages);
 
 						if (targetIndex < 0)
 						{
 							return targetIndex;
 						}
+
+                        damages = GetDamageWithTargetUnitReduction(
+                            battle.Sides[(int)defenderSideType].Units[targetIndex],
+                            originalDamages,
+                            reducedDamages);
 					}
 				}
 			}
