@@ -1,0 +1,21 @@
+﻿<Window x:Class="TheSettlersCalculator.QuestMapWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="QuestMapWindow" 
+        Height="{Binding Model.Map.Height, ElementName=Win}" 
+        Width="{Binding Model.Map.Width, ElementName=Win}"
+        x:Name="Win" Loaded="Win_Loaded">
+    <Grid>           
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <Image Name="MapImage" Source="{Binding Model.Map, ElementName=Win}" 
+               Height="{Binding Model.Map.Height, ElementName=Win}" 
+               Width="{Binding Model.Map.Width, ElementName=Win}"
+                Grid.Column="0" Grid.Row="0"></Image>        
+    </Grid>
+</Window>

@@ -1,0 +1,164 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{A50E23CD-59E4-49AE-9CE3-D023B914AED2}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TheSettlersCalculator</RootNamespace>
+    <AssemblyName>TheSettlersCalculator</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="Helper\ImageHelper.cs" />
+    <Compile Include="QuestMapWindow.xaml.cs">
+      <DependentUpon>QuestMapWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Quests\DarkTemplareQuest.cs" />
+    <Compile Include="Quests\Quest.cs" />
+    <Compile Include="Quests\Quests.cs" />
+    <Compile Include="Statistics\Statistics.cs" />
+    <Compile Include="Types\AttackPriority.cs" />
+    <Compile Include="Types\Battle.cs" />
+    <Compile Include="Types\BattleHelper.cs" />
+    <Compile Include="Types\BattleSide.cs" />
+    <Compile Include="Types\BattleSideStep.cs" />
+    <Compile Include="Types\BattleSideType.cs" />
+    <Compile Include="Types\BattleStep.cs" />
+    <Compile Include="Types\BattleWaves.cs" />
+    <Compile Include="Types\Calculator.cs" />
+    <Compile Include="Types\Calculator2.cs" />
+    <Compile Include="Types\CampType.cs" />
+    <Compile Include="Types\ICalculator.cs" />
+    <Compile Include="Types\PlayerUnits.cs" />
+    <Compile Include="Types\Squad.cs" />
+    <Compile Include="Types\Unit.cs" />
+    <Compile Include="WpfTypes\CampTypeConverter.cs" />
+    <Compile Include="WpfTypes\EnemyCamp.cs" />
+    <Compile Include="WpfTypes\Losses.cs" />
+    <Compile Include="WpfTypes\MainWindowModel.cs" />
+    <Compile Include="WpfTypes\SimpleSquareAdorner.cs" />
+    <Compile Include="WpfTypes\TowerBonusConverter.cs" />
+    <Compile Include="WpfTypes\UnitSquad.cs" />
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="QuestMapWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Quests\Images\bowman.png" />
+    <EmbeddedResource Include="Quests\Images\cannoneer.png" />
+    <EmbeddedResource Include="Quests\Images\cavalry.png" />
+    <EmbeddedResource Include="Quests\Images\crossbowman.png" />
+    <EmbeddedResource Include="Quests\Images\elitesoldier.png" />
+    <EmbeddedResource Include="Quests\Images\longbowman.png" />
+    <EmbeddedResource Include="Quests\Images\militia.png" />
+    <EmbeddedResource Include="Quests\Images\recruit.png" />
+    <EmbeddedResource Include="Quests\Images\soldier.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Quests\Images\Cultist.png" />
+    <EmbeddedResource Include="Quests\Images\DarkHighPriest.png" />
+    <EmbeddedResource Include="Quests\Images\DarkPriest.png" />
+    <EmbeddedResource Include="Quests\Images\dog.png" />
+    <EmbeddedResource Include="Quests\Images\Fanatic.png" />
+    <EmbeddedResource Include="Quests\Images\Firedancer.png" />
+    <EmbeddedResource Include="Quests\Images\ranger.png" />
+    <EmbeddedResource Include="Quests\Images\ShadowSneaker.png" />
+    <EmbeddedResource Include="Quests\Images\skunk.png" />
+    <EmbeddedResource Include="Quests\Images\stoneThrower.png" />
+    <EmbeddedResource Include="Quests\Images\swampWitch.png" />
+    <EmbeddedResource Include="Quests\Images\thug.png" />
+    <EmbeddedResource Include="Quests\Images\wolf.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Quests\Icons\Die_schwarzen_Priester.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Quests\Maps\die-schwarzen-priester.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
