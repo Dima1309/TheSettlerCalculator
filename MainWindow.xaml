@@ -7,6 +7,7 @@
         <src:BoolVisibilityConverter x:Key="boolVisibilityConverter"/>
         <src:ByteVisibilityConverter x:Key="byteVisibilityConverter"/>
         <src:AttackPriorityVisibilityConverter x:Key="attackPriorityVisibilityConverter"/>
+        <src:UserUnitsWarningCountBrushConverter x:Key="userUnitsWarningCountBrushConverter"/>
         <StackPanel Orientation="Vertical" x:Key="UnitTooltipTemplate">
             <Label Content="{Binding Unit.Name}" FontWeight="Bold"></Label>
             <StackPanel Orientation="Horizontal">
@@ -54,7 +55,7 @@
         </Grid.RowDefinitions>
 
         <StackPanel  Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="3" Orientation="Horizontal">
-            <CheckBox Margin="10,10,10,0" Grid.Column="0" Grid.Row="0">
+            <CheckBox Margin="10,10,10,0" Grid.Column="0" Grid.Row="0" IsChecked="{Binding Model.VeteranAvailable, ElementName=Win}">
                 Ветеран
             </CheckBox>
 
@@ -122,12 +123,17 @@
                             </Grid.ColumnDefinitions>
                             <Image Width="30" Height="30" Grid.Column="0" Source="{Binding Icon}" ToolTip="{StaticResource UnitTooltipTemplate}"></Image>
                             <Label Grid.Column="1" Content="{Binding Name}"/>
-                            <TextBox MaxWidth="50" MinWidth="50" Margin="0,5" Grid.Column="2" Text="{Binding Count}"/>
+                            <src:NumberTextBox MaxWidth="50" MinWidth="50" Margin="0,5" Grid.Column="2" MinValue="0" MaxValue="{Binding Model.PlayerUnitLimit, ElementName=Win}">
+                                <src:NumberTextBox.Text>
+                                    <Binding Path="Count" UpdateSourceTrigger="PropertyChanged">
+                                    </Binding>
+                                </src:NumberTextBox.Text>
+                            </src:NumberTextBox>
                         </Grid>                    
                     </DataTemplate>
                 </ItemsControl.ItemTemplate>                    
             </ItemsControl>
-            <Label Content="Всего:"/>
+            <Label Content="{Binding Model.PlayerUnitsCount,ElementName=Win}" ContentStringFormat="{}Всего: {0}" FontWeight="Bold" Foreground="{Binding Model.UserUnitsCountWarning, ElementName=Win, Converter={StaticResource userUnitsWarningCountBrushConverter}}"/>
             <RadioButton Margin="5,5" >
                 <RadioButton.IsChecked>
                     <Binding Path="Model.PlayerTowerBonus" ElementName="Win" Converter="{StaticResource towerBonusConverter}" ConverterParameter="0" ></Binding>
@@ -158,7 +164,7 @@
                             </Grid.ColumnDefinitions>
                             <Image Width="30" Height="30" Grid.Column="0" Source="{Binding Icon}"  ToolTip="{StaticResource UnitTooltipTemplate}"></Image>
                             <Label Grid.Column="1"  Content="{Binding Name}"/>
-                            <TextBox MaxWidth="50" MinWidth="50" Margin="0,5" Grid.Column="2" Text="{Binding Count}"/>
+                            <src:NumberTextBox MaxWidth="50" MinWidth="50" Margin="0,5" Grid.Column="2" Text="{Binding Count}"/>
                         </Grid>
                     </DataTemplate>
                 </ItemsControl.ItemTemplate>

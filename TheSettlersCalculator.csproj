@@ -37,6 +37,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -80,9 +81,12 @@
     <Compile Include="WpfTypes\EnemyCamp.cs" />
     <Compile Include="WpfTypes\Losses.cs" />
     <Compile Include="WpfTypes\MainWindowModel.cs" />
+    <Compile Include="WpfTypes\NumberTextBox.cs" />
+    <Compile Include="WpfTypes\RangeValidationRule.cs" />
     <Compile Include="WpfTypes\SimpleSquareAdorner.cs" />
     <Compile Include="WpfTypes\TowerBonusConverter.cs" />
     <Compile Include="WpfTypes\UnitSquad.cs" />
+    <Compile Include="WpfTypes\UserUnitsWarningCountBrushConverter.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>

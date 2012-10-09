@@ -24,16 +24,23 @@ namespace TheSettlersCalculator.WpfTypes
 		private double m_playerTowerBonus;
 		private double m_enemyTowerBonus;
 		private Quest m_activeQuest;
-		private EnemyCamp m_activeEnemyCamp;		
+		private EnemyCamp m_activeEnemyCamp;
+		private bool m_veteranAvailable;
+		private bool m_userUnitsCountWarning;
 		#endregion
 
 		#region Constructor
 		internal MainWindowModel()
-		{
+		{			
 			DarkTemplareQuest quest = new DarkTemplareQuest();
 			foreach (Unit unit in Types.PlayerUnits.Units)
 			{
 				m_playerUnits.Add(new UnitSquad(unit, 0));
+			}
+
+			foreach(UnitSquad squad in  m_playerUnits)
+			{
+				squad.PropertyChanged += UpdateUserUnitCount;
 			}
 
 			Quests.Add(quest);
@@ -43,6 +50,20 @@ namespace TheSettlersCalculator.WpfTypes
 		#endregion
 
 		#region Properties
+		public int PlayerUnitsCount
+		{
+			get 
+			{ 
+				int result = 0;
+				foreach(UnitSquad squad in m_playerUnits)
+				{
+					result += squad.Count;
+				}
+
+				return result;
+			}
+		}
+
 		public ObservableCollection<UnitSquad> PlayerUnits
 		{
 			get { return m_playerUnits; }
@@ -152,6 +173,42 @@ namespace TheSettlersCalculator.WpfTypes
 			get { return m_enemyTowerBonus; }
 			set { m_enemyTowerBonus = value; }
 		}
+
+		public int PlayerUnitLimit
+		{
+			get { return m_veteranAvailable ? 250 : 200; }
+		}
+
+		public bool VeteranAvailable
+		{
+			get { return m_veteranAvailable; }
+			set
+			{
+				if (m_veteranAvailable != value)
+				{
+					m_veteranAvailable = value;
+					OnPropertyChanged("PlayerUnitLimit");
+					CheckUserUnitsCount();					
+				}
+			}
+		}
+
+		public bool UserUnitsCountWarning
+		{
+			get
+			{
+				return m_userUnitsCountWarning;
+			}
+
+			set
+			{
+				if (m_userUnitsCountWarning != value)
+				{
+					m_userUnitsCountWarning = value;
+					OnPropertyChanged("UserUnitsCountWarning");
+				}
+			}
+		}
 		#endregion
 
 		#region Methods
@@ -193,6 +250,21 @@ namespace TheSettlersCalculator.WpfTypes
 					statistics.AvgDefenderLosses[i],
 					statistics.MaxDefenderLosses[i]));
 			}
+		}
+
+		private void UpdateUserUnitCount(object sender, PropertyChangedEventArgs e)
+		{
+			if (e.PropertyName=="Count")
+			{
+				OnPropertyChanged("PlayerUnitsCount");
+				CheckUserUnitsCount();
+			}
+		}
+
+		private void CheckUserUnitsCount()
+		{
+			int maxCount = PlayerUnitLimit;
+			UserUnitsCountWarning = PlayerUnitsCount > maxCount;
 		}
 		#endregion
 	}
