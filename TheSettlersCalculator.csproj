@@ -61,10 +61,17 @@
     <Compile Include="Statistics\Statistics.cs" />
     <Compile Include="Types\AttackPriority.cs" />
     <Compile Include="Types\Battle.cs" />
+    <Compile Include="Types\BattleCompleteHandler.cs" />
     <Compile Include="Types\BattleHelper.cs" />
     <Compile Include="Types\BattleSide.cs" />
     <Compile Include="Types\BattleSideStep.cs" />
     <Compile Include="Types\BattleSideType.cs" />
+    <Compile Include="Types\Simulation\BattleSimulation.cs" />
+    <Compile Include="Types\Simulation\Round.cs" />
+    <Compile Include="Types\Simulation\SimulationGroup.cs" />
+    <Compile Include="Types\Simulation\SquadAttack.cs" />
+    <Compile Include="Types\Simulation\SquadState.cs" />
+    <Compile Include="Types\Simulation\Step.cs" />
     <Compile Include="Types\BattleStep.cs" />
     <Compile Include="Types\BattleWaves.cs" />
     <Compile Include="Types\Calculator.cs" />
@@ -72,13 +79,22 @@
     <Compile Include="Types\CampType.cs" />
     <Compile Include="Types\ICalculator.cs" />
     <Compile Include="Types\PlayerUnits.cs" />
+    <Compile Include="Types\RoundStateHandler.cs" />
+    <Compile Include="Types\Simulation\UnitAttack.cs" />
     <Compile Include="Types\Squad.cs" />
     <Compile Include="Types\Unit.cs" />
-    <Compile Include="WpfTypes\AttackPriorityVisibilityConverter.cs" />
-    <Compile Include="WpfTypes\BoolVisibilityConverter.cs" />
-    <Compile Include="WpfTypes\ByteVisibilityConverter.cs" />
-    <Compile Include="WpfTypes\CampTypeConverter.cs" />
+    <Compile Include="Types\UnitAttackHandler.cs" />
+    <Compile Include="WpfTypes\Converters\AttackPriorityStringConverter.cs" />
+    <Compile Include="WpfTypes\Converters\AttackPriorityVisibilityConverter.cs" />
+    <Compile Include="WpfTypes\Converters\BoolVisibilityConverter.cs" />
+    <Compile Include="WpfTypes\Converters\ByteVisibilityConverter.cs" />
+    <Compile Include="WpfTypes\Converters\CampTypeConverter.cs" />
+    <Compile Include="WpfTypes\Converters\HealthBrushConverter.cs" />
+    <Compile Include="WpfTypes\Converters\IntNegativeVisibilityConverter.cs" />
+    <Compile Include="WpfTypes\Converters\LossesVisibilityConverter.cs" />
+    <Compile Include="WpfTypes\Converters\ObjectVisibilityConverter.cs" />
     <Compile Include="WpfTypes\EnemyCamp.cs" />
+    <Compile Include="WpfTypes\Converters\IntVisibilityConverter.cs" />
     <Compile Include="WpfTypes\Losses.cs" />
     <Compile Include="WpfTypes\MainWindowModel.cs" />
     <Compile Include="WpfTypes\NumberTextBox.cs" />
@@ -159,6 +175,9 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Quests\Maps\die-schwarzen-priester.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Quests\Images\general.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

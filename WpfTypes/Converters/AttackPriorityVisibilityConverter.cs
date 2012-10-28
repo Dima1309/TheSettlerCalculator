@@ -4,7 +4,7 @@ using System.Windows;
 using System.Windows.Data;
 using TheSettlersCalculator.Types;
 
-namespace TheSettlersCalculator.WpfTypes
+namespace TheSettlersCalculator.WpfTypes.Converters
 {
 	[ValueConversion(typeof(AttackPriority), typeof(Visibility))]
 	public class AttackPriorityVisibilityConverter : IValueConverter

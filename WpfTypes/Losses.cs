@@ -48,7 +48,7 @@ namespace TheSettlersCalculator.WpfTypes
 			get { return m_avgCount; }
 		}
 
-		internal Unit Unit
+		public Unit Unit
 		{
 			get { return m_unit; }
 		}

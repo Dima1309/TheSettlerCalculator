@@ -2,20 +2,23 @@
 using System.Globalization;
 using System.Windows;
 using System.Windows.Data;
+using System.Windows.Media;
 
-namespace TheSettlersCalculator.WpfTypes
+namespace TheSettlersCalculator.WpfTypes.Converters
 {
-	[ValueConversion(typeof(bool), typeof(Visibility))]
-	public class BoolVisibilityConverter: IValueConverter
+	[ValueConversion(typeof(int), typeof(Brush))]
+	public class HealthBrushConverter : IValueConverter
 	{
 		public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
 		{
-			if (!(value is bool))
+			if ((int)value <= 0)
 			{
-				return DependencyProperty.UnsetValue;
+				SolidColorBrush brush = new SolidColorBrush(Colors.Red);
+				brush.Opacity = 0.3;
+				return brush;
 			}
 
-			return (bool) value ? Visibility.Visible : Visibility.Collapsed;
+			return DependencyProperty.UnsetValue;
 		}
 
 		public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)

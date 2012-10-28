@@ -5,6 +5,7 @@ namespace TheSettlersCalculator.Types
 	internal static class PlayerUnits 
 	{
 		#region Constants
+		internal const int GENERAL = -1;
 		internal const int RECRUIT = 0;
 		internal const int MILITIAMAN = 1;
 		internal const int SOLDIER = 2;
@@ -17,25 +18,46 @@ namespace TheSettlersCalculator.Types
 		#endregion
 
 		#region Fields
-		private static Unit[] m_units;
+		private static Unit[] s_units;
+		private static Unit s_general;
 		#endregion
 
 		public static Unit[] Units
 		{
 			get
 			{
-				if (m_units == null)
+				if (s_units == null)
 				{
 					InitializeUnits();
 				}
 
-				return m_units;
+				return s_units;
+			}
+		}
+
+		public static Unit General
+		{
+			get
+			{
+				if (s_general == null)
+				{
+					s_general = new Unit();
+					s_general.Name = "Генерал";
+					s_general.Health = 1;
+					s_general.MinDamage = 120;
+					s_general.MaxDamage = 120;
+					s_general.Accuracy = 100;
+					s_general.AttackPriority = AttackPriority.Normal;
+					s_general.Icon = ImageHelper.LoadPng("TheSettlersCalculator.Quests.Images.general.png");
+				}
+				
+				return s_general;
 			}
 		}
 
 		private static void InitializeUnits()
 		{				
-			m_units = new Unit[9];
+			s_units = new Unit[9];
 			Unit unit = new Unit();
 			unit.Name = "Новобранец";
 			unit.Health = 40;
@@ -45,7 +67,7 @@ namespace TheSettlersCalculator.Types
 			unit.AttackPriority = AttackPriority.Normal;
 			unit.Experience = 2;
 			unit.Icon = ImageHelper.LoadPng("TheSettlersCalculator.Quests.Images.recruit.png");
-			m_units[0] = unit;
+			s_units[0] = unit;
 
 			unit = new Unit();
 			unit.Name = "Ополченец";
@@ -56,7 +78,7 @@ namespace TheSettlersCalculator.Types
 			unit.AttackPriority = AttackPriority.Normal;
 			unit.Experience = 9;
 			unit.Icon = ImageHelper.LoadPng("TheSettlersCalculator.Quests.Images.militia.png");
-			m_units[1] = unit;
+			s_units[1] = unit;
 
 			unit = new Unit();
 			unit.Name = "Солдат";
@@ -67,7 +89,7 @@ namespace TheSettlersCalculator.Types
 			unit.AttackPriority = AttackPriority.Normal;
 			unit.Experience = 10;
 			unit.Icon = ImageHelper.LoadPng("TheSettlersCalculator.Quests.Images.soldier.png");
-			m_units[2] = unit;
+			s_units[2] = unit;
 
 			unit = new Unit();
 			unit.Name = "Элитный Солдат";
@@ -78,7 +100,7 @@ namespace TheSettlersCalculator.Types
 			unit.AttackPriority = AttackPriority.Normal;
 			unit.Experience = 20;
 			unit.Icon = ImageHelper.LoadPng("TheSettlersCalculator.Quests.Images.elitesoldier.png");
-			m_units[3] = unit;
+			s_units[3] = unit;
 
 			unit = new Unit();
 			unit.Name = "Кавалерия";
@@ -90,7 +112,7 @@ namespace TheSettlersCalculator.Types
 			unit.Experience = 8;
 			unit.AttackWeaknessTarget = true;
 			unit.Icon = ImageHelper.LoadPng("TheSettlersCalculator.Quests.Images.cavalry.png");
-			m_units[4] = unit;
+			s_units[4] = unit;
 
 			unit = new Unit();
 			unit.Name = "Лучник";
@@ -102,7 +124,7 @@ namespace TheSettlersCalculator.Types
 			unit.Experience = 3;
 			unit.TowerBonus = true;
 			unit.Icon = ImageHelper.LoadPng("TheSettlersCalculator.Quests.Images.bowman.png");
-			m_units[5] = unit;
+			s_units[5] = unit;
 
 			unit = new Unit();
 			unit.Name = "Стрелок с длинным луком";
@@ -114,7 +136,7 @@ namespace TheSettlersCalculator.Types
 			unit.Experience = 8;
 			unit.TowerBonus = true;
 			unit.Icon = ImageHelper.LoadPng("TheSettlersCalculator.Quests.Images.longbowman.png");
-			m_units[6] = unit;
+			s_units[6] = unit;
 
 			unit = new Unit();
 			unit.Name = "Арбалетчик";
@@ -126,7 +148,7 @@ namespace TheSettlersCalculator.Types
 			unit.Experience = 20;
 			unit.TowerBonus = true;			
 			unit.Icon = ImageHelper.LoadPng("TheSettlersCalculator.Quests.Images.crossbowman.png");
-			m_units[7] = unit;
+			s_units[7] = unit;
 
 			unit = new Unit();
 			unit.Name = "Канонир";
@@ -139,7 +161,7 @@ namespace TheSettlersCalculator.Types
 			unit.TowerBonus = true;
 			unit.IgnoreTowerBonus = 100;
 			unit.Icon = ImageHelper.LoadPng("TheSettlersCalculator.Quests.Images.cannoneer.png");
-			m_units[8] = unit;
+			s_units[8] = unit;
 		}
 	}
 }

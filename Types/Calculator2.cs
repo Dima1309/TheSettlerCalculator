@@ -4,7 +4,7 @@ using System.Threading;
 
 namespace TheSettlersCalculator.Types
 {
-	internal class Calculator2 : TheSettlersCalculator.Types.Calculator
+	internal class Calculator2 : Calculator
 	{
 		#region Fields
 		private Thread[] m_threads;
@@ -74,7 +74,7 @@ namespace TheSettlersCalculator.Types
 
 			for(int i = 0; i < threadParameter.IterationCount; i++)
 			{
-				List<BattleStep> result = BattleHelper.CalculateBattle2(threadParameter.Battle, threadParameter.BattleWaves, random);
+				List<BattleStep> result = BattleHelper.CalculateBattle2(threadParameter.Battle, threadParameter.BattleWaves, random, null, null);
 
 				lock(m_battles)
 				{

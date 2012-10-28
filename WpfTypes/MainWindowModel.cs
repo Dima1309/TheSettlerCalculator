@@ -3,6 +3,7 @@ using System.Collections.ObjectModel;
 using System.ComponentModel;
 using TheSettlersCalculator.Quests;
 using TheSettlersCalculator.Types;
+using TheSettlersCalculator.Types.Simulation;
 
 namespace TheSettlersCalculator.WpfTypes
 {
@@ -19,14 +20,15 @@ namespace TheSettlersCalculator.WpfTypes
 		private readonly ObservableCollection<UnitSquad> m_enemyUnits = new ObservableCollection<UnitSquad>();
 		private readonly ObservableCollection<EnemyCamp> m_activeQuestCamps = new ObservableCollection<EnemyCamp>();
 		private readonly ObservableCollection<Quest> m_quests = new ObservableCollection<Quest>();
-		private readonly ObservableCollection<Losses> m_playerLosses = new ObservableCollection<Losses>();
-		private readonly ObservableCollection<Losses> m_enemyLosses = new ObservableCollection<Losses>();
+		private readonly List<Losses> m_playerLosses = new List<Losses>();
+		private readonly List<Losses> m_enemyLosses = new List<Losses>();
 		private double m_playerTowerBonus;
 		private double m_enemyTowerBonus;
 		private Quest m_activeQuest;
 		private EnemyCamp m_activeEnemyCamp;
 		private bool m_veteranAvailable;
 		private bool m_userUnitsCountWarning;
+		private BattleSimulation m_simulation;
 		#endregion
 
 		#region Constructor
@@ -152,12 +154,12 @@ namespace TheSettlersCalculator.WpfTypes
 			}
 		}
 
-		public ObservableCollection<Losses> PlayerLosses
+		public List<Losses> PlayerLosses
 		{
 			get { return m_playerLosses; }
 		}
 
-		public ObservableCollection<Losses> EnemyLosses
+		public List<Losses> EnemyLosses
 		{
 			get { return m_enemyLosses; }
 		}
@@ -209,6 +211,20 @@ namespace TheSettlersCalculator.WpfTypes
 				}
 			}
 		}
+
+		public BattleSimulation Simulation
+		{
+			get
+			{
+				return m_simulation;
+			}
+
+			set
+			{
+				m_simulation = value;
+				OnPropertyChanged("Simulation");
+			}
+		}
 		#endregion
 
 		#region Methods
@@ -223,7 +239,7 @@ namespace TheSettlersCalculator.WpfTypes
 		}
 
 		internal void Calculate()
-		{
+		{			
 			Calculator calculator = new Calculator(ROUNDS);
 			//unist, counts, generatl, enemy units, counts, generals
 			Battle battle = new Battle(PlayerUnits, true, EnemyUnits, false);
@@ -250,6 +266,11 @@ namespace TheSettlersCalculator.WpfTypes
 					statistics.AvgDefenderLosses[i],
 					statistics.MaxDefenderLosses[i]));
 			}
+
+			OnPropertyChanged("PlayerLosses");
+			OnPropertyChanged("EnemyLosses");
+
+			Simulation = new BattleSimulation(battle);
 		}
 
 		private void UpdateUserUnitCount(object sender, PropertyChangedEventArgs e)

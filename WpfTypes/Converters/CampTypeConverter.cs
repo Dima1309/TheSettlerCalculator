@@ -5,7 +5,7 @@ using System.Windows.Data;
 using System.Windows.Media;
 using TheSettlersCalculator.Types;
 
-namespace TheSettlersCalculator.WpfTypes
+namespace TheSettlersCalculator.WpfTypes.Converters
 {
 	[ValueConversion(typeof(CampType), typeof(Brush))]
 	public class CampTypeConverter : IValueConverter
