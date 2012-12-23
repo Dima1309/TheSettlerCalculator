@@ -239,6 +239,12 @@
     <EmbeddedResource Include="Quests\Images\shaman.png" />
     <EmbeddedResource Include="Quests\Images\tribesman.png" />
   </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Quests\Images\fullback.png" />
+    <EmbeddedResource Include="Quests\Images\goalkeeper.png" />
+    <EmbeddedResource Include="Quests\Images\midfielder.png" />
+    <EmbeddedResource Include="Quests\Images\striker.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
