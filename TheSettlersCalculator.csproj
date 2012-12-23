@@ -58,7 +58,9 @@
     <Compile Include="Quests\DarkTemplareQuest.cs" />
     <Compile Include="Quests\Quest.cs" />
     <Compile Include="Quests\Quests.cs" />
+    <Compile Include="Statistics\MultiWaveStatistics.cs" />
     <Compile Include="Statistics\Statistics.cs" />
+    <Compile Include="Statistics\WaveKey.cs" />
     <Compile Include="Types\AttackPriority.cs" />
     <Compile Include="Types\Battle.cs" />
     <Compile Include="Types\BattleCompleteHandler.cs" />
@@ -66,6 +68,11 @@
     <Compile Include="Types\BattleSide.cs" />
     <Compile Include="Types\BattleSideStep.cs" />
     <Compile Include="Types\BattleSideType.cs" />
+    <Compile Include="Types\EnemyUnits.cs" />
+    <Compile Include="Types\MultiWaveBattleCompleteHandler.cs" />
+    <Compile Include="Types\MultiWaveBattleWaveCompleteHandler.cs" />
+    <Compile Include="Types\MultiWaveBattle.cs" />
+    <Compile Include="Types\MultiWaveBattleType.cs" />
     <Compile Include="Types\Simulation\BattleSimulation.cs" />
     <Compile Include="Types\Simulation\Round.cs" />
     <Compile Include="Types\Simulation\SimulationGroup.cs" />
@@ -178,6 +185,59 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Quests\Images\general.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Quests\Images\scavenger.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Quests\Images\roughneck.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Quests\Images\oneeyedbert.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Quests\Images\chuck.png" />
+    <EmbeddedResource Include="Quests\Images\metal_toothed.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Quests\Images\wild_mary.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Quests\Images\big_bertha.png" />
+    <EmbeddedResource Include="Quests\Images\sir_robin.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Quests\Images\caltrop.png" />
+    <EmbeddedResource Include="Quests\Images\crazy_cook.png" />
+    <EmbeddedResource Include="Quests\Images\deckscrubber.png" />
+    <EmbeddedResource Include="Quests\Images\gunman.png" />
+    <EmbeddedResource Include="Quests\Images\knifethrower.png" />
+    <EmbeddedResource Include="Quests\Images\petty_officer_2nd_class.png" />
+    <EmbeddedResource Include="Quests\Images\saber_rattler.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Quests\Images\dancing_dervish.png" />
+    <EmbeddedResource Include="Quests\Images\night_spawn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Quests\Images\cataphract.png" />
+    <EmbeddedResource Include="Quests\Images\composite_bow.png" />
+    <EmbeddedResource Include="Quests\Images\housecarl.png" />
+    <EmbeddedResource Include="Quests\Images\jomviking.png" />
+    <EmbeddedResource Include="Quests\Images\karl.png" />
+    <EmbeddedResource Include="Quests\Images\lance_rider.png" />
+    <EmbeddedResource Include="Quests\Images\nomad.png" />
+    <EmbeddedResource Include="Quests\Images\riding_amazonian.png" />
+    <EmbeddedResource Include="Quests\Images\riding_bowman.png" />
+    <EmbeddedResource Include="Quests\Images\thrall.png" />
+    <EmbeddedResource Include="Quests\Images\uproarious_bull.png" />
+    <EmbeddedResource Include="Quests\Images\valkyrie.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Quests\Images\croaker.png" />
+    <EmbeddedResource Include="Quests\Images\jaguar_warrior.png" />
+    <EmbeddedResource Include="Quests\Images\shaman.png" />
+    <EmbeddedResource Include="Quests\Images\tribesman.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

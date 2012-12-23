@@ -1,4 +1,5 @@
 ﻿using TheSettlersCalculator.Helper;
+using TheSettlersCalculator.Properties;
 
 namespace TheSettlersCalculator.Types
 {
@@ -59,7 +60,7 @@ namespace TheSettlersCalculator.Types
 		{				
 			s_units = new Unit[9];
 			Unit unit = new Unit();
-			unit.Name = "Новобранец";
+			unit.Name = Resources.UNIT_RECRUIT;
 			unit.Health = 40;
 			unit.MinDamage = 15;
 			unit.MaxDamage = 30;
@@ -70,7 +71,7 @@ namespace TheSettlersCalculator.Types
 			s_units[0] = unit;
 
 			unit = new Unit();
-			unit.Name = "Ополченец";
+			unit.Name = Resources.UNIT_MILITIA;
 			unit.Health = 60;
 			unit.MinDamage = 20;
 			unit.MaxDamage = 40;
@@ -81,7 +82,7 @@ namespace TheSettlersCalculator.Types
 			s_units[1] = unit;
 
 			unit = new Unit();
-			unit.Name = "Солдат";
+			unit.Name = Resources.UNIT_SOLDIER;
 			unit.Health = 90;
 			unit.MinDamage = 20;
 			unit.MaxDamage = 40;
@@ -92,7 +93,7 @@ namespace TheSettlersCalculator.Types
 			s_units[2] = unit;
 
 			unit = new Unit();
-			unit.Name = "Элитный Солдат";
+			unit.Name = Resources.UNIT_ELITE_SOLDIER;
 			unit.Health = 120;
 			unit.MinDamage = 20;
 			unit.MaxDamage = 40;
@@ -103,7 +104,7 @@ namespace TheSettlersCalculator.Types
 			s_units[3] = unit;
 
 			unit = new Unit();
-			unit.Name = "Кавалерия";
+			unit.Name = Resources.UNIT_CAVALRY;
 			unit.Health = 5;
 			unit.MinDamage = 5;
 			unit.MaxDamage = 10;
@@ -115,7 +116,7 @@ namespace TheSettlersCalculator.Types
 			s_units[4] = unit;
 
 			unit = new Unit();
-			unit.Name = "Лучник";
+			unit.Name = Resources.UNIT_BOWMAN;
 			unit.Health = 10;
 			unit.MinDamage = 20;
 			unit.MaxDamage = 40;
@@ -127,7 +128,7 @@ namespace TheSettlersCalculator.Types
 			s_units[5] = unit;
 
 			unit = new Unit();
-			unit.Name = "Стрелок с длинным луком";
+			unit.Name = Resources.UNIT_LONGBOWMAN;
 			unit.Health = 10;
 			unit.MinDamage = 30;
 			unit.MaxDamage = 60;
@@ -139,7 +140,7 @@ namespace TheSettlersCalculator.Types
 			s_units[6] = unit;
 
 			unit = new Unit();
-			unit.Name = "Арбалетчик";
+			unit.Name = Resources.UNIT_CROSSBOWMAN;
 			unit.Health = 10;
 			unit.MinDamage = 45;
 			unit.MaxDamage = 90;
@@ -151,7 +152,7 @@ namespace TheSettlersCalculator.Types
 			s_units[7] = unit;
 
 			unit = new Unit();
-			unit.Name = "Канонир";
+			unit.Name = Resources.UNIT_CANNONNEER;
 			unit.Health = 60;
 			unit.MinDamage = 60;
 			unit.MaxDamage = 120;

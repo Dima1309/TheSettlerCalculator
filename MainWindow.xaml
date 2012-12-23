@@ -92,6 +92,8 @@
             </Expander>
         </DataTemplate>
     </Window.Resources>
+    <TabControl>
+        <TabItem Header="Калькулятор">
     <Grid>        
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"></ColumnDefinition>
@@ -104,7 +106,6 @@
             <RowDefinition Height="*"></RowDefinition>
             <RowDefinition Height="52"></RowDefinition>
         </Grid.RowDefinitions>
-
         
         <StackPanel  Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="3" Orientation="Horizontal">
             <CheckBox Margin="10,10,10,0" Grid.Column="0" Grid.Row="0" IsChecked="{Binding Model.VeteranAvailable, ElementName=Win}">
@@ -158,7 +159,7 @@
         <ScrollViewer VerticalScrollBarVisibility="Auto" Grid.Column="0" Grid.Row="1">
             <StackPanel Name="PlayerUnitsPanel" Orientation="Vertical">           
             <StackPanel Orientation="Horizontal">
-                <Label>Атака волны:</Label>
+                <Label>Волны:</Label>
                 <RadioButton Margin="3" VerticalAlignment="Center"></RadioButton>
                 <RadioButton Margin="3" VerticalAlignment="Center"></RadioButton>
                 <RadioButton Margin="3" VerticalAlignment="Center"></RadioButton>
@@ -208,7 +209,16 @@
 
         <ScrollViewer VerticalScrollBarVisibility="Auto" Grid.Column="1" Grid.Row="1">
             <StackPanel Name="EnemyUnitsPanel" Orientation="Vertical">
-                <ItemsControl ItemsSource="{Binding Model.EnemyUnits,ElementName=Win}">
+                    <StackPanel Orientation="Horizontal">
+                        <Label>Волны:</Label>
+                        <RadioButton Margin="3" VerticalAlignment="Center"></RadioButton>
+                        <RadioButton Margin="3" VerticalAlignment="Center"></RadioButton>
+                        <RadioButton Margin="3" VerticalAlignment="Center"></RadioButton>
+                        <RadioButton Margin="3" VerticalAlignment="Center"></RadioButton>
+                        <RadioButton Margin="3" VerticalAlignment="Center"></RadioButton>
+                    </StackPanel>
+
+                     <ItemsControl ItemsSource="{Binding Model.EnemyUnits,ElementName=Win}">
                     <ItemsControl.ItemTemplate>
                         <DataTemplate>
                             <Grid>
@@ -470,4 +480,8 @@
         </StackPanel>
         </ScrollViewer>
     </Grid>
+        </TabItem>
+        <TabItem Header="Подбор состава"></TabItem>
+        <TabItem Header="Опции"></TabItem>
+    </TabControl>
 </Window>

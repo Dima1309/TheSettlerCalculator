@@ -8,7 +8,6 @@ namespace TheSettlersCalculator.Statistics
 	{
 		#region Fields
 		private readonly Battle m_battle;
-		private IList<BattleStep> m_result;
 		private BattleStep m_minAttackerResult;
 		private BattleStep m_maxAttackerResult;
 		private BattleStep m_minDefenderResult;
@@ -37,11 +36,6 @@ namespace TheSettlersCalculator.Statistics
 		internal Battle Battle
 		{
 			get { return m_battle; }
-		}
-
-		internal IList<BattleStep> Result
-		{
-			get { return m_result; }
 		}
 
 		internal short[] MinAttackerLosses
@@ -156,7 +150,6 @@ namespace TheSettlersCalculator.Statistics
 
 			if (m_minAttackerLosses == null)
 			{
-				m_result = args.Steps;
 				m_minAttackerResult = lastStep;
 				m_maxAttackerResult = lastStep;
 				m_minDefenderResult = lastStep;
@@ -242,6 +235,156 @@ namespace TheSettlersCalculator.Statistics
 			}
 
 			m_count = Count + 1;
+		}
+
+		/// <summary>
+		/// Added statistic information for this battle.
+		/// </summary>
+		/// <param name="statistics">New statistis.</param>
+		internal void AddStatistics(Statistics statistics)
+		{
+			if (statistics.m_count == 0)
+			{
+				return;
+			}
+		 
+			if (m_minAttackerLosses==null || CompareLosses(m_minAttackerLosses, statistics.m_minAttackerLosses) > 0)
+			{
+				m_minAttackerLosses = statistics.m_minAttackerLosses;
+				m_minAttackerResult = statistics.m_minAttackerResult;
+			}
+
+			if (m_maxAttackerLosses==null || CompareLosses(m_maxAttackerLosses, statistics.m_maxAttackerLosses) < 0)
+			{
+				m_maxAttackerLosses = statistics.m_maxAttackerLosses;
+				m_maxAttackerResult = statistics.m_maxAttackerResult;
+			}
+
+			if (m_minDefenderLosses == null || CompareLosses(m_minDefenderLosses, statistics.m_minDefenderLosses) > 0)
+			{
+				m_minDefenderLosses = statistics.m_minDefenderLosses;
+				m_minDefenderResult = statistics.m_minDefenderResult;
+			}
+
+			if (m_maxDefenderLosses == null || CompareLosses(m_maxDefenderLosses, statistics.m_maxDefenderLosses) < 0)
+			{
+				m_maxDefenderLosses = statistics.m_maxDefenderLosses;
+				m_maxDefenderResult = statistics.m_maxDefenderResult;
+			}
+
+			if (m_minRounds == 0 || m_minRounds > statistics.m_minRounds)
+			{
+				m_minRounds = statistics.m_minRounds;
+			}
+
+			if (m_maxRounds == 0 || m_maxRounds < statistics.m_maxRounds)
+			{
+				m_maxRounds = statistics.m_maxRounds;
+			}
+
+			if (m_count == 0)
+			{
+				m_avgRounds = statistics.m_avgRounds;
+				m_avgAttackerLosses = statistics.m_avgAttackerLosses;
+				m_avgDefenderLosses = statistics.m_avgDefenderLosses;
+			}
+			else
+			{
+				m_avgRounds = m_avgRounds / statistics.m_count + statistics.m_avgRounds / m_count;
+				for(int i = 0; i < m_avgAttackerLosses.Length; i++)
+				{
+					m_avgAttackerLosses[i] = m_avgAttackerLosses[i] / statistics.m_count + statistics.m_avgAttackerLosses[i] / m_count;
+				}
+
+				for (int i = 0; i < m_avgDefenderLosses.Length; i++)
+				{
+					m_avgDefenderLosses[i] = m_avgDefenderLosses[i] / statistics.m_count + statistics.m_avgDefenderLosses[i] / m_count;
+				}
+			}
+
+			m_winCount += statistics.m_winCount;
+			m_count += statistics.m_count;
+		}
+
+		/// <summary>
+		/// Combine statistics from two battle.
+		/// </summary>
+		/// <param name="statistics">Other battle statistics.</param>
+		/// <param name="battle">Multiwave battle.</param>
+		internal void CombineStatistics(Statistics statistics, MultiWaveBattle battle)
+		{
+			m_minAttackerLosses = CombineLosses(m_minAttackerLosses, ConvertLosses(statistics.m_minAttackerLosses, statistics.Battle.Units, battle.Units));
+			m_avgAttackerLosses = CombineLosses(m_avgAttackerLosses, ConvertLosses(statistics.m_avgAttackerLosses, statistics.Battle.Units, battle.Units));
+			m_maxAttackerLosses = CombineLosses(m_maxAttackerLosses, ConvertLosses(statistics.m_maxAttackerLosses, statistics.Battle.Units, battle.Units));
+			m_minDefenderLosses = CombineLosses(m_minDefenderLosses, ConvertLosses(statistics.m_minDefenderLosses, statistics.Battle.EnemyUnits, battle.EnemyUnits));
+			m_avgDefenderLosses = CombineLosses(m_avgDefenderLosses, ConvertLosses(statistics.m_avgDefenderLosses, statistics.Battle.EnemyUnits, battle.EnemyUnits));
+			m_maxDefenderLosses = CombineLosses(m_maxDefenderLosses, ConvertLosses(statistics.m_maxDefenderLosses, statistics.Battle.EnemyUnits, battle.EnemyUnits));
+			
+			m_minAttackerResult = statistics.m_minAttackerResult;
+			m_maxAttackerResult = statistics.m_maxAttackerResult;
+			m_minDefenderResult = statistics.m_minDefenderResult;
+			m_maxDefenderResult = statistics.m_maxDefenderResult;
+
+			m_minRounds += statistics.m_minRounds;
+			m_maxRounds += statistics.m_maxRounds;
+			m_avgRounds += statistics.m_avgRounds;
+
+			m_count = statistics.m_count;
+			m_winCount = statistics.m_winCount;
+		}
+
+		private static short[] CombineLosses(short[] losses1, short[] losses2)
+		{
+			if (losses1==null)
+			{
+				return losses2;
+			}
+
+			for(int i = 0; i < losses1.Length; i++)
+			{
+				losses1[i] += losses2[i];
+			}
+
+			return losses1;
+		}
+
+		private static double[] CombineLosses(double[] losses1, double[] losses2)
+		{
+			if (losses1 == null)
+			{
+				return losses2;
+			}
+
+			for (int i = 0; i < losses1.Length; i++)
+			{
+				losses1[i] += losses2[i];
+			}
+
+			return losses1;
+		}
+
+		private static short[] ConvertLosses(short[] losses, IList<Unit> units, IList<Unit> newUnits)
+		{
+			short[] result = new short[newUnits.Count];
+
+			for(int i=0; i < losses.Length; i++)
+			{
+				result[newUnits.IndexOf(units[i])] = losses[i];
+			}
+
+			return result;
+		}
+
+		private static double[] ConvertLosses(double[] losses, IList<Unit> units, IList<Unit> newUnits)
+		{
+			double[] result = new double[newUnits.Count];
+
+			for (int i = 0; i < losses.Length; i++)
+			{
+				result[newUnits.IndexOf(units[i])] = losses[i];
+			}
+
+			return result;
 		}
 
 		private static int CompareLosses(short[] x, short[] y)

@@ -46,7 +46,7 @@
     
     mimetype: application/x-microsoft.net.object.binary.base64
     value   : The object must be serialized with 
-            : System.Serialization.Formatters.Binary.BinaryFormatter
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
             : and then encoded with base64 encoding.
     
     mimetype: application/x-microsoft.net.object.soap.base64
@@ -60,6 +60,7 @@
             : and then encoded with base64 encoding.
     -->
   <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
     <xsd:element name="root" msdata:IsDataSet="true">
       <xsd:complexType>
         <xsd:choice maxOccurs="unbounded">
@@ -68,9 +69,10 @@
               <xsd:sequence>
                 <xsd:element name="value" type="xsd:string" minOccurs="0" />
               </xsd:sequence>
-              <xsd:attribute name="name" type="xsd:string" />
+              <xsd:attribute name="name" use="required" type="xsd:string" />
               <xsd:attribute name="type" type="xsd:string" />
               <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
             </xsd:complexType>
           </xsd:element>
           <xsd:element name="assembly">
@@ -85,9 +87,10 @@
                 <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
                 <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
               </xsd:sequence>
-              <xsd:attribute name="name" type="xsd:string" msdata:Ordinal="1" />
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
               <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
               <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
             </xsd:complexType>
           </xsd:element>
           <xsd:element name="resheader">
@@ -114,4 +117,211 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="UNIT_BERSERK" xml:space="preserve">
+    <value>Берсерк</value>
+  </data>
+  <data name="UNIT_BIG_BERTHA" xml:space="preserve">
+    <value>Большая Берта</value>
+  </data>
+  <data name="UNIT_BOWMAN" xml:space="preserve">
+    <value>Лучник</value>
+  </data>
+  <data name="UNIT_BOWMAN_DESERTER" xml:space="preserve">
+    <value>Лучник дезертир</value>
+  </data>
+  <data name="UNIT_CALTROP" xml:space="preserve">
+    <value>Кальтроп</value>
+  </data>
+  <data name="UNIT_CANNONNEER" xml:space="preserve">
+    <value>Канонир</value>
+  </data>
+  <data name="UNIT_CANNONNEER_DESERTER" xml:space="preserve">
+    <value>Канонир дезертир</value>
+  </data>
+  <data name="UNIT_CATAPHRACT" xml:space="preserve">
+    <value>Тяжёлая конница</value>
+  </data>
+  <data name="UNIT_CAVALRY" xml:space="preserve">
+    <value>Кавалерия</value>
+  </data>
+  <data name="UNIT_CAVALRY_DESERTER" xml:space="preserve">
+    <value>Кавалерия дезертир</value>
+  </data>
+  <data name="UNIT_CHUCK" xml:space="preserve">
+    <value>Чак</value>
+  </data>
+  <data name="UNIT_COMPOSITE_BOW" xml:space="preserve">
+    <value>Стрелок с составным луком</value>
+  </data>
+  <data name="UNIT_CRAZY_COOK" xml:space="preserve">
+    <value>Безумный кок</value>
+  </data>
+  <data name="UNIT_CROAKER" xml:space="preserve">
+    <value>Ворчун</value>
+  </data>
+  <data name="UNIT_CROSSBOWMAN" xml:space="preserve">
+    <value>Арбалетчик</value>
+  </data>
+  <data name="UNIT_CROSSBOWMAN_DESERTER" xml:space="preserve">
+    <value>Арбалетчик дезертир</value>
+  </data>
+  <data name="UNIT_CULTIST" xml:space="preserve">
+    <value>Сектант</value>
+  </data>
+  <data name="UNIT_DANCING_DERVISH" xml:space="preserve">
+    <value>Плящущий дервиш</value>
+  </data>
+  <data name="UNIT_DARK_HIGH_PRIEST" xml:space="preserve">
+    <value>Темный первосвященник</value>
+  </data>
+  <data name="UNIT_DARK_PRIEST" xml:space="preserve">
+    <value>Тёмный священник</value>
+  </data>
+  <data name="UNIT_DECKSCRUBBER" xml:space="preserve">
+    <value>Скребок</value>
+  </data>
+  <data name="UNIT_ELITE_SOLDIER" xml:space="preserve">
+    <value>Элитный солдат</value>
+  </data>
+  <data name="UNIT_ELITE_SOLDIER_DESERTER" xml:space="preserve">
+    <value>Элитный солдат дезертир</value>
+  </data>
+  <data name="UNIT_FANATIC" xml:space="preserve">
+    <value>Фанатик</value>
+  </data>
+  <data name="UNIT_FIRE_DANCER" xml:space="preserve">
+    <value>Танцор огня</value>
+  </data>
+  <data name="UNIT_FULLBACK" xml:space="preserve">
+    <value>Защитник</value>
+  </data>
+  <data name="UNIT_GOALKEEPER" xml:space="preserve">
+    <value>Вратарь</value>
+  </data>
+  <data name="UNIT_GUARD_DOG" xml:space="preserve">
+    <value>Сторожевая собака</value>
+  </data>
+  <data name="UNIT_GUNMAN" xml:space="preserve">
+    <value>Стрелок</value>
+  </data>
+  <data name="UNIT_HOUSECARL" xml:space="preserve">
+    <value>Хускерл</value>
+  </data>
+  <data name="UNIT_JAGUAR_WARRIOR" xml:space="preserve">
+    <value>Воин ягуар</value>
+  </data>
+  <data name="UNIT_JOMVIKING" xml:space="preserve">
+    <value>Йомсвикинг</value>
+  </data>
+  <data name="UNIT_KARL" xml:space="preserve">
+    <value>Карл</value>
+  </data>
+  <data name="UNIT_KNIFETHROWER" xml:space="preserve">
+    <value>Метатель ножей</value>
+  </data>
+  <data name="UNIT_LANCE_RIDER" xml:space="preserve">
+    <value>Всадник с копьём</value>
+  </data>
+  <data name="UNIT_LONGBOWMAN" xml:space="preserve">
+    <value>Лучник с длинным луком</value>
+  </data>
+  <data name="UNIT_LONGBOWMAN_DESERTER" xml:space="preserve">
+    <value>Лучник с длинным луком дезертир</value>
+  </data>
+  <data name="UNIT_METAL_TOOTHED" xml:space="preserve">
+    <value>Фиксатый</value>
+  </data>
+  <data name="UNIT_MIDFIELDER" xml:space="preserve">
+    <value>Полузащитник</value>
+  </data>
+  <data name="UNIT_MILITIA" xml:space="preserve">
+    <value>Ополченец</value>
+  </data>
+  <data name="UNIT_MILITIA_DESERTER" xml:space="preserve">
+    <value>Ополченец дезертир</value>
+  </data>
+  <data name="UNIT_NIGHT_SPAWN" xml:space="preserve">
+    <value>Исчадие ада</value>
+  </data>
+  <data name="UNIT_NOMAD" xml:space="preserve">
+    <value>Кочевник</value>
+  </data>
+  <data name="UNIT_ONE_EYED_BERT" xml:space="preserve">
+    <value>Одноглазый Берт</value>
+  </data>
+  <data name="UNIT_PETTY_OFFICER_2ND_CLASS" xml:space="preserve">
+    <value>Старшина 2-го класса</value>
+  </data>
+  <data name="UNIT_RANGER" xml:space="preserve">
+    <value>Рейнджер</value>
+  </data>
+  <data name="UNIT_RECRUIT" xml:space="preserve">
+    <value>Новобранец</value>
+  </data>
+  <data name="UNIT_RECRUIT_DESERTER" xml:space="preserve">
+    <value>Новобранец дезертир</value>
+  </data>
+  <data name="UNIT_RIDING_AMAZONIAN" xml:space="preserve">
+    <value>Амазонки наездницы</value>
+  </data>
+  <data name="UNIT_RIDING_BOWMAN" xml:space="preserve">
+    <value>Всадник с луком</value>
+  </data>
+  <data name="UNIT_ROUGHNECK" xml:space="preserve">
+    <value>Хулиган</value>
+  </data>
+  <data name="UNIT_SABER_RATTLER" xml:space="preserve">
+    <value>Подстрекатель</value>
+  </data>
+  <data name="UNIT_SCAVENGER" xml:space="preserve">
+    <value>Старьёвщик</value>
+  </data>
+  <data name="UNIT_SHADOW_SNEAKER" xml:space="preserve">
+    <value>Крадущийся</value>
+  </data>
+  <data name="UNIT_SHAMAN" xml:space="preserve">
+    <value>Шаман</value>
+  </data>
+  <data name="UNIT_SIR_ROBIN" xml:space="preserve">
+    <value>Сэр Робин</value>
+  </data>
+  <data name="UNIT_SKUNK" xml:space="preserve">
+    <value>Скунс</value>
+  </data>
+  <data name="UNIT_SOLDIER" xml:space="preserve">
+    <value>Солдат</value>
+  </data>
+  <data name="UNIT_SOLDIER_DESERTER" xml:space="preserve">
+    <value>Солдат дезертир</value>
+  </data>
+  <data name="UNIT_STONE_THROWER" xml:space="preserve">
+    <value>Пращник</value>
+  </data>
+  <data name="UNIT_STRIKER" xml:space="preserve">
+    <value>Нападающий</value>
+  </data>
+  <data name="UNIT_SWAMP_WITCH" xml:space="preserve">
+    <value>Болотная ведьма</value>
+  </data>
+  <data name="UNIT_THRALL" xml:space="preserve">
+    <value>Невольник</value>
+  </data>
+  <data name="UNIT_THUG" xml:space="preserve">
+    <value>Головорез</value>
+  </data>
+  <data name="UNIT_TRIBESMAN" xml:space="preserve">
+    <value>Член племени</value>
+  </data>
+  <data name="UNIT_UPROARIOUS_BULL" xml:space="preserve">
+    <value>Ревущий бык</value>
+  </data>
+  <data name="UNIT_VALKYRIE" xml:space="preserve">
+    <value>Валькирия</value>
+  </data>
+  <data name="UNIT_WILD_MARY" xml:space="preserve">
+    <value>Дикия Мери</value>
+  </data>
+  <data name="UNIT_WOLF" xml:space="preserve">
+    <value>Волк</value>
+  </data>
 </root>

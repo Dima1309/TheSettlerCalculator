@@ -5,7 +5,7 @@ namespace TheSettlersCalculator.Types
 	internal class Calculator : ICalculator
 	{
 		#region Fields
-		private readonly int m_iterationCount;
+		private int m_iterationCount;
 		private BattleCompleteHandler m_onBattleComplete;
 		#endregion
 
@@ -25,6 +25,7 @@ namespace TheSettlersCalculator.Types
 		public int IterationCount
 		{
 			get { return m_iterationCount; }
+			set { m_iterationCount = value;  }
 		}
 
 		public virtual void Calculate(Battle battle)
