@@ -13,11 +13,14 @@ namespace TheSettlersCalculator.WpfTypes
 
 		#region Constants
 		private const int ROUNDS = 10000;
+		private const int MAX_WAVES_COUNT = 5;
 		#endregion
 
 		#region Fields
-		private readonly ObservableCollection<UnitSquad> m_playerUnits = new ObservableCollection<UnitSquad>();
-		private readonly ObservableCollection<UnitSquad> m_enemyUnits = new ObservableCollection<UnitSquad>();
+		private readonly ObservableCollection<UnitSquad>[] m_playerWaves = new ObservableCollection<UnitSquad>[MAX_WAVES_COUNT];
+		private readonly ObservableCollection<UnitSquad>[] m_enemyWaves = new ObservableCollection<UnitSquad>[MAX_WAVES_COUNT];
+		private int m_playerWaveIndex = 0;
+		private int m_enemyWaveIndex = 0;
 		private readonly ObservableCollection<EnemyCamp> m_activeQuestCamps = new ObservableCollection<EnemyCamp>();
 		private readonly ObservableCollection<Quest> m_quests = new ObservableCollection<Quest>();
 		private readonly List<Losses> m_playerLosses = new List<Losses>();
@@ -33,16 +36,24 @@ namespace TheSettlersCalculator.WpfTypes
 
 		#region Constructor
 		internal MainWindowModel()
-		{			
-			DarkTemplareQuest quest = new DarkTemplareQuest();
-			foreach (Unit unit in Types.PlayerUnits.Units)
+		{
+			for(int i = 0; i < MAX_WAVES_COUNT; i++)
 			{
-				m_playerUnits.Add(new UnitSquad(unit, 0));
+				m_playerWaves[i] = new ObservableCollection<UnitSquad>();
+				m_enemyWaves[i] = new ObservableCollection<UnitSquad>();
 			}
 
-			foreach(UnitSquad squad in  m_playerUnits)
-			{
-				squad.PropertyChanged += UpdateUserUnitCount;
+			DarkTemplareQuest quest = new DarkTemplareQuest();
+
+			for(int i = 0; i < MAX_WAVES_COUNT; i++)
+			{				
+				m_playerWaves[i].Clear();
+				foreach (Unit unit in Types.PlayerUnits.Units)
+				{
+					UnitSquad unitSquad = new UnitSquad(unit, 0);
+					m_playerWaves[i].Add(unitSquad);
+					unitSquad.PropertyChanged += UpdateUserUnitCount;
+				}
 			}
 
 			Quests.Add(quest);
@@ -57,7 +68,7 @@ namespace TheSettlersCalculator.WpfTypes
 			get 
 			{ 
 				int result = 0;
-				foreach(UnitSquad squad in m_playerUnits)
+				foreach (UnitSquad squad in PlayerUnits)
 				{
 					result += squad.Count;
 				}
@@ -68,12 +79,12 @@ namespace TheSettlersCalculator.WpfTypes
 
 		public ObservableCollection<UnitSquad> PlayerUnits
 		{
-			get { return m_playerUnits; }
+			get { return m_playerWaves[m_playerWaveIndex]; }
 		}
 
 		public ObservableCollection<UnitSquad> EnemyUnits
 		{
-			get { return m_enemyUnits; }
+			get { return m_enemyWaves[m_enemyWaveIndex]; }
 		}
 
 		public ObservableCollection<Quest> Quests
@@ -103,10 +114,13 @@ namespace TheSettlersCalculator.WpfTypes
 							m_activeQuestCamps.Add(new EnemyCamp(m_activeQuest, camp));
 						}
 
-						m_enemyUnits.Clear();
-						foreach (Unit unit in m_activeQuest.Units)
+						for(int i=0;i<MAX_WAVES_COUNT;i++)
 						{
-							m_enemyUnits.Add(new UnitSquad(unit, 0));
+							m_enemyWaves[i].Clear();
+							foreach (Unit unit in m_activeQuest.Units)
+							{
+								m_enemyWaves[i].Add(new UnitSquad(unit, 0));
+							}
 						}
 					}
 				}
@@ -139,7 +153,7 @@ namespace TheSettlersCalculator.WpfTypes
 							counts.Add(squad.Name, squad.Count);
 						}
 
-						foreach(UnitSquad enemyUnit in m_enemyUnits)
+						foreach(UnitSquad enemyUnit in EnemyUnits)
 						{
 							int count;
 							if (!counts.TryGetValue(enemyUnit.Name, out count))
@@ -166,14 +180,36 @@ namespace TheSettlersCalculator.WpfTypes
 
 		public double PlayerTowerBonus
 		{
-			get { return m_playerTowerBonus; }
-			set { m_playerTowerBonus = value; }
+			get
+			{
+				return m_playerTowerBonus;
+			}
+
+			set
+			{
+				if (m_playerTowerBonus != value)
+				{
+					m_playerTowerBonus = value;
+					OnPropertyChanged("PlayerTowerBonus");
+				}
+			}
 		}
 
 		public double EnemyTowerBonus
 		{
-			get { return m_enemyTowerBonus; }
-			set { m_enemyTowerBonus = value; }
+			get
+			{
+				return m_enemyTowerBonus;
+			}
+
+			set
+			{
+				if (m_enemyTowerBonus != value)
+				{
+					m_enemyTowerBonus = value;
+					OnPropertyChanged("EnemyTowerBonus");
+				}
+			}
 		}
 
 		public int PlayerUnitLimit
@@ -223,6 +259,43 @@ namespace TheSettlersCalculator.WpfTypes
 			{
 				m_simulation = value;
 				OnPropertyChanged("Simulation");
+			}
+		}
+
+		public int PlayerWaveIndex
+		{
+			get
+			{
+				return m_playerWaveIndex;
+			}
+
+			set
+			{
+				if (m_playerWaveIndex != value)
+				{
+					m_playerWaveIndex = value;
+					OnPropertyChanged("PlayerWaveIndex");
+					OnPropertyChanged("PlayerUnits");
+					OnPropertyChanged("PlayerUnitsCount");
+				}
+			}
+		}
+
+		public int EnemyWaveIndex
+		{
+			get
+			{
+				return m_enemyWaveIndex;
+			}
+
+			set
+			{
+				if (m_enemyWaveIndex != value)
+				{
+					m_enemyWaveIndex = value;
+					OnPropertyChanged("EnemyWaveIndex");
+					OnPropertyChanged("EnemyUnits");
+				}
 			}
 		}
 		#endregion

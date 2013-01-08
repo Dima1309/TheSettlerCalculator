@@ -4,7 +4,7 @@ using System.Windows;
 using System.Windows.Data;
 using System.Windows.Media;
 
-namespace TheSettlersCalculator.WpfTypes
+namespace TheSettlersCalculator.WpfTypes.Converters
 {
 	[ValueConversion(typeof(bool), typeof(Brush))]
 	public class UserUnitsWarningCountBrushConverter : IValueConverter

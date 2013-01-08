@@ -6,7 +6,7 @@
         Title="MainWindow" Height="640" Width="800" x:Name="Win">
     <Window.Resources>
         <Converters:CampTypeConverter x:Key="campTypeConverter"/>
-        <src:TowerBonusConverter x:Key="towerBonusConverter"/>
+        <Converters:TowerBonusConverter x:Key="towerBonusConverter"/>
         <Converters:BoolVisibilityConverter x:Key="boolVisibilityConverter"/>
         <Converters:ByteVisibilityConverter x:Key="byteVisibilityConverter"/>
         <Converters:AttackPriorityVisibilityConverter x:Key="attackPriorityVisibilityConverter"/>
@@ -16,7 +16,8 @@
         <Converters:HealthBrushConverter x:Key="healthBrushConverter"/>
         <Converters:LossesVisibilityConverter x:Key="lossesVisibilityConverter"/>
         <Converters:ObjectVisibilityConverter x:Key="objectVisibilityConverter"/>
-        <src:UserUnitsWarningCountBrushConverter x:Key="userUnitsWarningCountBrushConverter"/>        
+        <Converters:UserUnitsWarningCountBrushConverter x:Key="userUnitsWarningCountBrushConverter"/>
+        <Converters:WaveIndexConverter x:Key="waveIndexConverter"/>
         <StackPanel Orientation="Vertical" x:Key="UnitTooltipTemplate">
             <Label Content="{Binding Unit.Name}" FontWeight="Bold"></Label>
             <StackPanel Orientation="Horizontal">
@@ -160,11 +161,31 @@
             <StackPanel Name="PlayerUnitsPanel" Orientation="Vertical">           
             <StackPanel Orientation="Horizontal">
                 <Label>Волны:</Label>
-                <RadioButton Margin="3" VerticalAlignment="Center"></RadioButton>
-                <RadioButton Margin="3" VerticalAlignment="Center"></RadioButton>
-                <RadioButton Margin="3" VerticalAlignment="Center"></RadioButton>
-                <RadioButton Margin="3" VerticalAlignment="Center"></RadioButton>
-                <RadioButton Margin="3" VerticalAlignment="Center"></RadioButton>
+                <RadioButton Margin="3" VerticalAlignment="Center">
+                      <RadioButton.IsChecked>
+                            <Binding Path="Model.PlayerWaveIndex" ElementName="Win" Converter="{StaticResource waveIndexConverter}" ConverterParameter="0"></Binding>
+                      </RadioButton.IsChecked>
+                </RadioButton>
+                <RadioButton Margin="3" VerticalAlignment="Center">
+                      <RadioButton.IsChecked>
+                            <Binding Path="Model.PlayerWaveIndex" ElementName="Win" Converter="{StaticResource waveIndexConverter}" ConverterParameter="1"></Binding>
+                      </RadioButton.IsChecked>
+                </RadioButton>
+                <RadioButton Margin="3" VerticalAlignment="Center">
+                      <RadioButton.IsChecked>
+                            <Binding Path="Model.PlayerWaveIndex" ElementName="Win" Converter="{StaticResource waveIndexConverter}" ConverterParameter="2"></Binding>
+                      </RadioButton.IsChecked>
+                </RadioButton>
+                <RadioButton Margin="3" VerticalAlignment="Center">
+                      <RadioButton.IsChecked>
+                            <Binding Path="Model.PlayerWaveIndex" ElementName="Win" Converter="{StaticResource waveIndexConverter}" ConverterParameter="3"></Binding>
+                      </RadioButton.IsChecked>
+                </RadioButton>
+                <RadioButton Margin="3" VerticalAlignment="Center">
+                      <RadioButton.IsChecked>
+                            <Binding Path="Model.PlayerWaveIndex" ElementName="Win" Converter="{StaticResource waveIndexConverter}" ConverterParameter="4"></Binding>
+                      </RadioButton.IsChecked>
+                </RadioButton>                
             </StackPanel>
             <ItemsControl ItemsSource="{Binding Model.PlayerUnits,ElementName=Win}">
                 <ItemsControl.ItemTemplate>
@@ -211,12 +232,32 @@
             <StackPanel Name="EnemyUnitsPanel" Orientation="Vertical">
                     <StackPanel Orientation="Horizontal">
                         <Label>Волны:</Label>
-                        <RadioButton Margin="3" VerticalAlignment="Center"></RadioButton>
-                        <RadioButton Margin="3" VerticalAlignment="Center"></RadioButton>
-                        <RadioButton Margin="3" VerticalAlignment="Center"></RadioButton>
-                        <RadioButton Margin="3" VerticalAlignment="Center"></RadioButton>
-                        <RadioButton Margin="3" VerticalAlignment="Center"></RadioButton>
-                    </StackPanel>
+                            <RadioButton Margin="3" VerticalAlignment="Center">
+                                <RadioButton.IsChecked>
+                                    <Binding Path="Model.EnemyWaveIndex" ElementName="Win" Converter="{StaticResource waveIndexConverter}" ConverterParameter="0"></Binding>
+                                </RadioButton.IsChecked>
+                            </RadioButton>
+                            <RadioButton Margin="3" VerticalAlignment="Center">
+                                <RadioButton.IsChecked>
+                                    <Binding Path="Model.EnemyWaveIndex" ElementName="Win" Converter="{StaticResource waveIndexConverter}" ConverterParameter="1"></Binding>
+                                </RadioButton.IsChecked>
+                            </RadioButton>
+                            <RadioButton Margin="3" VerticalAlignment="Center">
+                                <RadioButton.IsChecked>
+                                    <Binding Path="Model.EnemyWaveIndex" ElementName="Win" Converter="{StaticResource waveIndexConverter}" ConverterParameter="2"></Binding>
+                                </RadioButton.IsChecked>
+                            </RadioButton>
+                            <RadioButton Margin="3" VerticalAlignment="Center">
+                                <RadioButton.IsChecked>
+                                    <Binding Path="Model.EnemyWaveIndex" ElementName="Win" Converter="{StaticResource waveIndexConverter}" ConverterParameter="3"></Binding>
+                                </RadioButton.IsChecked>
+                            </RadioButton>
+                            <RadioButton Margin="3" VerticalAlignment="Center">
+                                <RadioButton.IsChecked>
+                                    <Binding Path="Model.EnemyWaveIndex" ElementName="Win" Converter="{StaticResource waveIndexConverter}" ConverterParameter="4"></Binding>
+                                </RadioButton.IsChecked>
+                            </RadioButton>
+                        </StackPanel>
 
                      <ItemsControl ItemsSource="{Binding Model.EnemyUnits,ElementName=Win}">
                     <ItemsControl.ItemTemplate>
@@ -234,7 +275,6 @@
                         </DataTemplate>
                     </ItemsControl.ItemTemplate>
                 </ItemsControl>
-                <Label Content="Всего:"/>
                 <RadioButton Margin="5,5">
                     Без башни (0%)
                     <RadioButton.IsChecked>

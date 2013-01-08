@@ -3,7 +3,7 @@ using System.Globalization;
 using System.Windows;
 using System.Windows.Data;
 
-namespace TheSettlersCalculator.WpfTypes
+namespace TheSettlersCalculator.WpfTypes.Converters
 {
 	[ValueConversion(typeof(double), typeof(bool))]
 	public class TowerBonusConverter : IValueConverter
@@ -21,7 +21,7 @@ namespace TheSettlersCalculator.WpfTypes
 
 		public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
 		{
-			if ((bool)value)
+			if((bool) value && parameter != null)
 			{
 				return double.Parse(parameter as string) / 100;
 			}

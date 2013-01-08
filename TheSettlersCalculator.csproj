@@ -74,6 +74,7 @@
     <Compile Include="Types\MultiWaveBattle.cs" />
     <Compile Include="Types\MultiWaveBattleType.cs" />
     <Compile Include="Types\Simulation\BattleSimulation.cs" />
+    <Compile Include="Types\Simulation\MultyWaveBattleSimulation.cs" />
     <Compile Include="Types\Simulation\Round.cs" />
     <Compile Include="Types\Simulation\SimulationGroup.cs" />
     <Compile Include="Types\Simulation\SquadAttack.cs" />
@@ -100,6 +101,7 @@
     <Compile Include="WpfTypes\Converters\IntNegativeVisibilityConverter.cs" />
     <Compile Include="WpfTypes\Converters\LossesVisibilityConverter.cs" />
     <Compile Include="WpfTypes\Converters\ObjectVisibilityConverter.cs" />
+    <Compile Include="WpfTypes\Converters\WaveIndexConverter.cs" />
     <Compile Include="WpfTypes\EnemyCamp.cs" />
     <Compile Include="WpfTypes\Converters\IntVisibilityConverter.cs" />
     <Compile Include="WpfTypes\Losses.cs" />
@@ -107,9 +109,9 @@
     <Compile Include="WpfTypes\NumberTextBox.cs" />
     <Compile Include="WpfTypes\RangeValidationRule.cs" />
     <Compile Include="WpfTypes\SimpleSquareAdorner.cs" />
-    <Compile Include="WpfTypes\TowerBonusConverter.cs" />
+    <Compile Include="WpfTypes\Converters\TowerBonusConverter.cs" />
     <Compile Include="WpfTypes\UnitSquad.cs" />
-    <Compile Include="WpfTypes\UserUnitsWarningCountBrushConverter.cs" />
+    <Compile Include="WpfTypes\Converters\UserUnitsWarningCountBrushConverter.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
