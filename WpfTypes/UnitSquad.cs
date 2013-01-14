@@ -1,4 +1,5 @@
-﻿using System.ComponentModel;
+﻿using System;
+using System.ComponentModel;
 using System.Windows.Media.Imaging;
 using TheSettlersCalculator.Types;
 
@@ -7,7 +8,7 @@ namespace TheSettlersCalculator.WpfTypes
     /// <summary>
     /// Класс для хранении информации о отряде юнитов.
     /// </summary>
-	public class UnitSquad : INotifyPropertyChanged
+	public class UnitSquad : INotifyPropertyChanged, ICloneable
     {
 		public event PropertyChangedEventHandler PropertyChanged;
 
@@ -65,5 +66,10 @@ namespace TheSettlersCalculator.WpfTypes
 			}
 		}
 		#endregion
+
+    	public object Clone()
+    	{
+    		return new UnitSquad(Unit, Count);
+    	}
     }
 }

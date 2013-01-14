@@ -24,10 +24,10 @@ namespace TheSettlersCalculator.WpfTypes
 		private int m_enemyWaveIndex = 0;
 		private readonly ObservableCollection<EnemyCamp> m_activeQuestCamps = new ObservableCollection<EnemyCamp>();
 		private readonly ObservableCollection<Quest> m_quests = new ObservableCollection<Quest>();
-		private readonly List<Losses> m_playerLosses = new List<Losses>();
-		private readonly List<Losses> m_enemyLosses = new List<Losses>();
-		private double[] m_playerTowerBonus = new double[MAX_WAVES_COUNT];
-		private double[] m_enemyTowerBonus = new double[MAX_WAVES_COUNT];
+		private BattleLosses m_totalLosses;
+		private readonly ObservableCollection<BattleLosses> m_waveLosses = new ObservableCollection<BattleLosses>();
+		private readonly double[] m_playerTowerBonus = new double[MAX_WAVES_COUNT];
+		private readonly double[] m_enemyTowerBonus = new double[MAX_WAVES_COUNT];
 		private Quest m_activeQuest;
 		private EnemyCamp m_activeEnemyCamp;
 		private bool m_veteranAvailable;
@@ -169,14 +169,14 @@ namespace TheSettlersCalculator.WpfTypes
 			}
 		}
 
-		public List<Losses> PlayerLosses
+		public BattleLosses TotalLosses
 		{
-			get { return m_playerLosses; }
+			get { return m_totalLosses; }
 		}
 
-		public List<Losses> EnemyLosses
+		public ObservableCollection<BattleLosses> WaveLosses
 		{
-			get { return m_enemyLosses; }
+			get { return m_waveLosses; }
 		}
 
 		public double PlayerTowerBonus
@@ -342,30 +342,52 @@ namespace TheSettlersCalculator.WpfTypes
 			battle.OnBattleComplete -= simulation.MultiWaveBattleCompleteHandler;
 			battle.OnWaveComplete -= simulation.MultiWaveBattleWaveCompleteHandler;
 
-			PlayerLosses.Clear();
-			for(int i = 0; i < statistics.TotalStatistics.MinAttackerLosses.Length; i++)
+			m_totalLosses = GenerateBattleLosses(statistics.TotalStatistics, battle);
+
+			m_waveLosses.Clear();
+			foreach(KeyValuePair<WaveKey, Statistics.Statistics> pair in statistics.Statistics)
 			{
-				PlayerLosses.Add(new Losses(
-					battle.Units[i],
-					statistics.TotalStatistics.MinAttackerLosses[i],
-					statistics.TotalStatistics.AvgAttackerLosses[i],
-					statistics.TotalStatistics.MaxAttackerLosses[i]));
+				BattleLosses waveLosses = GenerateBattleLosses(pair.Value, battle);
+				waveLosses.PlayerWaveIndex = pair.Key.AttackerWave + 1;
+				waveLosses.EnemyWaveIndex = pair.Key.DefenderWave + 1;
+				m_waveLosses.Add(waveLosses);
 			}
 
-			EnemyLosses.Clear();
-			for (int i = 0; i < statistics.TotalStatistics.MinDefenderLosses.Length; i++)
-			{
-				EnemyLosses.Add(new Losses(
-					battle.EnemyUnits[i],
-					statistics.TotalStatistics.MinDefenderLosses[i],
-					statistics.TotalStatistics.AvgDefenderLosses[i],
-					statistics.TotalStatistics.MaxDefenderLosses[i]));
-			}
-
-			OnPropertyChanged("PlayerLosses");
-			OnPropertyChanged("EnemyLosses");
+			OnPropertyChanged("TotalLosses");
+			OnPropertyChanged("WaveLosses");
 
 			Simulation = simulation;
+		}
+
+		private static BattleLosses GenerateBattleLosses(Statistics.Statistics statistics, MultiWaveBattle battle)
+		{
+			List<Losses> playerLosses = new List<Losses>(statistics.MinAttackerLosses.Length);
+			List<Losses> enemyLosses = new List<Losses>(statistics.MinAttackerLosses.Length);
+			for(int i = 0; i < statistics.MinAttackerLosses.Length; i++)
+			{
+				if (statistics.MaxAttackerLosses[i] > 0)
+				{
+					playerLosses.Add(new Losses(
+						battle.Units[i],
+						statistics.MinAttackerLosses[i],
+						statistics.AvgAttackerLosses[i],
+						statistics.MaxAttackerLosses[i]));
+				}
+			}
+			
+			for (int i = 0; i < statistics.MinDefenderLosses.Length; i++)
+			{
+				if (statistics.MaxDefenderLosses[i] > 0)
+				{
+					enemyLosses.Add(new Losses(
+						battle.EnemyUnits[i],
+						statistics.MinDefenderLosses[i],
+						statistics.AvgDefenderLosses[i],
+						statistics.MaxDefenderLosses[i]));
+				}
+			}
+
+			return new BattleLosses(playerLosses, enemyLosses);
 		}
 
 		private void UpdateUserUnitCount(object sender, PropertyChangedEventArgs e)

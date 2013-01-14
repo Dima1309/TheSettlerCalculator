@@ -19,7 +19,11 @@ namespace TheSettlersCalculator.Types
 			#region Constructor
 			internal BattleWave(IList<UnitSquad> squads, bool general, double towerBonus)
 			{
-				m_squads = squads;
+				m_squads = new List<UnitSquad>(squads.Count);
+				foreach(UnitSquad squad in squads)
+				{
+					m_squads.Add(squad.Clone() as UnitSquad);
+				}
 				m_general = general;
 				m_towerBonus = towerBonus;
 			}

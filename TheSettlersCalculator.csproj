@@ -92,6 +92,7 @@
     <Compile Include="Types\Squad.cs" />
     <Compile Include="Types\Unit.cs" />
     <Compile Include="Types\UnitAttackHandler.cs" />
+    <Compile Include="WpfTypes\BattleLosses.cs" />
     <Compile Include="WpfTypes\Converters\AttackPriorityStringConverter.cs" />
     <Compile Include="WpfTypes\Converters\AttackPriorityVisibilityConverter.cs" />
     <Compile Include="WpfTypes\Converters\BoolVisibilityConverter.cs" />

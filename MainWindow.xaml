@@ -92,6 +92,135 @@
                 </ItemsControl>
             </Expander>
         </DataTemplate>
+
+        <DataTemplate x:Key="LossesPanelTemplate">
+            <StackPanel Orientation="Vertical">
+            <Label>Игрок:</Label>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="60" />
+                    <ColumnDefinition Width="60" />
+                    <ColumnDefinition Width="60" />
+                </Grid.ColumnDefinitions>
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+
+                <Label HorizontalAlignment="Center" Grid.Column="1" >Мин.</Label>
+                <Label HorizontalAlignment="Center" Grid.Column="2" >Сред.</Label>
+                <Label HorizontalAlignment="Center" Grid.Column="3" >Макс.</Label>
+
+                <StackPanel Orientation="Vertical" Grid.Row="1">
+                    <ItemsControl ItemsSource="{Binding PlayerLosses}">
+                        <ItemsControl.ItemTemplate>
+                            <DataTemplate>
+                                <StackPanel Orientation="Horizontal">
+                                    <Image Width="30" Height="30" Grid.Column="0" Source="{Binding Icon}" ToolTip="{StaticResource UnitTooltipTemplate}"></Image>
+                                    <Label Grid.Column="1" Content="{Binding Name}"></Label>
+                                </StackPanel>
+                            </DataTemplate>
+                        </ItemsControl.ItemTemplate>
+                    </ItemsControl>
+                </StackPanel>
+
+                <StackPanel Orientation="Vertical" Grid.Row="1" Grid.Column="1">
+                    <ItemsControl ItemsSource="{Binding PlayerLosses}">
+                        <ItemsControl.ItemTemplate>
+                            <DataTemplate>
+                                <Label HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Height="30" Content="{Binding MinCount}"></Label>
+                            </DataTemplate>
+                        </ItemsControl.ItemTemplate>
+                    </ItemsControl>
+                </StackPanel>
+
+                <StackPanel Orientation="Vertical" Grid.Row="1" Grid.Column="2">
+                    <ItemsControl ItemsSource="{Binding PlayerLosses}">
+                        <ItemsControl.ItemTemplate>
+                            <DataTemplate>
+                                <Label Height="30" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Content="{Binding AvgCount}" ContentStringFormat="{}{0:f2}"></Label>
+                            </DataTemplate>
+                        </ItemsControl.ItemTemplate>
+                    </ItemsControl>
+                </StackPanel>
+
+                <StackPanel Orientation="Vertical" Grid.Row="1" Grid.Column="3">
+                    <ItemsControl ItemsSource="{Binding PlayerLosses}">
+                        <ItemsControl.ItemTemplate>
+                            <DataTemplate>
+                                <Label Height="30" HorizontalAlignment="Center" VerticalContentAlignment="Center" Content="{Binding MaxCount}"></Label>
+                            </DataTemplate>
+                        </ItemsControl.ItemTemplate>
+                    </ItemsControl>
+                </StackPanel>
+
+            </Grid>
+            <Label>CPU:</Label>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="60" />
+                    <ColumnDefinition Width="60" />
+                    <ColumnDefinition Width="60" />
+                </Grid.ColumnDefinitions>
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+
+                <Label HorizontalAlignment="Center" Grid.Column="1" >Мин.</Label>
+                <Label HorizontalAlignment="Center" Grid.Column="2" >Сред.</Label>
+                <Label HorizontalAlignment="Center" Grid.Column="3" >Макс.</Label>
+
+                <StackPanel Orientation="Vertical" Grid.Row="1">
+                    <ItemsControl ItemsSource="{Binding EnemyLosses}">
+                        <ItemsControl.ItemTemplate>
+                            <DataTemplate>
+                                <StackPanel Orientation="Horizontal">
+                                    <Image Width="30" Height="30" Grid.Column="0" Source="{Binding Icon}" ToolTip="{StaticResource UnitTooltipTemplate}"></Image>
+                                    <Label Grid.Column="1" Content="{Binding Name}"></Label>
+                                </StackPanel>
+                            </DataTemplate>
+                        </ItemsControl.ItemTemplate>
+                    </ItemsControl>
+                </StackPanel>
+
+                <StackPanel Orientation="Vertical" Grid.Row="1" Grid.Column="1">
+                    <ItemsControl ItemsSource="{Binding EnemyLosses}">
+                        <ItemsControl.ItemTemplate>
+                            <DataTemplate>
+                                <Label HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Height="30" Content="{Binding MinCount}"></Label>
+                            </DataTemplate>
+                        </ItemsControl.ItemTemplate>
+                    </ItemsControl>
+                </StackPanel>
+
+                <StackPanel Orientation="Vertical" Grid.Row="1" Grid.Column="2">
+                    <ItemsControl ItemsSource="{Binding EnemyLosses}">
+                        <ItemsControl.ItemTemplate>
+                            <DataTemplate>
+                                <Label Height="30" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Content="{Binding AvgCount}" ContentStringFormat="{}{0:f2}"></Label>
+                            </DataTemplate>
+                        </ItemsControl.ItemTemplate>
+                    </ItemsControl>
+                </StackPanel>
+
+                <StackPanel Orientation="Vertical" Grid.Row="1" Grid.Column="3">
+                    <ItemsControl ItemsSource="{Binding EnemyLosses}">
+                        <ItemsControl.ItemTemplate>
+                            <DataTemplate>
+                                <Label Height="30" HorizontalAlignment="Center" VerticalContentAlignment="Center" Content="{Binding MaxCount}"></Label>
+                            </DataTemplate>
+                        </ItemsControl.ItemTemplate>
+                    </ItemsControl>
+                </StackPanel>
+
+            </Grid>
+        </StackPanel>
+        </DataTemplate>
     </Window.Resources>
     <TabControl>
         <TabItem Header="Калькулятор">
@@ -309,145 +438,35 @@
 
         <ScrollViewer VerticalScrollBarVisibility="Visible" Grid.Row="1" Grid.Column="2" Grid.ColumnSpan="1">
           <StackPanel Orientation="Vertical">
-            <Expander IsExpanded="True">
+           <Expander IsExpanded="True" >
                <Expander.Visibility>
                    <MultiBinding Converter="{StaticResource lossesVisibilityConverter}">
-                      <Binding Path="Model.PlayerLosses" ElementName="Win"></Binding>
-                      <Binding Path="Model.EnemyLosses" ElementName="Win"></Binding>
+                      <Binding Path="Model.TotalLosses.PlayerLosses" ElementName="Win"></Binding>
+                      <Binding Path="Model.TotalLosses.EnemyLosses" ElementName="Win"></Binding>
                    </MultiBinding>
                </Expander.Visibility>
                <Expander.Header>
-                  <Label FontWeight="Bold">Потери</Label>            
-               </Expander.Header>                           
-            <StackPanel Orientation="Vertical">
-                <Label>Игрок:</Label>
-                        <Grid>
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="*" />
-                        <ColumnDefinition Width="60" />
-                        <ColumnDefinition Width="60" />
-                        <ColumnDefinition Width="60" />
-                    </Grid.ColumnDefinitions>
-
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="*"/>
-                        <RowDefinition Height="*"/>                                             
-                    </Grid.RowDefinitions>
-
-                    <Label HorizontalAlignment="Center" Grid.Column="1" >Мин.</Label>
-                    <Label HorizontalAlignment="Center" Grid.Column="2" >Сред.</Label>
-                    <Label HorizontalAlignment="Center" Grid.Column="3" >Макс.</Label>
-
-                <StackPanel Orientation="Vertical" Grid.Row="1">
-                    <ItemsControl ItemsSource="{Binding Model.PlayerLosses,ElementName=Win}">
-                        <ItemsControl.ItemTemplate>
-                            <DataTemplate>
-                                <StackPanel Orientation="Horizontal">
-                                                <Image Width="30" Height="30" Grid.Column="0" Source="{Binding Icon}" ToolTip="{StaticResource UnitTooltipTemplate}"></Image>
-                                    <Label Grid.Column="1" Content="{Binding Name}"></Label>
-                                </StackPanel>
-                            </DataTemplate>
-                        </ItemsControl.ItemTemplate>
-                    </ItemsControl>
-                 </StackPanel>
-
-                <StackPanel Orientation="Vertical" Grid.Row="1" Grid.Column="1">
-                    <ItemsControl ItemsSource="{Binding Model.PlayerLosses,ElementName=Win}">
-                        <ItemsControl.ItemTemplate>
-                            <DataTemplate>
-                                    <Label HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Height="30" Content="{Binding MinCount}"></Label>
-                            </DataTemplate>
-                        </ItemsControl.ItemTemplate>
-                    </ItemsControl>
-                </StackPanel>
-
-                <StackPanel Orientation="Vertical" Grid.Row="1" Grid.Column="2">
-                    <ItemsControl ItemsSource="{Binding Model.PlayerLosses,ElementName=Win}">
-                        <ItemsControl.ItemTemplate>
-                            <DataTemplate>
-                                    <Label Height="30" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Content="{Binding AvgCount}" ContentStringFormat="{}{0:f2}"></Label>
-                            </DataTemplate>
-                        </ItemsControl.ItemTemplate>
-                    </ItemsControl>
-                </StackPanel>
-
-                <StackPanel Orientation="Vertical" Grid.Row="1" Grid.Column="3">
-                    <ItemsControl ItemsSource="{Binding Model.PlayerLosses,ElementName=Win}">
-                        <ItemsControl.ItemTemplate>
-                            <DataTemplate>
-                                    <Label Height="30" HorizontalAlignment="Center" VerticalContentAlignment="Center" Content="{Binding MaxCount}"></Label>
-                            </DataTemplate>
-                        </ItemsControl.ItemTemplate>
-                    </ItemsControl>
-                </StackPanel>
-
-            </Grid>
-            
-                <Label>CPU:</Label>
-                <Grid>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="*" />
-                    <ColumnDefinition Width="60" />
-                    <ColumnDefinition Width="60" />
-                    <ColumnDefinition Width="60" />
-                </Grid.ColumnDefinitions>
-
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="*"/>
-                    <RowDefinition Height="*"/>
-                </Grid.RowDefinitions>
-
-                <Label HorizontalAlignment="Center" Grid.Column="1" >Мин.</Label>
-                <Label HorizontalAlignment="Center" Grid.Column="2" >Сред.</Label>
-                <Label HorizontalAlignment="Center" Grid.Column="3" >Макс.</Label>
-
-                <StackPanel Orientation="Vertical" Grid.Row="1">
-                    <ItemsControl ItemsSource="{Binding Model.EnemyLosses,ElementName=Win}">
-                        <ItemsControl.ItemTemplate>
-                            <DataTemplate>
-                                <StackPanel Orientation="Horizontal">
-                                     <Image Width="30" Height="30" Grid.Column="0" Source="{Binding Icon}" ToolTip="{StaticResource UnitTooltipTemplate}"></Image>
-                                    <Label Grid.Column="1" Content="{Binding Name}"></Label>
-                                </StackPanel>
-                            </DataTemplate>
-                        </ItemsControl.ItemTemplate>
-                    </ItemsControl>
-                </StackPanel>
-
-                <StackPanel Orientation="Vertical" Grid.Row="1" Grid.Column="1">
-                    <ItemsControl ItemsSource="{Binding Model.EnemyLosses,ElementName=Win}">
-                        <ItemsControl.ItemTemplate>
-                            <DataTemplate>
-                                <Label HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Height="30" Content="{Binding MinCount}"></Label>
-                            </DataTemplate>
-                        </ItemsControl.ItemTemplate>
-                    </ItemsControl>
-                </StackPanel>
-
-                <StackPanel Orientation="Vertical" Grid.Row="1" Grid.Column="2">
-                    <ItemsControl ItemsSource="{Binding Model.EnemyLosses,ElementName=Win}">
-                        <ItemsControl.ItemTemplate>
-                            <DataTemplate>
-                                <Label Height="30" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Content="{Binding AvgCount}" ContentStringFormat="{}{0:f2}"></Label>
-                            </DataTemplate>
-                        </ItemsControl.ItemTemplate>
-                    </ItemsControl>
-                </StackPanel>
-
-                <StackPanel Orientation="Vertical" Grid.Row="1" Grid.Column="3">
-                    <ItemsControl ItemsSource="{Binding Model.EnemyLosses,ElementName=Win}">
-                        <ItemsControl.ItemTemplate>
-                            <DataTemplate>
-                                <Label Height="30" HorizontalAlignment="Center" VerticalContentAlignment="Center" Content="{Binding MaxCount}"></Label>
-                            </DataTemplate>
-                        </ItemsControl.ItemTemplate>
-                    </ItemsControl>
-                </StackPanel>
-
-            </Grid>
-            </StackPanel>
+                  <Label FontWeight="Bold">Потери</Label>
+               </Expander.Header>
+               <StackPanel Orientation="Vertical" DataContext="{Binding Model.TotalLosses,ElementName=Win}" >
+                     <ContentPresenter Content="{Binding Model.TotalLosses,ElementName=Win}" ContentTemplate="{StaticResource LossesPanelTemplate}"></ContentPresenter>
+                     <Expander>
+                          <Expander.Header>
+                              <Label FontWeight="Bold">Потери для волн</Label>
+                          </Expander.Header>
+                          <ItemsControl ItemsSource="{Binding Model.WaveLosses, ElementName=Win}">
+                              <ItemsControl.ItemTemplate>
+                                  <DataTemplate>
+                                      <StackPanel Orientation="Vertical">
+                                          <Label FontWeight="Bold">Волна</Label>
+                                          <ContentPresenter ContentTemplate="{StaticResource LossesPanelTemplate}"></ContentPresenter>
+                                      </StackPanel>
+                                  </DataTemplate>
+                              </ItemsControl.ItemTemplate>
+                          </ItemsControl>
+                   </Expander>
+               </StackPanel>
           </Expander>
-
           <Expander IsExpanded="False" Visibility="{Binding Model.Simulation, ElementName=Win, Converter={StaticResource objectVisibilityConverter}}">
             <Expander.Header>
                 <Label FontWeight="Bold">Пример моделирования</Label>
