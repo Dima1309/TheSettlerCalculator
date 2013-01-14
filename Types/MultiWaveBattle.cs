@@ -138,18 +138,51 @@ namespace TheSettlersCalculator.Types
 				IList<UnitSquad> enemySquads = null;
 				bool enemyGeneral = false;
 
-				while(playerIndex > m_playerWaves.Count && enemyIndex > m_enemyWaves.Count)
+				while(playerIndex < m_playerWaves.Count && enemyIndex < m_enemyWaves.Count)
 				{
 					if(playerSquads == null)
 					{
 						playerSquads = new List<UnitSquad>(m_playerWaves[playerIndex].Squads);
 						playerGeneral = m_playerWaves[playerIndex].General;
+						bool emptyWave = true;
+						foreach(UnitSquad squad in playerSquads)
+						{
+							if (squad.Count > 0)
+							{
+								emptyWave = false;
+								break;
+							}
+						}
+
+						if (emptyWave)
+						{
+							playerSquads = null;
+							playerIndex++;
+							continue;
+						}
 					}
 
 					if(enemySquads == null)
 					{
 						enemySquads = new List<UnitSquad>(m_enemyWaves[enemyIndex].Squads);
 						enemyGeneral = m_enemyWaves[enemyIndex].General;
+
+						bool emptyWave = true;
+						foreach (UnitSquad squad in enemySquads)
+						{
+							if (squad.Count > 0)
+							{
+								emptyWave = false;
+								break;
+							}
+						}
+
+						if (emptyWave)
+						{
+							enemySquads = null;
+							enemyIndex++;
+							continue;
+						}
 					}
 
 					Battle battle = new Battle(playerSquads, playerGeneral, enemySquads, enemyGeneral);
@@ -182,6 +215,7 @@ namespace TheSettlersCalculator.Types
 						playerIndex++;
 					}
 
+					empty = true;
 					short[] defenderLosses = GetEnemyLosses(statistics);
 					for(int i = 0; i < defenderLosses.Length; i++)
 					{
