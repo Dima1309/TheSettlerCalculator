@@ -65,6 +65,7 @@ namespace TheSettlersCalculator.Types
 		{
 			List<BattleStep> steps = new List<BattleStep>();
 			steps.Add(new BattleStep(battle));
+			int roundIndex = 0;
 
 			while (true)
 			{
@@ -75,7 +76,7 @@ namespace TheSettlersCalculator.Types
 
 				if (roundStateHandler != null)
 				{
-					roundStateHandler(null, new RoundStateArgs(steps[steps.Count - 1]));
+					roundStateHandler(null, new RoundStateArgs(steps[steps.Count - 1], roundIndex++));
 				}
 
 				if (!Attack2(battle, waves.Normal, waves.EnemyNormal, steps, true, random, unitAttackHandler))
@@ -85,7 +86,7 @@ namespace TheSettlersCalculator.Types
 
 				if (roundStateHandler != null)
 				{
-					roundStateHandler(null, new RoundStateArgs(steps[steps.Count - 1]));
+					roundStateHandler(null, new RoundStateArgs(steps[steps.Count - 1], roundIndex++));
 				}
 
 				if (!Attack2(battle, waves.RearGuard, waves.EnemyRearGuard, steps, false, random, unitAttackHandler))
@@ -95,13 +96,14 @@ namespace TheSettlersCalculator.Types
 
 				if (roundStateHandler != null)
 				{
-					roundStateHandler(null, new RoundStateArgs(steps[steps.Count - 1]));
+					roundStateHandler(null, new RoundStateArgs(steps[steps.Count - 1], roundIndex++));
 				}
 			}
 
 			if (roundStateHandler != null)
 			{
-				roundStateHandler(null, new RoundStateArgs(steps[steps.Count - 1]));
+				roundStateHandler(null, new RoundStateArgs(steps[steps.Count - 1], roundIndex));
+				roundStateHandler(null, new RoundStateArgs(steps[steps.Count - 1], -1));
 			}
 
 			return steps;

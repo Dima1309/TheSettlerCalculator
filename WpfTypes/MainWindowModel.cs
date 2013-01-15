@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
 using TheSettlersCalculator.Quests;
@@ -40,19 +41,19 @@ namespace TheSettlersCalculator.WpfTypes
 		{
 			for(int i = 0; i < MAX_WAVES_COUNT; i++)
 			{
-				m_playerWaves[i] = new ObservableCollection<UnitSquad>();
-				m_enemyWaves[i] = new ObservableCollection<UnitSquad>();
+				PlayerWaves[i] = new ObservableCollection<UnitSquad>();
+				EnemyWaves[i] = new ObservableCollection<UnitSquad>();
 			}
 
 			DarkTemplareQuest quest = new DarkTemplareQuest();
 
 			for(int i = 0; i < MAX_WAVES_COUNT; i++)
 			{				
-				m_playerWaves[i].Clear();
+				PlayerWaves[i].Clear();
 				foreach (Unit unit in Types.PlayerUnits.Units)
 				{
 					UnitSquad unitSquad = new UnitSquad(unit, 0);
-					m_playerWaves[i].Add(unitSquad);
+					PlayerWaves[i].Add(unitSquad);
 					unitSquad.PropertyChanged += UpdateUserUnitCount;
 				}
 			}
@@ -80,12 +81,15 @@ namespace TheSettlersCalculator.WpfTypes
 
 		public ObservableCollection<UnitSquad> PlayerUnits
 		{
-			get { return m_playerWaves[m_playerWaveIndex]; }
+			get
+			{
+				return PlayerWaves[m_playerWaveIndex];
+			}
 		}
 
 		public ObservableCollection<UnitSquad> EnemyUnits
 		{
-			get { return m_enemyWaves[m_enemyWaveIndex]; }
+			get { return EnemyWaves[m_enemyWaveIndex]; }
 		}
 
 		public ObservableCollection<Quest> Quests
@@ -117,10 +121,10 @@ namespace TheSettlersCalculator.WpfTypes
 
 						for(int i=0;i<MAX_WAVES_COUNT;i++)
 						{
-							m_enemyWaves[i].Clear();
+							EnemyWaves[i].Clear();
 							foreach (Unit unit in m_activeQuest.Units)
 							{
-								m_enemyWaves[i].Add(new UnitSquad(unit, 0));
+								EnemyWaves[i].Add(new UnitSquad(unit, 0));
 							}
 						}
 					}
@@ -301,6 +305,16 @@ namespace TheSettlersCalculator.WpfTypes
 				}
 			}
 		}
+
+		public ObservableCollection<UnitSquad>[] PlayerWaves
+		{
+			get { return m_playerWaves; }
+		}
+
+		public ObservableCollection<UnitSquad>[] EnemyWaves
+		{
+			get { return m_enemyWaves; }
+		}
 		#endregion
 
 		#region Methods
@@ -322,8 +336,8 @@ namespace TheSettlersCalculator.WpfTypes
 
 			for(int i=0;i<MAX_WAVES_COUNT;i++)
 			{
-				battle.AddAttackerWave(m_playerWaves[i], true, m_playerTowerBonus[i]);
-				battle.AddEnemyWave(m_enemyWaves[i], false, m_enemyTowerBonus[i]);
+				battle.AddAttackerWave(PlayerWaves[i], true, m_playerTowerBonus[i]);
+				battle.AddEnemyWave(EnemyWaves[i], false, m_enemyTowerBonus[i]);
 			}
 
 			MultiWaveStatistics statistics = new MultiWaveStatistics(battle);
@@ -356,13 +370,23 @@ namespace TheSettlersCalculator.WpfTypes
 			OnPropertyChanged("TotalLosses");
 			OnPropertyChanged("WaveLosses");
 
+			if (simulation.Simulations.Count == 0)
+			{
+				simulation = null;
+			}
+
 			Simulation = simulation;
 		}
 
 		private static BattleLosses GenerateBattleLosses(Statistics.Statistics statistics, MultiWaveBattle battle)
 		{
+			if (statistics.MinAttackerLosses == null || statistics.MinDefenderLosses == null)
+			{
+				return new BattleLosses(new List<Losses>(), new List<Losses>());
+			}
+
 			List<Losses> playerLosses = new List<Losses>(statistics.MinAttackerLosses.Length);
-			List<Losses> enemyLosses = new List<Losses>(statistics.MinAttackerLosses.Length);
+			List<Losses> enemyLosses = new List<Losses>(statistics.MinDefenderLosses.Length);
 			for(int i = 0; i < statistics.MinAttackerLosses.Length; i++)
 			{
 				if (statistics.MaxAttackerLosses[i] > 0)

@@ -9,7 +9,6 @@ namespace TheSettlersCalculator.Types.Simulation
 		private readonly List<Round> m_rounds = new List<Round>();
 
 		private Round m_currentRound;
-		private int m_roundIndex;
 		private readonly List<UnitAttackArgs> m_unitAttacks = new List<UnitAttackArgs>(1000);
 		private readonly Battle m_battle;
 		private RoundStateArgs m_prevState;
@@ -22,7 +21,6 @@ namespace TheSettlersCalculator.Types.Simulation
 			m_currentRound = new Round();
 			m_currentRound.SetBeginState(battle);
 			m_prevState = null;
-			m_roundIndex = 0;
 
 			BattleHelper.CalculateBattle2(
 				battle,
@@ -38,6 +36,32 @@ namespace TheSettlersCalculator.Types.Simulation
 		#endregion
 
 		#region Properties
+		public List<SquadState> PlayerUnitsBeginState
+		{
+			get
+			{
+				if (m_rounds.Count == 0)
+				{
+					return null;
+				}
+
+				return m_rounds[0].PlayerBeginState;
+			}
+		}
+
+		public List<SquadState> EnemyUnitsBeginState
+		{
+			get
+			{
+				if (m_rounds.Count == 0)
+				{
+					return null;
+				}
+
+				return m_rounds[0].EnemyBeginState;
+			}
+		}
+
 		public List<Round> Rounds
 		{
 			get { return m_rounds; }
@@ -47,7 +71,7 @@ namespace TheSettlersCalculator.Types.Simulation
 		#region Methods
 		private void RoundStateHandler(object sender, RoundStateArgs args)
 		{
-			if (m_currentRound != null && m_unitAttacks.Count > 0)
+			if (m_currentRound != null && m_unitAttacks.Count > 0 && args.RoundIndex >= 0)
 			{
 				Step step = new Step(m_battle, m_unitAttacks);
 				if (m_prevState == null)
@@ -60,14 +84,14 @@ namespace TheSettlersCalculator.Types.Simulation
 				}
 
 				step.SetEndState(m_battle, args.AttackerStep, args.EnemyStep);
-				step.StepType = (AttackPriority) (m_roundIndex % 3);
+				step.StepType = (AttackPriority) (args.RoundIndex % 3);
 				m_currentRound.AddAttacks(m_battle, m_unitAttacks);
 				m_currentRound.SetEndState(m_battle, args.AttackerStep, args.EnemyStep);
 				m_currentRound.Steps.Add(step);
 			}
 
 			// last step in round ended
-			if (m_roundIndex%3==2)
+			if (args.RoundIndex % 3 == 2 || args.RoundIndex < 0)
 			{
 				if (m_currentRound != null)
 				{
@@ -80,7 +104,6 @@ namespace TheSettlersCalculator.Types.Simulation
 			}
 			m_prevState = args;
 			m_unitAttacks.Clear();
-			m_roundIndex++;			
 		}
 
 		private void UnitAttackHandler(object sender, UnitAttackArgs args)
