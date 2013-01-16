@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using TheSettlersCalculator.Helper;
+using TheSettlersCalculator.Properties;
 using TheSettlersCalculator.Types;
 
 namespace TheSettlersCalculator.Quests
@@ -25,7 +26,7 @@ namespace TheSettlersCalculator.Quests
 		#region Constructor
 		internal DarkTemplareQuest()
 		{
-			Name = "Тёмные священики";
+			Name = Resources.QUEST_DARK_PRIESTS;
 			Units = InitializeDarkTemplateUnits().ToArray();
 			Camps = InitializeDarkTemplateCamps().ToArray();
 

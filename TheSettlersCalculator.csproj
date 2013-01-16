@@ -68,6 +68,7 @@
     <Compile Include="Types\BattleSide.cs" />
     <Compile Include="Types\BattleSideStep.cs" />
     <Compile Include="Types\BattleSideType.cs" />
+    <Compile Include="Types\CampWinTime.cs" />
     <Compile Include="Types\EnemyUnits.cs" />
     <Compile Include="Types\MultiWaveBattleCompleteHandler.cs" />
     <Compile Include="Types\MultiWaveBattleWaveCompleteHandler.cs" />

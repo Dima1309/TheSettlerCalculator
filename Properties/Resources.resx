@@ -117,6 +117,9 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="QUEST_DARK_PRIESTS" xml:space="preserve">
+    <value>Тёмные священики</value>
+  </data>
   <data name="UNIT_BERSERK" xml:space="preserve">
     <value>Берсерк</value>
   </data>
@@ -194,6 +197,9 @@
   </data>
   <data name="UNIT_FULLBACK" xml:space="preserve">
     <value>Защитник</value>
+  </data>
+  <data name="UNIT_GENERAL" xml:space="preserve">
+    <value>Генерал</value>
   </data>
   <data name="UNIT_GOALKEEPER" xml:space="preserve">
     <value>Вратарь</value>

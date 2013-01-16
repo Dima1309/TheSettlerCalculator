@@ -61,6 +61,15 @@ namespace TheSettlersCalculator.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Тёмные священики.
+        /// </summary>
+        public static string QUEST_DARK_PRIESTS {
+            get {
+                return ResourceManager.GetString("QUEST_DARK_PRIESTS", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Берсерк.
         /// </summary>
         public static string UNIT_BERSERK {
@@ -291,6 +300,15 @@ namespace TheSettlersCalculator.Properties {
         public static string UNIT_FULLBACK {
             get {
                 return ResourceManager.GetString("UNIT_FULLBACK", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Генерал.
+        /// </summary>
+        public static string UNIT_GENERAL {
+            get {
+                return ResourceManager.GetString("UNIT_GENERAL", resourceCulture);
             }
         }
         
