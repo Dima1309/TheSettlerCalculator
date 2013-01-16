@@ -5,6 +5,7 @@
         Height="{Binding Model.Map.Height, ElementName=Win}" 
         Width="{Binding Model.Map.Width, ElementName=Win}"
         x:Name="Win" Loaded="Win_Loaded">
+
     <Grid>           
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"></ColumnDefinition>
@@ -13,9 +14,21 @@
             <RowDefinition Height="*"></RowDefinition>
         </Grid.RowDefinitions>
 
-        <Image Name="MapImage" Source="{Binding Model.Map, ElementName=Win}" 
+        <ScrollViewer x:Name="scrollViewer" Grid.Column="0" Grid.Row="0" 
+                      HorizontalScrollBarVisibility="Visible" 
+                      VerticalScrollBarVisibility="Visible" 
+                      PreviewMouseWheel="ScrollViewer_PreviewMouseWheel"
+                      PreviewMouseLeftButtonUp="ScrollViewer_MouseLeftButtonUp"
+                      PreviewMouseLeftButtonDown="ScrollViewer_MouseLeftButtonDown"
+                      MouseMove="ScrollViewer_MouseMove">
+            <Image Name="MapImage" Source="{Binding Model.Map, ElementName=Win}" 
                Height="{Binding Model.Map.Height, ElementName=Win}" 
                Width="{Binding Model.Map.Width, ElementName=Win}"
-                Grid.Column="0" Grid.Row="0"></Image>        
+                   MouseWheel="MapImage_MouseWheel" >
+                <Image.LayoutTransform>
+                    <ScaleTransform x:Name="imageScale" CenterX="0" CenterY="0" ScaleX="1" ScaleY="1"/>
+                </Image.LayoutTransform>
+            </Image>
+        </ScrollViewer>
     </Grid>
 </Window>
