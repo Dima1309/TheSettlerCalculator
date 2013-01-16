@@ -22,7 +22,9 @@ namespace TheSettlersCalculator.Statistics
 		private int m_maxRounds;
 		private double m_avgRounds;
 		private int m_winCount;
-		private int m_count;		
+		private int m_count;
+		//Key - round count, Value - count of battles
+		private Dictionary<int, int> m_roundStatistics = new Dictionary<int, int>();
 		#endregion
 
 		#region Constructor
@@ -139,13 +141,20 @@ namespace TheSettlersCalculator.Statistics
 									lastStep.Sides[(int)BattleSideType.Enemy].Counts[i]);
 			}
 
+			bool winBattle = false;
 			foreach (short attackerLoss in lastStep.Counts)
 			{
 				if (attackerLoss > 0)
 				{
-					m_winCount++;
+					winBattle = true;					
 					break;
 				}
+			}
+
+			if (winBattle)
+			{
+				m_winCount++;
+
 			}
 
 			if (m_minAttackerLosses == null)
@@ -235,6 +244,20 @@ namespace TheSettlersCalculator.Statistics
 			}
 
 			m_count = Count + 1;
+
+			if (!winBattle)
+			{
+				rounds = -rounds;
+			}
+
+			if (m_roundStatistics.ContainsKey(rounds))
+			{
+				m_roundStatistics[rounds] += 1;
+			}
+			else
+			{
+				m_roundStatistics[rounds] = 1;
+			}
 		}
 
 		/// <summary>
@@ -304,6 +327,18 @@ namespace TheSettlersCalculator.Statistics
 
 			m_winCount += statistics.m_winCount;
 			m_count += statistics.m_count;
+
+			foreach(KeyValuePair<int, int> roundStatistic in m_roundStatistics)
+			{
+				if (m_roundStatistics.ContainsKey(roundStatistic.Key))
+				{
+					m_roundStatistics[roundStatistic.Key] += roundStatistic.Value;
+				}
+				else
+				{
+					m_roundStatistics[roundStatistic.Key] = roundStatistic.Value;
+				}	
+			}
 		}
 
 		/// <summary>

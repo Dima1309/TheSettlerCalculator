@@ -4,7 +4,7 @@
 	{
 		Normal = 20,
 		WhiteCastle = 40,
-		BlackCastle = 140,//Need check
+		BlackCastle = 120,
 		ChurchOfBones = 120,
 		WitchTower = 140
 	}
