@@ -11,6 +11,7 @@ namespace TheSettlersCalculator.Quests
 		private Unit[] m_units;
 		private Camp[] m_camps;
 		private BitmapSource m_map;
+		private string m_mapPath;
 		#endregion
 
 		#region Properties
@@ -41,7 +42,12 @@ namespace TheSettlersCalculator.Quests
 		public BitmapSource Map
 		{
 			get { return m_map; }
-			set { m_map = value; }
+		}
+
+		internal string MapPath
+		{
+			get { return m_mapPath; }
+			set { m_mapPath = value; }
 		}
 		#endregion
 	}

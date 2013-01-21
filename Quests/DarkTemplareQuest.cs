@@ -27,175 +27,36 @@ namespace TheSettlersCalculator.Quests
 		internal DarkTemplareQuest()
 		{
 			Name = Resources.QUEST_DIE_SCHWARZEN_PRIESTER;
-			Units = InitializeDarkTemplateUnits().ToArray();
-			Camps = InitializeDarkTemplateCamps().ToArray();
+			Units = InitializeUnits().ToArray();
+			Camps = InitializeCamps().ToArray();
 
 			Icon = ImageHelper.LoadPng("TheSettlersCalculator.Quests.Icons.Die_schwarzen_Priester.png");
-			Map = ImageHelper.LoadJpg("TheSettlersCalculator.Quests.Maps.die-schwarzen-priester.jpg");
+			MapPath = "TheSettlersCalculator.Quests.Maps.die-schwarzen-priester.jpg";
 		}
 		#endregion
 
-		private static List<Unit> InitializeDarkTemplateUnits()
+		private static List<Unit> InitializeUnits()
 		{
 			List<Unit> units = new List<Unit>();
 
-			Unit unit = new Unit();
-			unit.Name = "Головорез";
-			unit.Health = 60;
-			unit.MinDamage = 20;
-			unit.MaxDamage = 40;
-			unit.Accuracy = 60;
-			unit.Experience = 3;
-			unit.AttackPriority = AttackPriority.Normal;
-			unit.Icon = ImageHelper.LoadPng("TheSettlersCalculator.Quests.Images.thug.png");
-			units.Add(unit);
-
-			unit = new Unit();
-			unit.Name = "Сторожевая собака";
-			unit.Health = 5;
-			unit.MinDamage = 5;
-			unit.MaxDamage = 10;
-			unit.Accuracy = 60;
-			unit.Experience = 4;
-			unit.AttackPriority = AttackPriority.AvantGarde;
-			unit.AttackWeaknessTarget = true;
-			unit.Icon = ImageHelper.LoadPng("TheSettlersCalculator.Quests.Images.dog.png");
-			units.Add(unit);
-
-			unit = new Unit();
-			unit.Name = "Пращник";
-			unit.Health = 10;
-			unit.MinDamage = 20;
-			unit.MaxDamage = 40;
-			unit.Accuracy = 60;
-			unit.Experience = 3;
-			unit.TowerBonus= true;
-			unit.AttackPriority = AttackPriority.Normal;
-			unit.Icon = ImageHelper.LoadPng("TheSettlersCalculator.Quests.Images.stoneThrower.png");
-			units.Add(unit);
-
-			unit = new Unit();
-			unit.Name = "Рэйнджер";
-			unit.Health = 10;
-			unit.MinDamage = 30;
-			unit.MaxDamage = 60;
-			unit.Accuracy = 60;
-			unit.Experience = 4;
-			unit.TowerBonus = true;
-			unit.AttackPriority = AttackPriority.Normal;
-			unit.Icon = ImageHelper.LoadPng("TheSettlersCalculator.Quests.Images.ranger.png");
-			units.Add(unit);
-
-			unit = new Unit();
-			unit.Name = "Скунс";
-			unit.Health = 5000;
-			unit.MinDamage = 1;
-			unit.MaxDamage = 100;
-			unit.Accuracy = 50;
-			unit.Experience = 200;
-			unit.AttackPriority = AttackPriority.RearGuard;
-			unit.AttackOnArea = true;
-			unit.Icon = ImageHelper.LoadPng("TheSettlersCalculator.Quests.Images.skunk.png");
-			units.Add(unit);
-
-			unit = new Unit();
-			unit.Name = "Cектант";
-			unit.Health = 40;
-			unit.MinDamage = 15;
-			unit.MaxDamage = 30;
-			unit.Accuracy = 80;
-			unit.Experience = 3;
-			unit.AttackPriority = AttackPriority.Normal;
-			unit.Icon = ImageHelper.LoadPng("TheSettlersCalculator.Quests.Images.Cultist.png");
-			units.Add(unit);
-
-			unit = new Unit();
-			unit.Name = "Болотная ведьма";
-			unit.Health = 13000;
-			unit.MinDamage = 400;
-			unit.MaxDamage = 600;
-			unit.Accuracy = 75;
-			unit.Experience = 250;
-			unit.AttackPriority = AttackPriority.AvantGarde;
-			unit.AttackOnArea = true;
-			unit.Icon = ImageHelper.LoadPng("TheSettlersCalculator.Quests.Images.swampWitch.png");
-			units.Add(unit);
-
-			unit = new Unit();
-			unit.Name = "Крадущийся";
-			unit.Health = 5;
-			unit.MinDamage = 0;
-			unit.MaxDamage = 5;
-			unit.Accuracy = 60;
-			unit.Experience = 6;
-			unit.AttackPriority = AttackPriority.AvantGarde;
-			unit.AttackWeaknessTarget = true;
-			unit.Icon = ImageHelper.LoadPng("TheSettlersCalculator.Quests.Images.ShadowSneaker.png");
-			units.Add(unit);
-
-			unit = new Unit();
-			unit.Name = "Фанатик";
-			unit.Health = 20;
-			unit.MinDamage = 30;
-			unit.MaxDamage = 60;
-			unit.Accuracy = 90;
-			unit.Experience = 6;
-			unit.TowerBonus = true;
-			unit.AttackPriority = AttackPriority.Normal;
-			unit.Icon = ImageHelper.LoadPng("TheSettlersCalculator.Quests.Images.Fanatic.png");
-			units.Add(unit);
-
-			unit = new Unit();
-			unit.Name = "Темный священник";
-			unit.Health = 20;
-			unit.MinDamage = 40;
-			unit.MaxDamage = 80;
-			unit.Accuracy = 100;
-			unit.Experience = 8;
-			unit.TowerBonus = true;
-			unit.AttackPriority = AttackPriority.Normal;
-			unit.Icon = ImageHelper.LoadPng("TheSettlersCalculator.Quests.Images.DarkPriest.png");
-			units.Add(unit);
-
-			unit = new Unit();
-			unit.Name = "Танцор огня";
-			unit.Health = 30;
-			unit.MinDamage = 60;
-			unit.MaxDamage = 120;
-			unit.Accuracy = 100;
-			unit.Experience = 14;
-			unit.TowerBonus = true;
-			unit.AttackPriority = AttackPriority.Normal;
-			unit.Icon = ImageHelper.LoadPng("TheSettlersCalculator.Quests.Images.Firedancer.png");
-			units.Add(unit);
-
-			unit = new Unit();
-			unit.Name = "Темный первосвященник";
-			unit.Health = 15000;
-			unit.MinDamage = 800;
-			unit.MaxDamage = 1000;
-			unit.Accuracy = 75;
-			unit.Experience = 350;
-			unit.AttackPriority = AttackPriority.RearGuard;
-			unit.AttackOnArea = true;
-			unit.Icon = ImageHelper.LoadPng("TheSettlersCalculator.Quests.Images.DarkHighPriest.png");
-			units.Add(unit);
-
-			unit = new Unit();
-			unit.Name = "Волк";
-			unit.Health = 10;
-			unit.MinDamage = 2;
-			unit.MaxDamage = 3;
-			unit.Accuracy = 80;
-			unit.Experience = 1;
-			unit.AttackPriority = AttackPriority.AvantGarde;
-			unit.Icon = ImageHelper.LoadPng("TheSettlersCalculator.Quests.Images.wolf.png");
-			units.Add(unit);
+			units.Add(EnemyUnits.Units[EnemyUnits.THUG]);
+			units.Add(EnemyUnits.Units[EnemyUnits.GUARD_DOG]);
+			units.Add(EnemyUnits.Units[EnemyUnits.STONE_THROWER]);
+			units.Add(EnemyUnits.Units[EnemyUnits.RANGER]);
+			units.Add(EnemyUnits.Units[EnemyUnits.SKUNK]);
+			units.Add(EnemyUnits.Units[EnemyUnits.CULTIST]);
+			units.Add(EnemyUnits.Units[EnemyUnits.SWAMP_WITCH]);
+			units.Add(EnemyUnits.Units[EnemyUnits.SHADOWS_NEAKER]);
+			units.Add(EnemyUnits.Units[EnemyUnits.FANATIC]);
+			units.Add(EnemyUnits.Units[EnemyUnits.DARK_PRIEST]);
+			units.Add(EnemyUnits.Units[EnemyUnits.FIRE_DANCER]);
+			units.Add(EnemyUnits.Units[EnemyUnits.DARK_HIGH_PRIEST]);
+			units.Add(EnemyUnits.Units[EnemyUnits.WOLF]);
 
 			return units;
 		}
 
-		private static List<Camp> InitializeDarkTemplateCamps()
+		private static List<Camp> InitializeCamps()
 		{
 			List<Camp> result = new List<Camp>();
 

@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
 using TheSettlersCalculator.Quests;
@@ -312,7 +313,7 @@ namespace TheSettlersCalculator.WpfTypes
 		}
 
 		internal void Calculate()
-		{			
+		{
 			Calculator calculator = new Calculator(ROUNDS);
 			//unist, counts, generatl, enemy units, counts, generals
 			Battle battle = new Battle(PlayerUnits, true, EnemyUnits, false);
