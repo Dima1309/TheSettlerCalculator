@@ -192,6 +192,7 @@ namespace TheSettlersCalculator.Quests
 			camp.Counts.Add(SHADOWSNEAKER, 20);
 			camp.Counts.Add(SWAMP_WITCH, 1);
 			camp.CampType = CampType.Boss;
+			camp.WinTime = (int)CampWinTime.ChurchOfBones;
 			camp.Left = 143;
 			camp.Top = 143;
 			result.Add(camp);
@@ -251,6 +252,7 @@ namespace TheSettlersCalculator.Quests
 			camp.Counts.Add(SHADOWSNEAKER, 40);
 			camp.Counts.Add(DARK_HIGH_PRIEST, 1);
 			camp.CampType = CampType.Boss;
+			camp.WinTime = (int)CampWinTime.BlackCastle;
 			camp.Left = 683;
 			camp.Top = 65;
 			result.Add(camp);

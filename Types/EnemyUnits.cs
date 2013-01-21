@@ -26,7 +26,7 @@ namespace TheSettlersCalculator.Types
 		internal const int CHUCK = 17;
 		internal const int WILD_MARY = 18;
 		internal const int BOWMAN_DESERTER = 19;
-		internal const int CANNONNEER_DESERTER = 20;
+		internal const int CANNONEER_DESERTER = 20;
 		internal const int CAVALRY_DESERTER = 21;
 		internal const int ELITE_SOLDIER_DESERTER = 22;
 		internal const int LONGBOWMAN_DESERTER = 23;
@@ -419,7 +419,7 @@ namespace TheSettlersCalculator.Types
 			unit.TowerBonus = true;
 			unit.IgnoreTowerBonus = 100;
 			unit.Icon = ImageHelper.LoadPng("TheSettlersCalculator.Quests.Images.cannoneer.png");
-			s_units[CANNONNEER_DESERTER] = unit;
+			s_units[CANNONEER_DESERTER] = unit;
 
 			unit = new Unit();
 			unit.Name = Resources.UNIT_SIR_ROBIN;

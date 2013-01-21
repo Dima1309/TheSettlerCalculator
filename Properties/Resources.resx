@@ -141,8 +141,20 @@
   <data name="QUEST_EINSAME_EXPERIMENTE" xml:space="preserve">
     <value>Эксперименты в уединении</value>
   </data>
+  <data name="QUEST_HORSEBACK" xml:space="preserve">
+    <value>В седле</value>
+  </data>
   <data name="QUEST_INSEL_DER_FREIBEUTER" xml:space="preserve">
     <value>Остров пиратов</value>
+  </data>
+  <data name="QUEST_ISLAND_OF_THE_PIRATES" xml:space="preserve">
+    <value>Остров пиратов</value>
+  </data>
+  <data name="QUEST_OLD_FRIENDS" xml:space="preserve">
+    <value>Старые друзья</value>
+  </data>
+  <data name="QUEST_OUTLAWS" xml:space="preserve">
+    <value>Преступники</value>
   </data>
   <data name="QUEST_RASENDER_BULLE" xml:space="preserve">
     <value>Ревущий бык</value>
@@ -159,8 +171,14 @@
   <data name="QUEST_SOHNE_DER_STEPPE" xml:space="preserve">
     <value>Сыны степей</value>
   </data>
+  <data name="QUEST_STEALING_FROM_THE_RICH" xml:space="preserve">
+    <value>Ограбление богатых</value>
+  </data>
   <data name="QUEST_SUMPFHEXE" xml:space="preserve">
     <value>Болотная ведьма</value>
+  </data>
+  <data name="QUEST_TRAITORS" xml:space="preserve">
+    <value>Предатели</value>
   </data>
   <data name="QUEST_UBERRASCHUNGSANGRIFF" xml:space="preserve">
     <value>Внезапное нападение</value>
@@ -170,6 +188,9 @@
   </data>
   <data name="QUEST_VIKTOR_DER_VERSCHLAGENE" xml:space="preserve">
     <value>Злобный Виктор</value>
+  </data>
+  <data name="QUEST_WITCH_OF_THE_SWAMP" xml:space="preserve">
+    <value>Болотная ведьма</value>
   </data>
   <data name="RESOURCE_BOW" xml:space="preserve">
     <value>Луки</value>

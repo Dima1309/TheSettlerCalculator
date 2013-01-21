@@ -1,4 +1,5 @@
 ﻿using System.Windows.Media.Imaging;
+using TheSettlersCalculator.Helper;
 using TheSettlersCalculator.Types;
 
 namespace TheSettlersCalculator.Quests
@@ -41,7 +42,7 @@ namespace TheSettlersCalculator.Quests
 
 		public BitmapSource Map
 		{
-			get { return m_map; }
+			get { return m_map ?? (m_map = ImageHelper.LoadJpg(m_mapPath)); }
 		}
 
 		internal string MapPath

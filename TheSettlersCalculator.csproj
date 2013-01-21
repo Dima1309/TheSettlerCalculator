@@ -59,8 +59,12 @@
       <DependentUpon>QuestMapWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="Quests\DarkTemplareQuest.cs" />
+    <Compile Include="Quests\IslandofthePiratesQuest.cs" />
     <Compile Include="Quests\Quest.cs" />
     <Compile Include="Quests\Quests.cs" />
+    <Compile Include="Quests\StealingfromtherichQuest.cs" />
+    <Compile Include="Quests\TraitorsQuest.cs" />
+    <Compile Include="Quests\WitchoftheSwampQuest.cs" />
     <Compile Include="Statistics\MultiWaveStatistics.cs" />
     <Compile Include="Statistics\Statistics.cs" />
     <Compile Include="Statistics\WaveKey.cs" />
@@ -256,7 +260,6 @@
   <ItemGroup>
     <Resource Include="Properties\map.png" />
   </ItemGroup>
-
   <ItemGroup>
     <EmbeddedResource Include="Price\Icons\bow.png" />
     <EmbeddedResource Include="Price\Icons\bread.png" />
