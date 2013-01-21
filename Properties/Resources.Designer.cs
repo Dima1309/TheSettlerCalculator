@@ -61,6 +61,600 @@ namespace TheSettlersCalculator.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Ограбление богатых.
+        /// </summary>
+        internal static string QUEST_BEUTELSCHNEIDER {
+            get {
+                return ResourceManager.GetString("QUEST_BEUTELSCHNEIDER", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Убежище разбойников.
+        /// </summary>
+        internal static string QUEST_DAS_BANDITENNEST {
+            get {
+                return ResourceManager.GetString("QUEST_DAS_BANDITENNEST", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Темное братство.
+        /// </summary>
+        internal static string QUEST_DIE_DUNKLE_BRUDERSCHAFT {
+            get {
+                return ResourceManager.GetString("QUEST_DIE_DUNKLE_BRUDERSCHAFT", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Северяне.
+        /// </summary>
+        internal static string QUEST_DIE_NORDMANNER {
+            get {
+                return ResourceManager.GetString("QUEST_DIE_NORDMANNER", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Тёмные священники.
+        /// </summary>
+        internal static string QUEST_DIE_SCHWARZEN_PRIESTER {
+            get {
+                return ResourceManager.GetString("QUEST_DIE_SCHWARZEN_PRIESTER", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Чёрные рыцари.
+        /// </summary>
+        internal static string QUEST_DIE_SCHWARZEN_RITTER {
+            get {
+                return ResourceManager.GetString("QUEST_DIE_SCHWARZEN_RITTER", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Дикая Мери.
+        /// </summary>
+        internal static string QUEST_DIE_WILDE_WALTRAUT {
+            get {
+                return ResourceManager.GetString("QUEST_DIE_WILDE_WALTRAUT", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Эксперименты в уединении.
+        /// </summary>
+        internal static string QUEST_EINSAME_EXPERIMENTE {
+            get {
+                return ResourceManager.GetString("QUEST_EINSAME_EXPERIMENTE", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Остров пиратов.
+        /// </summary>
+        internal static string QUEST_INSEL_DER_FREIBEUTER {
+            get {
+                return ResourceManager.GetString("QUEST_INSEL_DER_FREIBEUTER", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Ревущий бык.
+        /// </summary>
+        internal static string QUEST_RASENDER_BULLE {
+            get {
+                return ResourceManager.GetString("QUEST_RASENDER_BULLE", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Преступники.
+        /// </summary>
+        internal static string QUEST_RAUBERBANDE {
+            get {
+                return ResourceManager.GetString("QUEST_RAUBERBANDE", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to В седле.
+        /// </summary>
+        internal static string QUEST_SATTELFEST {
+            get {
+                return ResourceManager.GetString("QUEST_SATTELFEST", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Порох.
+        /// </summary>
+        internal static string QUEST_SCHIESPULVER {
+            get {
+                return ResourceManager.GetString("QUEST_SCHIESPULVER", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Сыны степей.
+        /// </summary>
+        internal static string QUEST_SOHNE_DER_STEPPE {
+            get {
+                return ResourceManager.GetString("QUEST_SOHNE_DER_STEPPE", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Болотная ведьма.
+        /// </summary>
+        internal static string QUEST_SUMPFHEXE {
+            get {
+                return ResourceManager.GetString("QUEST_SUMPFHEXE", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Внезапное нападение.
+        /// </summary>
+        internal static string QUEST_UBERRASCHUNGSANGRIFF {
+            get {
+                return ResourceManager.GetString("QUEST_UBERRASCHUNGSANGRIFF", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Предатели.
+        /// </summary>
+        internal static string QUEST_VERRATER {
+            get {
+                return ResourceManager.GetString("QUEST_VERRATER", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Злобный Виктор.
+        /// </summary>
+        internal static string QUEST_VIKTOR_DER_VERSCHLAGENE {
+            get {
+                return ResourceManager.GetString("QUEST_VIKTOR_DER_VERSCHLAGENE", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Луки.
+        /// </summary>
+        internal static string RESOURCE_BOW {
+            get {
+                return ResourceManager.GetString("RESOURCE_BOW", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Хлеб.
+        /// </summary>
+        internal static string RESOURCE_BREAD {
+            get {
+                return ResourceManager.GetString("RESOURCE_BREAD", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Квас.
+        /// </summary>
+        internal static string RESOURCE_BREW {
+            get {
+                return ResourceManager.GetString("RESOURCE_BREW", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Бронза.
+        /// </summary>
+        internal static string RESOURCE_BRONZE {
+            get {
+                return ResourceManager.GetString("RESOURCE_BRONZE", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Медная руда.
+        /// </summary>
+        internal static string RESOURCE_BRONZE_ORE {
+            get {
+                return ResourceManager.GetString("RESOURCE_BRONZE_ORE", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Бронзовые мечи.
+        /// </summary>
+        internal static string RESOURCE_BRONZE_SWORD {
+            get {
+                return ResourceManager.GetString("RESOURCE_BRONZE_SWORD", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Пушка.
+        /// </summary>
+        internal static string RESOURCE_CANNON {
+            get {
+                return ResourceManager.GetString("RESOURCE_CANNON", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Повозка.
+        /// </summary>
+        internal static string RESOURCE_CARRIAGE {
+            get {
+                return ResourceManager.GetString("RESOURCE_CARRIAGE", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Уголь.
+        /// </summary>
+        internal static string RESOURCE_COAL {
+            get {
+                return ResourceManager.GetString("RESOURCE_COAL", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Монеты.
+        /// </summary>
+        internal static string RESOURCE_COINS {
+            get {
+                return ResourceManager.GetString("RESOURCE_COINS", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Арбалеты.
+        /// </summary>
+        internal static string RESOURCE_CROSSBOW {
+            get {
+                return ResourceManager.GetString("RESOURCE_CROSSBOW", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Булатные мечи.
+        /// </summary>
+        internal static string RESOURCE_DAMASCENE_SWORD {
+            get {
+                return ResourceManager.GetString("RESOURCE_DAMASCENE_SWORD", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Пасхальные яйца.
+        /// </summary>
+        internal static string RESOURCE_EASTER_EGG {
+            get {
+                return ResourceManager.GetString("RESOURCE_EASTER_EGG", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Красное дерево.
+        /// </summary>
+        internal static string RESOURCE_EXOTIC_WOOD {
+            get {
+                return ResourceManager.GetString("RESOURCE_EXOTIC_WOOD", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Доски из красного дерева.
+        /// </summary>
+        internal static string RESOURCE_EXOTIC_WOOD_PLANKS {
+            get {
+                return ResourceManager.GetString("RESOURCE_EXOTIC_WOOD_PLANKS", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Рыба.
+        /// </summary>
+        internal static string RESOURCE_FISH {
+            get {
+                return ResourceManager.GetString("RESOURCE_FISH", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Мука.
+        /// </summary>
+        internal static string RESOURCE_FLOUR {
+            get {
+                return ResourceManager.GetString("RESOURCE_FLOUR", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Подарки.
+        /// </summary>
+        internal static string RESOURCE_GIFT {
+            get {
+                return ResourceManager.GetString("RESOURCE_GIFT", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Золото.
+        /// </summary>
+        internal static string RESOURCE_GOLD {
+            get {
+                return ResourceManager.GetString("RESOURCE_GOLD", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Золотая руда.
+        /// </summary>
+        internal static string RESOURCE_GOLD_ORE {
+            get {
+                return ResourceManager.GetString("RESOURCE_GOLD_ORE", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Гранит.
+        /// </summary>
+        internal static string RESOURCE_GRANITE {
+            get {
+                return ResourceManager.GetString("RESOURCE_GRANITE", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Монеты гильдии.
+        /// </summary>
+        internal static string RESOURCE_GUILD_COINS {
+            get {
+                return ResourceManager.GetString("RESOURCE_GUILD_COINS", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Порох.
+        /// </summary>
+        internal static string RESOURCE_GUN_POWDER {
+            get {
+                return ResourceManager.GetString("RESOURCE_GUN_POWDER", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Древесина из дуба.
+        /// </summary>
+        internal static string RESOURCE_HARDWOOD {
+            get {
+                return ResourceManager.GetString("RESOURCE_HARDWOOD", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Доски из дуба.
+        /// </summary>
+        internal static string RESOURCE_HARDWOOD_PLANKS {
+            get {
+                return ResourceManager.GetString("RESOURCE_HARDWOOD_PLANKS", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Лошади.
+        /// </summary>
+        internal static string RESOURCE_HORSE {
+            get {
+                return ResourceManager.GetString("RESOURCE_HORSE", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Железо.
+        /// </summary>
+        internal static string RESOURCE_IRON {
+            get {
+                return ResourceManager.GetString("RESOURCE_IRON", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Железная руда.
+        /// </summary>
+        internal static string RESOURCE_IRON_ORE {
+            get {
+                return ResourceManager.GetString("RESOURCE_IRON_ORE", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Железные мечи.
+        /// </summary>
+        internal static string RESOURCE_IRON_SWORD {
+            get {
+                return ResourceManager.GetString("RESOURCE_IRON_SWORD", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Длинные луки.
+        /// </summary>
+        internal static string RESOURCE_LONGBOW {
+            get {
+                return ResourceManager.GetString("RESOURCE_LONGBOW", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Фрагменты карт.
+        /// </summary>
+        internal static string RESOURCE_MAP_FRAGMENT {
+            get {
+                return ResourceManager.GetString("RESOURCE_MAP_FRAGMENT", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Мрамор.
+        /// </summary>
+        internal static string RESOURCE_MARBLE {
+            get {
+                return ResourceManager.GetString("RESOURCE_MARBLE", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Мясо.
+        /// </summary>
+        internal static string RESOURCE_MEAT {
+            get {
+                return ResourceManager.GetString("RESOURCE_MEAT", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Древесина из сосны.
+        /// </summary>
+        internal static string RESOURCE_PINE_WOOD {
+            get {
+                return ResourceManager.GetString("RESOURCE_PINE_WOOD", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Доски из сосны.
+        /// </summary>
+        internal static string RESOURCE_PINE_WOOD_PLANKS {
+            get {
+                return ResourceManager.GetString("RESOURCE_PINE_WOOD_PLANKS", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Тыквы.
+        /// </summary>
+        internal static string RESOURCE_PUMPKIN {
+            get {
+                return ResourceManager.GetString("RESOURCE_PUMPKIN", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Селитра.
+        /// </summary>
+        internal static string RESOURCE_SALPETRE {
+            get {
+                return ResourceManager.GetString("RESOURCE_SALPETRE", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Колбасы.
+        /// </summary>
+        internal static string RESOURCE_SAUSAGE {
+            get {
+                return ResourceManager.GetString("RESOURCE_SAUSAGE", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Футбольные мячи.
+        /// </summary>
+        internal static string RESOURCE_SOCCER_BALL {
+            get {
+                return ResourceManager.GetString("RESOURCE_SOCCER_BALL", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Сталь.
+        /// </summary>
+        internal static string RESOURCE_STEEL {
+            get {
+                return ResourceManager.GetString("RESOURCE_STEEL", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Стальные мечи.
+        /// </summary>
+        internal static string RESOURCE_STEEL_SWORD {
+            get {
+                return ResourceManager.GetString("RESOURCE_STEEL_SWORD", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Камень.
+        /// </summary>
+        internal static string RESOURCE_STONE {
+            get {
+                return ResourceManager.GetString("RESOURCE_STONE", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Титан.
+        /// </summary>
+        internal static string RESOURCE_TITANIUM {
+            get {
+                return ResourceManager.GetString("RESOURCE_TITANIUM", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Титановая руда.
+        /// </summary>
+        internal static string RESOURCE_TITANIUM_ORE {
+            get {
+                return ResourceManager.GetString("RESOURCE_TITANIUM_ORE", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Инструменты.
+        /// </summary>
+        internal static string RESOURCE_TOOLS {
+            get {
+                return ResourceManager.GetString("RESOURCE_TOOLS", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Вода.
+        /// </summary>
+        internal static string RESOURCE_WATER {
+            get {
+                return ResourceManager.GetString("RESOURCE_WATER", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Пшеница.
+        /// </summary>
+        internal static string RESOURCE_WHEAT {
+            get {
+                return ResourceManager.GetString("RESOURCE_WHEAT", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Колёса.
+        /// </summary>
+        internal static string RESOURCE_WHEEL {
+            get {
+                return ResourceManager.GetString("RESOURCE_WHEEL", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Берсерк.
         /// </summary>
         internal static string UNIT_BERSERK {

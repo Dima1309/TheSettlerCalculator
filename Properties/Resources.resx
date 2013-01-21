@@ -117,6 +117,204 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="QUEST_BEUTELSCHNEIDER" xml:space="preserve">
+    <value>Ограбление богатых</value>
+  </data>
+  <data name="QUEST_DAS_BANDITENNEST" xml:space="preserve">
+    <value>Убежище разбойников</value>
+  </data>
+  <data name="QUEST_DIE_DUNKLE_BRUDERSCHAFT" xml:space="preserve">
+    <value>Темное братство</value>
+  </data>
+  <data name="QUEST_DIE_NORDMANNER" xml:space="preserve">
+    <value>Северяне</value>
+  </data>
+  <data name="QUEST_DIE_SCHWARZEN_PRIESTER" xml:space="preserve">
+    <value>Тёмные священники</value>
+  </data>
+  <data name="QUEST_DIE_SCHWARZEN_RITTER" xml:space="preserve">
+    <value>Чёрные рыцари</value>
+  </data>
+  <data name="QUEST_DIE_WILDE_WALTRAUT" xml:space="preserve">
+    <value>Дикая Мери</value>
+  </data>
+  <data name="QUEST_EINSAME_EXPERIMENTE" xml:space="preserve">
+    <value>Эксперименты в уединении</value>
+  </data>
+  <data name="QUEST_INSEL_DER_FREIBEUTER" xml:space="preserve">
+    <value>Остров пиратов</value>
+  </data>
+  <data name="QUEST_RASENDER_BULLE" xml:space="preserve">
+    <value>Ревущий бык</value>
+  </data>
+  <data name="QUEST_RAUBERBANDE" xml:space="preserve">
+    <value>Преступники</value>
+  </data>
+  <data name="QUEST_SATTELFEST" xml:space="preserve">
+    <value>В седле</value>
+  </data>
+  <data name="QUEST_SCHIESPULVER" xml:space="preserve">
+    <value>Порох</value>
+  </data>
+  <data name="QUEST_SOHNE_DER_STEPPE" xml:space="preserve">
+    <value>Сыны степей</value>
+  </data>
+  <data name="QUEST_SUMPFHEXE" xml:space="preserve">
+    <value>Болотная ведьма</value>
+  </data>
+  <data name="QUEST_UBERRASCHUNGSANGRIFF" xml:space="preserve">
+    <value>Внезапное нападение</value>
+  </data>
+  <data name="QUEST_VERRATER" xml:space="preserve">
+    <value>Предатели</value>
+  </data>
+  <data name="QUEST_VIKTOR_DER_VERSCHLAGENE" xml:space="preserve">
+    <value>Злобный Виктор</value>
+  </data>
+  <data name="RESOURCE_BOW" xml:space="preserve">
+    <value>Луки</value>
+  </data>
+  <data name="RESOURCE_BREAD" xml:space="preserve">
+    <value>Хлеб</value>
+  </data>
+  <data name="RESOURCE_BREW" xml:space="preserve">
+    <value>Квас</value>
+  </data>
+  <data name="RESOURCE_BRONZE" xml:space="preserve">
+    <value>Бронза</value>
+  </data>
+  <data name="RESOURCE_BRONZE_ORE" xml:space="preserve">
+    <value>Медная руда</value>
+  </data>
+  <data name="RESOURCE_BRONZE_SWORD" xml:space="preserve">
+    <value>Бронзовые мечи</value>
+  </data>
+  <data name="RESOURCE_CANNON" xml:space="preserve">
+    <value>Пушка</value>
+  </data>
+  <data name="RESOURCE_CARRIAGE" xml:space="preserve">
+    <value>Повозка</value>
+  </data>
+  <data name="RESOURCE_COAL" xml:space="preserve">
+    <value>Уголь</value>
+  </data>
+  <data name="RESOURCE_COINS" xml:space="preserve">
+    <value>Монеты</value>
+  </data>
+  <data name="RESOURCE_CROSSBOW" xml:space="preserve">
+    <value>Арбалеты</value>
+  </data>
+  <data name="RESOURCE_DAMASCENE_SWORD" xml:space="preserve">
+    <value>Булатные мечи</value>
+  </data>
+  <data name="RESOURCE_EASTER_EGG" xml:space="preserve">
+    <value>Пасхальные яйца</value>
+  </data>
+  <data name="RESOURCE_EXOTIC_WOOD" xml:space="preserve">
+    <value>Красное дерево</value>
+  </data>
+  <data name="RESOURCE_EXOTIC_WOOD_PLANKS" xml:space="preserve">
+    <value>Доски из красного дерева</value>
+  </data>
+  <data name="RESOURCE_FISH" xml:space="preserve">
+    <value>Рыба</value>
+  </data>
+  <data name="RESOURCE_FLOUR" xml:space="preserve">
+    <value>Мука</value>
+  </data>
+  <data name="RESOURCE_GIFT" xml:space="preserve">
+    <value>Подарки</value>
+  </data>
+  <data name="RESOURCE_GOLD" xml:space="preserve">
+    <value>Золото</value>
+  </data>
+  <data name="RESOURCE_GOLD_ORE" xml:space="preserve">
+    <value>Золотая руда</value>
+  </data>
+  <data name="RESOURCE_GRANITE" xml:space="preserve">
+    <value>Гранит</value>
+  </data>
+  <data name="RESOURCE_GUILD_COINS" xml:space="preserve">
+    <value>Монеты гильдии</value>
+  </data>
+  <data name="RESOURCE_GUN_POWDER" xml:space="preserve">
+    <value>Порох</value>
+  </data>
+  <data name="RESOURCE_HARDWOOD" xml:space="preserve">
+    <value>Древесина из дуба</value>
+  </data>
+  <data name="RESOURCE_HARDWOOD_PLANKS" xml:space="preserve">
+    <value>Доски из дуба</value>
+  </data>
+  <data name="RESOURCE_HORSE" xml:space="preserve">
+    <value>Лошади</value>
+  </data>
+  <data name="RESOURCE_IRON" xml:space="preserve">
+    <value>Железо</value>
+  </data>
+  <data name="RESOURCE_IRON_ORE" xml:space="preserve">
+    <value>Железная руда</value>
+  </data>
+  <data name="RESOURCE_IRON_SWORD" xml:space="preserve">
+    <value>Железные мечи</value>
+  </data>
+  <data name="RESOURCE_LONGBOW" xml:space="preserve">
+    <value>Длинные луки</value>
+  </data>
+  <data name="RESOURCE_MAP_FRAGMENT" xml:space="preserve">
+    <value>Фрагменты карт</value>
+  </data>
+  <data name="RESOURCE_MARBLE" xml:space="preserve">
+    <value>Мрамор</value>
+  </data>
+  <data name="RESOURCE_MEAT" xml:space="preserve">
+    <value>Мясо</value>
+  </data>
+  <data name="RESOURCE_PINE_WOOD" xml:space="preserve">
+    <value>Древесина из сосны</value>
+  </data>
+  <data name="RESOURCE_PINE_WOOD_PLANKS" xml:space="preserve">
+    <value>Доски из сосны</value>
+  </data>
+  <data name="RESOURCE_PUMPKIN" xml:space="preserve">
+    <value>Тыквы</value>
+  </data>
+  <data name="RESOURCE_SALPETRE" xml:space="preserve">
+    <value>Селитра</value>
+  </data>
+  <data name="RESOURCE_SAUSAGE" xml:space="preserve">
+    <value>Колбасы</value>
+  </data>
+  <data name="RESOURCE_SOCCER_BALL" xml:space="preserve">
+    <value>Футбольные мячи</value>
+  </data>
+  <data name="RESOURCE_STEEL" xml:space="preserve">
+    <value>Сталь</value>
+  </data>
+  <data name="RESOURCE_STEEL_SWORD" xml:space="preserve">
+    <value>Стальные мечи</value>
+  </data>
+  <data name="RESOURCE_STONE" xml:space="preserve">
+    <value>Камень</value>
+  </data>
+  <data name="RESOURCE_TITANIUM" xml:space="preserve">
+    <value>Титан</value>
+  </data>
+  <data name="RESOURCE_TITANIUM_ORE" xml:space="preserve">
+    <value>Титановая руда</value>
+  </data>
+  <data name="RESOURCE_TOOLS" xml:space="preserve">
+    <value>Инструменты</value>
+  </data>
+  <data name="RESOURCE_WATER" xml:space="preserve">
+    <value>Вода</value>
+  </data>
+  <data name="RESOURCE_WHEAT" xml:space="preserve">
+    <value>Пшеница</value>
+  </data>
+  <data name="RESOURCE_WHEEL" xml:space="preserve">
+    <value>Колёса</value>
+  </data>
   <data name="UNIT_BERSERK" xml:space="preserve">
     <value>Берсерк</value>
   </data>

@@ -52,6 +52,9 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Helper\ImageHelper.cs" />
+    <Compile Include="Price\Price.cs" />
+    <Compile Include="Price\Product.cs" />
+    <Compile Include="Price\ProductType.cs" />
     <Compile Include="QuestMapWindow.xaml.cs">
       <DependentUpon>QuestMapWindow.xaml</DependentUpon>
     </Compile>
@@ -246,6 +249,56 @@
     <EmbeddedResource Include="Quests\Images\goalkeeper.png" />
     <EmbeddedResource Include="Quests\Images\midfielder.png" />
     <EmbeddedResource Include="Quests\Images\striker.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Price\Icons\bow.png" />
+    <EmbeddedResource Include="Price\Icons\bread.png" />
+    <EmbeddedResource Include="Price\Icons\brew.png" />
+    <EmbeddedResource Include="Price\Icons\bronze.png" />
+    <EmbeddedResource Include="Price\Icons\bronze_ore.png" />
+    <EmbeddedResource Include="Price\Icons\bronze_sword.png" />
+    <EmbeddedResource Include="Price\Icons\cannon.png" />
+    <EmbeddedResource Include="Price\Icons\carriage.png" />
+    <EmbeddedResource Include="Price\Icons\coal.png" />
+    <EmbeddedResource Include="Price\Icons\coins.png" />
+    <EmbeddedResource Include="Price\Icons\crossbow.png" />
+    <EmbeddedResource Include="Price\Icons\damascene_sword.png" />
+    <EmbeddedResource Include="Price\Icons\easter_egg.png" />
+    <EmbeddedResource Include="Price\Icons\exotic_wood.png" />
+    <EmbeddedResource Include="Price\Icons\exotic_wood_planks.png" />
+    <EmbeddedResource Include="Price\Icons\fish.png" />
+    <EmbeddedResource Include="Price\Icons\flour.png" />
+    <EmbeddedResource Include="Price\Icons\gift.png" />
+    <EmbeddedResource Include="Price\Icons\gold.png" />
+    <EmbeddedResource Include="Price\Icons\gold_ore.png" />
+    <EmbeddedResource Include="Price\Icons\granite.png" />
+    <EmbeddedResource Include="Price\Icons\guild_coins.png" />
+    <EmbeddedResource Include="Price\Icons\gun_powder.png" />
+    <EmbeddedResource Include="Price\Icons\hardwood.png" />
+    <EmbeddedResource Include="Price\Icons\hardwood_planks.png" />
+    <EmbeddedResource Include="Price\Icons\horse.png" />
+    <EmbeddedResource Include="Price\Icons\iron.png" />
+    <EmbeddedResource Include="Price\Icons\iron_ore.png" />
+    <EmbeddedResource Include="Price\Icons\iron_sword.png" />
+    <EmbeddedResource Include="Price\Icons\longbow.png" />
+    <EmbeddedResource Include="Price\Icons\map_fragment.png" />
+    <EmbeddedResource Include="Price\Icons\marble.png" />
+    <EmbeddedResource Include="Price\Icons\meat.png" />
+    <EmbeddedResource Include="Price\Icons\pine_wood.png" />
+    <EmbeddedResource Include="Price\Icons\pine_wood_planks.png" />
+    <EmbeddedResource Include="Price\Icons\pumpkin.png" />
+    <EmbeddedResource Include="Price\Icons\salpetre.png" />
+    <EmbeddedResource Include="Price\Icons\sausage.png" />
+    <EmbeddedResource Include="Price\Icons\soccer_ball.png" />
+    <EmbeddedResource Include="Price\Icons\steel.png" />
+    <EmbeddedResource Include="Price\Icons\steel_sword.png" />
+    <EmbeddedResource Include="Price\Icons\stone.png" />
+    <EmbeddedResource Include="Price\Icons\titanium.png" />
+    <EmbeddedResource Include="Price\Icons\titanium_ore.png" />
+    <EmbeddedResource Include="Price\Icons\tools.png" />
+    <EmbeddedResource Include="Price\Icons\water.png" />
+    <EmbeddedResource Include="Price\Icons\wheat.png" />
+    <EmbeddedResource Include="Price\Icons\wheel.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
