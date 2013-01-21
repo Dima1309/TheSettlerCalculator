@@ -71,6 +71,7 @@
     <Compile Include="Types\BattleSide.cs" />
     <Compile Include="Types\BattleSideStep.cs" />
     <Compile Include="Types\BattleSideType.cs" />
+    <Compile Include="Types\CampWinTime.cs" />
     <Compile Include="Types\EnemyUnits.cs" />
     <Compile Include="Types\MultiWaveBattleCompleteHandler.cs" />
     <Compile Include="Types\MultiWaveBattleWaveCompleteHandler.cs" />
@@ -95,6 +96,7 @@
     <Compile Include="Types\Squad.cs" />
     <Compile Include="Types\Unit.cs" />
     <Compile Include="Types\UnitAttackHandler.cs" />
+    <Compile Include="WpfTypes\BattleLosses.cs" />
     <Compile Include="WpfTypes\Converters\AttackPriorityStringConverter.cs" />
     <Compile Include="WpfTypes\Converters\AttackPriorityVisibilityConverter.cs" />
     <Compile Include="WpfTypes\Converters\BoolVisibilityConverter.cs" />
@@ -103,6 +105,7 @@
     <Compile Include="WpfTypes\Converters\HealthBrushConverter.cs" />
     <Compile Include="WpfTypes\Converters\IntNegativeVisibilityConverter.cs" />
     <Compile Include="WpfTypes\Converters\LossesVisibilityConverter.cs" />
+    <Compile Include="WpfTypes\Converters\ObjectToBooleanConverter.cs" />
     <Compile Include="WpfTypes\Converters\ObjectVisibilityConverter.cs" />
     <Compile Include="WpfTypes\Converters\WaveIndexConverter.cs" />
     <Compile Include="WpfTypes\EnemyCamp.cs" />
@@ -147,7 +150,7 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
     <EmbeddedResource Include="Properties\Resources.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
+      <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
@@ -250,6 +253,10 @@
     <EmbeddedResource Include="Quests\Images\midfielder.png" />
     <EmbeddedResource Include="Quests\Images\striker.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Properties\map.png" />
+  </ItemGroup>
+
   <ItemGroup>
     <EmbeddedResource Include="Price\Icons\bow.png" />
     <EmbeddedResource Include="Price\Icons\bread.png" />

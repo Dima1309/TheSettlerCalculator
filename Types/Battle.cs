@@ -107,6 +107,18 @@ namespace TheSettlersCalculator.Types
 			get { return m_sides[(int)BattleSideType.Player].General; }
 		}
 
+		public double PlayerTowerBonus
+		{
+			get { return m_sides[(int)BattleSideType.Player].TowerBonus; }
+			set { m_sides[(int)BattleSideType.Player].TowerBonus = value; }
+		}
+
+		public double EnemyTowerBonus
+		{
+			get { return m_sides[(int)BattleSideType.Enemy].TowerBonus; }
+			set { m_sides[(int)BattleSideType.Enemy].TowerBonus = value; }
+		}
+
 		internal BattleSide[] Sides
 		{
 			get { return m_sides; }

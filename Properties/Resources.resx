@@ -393,6 +393,9 @@
   <data name="UNIT_FULLBACK" xml:space="preserve">
     <value>Защитник</value>
   </data>
+  <data name="UNIT_GENERAL" xml:space="preserve">
+    <value>Генерал</value>
+  </data>
   <data name="UNIT_GOALKEEPER" xml:space="preserve">
     <value>Вратарь</value>
   </data>

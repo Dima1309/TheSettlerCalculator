@@ -15,7 +15,7 @@ namespace TheSettlersCalculator.Types.Simulation
 		{}
 		#endregion
 
-		#region Properties				
+		#region Properties
 		public List<BattleSimulation> Simulations
 		{
 			get { return m_simulations; }

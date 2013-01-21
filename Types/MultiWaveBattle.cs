@@ -7,9 +7,50 @@ namespace TheSettlersCalculator.Types
 {
 	internal class MultiWaveBattle
 	{
+		#region Private class
+		private class BattleWave
+		{
+			#region Fields
+			private readonly IList<UnitSquad> m_squads;
+			private readonly bool m_general;
+			private readonly double m_towerBonus;
+			#endregion
+
+			#region Constructor
+			internal BattleWave(IList<UnitSquad> squads, bool general, double towerBonus)
+			{
+				m_squads = new List<UnitSquad>(squads.Count);
+				foreach(UnitSquad squad in squads)
+				{
+					m_squads.Add(squad.Clone() as UnitSquad);
+				}
+				m_general = general;
+				m_towerBonus = towerBonus;
+			}
+			#endregion
+
+			#region Properties
+			public IEnumerable<UnitSquad> Squads
+			{
+				get { return m_squads; }
+			}
+
+			public bool General
+			{
+				get { return m_general; }
+			}
+
+			public double TowerBonus
+			{
+				get { return m_towerBonus; }
+			}
+			#endregion
+		}
+		#endregion
+
 		#region Fields
-		private readonly List<KeyValuePair<IList<UnitSquad>, bool>> m_playerWaves = new List<KeyValuePair<IList<UnitSquad>, bool>>();
-		private readonly List<KeyValuePair<IList<UnitSquad>, bool>> m_enemyWaves = new List<KeyValuePair<IList<UnitSquad>, bool>>();
+		private readonly List<BattleWave> m_playerWaves = new List<BattleWave>();
+		private readonly List<BattleWave> m_enemyWaves = new List<BattleWave>();
 		private MultiWaveBattleType m_battleType = MultiWaveBattleType.TakeWorstWave;
 		private readonly int m_iterationCount;
 		private List<Unit> m_units;
@@ -50,16 +91,6 @@ namespace TheSettlersCalculator.Types
 			get { return m_iterationCount; }
 		}
 
-		public List<KeyValuePair<IList<UnitSquad>, bool>> PlayerWaves
-		{
-			get { return m_playerWaves; }
-		}
-
-		public List<KeyValuePair<IList<UnitSquad>, bool>> EnemyWaves
-		{
-			get { return m_enemyWaves; }
-		}
-
 		public List<Unit> Units
 		{
 			get
@@ -88,14 +119,14 @@ namespace TheSettlersCalculator.Types
 		#endregion
 
 		#region Methods
-		internal void AddAttackerWave(IList<UnitSquad> units, bool general)
+		internal void AddAttackerWave(IList<UnitSquad> units, bool general, double towerBonus)
 		{
-			PlayerWaves.Add(new KeyValuePair<IList<UnitSquad>, bool>(new List<UnitSquad>(units), general));
+			m_playerWaves.Add(new BattleWave(units, general, towerBonus));
 		}
 
-		internal void AddEnemyWave(IList<UnitSquad> units, bool general)
+		internal void AddEnemyWave(IList<UnitSquad> units, bool general, double towerBonus)
 		{
-			EnemyWaves.Add(new KeyValuePair<IList<UnitSquad>, bool>(new List<UnitSquad>(units), general));
+			m_enemyWaves.Add(new BattleWave(units, general, towerBonus));
 		}
 
 		internal void Calculate(ICalculator calculator)
@@ -111,21 +142,56 @@ namespace TheSettlersCalculator.Types
 				IList<UnitSquad> enemySquads = null;
 				bool enemyGeneral = false;
 
-				while(playerIndex > PlayerWaves.Count && enemyIndex > EnemyWaves.Count)
+				while(playerIndex < m_playerWaves.Count && enemyIndex < m_enemyWaves.Count)
 				{
 					if(playerSquads == null)
 					{
-						playerSquads = new List<UnitSquad>(PlayerWaves[playerIndex].Key);
-						playerGeneral = PlayerWaves[playerIndex].Value;
+						playerSquads = new List<UnitSquad>(m_playerWaves[playerIndex].Squads);
+						playerGeneral = m_playerWaves[playerIndex].General;
+						bool emptyWave = true;
+						foreach(UnitSquad squad in playerSquads)
+						{
+							if (squad.Count > 0)
+							{
+								emptyWave = false;
+								break;
+							}
+						}
+
+						if (emptyWave)
+						{
+							playerSquads = null;
+							playerIndex++;
+							continue;
+						}
 					}
 
 					if(enemySquads == null)
 					{
-						enemySquads = new List<UnitSquad>(EnemyWaves[enemyIndex].Key);
-						enemyGeneral = EnemyWaves[enemyIndex].Value;
+						enemySquads = new List<UnitSquad>(m_enemyWaves[enemyIndex].Squads);
+						enemyGeneral = m_enemyWaves[enemyIndex].General;
+
+						bool emptyWave = true;
+						foreach (UnitSquad squad in enemySquads)
+						{
+							if (squad.Count > 0)
+							{
+								emptyWave = false;
+								break;
+							}
+						}
+
+						if (emptyWave)
+						{
+							enemySquads = null;
+							enemyIndex++;
+							continue;
+						}
 					}
 
 					Battle battle = new Battle(playerSquads, playerGeneral, enemySquads, enemyGeneral);
+					battle.PlayerTowerBonus = m_playerWaves[playerIndex].TowerBonus;
+					battle.EnemyTowerBonus = m_enemyWaves[enemyIndex].TowerBonus;
 					calculator.IterationCount = GetBattleIterationCount();
 					Statistics.Statistics statistics = new Statistics.Statistics(battle);
 					calculator.OnBattleComplete += statistics.BattleComplete;
@@ -153,6 +219,7 @@ namespace TheSettlersCalculator.Types
 						playerIndex++;
 					}
 
+					empty = true;
 					short[] defenderLosses = GetEnemyLosses(statistics);
 					for(int i = 0; i < defenderLosses.Length; i++)
 					{
@@ -178,12 +245,12 @@ namespace TheSettlersCalculator.Types
 			}
 		}
 
-		private static List<Unit> GetUnits(IEnumerable<KeyValuePair<IList<UnitSquad>, bool>> waves)
+		private static List<Unit> GetUnits(IEnumerable<BattleWave> waves)
 		{
 			List<Unit> result = new List<Unit>();
-			foreach (KeyValuePair<IList<UnitSquad>, bool> keyValuePair in waves)
+			foreach (BattleWave wave in waves)
 			{
-				foreach (UnitSquad squad in keyValuePair.Key)
+				foreach (UnitSquad squad in wave.Squads)
 				{
 					if (result.IndexOf(squad.Unit) < 0)
 					{

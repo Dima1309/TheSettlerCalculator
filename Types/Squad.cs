@@ -8,6 +8,7 @@ namespace TheSettlersCalculator.Types
 		private readonly SortedDictionary<short, short> m_counts = new SortedDictionary<short, short>();
 		private string m_name;
 		private CampType m_campType;
+		private CampWinTime m_winTime = CampWinTime.Normal;
 		private byte m_sectorId;
 		private double m_left;
 		private double m_top;
@@ -47,6 +48,12 @@ namespace TheSettlersCalculator.Types
 		{
 			get { return m_top; }
 			set { m_top = value; }
+		}
+
+		public int WinTime
+		{
+			get { return (int)m_winTime; }
+			set { m_winTime = (CampWinTime)value; }
 		}
 		#endregion
 	}

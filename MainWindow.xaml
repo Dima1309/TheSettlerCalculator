@@ -1,7 +1,8 @@
 ﻿<Window x:Class="TheSettlersCalculator.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
-        xmlns:src="clr-namespace:TheSettlersCalculator.WpfTypes" 
+        xmlns:res="clr-namespace:TheSettlersCalculator.Properties"
+        xmlns:src="clr-namespace:TheSettlersCalculator.WpfTypes"         
         xmlns:Converters="clr-namespace:TheSettlersCalculator.WpfTypes.Converters" 
         Title="MainWindow" Height="640" Width="800" x:Name="Win">
     <Window.Resources>
@@ -17,7 +18,7 @@
         <Converters:LossesVisibilityConverter x:Key="lossesVisibilityConverter"/>
         <Converters:ObjectVisibilityConverter x:Key="objectVisibilityConverter"/>
         <Converters:UserUnitsWarningCountBrushConverter x:Key="userUnitsWarningCountBrushConverter"/>
-        <Converters:WaveIndexConverter x:Key="waveIndexConverter"/>
+        <Converters:ObjectToBooleanConverter x:Key="objectToBooleanConverter"/>
         <StackPanel Orientation="Vertical" x:Key="UnitTooltipTemplate">
             <Label Content="{Binding Unit.Name}" FontWeight="Bold"></Label>
             <StackPanel Orientation="Horizontal">
@@ -51,6 +52,19 @@
             </StackPanel>
         </StackPanel>
 
+        <StackPanel Orientation="Horizontal" x:Key="WaveTooltipTemplate">
+            <ItemsControl ItemsSource="{Binding Path=.}">
+                <ItemsControl.ItemTemplate>
+                    <DataTemplate>
+                        <StackPanel Orientation="Horizontal" Visibility="{Binding Count, Converter={StaticResource intVisibilityConverter}}">
+                            <Image Width="30" Height="30" Grid.Column="0" Source="{Binding Unit.Icon}" ToolTip="{StaticResource UnitTooltipTemplate}"/>
+                            <Label Content="{Binding Count}"/>
+                        </StackPanel>
+                    </DataTemplate>
+                </ItemsControl.ItemTemplate>
+            </ItemsControl>
+        </StackPanel>
+
         <DataTemplate x:Key="Losses">
             <StackPanel Orientation="Horizontal">
                 <Image Width="30" Height="30" Grid.Column="0" Source="{Binding Unit.Icon}" ToolTip="{StaticResource UnitTooltipTemplate}"></Image>
@@ -67,12 +81,12 @@
                         <Label Content="{Binding Count}"></Label>
                         <Label Content=" атакуют "></Label>
                         <ItemsControl ItemsSource="{Binding TotalDamage}" ItemTemplate="{StaticResource Losses}">
-                    <ItemsControl.ItemsPanel>
-                        <ItemsPanelTemplate>
-                            <StackPanel Orientation="Horizontal"/>
-                        </ItemsPanelTemplate>
-                    </ItemsControl.ItemsPanel>
-                </ItemsControl>
+                            <ItemsControl.ItemsPanel>
+                                <ItemsPanelTemplate>
+                                    <StackPanel Orientation="Horizontal"/>
+                                </ItemsPanelTemplate>
+                            </ItemsControl.ItemsPanel>
+                        </ItemsControl>
                     </StackPanel>
                 </Expander.Header>
 
@@ -92,236 +106,11 @@
                 </ItemsControl>
             </Expander>
         </DataTemplate>
-    </Window.Resources>
-    <TabControl>
-        <TabItem Header="Калькулятор">
-    <Grid>        
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="*"></ColumnDefinition>
-            <ColumnDefinition Width="*"></ColumnDefinition>
-            <ColumnDefinition Width="2*"></ColumnDefinition>
-        </Grid.ColumnDefinitions>
-        
-        <Grid.RowDefinitions>
-            <RowDefinition Height="36"></RowDefinition>
-            <RowDefinition Height="*"></RowDefinition>
-            <RowDefinition Height="52"></RowDefinition>
-        </Grid.RowDefinitions>
-        
-        <StackPanel  Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="3" Orientation="Horizontal">
-            <CheckBox Margin="10,10,10,0" Grid.Column="0" Grid.Row="0" IsChecked="{Binding Model.VeteranAvailable, ElementName=Win}">
-                Ветеран
-            </CheckBox>
 
-            <ComboBox HorizontalAlignment="Right" Margin="0,2,16,2" MinWidth="200" ItemsSource="{Binding Model.Quests,ElementName=Win}" SelectedValue="{Binding Model.ActiveQuest, ElementName=Win, Mode=TwoWay}">
-            <ComboBox.ItemTemplate>
-                <DataTemplate>
-                    <StackPanel Orientation="Horizontal">
-                            <Image Source="{Binding Icon}" Height="30" VerticalAlignment="Center"/>
-                            <Label Content="{Binding Name}" VerticalAlignment="Center"/>
-                    </StackPanel>
-                </DataTemplate>
-            </ComboBox.ItemTemplate>
-            </ComboBox>
-
-            <ComboBox HorizontalAlignment="Right" Margin="16,2,16,2" MinWidth="200" ItemsSource="{Binding Model.ActiveQuestCamps,ElementName=Win}" SelectedValue="{Binding Model.ActiveEnemyCamp, ElementName=Win, Mode=TwoWay}">
-            <ComboBox.ItemTemplate>
-                <DataTemplate>                       
-                  <StackPanel Orientation="Horizontal">
-                            <Label Name="lblCampTitle" Content="{Binding Name}" FontWeight="Bold" VerticalAlignment="Center" Margin="0,0,15,0"/>
-                            <ItemsControl ItemsSource="{Binding Squads}">
-                                <ItemsControl.ItemsPanel>
-                                    <ItemsPanelTemplate>
-                                        <StackPanel Orientation="Horizontal"/>
-                                    </ItemsPanelTemplate>
-                                </ItemsControl.ItemsPanel>
-                                <ItemsControl.ItemTemplate>
-                                    <DataTemplate>
-                                        <StackPanel Orientation="Horizontal">
-                                            <Image Width="30" Height="30" Grid.Column="0" Source="{Binding Icon}"></Image>
-                                            <Label Grid.Column="1" Content="{Binding Count}"/>                                            
-                                        </StackPanel>
-                                    </DataTemplate>
-                                </ItemsControl.ItemTemplate>
-                            </ItemsControl>
-                        </StackPanel>
-                    </DataTemplate>
-            </ComboBox.ItemTemplate>
-                <ComboBox.ItemContainerStyle>
-                    <Style TargetType="ComboBoxItem">
-                        <Setter Property="Background" Value="{Binding CampType, Converter={StaticResource campTypeConverter}}" />
-                    </Style>
-                </ComboBox.ItemContainerStyle>
-            </ComboBox>
-
-            <Button Width="28" Margin="0,6" Click="Button_Click">...</Button>
-        </StackPanel>
-
-        <ScrollViewer VerticalScrollBarVisibility="Auto" Grid.Column="0" Grid.Row="1">
-            <StackPanel Name="PlayerUnitsPanel" Orientation="Vertical">           
-            <StackPanel Orientation="Horizontal">
-                <Label>Волны:</Label>
-                <RadioButton Margin="3" VerticalAlignment="Center">
-                      <RadioButton.IsChecked>
-                            <Binding Path="Model.PlayerWaveIndex" ElementName="Win" Converter="{StaticResource waveIndexConverter}" ConverterParameter="0"></Binding>
-                      </RadioButton.IsChecked>
-                </RadioButton>
-                <RadioButton Margin="3" VerticalAlignment="Center">
-                      <RadioButton.IsChecked>
-                            <Binding Path="Model.PlayerWaveIndex" ElementName="Win" Converter="{StaticResource waveIndexConverter}" ConverterParameter="1"></Binding>
-                      </RadioButton.IsChecked>
-                </RadioButton>
-                <RadioButton Margin="3" VerticalAlignment="Center">
-                      <RadioButton.IsChecked>
-                            <Binding Path="Model.PlayerWaveIndex" ElementName="Win" Converter="{StaticResource waveIndexConverter}" ConverterParameter="2"></Binding>
-                      </RadioButton.IsChecked>
-                </RadioButton>
-                <RadioButton Margin="3" VerticalAlignment="Center">
-                      <RadioButton.IsChecked>
-                            <Binding Path="Model.PlayerWaveIndex" ElementName="Win" Converter="{StaticResource waveIndexConverter}" ConverterParameter="3"></Binding>
-                      </RadioButton.IsChecked>
-                </RadioButton>
-                <RadioButton Margin="3" VerticalAlignment="Center">
-                      <RadioButton.IsChecked>
-                            <Binding Path="Model.PlayerWaveIndex" ElementName="Win" Converter="{StaticResource waveIndexConverter}" ConverterParameter="4"></Binding>
-                      </RadioButton.IsChecked>
-                </RadioButton>                
-            </StackPanel>
-            <ItemsControl ItemsSource="{Binding Model.PlayerUnits,ElementName=Win}">
-                <ItemsControl.ItemTemplate>
-                    <DataTemplate>
-                        <Grid>
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="32"></ColumnDefinition>
-                                <ColumnDefinition Width="*"></ColumnDefinition>
-                                <ColumnDefinition Width="60"></ColumnDefinition>
-                            </Grid.ColumnDefinitions>
-                            <Image Width="30" Height="30" Grid.Column="0" Source="{Binding Icon}" ToolTip="{StaticResource UnitTooltipTemplate}"></Image>
-                            <Label Grid.Column="1" Content="{Binding Name}"/>
-                            <src:NumberTextBox MaxWidth="50" MinWidth="50" Margin="0,5" Grid.Column="2" MinValue="0" MaxValue="{Binding Model.PlayerUnitLimit, ElementName=Win}">
-                                <src:NumberTextBox.Text>
-                                    <Binding Path="Count" UpdateSourceTrigger="PropertyChanged">
-                                    </Binding>
-                                </src:NumberTextBox.Text>
-                            </src:NumberTextBox>
-                        </Grid>                    
-                    </DataTemplate>
-                </ItemsControl.ItemTemplate>                    
-            </ItemsControl>
-            <Label Content="{Binding Model.PlayerUnitsCount,ElementName=Win}" ContentStringFormat="{}Всего: {0}" FontWeight="Bold" Foreground="{Binding Model.UserUnitsCountWarning, ElementName=Win, Converter={StaticResource userUnitsWarningCountBrushConverter}}"/>
-            <RadioButton Margin="5,5" >
-                <RadioButton.IsChecked>
-                    <Binding Path="Model.PlayerTowerBonus" ElementName="Win" Converter="{StaticResource towerBonusConverter}" ConverterParameter="0" ></Binding>
-                </RadioButton.IsChecked>
-                Без башни (0%)
-            </RadioButton>
-            <RadioButton Margin="5,5">Башня (50%)
-                <RadioButton.IsChecked>
-                    <Binding Path="Model.PlayerTowerBonus" ElementName="Win" Converter="{StaticResource towerBonusConverter}" ConverterParameter="50"></Binding>
-                </RadioButton.IsChecked>
-            </RadioButton>
-            <RadioButton Margin="5,5">Усиленная башня (75%)
-                <RadioButton.IsChecked>
-                    <Binding Path="Model.PlayerTowerBonus" ElementName="Win" Converter="{StaticResource towerBonusConverter}" ConverterParameter="75"></Binding>
-                </RadioButton.IsChecked>
-            </RadioButton>
-        </StackPanel>
-        </ScrollViewer>
-
-        <ScrollViewer VerticalScrollBarVisibility="Auto" Grid.Column="1" Grid.Row="1">
-            <StackPanel Name="EnemyUnitsPanel" Orientation="Vertical">
-                    <StackPanel Orientation="Horizontal">
-                        <Label>Волны:</Label>
-                            <RadioButton Margin="3" VerticalAlignment="Center">
-                                <RadioButton.IsChecked>
-                                    <Binding Path="Model.EnemyWaveIndex" ElementName="Win" Converter="{StaticResource waveIndexConverter}" ConverterParameter="0"></Binding>
-                                </RadioButton.IsChecked>
-                            </RadioButton>
-                            <RadioButton Margin="3" VerticalAlignment="Center">
-                                <RadioButton.IsChecked>
-                                    <Binding Path="Model.EnemyWaveIndex" ElementName="Win" Converter="{StaticResource waveIndexConverter}" ConverterParameter="1"></Binding>
-                                </RadioButton.IsChecked>
-                            </RadioButton>
-                            <RadioButton Margin="3" VerticalAlignment="Center">
-                                <RadioButton.IsChecked>
-                                    <Binding Path="Model.EnemyWaveIndex" ElementName="Win" Converter="{StaticResource waveIndexConverter}" ConverterParameter="2"></Binding>
-                                </RadioButton.IsChecked>
-                            </RadioButton>
-                            <RadioButton Margin="3" VerticalAlignment="Center">
-                                <RadioButton.IsChecked>
-                                    <Binding Path="Model.EnemyWaveIndex" ElementName="Win" Converter="{StaticResource waveIndexConverter}" ConverterParameter="3"></Binding>
-                                </RadioButton.IsChecked>
-                            </RadioButton>
-                            <RadioButton Margin="3" VerticalAlignment="Center">
-                                <RadioButton.IsChecked>
-                                    <Binding Path="Model.EnemyWaveIndex" ElementName="Win" Converter="{StaticResource waveIndexConverter}" ConverterParameter="4"></Binding>
-                                </RadioButton.IsChecked>
-                            </RadioButton>
-                        </StackPanel>
-
-                     <ItemsControl ItemsSource="{Binding Model.EnemyUnits,ElementName=Win}">
-                    <ItemsControl.ItemTemplate>
-                        <DataTemplate>
-                            <Grid>
-                                <Grid.ColumnDefinitions>
-                                    <ColumnDefinition Width="32"></ColumnDefinition>
-                                    <ColumnDefinition Width="*"></ColumnDefinition>
-                                    <ColumnDefinition Width="60"></ColumnDefinition>
-                                </Grid.ColumnDefinitions>
-                                <Image Width="30" Height="30" Grid.Column="0" Source="{Binding Icon}"  ToolTip="{StaticResource UnitTooltipTemplate}"></Image>
-                                <Label Grid.Column="1"  Content="{Binding Name}"/>
-                                <src:NumberTextBox MaxWidth="50" MinWidth="50" Margin="0,5" Grid.Column="2" Text="{Binding Count}"/>
-                            </Grid>
-                        </DataTemplate>
-                    </ItemsControl.ItemTemplate>
-                </ItemsControl>
-                <RadioButton Margin="5,5">
-                    Без башни (0%)
-                    <RadioButton.IsChecked>
-                        <Binding Path="Model.EnemyTowerBonus" ElementName="Win" Converter="{StaticResource towerBonusConverter}" ConverterParameter="0"></Binding>
-                    </RadioButton.IsChecked>
-                </RadioButton>
-                <RadioButton Margin="5,5">
-                    Башня (50%)
-                    <RadioButton.IsChecked>
-                        <Binding Path="Model.EnemyTowerBonus" ElementName="Win" Converter="{StaticResource towerBonusConverter}" ConverterParameter="50"></Binding>
-                    </RadioButton.IsChecked>
-                </RadioButton>
-                <RadioButton Margin="5,5">
-                    Усиленная башня (75%)
-                    <RadioButton.IsChecked>
-                        <Binding Path="Model.EnemyTowerBonus" ElementName="Win" Converter="{StaticResource towerBonusConverter}" ConverterParameter="75"></Binding>
-                    </RadioButton.IsChecked>
-                </RadioButton>
-                <RadioButton Margin="5,5">
-                    Каменная башня (90%)
-                    <RadioButton.IsChecked>
-                        <Binding Path="Model.EnemyTowerBonus" ElementName="Win" Converter="{StaticResource towerBonusConverter}" ConverterParameter="90"></Binding>
-                    </RadioButton.IsChecked>
-                </RadioButton>
-            </StackPanel>
-        </ScrollViewer>
-
-        <StackPanel Orientation="Horizontal" Grid.Row="2" Grid.Column="2" Grid.ColumnSpan="3">
-            <Button MinHeight="30" MaxHeight="30" Margin="10">Очистить форму</Button>            
-            <Button MinHeight="30" MaxHeight="30" Margin="10" Click="Button_Click_1">Рассчитать</Button>            
-        </StackPanel>
-
-        <ScrollViewer VerticalScrollBarVisibility="Visible" Grid.Row="1" Grid.Column="2" Grid.ColumnSpan="1">
-          <StackPanel Orientation="Vertical">
-            <Expander IsExpanded="True">
-               <Expander.Visibility>
-                   <MultiBinding Converter="{StaticResource lossesVisibilityConverter}">
-                      <Binding Path="Model.PlayerLosses" ElementName="Win"></Binding>
-                      <Binding Path="Model.EnemyLosses" ElementName="Win"></Binding>
-                   </MultiBinding>
-               </Expander.Visibility>
-               <Expander.Header>
-                  <Label FontWeight="Bold">Потери</Label>            
-               </Expander.Header>                           
+        <DataTemplate x:Key="LossesPanelTemplate">
             <StackPanel Orientation="Vertical">
                 <Label>Игрок:</Label>
-                        <Grid>
+                <Grid>
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="*" />
                         <ColumnDefinition Width="60" />
@@ -331,195 +120,475 @@
 
                     <Grid.RowDefinitions>
                         <RowDefinition Height="*"/>
-                        <RowDefinition Height="*"/>                                             
+                        <RowDefinition Height="*"/>
                     </Grid.RowDefinitions>
 
                     <Label HorizontalAlignment="Center" Grid.Column="1" >Мин.</Label>
                     <Label HorizontalAlignment="Center" Grid.Column="2" >Сред.</Label>
                     <Label HorizontalAlignment="Center" Grid.Column="3" >Макс.</Label>
 
-                <StackPanel Orientation="Vertical" Grid.Row="1">
-                    <ItemsControl ItemsSource="{Binding Model.PlayerLosses,ElementName=Win}">
-                        <ItemsControl.ItemTemplate>
-                            <DataTemplate>
-                                <StackPanel Orientation="Horizontal">
-                                                <Image Width="30" Height="30" Grid.Column="0" Source="{Binding Icon}" ToolTip="{StaticResource UnitTooltipTemplate}"></Image>
-                                    <Label Grid.Column="1" Content="{Binding Name}"></Label>
-                                </StackPanel>
-                            </DataTemplate>
-                        </ItemsControl.ItemTemplate>
-                    </ItemsControl>
-                 </StackPanel>
+                    <StackPanel Orientation="Vertical" Grid.Row="1">
+                        <ItemsControl ItemsSource="{Binding PlayerLosses}">
+                            <ItemsControl.ItemTemplate>
+                                <DataTemplate>
+                                    <StackPanel Orientation="Horizontal">
+                                        <Image Width="30" Height="30" Grid.Column="0" Source="{Binding Icon}" ToolTip="{StaticResource UnitTooltipTemplate}"></Image>
+                                        <Label Grid.Column="1" Content="{Binding Name}"></Label>
+                                    </StackPanel>
+                                </DataTemplate>
+                            </ItemsControl.ItemTemplate>
+                        </ItemsControl>
+                    </StackPanel>
 
-                <StackPanel Orientation="Vertical" Grid.Row="1" Grid.Column="1">
-                    <ItemsControl ItemsSource="{Binding Model.PlayerLosses,ElementName=Win}">
-                        <ItemsControl.ItemTemplate>
-                            <DataTemplate>
+                    <StackPanel Orientation="Vertical" Grid.Row="1" Grid.Column="1">
+                        <ItemsControl ItemsSource="{Binding PlayerLosses}">
+                            <ItemsControl.ItemTemplate>
+                                <DataTemplate>
                                     <Label HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Height="30" Content="{Binding MinCount}"></Label>
-                            </DataTemplate>
-                        </ItemsControl.ItemTemplate>
-                    </ItemsControl>
-                </StackPanel>
+                                </DataTemplate>
+                            </ItemsControl.ItemTemplate>
+                        </ItemsControl>
+                    </StackPanel>
 
-                <StackPanel Orientation="Vertical" Grid.Row="1" Grid.Column="2">
-                    <ItemsControl ItemsSource="{Binding Model.PlayerLosses,ElementName=Win}">
-                        <ItemsControl.ItemTemplate>
-                            <DataTemplate>
+                    <StackPanel Orientation="Vertical" Grid.Row="1" Grid.Column="2">
+                        <ItemsControl ItemsSource="{Binding PlayerLosses}">
+                            <ItemsControl.ItemTemplate>
+                                <DataTemplate>
                                     <Label Height="30" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Content="{Binding AvgCount}" ContentStringFormat="{}{0:f2}"></Label>
-                            </DataTemplate>
-                        </ItemsControl.ItemTemplate>
-                    </ItemsControl>
-                </StackPanel>
+                                </DataTemplate>
+                            </ItemsControl.ItemTemplate>
+                        </ItemsControl>
+                    </StackPanel>
 
-                <StackPanel Orientation="Vertical" Grid.Row="1" Grid.Column="3">
-                    <ItemsControl ItemsSource="{Binding Model.PlayerLosses,ElementName=Win}">
-                        <ItemsControl.ItemTemplate>
-                            <DataTemplate>
+                    <StackPanel Orientation="Vertical" Grid.Row="1" Grid.Column="3">
+                        <ItemsControl ItemsSource="{Binding PlayerLosses}">
+                            <ItemsControl.ItemTemplate>
+                                <DataTemplate>
                                     <Label Height="30" HorizontalAlignment="Center" VerticalContentAlignment="Center" Content="{Binding MaxCount}"></Label>
-                            </DataTemplate>
-                        </ItemsControl.ItemTemplate>
-                    </ItemsControl>
-                </StackPanel>
+                                </DataTemplate>
+                            </ItemsControl.ItemTemplate>
+                        </ItemsControl>
+                    </StackPanel>
 
-            </Grid>
-            
+                </Grid>
                 <Label>CPU:</Label>
                 <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="60" />
+                        <ColumnDefinition Width="60" />
+                        <ColumnDefinition Width="60" />
+                    </Grid.ColumnDefinitions>
+
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+
+                    <Label HorizontalAlignment="Center" Grid.Column="1" >Мин.</Label>
+                    <Label HorizontalAlignment="Center" Grid.Column="2" >Сред.</Label>
+                    <Label HorizontalAlignment="Center" Grid.Column="3" >Макс.</Label>
+
+                    <StackPanel Orientation="Vertical" Grid.Row="1">
+                        <ItemsControl ItemsSource="{Binding EnemyLosses}">
+                            <ItemsControl.ItemTemplate>
+                                <DataTemplate>
+                                    <StackPanel Orientation="Horizontal">
+                                        <Image Width="30" Height="30" Grid.Column="0" Source="{Binding Icon}" ToolTip="{StaticResource UnitTooltipTemplate}"></Image>
+                                        <Label Grid.Column="1" Content="{Binding Name}"></Label>
+                                    </StackPanel>
+                                </DataTemplate>
+                            </ItemsControl.ItemTemplate>
+                        </ItemsControl>
+                    </StackPanel>
+
+                    <StackPanel Orientation="Vertical" Grid.Row="1" Grid.Column="1">
+                        <ItemsControl ItemsSource="{Binding EnemyLosses}">
+                            <ItemsControl.ItemTemplate>
+                                <DataTemplate>
+                                    <Label HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Height="30" Content="{Binding MinCount}"></Label>
+                                </DataTemplate>
+                            </ItemsControl.ItemTemplate>
+                        </ItemsControl>
+                    </StackPanel>
+
+                    <StackPanel Orientation="Vertical" Grid.Row="1" Grid.Column="2">
+                        <ItemsControl ItemsSource="{Binding EnemyLosses}">
+                            <ItemsControl.ItemTemplate>
+                                <DataTemplate>
+                                    <Label Height="30" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Content="{Binding AvgCount}" ContentStringFormat="{}{0:f2}"></Label>
+                                </DataTemplate>
+                            </ItemsControl.ItemTemplate>
+                        </ItemsControl>
+                    </StackPanel>
+
+                    <StackPanel Orientation="Vertical" Grid.Row="1" Grid.Column="3">
+                        <ItemsControl ItemsSource="{Binding EnemyLosses}">
+                            <ItemsControl.ItemTemplate>
+                                <DataTemplate>
+                                    <Label Height="30" HorizontalAlignment="Center" VerticalContentAlignment="Center" Content="{Binding MaxCount}"></Label>
+                                </DataTemplate>
+                            </ItemsControl.ItemTemplate>
+                        </ItemsControl>
+                    </StackPanel>
+
+                </Grid>
+            </StackPanel>
+        </DataTemplate>
+
+        <Style x:Key="RadioButtonListItem" TargetType="{x:Type ListBoxItem}" >
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="ListBoxItem">
+                        <DockPanel LastChildFill="True" Background="{TemplateBinding Background}" HorizontalAlignment="Stretch" VerticalAlignment="Center" ToolTip="{StaticResource WaveTooltipTemplate}">
+                            <RadioButton IsChecked="{TemplateBinding IsSelected}" Focusable="False" IsHitTestVisible="False" VerticalAlignment="Center" Margin="0,0,4,0"/>
+                        </DockPanel>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <Style x:Key="RadioButtonList" TargetType="ListBox">
+            <Setter Property="BorderThickness" Value="0" />
+            <Setter Property="Background"      Value="Transparent" />
+
+            <Setter Property="ItemContainerStyle" Value="{StaticResource RadioButtonListItem}" />
+
+            <Setter Property="Control.Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type ListBox}">
+                        <ItemsPresenter SnapsToDevicePixels="{TemplateBinding UIElement.SnapsToDevicePixels}" />
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+
+            <Style.Triggers>
+                <Trigger Property="IsEnabled" Value="False">
+                    <Setter Property="TextBlock.Foreground" Value="{DynamicResource {x:Static SystemColors.GrayTextBrushKey}}" />
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+
+        <Style x:Key="HorizontalRadioButtonList" BasedOn="{StaticResource RadioButtonList}" TargetType="ListBox">
+            <Setter Property="ItemsPanel">
+                <Setter.Value>
+                    <ItemsPanelTemplate>
+                        <VirtualizingStackPanel Background="Transparent" Orientation="Horizontal" />
+                    </ItemsPanelTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
+    <TabControl>
+        <TabItem Header="Калькулятор">
+            <Grid>
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="*" />
-                    <ColumnDefinition Width="60" />
-                    <ColumnDefinition Width="60" />
-                    <ColumnDefinition Width="60" />
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                    <ColumnDefinition Width="2*"></ColumnDefinition>
                 </Grid.ColumnDefinitions>
 
                 <Grid.RowDefinitions>
-                    <RowDefinition Height="*"/>
-                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="36"></RowDefinition>
+                    <RowDefinition Height="*"></RowDefinition>
+                    <RowDefinition Height="52"></RowDefinition>
                 </Grid.RowDefinitions>
 
-                <Label HorizontalAlignment="Center" Grid.Column="1" >Мин.</Label>
-                <Label HorizontalAlignment="Center" Grid.Column="2" >Сред.</Label>
-                <Label HorizontalAlignment="Center" Grid.Column="3" >Макс.</Label>
+                <StackPanel  Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="3" Orientation="Horizontal">
+                    <CheckBox Margin="10,10,10,0" Grid.Column="0" Grid.Row="0" IsChecked="{Binding Model.VeteranAvailable, ElementName=Win}">
+                        Ветеран
+                    </CheckBox>
 
-                <StackPanel Orientation="Vertical" Grid.Row="1">
-                    <ItemsControl ItemsSource="{Binding Model.EnemyLosses,ElementName=Win}">
-                        <ItemsControl.ItemTemplate>
+                    <ComboBox HorizontalAlignment="Right" Margin="0,2,16,2" MinWidth="200" ItemsSource="{Binding Model.Quests,ElementName=Win}" SelectedValue="{Binding Model.ActiveQuest, ElementName=Win, Mode=TwoWay}">
+                        <ComboBox.ItemTemplate>
                             <DataTemplate>
                                 <StackPanel Orientation="Horizontal">
-                                     <Image Width="30" Height="30" Grid.Column="0" Source="{Binding Icon}" ToolTip="{StaticResource UnitTooltipTemplate}"></Image>
-                                    <Label Grid.Column="1" Content="{Binding Name}"></Label>
+                                    <Image Source="{Binding Icon}" Height="30" VerticalAlignment="Center"/>
+                                    <Label Content="{Binding Name}" VerticalAlignment="Center"/>
                                 </StackPanel>
                             </DataTemplate>
-                        </ItemsControl.ItemTemplate>
-                    </ItemsControl>
-                </StackPanel>
+                        </ComboBox.ItemTemplate>
+                    </ComboBox>
 
-                <StackPanel Orientation="Vertical" Grid.Row="1" Grid.Column="1">
-                    <ItemsControl ItemsSource="{Binding Model.EnemyLosses,ElementName=Win}">
-                        <ItemsControl.ItemTemplate>
+                    <ComboBox HorizontalAlignment="Right" Margin="16,2,16,2" MinWidth="200" ItemsSource="{Binding Model.ActiveQuestCamps,ElementName=Win}" SelectedValue="{Binding Model.ActiveEnemyCamp, ElementName=Win, Mode=TwoWay}">
+                        <ComboBox.ItemTemplate>
                             <DataTemplate>
-                                <Label HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Height="30" Content="{Binding MinCount}"></Label>
-                            </DataTemplate>
-                        </ItemsControl.ItemTemplate>
-                    </ItemsControl>
-                </StackPanel>
-
-                <StackPanel Orientation="Vertical" Grid.Row="1" Grid.Column="2">
-                    <ItemsControl ItemsSource="{Binding Model.EnemyLosses,ElementName=Win}">
-                        <ItemsControl.ItemTemplate>
-                            <DataTemplate>
-                                <Label Height="30" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Content="{Binding AvgCount}" ContentStringFormat="{}{0:f2}"></Label>
-                            </DataTemplate>
-                        </ItemsControl.ItemTemplate>
-                    </ItemsControl>
-                </StackPanel>
-
-                <StackPanel Orientation="Vertical" Grid.Row="1" Grid.Column="3">
-                    <ItemsControl ItemsSource="{Binding Model.EnemyLosses,ElementName=Win}">
-                        <ItemsControl.ItemTemplate>
-                            <DataTemplate>
-                                <Label Height="30" HorizontalAlignment="Center" VerticalContentAlignment="Center" Content="{Binding MaxCount}"></Label>
-                            </DataTemplate>
-                        </ItemsControl.ItemTemplate>
-                    </ItemsControl>
-                </StackPanel>
-
-            </Grid>
-            </StackPanel>
-          </Expander>
-
-          <Expander IsExpanded="False" Visibility="{Binding Model.Simulation, ElementName=Win, Converter={StaticResource objectVisibilityConverter}}">
-            <Expander.Header>
-                <Label FontWeight="Bold">Пример моделирования</Label>
-            </Expander.Header>
-            <ItemsControl ItemsSource="{Binding Model.Simulation.Rounds, ElementName=Win}">
-                <ItemsControl.ItemTemplate>
-                      <DataTemplate>                                                            
-                           <Expander>
-                               <Expander.Header>
-                                        <StackPanel Orientation="Vertical">
-                                            <Label Content="{Binding Index}" ContentStringFormat="{}Раунд {0}" FontWeight="Bold"></Label>
-                                            <ItemsControl ItemsSource="{Binding PlayerLosses}" ItemTemplate="{StaticResource Losses}">
-                                                <ItemsControl.ItemsPanel>
-                                                    <ItemsPanelTemplate>
-                                                        <StackPanel Orientation="Horizontal"/>
-                                                    </ItemsPanelTemplate>
-                                                </ItemsControl.ItemsPanel>
-                                            </ItemsControl>
-
-                                            <ItemsControl ItemsSource="{Binding EnemyLosses}" ItemTemplate="{StaticResource Losses}">
-                                                <ItemsControl.ItemsPanel>
-                                                    <ItemsPanelTemplate>
-                                                        <StackPanel Orientation="Horizontal"/>
-                                                    </ItemsPanelTemplate>
-                                                </ItemsControl.ItemsPanel>                                                   
-                                            </ItemsControl>
-                                        </StackPanel>
-                                    </Expander.Header>
-                                    <ItemsControl ItemsSource="{Binding Steps}">
+                                <StackPanel Orientation="Horizontal">
+                                    <Label Name="lblCampTitle" Content="{Binding Name}" FontWeight="Bold" VerticalAlignment="Center" Margin="0,0,15,0"/>
+                                    <ItemsControl ItemsSource="{Binding Squads}">
+                                        <ItemsControl.ItemsPanel>
+                                            <ItemsPanelTemplate>
+                                                <StackPanel Orientation="Horizontal"/>
+                                            </ItemsPanelTemplate>
+                                        </ItemsControl.ItemsPanel>
                                         <ItemsControl.ItemTemplate>
                                             <DataTemplate>
-                                                <Expander Margin="20,0,0,0">
-                                                    <Expander.Header>
-                                                        <StackPanel Orientation="Vertical">
-                                                            <Label Content="{Binding StepType, Converter={StaticResource attackPriorityStringConverter}}" FontWeight="Bold"></Label>
-                                                            <ItemsControl ItemsSource="{Binding PlayerLosses}" ItemTemplate="{StaticResource Losses}">
-                                                                <ItemsControl.ItemsPanel>
-                                                                    <ItemsPanelTemplate>
-                                                                        <StackPanel Orientation="Horizontal"/>
-                                                                    </ItemsPanelTemplate>
-                                                                </ItemsControl.ItemsPanel>
-                                                            </ItemsControl>
+                                                <StackPanel Orientation="Horizontal">
+                                                    <Image Width="30" Height="30" Grid.Column="0" Source="{Binding Icon}"></Image>
+                                                    <Label Grid.Column="1" Content="{Binding Count}"/>
+                                                </StackPanel>
+                                            </DataTemplate>
+                                        </ItemsControl.ItemTemplate>
+                                    </ItemsControl>
+                                </StackPanel>
+                            </DataTemplate>
+                        </ComboBox.ItemTemplate>
+                        <ComboBox.ItemContainerStyle>
+                            <Style TargetType="ComboBoxItem">
+                                <Setter Property="Background" Value="{Binding CampType, Converter={StaticResource campTypeConverter}}" />
+                            </Style>
+                        </ComboBox.ItemContainerStyle>
+                    </ComboBox>
 
-                                                            <ItemsControl ItemsSource="{Binding EnemyLosses}" ItemTemplate="{StaticResource Losses}">
-                                                                <ItemsControl.ItemsPanel>
-                                                                    <ItemsPanelTemplate>
-                                                                        <StackPanel Orientation="Horizontal"/>
-                                                                    </ItemsPanelTemplate>
-                                                                </ItemsControl.ItemsPanel>
-                                                            </ItemsControl>
-                                                        </StackPanel>
-                                                    </Expander.Header>
-                                                    
-                                                    <StackPanel Orientation="Vertical">
-                                                        <ItemsControl ItemsSource="{Binding PlayerSqadsAttacks}" ItemTemplate="{StaticResource SquadAttackTemplate}">
-                                                        </ItemsControl>
+                    <Button Margin="0,0" Padding="1" BorderThickness="1" Click="Button_Click" ToolTip="{x:Static res:Resources.UNIT_BERSERK}" IsEnabled="{Binding Model.ActiveQuest.Map, ElementName=Win, Converter={StaticResource objectToBooleanConverter}}" >
+                        <Image Margin="0,0" Height="30" Source="Properties/map.png"/>
+                    </Button>
+                </StackPanel>
 
-                                                        <ItemsControl ItemsSource="{Binding EnemySqadsAttacks}"  ItemTemplate="{StaticResource SquadAttackTemplate}">
-                                                        </ItemsControl>
-                                                    </StackPanel>
-                                                </Expander>
+                <ScrollViewer VerticalScrollBarVisibility="Auto" Grid.Column="0" Grid.Row="1">
+                    <StackPanel Name="PlayerUnitsPanel" Orientation="Vertical">
+                        <StackPanel Orientation="Horizontal" DataContext="{Binding Model, ElementName=Win}">
+                            <Label>Волны:</Label>
+                            <ListBox Style="{StaticResource HorizontalRadioButtonList}" SelectedIndex="{Binding PlayerWaveIndex}" ItemsSource="{Binding PlayerWaves}"/>
+                        </StackPanel>
+                        <ItemsControl ItemsSource="{Binding Model.PlayerUnits,ElementName=Win}">
+                            <ItemsControl.ItemTemplate>
+                                <DataTemplate>
+                                    <Grid>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="32"></ColumnDefinition>
+                                            <ColumnDefinition Width="*"></ColumnDefinition>
+                                            <ColumnDefinition Width="60"></ColumnDefinition>
+                                        </Grid.ColumnDefinitions>
+                                        <Image Width="30" Height="30" Grid.Column="0" Source="{Binding Icon}" ToolTip="{StaticResource UnitTooltipTemplate}"></Image>
+                                        <Label Grid.Column="1" Content="{Binding Name}"/>
+                                        <src:NumberTextBox MaxWidth="50" MinWidth="50" Margin="0,5" Grid.Column="2" MinValue="0" MaxValue="{Binding Model.PlayerUnitLimit, ElementName=Win}">
+                                            <src:NumberTextBox.Text>
+                                                <Binding Path="Count" UpdateSourceTrigger="PropertyChanged">
+                                                </Binding>
+                                            </src:NumberTextBox.Text>
+                                        </src:NumberTextBox>
+                                    </Grid>
+                                </DataTemplate>
+                            </ItemsControl.ItemTemplate>
+                        </ItemsControl>
+                        <Label Content="{Binding Model.PlayerUnitsCount,ElementName=Win}" ContentStringFormat="{}Всего: {0}" FontWeight="Bold" Foreground="{Binding Model.UserUnitsCountWarning, ElementName=Win, Converter={StaticResource userUnitsWarningCountBrushConverter}}"/>
+                        <RadioButton Margin="5,5" >
+                            <RadioButton.IsChecked>
+                                <Binding Path="Model.PlayerTowerBonus" ElementName="Win" Converter="{StaticResource towerBonusConverter}" ConverterParameter="0" ></Binding>
+                            </RadioButton.IsChecked>
+                            Без башни (0%)
+                        </RadioButton>
+                        <RadioButton Margin="5,5">Башня (50%)
+                            <RadioButton.IsChecked>
+                                <Binding Path="Model.PlayerTowerBonus" ElementName="Win" Converter="{StaticResource towerBonusConverter}" ConverterParameter="50"></Binding>
+                            </RadioButton.IsChecked>
+                        </RadioButton>
+                        <RadioButton Margin="5,5">Усиленная башня (75%)
+                            <RadioButton.IsChecked>
+                                <Binding Path="Model.PlayerTowerBonus" ElementName="Win" Converter="{StaticResource towerBonusConverter}" ConverterParameter="75"></Binding>
+                            </RadioButton.IsChecked>
+                        </RadioButton>
+                    </StackPanel>
+                </ScrollViewer>
+
+                <ScrollViewer VerticalScrollBarVisibility="Auto" Grid.Column="1" Grid.Row="1">
+                    <StackPanel Name="EnemyUnitsPanel" Orientation="Vertical">
+                        <StackPanel Orientation="Horizontal" DataContext="{Binding Model, ElementName=Win}">
+                            <Label>Волны:</Label>
+                            <ListBox Style="{StaticResource HorizontalRadioButtonList}" SelectedIndex="{Binding EnemyWaveIndex}" ItemsSource="{Binding EnemyWaves}"/>
+                        </StackPanel>
+
+                        <ItemsControl ItemsSource="{Binding Model.EnemyUnits,ElementName=Win}">
+                            <ItemsControl.ItemTemplate>
+                                <DataTemplate>
+                                    <Grid>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="32"></ColumnDefinition>
+                                            <ColumnDefinition Width="*"></ColumnDefinition>
+                                            <ColumnDefinition Width="60"></ColumnDefinition>
+                                        </Grid.ColumnDefinitions>
+                                        <Image Width="30" Height="30" Grid.Column="0" Source="{Binding Icon}"  ToolTip="{StaticResource UnitTooltipTemplate}"></Image>
+                                        <Label Grid.Column="1"  Content="{Binding Name}"/>
+                                        <src:NumberTextBox MaxWidth="50" MinWidth="50" Margin="0,5" Grid.Column="2" Text="{Binding Count}"/>
+                                    </Grid>
+                                </DataTemplate>
+                            </ItemsControl.ItemTemplate>
+                        </ItemsControl>
+                        <RadioButton Margin="5,5">
+                            Без башни (0%)
+                            <RadioButton.IsChecked>
+                                <Binding Path="Model.EnemyTowerBonus" ElementName="Win" Converter="{StaticResource towerBonusConverter}" ConverterParameter="0"></Binding>
+                            </RadioButton.IsChecked>
+                        </RadioButton>
+                        <RadioButton Margin="5,5">
+                            Башня (50%)
+                            <RadioButton.IsChecked>
+                                <Binding Path="Model.EnemyTowerBonus" ElementName="Win" Converter="{StaticResource towerBonusConverter}" ConverterParameter="50"></Binding>
+                            </RadioButton.IsChecked>
+                        </RadioButton>
+                        <RadioButton Margin="5,5">
+                            Усиленная башня (75%)
+                            <RadioButton.IsChecked>
+                                <Binding Path="Model.EnemyTowerBonus" ElementName="Win" Converter="{StaticResource towerBonusConverter}" ConverterParameter="75"></Binding>
+                            </RadioButton.IsChecked>
+                        </RadioButton>
+                        <RadioButton Margin="5,5">
+                            Каменная башня (90%)
+                            <RadioButton.IsChecked>
+                                <Binding Path="Model.EnemyTowerBonus" ElementName="Win" Converter="{StaticResource towerBonusConverter}" ConverterParameter="90"></Binding>
+                            </RadioButton.IsChecked>
+                        </RadioButton>
+                    </StackPanel>
+                </ScrollViewer>
+
+                <StackPanel Orientation="Horizontal" Grid.Row="2" Grid.Column="2" Grid.ColumnSpan="3">
+                    <Button MinHeight="30" MaxHeight="30" Margin="10">Очистить форму</Button>
+                    <Button MinHeight="30" MaxHeight="30" Margin="10" Click="Button_Click_1">Рассчитать</Button>
+                </StackPanel>
+
+                <ScrollViewer VerticalScrollBarVisibility="Visible" Grid.Row="1" Grid.Column="2" Grid.ColumnSpan="1">
+                    <StackPanel Orientation="Vertical">
+                        <Expander IsExpanded="True" >
+                            <Expander.Visibility>
+                                <MultiBinding Converter="{StaticResource lossesVisibilityConverter}">
+                                    <Binding Path="Model.TotalLosses.PlayerLosses" ElementName="Win"></Binding>
+                                    <Binding Path="Model.TotalLosses.EnemyLosses" ElementName="Win"></Binding>
+                                </MultiBinding>
+                            </Expander.Visibility>
+                            <Expander.Header>
+                                <Label FontWeight="Bold">Потери</Label>
+                            </Expander.Header>
+                            <StackPanel Orientation="Vertical" DataContext="{Binding Model.TotalLosses,ElementName=Win}" >
+                                <ContentPresenter Content="{Binding Model.TotalLosses,ElementName=Win}" ContentTemplate="{StaticResource LossesPanelTemplate}"></ContentPresenter>
+                                <Expander>
+                                    <Expander.Header>
+                                        <Label FontWeight="Bold">Потери для волн</Label>
+                                    </Expander.Header>
+                                    <ItemsControl ItemsSource="{Binding Model.WaveLosses, ElementName=Win}">
+                                        <ItemsControl.ItemTemplate>
+                                            <DataTemplate>
+                                                <StackPanel Orientation="Vertical">
+                                                    <TextBlock FontWeight="Bold">
+                                               <TextBlock.Text>
+                                                  <MultiBinding StringFormat="{}Волна {0}:{1}">
+                                                   <Binding Path="PlayerWaveIndex" />
+                                                   <Binding Path="EnemyWaveIndex" />                                                         
+                                                  </MultiBinding>
+                                               </TextBlock.Text>
+                                                    </TextBlock>
+                                                    <ContentPresenter ContentTemplate="{StaticResource LossesPanelTemplate}"></ContentPresenter>
+                                                </StackPanel>
                                             </DataTemplate>
                                         </ItemsControl.ItemTemplate>
                                     </ItemsControl>
                                 </Expander>
-                      </DataTemplate>
-                 </ItemsControl.ItemTemplate>
-            </ItemsControl>
-        </Expander>
-        </StackPanel>
-        </ScrollViewer>
-    </Grid>
+                            </StackPanel>
+                        </Expander>
+                        <Expander IsExpanded="False" Visibility="{Binding Model.Simulation, ElementName=Win, Converter={StaticResource objectVisibilityConverter}}">
+                            <Expander.Header>
+                                <Label FontWeight="Bold">Пример моделирования</Label>
+                            </Expander.Header>
+                            <ItemsControl ItemsSource="{Binding Model.Simulation.Simulations, ElementName=Win}">
+                                <ItemsControl.ItemTemplate>
+                                    <DataTemplate>
+                                        <StackPanel Orientation="Vertical">
+                                            <StackPanel Orientation="Horizontal">
+                                                <TextBlock VerticalAlignment="Center">Бой: </TextBlock>
+                                                <ItemsControl ItemsSource="{Binding PlayerUnitsBeginState}">
+                                                    <ItemsControl.ItemTemplate>
+                                                        <DataTemplate>
+                                                            <StackPanel Orientation="Horizontal">
+                                                                <Image Width="30" Height="30" Source="{Binding Unit.Icon}" ToolTip="{StaticResource UnitTooltipTemplate}"></Image>
+                                                                <Label VerticalAlignment="Center" Content="{Binding Count}"/>
+                                                            </StackPanel>
+                                                        </DataTemplate>
+                                                    </ItemsControl.ItemTemplate>
+                                                </ItemsControl>
+                                                <TextBlock VerticalAlignment="Center"> против </TextBlock>
+                                                <ItemsControl ItemsSource="{Binding EnemyUnitsBeginState}">
+                                                    <ItemsControl.ItemTemplate>
+                                                        <DataTemplate>
+                                                            <StackPanel Orientation="Horizontal">
+                                                                <Image Width="30" Height="30" Source="{Binding Unit.Icon}" ToolTip="{StaticResource UnitTooltipTemplate}"></Image>
+                                                                <Label VerticalAlignment="Center" Content="{Binding Count}"/>
+                                                            </StackPanel>
+                                                        </DataTemplate>
+                                                    </ItemsControl.ItemTemplate>
+                                                </ItemsControl>                                                
+                                            </StackPanel>                                            
+                                            <ItemsControl ItemsSource="{Binding Rounds}">
+                                                <ItemsControl.ItemTemplate>
+                                                    <DataTemplate>
+                                                        <Expander>
+                                                            <Expander.Header>
+                                                                <StackPanel Orientation="Vertical">
+                                                                    <Label Content="{Binding Index}" ContentStringFormat="{}Раунд {0}" FontWeight="Bold"></Label>
+                                                                    <ItemsControl ItemsSource="{Binding PlayerLosses}" ItemTemplate="{StaticResource Losses}">
+                                                                        <ItemsControl.ItemsPanel>
+                                                                            <ItemsPanelTemplate>
+                                                                                <StackPanel Orientation="Horizontal"/>
+                                                                            </ItemsPanelTemplate>
+                                                                        </ItemsControl.ItemsPanel>
+                                                                    </ItemsControl>
+
+                                                                    <ItemsControl ItemsSource="{Binding EnemyLosses}" ItemTemplate="{StaticResource Losses}">
+                                                                        <ItemsControl.ItemsPanel>
+                                                                            <ItemsPanelTemplate>
+                                                                                <StackPanel Orientation="Horizontal"/>
+                                                                            </ItemsPanelTemplate>
+                                                                        </ItemsControl.ItemsPanel>
+                                                                    </ItemsControl>
+                                                                </StackPanel>
+                                                            </Expander.Header>
+                                                            <ItemsControl ItemsSource="{Binding Steps}">
+                                                                <ItemsControl.ItemTemplate>
+                                                                    <DataTemplate>
+                                                                        <Expander Margin="20,0,0,0">
+                                                                            <Expander.Header>
+                                                                                <StackPanel Orientation="Vertical">
+                                                                                    <Label Content="{Binding StepType, Converter={StaticResource attackPriorityStringConverter}}" FontWeight="Bold"></Label>
+                                                                                    <ItemsControl ItemsSource="{Binding PlayerLosses}" ItemTemplate="{StaticResource Losses}">
+                                                                                        <ItemsControl.ItemsPanel>
+                                                                                            <ItemsPanelTemplate>
+                                                                                                <StackPanel Orientation="Horizontal"/>
+                                                                                            </ItemsPanelTemplate>
+                                                                                        </ItemsControl.ItemsPanel>
+                                                                                    </ItemsControl>
+
+                                                                                    <ItemsControl ItemsSource="{Binding EnemyLosses}" ItemTemplate="{StaticResource Losses}">
+                                                                                        <ItemsControl.ItemsPanel>
+                                                                                            <ItemsPanelTemplate>
+                                                                                                <StackPanel Orientation="Horizontal"/>
+                                                                                            </ItemsPanelTemplate>
+                                                                                        </ItemsControl.ItemsPanel>
+                                                                                    </ItemsControl>
+                                                                                </StackPanel>
+                                                                            </Expander.Header>
+
+                                                                            <StackPanel Orientation="Vertical">
+                                                                                <ItemsControl ItemsSource="{Binding PlayerSqadsAttacks}" ItemTemplate="{StaticResource SquadAttackTemplate}">
+                                                                                </ItemsControl>
+
+                                                                                <ItemsControl ItemsSource="{Binding EnemySqadsAttacks}"  ItemTemplate="{StaticResource SquadAttackTemplate}">
+                                                                                </ItemsControl>
+                                                                            </StackPanel>
+                                                                        </Expander>
+                                                                    </DataTemplate>
+                                                                </ItemsControl.ItemTemplate>
+                                                            </ItemsControl>
+                                                        </Expander>
+                                                    </DataTemplate>
+                                                </ItemsControl.ItemTemplate>
+                                            </ItemsControl>
+                                        </StackPanel>
+                                    </DataTemplate>
+                                </ItemsControl.ItemTemplate>
+                            </ItemsControl>
+                        </Expander>
+                    </StackPanel>
+                </ScrollViewer>
+            </Grid>
         </TabItem>
         <TabItem Header="Подбор состава"></TabItem>
         <TabItem Header="Опции"></TabItem>

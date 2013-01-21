@@ -43,7 +43,7 @@ namespace TheSettlersCalculator.Types
 				if (s_general == null)
 				{
 					s_general = new Unit();
-					s_general.Name = "Генерал";
+					s_general.Name = Resources.UNIT_GENERAL;
 					s_general.Health = 1;
 					s_general.MinDamage = 120;
 					s_general.MaxDamage = 120;
@@ -68,7 +68,8 @@ namespace TheSettlersCalculator.Types
 			unit.AttackPriority = AttackPriority.Normal;
 			unit.Experience = 2;
 			unit.Icon = ImageHelper.LoadPng("TheSettlersCalculator.Quests.Images.recruit.png");
-			s_units[0] = unit;
+			unit.ProductionTime = 3 * 60;
+			s_units[RECRUIT] = unit;
 
 			unit = new Unit();
 			unit.Name = Resources.UNIT_MILITIA;
@@ -79,7 +80,8 @@ namespace TheSettlersCalculator.Types
 			unit.AttackPriority = AttackPriority.Normal;
 			unit.Experience = 9;
 			unit.Icon = ImageHelper.LoadPng("TheSettlersCalculator.Quests.Images.militia.png");
-			s_units[1] = unit;
+			unit.ProductionTime = 8 * 60;
+			s_units[MILITIAMAN] = unit;
 
 			unit = new Unit();
 			unit.Name = Resources.UNIT_SOLDIER;
@@ -90,7 +92,8 @@ namespace TheSettlersCalculator.Types
 			unit.AttackPriority = AttackPriority.Normal;
 			unit.Experience = 10;
 			unit.Icon = ImageHelper.LoadPng("TheSettlersCalculator.Quests.Images.soldier.png");
-			s_units[2] = unit;
+			unit.ProductionTime = 12 * 60;
+			s_units[SOLDIER] = unit;
 
 			unit = new Unit();
 			unit.Name = Resources.UNIT_ELITE_SOLDIER;
@@ -101,7 +104,8 @@ namespace TheSettlersCalculator.Types
 			unit.AttackPriority = AttackPriority.Normal;
 			unit.Experience = 20;
 			unit.Icon = ImageHelper.LoadPng("TheSettlersCalculator.Quests.Images.elitesoldier.png");
-			s_units[3] = unit;
+			unit.ProductionTime = 32 * 60;
+			s_units[ELITE_SOLDIER] = unit;
 
 			unit = new Unit();
 			unit.Name = Resources.UNIT_CAVALRY;
@@ -113,7 +117,8 @@ namespace TheSettlersCalculator.Types
 			unit.Experience = 8;
 			unit.AttackWeaknessTarget = true;
 			unit.Icon = ImageHelper.LoadPng("TheSettlersCalculator.Quests.Images.cavalry.png");
-			s_units[4] = unit;
+			unit.ProductionTime = 18 * 60;
+			s_units[CAVALRY] = unit;
 
 			unit = new Unit();
 			unit.Name = Resources.UNIT_BOWMAN;
@@ -125,7 +130,8 @@ namespace TheSettlersCalculator.Types
 			unit.Experience = 3;
 			unit.TowerBonus = true;
 			unit.Icon = ImageHelper.LoadPng("TheSettlersCalculator.Quests.Images.bowman.png");
-			s_units[5] = unit;
+			unit.ProductionTime = 4 * 60;
+			s_units[ARCHER] = unit;
 
 			unit = new Unit();
 			unit.Name = Resources.UNIT_LONGBOWMAN;
@@ -137,7 +143,8 @@ namespace TheSettlersCalculator.Types
 			unit.Experience = 8;
 			unit.TowerBonus = true;
 			unit.Icon = ImageHelper.LoadPng("TheSettlersCalculator.Quests.Images.longbowman.png");
-			s_units[6] = unit;
+			unit.ProductionTime = 8 * 60;
+			s_units[LONG_BOW_ARCHER] = unit;
 
 			unit = new Unit();
 			unit.Name = Resources.UNIT_CROSSBOWMAN;
@@ -149,7 +156,8 @@ namespace TheSettlersCalculator.Types
 			unit.Experience = 20;
 			unit.TowerBonus = true;			
 			unit.Icon = ImageHelper.LoadPng("TheSettlersCalculator.Quests.Images.crossbowman.png");
-			s_units[7] = unit;
+			unit.ProductionTime = 20 * 60;
+			s_units[ARBALESTER] = unit;
 
 			unit = new Unit();
 			unit.Name = Resources.UNIT_CANNONNEER;
@@ -162,7 +170,8 @@ namespace TheSettlersCalculator.Types
 			unit.TowerBonus = true;
 			unit.IgnoreTowerBonus = 100;
 			unit.Icon = ImageHelper.LoadPng("TheSettlersCalculator.Quests.Images.cannoneer.png");
-			s_units[8] = unit;
+			unit.ProductionTime = 30 * 60;
+			s_units[CANNONEER] = unit;
 		}
 	}
 }

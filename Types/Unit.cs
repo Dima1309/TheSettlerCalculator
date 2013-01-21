@@ -16,6 +16,7 @@ namespace TheSettlersCalculator.Types
 		private bool m_towerBonus;
 		private byte m_ignoreTowerBonus;
 		private int m_experience;
+		private int m_productionTime;
 		private BitmapSource m_icon;
 		#endregion
 
@@ -90,6 +91,12 @@ namespace TheSettlersCalculator.Types
 		{
 			get { return m_ignoreTowerBonus; }
 			set { m_ignoreTowerBonus = value; }
+		}
+
+		public int ProductionTime
+		{
+			get { return m_productionTime; }
+			set { m_productionTime = value; }
 		}
 		#endregion
 	}
