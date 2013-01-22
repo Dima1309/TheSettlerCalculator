@@ -3,7 +3,7 @@
 	internal static class Quests
 	{
 		#region Fields
-		private static Quest[] m_quests;
+		private static Quest[] s_quests;
 		#endregion
 
 		#region Properties
@@ -11,12 +11,12 @@
 		{
 			get
 			{
-				if (m_quests == null)
+				if (s_quests == null)
 				{
 					InitializeQuests();
 				}
 
-				return m_quests;
+				return s_quests;
 			}
 		}
 		#endregion
@@ -24,8 +24,31 @@
 		#region Methods
 		private static void InitializeQuests()
 		{
-			m_quests = new Quest[1];
-			m_quests[0] = new DarkTemplareQuest();
+			s_quests = new Quest[]
+			           	{
+			           		new BanditNestQuest(),
+			           		new BountyHunterQuest(),
+			           		new DarkTemplareQuest(),
+			           		new GunpowderQuest(),
+			           		new HorsebackQuest(),
+			           		new IslandofthePiratesQuest(),
+			           		new MainIsland(),
+			           		new MotherLoveQuest(),
+			           		new OldFriendsQuest(),
+			           		new OutlawsQuest(),
+			           		new RoaringBullQuest(),
+			           		new SecludedExperimentsQuest(),
+			           		new SonsoftheveldtQuest(),
+			           		new StealingfromtherichQuest(),
+			           		new SurpriseAttackQuest(),
+			           		new TheBlackKnightsQuest(),
+			           		new TheDarkBrotherhoodQuest(),
+			           		new TheNordsQuest(),
+			           		new TraitorsQuest(),
+			           		new VictortheviciousQuest(),
+			           		new WildMaryQuest(),
+			           		new WitchoftheSwampQuest()
+			           	};
 		}
 		#endregion
 	}
