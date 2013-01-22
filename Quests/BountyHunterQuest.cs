@@ -45,22 +45,26 @@ namespace TheSettlersCalculator.Quests
 			#endregion
 
 			#region Sector 2
+			camp = new Camp();
 			camp.Name = "2";
 			camp.SectorId = 2;
 			camp.Counts.Add(SCAVENGER, 5);
 			result.Add(camp);
 
+			camp = new Camp();
 			camp.Name = "3";
 			camp.SectorId = 2;
 			camp.Counts.Add(SCAVENGER, 10);
 			result.Add(camp);
 
+			camp = new Camp();
 			camp.Name = "4";
 			camp.SectorId = 2;
 			camp.Counts.Add(SCAVENGER, 6);
 			camp.Counts.Add(STONE_THROWER, 6);
 			result.Add(camp);
 
+			camp = new Camp();
 			camp.Name = "5";
 			camp.Counts.Add(SCAVENGER, 15);
 			camp.CampType = CampType.Boss;

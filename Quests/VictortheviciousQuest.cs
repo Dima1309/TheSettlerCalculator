@@ -60,31 +60,36 @@ namespace TheSettlersCalculator.Quests
 			camp.Counts.Add(GUARD_DOG, 50);
 			result.Add(camp);
 
+			camp = new Camp();
 			camp.Name = "2";
 			camp.SectorId = 1;
 			camp.Counts.Add(RANGER, 100);
 			camp.Counts.Add(ROUGHNECK, 50);
 			result.Add(camp);
 
+			camp = new Camp();
 			camp.Name = "3";
 			camp.SectorId = 1;
 			camp.Counts.Add(ROUGHNECK, 100);
 			camp.Counts.Add(GUARD_DOG, 50);
 			result.Add(camp);
 
+			camp = new Camp();
 			camp.Name = "4";
 			camp.SectorId = 1;
 			camp.Counts.Add(RANGER, 50);
 			camp.Counts.Add(ROUGHNECK, 50);
 			camp.Counts.Add(GUARD_DOG, 60);
 			result.Add(camp);
-			
+
+			camp = new Camp();
 			camp.Name = "5";
 			camp.SectorId = 1;
 			camp.Counts.Add(ROUGHNECK, 100);
 			camp.Counts.Add(GUARD_DOG, 50);
 			result.Add(camp);
 
+			camp = new Camp();
 			camp.Name = "6";
 			camp.SectorId = 1;
 			camp.Counts.Add(ROUGHNECK, 99);
@@ -95,40 +100,46 @@ namespace TheSettlersCalculator.Quests
 			#endregion
 
 			#region Sector 1b
+			camp = new Camp();
 			camp.Name = "1";
-			camp.SectorId = 1;
+			camp.SectorId = 101;
 			camp.Counts.Add(THUG, 50);
 			camp.Counts.Add(RANGER, 50);
 			camp.Counts.Add(GUARD_DOG, 50);
 			result.Add(camp);
 
+			camp = new Camp();
 			camp.Name = "2";
-			camp.SectorId = 1;
+			camp.SectorId = 101;
 			camp.Counts.Add(RANGER, 100);
 			camp.Counts.Add(ROUGHNECK, 50);
 			result.Add(camp);
 
+			camp = new Camp();
 			camp.Name = "3";
-			camp.SectorId = 1;
+			camp.SectorId = 101;
 			camp.Counts.Add(ROUGHNECK, 100);
 			camp.Counts.Add(GUARD_DOG, 50);
 			result.Add(camp);
 
+			camp = new Camp();
 			camp.Name = "4";
-			camp.SectorId = 1;
+			camp.SectorId = 101;
 			camp.Counts.Add(RANGER, 50);
 			camp.Counts.Add(ROUGHNECK, 50);
 			camp.Counts.Add(GUARD_DOG, 60);
 			result.Add(camp);
 
+			camp = new Camp();
 			camp.Name = "5";
-			camp.SectorId = 1;
+			camp.SectorId = 101;
 			camp.Counts.Add(ROUGHNECK, 100);
 			camp.Counts.Add(GUARD_DOG, 50);
 			result.Add(camp);
 
+			camp = new Camp();
 			camp.Name = "6";
-			camp.SectorId = 1;
+			camp.SectorId = 101;
 			camp.Counts.Add(ROUGHNECK, 99);
 			camp.Counts.Add(ONE_EYED_BERT, 1);
 			camp.Counts.Add(GUARD_DOG, 100);
@@ -137,34 +148,39 @@ namespace TheSettlersCalculator.Quests
 			#endregion
 
 			#region Sector 1c
+			camp = new Camp();
 			camp.Name = "1";
-			camp.SectorId = 1;
+			camp.SectorId = 201;
 			camp.Counts.Add(THUG, 50);
 			camp.Counts.Add(RANGER, 50);
 			camp.Counts.Add(GUARD_DOG, 50);
 			result.Add(camp);
 
+			camp = new Camp();
 			camp.Name = "2";
-			camp.SectorId = 1;
+			camp.SectorId = 201;
 			camp.Counts.Add(RANGER, 100);
 			camp.Counts.Add(ROUGHNECK, 50);
 			result.Add(camp);
 
+			camp = new Camp();
 			camp.Name = "3";
-			camp.SectorId = 1;
+			camp.SectorId = 201;
 			camp.Counts.Add(ROUGHNECK, 100);
 			camp.Counts.Add(GUARD_DOG, 50);
 			result.Add(camp);
 
+			camp = new Camp();
 			camp.Name = "4";
-			camp.SectorId = 1;
+			camp.SectorId = 201;
 			camp.Counts.Add(RANGER, 50);
 			camp.Counts.Add(ROUGHNECK, 50);
 			camp.Counts.Add(GUARD_DOG, 60);
 			result.Add(camp);
 
+			camp = new Camp();
 			camp.Name = "5";
-			camp.SectorId = 1;
+			camp.SectorId = 201;
 			camp.Counts.Add(ROUGHNECK, 99);
 			camp.Counts.Add(ONE_EYED_BERT, 1);
 			camp.Counts.Add(GUARD_DOG, 100);
@@ -173,18 +189,21 @@ namespace TheSettlersCalculator.Quests
 			#endregion
 
 			#region Sector 2
+			camp = new Camp();
 			camp.Name = "7";
 			camp.SectorId = 2;
 			camp.Counts.Add(RANGER, 50);
 			camp.Counts.Add(ROUGHNECK, 120);
 			result.Add(camp);
 
+			camp = new Camp();
 			camp.Name = "8";
 			camp.SectorId = 2;
 			camp.Counts.Add(ROUGHNECK, 120);
 			camp.Counts.Add(GUARD_DOG, 50);
 			result.Add(camp);
 
+			camp = new Camp();
 			camp.Name = "9";
 			camp.SectorId = 2;
 			camp.Counts.Add(RANGER, 60);
@@ -197,18 +216,21 @@ namespace TheSettlersCalculator.Quests
 			#endregion
 
 			#region Sector 3
+			camp = new Camp();
 			camp.Name = "10";
 			camp.SectorId = 3;
 			camp.Counts.Add(RANGER, 100);
 			camp.Counts.Add(ROUGHNECK, 100);
 			result.Add(camp);
 
+			camp = new Camp();
 			camp.Name = "11";
 			camp.SectorId = 3;
 			camp.Counts.Add(ROUGHNECK, 100);
 			camp.Counts.Add(GUARD_DOG, 100);
 			result.Add(camp);
 
+			camp = new Camp();
 			camp.Name = "12";
 			camp.SectorId = 3;
 			camp.Counts.Add(ROUGHNECK, 90);
@@ -221,33 +243,39 @@ namespace TheSettlersCalculator.Quests
 			#endregion
 
 			#region Sector 4
+			camp = new Camp();
 			camp.Name = "W2";
 			camp.SectorId = 4;
 			camp.Counts.Add(WOLF, 100);
 			result.Add(camp);
 
+			camp = new Camp();
 			camp.Name = "W1";
 			camp.SectorId = 4;
 			camp.Counts.Add(WOLF, 150);
 			result.Add(camp);
 
+			camp = new Camp();
 			camp.Name = "W3";
 			camp.SectorId = 4;
 			camp.Counts.Add(WOLF, 200);
 			result.Add(camp);
 
+			camp = new Camp();
 			camp.Name = "13";
 			camp.SectorId = 4;
 			camp.Counts.Add(RANGER, 100);
 			camp.Counts.Add(ROUGHNECK, 100);
 			result.Add(camp);
 
+			camp = new Camp();
 			camp.Name = "14";
 			camp.SectorId = 4;
 			camp.Counts.Add(ROUGHNECK, 100);
 			camp.Counts.Add(GUARD_DOG, 100);
 			result.Add(camp);
 
+			camp = new Camp();
 			camp.Name = "15";
 			camp.SectorId = 4;
 			camp.Counts.Add(ROUGHNECK, 155);
@@ -259,6 +287,7 @@ namespace TheSettlersCalculator.Quests
 			#endregion
 
 			#region Sector 5
+			camp = new Camp();
 			camp.Name = "16";
 			camp.SectorId = 5;
 			camp.Counts.Add(RANGER, 80);
@@ -266,6 +295,7 @@ namespace TheSettlersCalculator.Quests
 			camp.Counts.Add(GUARD_DOG, 40);
 			result.Add(camp);
 
+			camp = new Camp();
 			camp.Name = "17";
 			camp.SectorId = 5;
 			camp.Counts.Add(RANGER, 40);
@@ -273,6 +303,7 @@ namespace TheSettlersCalculator.Quests
 			camp.Counts.Add(GUARD_DOG, 80);
 			result.Add(camp);
 
+			camp = new Camp();
 			camp.Name = "18";
 			camp.SectorId = 5;
 			camp.Counts.Add(RANGER, 100);
@@ -280,6 +311,7 @@ namespace TheSettlersCalculator.Quests
 			camp.Counts.Add(SKUNK, 1);
 			result.Add(camp);
 
+			camp = new Camp();
 			camp.Name = "19";
 			camp.SectorId = 5;
 			camp.Counts.Add(RANGER, 50);

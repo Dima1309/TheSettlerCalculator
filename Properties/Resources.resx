@@ -171,6 +171,9 @@
   <data name="QUEST_OUTLAWS" xml:space="preserve">
     <value>Преступники</value>
   </data>
+  <data name="QUEST_PLAYER" xml:space="preserve">
+    <value>Игрок</value>
+  </data>
   <data name="QUEST_RASENDER_BULLE" xml:space="preserve">
     <value>Ревущий бык</value>
   </data>

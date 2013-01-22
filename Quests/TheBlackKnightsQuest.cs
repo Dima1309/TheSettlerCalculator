@@ -60,18 +60,21 @@ namespace TheSettlersCalculator.Quests
 			camp.Counts.Add(LONGBOW_DESERTER, 100);
 			result.Add(camp);
 
+			camp = new Camp();
 			camp.Name = "2";
 			camp.SectorId = 1;
 			camp.Counts.Add(BOWMAN_DESERTER, 100);
 			camp.Counts.Add(SOLDIER_DESERTER, 100);
 			result.Add(camp);
 
+			camp = new Camp();
 			camp.Name = "3";
 			camp.SectorId = 1;
 			camp.Counts.Add(MILITIA_DESERTER, 100);
 			camp.Counts.Add(CAVALRY_DESERTER, 100);
 			result.Add(camp);
 
+			camp = new Camp();
 			camp.Name = "4";
 			camp.SectorId = 1;
 			camp.Counts.Add(LONGBOW_DESERTER, 60);
@@ -84,26 +87,30 @@ namespace TheSettlersCalculator.Quests
 			#endregion
 
 			#region Sector 1b
+			camp = new Camp();
 			camp.Name = "1";
-			camp.SectorId = 1;
+			camp.SectorId = 101;
 			camp.Counts.Add(MILITIA_DESERTER, 100);
 			camp.Counts.Add(LONGBOW_DESERTER, 100);
 			result.Add(camp);
 
+			camp = new Camp();
 			camp.Name = "2";
-			camp.SectorId = 1;
+			camp.SectorId = 101;
 			camp.Counts.Add(BOWMAN_DESERTER, 100);
 			camp.Counts.Add(SOLDIER_DESERTER, 100);
 			result.Add(camp);
 
+			camp = new Camp();
 			camp.Name = "3";
-			camp.SectorId = 1;
+			camp.SectorId = 101;
 			camp.Counts.Add(MILITIA_DESERTER, 100);
 			camp.Counts.Add(CAVALRY_DESERTER, 100);
 			result.Add(camp);
 
+			camp = new Camp();
 			camp.Name = "4";
-			camp.SectorId = 1;
+			camp.SectorId = 101;
 			camp.Counts.Add(LONGBOW_DESERTER, 60);
 			camp.Counts.Add(CAVALRY_DESERTER, 60);
 			camp.Counts.Add(ELITE_SOLDIER_DESERTER, 60);
@@ -114,26 +121,30 @@ namespace TheSettlersCalculator.Quests
 			#endregion
 
 			#region Sector 1c
+			camp = new Camp();
 			camp.Name = "1";
-			camp.SectorId = 1;
+			camp.SectorId = 201;
 			camp.Counts.Add(MILITIA_DESERTER, 100);
 			camp.Counts.Add(LONGBOW_DESERTER, 100);
 			result.Add(camp);
 
+			camp = new Camp();
 			camp.Name = "2";
-			camp.SectorId = 1;
+			camp.SectorId = 201;
 			camp.Counts.Add(BOWMAN_DESERTER, 100);
 			camp.Counts.Add(SOLDIER_DESERTER, 100);
 			result.Add(camp);
 
+			camp = new Camp();
 			camp.Name = "3";
-			camp.SectorId = 1;
+			camp.SectorId = 201;
 			camp.Counts.Add(MILITIA_DESERTER, 100);
 			camp.Counts.Add(CAVALRY_DESERTER, 100);
 			result.Add(camp);
 
+			camp = new Camp();
 			camp.Name = "4";
-			camp.SectorId = 1;
+			camp.SectorId = 201;
 			camp.Counts.Add(LONGBOW_DESERTER, 60);
 			camp.Counts.Add(CAVALRY_DESERTER, 60);
 			camp.Counts.Add(ELITE_SOLDIER_DESERTER, 60);
@@ -144,24 +155,28 @@ namespace TheSettlersCalculator.Quests
 			#endregion
 
 			#region Sector 2
+			camp = new Camp();
 			camp.Name = "5";
 			camp.SectorId = 2;
 			camp.Counts.Add(ELITE_SOLDIER_DESERTER, 60);
 			camp.Counts.Add(CROSSBOW_DESERTER, 60);
 			result.Add(camp);
 
+			camp = new Camp();
 			camp.Name = "5";
 			camp.SectorId = 2;
 			camp.Counts.Add(ELITE_SOLDIER_DESERTER, 60);
 			camp.Counts.Add(CROSSBOW_DESERTER, 60);
 			result.Add(camp);
 
+			camp = new Camp();
 			camp.Name = "5";
 			camp.SectorId = 2;
 			camp.Counts.Add(ELITE_SOLDIER_DESERTER, 60);
 			camp.Counts.Add(CROSSBOW_DESERTER, 60);
 			result.Add(camp);
 
+			camp = new Camp();
 			camp.Name = "6";
 			camp.SectorId = 2;
 			camp.Counts.Add(CAVALRY_DESERTER, 50);
@@ -175,6 +190,7 @@ namespace TheSettlersCalculator.Quests
 			#endregion
 
 			#region Sector 3
+			camp = new Camp();
 			camp.Name = "7";
 			camp.SectorId = 3;
 			camp.Counts.Add(LONGBOW_DESERTER, 60);
@@ -182,6 +198,7 @@ namespace TheSettlersCalculator.Quests
 			camp.Counts.Add(CANNONEER_DESERTER, 10);
 			result.Add(camp);
 
+			camp = new Camp();
 			camp.Name = "8";
 			camp.SectorId = 3;
 			camp.Counts.Add(MILITIA_DESERTER, 100);
@@ -189,12 +206,14 @@ namespace TheSettlersCalculator.Quests
 			camp.Counts.Add(CROSSBOW_DESERTER, 40);
 			result.Add(camp);
 
+			camp = new Camp();
 			camp.Name = "9";
 			camp.SectorId = 3;
 			camp.Counts.Add(LONGBOW_DESERTER, 140);
 			camp.Counts.Add(ELITE_SOLDIER_DESERTER, 30);
 			result.Add(camp);
 
+			camp = new Camp();
 			camp.Name = "10";
 			camp.SectorId = 3;
 			camp.Counts.Add(ELITE_SOLDIER_DESERTER, 60);
@@ -206,48 +225,56 @@ namespace TheSettlersCalculator.Quests
 			#endregion
 
 			#region Sector 4
+			camp = new Camp();
 			camp.Name = "11";
 			camp.SectorId = 4;
 			camp.Counts.Add(CAVALRY_DESERTER, 90);
 			camp.Counts.Add(ELITE_SOLDIER_DESERTER, 90);
 			result.Add(camp);
 
+			camp = new Camp();
 			camp.Name = "12";
 			camp.SectorId = 4;
 			camp.Counts.Add(SOLDIER_DESERTER, 80);
 			camp.Counts.Add(CROSSBOW_DESERTER, 80);
 			result.Add(camp);
 
+			camp = new Camp();
 			camp.Name = "13";
 			camp.SectorId = 4;
 			camp.Counts.Add(SOLDIER_DESERTER, 110);
 			camp.Counts.Add(CANNONEER_DESERTER, 25);
 			result.Add(camp);
 
+			camp = new Camp();
 			camp.Name = "14";
 			camp.SectorId = 4;
 			camp.Counts.Add(LONGBOW_DESERTER, 50);
 			camp.Counts.Add(ELITE_SOLDIER_DESERTER, 100);
 			result.Add(camp);
 
+			camp = new Camp();
 			camp.Name = "15";
 			camp.SectorId = 4;
 			camp.Counts.Add(CAVALRY_DESERTER, 100);
 			camp.Counts.Add(CROSSBOW_DESERTER, 100);
 			result.Add(camp);
 
+			camp = new Camp();
 			camp.Name = "16";
 			camp.SectorId = 4;
 			camp.Counts.Add(SOLDIER_DESERTER, 100);
 			camp.Counts.Add(CROSSBOW_DESERTER, 75);
 			result.Add(camp);
 
+			camp = new Camp();
 			camp.Name = "17";
 			camp.SectorId = 4;
 			camp.Counts.Add(MILITIA_DESERTER, 100);
 			camp.Counts.Add(ELITE_SOLDIER_DESERTER, 90);
 			result.Add(camp);
 
+			camp = new Camp();
 			camp.Name = "18";
 			camp.SectorId = 4;
 			camp.Counts.Add(ELITE_SOLDIER_DESERTER, 50);

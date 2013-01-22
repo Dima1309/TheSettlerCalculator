@@ -53,12 +53,14 @@ namespace TheSettlersCalculator.Quests
 			camp.Counts.Add(GUNMAN, 50);
 			result.Add(camp);
 
+			camp = new Camp();
 			camp.Name = "2";
 			camp.SectorId = 1;
 			camp.Counts.Add(CALTROP, 50);
 			camp.Counts.Add(DECKSCRUBBER, 100);
 			result.Add(camp);
 
+			camp = new Camp();
 			camp.Name = "3";
 			camp.SectorId = 1;
 			camp.Counts.Add(CALTROP, 50);
@@ -70,6 +72,7 @@ namespace TheSettlersCalculator.Quests
 			#endregion
 
 			#region Sector 2
+			camp = new Camp();
 			camp.Name = "4";
 			camp.SectorId = 2;
 			camp.Counts.Add(CALTROP, 60);
@@ -77,6 +80,7 @@ namespace TheSettlersCalculator.Quests
 			camp.Counts.Add(KNIFETHROWER, 60);
 			result.Add(camp);
 
+			camp = new Camp();
 			camp.Name = "5";
 			camp.SectorId = 2;
 			camp.Counts.Add(CALTROP, 40);
@@ -84,6 +88,7 @@ namespace TheSettlersCalculator.Quests
 			camp.Counts.Add(GUNMAN, 40);
 			result.Add(camp);
 
+			camp = new Camp();
 			camp.Name = "6";
 			camp.SectorId = 2;
 			camp.Counts.Add(CALTROP, 80);
@@ -95,18 +100,21 @@ namespace TheSettlersCalculator.Quests
 			#endregion
 
 			#region Sector 3
+			camp = new Camp();
 			camp.Name = "W1";
 			camp.SectorId = 3;
 			camp.Counts.Add(CALTROP, 100);
 			camp.CampType = CampType.Ambush;
 			result.Add(camp);
 
+			camp = new Camp();
 			camp.Name = "7";
 			camp.SectorId = 3;
 			camp.Counts.Add(CALTROP, 90);
 			camp.Counts.Add(SABER_RATTLER, 90);
 			result.Add(camp);
 
+			camp = new Camp();
 			camp.Name = "8";
 			camp.SectorId = 3;
 			camp.Counts.Add(CALTROP, 30);
@@ -114,12 +122,14 @@ namespace TheSettlersCalculator.Quests
 			camp.Counts.Add(GUNMAN, 40);
 			result.Add(camp);
 
+			camp = new Camp();
 			camp.Name = "9";
 			camp.SectorId = 3;
 			camp.Counts.Add(CALTROP, 100);
 			camp.Counts.Add(SABER_RATTLER, 70);
 			result.Add(camp);
 
+			camp = new Camp();
 			camp.Name = "10";
 			camp.SectorId = 3;
 			camp.Counts.Add(SABER_RATTLER, 100);

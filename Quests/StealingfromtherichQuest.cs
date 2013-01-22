@@ -62,28 +62,33 @@ namespace TheSettlersCalculator.Quests
 			camp.Counts.Add(WOLF, 40);
 			result.Add(camp);
 
+			camp = new Camp();
 			camp.Name = "W2";
 			camp.SectorId = 1;
 			camp.Counts.Add(WOLF, 40);
 			result.Add(camp);
 
+			camp = new Camp();
 			camp.Name = "W3";
 			camp.SectorId = 1;
 			camp.Counts.Add(WOLF, 100);
 			result.Add(camp);
 
+			camp = new Camp();
 			camp.Name = "1";
 			camp.SectorId = 1;
 			camp.Counts.Add(RECRUIT_DESERTER, 30);
 			camp.Counts.Add(BOWMAN_DESERTER, 40);
 			result.Add(camp);
 
+			camp = new Camp();
 			camp.Name = "2";
 			camp.SectorId = 1;
 			camp.Counts.Add(RECRUIT_DESERTER, 40);
 			camp.Counts.Add(BOWMAN_DESERTER, 30);
 			result.Add(camp);
 
+			camp = new Camp();
 			camp.Name = "3";
 			camp.SectorId = 1;
 			camp.Counts.Add(RECRUIT_DESERTER, 85);
@@ -94,38 +99,45 @@ namespace TheSettlersCalculator.Quests
 			#endregion
 
 			#region Sector 2
+			camp = new Camp();
 			camp.Name = "W1";
 			camp.SectorId = 2;
 			camp.Counts.Add(WOLF, 40);
 			result.Add(camp);
 
+			camp = new Camp();
 			camp.Name = "W2";
 			camp.SectorId = 2;
 			camp.Counts.Add(WOLF, 100);
 			result.Add(camp);
 
+			camp = new Camp();
 			camp.Name = "W3";
 			camp.SectorId = 2;
 			camp.Counts.Add(WOLF, 120);
 			result.Add(camp);
 
+			camp = new Camp();
 			camp.Name = "W4";
 			camp.SectorId = 2;
 			camp.Counts.Add(WOLF, 20);
 			result.Add(camp);
 
+			camp = new Camp();
 			camp.Name = "1";
 			camp.SectorId = 2;
 			camp.Counts.Add(RECRUIT_DESERTER, 30);
 			camp.Counts.Add(BOWMAN_DESERTER, 40);
 			result.Add(camp);
 
+			camp = new Camp();
 			camp.Name = "2";
 			camp.SectorId = 2;
 			camp.Counts.Add(RECRUIT_DESERTER, 40);
 			camp.Counts.Add(BOWMAN_DESERTER, 30);
 			result.Add(camp);
 
+			camp = new Camp();
 			camp.Name = "3";
 			camp.SectorId = 2;
 			camp.Counts.Add(RECRUIT_DESERTER, 65);
@@ -136,23 +148,27 @@ namespace TheSettlersCalculator.Quests
 			#endregion
 
 			#region Sector 3
+			camp = new Camp();
 			camp.Name = "W5";
 			camp.SectorId = 3;
 			camp.Counts.Add(WOLF, 150);
 			result.Add(camp);
 
+			camp = new Camp();
 			camp.Name = "6";
 			camp.SectorId = 3;
 			camp.Counts.Add(LONGBOW_DESERTER, 60);
 			camp.Counts.Add(MILITIA_DESERTER, 20);
 			result.Add(camp);
 
+			camp = new Camp();
 			camp.Name = "7";
 			camp.SectorId = 3;
 			camp.Counts.Add(LONGBOW_DESERTER, 40);
 			camp.Counts.Add(MILITIA_DESERTER, 40);
 			result.Add(camp);
 
+			camp = new Camp();
 			camp.Name = "8";
 			camp.SectorId = 3;
 			camp.Counts.Add(LONGBOW_DESERTER, 40);
@@ -164,23 +180,27 @@ namespace TheSettlersCalculator.Quests
 			#endregion
 
 			#region Sector 4
+			camp = new Camp();
 			camp.Name = "W4";
 			camp.SectorId = 4;
 			camp.Counts.Add(WOLF, 120);
 			result.Add(camp);
 
+			camp = new Camp();
 			camp.Name = "6";
 			camp.SectorId = 4;
 			camp.Counts.Add(LONGBOW_DESERTER, 40);
 			camp.Counts.Add(MILITIA_DESERTER, 40);
 			result.Add(camp);
 
+			camp = new Camp();
 			camp.Name = "7";
 			camp.SectorId = 4;
 			camp.Counts.Add(LONGBOW_DESERTER, 20);
 			camp.Counts.Add(MILITIA_DESERTER, 60);
 			result.Add(camp);
 
+			camp = new Camp();
 			camp.Name = "8";
 			camp.SectorId = 4;
 			camp.Counts.Add(MILITIA_DESERTER, 40);
@@ -192,36 +212,43 @@ namespace TheSettlersCalculator.Quests
 			#endregion
 
 			#region Sector 5
+			camp = new Camp();
 			camp.Name = "W7";
 			camp.SectorId = 5;
 			camp.Counts.Add(WOLF, 140);
 			result.Add(camp);
 
+			camp = new Camp();
 			camp.Name = "W6";
 			camp.SectorId = 5;
 			camp.Counts.Add(WOLF, 160);
 			result.Add(camp);
 
+			camp = new Camp();
 			camp.Name = "9";
 			camp.SectorId = 5;
 			camp.Counts.Add(LONGBOW_DESERTER, 30);
 			result.Add(camp);
 
+			camp = new Camp();
 			camp.Name = "9";
 			camp.SectorId = 5;
 			camp.Counts.Add(LONGBOW_DESERTER, 30);
 			result.Add(camp);
 
+			camp = new Camp();
 			camp.Name = "10";
 			camp.SectorId = 5;
 			camp.Counts.Add(LONGBOW_DESERTER, 30);
 			result.Add(camp);
 
+			camp = new Camp();
 			camp.Name = "10";
 			camp.SectorId = 5;
 			camp.Counts.Add(LONGBOW_DESERTER, 30);
 			result.Add(camp);
 
+			camp = new Camp();
 			camp.Name = "11";
 			camp.SectorId = 5;
 			camp.Counts.Add(LONGBOW_DESERTER, 50);
@@ -230,6 +257,7 @@ namespace TheSettlersCalculator.Quests
 			camp.CampType = CampType.Boss;
 			result.Add(camp);
 
+			camp = new Camp();
 			camp.Name = "11";
 			camp.SectorId = 5;
 			camp.Counts.Add(LONGBOW_DESERTER, 40);
@@ -242,28 +270,33 @@ namespace TheSettlersCalculator.Quests
 			#endregion
 
 			#region Sector 6
+			camp = new Camp();
 			camp.Name = "W8";
 			camp.SectorId = 6;
 			camp.Counts.Add(WOLF, 40);
 			result.Add(camp);
 
+			camp = new Camp();
 			camp.Name = "W5";
 			camp.SectorId = 6;
 			camp.Counts.Add(WOLF, 150);
 			result.Add(camp);
 
+			camp = new Camp();
 			camp.Name = "4";
 			camp.SectorId = 6;
 			camp.Counts.Add(LONGBOW_DESERTER, 40);
 			camp.Counts.Add(MILITIA_DESERTER, 80);
 			result.Add(camp);
 
+			camp = new Camp();
 			camp.Name = "5";
 			camp.SectorId = 6;
 			camp.Counts.Add(LONGBOW_DESERTER, 80);
 			camp.Counts.Add(SOLDIER_DESERTER, 20);
 			result.Add(camp);
 
+			camp = new Camp();
 			camp.Name = "12";
 			camp.SectorId = 6;
 			camp.Counts.Add(SIR_ROBIN, 1);
@@ -276,31 +309,37 @@ namespace TheSettlersCalculator.Quests
 			#endregion
 
 			#region Sector 7
+			camp = new Camp();
 			camp.Name = "W7";
 			camp.SectorId = 7;
 			camp.Counts.Add(WOLF, 140);
 			result.Add(camp);
 
+			camp = new Camp();
 			camp.Name = "16";
 			camp.SectorId = 7;
 			camp.Counts.Add(LONGBOW_DESERTER, 15);
 			result.Add(camp);
 
+			camp = new Camp();
 			camp.Name = "16";
 			camp.SectorId = 7;
 			camp.Counts.Add(LONGBOW_DESERTER, 15);
 			result.Add(camp);
 
+			camp = new Camp();
 			camp.Name = "16";
 			camp.SectorId = 7;
 			camp.Counts.Add(LONGBOW_DESERTER, 15);
 			result.Add(camp);
 
+			camp = new Camp();
 			camp.Name = "16";
 			camp.SectorId = 7;
 			camp.Counts.Add(LONGBOW_DESERTER, 15);
 			result.Add(camp);
 
+			camp = new Camp();
 			camp.Name = "17";
 			camp.SectorId = 7;
 			camp.Counts.Add(LONGBOW_DESERTER, 50);

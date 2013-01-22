@@ -24,7 +24,7 @@ namespace TheSettlersCalculator.WpfTypes
 		private int m_playerWaveIndex = 0;
 		private int m_enemyWaveIndex = 0;
 		private readonly ObservableCollection<EnemyCamp> m_activeQuestCamps = new ObservableCollection<EnemyCamp>();
-		private readonly ObservableCollection<Quest> m_quests = new ObservableCollection<Quest>();
+		private readonly ObservableCollection<Quest> m_quests = new ObservableCollection<Quest>(TheSettlersCalculator.Quests.Quests.QuestList);
 		private BattleLosses m_totalLosses;
 		private readonly ObservableCollection<BattleLosses> m_waveLosses = new ObservableCollection<BattleLosses>();
 		private readonly double[] m_playerTowerBonus = new double[MAX_WAVES_COUNT];
@@ -45,8 +45,6 @@ namespace TheSettlersCalculator.WpfTypes
 				EnemyWaves[i] = new ObservableCollection<UnitSquad>();
 			}
 
-			DarkTemplareQuest quest = new DarkTemplareQuest();
-
 			for(int i = 0; i < MAX_WAVES_COUNT; i++)
 			{				
 				PlayerWaves[i].Clear();
@@ -58,9 +56,7 @@ namespace TheSettlersCalculator.WpfTypes
 				}
 			}
 
-			Quests.Add(quest);
-
-			ActiveQuest = quest;
+			ActiveQuest = Quests[0];
 		}
 		#endregion
 

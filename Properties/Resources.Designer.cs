@@ -223,6 +223,15 @@ namespace TheSettlersCalculator.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Игрок.
+        /// </summary>
+        public static string QUEST_PLAYER {
+            get {
+                return ResourceManager.GetString("QUEST_PLAYER", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Ревущий бык.
         /// </summary>
         public static string QUEST_RASENDER_BULLE {

@@ -52,18 +52,21 @@ namespace TheSettlersCalculator.Quests
 			camp.Counts.Add(KARL, 130);
 			result.Add(camp);
 
+			camp = new Camp();
 			camp.Name = "2";
 			camp.SectorId = 1;
 			camp.Counts.Add(VALKYRIE, 80);
 			camp.Counts.Add(KARL, 120);
 			result.Add(camp);
 
+			camp = new Camp();
 			camp.Name = "3";
 			camp.SectorId = 1;
 			camp.Counts.Add(VALKYRIE, 100);
 			camp.Counts.Add(KARL, 100);
 			result.Add(camp);
 
+			camp = new Camp();
 			camp.Name = "4";
 			camp.SectorId = 1;
 			camp.Counts.Add(VALKYRIE, 80);
@@ -74,23 +77,27 @@ namespace TheSettlersCalculator.Quests
 			#endregion
 
 			#region Sector 2
+			camp = new Camp();
 			camp.Name = "5";
 			camp.SectorId = 2;
 			camp.Counts.Add(VALKYRIE, 100);
 			camp.Counts.Add(HOUSECARL, 100);
 			result.Add(camp);
 
+			camp = new Camp();
 			camp.Name = "6";
 			camp.SectorId = 2;
 			camp.Counts.Add(VALKYRIE, 60);
 			camp.Counts.Add(HOUSECARL, 140);
 			result.Add(camp);
 
+			camp = new Camp();
 			camp.Name = "7";
 			camp.SectorId = 2;
 			camp.Counts.Add(HOUSECARL, 200);
 			result.Add(camp);
 
+			camp = new Camp();
 			camp.Name = "8";
 			camp.SectorId = 2;
 			camp.Counts.Add(HOUSECARL, 100);
@@ -101,30 +108,35 @@ namespace TheSettlersCalculator.Quests
 			#endregion
 
 			#region Sector 3
+			camp = new Camp();
 			camp.Name = "W1";
 			camp.SectorId = 3;
 			camp.Counts.Add(WOLF, 10);
 			camp.CampType = CampType.Ambush;
 			result.Add(camp);
 
+			camp = new Camp();
 			camp.Name = "9";
 			camp.SectorId = 3;
 			camp.Counts.Add(VALKYRIE, 70);
 			camp.Counts.Add(HOUSECARL, 130);
 			result.Add(camp);
 
+			camp = new Camp();
 			camp.Name = "10";
 			camp.SectorId = 3;
 			camp.Counts.Add(HOUSECARL, 100);
 			camp.Counts.Add(BERSERK, 90);
 			result.Add(camp);
 
+			camp = new Camp();
 			camp.Name = "11";
 			camp.SectorId = 3;
 			camp.Counts.Add(VALKYRIE, 70);
 			camp.Counts.Add(HOUSECARL, 130);
 			result.Add(camp);
 
+			camp = new Camp();
 			camp.Name = "12";
 			camp.SectorId = 3;
 			camp.Counts.Add(VALKYRIE, 90);
@@ -135,30 +147,35 @@ namespace TheSettlersCalculator.Quests
 			#endregion
 
 			#region Sector 4
+			camp = new Camp();
 			camp.Name = "13";
 			camp.SectorId = 4;
 			camp.Counts.Add(VALKYRIE, 110);
 			camp.Counts.Add(HOUSECARL, 90);
 			result.Add(camp);
 
+			camp = new Camp();
 			camp.Name = "14";
 			camp.SectorId = 4;
 			camp.Counts.Add(HOUSECARL, 120);
 			camp.Counts.Add(BERSERK, 80);
 			result.Add(camp);
 
+			camp = new Camp();
 			camp.Name = "15";
 			camp.SectorId = 4;
 			camp.Counts.Add(HOUSECARL, 100);
 			camp.Counts.Add(BERSERK, 100);
 			result.Add(camp);
 
+			camp = new Camp();
 			camp.Name = "16";
 			camp.SectorId = 4;
 			camp.Counts.Add(VALKYRIE, 100);
 			camp.Counts.Add(HOUSECARL, 100);
 			result.Add(camp);
 
+			camp = new Camp();
 			camp.Name = "17";
 			camp.SectorId = 4;
 			camp.Counts.Add(VALKYRIE, 90);
@@ -169,30 +186,35 @@ namespace TheSettlersCalculator.Quests
 			#endregion
 
 			#region Sector 5
+			camp = new Camp();
 			camp.Name = "18";
 			camp.SectorId = 5;
 			camp.Counts.Add(VALKYRIE, 50);
 			camp.Counts.Add(HOUSECARL, 150);
 			result.Add(camp);
 
+			camp = new Camp();
 			camp.Name = "19";
 			camp.SectorId = 5;
 			camp.Counts.Add(VALKYRIE, 40);
 			camp.Counts.Add(HOUSECARL, 160);
 			result.Add(camp);
 
+			camp = new Camp();
 			camp.Name = "20";
 			camp.SectorId = 5;
 			camp.Counts.Add(HOUSECARL, 100);
 			camp.Counts.Add(BERSERK, 100);
 			result.Add(camp);
 
+			camp = new Camp();
 			camp.Name = "21";
 			camp.SectorId = 5;
 			camp.Counts.Add(HOUSECARL, 130);
 			camp.Counts.Add(BERSERK, 70);
 			result.Add(camp);
 
+			camp = new Camp();
 			camp.Name = "22";
 			camp.SectorId = 5;
 			camp.Counts.Add(JOMVIKING, 120);

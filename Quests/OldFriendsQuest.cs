@@ -53,6 +53,7 @@ namespace TheSettlersCalculator.Quests
 			camp.Counts.Add(DARK_PRIEST, 50);
 			result.Add(camp);
 
+			camp = new Camp();
 			camp.Name = "2";
 			camp.SectorId = 1;
 			camp.Counts.Add(CULTIST, 40);
@@ -60,6 +61,7 @@ namespace TheSettlersCalculator.Quests
 			camp.Counts.Add(DARK_PRIEST, 40);
 			result.Add(camp);
 
+			camp = new Camp();
 			camp.Name = "3";
 			camp.SectorId = 1;
 			camp.Counts.Add(CULTIST, 80);
@@ -71,12 +73,14 @@ namespace TheSettlersCalculator.Quests
 			#endregion
 
 			#region Sector 2
+			camp = new Camp();
 			camp.Name = "4";
 			camp.SectorId = 2;
 			camp.Counts.Add(CULTIST, 100);
 			camp.Counts.Add(SHADOWSNEAKER, 50);
 			result.Add(camp);
 
+			camp = new Camp();
 			camp.Name = "5";
 			camp.SectorId = 2;
 			camp.Counts.Add(CULTIST, 70);
@@ -84,6 +88,7 @@ namespace TheSettlersCalculator.Quests
 			camp.Counts.Add(FIREDANCER, 10);
 			result.Add(camp);
 
+			camp = new Camp();
 			camp.Name = "6";
 			camp.SectorId = 2;
 			camp.Counts.Add(CULTIST, 100);
@@ -96,6 +101,7 @@ namespace TheSettlersCalculator.Quests
 			#endregion
 
 			#region Sector 3
+			camp = new Camp();
 			camp.Name = "7";
 			camp.SectorId = 3;
 			camp.Counts.Add(CULTIST, 100);
@@ -103,6 +109,7 @@ namespace TheSettlersCalculator.Quests
 			camp.Counts.Add(DANCING_DERVISH, 20);
 			result.Add(camp);
 
+			camp = new Camp();
 			camp.Name = "8";
 			camp.SectorId = 3;
 			camp.Counts.Add(CULTIST, 50);

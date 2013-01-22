@@ -527,7 +527,7 @@ namespace TheSettlersCalculator.Types
 			unit.AttackPriority = AttackPriority.AvantGarde;
 			unit.AttackOnArea = true;
 			unit.Experience = 200;
-			unit.Icon = ImageHelper.LoadPng("TheSettlersCalculator.Quests.Images.craze_cook.png");
+			unit.Icon = ImageHelper.LoadPng("TheSettlersCalculator.Quests.Images.crazy_cook.png");
 			s_units[CRAZY_COOK] = unit;
 
 			unit = new Unit();

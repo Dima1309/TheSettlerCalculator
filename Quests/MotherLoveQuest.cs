@@ -52,30 +52,35 @@ namespace TheSettlersCalculator.Quests
 			camp.CampType = CampType.Ambush;
 			result.Add(camp);
 
+			camp = new Camp();
 			camp.Name = "W2";
 			camp.SectorId = 1;
 			camp.Counts.Add(WOLF, 200);
 			camp.CampType = CampType.Ambush;
 			result.Add(camp);
 
+			camp = new Camp();
 			camp.Name = "W3";
 			camp.SectorId = 1;
 			camp.Counts.Add(CALTROP, 100);
 			camp.CampType = CampType.Ambush;
 			result.Add(camp);
 
+			camp = new Camp();
 			camp.Name = "1";
 			camp.SectorId = 1;
 			camp.Counts.Add(GUNMAN, 100);
 			camp.Counts.Add(PETTY_OFFICER_2ND_CLASS, 100);
 			result.Add(camp);
 
+			camp = new Camp();
 			camp.Name = "2";
 			camp.SectorId = 1;
 			camp.Counts.Add(CALTROP, 100);
 			camp.Counts.Add(PETTY_OFFICER_2ND_CLASS, 100);
 			result.Add(camp);
 
+			camp = new Camp();
 			camp.Name = "3";
 			camp.SectorId = 1;
 			camp.Counts.Add(WILD_MARY, 1);

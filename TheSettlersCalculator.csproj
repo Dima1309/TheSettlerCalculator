@@ -58,12 +58,29 @@
     <Compile Include="QuestMapWindow.xaml.cs">
       <DependentUpon>QuestMapWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Quests\BanditNestQuest.cs" />
+    <Compile Include="Quests\BountyHunterQuest.cs" />
     <Compile Include="Quests\DarkTemplareQuest.cs" />
+    <Compile Include="Quests\GunpowderQuest.cs" />
+    <Compile Include="Quests\HorsebackQuest.cs" />
     <Compile Include="Quests\IslandofthePiratesQuest.cs" />
+    <Compile Include="Quests\MainIsland.cs" />
+    <Compile Include="Quests\MotherLoveQuest.cs" />
+    <Compile Include="Quests\OldFriendsQuest.cs" />
+    <Compile Include="Quests\OutlawsQuest.cs" />
     <Compile Include="Quests\Quest.cs" />
     <Compile Include="Quests\Quests.cs" />
+    <Compile Include="Quests\RoaringBullQuest.cs" />
+    <Compile Include="Quests\SecludedExperimentsQuest.cs" />
+    <Compile Include="Quests\SonsoftheveldtQuest.cs" />
     <Compile Include="Quests\StealingfromtherichQuest.cs" />
+    <Compile Include="Quests\SurpriseAttackQuest.cs" />
+    <Compile Include="Quests\TheBlackKnightsQuest.cs" />
+    <Compile Include="Quests\TheDarkBrotherhoodQuest.cs" />
+    <Compile Include="Quests\TheNordsQuest.cs" />
     <Compile Include="Quests\TraitorsQuest.cs" />
+    <Compile Include="Quests\VictortheviciousQuest.cs" />
+    <Compile Include="Quests\WildMaryQuest.cs" />
     <Compile Include="Quests\WitchoftheSwampQuest.cs" />
     <Compile Include="Statistics\MultiWaveStatistics.cs" />
     <Compile Include="Statistics\Statistics.cs" />
@@ -309,6 +326,33 @@
     <EmbeddedResource Include="Price\Icons\water.png" />
     <EmbeddedResource Include="Price\Icons\wheat.png" />
     <EmbeddedResource Include="Price\Icons\wheel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Quests\Icons\Beutelschneider.png" />
+    <EmbeddedResource Include="Quests\Icons\Das_Banditennest.png" />
+    <EmbeddedResource Include="Quests\Icons\Die_dunkle_Bruderschaft.png" />
+    <EmbeddedResource Include="Quests\Icons\Die_Nordmanner.png" />
+    <EmbeddedResource Include="Quests\Icons\Die_schwarzen_Ritter.png" />
+    <EmbeddedResource Include="Quests\Icons\Die_Wilde_Waltraut.png" />
+    <EmbeddedResource Include="Quests\Icons\Einsame_Experimente.png" />
+    <EmbeddedResource Include="Quests\Icons\Insel_der_Freibeuter.png" />
+    <EmbeddedResource Include="Quests\Icons\Kopfgeldjager.png" />
+    <EmbeddedResource Include="Quests\Icons\Mutterliebe.png" />
+    <EmbeddedResource Include="Quests\Icons\Rasender_Bulle.png" />
+    <EmbeddedResource Include="Quests\Icons\Rauberbande.png" />
+    <EmbeddedResource Include="Quests\Icons\Sattelfest.png" />
+    <EmbeddedResource Include="Quests\Icons\Schiespulver.png" />
+    <EmbeddedResource Include="Quests\Icons\Sohne_der_Steppe.png" />
+    <EmbeddedResource Include="Quests\Icons\Sumpfhexe.png" />
+    <EmbeddedResource Include="Quests\Icons\Uberraschungsangriff.png" />
+    <EmbeddedResource Include="Quests\Icons\Verrater.png" />
+    <EmbeddedResource Include="Quests\Icons\Viktor_der_Verschlagene.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Quests\Icons\Alte_Bekannte.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Quests\Images\berserk.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

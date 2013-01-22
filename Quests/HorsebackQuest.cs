@@ -52,12 +52,14 @@ namespace TheSettlersCalculator.Quests
 			camp.Counts.Add(NOMAD, 70);
 			result.Add(camp);
 
+			camp = new Camp();
 			camp.Name = "2";
 			camp.SectorId = 1;
 			camp.Counts.Add(NOMAD, 40);
 			camp.Counts.Add(COMPOSITE_BOW, 40);
 			result.Add(camp);
 
+			camp = new Camp();
 			camp.Name = "4";
 			camp.SectorId = 1;
 			camp.Counts.Add(NOMAD, 90);
@@ -68,11 +70,13 @@ namespace TheSettlersCalculator.Quests
 			#endregion
 
 			#region Sector 2
+			camp = new Camp();
 			camp.Name = "3";
 			camp.SectorId = 2;
 			camp.Counts.Add(LANCE_RIDER, 60);
 			result.Add(camp);
 
+			camp = new Camp();
 			camp.Name = "5";
 			camp.SectorId = 2;
 			camp.Counts.Add(LANCE_RIDER, 80);
@@ -83,18 +87,21 @@ namespace TheSettlersCalculator.Quests
 			#endregion
 
 			#region Sector 3
+			camp = new Camp();
 			camp.Name = "6";
 			camp.SectorId = 3;
 			camp.Counts.Add(NOMAD, 30);
 			camp.Counts.Add(LANCE_RIDER, 70);
 			result.Add(camp);
 
+			camp = new Camp();
 			camp.Name = "7";
 			camp.SectorId = 3;
 			camp.Counts.Add(RIDING_AMAZONIAN, 30);
 			camp.Counts.Add(RIDING_BOWMAN, 40);
 			result.Add(camp);
 
+			camp = new Camp();
 			camp.Name = "8";
 			camp.SectorId = 3;
 			camp.Counts.Add(NOMAD, 60);
@@ -105,12 +112,14 @@ namespace TheSettlersCalculator.Quests
 			#endregion
 
 			#region Sector 4
+			camp = new Camp();
 			camp.Name = "9";
 			camp.SectorId = 4;
 			camp.Counts.Add(NOMAD, 50);
 			camp.Counts.Add(RIDING_AMAZONIAN, 10);
 			result.Add(camp);
 
+			camp = new Camp();
 			camp.Name = "10";
 			camp.SectorId = 4;
 			camp.Counts.Add(NOMAD, 70);
@@ -121,34 +130,40 @@ namespace TheSettlersCalculator.Quests
 			#endregion
 
 			#region Sector 5
+			camp = new Camp();
 			camp.Name = "11";
 			camp.SectorId = 5;
 			camp.Counts.Add(NOMAD, 40);
 			camp.Counts.Add(COMPOSITE_BOW, 40);
 			result.Add(camp);
 
+			camp = new Camp();
 			camp.Name = "12";
 			camp.SectorId = 5;
 			camp.Counts.Add(NOMAD, 40);
 			camp.Counts.Add(LANCE_RIDER, 40);
 			result.Add(camp);
 
+			camp = new Camp();
 			camp.Name = "13";
 			camp.SectorId = 5;
 			camp.Counts.Add(RIDING_AMAZONIAN, 40);
 			result.Add(camp);
 
+			camp = new Camp();
 			camp.Name = "14";
 			camp.SectorId = 5;
 			camp.Counts.Add(RIDING_BOWMAN, 40);
 			result.Add(camp);
 
+			camp = new Camp();
 			camp.Name = "15";
 			camp.SectorId = 5;
 			camp.Counts.Add(NOMAD, 30);
 			camp.Counts.Add(LANCE_RIDER, 30);
 			result.Add(camp);
 
+			camp = new Camp();
 			camp.Name = "16";
 			camp.SectorId = 5;
 			camp.Counts.Add(NOMAD, 60);
@@ -160,24 +175,28 @@ namespace TheSettlersCalculator.Quests
 			#endregion
 
 			#region Sector 6
+			camp = new Camp();
 			camp.Name = "17";
 			camp.SectorId = 6;
 			camp.Counts.Add(NOMAD, 70);
 			camp.Counts.Add(RIDING_AMAZONIAN, 40);
 			result.Add(camp);
 
+			camp = new Camp();
 			camp.Name = "18";
 			camp.SectorId = 6;
 			camp.Counts.Add(NOMAD, 70);
 			camp.Counts.Add(LANCE_RIDER, 40);
 			result.Add(camp);
 
+			camp = new Camp();
 			camp.Name = "19";
 			camp.SectorId = 6;
 			camp.Counts.Add(NOMAD, 70);
 			camp.Counts.Add(LANCE_RIDER, 40);
 			result.Add(camp);
 
+			camp = new Camp();
 			camp.Name = "20";
 			camp.SectorId = 6;
 			camp.Counts.Add(RIDING_AMAZONIAN, 90);

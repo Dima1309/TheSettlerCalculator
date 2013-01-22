@@ -1,4 +1,6 @@
-﻿namespace TheSettlersCalculator.Quests
+﻿using System;
+
+namespace TheSettlersCalculator.Quests
 {
 	internal static class Quests
 	{
@@ -10,7 +12,7 @@
 		public static Quest[] QuestList
 		{
 			get
-			{
+			{				
 				if (s_quests == null)
 				{
 					InitializeQuests();
@@ -26,28 +28,28 @@
 		{
 			s_quests = new Quest[]
 			           	{
-			           		new BanditNestQuest(),
-			           		new BountyHunterQuest(),
+							new BanditNestQuest(),
+							new BountyHunterQuest(),
 			           		new DarkTemplareQuest(),
-			           		new GunpowderQuest(),
-			           		new HorsebackQuest(),
-			           		new IslandofthePiratesQuest(),
-			           		new MainIsland(),
-			           		new MotherLoveQuest(),
-			           		new OldFriendsQuest(),
-			           		new OutlawsQuest(),
-			           		new RoaringBullQuest(),
-			           		new SecludedExperimentsQuest(),
-			           		new SonsoftheveldtQuest(),
-			           		new StealingfromtherichQuest(),
-			           		new SurpriseAttackQuest(),
-			           		new TheBlackKnightsQuest(),
-			           		new TheDarkBrotherhoodQuest(),
-			           		new TheNordsQuest(),
-			           		new TraitorsQuest(),
-			           		new VictortheviciousQuest(),
-			           		new WildMaryQuest(),
-			           		new WitchoftheSwampQuest()
+							new GunpowderQuest(),
+							new HorsebackQuest(),
+							new IslandofthePiratesQuest(),
+							new MainIsland(),
+							new MotherLoveQuest(),
+							new OldFriendsQuest(),
+							new OutlawsQuest(),
+							new RoaringBullQuest(),
+							new SecludedExperimentsQuest(),
+							new SonsoftheveldtQuest(),
+							new StealingfromtherichQuest(),
+							new SurpriseAttackQuest(),
+							new TheBlackKnightsQuest(),
+							new TheDarkBrotherhoodQuest(),
+							new TheNordsQuest(),
+							new TraitorsQuest(),
+							new VictortheviciousQuest(),
+							new WildMaryQuest(),
+							new WitchoftheSwampQuest()
 			           	};
 		}
 		#endregion

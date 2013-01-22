@@ -51,17 +51,20 @@ namespace TheSettlersCalculator.Quests
 			camp.Counts.Add(LONGBOW_DESERTER, 60);
 			result.Add(camp);
 
+			camp = new Camp();
 			camp.Name = "2";
 			camp.SectorId = 1;
 			camp.Counts.Add(MILITIA_DESERTER, 60);
 			camp.Counts.Add(CAVALRY_DESERTER, 60);
 			result.Add(camp);
 
+			camp = new Camp();
 			camp.Name = "3";
 			camp.SectorId = 1;
 			camp.Counts.Add(SOLDIER_DESERTER, 80);
 			result.Add(camp);
 
+			camp = new Camp();
 			camp.Name = "4";
 			camp.SectorId = 1;
 			camp.Counts.Add(SOLDIER_DESERTER, 40);
@@ -72,12 +75,14 @@ namespace TheSettlersCalculator.Quests
 			#endregion
 
 			#region Sector 2
+			camp = new Camp();
 			camp.Name = "5";
 			camp.SectorId = 2;
 			camp.Counts.Add(SOLDIER_DESERTER, 60);
 			camp.Counts.Add(LONGBOW_DESERTER, 60);
 			result.Add(camp);
 
+			camp = new Camp();
 			camp.Name = "6";
 			camp.SectorId = 2;
 			camp.Counts.Add(MILITIA_DESERTER, 40);
@@ -86,6 +91,7 @@ namespace TheSettlersCalculator.Quests
 			camp.Counts.Add(LONGBOW_DESERTER, 60);
 			result.Add(camp);
 
+			camp = new Camp();
 			camp.Name = "7";
 			camp.SectorId = 2;
 			camp.Counts.Add(MILITIA_DESERTER, 60);
@@ -93,6 +99,7 @@ namespace TheSettlersCalculator.Quests
 			camp.Counts.Add(SOLDIER_DESERTER, 60);
 			result.Add(camp);
 
+			camp = new Camp();
 			camp.Name = "8";
 			camp.SectorId = 2;
 			camp.Counts.Add(SOLDIER_DESERTER, 60);
@@ -103,18 +110,21 @@ namespace TheSettlersCalculator.Quests
 			#endregion
 
 			#region Sector 3
+			camp = new Camp();
 			camp.Name = "9";
 			camp.SectorId = 3;
 			camp.Counts.Add(CAVALRY_DESERTER, 50);
 			camp.Counts.Add(SOLDIER_DESERTER, 150);
 			result.Add(camp);
 
+			camp = new Camp();
 			camp.Name = "10";
 			camp.SectorId = 3;
 			camp.Counts.Add(SOLDIER_DESERTER, 100);
 			camp.Counts.Add(LONGBOW_DESERTER, 100);
 			result.Add(camp);
 
+			camp = new Camp();
 			camp.Name = "11";
 			camp.SectorId = 3;
 			camp.Counts.Add(CAVALRY_DESERTER, 60);

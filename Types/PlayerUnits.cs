@@ -15,7 +15,7 @@ namespace TheSettlersCalculator.Types
 		internal const int ARCHER = 5;
 		internal const int LONG_BOW_ARCHER = 6;
 		internal const int ARBALESTER = 7;
-		internal const int CANNONEER = 9;
+		internal const int CANNONEER = 8;
 		#endregion
 
 		#region Fields
