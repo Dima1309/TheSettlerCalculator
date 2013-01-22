@@ -61,11 +61,29 @@ namespace TheSettlersCalculator.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Убежище разбойников.
+        /// </summary>
+        public static string QUEST_BANDIT_NEST {
+            get {
+                return ResourceManager.GetString("QUEST_BANDIT_NEST", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Ограбление богатых.
         /// </summary>
         public static string QUEST_BEUTELSCHNEIDER {
             get {
                 return ResourceManager.GetString("QUEST_BEUTELSCHNEIDER", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Охотники за головами.
+        /// </summary>
+        public static string QUEST_BOUNTY_HUNTER {
+            get {
+                return ResourceManager.GetString("QUEST_BOUNTY_HUNTER", resourceCulture);
             }
         }
         
@@ -133,6 +151,15 @@ namespace TheSettlersCalculator.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Порох.
+        /// </summary>
+        public static string QUEST_GUNPOWDER {
+            get {
+                return ResourceManager.GetString("QUEST_GUNPOWDER", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to В седле.
         /// </summary>
         public static string QUEST_HORSEBACK {
@@ -156,6 +183,24 @@ namespace TheSettlersCalculator.Properties {
         public static string QUEST_ISLAND_OF_THE_PIRATES {
             get {
                 return ResourceManager.GetString("QUEST_ISLAND_OF_THE_PIRATES", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Главный остров.
+        /// </summary>
+        public static string QUEST_MAIN_ISLAND {
+            get {
+                return ResourceManager.GetString("QUEST_MAIN_ISLAND", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Материнская любовь.
+        /// </summary>
+        public static string QUEST_MOTHER_LOVE {
+            get {
+                return ResourceManager.GetString("QUEST_MOTHER_LOVE", resourceCulture);
             }
         }
         
@@ -196,6 +241,15 @@ namespace TheSettlersCalculator.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Ревущий бык.
+        /// </summary>
+        public static string QUEST_ROARING_BULL {
+            get {
+                return ResourceManager.GetString("QUEST_ROARING_BULL", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to В седле.
         /// </summary>
         public static string QUEST_SATTELFEST {
@@ -214,11 +268,29 @@ namespace TheSettlersCalculator.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Эксперименты в уединении.
+        /// </summary>
+        public static string QUEST_SECLUDED_EXPERIMENTS {
+            get {
+                return ResourceManager.GetString("QUEST_SECLUDED_EXPERIMENTS", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Сыны степей.
         /// </summary>
         public static string QUEST_SOHNE_DER_STEPPE {
             get {
                 return ResourceManager.GetString("QUEST_SOHNE_DER_STEPPE", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Сыны степей.
+        /// </summary>
+        public static string QUEST_SONS_OF_THE_VELDT {
+            get {
+                return ResourceManager.GetString("QUEST_SONS_OF_THE_VELDT", resourceCulture);
             }
         }
         
@@ -237,6 +309,42 @@ namespace TheSettlersCalculator.Properties {
         public static string QUEST_SUMPFHEXE {
             get {
                 return ResourceManager.GetString("QUEST_SUMPFHEXE", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Неожиданное нападение.
+        /// </summary>
+        public static string QUEST_SURPRISE_ATTACK {
+            get {
+                return ResourceManager.GetString("QUEST_SURPRISE_ATTACK", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Чёрные рыцари.
+        /// </summary>
+        public static string QUEST_THE_BLACK_KNIGHTS {
+            get {
+                return ResourceManager.GetString("QUEST_THE_BLACK_KNIGHTS", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Тёмное братство.
+        /// </summary>
+        public static string QUEST_THE_DARK_BROTHERHOOD {
+            get {
+                return ResourceManager.GetString("QUEST_THE_DARK_BROTHERHOOD", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Северяне.
+        /// </summary>
+        public static string QUEST_THE_NORDS {
+            get {
+                return ResourceManager.GetString("QUEST_THE_NORDS", resourceCulture);
             }
         }
         
@@ -270,9 +378,27 @@ namespace TheSettlersCalculator.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Злобный Виктор.
         /// </summary>
+        public static string QUEST_VICTOR_THE_VICIOUS {
+            get {
+                return ResourceManager.GetString("QUEST_VICTOR_THE_VICIOUS", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Злобный Виктор.
+        /// </summary>
         public static string QUEST_VIKTOR_DER_VERSCHLAGENE {
             get {
                 return ResourceManager.GetString("QUEST_VIKTOR_DER_VERSCHLAGENE", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Дикая Мери.
+        /// </summary>
+        public static string QUEST_WILD_MARY {
+            get {
+                return ResourceManager.GetString("QUEST_WILD_MARY", resourceCulture);
             }
         }
         

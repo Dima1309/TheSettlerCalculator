@@ -117,8 +117,14 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="QUEST_BANDIT_NEST" xml:space="preserve">
+    <value>Убежище разбойников</value>
+  </data>
   <data name="QUEST_BEUTELSCHNEIDER" xml:space="preserve">
     <value>Ограбление богатых</value>
+  </data>
+  <data name="QUEST_BOUNTY_HUNTER" xml:space="preserve">
+    <value>Охотники за головами</value>
   </data>
   <data name="QUEST_DAS_BANDITENNEST" xml:space="preserve">
     <value>Убежище разбойников</value>
@@ -141,6 +147,9 @@
   <data name="QUEST_EINSAME_EXPERIMENTE" xml:space="preserve">
     <value>Эксперименты в уединении</value>
   </data>
+  <data name="QUEST_GUNPOWDER" xml:space="preserve">
+    <value>Порох</value>
+  </data>
   <data name="QUEST_HORSEBACK" xml:space="preserve">
     <value>В седле</value>
   </data>
@@ -149,6 +158,12 @@
   </data>
   <data name="QUEST_ISLAND_OF_THE_PIRATES" xml:space="preserve">
     <value>Остров пиратов</value>
+  </data>
+  <data name="QUEST_MAIN_ISLAND" xml:space="preserve">
+    <value>Главный остров</value>
+  </data>
+  <data name="QUEST_MOTHER_LOVE" xml:space="preserve">
+    <value>Материнская любовь</value>
   </data>
   <data name="QUEST_OLD_FRIENDS" xml:space="preserve">
     <value>Старые друзья</value>
@@ -162,13 +177,22 @@
   <data name="QUEST_RAUBERBANDE" xml:space="preserve">
     <value>Преступники</value>
   </data>
+  <data name="QUEST_ROARING_BULL" xml:space="preserve">
+    <value>Ревущий бык</value>
+  </data>
   <data name="QUEST_SATTELFEST" xml:space="preserve">
     <value>В седле</value>
   </data>
   <data name="QUEST_SCHIESPULVER" xml:space="preserve">
     <value>Порох</value>
   </data>
+  <data name="QUEST_SECLUDED_EXPERIMENTS" xml:space="preserve">
+    <value>Эксперименты в уединении</value>
+  </data>
   <data name="QUEST_SOHNE_DER_STEPPE" xml:space="preserve">
+    <value>Сыны степей</value>
+  </data>
+  <data name="QUEST_SONS_OF_THE_VELDT" xml:space="preserve">
     <value>Сыны степей</value>
   </data>
   <data name="QUEST_STEALING_FROM_THE_RICH" xml:space="preserve">
@@ -176,6 +200,18 @@
   </data>
   <data name="QUEST_SUMPFHEXE" xml:space="preserve">
     <value>Болотная ведьма</value>
+  </data>
+  <data name="QUEST_SURPRISE_ATTACK" xml:space="preserve">
+    <value>Неожиданное нападение</value>
+  </data>
+  <data name="QUEST_THE_BLACK_KNIGHTS" xml:space="preserve">
+    <value>Чёрные рыцари</value>
+  </data>
+  <data name="QUEST_THE_DARK_BROTHERHOOD" xml:space="preserve">
+    <value>Тёмное братство</value>
+  </data>
+  <data name="QUEST_THE_NORDS" xml:space="preserve">
+    <value>Северяне</value>
   </data>
   <data name="QUEST_TRAITORS" xml:space="preserve">
     <value>Предатели</value>
@@ -186,8 +222,14 @@
   <data name="QUEST_VERRATER" xml:space="preserve">
     <value>Предатели</value>
   </data>
+  <data name="QUEST_VICTOR_THE_VICIOUS" xml:space="preserve">
+    <value>Злобный Виктор</value>
+  </data>
   <data name="QUEST_VIKTOR_DER_VERSCHLAGENE" xml:space="preserve">
     <value>Злобный Виктор</value>
+  </data>
+  <data name="QUEST_WILD_MARY" xml:space="preserve">
+    <value>Дикая Мери</value>
   </data>
   <data name="QUEST_WITCH_OF_THE_SWAMP" xml:space="preserve">
     <value>Болотная ведьма</value>
