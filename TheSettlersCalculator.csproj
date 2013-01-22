@@ -51,8 +51,11 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Functions\IFunction.cs" />
+    <Compile Include="Functions\PriceFunction.cs" />
     <Compile Include="Helper\ImageHelper.cs" />
     <Compile Include="Price\Price.cs" />
+    <Compile Include="Price\ProductEnum.cs" />
     <Compile Include="Price\Product.cs" />
     <Compile Include="Price\ProductType.cs" />
     <Compile Include="QuestMapWindow.xaml.cs">
@@ -68,6 +71,7 @@
     <Compile Include="Quests\MotherLoveQuest.cs" />
     <Compile Include="Quests\OldFriendsQuest.cs" />
     <Compile Include="Quests\OutlawsQuest.cs" />
+    <Compile Include="Quests\PlayerQuest.cs" />
     <Compile Include="Quests\Quest.cs" />
     <Compile Include="Quests\Quests.cs" />
     <Compile Include="Quests\RoaringBullQuest.cs" />
