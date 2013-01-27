@@ -8,6 +8,7 @@ namespace TheSettlersCalculator.Types
 	{
 		#region Fields
 		private readonly BattleSide[] m_sides;
+		private int m_winBattleTime = (int) CampWinTime.Normal;
 		#endregion
 
 		#region Constructor
@@ -122,6 +123,12 @@ namespace TheSettlersCalculator.Types
 		internal BattleSide[] Sides
 		{
 			get { return m_sides; }
+		}
+
+		public int WinBattleTime
+		{
+			get { return m_winBattleTime; }
+			set { m_winBattleTime = value; }
 		}
 		#endregion
 

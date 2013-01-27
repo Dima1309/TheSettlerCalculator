@@ -18,6 +18,7 @@ namespace TheSettlersCalculator.Types
 		private int m_experience;
 		private int m_productionTime;
 		private BitmapSource m_icon;
+		private LossesProduct[] m_lossesProduct;
 		#endregion
 
 		#region Properties
@@ -97,6 +98,12 @@ namespace TheSettlersCalculator.Types
 		{
 			get { return m_productionTime; }
 			set { m_productionTime = value; }
+		}
+
+		public LossesProduct[] LossesProduct
+		{
+			get { return m_lossesProduct; }
+			internal set { m_lossesProduct = value; }
 		}
 		#endregion
 	}

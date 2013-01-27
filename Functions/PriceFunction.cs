@@ -1,4 +1,7 @@
 ﻿using System;
+using System.Collections.Generic;
+using TheSettlersCalculator.Price;
+using TheSettlersCalculator.Statistics;
 using TheSettlersCalculator.Types;
 
 namespace TheSettlersCalculator.Functions
@@ -17,15 +20,82 @@ namespace TheSettlersCalculator.Functions
 		#endregion
 
 		#region Methods
+		public double Evaluate(MultiWaveStatistics statistics)
+		{
+			throw new NotImplementedException();
+		}
+
 		public double Evaluate(Statistics.Statistics statistics)
 		{
 			//стоимость максимальных потерь + вероятность поражения (сумма(ср урон * общее здоровье))
-			double calculatePrice = CalculatePrice(statistics, statistics);
+			double calculatePrice = CalculatePrice(statistics);
 			//Console.Write(calculatePrice);
 			//Console.Write(" {0}/{1} = ", statistics.WinCount, statistics.Count);
 			return calculatePrice +
 				   (1 - statistics.WinCount / statistics.Count) * 1000000;
 		}
+
+		internal List<LossesProduct> CalculateLosses(IList<Unit> units, short[] losses)
+		{
+			SortedDictionary<ProductEnum, double> lossesPrice = new SortedDictionary<ProductEnum, double>();
+			for(int i = 0; i < losses.Length; i++)
+			{
+				if (losses[i] == 0 || units[i].LossesProduct == null)
+				{
+					continue;
+				}
+
+				foreach(LossesProduct product in units[i].LossesProduct)
+				{
+					if (!lossesPrice.ContainsKey(product.Product.Index))
+					{
+						lossesPrice[product.Product.Index] = 0;
+					}
+
+					lossesPrice[product.Product.Index] += product.Count * losses[i];
+				}
+			}
+
+			List<LossesProduct> result = new List<LossesProduct>(lossesPrice.Count);
+			foreach(KeyValuePair<ProductEnum, double> pair in lossesPrice)
+			{
+				result.Add(new LossesProduct(pair.Key, pair.Value));
+			}
+
+			return result;
+		}
+
+		internal List<LossesProduct> CalculateLosses(IList<Unit> units, double[] losses)
+		{
+			SortedDictionary<ProductEnum, double> lossesPrice = new SortedDictionary<ProductEnum, double>();
+			for(int i = 0; i < losses.Length; i++)
+			{
+				if (losses[i] == 0 || units[i].LossesProduct == null)
+				{
+					continue;
+				}
+
+				foreach(LossesProduct product in units[i].LossesProduct)
+				{
+					if (!lossesPrice.ContainsKey(product.Product.Index))
+					{
+						lossesPrice[product.Product.Index] = 0;
+					}
+
+					lossesPrice[product.Product.Index] += product.Count * losses[i];
+				}
+			}
+
+			List<LossesProduct> result = new List<LossesProduct>(lossesPrice.Count);
+			foreach(KeyValuePair<ProductEnum, double> pair in lossesPrice)
+			{
+				result.Add(new LossesProduct(pair.Key, pair.Value));
+			}
+
+			return result;
+		}
+
+		private 
 
 		//private static double CalculateSurviveEnemyPrice(Statistics.Statistics statistics)
 		//{
@@ -51,7 +121,7 @@ namespace TheSettlersCalculator.Functions
 		//    return surviveEnemyPrice;
 		//}
 
-		private static double CalculatePrice( Statistics.Statistics statistics)
+		private static double CalculatePrice(Statistics.Statistics statistics)
 		{
 			double result = 0;
 			
@@ -59,44 +129,11 @@ namespace TheSettlersCalculator.Functions
 			{
 				if (statistics.AvgAttackerLosses[i] > 0)
 				{
-					result += statistics.AvgAttackerLosses[i] * CalculatePlayerLossesPrice(statistics.Battle.Units[i]);
+					//result += statistics.AvgAttackerLosses[i] * CalculatePlayerLossesPrice(statistics.Battle.Units[i]);
 				}
 			}
 
 			return result;
-		}
-
-		private static double CalculatePlayerLossesPrice(Unit unit)
-		{
-			for(int i = 0; i < PlayerUnits.Units.Length; i++)
-			{
-				if (string.Equals(PlayerUnits.Units[i].Name, unit.Name, StringComparison.Ordinal))
-				{
-					//switch(i)
-					//{
-					//    case PlayerUnits.RECRUIT:
-					//        return Prices.Settler + 5 * Prices.Beer + 10 * Prices.BronzeSwords;							
-					//    case PlayerUnits.MILITIAMAN:
-					//        return Prices.Settler + 10 * Prices.Beer + 10 * Prices.IronSwords;
-					//    case PlayerUnits.SOLDIER:
-					//        return Prices.Settler + 15 * Prices.Beer + 10 * Prices.SteelSwords;
-					//    case PlayerUnits.ELITE_SOLDIER:
-					//        return Prices.Settler + 50 * Prices.Beer + 10 * Prices.DamascusSwords;
-					//    case PlayerUnits.CAVALRY:
-					//        return Prices.Settler + 30 * Prices.Beer + 40 * Prices.Horses;
-					//    case PlayerUnits.ARCHER:
-					//        return Prices.Settler + 10 * Prices.Beer + 10 * Prices.Bow;
-					//    case PlayerUnits.LONG_BOW_ARCHER:
-					//        return Prices.Settler + 20 * Prices.Beer + 10 * Prices.LongBow;
-					//    case PlayerUnits.ARBALESTER:
-					//        return Prices.Settler + 50 * Prices.Beer + 10 * Prices.Crossbow;
-					//    case PlayerUnits.CANNONEER:
-					//        return Prices.Settler + 50 * Prices.Beer + 10 * Prices.Cannons;
-					//}
-				}
-			}
-
-			return 0;
 		}
 		#endregion
 	}

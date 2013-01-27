@@ -2,7 +2,7 @@
 {
 	interface IFunction
 	{
-		double Evaluate(Statistics.MultiWaveStatistics battle);
-		double Evaluate(Statistics.Statistics battle);
+		double Evaluate(Statistics.MultiWaveStatistics statistics);
+		double Evaluate(Statistics.Statistics statistics);
 	}
 }

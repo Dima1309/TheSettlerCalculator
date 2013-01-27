@@ -104,7 +104,7 @@ namespace TheSettlersCalculator.Price
 
 		private static void AddProduct(ProductEnum index, string name, ProductType productType, double cost, string imagePath)
 		{
-			s_products.Add(index, new Product(name, productType, cost, imagePath));
+			s_products.Add(index, new Product(index, name, productType, cost, imagePath));
 		}
 		#endregion
 	}

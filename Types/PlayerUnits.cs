@@ -1,4 +1,5 @@
 ﻿using TheSettlersCalculator.Helper;
+using TheSettlersCalculator.Price;
 using TheSettlersCalculator.Properties;
 
 namespace TheSettlersCalculator.Types
@@ -69,6 +70,11 @@ namespace TheSettlersCalculator.Types
 			unit.Experience = 2;
 			unit.Icon = ImageHelper.LoadPng("TheSettlersCalculator.Quests.Images.recruit.png");
 			unit.ProductionTime = 3 * 60;
+			unit.LossesProduct = new LossesProduct[]
+			                     	{
+			                     		new LossesProduct(ProductEnum.RESOURCE_BREW, 5),
+			                     		new LossesProduct(ProductEnum.RESOURCE_BRONZE_SWORD, 10)
+			                     	};
 			s_units[RECRUIT] = unit;
 
 			unit = new Unit();
@@ -81,6 +87,11 @@ namespace TheSettlersCalculator.Types
 			unit.Experience = 9;
 			unit.Icon = ImageHelper.LoadPng("TheSettlersCalculator.Quests.Images.militia.png");
 			unit.ProductionTime = 8 * 60;
+			unit.LossesProduct = new LossesProduct[]
+			                     	{
+			                     		new LossesProduct(ProductEnum.RESOURCE_BREW, 10),
+			                     		new LossesProduct(ProductEnum.RESOURCE_IRON_SWORD, 10)
+			                     	};
 			s_units[MILITIAMAN] = unit;
 
 			unit = new Unit();
@@ -93,6 +104,11 @@ namespace TheSettlersCalculator.Types
 			unit.Experience = 10;
 			unit.Icon = ImageHelper.LoadPng("TheSettlersCalculator.Quests.Images.soldier.png");
 			unit.ProductionTime = 12 * 60;
+			unit.LossesProduct = new LossesProduct[]
+			                     	{
+			                     		new LossesProduct(ProductEnum.RESOURCE_BREW, 15),
+			                     		new LossesProduct(ProductEnum.RESOURCE_STEEL_SWORD, 10)
+			                     	};
 			s_units[SOLDIER] = unit;
 
 			unit = new Unit();
@@ -105,6 +121,12 @@ namespace TheSettlersCalculator.Types
 			unit.Experience = 20;
 			unit.Icon = ImageHelper.LoadPng("TheSettlersCalculator.Quests.Images.elitesoldier.png");
 			unit.ProductionTime = 32 * 60;
+			unit.LossesProduct = new LossesProduct[]
+			                     	{
+			                     		new LossesProduct(ProductEnum.RESOURCE_BREW, 50),
+			                     		new LossesProduct(ProductEnum.RESOURCE_DAMASCENE_SWORD, 10)
+			                     	};
+
 			s_units[ELITE_SOLDIER] = unit;
 
 			unit = new Unit();
@@ -118,6 +140,11 @@ namespace TheSettlersCalculator.Types
 			unit.AttackWeaknessTarget = true;
 			unit.Icon = ImageHelper.LoadPng("TheSettlersCalculator.Quests.Images.cavalry.png");
 			unit.ProductionTime = 18 * 60;
+			unit.LossesProduct = new LossesProduct[]
+			                     	{
+			                     		new LossesProduct(ProductEnum.RESOURCE_BREW, 30),
+			                     		new LossesProduct(ProductEnum.RESOURCE_HORSE, 40)
+			                     	};
 			s_units[CAVALRY] = unit;
 
 			unit = new Unit();
@@ -131,6 +158,11 @@ namespace TheSettlersCalculator.Types
 			unit.TowerBonus = true;
 			unit.Icon = ImageHelper.LoadPng("TheSettlersCalculator.Quests.Images.bowman.png");
 			unit.ProductionTime = 4 * 60;
+			unit.LossesProduct = new LossesProduct[]
+			                     	{
+			                     		new LossesProduct(ProductEnum.RESOURCE_BREW, 10),
+			                     		new LossesProduct(ProductEnum.RESOURCE_BOW, 10)
+			                     	};
 			s_units[ARCHER] = unit;
 
 			unit = new Unit();
@@ -144,6 +176,11 @@ namespace TheSettlersCalculator.Types
 			unit.TowerBonus = true;
 			unit.Icon = ImageHelper.LoadPng("TheSettlersCalculator.Quests.Images.longbowman.png");
 			unit.ProductionTime = 8 * 60;
+			unit.LossesProduct = new LossesProduct[]
+			                     	{
+			                     		new LossesProduct(ProductEnum.RESOURCE_BREW, 20),
+			                     		new LossesProduct(ProductEnum.RESOURCE_LONGBOW, 10)
+			                     	};
 			s_units[LONG_BOW_ARCHER] = unit;
 
 			unit = new Unit();
@@ -157,6 +194,11 @@ namespace TheSettlersCalculator.Types
 			unit.TowerBonus = true;			
 			unit.Icon = ImageHelper.LoadPng("TheSettlersCalculator.Quests.Images.crossbowman.png");
 			unit.ProductionTime = 20 * 60;
+			unit.LossesProduct = new LossesProduct[]
+			                     	{
+			                     		new LossesProduct(ProductEnum.RESOURCE_BREW, 50),
+			                     		new LossesProduct(ProductEnum.RESOURCE_CROSSBOW, 10)
+			                     	};
 			s_units[ARBALESTER] = unit;
 
 			unit = new Unit();
@@ -171,6 +213,11 @@ namespace TheSettlersCalculator.Types
 			unit.IgnoreTowerBonus = 100;
 			unit.Icon = ImageHelper.LoadPng("TheSettlersCalculator.Quests.Images.cannoneer.png");
 			unit.ProductionTime = 30 * 60;
+			unit.LossesProduct = new LossesProduct[]
+			                     	{
+			                     		new LossesProduct(ProductEnum.RESOURCE_BREW, 50),
+			                     		new LossesProduct(ProductEnum.RESOURCE_CANNON, 10)
+			                     	};
 			s_units[CANNONEER] = unit;
 		}
 	}

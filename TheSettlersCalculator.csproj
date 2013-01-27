@@ -51,7 +51,9 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Functions\BattleTimeFunction.cs" />
     <Compile Include="Functions\IFunction.cs" />
+    <Compile Include="Functions\LossesRecoveryTimeFunction.cs" />
     <Compile Include="Functions\PriceFunction.cs" />
     <Compile Include="Helper\ImageHelper.cs" />
     <Compile Include="Price\Price.cs" />
@@ -98,6 +100,8 @@
     <Compile Include="Types\BattleSideType.cs" />
     <Compile Include="Types\CampWinTime.cs" />
     <Compile Include="Types\EnemyUnits.cs" />
+    <Compile Include="Types\LossesPrice.cs" />
+    <Compile Include="Types\LossesProduct.cs" />
     <Compile Include="Types\MultiWaveBattleCompleteHandler.cs" />
     <Compile Include="Types\MultiWaveBattleWaveCompleteHandler.cs" />
     <Compile Include="Types\MultiWaveBattle.cs" />

@@ -6,6 +6,7 @@ namespace TheSettlersCalculator.Price
 	public class Product
 	{
 		#region Fields
+		private ProductEnum m_index;
 		private string m_name;
 		private ProductType m_productType;
 		private double m_cost;
@@ -14,8 +15,9 @@ namespace TheSettlersCalculator.Price
 		#endregion
 
 		#region Constructor
-		internal Product(string name, ProductType productType, double cost, string iconSource)
+		internal Product(ProductEnum index, string name, ProductType productType, double cost, string iconSource)
 		{
+			m_index = index;
 			m_name = name;
 			m_productType = productType;
 			m_cost = cost;
@@ -59,6 +61,11 @@ namespace TheSettlersCalculator.Price
 		{
 			get { return m_iconSource; }
 			set { m_iconSource = value; }
+		}
+
+		public ProductEnum Index
+		{
+			get { return m_index; }
 		}
 		#endregion
 	}
