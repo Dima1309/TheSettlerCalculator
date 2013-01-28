@@ -32,6 +32,14 @@ namespace TheSettlersCalculator.Types
 			Sides[(int)BattleSideType.Enemy] = new BattleSide(result.Key, result.Value, enemyGeneral);
 		}
 
+		internal Battle(Unit[] units, bool general, Unit[] enemyUnits, bool enemyGeneral)
+		{
+			m_sides = new BattleSide[2];
+			Sides[(int)BattleSideType.Player] = new BattleSide(units, new short[units.Length], general);
+
+			Sides[(int)BattleSideType.Enemy] = new BattleSide(enemyUnits, new short[enemyUnits.Length], enemyGeneral);
+		}
+
 		private static KeyValuePair<Unit[], short[]> InitializeUnits(IList<UnitSquad> unitSquads)
 		{
 			Unit[] units = new Unit[unitSquads.Count];

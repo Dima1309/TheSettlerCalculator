@@ -352,12 +352,16 @@ namespace TheSettlersCalculator.WpfTypes
 			battle.OnBattleComplete -= simulation.MultiWaveBattleCompleteHandler;
 			battle.OnWaveComplete -= simulation.MultiWaveBattleWaveCompleteHandler;
 
+			statistics.CalculateLossesTime();
+			statistics.CalculatePrices();
+			statistics.CallculateBattleTime();
+
 			m_totalLosses = GenerateBattleLosses(statistics.TotalStatistics, battle);
 
 			m_waveLosses.Clear();
 			foreach(KeyValuePair<WaveKey, Statistics.Statistics> pair in statistics.Statistics)
 			{
-				BattleLosses waveLosses = GenerateBattleLosses(pair.Value, battle);
+				BattleLosses waveLosses = GenerateBattleLosses(pair.Value, pair.Value.Battle);
 				waveLosses.PlayerWaveIndex = pair.Key.AttackerWave + 1;
 				waveLosses.EnemyWaveIndex = pair.Key.DefenderWave + 1;
 				m_waveLosses.Add(waveLosses);
@@ -376,9 +380,19 @@ namespace TheSettlersCalculator.WpfTypes
 
 		private static BattleLosses GenerateBattleLosses(Statistics.Statistics statistics, MultiWaveBattle battle)
 		{
+			return GenerateBattleLosses(statistics, battle.Units, battle.EnemyUnits);
+		}
+
+		private static BattleLosses GenerateBattleLosses(Statistics.Statistics statistics, Battle battle)
+		{
+			return GenerateBattleLosses(statistics, battle.Units, battle.EnemyUnits);
+		}
+
+		private static BattleLosses GenerateBattleLosses(Statistics.Statistics statistics, IList<Unit> units, IList<Unit> enemyUnits)
+		{
 			if (statistics.MinAttackerLosses == null || statistics.MinDefenderLosses == null)
 			{
-				return new BattleLosses(new List<Losses>(), new List<Losses>());
+				return new BattleLosses(new List<Losses>(), new List<Losses>(), null);
 			}
 
 			List<Losses> playerLosses = new List<Losses>(statistics.MinAttackerLosses.Length);
@@ -388,7 +402,7 @@ namespace TheSettlersCalculator.WpfTypes
 				if (statistics.MaxAttackerLosses[i] > 0)
 				{
 					playerLosses.Add(new Losses(
-						battle.Units[i],
+						units[i],
 						statistics.MinAttackerLosses[i],
 						statistics.AvgAttackerLosses[i],
 						statistics.MaxAttackerLosses[i]));
@@ -400,14 +414,14 @@ namespace TheSettlersCalculator.WpfTypes
 				if (statistics.MaxDefenderLosses[i] > 0)
 				{
 					enemyLosses.Add(new Losses(
-						battle.EnemyUnits[i],
+						enemyUnits[i],
 						statistics.MinDefenderLosses[i],
 						statistics.AvgDefenderLosses[i],
 						statistics.MaxDefenderLosses[i]));
 				}
 			}
 
-			return new BattleLosses(playerLosses, enemyLosses);
+			return new BattleLosses(playerLosses, enemyLosses, statistics);
 		}
 
 		private void UpdateUserUnitCount(object sender, PropertyChangedEventArgs e)

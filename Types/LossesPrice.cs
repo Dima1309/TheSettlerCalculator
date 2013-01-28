@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using TheSettlersCalculator.Price;
 
 namespace TheSettlersCalculator.Types
 {
@@ -6,26 +7,28 @@ namespace TheSettlersCalculator.Types
 	{
 		#region Fields
 		private readonly List<LossesProduct> m_products;
-		private double m_coinsLosses;
+		private LossesProduct m_total;
 		#endregion
 
 		#region Constructor
 		internal LossesPrice(List<LossesProduct> products)
 		{
 			m_products = products;
-			m_coinsLosses = 0;
+			double coinsLosses = 0;
 			foreach(LossesProduct lossesProduct in products)
 			{
-				m_coinsLosses += lossesProduct.Product.Cost * lossesProduct.Count / 1000;
+				coinsLosses += lossesProduct.Product.Cost * lossesProduct.Count / 1000;
 			}
+
+			m_total = new LossesProduct(ProductEnum.RESOURCE_COINS, coinsLosses);
 		}
 		#endregion
 
 		#region Properties
-		public double CoinsLosses
+		public LossesProduct Total
 		{
-			get { return m_coinsLosses; }
-			set { m_coinsLosses = value; }
+			get { return m_total; }
+			set { m_total = value; }
 		}
 
 		public List<LossesProduct> Products

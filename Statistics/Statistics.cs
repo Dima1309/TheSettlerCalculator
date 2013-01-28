@@ -382,6 +382,7 @@ namespace TheSettlersCalculator.Statistics
 
 			if (m_count == 0)
 			{
+				statistics.CalculateBattleTime();
 				m_avgRounds = statistics.m_avgRounds;
 				m_avgAttackerLosses = statistics.m_avgAttackerLosses;
 				m_avgDefenderLosses = statistics.m_avgDefenderLosses;
@@ -389,6 +390,7 @@ namespace TheSettlersCalculator.Statistics
 			}
 			else
 			{
+				statistics.CalculateBattleTime();
 				double currentStatsKoef = (double) m_count / (m_count + statistics.m_count);
 				double newStatsKoef = (double) statistics.m_count / (m_count + statistics.m_count);
 

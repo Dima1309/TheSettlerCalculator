@@ -95,8 +95,6 @@ namespace TheSettlersCalculator.Functions
 			return result;
 		}
 
-		private 
-
 		//private static double CalculateSurviveEnemyPrice(Statistics.Statistics statistics)
 		//{
 		//    double surviveEnemyPrice = 0;

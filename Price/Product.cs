@@ -6,7 +6,7 @@ namespace TheSettlersCalculator.Price
 	public class Product
 	{
 		#region Fields
-		private ProductEnum m_index;
+		private readonly ProductEnum m_index;
 		private string m_name;
 		private ProductType m_productType;
 		private double m_cost;
@@ -50,7 +50,7 @@ namespace TheSettlersCalculator.Price
 			{
 				if (m_icon == null && m_iconSource != null)
 				{
-					m_icon = ImageHelper.LoadPng("TheSettlersCalculator.Price.Icons" + m_iconSource +"png");
+					m_icon = ImageHelper.LoadPng("TheSettlersCalculator.Price.Icons." + m_iconSource +".png");
 				}
 
 				return m_icon;

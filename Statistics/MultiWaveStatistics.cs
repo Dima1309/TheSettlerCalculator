@@ -11,12 +11,14 @@ namespace TheSettlersCalculator.Statistics
 		private Statistics m_totalStatistics;
 		private readonly SortedDictionary<WaveKey, Statistics> m_statistics = new SortedDictionary<WaveKey, Statistics>();
 		private readonly SortedDictionary<WaveKey, Statistics> m_temp = new SortedDictionary<WaveKey, Statistics>();
+		private readonly Battle m_dummyTotalBattle;
 		#endregion
 
 		#region Constructor
 		internal MultiWaveStatistics(MultiWaveBattle battle)
 		{
 			m_battle = battle;
+			m_dummyTotalBattle = new Battle(battle.Units.ToArray(), false, battle.EnemyUnits.ToArray(), false);
 		}
 		#endregion
 
@@ -40,7 +42,7 @@ namespace TheSettlersCalculator.Statistics
 		#region Methods
 		internal void MultiWaveBattleCompleteHandler(object sender, EventArgs args)
 		{
-			Statistics combinedStatistics = new Statistics(null);
+			Statistics combinedStatistics = new Statistics(m_dummyTotalBattle);
 			foreach(KeyValuePair<WaveKey, Statistics> pair in m_temp)
 			{
 				combinedStatistics.CombineStatistics(pair.Value, Battle);
@@ -70,6 +72,32 @@ namespace TheSettlersCalculator.Statistics
 		internal void MultiWaveBattleWaveCompleteHandler(object sender, MultiWaveBatleWaveCompleteArgs args)
 		{
 			m_temp.Add(args.Key, args.Statistics);
+		}
+
+		internal void CalculatePrices()
+		{
+			m_totalStatistics.CalculatePrices();
+			foreach(KeyValuePair<WaveKey, Statistics> pair in m_statistics)
+			{
+				pair.Value.CalculatePrices();
+			}
+		}
+
+		internal void CalculateLossesTime()
+		{
+			m_totalStatistics.CalculateLossesTime();
+			foreach (KeyValuePair<WaveKey, Statistics> pair in m_statistics)
+			{
+				pair.Value.CalculateLossesTime();
+			}
+		}
+
+		internal void CallculateBattleTime()
+		{
+			foreach (KeyValuePair<WaveKey, Statistics> pair in m_statistics)
+			{
+				pair.Value.CalculateBattleTime();
+			}
 		}
 		#endregion
 	}

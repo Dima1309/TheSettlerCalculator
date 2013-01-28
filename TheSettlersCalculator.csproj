@@ -128,6 +128,7 @@
     <Compile Include="WpfTypes\BattleLosses.cs" />
     <Compile Include="WpfTypes\Converters\AttackPriorityStringConverter.cs" />
     <Compile Include="WpfTypes\Converters\AttackPriorityVisibilityConverter.cs" />
+    <Compile Include="WpfTypes\Converters\BattleTimeConverter.cs" />
     <Compile Include="WpfTypes\Converters\BoolVisibilityConverter.cs" />
     <Compile Include="WpfTypes\Converters\ByteVisibilityConverter.cs" />
     <Compile Include="WpfTypes\Converters\CampTypeConverter.cs" />
@@ -136,6 +137,7 @@
     <Compile Include="WpfTypes\Converters\LossesVisibilityConverter.cs" />
     <Compile Include="WpfTypes\Converters\ObjectToBooleanConverter.cs" />
     <Compile Include="WpfTypes\Converters\ObjectVisibilityConverter.cs" />
+    <Compile Include="WpfTypes\Converters\SecondsToStringConverter.cs" />
     <Compile Include="WpfTypes\Converters\WaveIndexConverter.cs" />
     <Compile Include="WpfTypes\EnemyCamp.cs" />
     <Compile Include="WpfTypes\Converters\IntVisibilityConverter.cs" />
