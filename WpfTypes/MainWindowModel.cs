@@ -29,6 +29,7 @@ namespace TheSettlersCalculator.WpfTypes
 		private readonly ObservableCollection<BattleLosses> m_waveLosses = new ObservableCollection<BattleLosses>();
 		private readonly double[] m_playerTowerBonus = new double[MAX_WAVES_COUNT];
 		private readonly double[] m_enemyTowerBonus = new double[MAX_WAVES_COUNT];
+		private readonly double[] m_enemyCampDestroyTime = new double[MAX_WAVES_COUNT];
 		private Quest m_activeQuest;
 		private EnemyCamp m_activeEnemyCamp;
 		private bool m_veteranAvailable;
@@ -164,6 +165,9 @@ namespace TheSettlersCalculator.WpfTypes
 
 							enemyUnit.Count = count;
 						}
+
+						EnemyCampDestroyTime = m_activeEnemyCamp.DestroyCampTime;
+						OnPropertyChanged("EnemyCampDestroyTime");
 					}
 				}
 			}
@@ -210,6 +214,19 @@ namespace TheSettlersCalculator.WpfTypes
 					m_enemyTowerBonus[m_enemyWaveIndex] = value;
 					OnPropertyChanged("EnemyTowerBonus");
 				}
+			}
+		}
+
+		public double EnemyCampDestroyTime
+		{
+			get
+			{
+				return m_enemyCampDestroyTime[m_enemyWaveIndex];
+			}
+
+			set
+			{
+				m_enemyCampDestroyTime[m_enemyWaveIndex] = value;
 			}
 		}
 
@@ -333,7 +350,7 @@ namespace TheSettlersCalculator.WpfTypes
 			for(int i=0;i<MAX_WAVES_COUNT;i++)
 			{
 				battle.AddAttackerWave(PlayerWaves[i], true, m_playerTowerBonus[i]);
-				battle.AddEnemyWave(EnemyWaves[i], false, m_enemyTowerBonus[i]);
+				battle.AddEnemyWave(EnemyWaves[i], false, m_enemyTowerBonus[i], m_enemyCampDestroyTime[i]);
 			}
 
 			MultiWaveStatistics statistics = new MultiWaveStatistics(battle);

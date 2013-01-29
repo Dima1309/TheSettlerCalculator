@@ -13,6 +13,7 @@ namespace TheSettlersCalculator.WpfTypes
 		private readonly ObservableCollection<UnitSquad> m_squads = new ObservableCollection<UnitSquad>();
 		private readonly double m_left;
 		private readonly double m_top;
+		private readonly double m_destroyCampTime;
 		#endregion
 
 		#region Constructor
@@ -31,6 +32,7 @@ namespace TheSettlersCalculator.WpfTypes
 
 			m_left = camp.Left;
 			m_top = camp.Top;
+			m_destroyCampTime = camp.WinTime;
 		}
 		#endregion
 
@@ -58,6 +60,11 @@ namespace TheSettlersCalculator.WpfTypes
 		public double Top
 		{
 			get { return m_top; }
+		}
+
+		public double DestroyCampTime
+		{
+			get { return m_destroyCampTime; }
 		}
 		#endregion
 	}

@@ -14,10 +14,11 @@ namespace TheSettlersCalculator.Types
 			private readonly IList<UnitSquad> m_squads;
 			private readonly bool m_general;
 			private readonly double m_towerBonus;
+			private readonly double m_destroyCampTime;
 			#endregion
 
 			#region Constructor
-			internal BattleWave(IList<UnitSquad> squads, bool general, double towerBonus)
+			internal BattleWave(IList<UnitSquad> squads, bool general, double towerBonus, double destroyCampTime)
 			{
 				m_squads = new List<UnitSquad>(squads.Count);
 				foreach(UnitSquad squad in squads)
@@ -26,6 +27,7 @@ namespace TheSettlersCalculator.Types
 				}
 				m_general = general;
 				m_towerBonus = towerBonus;
+				m_destroyCampTime = destroyCampTime;
 			}
 			#endregion
 
@@ -43,6 +45,11 @@ namespace TheSettlersCalculator.Types
 			public double TowerBonus
 			{
 				get { return m_towerBonus; }
+			}
+
+			public double DestroyCampTime
+			{
+				get { return m_destroyCampTime; }
 			}
 			#endregion
 		}
@@ -121,12 +128,12 @@ namespace TheSettlersCalculator.Types
 		#region Methods
 		internal void AddAttackerWave(IList<UnitSquad> units, bool general, double towerBonus)
 		{
-			m_playerWaves.Add(new BattleWave(units, general, towerBonus));
+			m_playerWaves.Add(new BattleWave(units, general, towerBonus, 0));
 		}
 
-		internal void AddEnemyWave(IList<UnitSquad> units, bool general, double towerBonus)
+		internal void AddEnemyWave(IList<UnitSquad> units, bool general, double towerBonus, double destroyCampTime)
 		{
-			m_enemyWaves.Add(new BattleWave(units, general, towerBonus));
+			m_enemyWaves.Add(new BattleWave(units, general, towerBonus, destroyCampTime));
 		}
 
 		internal void Calculate(ICalculator calculator)
@@ -141,6 +148,7 @@ namespace TheSettlersCalculator.Types
 				bool playerGeneral = false;
 				IList<UnitSquad> enemySquads = null;
 				bool enemyGeneral = false;
+				int destroyEnemyCampTime = 0;
 
 				while(playerIndex < m_playerWaves.Count && enemyIndex < m_enemyWaves.Count)
 				{
@@ -170,6 +178,7 @@ namespace TheSettlersCalculator.Types
 					{
 						enemySquads = new List<UnitSquad>(m_enemyWaves[enemyIndex].Squads);
 						enemyGeneral = m_enemyWaves[enemyIndex].General;
+						destroyEnemyCampTime = (int)m_enemyWaves[enemyIndex].DestroyCampTime;
 
 						bool emptyWave = true;
 						foreach (UnitSquad squad in enemySquads)
@@ -192,6 +201,7 @@ namespace TheSettlersCalculator.Types
 					Battle battle = new Battle(playerSquads, playerGeneral, enemySquads, enemyGeneral);
 					battle.PlayerTowerBonus = m_playerWaves[playerIndex].TowerBonus;
 					battle.EnemyTowerBonus = m_enemyWaves[enemyIndex].TowerBonus;
+					battle.WinBattleTime = destroyEnemyCampTime;
 					calculator.IterationCount = GetBattleIterationCount();
 					Statistics.Statistics statistics = new Statistics.Statistics(battle);
 					calculator.OnBattleComplete += statistics.BattleComplete;

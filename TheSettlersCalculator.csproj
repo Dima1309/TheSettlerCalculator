@@ -123,6 +123,8 @@
     <Compile Include="Types\RoundStateHandler.cs" />
     <Compile Include="Types\Simulation\UnitAttack.cs" />
     <Compile Include="Types\Squad.cs" />
+    <Compile Include="Types\StatisticsLossesPrice.cs" />
+    <Compile Include="Types\StatisticsLossesProduct.cs" />
     <Compile Include="Types\Unit.cs" />
     <Compile Include="Types\UnitAttackHandler.cs" />
     <Compile Include="WpfTypes\BattleLosses.cs" />

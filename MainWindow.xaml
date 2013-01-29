@@ -256,15 +256,34 @@
                                     <Label HorizontalAlignment="Center" Grid.Column="2">Сред.</Label>
                                     <Label HorizontalAlignment="Center" Grid.Column="3">Макс.</Label>
 
-                                    <Image Source="{Binding MinLosesPrice.Total.Product.Icon}" Grid.Column="0" Width="26" Height="25" />
+                                    <Image Source="{Binding LosesPrice.Total.Product.Icon}" Grid.Column="0" Width="26" Height="25" />
 
-									<Label HorizontalAlignment="Center" Grid.Column="1" Grid.Row="1" Content="{Binding MinLosesPrice.Total.Count}" ContentStringFormat="{}{0:f0}" />
-                                    <Label HorizontalAlignment="Center" Grid.Column="2" Grid.Row="1" Content="{Binding AvgLosesPrice.Total.Count}" ContentStringFormat="{}{0:f0}" />
-                                    <Label HorizontalAlignment="Center" Grid.Column="3" Grid.Row="1" Content="{Binding MaxLosesPrice.Total.Count}" ContentStringFormat="{}{0:f0}" />
+									<Label HorizontalAlignment="Center" Grid.Column="1" Grid.Row="1" Content="{Binding LosesPrice.Total.MinCount}" ContentStringFormat="{}{0:f0}" />
+                                    <Label HorizontalAlignment="Center" Grid.Column="2" Grid.Row="1" Content="{Binding LosesPrice.Total.AvgCount}" ContentStringFormat="{}{0:f0}" />
+                                    <Label HorizontalAlignment="Center" Grid.Column="3" Grid.Row="1" Content="{Binding LosesPrice.Total.MaxCount}" ContentStringFormat="{}{0:f0}" />
 								</Grid>
 							</Expander.Header>
-							>
-						</Expander>
+                            <ItemsControl ItemsSource="{Binding LosesPrice.Products}">
+                                <ItemsControl.ItemTemplate>
+                                    <DataTemplate>
+                                        <Grid >
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="*" />
+                                                <ColumnDefinition Width="*" />
+                                                <ColumnDefinition Width="*" />
+                                                <ColumnDefinition Width="*" />
+                                            </Grid.ColumnDefinitions>
+
+                                            <Image Source="{Binding Product.Icon}" Grid.Column="0" Width="26" Height="25" />
+
+                                            <Label HorizontalAlignment="Center" Grid.Column="1" Content="{Binding MinCount}" ContentStringFormat="{}{0:f0}" />
+                                            <Label HorizontalAlignment="Center" Grid.Column="2" Content="{Binding AvgCount}" ContentStringFormat="{}{0:f0}" />
+                                            <Label HorizontalAlignment="Center" Grid.Column="3" Content="{Binding MaxCount}" ContentStringFormat="{}{0:f0}" />
+                                        </Grid>
+                                    </DataTemplate>
+                                </ItemsControl.ItemTemplate>
+                            </ItemsControl>
+                        </Expander>
 						<Label FontWeight="Bold">
 							Время востановления убитых войск:
 						</Label>
@@ -519,6 +538,8 @@
 								<Binding Path="Model.EnemyTowerBonus" ElementName="Win" Converter="{StaticResource towerBonusConverter}" ConverterParameter="90"></Binding>
 							</RadioButton.IsChecked>
 						</RadioButton>
+                        <Label>Время разрушения лагеря</Label>
+                        <src:NumberTextBox Text="{Binding Model.EnemyCampDestroyTime, ElementName=Win}"></src:NumberTextBox>
 					</StackPanel>
 				</ScrollViewer>
 

@@ -25,9 +25,7 @@ namespace TheSettlersCalculator.Statistics
 		private int m_winCount;
 		private int m_count;
 
-		private LossesPrice m_minLosesPrice;
-		private LossesPrice m_maxLosesPrice;
-		private LossesPrice m_avgLosesPrice;
+		private StatisticsLossesPrice m_losesPrice;
 
 		private double m_minLossesRecoveryTime;
 		private double m_maxLossesRecoveryTime;
@@ -129,19 +127,9 @@ namespace TheSettlersCalculator.Statistics
 			get { return m_winCount; }
 		}
 
-		public LossesPrice MinLosesPrice
+		public StatisticsLossesPrice LosesPrice
 		{
-			get { return m_minLosesPrice; }
-		}
-
-		public LossesPrice MaxLosesPrice
-		{
-			get { return m_maxLosesPrice; }
-		}
-
-		public LossesPrice AvgLosesPrice
-		{
-			get { return m_avgLosesPrice; }
+			get { return m_losesPrice; }
 		}
 
 		public double MinLossesRecoveryTime
@@ -459,19 +447,12 @@ namespace TheSettlersCalculator.Statistics
 		internal void CalculatePrices()
 		{
 			PriceFunction function = new PriceFunction(null);
-			if (m_minLosesPrice == null)
+			if (m_losesPrice == null)
 			{
-				m_minLosesPrice = new LossesPrice(function.CalculateLosses(m_battle.Units, m_minAttackerLosses));
-			}
-
-			if (m_maxLosesPrice == null)
-			{
-				m_maxLosesPrice = new LossesPrice(function.CalculateLosses(m_battle.Units, m_maxAttackerLosses));
-			}
-
-			if (m_avgLosesPrice == null)
-			{
-				m_avgLosesPrice = new LossesPrice(function.CalculateLosses(m_battle.Units, m_avgAttackerLosses));
+				LossesPrice minLosesPrice = new LossesPrice(function.CalculateLosses(m_battle.Units, m_minAttackerLosses));
+				LossesPrice maxLosesPrice = new LossesPrice(function.CalculateLosses(m_battle.Units, m_maxAttackerLosses));
+				LossesPrice avgLosesPrice = new LossesPrice(function.CalculateLosses(m_battle.Units, m_avgAttackerLosses));
+				m_losesPrice = new StatisticsLossesPrice(minLosesPrice, avgLosesPrice, maxLosesPrice);
 			}
 		}
 

@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using TheSettlersCalculator.Price;
 using TheSettlersCalculator.Types;
 
 namespace TheSettlersCalculator.WpfTypes
@@ -11,9 +12,7 @@ namespace TheSettlersCalculator.WpfTypes
 		private int m_playerWaveIndex;
 		private int m_enemyWaveIndex;
 
-		private readonly LossesPrice m_minLosesPrice;
-		private readonly LossesPrice m_maxLosesPrice;
-		private readonly LossesPrice m_avgLosesPrice;
+		private readonly StatisticsLossesPrice m_losesPrice;
 
 		private readonly double m_minLossesRecoveryTime;
 		private readonly double m_maxLossesRecoveryTime;
@@ -40,9 +39,7 @@ namespace TheSettlersCalculator.WpfTypes
 				m_maxBattleTime = statistics.MaxBattleTime;
 				m_avgBattleTime = statistics.AvgBattleTime;
 
-				m_minLosesPrice = statistics.MinLosesPrice;
-				m_maxLosesPrice = statistics.MaxLosesPrice;
-				m_avgLosesPrice = statistics.AvgLosesPrice;
+				m_losesPrice = statistics.LosesPrice;
 			}
 		}
 
@@ -68,19 +65,9 @@ namespace TheSettlersCalculator.WpfTypes
 			get { return m_enemyLosses; }
 		}
 
-		public LossesPrice MinLosesPrice
+		public StatisticsLossesPrice LosesPrice
 		{
-			get { return m_minLosesPrice; }
-		}
-
-		public LossesPrice MaxLosesPrice
-		{
-			get { return m_maxLosesPrice; }
-		}
-
-		public LossesPrice AvgLosesPrice
-		{
-			get { return m_avgLosesPrice; }
+			get { return m_losesPrice; }
 		}
 
 		public double MinLossesRecoveryTime
