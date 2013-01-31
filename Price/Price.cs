@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using TheSettlersCalculator.Properties;
 
 namespace TheSettlersCalculator.Price
@@ -7,6 +8,7 @@ namespace TheSettlersCalculator.Price
 	{
 		#region Fields
 		private static SortedDictionary<ProductEnum, Product> s_products;
+		private static ObservableCollection<Product> s_productList;
 		#endregion
 
 		#region Properties
@@ -20,6 +22,19 @@ namespace TheSettlersCalculator.Price
 				}
 
 				return s_products;
+			}
+		}
+
+		public static ObservableCollection<Product> ProductList
+		{
+			get
+			{
+				if(s_productList == null)
+				{
+					s_productList = new ObservableCollection<Product>(s_products.Values);
+				}
+
+				return s_productList;
 			}
 		}
 		#endregion

@@ -693,6 +693,53 @@
 			</Grid>
 		</TabItem>
 		<TabItem Header="Подбор состава"></TabItem>
-		<TabItem Header="Опции"></TabItem>
+		<TabItem Header="Опции">
+            <ScrollViewer DataContext="{Binding Model, ElementName=Win}" Padding="6,6">
+                <StackPanel Orientation="Vertical">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="200" MaxWidth="200"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
+                        
+                        <TextBlock Grid.Column="0" Grid.Row="0">Количество раундов для симуляции</TextBlock>
+                        <src:NumberTextBox HorizontalAlignment="Left" Margin="16,4" Grid.Row="0" Grid.Column="1" Text="{Binding Options.Rounds}" MinWidth="60" MaxWidth="60" MinValue="100" MaxValue="100000"/>
+
+                        <TextBlock Grid.Column="0" Grid.Row="1">Уровень казармы</TextBlock>
+                        <src:NumberTextBox HorizontalAlignment="Left" Margin="16,4" Grid.Column="1" Grid.Row="1" MinValue="0" MaxValue="5" Text="{Binding Options.BaracksLevel}" MinWidth="60" MaxWidth="60"/>
+                    </Grid>                                            
+                    <Expander >
+                        <Expander.Header>
+                            <TextBlock>Цены на ресурсы</TextBlock>
+                        </Expander.Header>
+
+                        <StackPanel Orientation="Vertical">
+                        <ItemsControl ItemsSource="{Binding Products}">
+                            <ItemsControl.ItemTemplate>
+                                <DataTemplate>
+                                    <Grid>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="30" />
+                                            <ColumnDefinition Width="300"/>
+                                            <ColumnDefinition Width="60" />
+                                        </Grid.ColumnDefinitions>
+
+                                        <Image Grid.Column="0" Source="{Binding Icon}" Width="26" Height="25" />
+                                        <Label Grid.Column="1" Content="{Binding Name}"/>
+                                        <src:NumberTextBox Grid.Column="2" MaxWidth="50" MinWidth="50" Margin="0,5" MinValue="0" Text="{Binding Cost}"/>
+                                    </Grid>
+                                </DataTemplate>
+                            </ItemsControl.ItemTemplate>
+                        </ItemsControl>
+                        </StackPanel>
+                    </Expander>                    
+                </StackPanel>
+            </ScrollViewer>
+        </TabItem>
 	</TabControl>
 </Window>

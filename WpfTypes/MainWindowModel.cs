@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
+using TheSettlersCalculator.Price;
 using TheSettlersCalculator.Quests;
 using TheSettlersCalculator.Statistics;
 using TheSettlersCalculator.Types;
@@ -327,6 +328,16 @@ namespace TheSettlersCalculator.WpfTypes
 		public ObservableCollection<UnitSquad>[] EnemyWaves
 		{
 			get { return m_enemyWaves; }
+		}
+
+		public Options Options
+		{
+			get { return Options.Instance; }
+		}
+
+		public ObservableCollection<Product> Products
+		{
+			get { return Price.Price.ProductList; }
 		}
 		#endregion
 

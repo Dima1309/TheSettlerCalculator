@@ -106,6 +106,7 @@
     <Compile Include="Types\MultiWaveBattleWaveCompleteHandler.cs" />
     <Compile Include="Types\MultiWaveBattle.cs" />
     <Compile Include="Types\MultiWaveBattleType.cs" />
+    <Compile Include="Types\ServerType.cs" />
     <Compile Include="Types\Simulation\BattleSimulation.cs" />
     <Compile Include="Types\Simulation\MultyWaveBattleSimulation.cs" />
     <Compile Include="Types\Simulation\Round.cs" />
@@ -146,6 +147,7 @@
     <Compile Include="WpfTypes\Losses.cs" />
     <Compile Include="WpfTypes\MainWindowModel.cs" />
     <Compile Include="WpfTypes\NumberTextBox.cs" />
+    <Compile Include="Types\Options.cs" />
     <Compile Include="WpfTypes\RangeValidationRule.cs" />
     <Compile Include="WpfTypes\SimpleSquareAdorner.cs" />
     <Compile Include="WpfTypes\Converters\TowerBonusConverter.cs" />
