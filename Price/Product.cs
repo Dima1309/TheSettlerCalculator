@@ -50,7 +50,10 @@ namespace TheSettlersCalculator.Price
 			{
 				if (m_icon == null && m_iconSource != null)
 				{
-					m_icon = ImageHelper.LoadPng("TheSettlersCalculator.Price.Icons." + m_iconSource +".png");
+					string prefix = m_productType == ProductType.QUEST
+						? "TheSettlersCalculator.Quests.Icons."
+						: "TheSettlersCalculator.Price.Icons.";
+					m_icon = ImageHelper.LoadPng(prefix + m_iconSource +".png");
 				}
 
 				return m_icon;

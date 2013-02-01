@@ -138,9 +138,12 @@
     <Compile Include="WpfTypes\Converters\HealthBrushConverter.cs" />
     <Compile Include="WpfTypes\Converters\IntNegativeVisibilityConverter.cs" />
     <Compile Include="WpfTypes\Converters\LossesVisibilityConverter.cs" />
+    <Compile Include="WpfTypes\Converters\MultyWaveBattleTypeConverter.cs" />
     <Compile Include="WpfTypes\Converters\ObjectToBooleanConverter.cs" />
     <Compile Include="WpfTypes\Converters\ObjectVisibilityConverter.cs" />
+    <Compile Include="WpfTypes\Converters\ProductTypeConverter.cs" />
     <Compile Include="WpfTypes\Converters\SecondsToStringConverter.cs" />
+    <Compile Include="WpfTypes\Converters\ServerTypeConverter.cs" />
     <Compile Include="WpfTypes\Converters\WaveIndexConverter.cs" />
     <Compile Include="WpfTypes\EnemyCamp.cs" />
     <Compile Include="WpfTypes\Converters\IntVisibilityConverter.cs" />

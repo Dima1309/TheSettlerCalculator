@@ -1,6 +1,28 @@
-﻿<Window x:Class="TheSettlersCalculator.MainWindow" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:res="clr-namespace:TheSettlersCalculator.Properties" xmlns:src="clr-namespace:TheSettlersCalculator.WpfTypes" xmlns:Converters="clr-namespace:TheSettlersCalculator.WpfTypes.Converters" Title="MainWindow" Height="640" Width="800" x:Name="Win">
+﻿<Window x:Class="TheSettlersCalculator.MainWindow" 
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+        xmlns:res="clr-namespace:TheSettlersCalculator.Properties" 
+        xmlns:src="clr-namespace:TheSettlersCalculator.WpfTypes" 
+        xmlns:types="clr-namespace:TheSettlersCalculator.Types"
+        xmlns:Converters="clr-namespace:TheSettlersCalculator.WpfTypes.Converters"
+        xmlns:System="clr-namespace:System;assembly=mscorlib" Title="MainWindow" Height="640" Width="800" x:Name="Win">
 	<Window.Resources>
-		<Converters:CampTypeConverter x:Key="campTypeConverter" />
+        <ObjectDataProvider x:Key="serverTypeEnum" MethodName="GetValues" ObjectType="{x:Type System:Enum}">
+            <ObjectDataProvider.MethodParameters>
+                <x:Type TypeName="types:ServerType"/>
+            </ObjectDataProvider.MethodParameters>
+        </ObjectDataProvider>
+
+        <ObjectDataProvider x:Key="battleTypeEnum" MethodName="GetValues" ObjectType="{x:Type System:Enum}">
+            <ObjectDataProvider.MethodParameters>
+                <x:Type TypeName="types:MultiWaveBattleType"/>
+            </ObjectDataProvider.MethodParameters>
+        </ObjectDataProvider>
+
+        <Converters:ProductTypeConverter x:Key="productTypeConverter" />
+        <Converters:MultyWaveBattleTypeConverter x:Key="multyWaveBattleTypeConverter" />
+        <Converters:ServerTypeConverter x:Key="serverTypeConverter" />
+        <Converters:CampTypeConverter x:Key="campTypeConverter" />
 		<Converters:TowerBonusConverter x:Key="towerBonusConverter" />
 		<Converters:BoolVisibilityConverter x:Key="boolVisibilityConverter" />
 		<Converters:ByteVisibilityConverter x:Key="byteVisibilityConverter" />
@@ -705,6 +727,8 @@
                         <Grid.RowDefinitions>
                             <RowDefinition Height="*"/>
                             <RowDefinition Height="*"/>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="*"/>
                         </Grid.RowDefinitions>
                         
                         <TextBlock Grid.Column="0" Grid.Row="0">Количество раундов для симуляции</TextBlock>
@@ -712,6 +736,24 @@
 
                         <TextBlock Grid.Column="0" Grid.Row="1">Уровень казармы</TextBlock>
                         <src:NumberTextBox HorizontalAlignment="Left" Margin="16,4" Grid.Column="1" Grid.Row="1" MinValue="0" MaxValue="5" Text="{Binding Options.BaracksLevel}" MinWidth="60" MaxWidth="60"/>
+                    
+                        <TextBlock Grid.Column="0" Grid.Row="2">Сервер</TextBlock>
+                        <ComboBox HorizontalAlignment="Left" Margin="16,4" Grid.Column="1" Grid.Row="2" SelectedItem="{Binding Options.Server}"  ItemsSource="{Binding Source={StaticResource serverTypeEnum}}"  MinWidth="100" MaxWidth="100">
+                            <ComboBox.ItemTemplate>
+                                <DataTemplate>
+                                    <TextBlock Text="{Binding Path=., Converter={StaticResource serverTypeConverter}}"/>                                        
+                                </DataTemplate>
+                            </ComboBox.ItemTemplate>
+                        </ComboBox>
+
+                        <TextBlock Grid.Column="0" Grid.Row="3">Сервер</TextBlock>
+                        <ComboBox HorizontalAlignment="Left" Margin="16,4" Grid.Column="1" Grid.Row="3" SelectedItem="{Binding Options.MultiWaveBattleType}" ItemsSource="{Binding Source={StaticResource battleTypeEnum}}" MinWidth="100" MaxWidth="100">
+                            <ComboBox.ItemTemplate>
+                                <DataTemplate>
+                                    <TextBlock Text="{Binding Path=., Converter={StaticResource multyWaveBattleTypeConverter}}"/>
+                                </DataTemplate>
+                            </ComboBox.ItemTemplate>
+                        </ComboBox>
                     </Grid>                                            
                     <Expander >
                         <Expander.Header>
@@ -724,14 +766,16 @@
                                 <DataTemplate>
                                     <Grid>
                                         <Grid.ColumnDefinitions>
-                                            <ColumnDefinition Width="30" />
+                                            <ColumnDefinition Width="100" />
                                             <ColumnDefinition Width="300"/>
                                             <ColumnDefinition Width="60" />
+                                            <ColumnDefinition Width="60"/>
                                         </Grid.ColumnDefinitions>
 
-                                        <Image Grid.Column="0" Source="{Binding Icon}" Width="26" Height="25" />
-                                        <Label Grid.Column="1" Content="{Binding Name}"/>
-                                        <src:NumberTextBox Grid.Column="2" MaxWidth="50" MinWidth="50" Margin="0,5" MinValue="0" Text="{Binding Cost}"/>
+                                        <Image Grid.Column="0" Source="{Binding Icon}" Stretch="None"/>
+                                        <Label Grid.Column="1" Content="{Binding Name}" VerticalAlignment="Center"/>
+                                            <Label Grid.Column="2" Content="{Binding ProductType, Converter={StaticResource productTypeConverter}}" VerticalAlignment="Center"/>
+                                        <src:NumberTextBox Grid.Column="3" MaxWidth="50" MinWidth="50" Margin="0,5" MinValue="0" MaxHeight="24" Text="{Binding Cost}"/>
                                     </Grid>
                                 </DataTemplate>
                             </ItemsControl.ItemTemplate>
