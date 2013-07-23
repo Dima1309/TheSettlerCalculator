@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<quest>
+  <name>QUEST_MOTHER_LOVE</name>
+  <map>\Quests\Maps\</map>
+  <icon>\Quests\Icons\Mutterliebe.png</icon>
+  <enemies>
+    <enemy>WILD_MARY</enemy>
+    <enemy>CALTROP</enemy>
+    <enemy>CRAZY_COOK</enemy>
+    <enemy>GUNMAN</enemy>
+    <enemy>PETTY_OFFICER_2ND_CLASS</enemy>
+    <enemy>WOLF</enemy>
+  </enemies>
+  <camps>
+    <camp>
+      <name>W1</name>
+      <type>Ambush</type>
+      <wintime>20</wintime>
+      <sector>1</sector>
+      <enemy unit="WOLF" count="200" />
+    </camp>
+    <camp>
+      <name>W2</name>
+      <type>Ambush</type>
+      <wintime>20</wintime>
+      <sector>1</sector>
+      <enemy unit="WOLF" count="200" />
+    </camp>
+    <camp>
+      <name>W3</name>
+      <type>Ambush</type>
+      <wintime>20</wintime>
+      <sector>1</sector>
+      <enemy unit="CALTROP" count="100" />
+    </camp>
+    <camp>
+      <name>1</name>
+      <type>Normal</type>
+      <wintime>20</wintime>
+      <sector>1</sector>
+      <enemy unit="GUNMAN" count="100" />
+      <enemy unit="PETTY_OFFICER_2ND_CLASS" count="100" />
+    </camp>
+    <camp>
+      <name>2</name>
+      <type>Normal</type>
+      <wintime>20</wintime>
+      <sector>1</sector>
+      <enemy unit="CALTROP" count="100" />
+      <enemy unit="PETTY_OFFICER_2ND_CLASS" count="100" />
+    </camp>
+    <camp>
+      <name>3</name>
+      <type>Boss</type>
+      <wintime>20</wintime>
+      <sector>1</sector>
+      <enemy unit="WILD_MARY" count="1" />
+      <enemy unit="CRAZY_COOK" count="1" />
+      <enemy unit="GUNMAN" count="50" />
+      <enemy unit="PETTY_OFFICER_2ND_CLASS" count="50" />
+    </camp>
+  </camps>
+</quest>

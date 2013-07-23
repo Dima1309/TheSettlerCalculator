@@ -26,22 +26,22 @@ namespace TheSettlersCalculator.Quests
 			Units = InitializeUnits().ToArray();
 			Camps = InitializeCamps().ToArray();
 
-			Icon = ImageHelper.LoadPng("TheSettlersCalculator.Quests.Icons.Schiespulver.png");
+			IconPath = "TheSettlersCalculator.Quests.Icons.Schiespulver.png";
 		}
 		#endregion
 
 		private static List<Unit> InitializeUnits()
 		{
 			List<Unit> units = new List<Unit>();
-			units.Add(EnemyUnits.Units[EnemyUnits.MILITIA_DESERTER]);
-			units.Add(EnemyUnits.Units[EnemyUnits.CAVALRY_DESERTER]);
-			units.Add(EnemyUnits.Units[EnemyUnits.SOLDIER_DESERTER]);
-			units.Add(EnemyUnits.Units[EnemyUnits.ELITE_SOLDIER_DESERTER]);
-			units.Add(EnemyUnits.Units[EnemyUnits.BOWMAN_DESERTER]);
-			units.Add(EnemyUnits.Units[EnemyUnits.LONGBOWMAN_DESERTER]);
-			units.Add(EnemyUnits.Units[EnemyUnits.CROSSBOWMAN_DESERTER]);
-			units.Add(EnemyUnits.Units[EnemyUnits.CANNONEER_DESERTER]);
-			units.Add(EnemyUnits.Units[EnemyUnits.BIG_BERTHA]);
+			units.Add(EnemyUnits.Units[(int)EnemyUnitsEnum.MILITIA_DESERTER]);
+			units.Add(EnemyUnits.Units[(int)EnemyUnitsEnum.CAVALRY_DESERTER]);
+			units.Add(EnemyUnits.Units[(int)EnemyUnitsEnum.SOLDIER_DESERTER]);
+			units.Add(EnemyUnits.Units[(int)EnemyUnitsEnum.ELITE_SOLDIER_DESERTER]);
+			units.Add(EnemyUnits.Units[(int)EnemyUnitsEnum.BOWMAN_DESERTER]);
+			units.Add(EnemyUnits.Units[(int)EnemyUnitsEnum.LONGBOWMAN_DESERTER]);
+			units.Add(EnemyUnits.Units[(int)EnemyUnitsEnum.CROSSBOWMAN_DESERTER]);
+			units.Add(EnemyUnits.Units[(int)EnemyUnitsEnum.CANNONEER_DESERTER]);
+			units.Add(EnemyUnits.Units[(int)EnemyUnitsEnum.BIG_BERTHA]);
 			return units;
 		}
 

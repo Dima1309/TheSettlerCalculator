@@ -1,4 +1,6 @@
 ﻿using System.Windows;
+using System.Windows.Controls;
+using System.Xml;
 using TheSettlersCalculator.WpfTypes;
 
 namespace TheSettlersCalculator
@@ -35,6 +37,11 @@ namespace TheSettlersCalculator
 		private void Button_Click_1(object sender, RoutedEventArgs e)
 		{
 			m_model.Calculate();
+		}
+
+		private void Button_Click_2(object sender, RoutedEventArgs e)
+		{
+			Price.Price.Save();
 		}
     }
 }

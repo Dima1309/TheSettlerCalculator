@@ -24,20 +24,20 @@ namespace TheSettlersCalculator.Quests
 			Units = InitializeUnits().ToArray();
 			Camps = InitializeCamps().ToArray();
 
-			Icon = ImageHelper.LoadPng("TheSettlersCalculator.Quests.Icons.Sattelfest.png");
+			IconPath = "TheSettlersCalculator.Quests.Icons.Sattelfest.png";
 		}
 		#endregion
 
 		private static List<Unit> InitializeUnits()
 		{
 			List<Unit> units = new List<Unit>();
-			units.Add(EnemyUnits.Units[EnemyUnits.NOMAD]);
-			units.Add(EnemyUnits.Units[EnemyUnits.LANCE_RIDER]);
-			units.Add(EnemyUnits.Units[EnemyUnits.RIDING_BOWMAN]);
-			units.Add(EnemyUnits.Units[EnemyUnits.RIDING_AMAZONIAN]);
-			units.Add(EnemyUnits.Units[EnemyUnits.CATAPHRACT]);
-			units.Add(EnemyUnits.Units[EnemyUnits.UPROARIOUS_BULL]);
-			units.Add(EnemyUnits.Units[EnemyUnits.COMPOSITE_BOW]);
+			units.Add(EnemyUnits.Units[(int)EnemyUnitsEnum.NOMAD]);
+			units.Add(EnemyUnits.Units[(int)EnemyUnitsEnum.LANCE_RIDER]);
+			units.Add(EnemyUnits.Units[(int)EnemyUnitsEnum.RIDING_BOWMAN]);
+			units.Add(EnemyUnits.Units[(int)EnemyUnitsEnum.RIDING_AMAZONIAN]);
+			units.Add(EnemyUnits.Units[(int)EnemyUnitsEnum.CATAPHRACT]);
+			units.Add(EnemyUnits.Units[(int)EnemyUnitsEnum.UPROARIOUS_BULL]);
+			units.Add(EnemyUnits.Units[(int)EnemyUnitsEnum.COMPOSITE_BOW]);
 			return units;
 		}
 

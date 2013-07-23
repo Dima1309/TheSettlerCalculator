@@ -1,7 +1,16 @@
-﻿namespace TheSettlersCalculator.Types
+﻿using System;
+using System.Xml;
+
+namespace TheSettlersCalculator.Types
 {
-	public class Options
+	public class Options : IXMLSerializable
 	{
+		private const string OPTIONS = "options";
+		private const string ROUNDS = "rounds";
+		private const string SERVER = "server";
+		private const string BARACK = "barackLevel";
+		private const string MULTI_WAVE_BATTLE_TYPE = "multiWaveBattleType";
+
 		#region Fields
 		private readonly static Options s_instance = new Options();
 		private int m_rounds = 10000;
@@ -42,6 +51,73 @@
 		internal static Options Instance
 		{
 			get { return s_instance; }
+		}
+		#endregion
+
+		#region Methods
+		public void Load(XmlReader reader)
+		{
+			int level = reader.Depth;
+			while (reader.Read())
+			{
+				if (string.Equals(reader.Name, OPTIONS, StringComparison.OrdinalIgnoreCase) ||
+					level > reader.Depth)
+				{
+					break;
+				}
+
+				if (!reader.IsStartElement())
+				{
+					continue;
+				}
+
+				try
+				{
+					if(string.Equals(reader.Name, ROUNDS, StringComparison.OrdinalIgnoreCase))
+					{
+						m_rounds = int.Parse(reader.Value);
+					}
+					else if(string.Equals(reader.Name, SERVER, StringComparison.OrdinalIgnoreCase))
+					{
+						m_server = (ServerType)Enum.Parse(typeof(ServerType), reader.Value, true);
+					}
+					else if(string.Equals(reader.Name, BARACK, StringComparison.OrdinalIgnoreCase))
+					{
+						m_baracksLevel = int.Parse(reader.Value);
+					}
+					else if(string.Equals(reader.Name, MULTI_WAVE_BATTLE_TYPE, StringComparison.OrdinalIgnoreCase))
+					{
+						m_multiWaveBattleType = (MultiWaveBattleType) int.Parse(reader.Value);
+					}
+				}
+				catch (Exception)
+				{
+				}
+
+			}
+		}
+
+		public void Save(XmlWriter writer)
+		{
+			writer.WriteStartElement(OPTIONS);
+			
+			writer.WriteStartElement(ROUNDS);
+			writer.WriteValue(m_rounds);
+			writer.WriteEndElement();
+
+			writer.WriteStartElement(SERVER);
+			writer.WriteValue(m_server.ToString());
+			writer.WriteEndElement();
+			
+			writer.WriteStartElement(BARACK);
+			writer.WriteValue(m_baracksLevel);
+			writer.WriteEndElement();
+			
+			writer.WriteStartElement(MULTI_WAVE_BATTLE_TYPE);
+			writer.WriteValue((int)m_multiWaveBattleType);
+			writer.WriteEndElement();
+
+			writer.WriteEndElement();
 		}
 		#endregion
 	}

@@ -23,19 +23,19 @@ namespace TheSettlersCalculator.Quests
 			Units = InitializeUnits().ToArray();
 			Camps = InitializeCamps().ToArray();
 
-			Icon = ImageHelper.LoadPng("TheSettlersCalculator.Quests.Icons.Die_Wilde_Waltraut.png");
+			IconPath = "TheSettlersCalculator.Quests.Icons.Die_Wilde_Waltraut.png";
 		}
 		#endregion
 
 		private static List<Unit> InitializeUnits()
 		{
 			List<Unit> units = new List<Unit>();
-			units.Add(EnemyUnits.Units[EnemyUnits.WILD_MARY]);
-			units.Add(EnemyUnits.Units[EnemyUnits.THUG]);
-			units.Add(EnemyUnits.Units[EnemyUnits.GUARD_DOG]);
-			units.Add(EnemyUnits.Units[EnemyUnits.ROUGHNECK]);
-			units.Add(EnemyUnits.Units[EnemyUnits.STONE_THROWER]);
-			units.Add(EnemyUnits.Units[EnemyUnits.RANGER]);
+			units.Add(EnemyUnits.Units[(int)EnemyUnitsEnum.WILD_MARY]);
+			units.Add(EnemyUnits.Units[(int)EnemyUnitsEnum.THUG]);
+			units.Add(EnemyUnits.Units[(int)EnemyUnitsEnum.GUARD_DOG]);
+			units.Add(EnemyUnits.Units[(int)EnemyUnitsEnum.ROUGHNECK]);
+			units.Add(EnemyUnits.Units[(int)EnemyUnitsEnum.STONE_THROWER]);
+			units.Add(EnemyUnits.Units[(int)EnemyUnitsEnum.RANGER]);
 			return units;
 		}
 

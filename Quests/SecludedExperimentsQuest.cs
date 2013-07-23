@@ -25,21 +25,21 @@ namespace TheSettlersCalculator.Quests
 			Units = InitializeUnits().ToArray();
 			Camps = InitializeCamps().ToArray();
 
-			Icon = ImageHelper.LoadPng("TheSettlersCalculator.Quests.Icons.Einsame_Experimente.png");
+			IconPath = "TheSettlersCalculator.Quests.Icons.Einsame_Experimente.png";
 		}
 		#endregion
 
 		private static List<Unit> InitializeUnits()
 		{
 			List<Unit> units = new List<Unit>();
-			units.Add(EnemyUnits.Units[EnemyUnits.CALTROP]);
-			units.Add(EnemyUnits.Units[EnemyUnits.DECKSCRUBBER]);
-			units.Add(EnemyUnits.Units[EnemyUnits.SABER_RATTLER]);
-			units.Add(EnemyUnits.Units[EnemyUnits.CRAZY_COOK]);
-			units.Add(EnemyUnits.Units[EnemyUnits.GUNMAN]);
-			units.Add(EnemyUnits.Units[EnemyUnits.KNIFETHROWER]);
-			units.Add(EnemyUnits.Units[EnemyUnits.PETTY_OFFICER_2ND_CLASS]);
-			units.Add(EnemyUnits.Units[EnemyUnits.UPROARIOUS_BULL]);
+			units.Add(EnemyUnits.Units[(int)EnemyUnitsEnum.CALTROP]);
+			units.Add(EnemyUnits.Units[(int)EnemyUnitsEnum.DECKSCRUBBER]);
+			units.Add(EnemyUnits.Units[(int)EnemyUnitsEnum.SABER_RATTLER]);
+			units.Add(EnemyUnits.Units[(int)EnemyUnitsEnum.CRAZY_COOK]);
+			units.Add(EnemyUnits.Units[(int)EnemyUnitsEnum.GUNMAN]);
+			units.Add(EnemyUnits.Units[(int)EnemyUnitsEnum.KNIFETHROWER]);
+			units.Add(EnemyUnits.Units[(int)EnemyUnitsEnum.PETTY_OFFICER_2ND_CLASS]);
+			units.Add(EnemyUnits.Units[(int)EnemyUnitsEnum.UPROARIOUS_BULL]);
 			return units;
 		}
 

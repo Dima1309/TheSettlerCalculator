@@ -24,20 +24,20 @@ namespace TheSettlersCalculator.Quests
 			Units = InitializeUnits().ToArray();
 			Camps = InitializeCamps().ToArray();
 
-			Icon = ImageHelper.LoadPng("TheSettlersCalculator.Quests.Icons.Die_Nordmanner.png");
+			IconPath = "TheSettlersCalculator.Quests.Icons.Die_Nordmanner.png";
 		}
 		#endregion
 
 		private static List<Unit> InitializeUnits()
 		{
 			List<Unit> units = new List<Unit>();
-			units.Add(EnemyUnits.Units[EnemyUnits.JOMVIKING]);
-			units.Add(EnemyUnits.Units[EnemyUnits.HOUSECARL]);
-			units.Add(EnemyUnits.Units[EnemyUnits.KARL]);
-			units.Add(EnemyUnits.Units[EnemyUnits.THRALL]);
-			units.Add(EnemyUnits.Units[EnemyUnits.VALKYRIE]);
-			units.Add(EnemyUnits.Units[EnemyUnits.BERSERK]);
-			units.Add(EnemyUnits.Units[EnemyUnits.WOLF]);
+			units.Add(EnemyUnits.Units[(int)EnemyUnitsEnum.JOMVIKING]);
+			units.Add(EnemyUnits.Units[(int)EnemyUnitsEnum.HOUSECARL]);
+			units.Add(EnemyUnits.Units[(int)EnemyUnitsEnum.KARL]);
+			units.Add(EnemyUnits.Units[(int)EnemyUnitsEnum.THRALL]);
+			units.Add(EnemyUnits.Units[(int)EnemyUnitsEnum.VALKYRIE]);
+			units.Add(EnemyUnits.Units[(int)EnemyUnitsEnum.BERSERK]);
+			units.Add(EnemyUnits.Units[(int)EnemyUnitsEnum.WOLF]);
 			return units;
 		}
 

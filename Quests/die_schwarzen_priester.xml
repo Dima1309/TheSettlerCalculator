@@ -1,0 +1,219 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<quest>
+  <name>QUEST_DIE_SCHWARZEN_PRIESTER</name>
+  <map>\Quests\Maps\die-schwarzen-priester.jpg</map>
+  <icon>\Quests\Icons\Die_schwarzen_Priester.png</icon>
+  <enemies>
+    <enemy>THUG</enemy>
+    <enemy>GUARD_DOG</enemy>
+    <enemy>STONE_THROWER</enemy>
+    <enemy>RANGER</enemy>
+    <enemy>SKUNK</enemy>
+    <enemy>CULTIST</enemy>
+    <enemy>SWAMP_WITCH</enemy>
+    <enemy>SHADOWS_NEAKER</enemy>
+    <enemy>FANATIC</enemy>
+    <enemy>DARK_PRIEST</enemy>
+    <enemy>FIRE_DANCER</enemy>
+    <enemy>DARK_HIGH_PRIEST</enemy>
+    <enemy>WOLF</enemy>
+  </enemies>
+  <camps>
+    <camp>
+      <name>W1</name>
+      <type>Ambush</type>
+      <wintime>20</wintime>
+      <sector>1</sector>
+      <left>400</left>
+      <top>345</top>
+      <enemy unit="WOLF" count="50" />
+    </camp>
+    <camp>
+      <name>W2</name>
+      <type>Ambush</type>
+      <wintime>20</wintime>
+      <sector>1</sector>
+      <left>530</left>
+      <top>350</top>
+      <enemy unit="WOLF" count="50" />
+    </camp>
+    <camp>
+      <name>W3</name>
+      <type>Ambush</type>
+      <wintime>20</wintime>
+      <sector>1</sector>
+      <left>590</left>
+      <top>320</top>
+      <enemy unit="WOLF" count="40" />
+    </camp>
+    <camp>
+      <name>W4</name>
+      <type>Ambush</type>
+      <wintime>20</wintime>
+      <sector>1</sector>
+      <left>380</left>
+      <top>190</top>
+      <enemy unit="WOLF" count="30" />
+    </camp>
+    <camp>
+      <name>1</name>
+      <type>Normal</type>
+      <wintime>20</wintime>
+      <sector>1</sector>
+      <left>314</left>
+      <top>311</top>
+      <enemy unit="THUG" count="10" />
+      <enemy unit="GUARD_DOG" count="15" />
+    </camp>
+    <camp>
+      <name>2</name>
+      <type>Normal</type>
+      <wintime>20</wintime>
+      <sector>1</sector>
+      <left>238</left>
+      <top>231</top>
+      <enemy unit="THUG" count="10" />
+      <enemy unit="STONE_THROWER" count="15" />
+    </camp>
+    <camp>
+      <name>3</name>
+      <type>Normal</type>
+      <wintime>20</wintime>
+      <sector>1</sector>
+      <left>531</left>
+      <top>315</top>
+      <enemy unit="THUG" count="10" />
+      <enemy unit="STONE_THROWER" count="15" />
+    </camp>
+    <camp>
+      <name>4</name>
+      <type>Normal</type>
+      <wintime>20</wintime>
+      <sector>1</sector>
+      <left>411</left>
+      <top>222</top>
+      <enemy unit="THUG" count="20" />
+      <enemy unit="RANGER" count="10" />
+    </camp>
+    <camp>
+      <name>5</name>
+      <type>Normal</type>
+      <wintime>20</wintime>
+      <sector>1</sector>
+      <left>464</left>
+      <top>241</top>
+      <enemy unit="THUG" count="20" />
+      <enemy unit="GUARD_DOG" count="10" />
+    </camp>
+    <camp>
+      <name>6</name>
+      <type>Boss</type>
+      <wintime>20</wintime>
+      <sector>1</sector>
+      <left>464</left>
+      <top>200</top>
+      <enemy unit="THUG" count="20" />
+      <enemy unit="GUARD_DOG" count="20" />
+      <enemy unit="RANGER" count="20" />
+      <enemy unit="SKUNK" count="1" />
+    </camp>
+    <camp>
+      <name>7</name>
+      <type>Normal</type>
+      <wintime>20</wintime>
+      <sector>2</sector>
+      <left>308</left>
+      <top>94</top>
+      <enemy unit="CULTIST" count="30" />
+      <enemy unit="DARK_PRIEST" count="40" />
+    </camp>
+    <camp>
+      <name>8</name>
+      <type>Normal</type>
+      <wintime>20</wintime>
+      <sector>2</sector>
+      <left>246</left>
+      <top>99</top>
+      <enemy unit="SHADOWS_NEAKER" count="30" />
+      <enemy unit="DARK_PRIEST" count="30" />
+    </camp>
+    <camp>
+      <name>9</name>
+      <type>Normal</type>
+      <wintime>20</wintime>
+      <sector>2</sector>
+      <left>212</left>
+      <top>131</top>
+      <enemy unit="CULTIST" count="30" />
+      <enemy unit="SHADOWS_NEAKER" count="20" />
+      <enemy unit="FIRE_DANCER" count="10" />
+    </camp>
+    <camp>
+      <name>10</name>
+      <type>Boss</type>
+      <wintime>120</wintime>
+      <sector>2</sector>
+      <left>143</left>
+      <top>143</top>
+      <enemy unit="CULTIST" count="40" />
+      <enemy unit="SWAMP_WITCH" count="1" />
+      <enemy unit="SHADOWS_NEAKER" count="20" />
+      <enemy unit="DARK_PRIEST" count="30" />
+    </camp>
+    <camp>
+      <name>11</name>
+      <type>Normal</type>
+      <wintime>20</wintime>
+      <sector>3</sector>
+      <left>748</left>
+      <top>172</top>
+      <enemy unit="CULTIST" count="60" />
+      <enemy unit="DARK_PRIEST" count="20" />
+    </camp>
+    <camp>
+      <name>12</name>
+      <type>Boss</type>
+      <wintime>20</wintime>
+      <sector>3</sector>
+      <left>755</left>
+      <top>117</top>
+      <enemy unit="CULTIST" count="25" />
+      <enemy unit="SHADOWS_NEAKER" count="25" />
+      <enemy unit="FANATIC" count="30" />
+      <enemy unit="FIRE_DANCER" count="10" />
+    </camp>
+    <camp>
+      <name>13</name>
+      <type>Boss</type>
+      <wintime>20</wintime>
+      <sector>4</sector>
+      <left>589</left>
+      <top>92</top>
+      <enemy unit="SHADOWS_NEAKER" count="30" />
+      <enemy unit="FANATIC" count="50" />
+      <enemy unit="FIRE_DANCER" count="10" />
+    </camp>
+    <camp>
+      <name>14</name>
+      <type>Normal</type>
+      <wintime>20</wintime>
+      <sector>4</sector>
+      <left>567</left>
+      <top>137</top>
+      <enemy unit="SHADOWS_NEAKER" count="30" />
+      <enemy unit="DARK_PRIEST" count="40" />
+    </camp>
+    <camp>
+      <name>15</name>
+      <type>Boss</type>
+      <wintime>120</wintime>
+      <sector>5</sector>
+      <left>683</left>
+      <top>65</top>
+      <enemy unit="CULTIST" count="40" />
+      <enemy unit="SHADOWS_NEAKER" count="40" />
+      <enemy unit="DARK_PRIEST" count="40" />
+      <enemy unit="DARK_HIGH_PRIEST" count="1" />
+    </camp>
+  </camps>
+</quest>

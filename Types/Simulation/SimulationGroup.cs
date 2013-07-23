@@ -105,7 +105,7 @@ namespace TheSettlersCalculator.Types.Simulation
 				m_playerBeginState.Add(new SquadState(battle.Units[i], playerStep.Counts[i], playerStep.Healts[i]));
 			}
 
-			for (int i = 0; i < playerStep.Counts.Length; i++)
+			for (int i = 0; i < enemyStep.Counts.Length; i++)
 			{
 				m_enemyBeginState.Add(new SquadState(battle.EnemyUnits[i], enemyStep.Counts[i], enemyStep.Healts[i]));
 			}
@@ -118,7 +118,7 @@ namespace TheSettlersCalculator.Types.Simulation
 				m_playerEndState.Add(new SquadState(battle.Units[i], playerStep.Counts[i], playerStep.Healts[i]));
 			}
 
-			for (int i = 0; i < playerStep.Counts.Length; i++)
+			for (int i = 0; i < enemyStep.Counts.Length; i++)
 			{
 				m_enemyEndState.Add(new SquadState(battle.EnemyUnits[i], enemyStep.Counts[i], enemyStep.Healts[i]));
 			}

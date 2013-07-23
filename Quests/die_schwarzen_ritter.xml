@@ -1,0 +1,257 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<quest>
+  <name>QUEST_DIE_SCHWARZEN_RITTER</name>
+  <map>\Quests\Maps\</map>
+  <icon>\Quests\Icons\Die_schwarzen_Ritter.png</icon>
+  <enemies>
+    <enemy>MILITIA_DESERTER</enemy>
+    <enemy>CAVALRY_DESERTER</enemy>
+    <enemy>SOLDIER_DESERTER</enemy>
+    <enemy>ELITE_SOLDIER_DESERTER</enemy>
+    <enemy>BOWMAN_DESERTER</enemy>
+    <enemy>LONGBOWMAN_DESERTER</enemy>
+    <enemy>CROSSBOWMAN_DESERTER</enemy>
+    <enemy>CANNONEER_DESERTER</enemy>
+    <enemy>SIR_ROBIN</enemy>
+    <enemy>BIG_BERTHA</enemy>
+  </enemies>
+  <camps>
+    <camp>
+      <name>1</name>
+      <type>Normal</type>
+      <wintime>20</wintime>
+      <sector>1</sector>
+      <enemy unit="MILITIA_DESERTER" count="100" />
+      <enemy unit="LONGBOWMAN_DESERTER" count="100" />
+    </camp>
+    <camp>
+      <name>2</name>
+      <type>Normal</type>
+      <wintime>20</wintime>
+      <sector>1</sector>
+      <enemy unit="SOLDIER_DESERTER" count="100" />
+      <enemy unit="BOWMAN_DESERTER" count="100" />
+    </camp>
+    <camp>
+      <name>3</name>
+      <type>Normal</type>
+      <wintime>20</wintime>
+      <sector>1</sector>
+      <enemy unit="MILITIA_DESERTER" count="100" />
+      <enemy unit="CAVALRY_DESERTER" count="100" />
+    </camp>
+    <camp>
+      <name>4</name>
+      <type>Boss</type>
+      <wintime>20</wintime>
+      <sector>1</sector>
+      <enemy unit="CAVALRY_DESERTER" count="60" />
+      <enemy unit="ELITE_SOLDIER_DESERTER" count="60" />
+      <enemy unit="LONGBOWMAN_DESERTER" count="60" />
+      <enemy unit="CANNONEER_DESERTER" count="10" />
+    </camp>
+    <camp>
+      <name>1</name>
+      <type>Normal</type>
+      <wintime>20</wintime>
+      <sector>101</sector>
+      <enemy unit="MILITIA_DESERTER" count="100" />
+      <enemy unit="LONGBOWMAN_DESERTER" count="100" />
+    </camp>
+    <camp>
+      <name>2</name>
+      <type>Normal</type>
+      <wintime>20</wintime>
+      <sector>101</sector>
+      <enemy unit="SOLDIER_DESERTER" count="100" />
+      <enemy unit="BOWMAN_DESERTER" count="100" />
+    </camp>
+    <camp>
+      <name>3</name>
+      <type>Normal</type>
+      <wintime>20</wintime>
+      <sector>101</sector>
+      <enemy unit="MILITIA_DESERTER" count="100" />
+      <enemy unit="CAVALRY_DESERTER" count="100" />
+    </camp>
+    <camp>
+      <name>4</name>
+      <type>Boss</type>
+      <wintime>20</wintime>
+      <sector>101</sector>
+      <enemy unit="CAVALRY_DESERTER" count="60" />
+      <enemy unit="ELITE_SOLDIER_DESERTER" count="60" />
+      <enemy unit="LONGBOWMAN_DESERTER" count="60" />
+      <enemy unit="CANNONEER_DESERTER" count="10" />
+    </camp>
+    <camp>
+      <name>1</name>
+      <type>Normal</type>
+      <wintime>20</wintime>
+      <sector>201</sector>
+      <enemy unit="MILITIA_DESERTER" count="100" />
+      <enemy unit="LONGBOWMAN_DESERTER" count="100" />
+    </camp>
+    <camp>
+      <name>2</name>
+      <type>Normal</type>
+      <wintime>20</wintime>
+      <sector>201</sector>
+      <enemy unit="SOLDIER_DESERTER" count="100" />
+      <enemy unit="BOWMAN_DESERTER" count="100" />
+    </camp>
+    <camp>
+      <name>3</name>
+      <type>Normal</type>
+      <wintime>20</wintime>
+      <sector>201</sector>
+      <enemy unit="MILITIA_DESERTER" count="100" />
+      <enemy unit="CAVALRY_DESERTER" count="100" />
+    </camp>
+    <camp>
+      <name>4</name>
+      <type>Boss</type>
+      <wintime>20</wintime>
+      <sector>201</sector>
+      <enemy unit="CAVALRY_DESERTER" count="60" />
+      <enemy unit="ELITE_SOLDIER_DESERTER" count="60" />
+      <enemy unit="LONGBOWMAN_DESERTER" count="60" />
+      <enemy unit="CANNONEER_DESERTER" count="10" />
+    </camp>
+    <camp>
+      <name>5</name>
+      <type>Normal</type>
+      <wintime>20</wintime>
+      <sector>2</sector>
+      <enemy unit="ELITE_SOLDIER_DESERTER" count="60" />
+      <enemy unit="CROSSBOWMAN_DESERTER" count="60" />
+    </camp>
+    <camp>
+      <name>5</name>
+      <type>Normal</type>
+      <wintime>20</wintime>
+      <sector>2</sector>
+      <enemy unit="ELITE_SOLDIER_DESERTER" count="60" />
+      <enemy unit="CROSSBOWMAN_DESERTER" count="60" />
+    </camp>
+    <camp>
+      <name>5</name>
+      <type>Normal</type>
+      <wintime>20</wintime>
+      <sector>2</sector>
+      <enemy unit="ELITE_SOLDIER_DESERTER" count="60" />
+      <enemy unit="CROSSBOWMAN_DESERTER" count="60" />
+    </camp>
+    <camp>
+      <name>6</name>
+      <type>Boss</type>
+      <wintime>120</wintime>
+      <sector>2</sector>
+      <enemy unit="CAVALRY_DESERTER" count="50" />
+      <enemy unit="ELITE_SOLDIER_DESERTER" count="50" />
+      <enemy unit="CROSSBOWMAN_DESERTER" count="50" />
+      <enemy unit="SIR_ROBIN" count="1" />
+    </camp>
+    <camp>
+      <name>7</name>
+      <type>Normal</type>
+      <wintime>20</wintime>
+      <sector>3</sector>
+      <enemy unit="ELITE_SOLDIER_DESERTER" count="60" />
+      <enemy unit="LONGBOWMAN_DESERTER" count="60" />
+      <enemy unit="CANNONEER_DESERTER" count="10" />
+    </camp>
+    <camp>
+      <name>8</name>
+      <type>Normal</type>
+      <wintime>20</wintime>
+      <sector>3</sector>
+      <enemy unit="MILITIA_DESERTER" count="100" />
+      <enemy unit="CAVALRY_DESERTER" count="60" />
+      <enemy unit="CROSSBOWMAN_DESERTER" count="40" />
+    </camp>
+    <camp>
+      <name>9</name>
+      <type>Normal</type>
+      <wintime>20</wintime>
+      <sector>3</sector>
+      <enemy unit="ELITE_SOLDIER_DESERTER" count="30" />
+      <enemy unit="LONGBOWMAN_DESERTER" count="140" />
+    </camp>
+    <camp>
+      <name>10</name>
+      <type>Boss</type>
+      <wintime>20</wintime>
+      <sector>3</sector>
+      <enemy unit="ELITE_SOLDIER_DESERTER" count="60" />
+      <enemy unit="CROSSBOWMAN_DESERTER" count="60" />
+      <enemy unit="CANNONEER_DESERTER" count="20" />
+    </camp>
+    <camp>
+      <name>11</name>
+      <type>Normal</type>
+      <wintime>20</wintime>
+      <sector>4</sector>
+      <enemy unit="CAVALRY_DESERTER" count="90" />
+      <enemy unit="ELITE_SOLDIER_DESERTER" count="90" />
+    </camp>
+    <camp>
+      <name>12</name>
+      <type>Normal</type>
+      <wintime>20</wintime>
+      <sector>4</sector>
+      <enemy unit="SOLDIER_DESERTER" count="80" />
+      <enemy unit="CROSSBOWMAN_DESERTER" count="80" />
+    </camp>
+    <camp>
+      <name>13</name>
+      <type>Normal</type>
+      <wintime>20</wintime>
+      <sector>4</sector>
+      <enemy unit="SOLDIER_DESERTER" count="110" />
+      <enemy unit="CANNONEER_DESERTER" count="25" />
+    </camp>
+    <camp>
+      <name>14</name>
+      <type>Normal</type>
+      <wintime>20</wintime>
+      <sector>4</sector>
+      <enemy unit="ELITE_SOLDIER_DESERTER" count="100" />
+      <enemy unit="LONGBOWMAN_DESERTER" count="50" />
+    </camp>
+    <camp>
+      <name>15</name>
+      <type>Normal</type>
+      <wintime>20</wintime>
+      <sector>4</sector>
+      <enemy unit="CAVALRY_DESERTER" count="100" />
+      <enemy unit="CROSSBOWMAN_DESERTER" count="100" />
+    </camp>
+    <camp>
+      <name>16</name>
+      <type>Normal</type>
+      <wintime>20</wintime>
+      <sector>4</sector>
+      <enemy unit="SOLDIER_DESERTER" count="100" />
+      <enemy unit="CROSSBOWMAN_DESERTER" count="75" />
+    </camp>
+    <camp>
+      <name>17</name>
+      <type>Normal</type>
+      <wintime>20</wintime>
+      <sector>4</sector>
+      <enemy unit="MILITIA_DESERTER" count="100" />
+      <enemy unit="ELITE_SOLDIER_DESERTER" count="90" />
+    </camp>
+    <camp>
+      <name>18</name>
+      <type>Boss</type>
+      <wintime>120</wintime>
+      <sector>4</sector>
+      <enemy unit="ELITE_SOLDIER_DESERTER" count="50" />
+      <enemy unit="CROSSBOWMAN_DESERTER" count="50" />
+      <enemy unit="CANNONEER_DESERTER" count="25" />
+      <enemy unit="BIG_BERTHA" count="1" />
+    </camp>
+  </camps>
+</quest>

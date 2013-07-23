@@ -55,6 +55,7 @@
     <Compile Include="Functions\IFunction.cs" />
     <Compile Include="Functions\LossesRecoveryTimeFunction.cs" />
     <Compile Include="Functions\PriceFunction.cs" />
+    <Compile Include="Helper\Helper.cs" />
     <Compile Include="Helper\ImageHelper.cs" />
     <Compile Include="Price\Price.cs" />
     <Compile Include="Price\ProductEnum.cs" />
@@ -100,6 +101,8 @@
     <Compile Include="Types\BattleSideType.cs" />
     <Compile Include="Types\CampWinTime.cs" />
     <Compile Include="Types\EnemyUnits.cs" />
+    <Compile Include="Types\EnemyUnitsEnum.cs" />
+    <Compile Include="Types\IXMLSerializable.cs" />
     <Compile Include="Types\LossesPrice.cs" />
     <Compile Include="Types\LossesProduct.cs" />
     <Compile Include="Types\MultiWaveBattleCompleteHandler.cs" />
@@ -123,7 +126,7 @@
     <Compile Include="Types\PlayerUnits.cs" />
     <Compile Include="Types\RoundStateHandler.cs" />
     <Compile Include="Types\Simulation\UnitAttack.cs" />
-    <Compile Include="Types\Squad.cs" />
+    <Compile Include="Types\Camp.cs" />
     <Compile Include="Types\StatisticsLossesPrice.cs" />
     <Compile Include="Types\StatisticsLossesProduct.cs" />
     <Compile Include="Types\Unit.cs" />
@@ -227,7 +230,7 @@
     <EmbeddedResource Include="Quests\Icons\Die_schwarzen_Priester.png" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Quests\Maps\die-schwarzen-priester.jpg" />
+    <None Include="Quests\Maps\die-schwarzen-priester.jpg" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Quests\Images\general.png" />
@@ -372,6 +375,15 @@
     <EmbeddedResource Include="Quests\Images\berserk.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>mkdir "$(TargetDir)Quests"
+mkdir "$(TargetDir)Quests\Maps"
+mkdir "$(TargetDir)Quests\Icons"
+
+xcopy /D /Y "$(ProjectDir)Quests\*.xml" "$(TargetDir)Quests"
+xcopy /D /Y "$(ProjectDir)Quests\Icons" "$(TargetDir)Quests\Icons"
+xcopy /D /Y "$(ProjectDir)Quests\Maps" "$(TargetDir)Quests\Maps"</PostBuildEvent>
+  </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">

@@ -26,22 +26,22 @@ namespace TheSettlersCalculator.Quests
 			Units = InitializeUnits().ToArray();
 			Camps = InitializeCamps().ToArray();
 
-			Icon = ImageHelper.LoadPng("TheSettlersCalculator.Quests.Icons.Die_dunkle_Bruderschaft.png");
+			IconPath = "TheSettlersCalculator.Quests.Icons.Die_dunkle_Bruderschaft.png";
 		}
 		#endregion
 
 		private static List<Unit> InitializeUnits()
 		{
 			List<Unit> units = new List<Unit>();
-			units.Add(EnemyUnits.Units[EnemyUnits.NIGHT_SPAWN]);
-			units.Add(EnemyUnits.Units[EnemyUnits.CULTIST]);
-			units.Add(EnemyUnits.Units[EnemyUnits.SWAMP_WITCH]);
-			units.Add(EnemyUnits.Units[EnemyUnits.SHADOWS_NEAKER]);
-			units.Add(EnemyUnits.Units[EnemyUnits.FANATIC]);
-			units.Add(EnemyUnits.Units[EnemyUnits.DARK_PRIEST]);
-			units.Add(EnemyUnits.Units[EnemyUnits.FIRE_DANCER]);
-			units.Add(EnemyUnits.Units[EnemyUnits.DANCING_DERVISH]);
-			units.Add(EnemyUnits.Units[EnemyUnits.DARK_HIGH_PRIEST]);
+			units.Add(EnemyUnits.Units[(int)EnemyUnitsEnum.NIGHT_SPAWN]);
+			units.Add(EnemyUnits.Units[(int)EnemyUnitsEnum.CULTIST]);
+			units.Add(EnemyUnits.Units[(int)EnemyUnitsEnum.SWAMP_WITCH]);
+			units.Add(EnemyUnits.Units[(int)EnemyUnitsEnum.SHADOWS_NEAKER]);
+			units.Add(EnemyUnits.Units[(int)EnemyUnitsEnum.FANATIC]);
+			units.Add(EnemyUnits.Units[(int)EnemyUnitsEnum.DARK_PRIEST]);
+			units.Add(EnemyUnits.Units[(int)EnemyUnitsEnum.FIRE_DANCER]);
+			units.Add(EnemyUnits.Units[(int)EnemyUnitsEnum.DANCING_DERVISH]);
+			units.Add(EnemyUnits.Units[(int)EnemyUnitsEnum.DARK_HIGH_PRIEST]);
 			return units;
 		}
 

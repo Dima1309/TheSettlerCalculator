@@ -1,0 +1,111 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<quest>
+  <name>QUEST_ISLAND_OF_THE_PIRATES</name>
+  <map>\Quests\Maps\</map>
+  <icon>\Quests\Icons\Insel_der_Freibeuter.png</icon>
+  <enemies>
+    <enemy>CALTROP</enemy>
+    <enemy>DECKSCRUBBER</enemy>
+    <enemy>SABER_RATTLER</enemy>
+    <enemy>CRAZY_COOK</enemy>
+    <enemy>GUNMAN</enemy>
+    <enemy>KNIFETHROWER</enemy>
+    <enemy>PETTY_OFFICER_2ND_CLASS</enemy>
+  </enemies>
+  <camps>
+    <camp>
+      <name>1</name>
+      <type>Normal</type>
+      <wintime>20</wintime>
+      <sector>1</sector>
+      <enemy unit="DECKSCRUBBER" count="100" />
+      <enemy unit="GUNMAN" count="50" />
+    </camp>
+    <camp>
+      <name>2</name>
+      <type>Normal</type>
+      <wintime>20</wintime>
+      <sector>1</sector>
+      <enemy unit="CALTROP" count="50" />
+      <enemy unit="DECKSCRUBBER" count="100" />
+    </camp>
+    <camp>
+      <name>3</name>
+      <type>Boss</type>
+      <wintime>20</wintime>
+      <sector>1</sector>
+      <enemy unit="CALTROP" count="50" />
+      <enemy unit="SABER_RATTLER" count="100" />
+      <enemy unit="GUNMAN" count="50" />
+    </camp>
+    <camp>
+      <name>4</name>
+      <type>Normal</type>
+      <wintime>20</wintime>
+      <sector>2</sector>
+      <enemy unit="CALTROP" count="60" />
+      <enemy unit="DECKSCRUBBER" count="60" />
+      <enemy unit="KNIFETHROWER" count="60" />
+    </camp>
+    <camp>
+      <name>5</name>
+      <type>Normal</type>
+      <wintime>20</wintime>
+      <sector>2</sector>
+      <enemy unit="CALTROP" count="40" />
+      <enemy unit="SABER_RATTLER" count="40" />
+      <enemy unit="GUNMAN" count="40" />
+    </camp>
+    <camp>
+      <name>6</name>
+      <type>Boss</type>
+      <wintime>20</wintime>
+      <sector>2</sector>
+      <enemy unit="CALTROP" count="80" />
+      <enemy unit="SABER_RATTLER" count="80" />
+      <enemy unit="PETTY_OFFICER_2ND_CLASS" count="2" />
+    </camp>
+    <camp>
+      <name>W1</name>
+      <type>Ambush</type>
+      <wintime>20</wintime>
+      <sector>3</sector>
+      <enemy unit="CALTROP" count="100" />
+    </camp>
+    <camp>
+      <name>7</name>
+      <type>Normal</type>
+      <wintime>20</wintime>
+      <sector>3</sector>
+      <enemy unit="CALTROP" count="90" />
+      <enemy unit="SABER_RATTLER" count="90" />
+    </camp>
+    <camp>
+      <name>8</name>
+      <type>Normal</type>
+      <wintime>20</wintime>
+      <sector>3</sector>
+      <enemy unit="CALTROP" count="30" />
+      <enemy unit="DECKSCRUBBER" count="100" />
+      <enemy unit="GUNMAN" count="40" />
+    </camp>
+    <camp>
+      <name>9</name>
+      <type>Normal</type>
+      <wintime>20</wintime>
+      <sector>3</sector>
+      <enemy unit="CALTROP" count="100" />
+      <enemy unit="SABER_RATTLER" count="70" />
+    </camp>
+    <camp>
+      <name>10</name>
+      <type>Boss</type>
+      <wintime>20</wintime>
+      <sector>3</sector>
+      <enemy unit="SABER_RATTLER" count="100" />
+      <enemy unit="CRAZY_COOK" count="1" />
+      <enemy unit="GUNMAN" count="70" />
+      <enemy unit="PETTY_OFFICER_2ND_CLASS" count="10" />
+    </camp>
+  </camps>
+</quest>

@@ -1,0 +1,258 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<quest>
+  <name>QUEST_DIE_NORDMANNER</name>
+  <map>\Quests\Maps\</map>
+  <icon>\Quests\Icons\Die_Nordmanner.png</icon>
+  <enemies>
+    <enemy>JOMVIKING</enemy>
+    <enemy>HOUSECARL</enemy>
+    <enemy>KARL</enemy>
+    <enemy>THRALL</enemy>
+    <enemy>VALKYRIE</enemy>
+    <enemy>BERSERK</enemy>
+    <enemy>WOLF</enemy>
+  </enemies>
+  <camps>
+    <camp>
+      <name>W1</name>
+      <type>Ambush</type>
+      <wintime>20</wintime>
+      <sector>1</sector>
+      <enemy unit="WOLF" count="150" />
+    </camp>
+    <camp>
+      <name>1</name>
+      <type>Normal</type>
+      <wintime>20</wintime>
+      <sector>1</sector>
+      <enemy unit="KARL" count="100" />
+      <enemy unit="VALKYRIE" count="50" />
+    </camp>
+    <camp>
+      <name>2</name>
+      <type>Normal</type>
+      <wintime>20</wintime>
+      <sector>1</sector>
+      <enemy unit="KARL" count="50" />
+      <enemy unit="VALKYRIE" count="75" />
+    </camp>
+    <camp>
+      <name>3</name>
+      <type>Normal</type>
+      <wintime>20</wintime>
+      <sector>1</sector>
+      <enemy unit="HOUSECARL" count="50" />
+      <enemy unit="THRALL" count="100" />
+    </camp>
+    <camp>
+      <name>4</name>
+      <type>Normal</type>
+      <wintime>20</wintime>
+      <sector>1</sector>
+      <enemy unit="HOUSECARL" count="50" />
+      <enemy unit="THRALL" count="50" />
+      <enemy unit="VALKYRIE" count="25" />
+    </camp>
+    <camp>
+      <name>5</name>
+      <type>Boss</type>
+      <wintime>20</wintime>
+      <sector>1</sector>
+      <enemy unit="HOUSECARL" count="75" />
+      <enemy unit="VALKYRIE" count="50" />
+      <enemy unit="BERSERK" count="5" />
+    </camp>
+    <camp>
+      <name>6</name>
+      <type>Normal</type>
+      <wintime>20</wintime>
+      <sector>1</sector>
+      <enemy unit="HOUSECARL" count="50" />
+      <enemy unit="THRALL" count="50" />
+      <enemy unit="VALKYRIE" count="25" />
+    </camp>
+    <camp>
+      <name>7</name>
+      <type>Normal</type>
+      <wintime>20</wintime>
+      <sector>1</sector>
+      <enemy unit="HOUSECARL" count="50" />
+      <enemy unit="THRALL" count="100" />
+    </camp>
+    <camp>
+      <name>8</name>
+      <type>Normal</type>
+      <wintime>20</wintime>
+      <sector>1</sector>
+      <enemy unit="KARL" count="50" />
+      <enemy unit="VALKYRIE" count="75" />
+    </camp>
+    <camp>
+      <name>9</name>
+      <type>Normal</type>
+      <wintime>20</wintime>
+      <sector>1</sector>
+      <enemy unit="KARL" count="100" />
+      <enemy unit="VALKYRIE" count="50" />
+    </camp>
+    <camp>
+      <name>10</name>
+      <type>Normal</type>
+      <wintime>20</wintime>
+      <sector>2</sector>
+      <enemy unit="KARL" count="150" />
+    </camp>
+    <camp>
+      <name>11</name>
+      <type>Normal</type>
+      <wintime>20</wintime>
+      <sector>2</sector>
+      <enemy unit="HOUSECARL" count="50" />
+      <enemy unit="KARL" count="75" />
+    </camp>
+    <camp>
+      <name>12</name>
+      <type>Normal</type>
+      <wintime>20</wintime>
+      <sector>2</sector>
+      <enemy unit="HOUSECARL" count="75" />
+      <enemy unit="KARL" count="30" />
+    </camp>
+    <camp>
+      <name>13</name>
+      <type>Normal</type>
+      <wintime>20</wintime>
+      <sector>2</sector>
+      <enemy unit="HOUSECARL" count="50" />
+      <enemy unit="KARL" count="50" />
+      <enemy unit="VALKYRIE" count="50" />
+    </camp>
+    <camp>
+      <name>14</name>
+      <type>Normal</type>
+      <wintime>20</wintime>
+      <sector>2</sector>
+      <enemy unit="HOUSECARL" count="50" />
+      <enemy unit="VALKYRIE" count="50" />
+    </camp>
+    <camp>
+      <name>15</name>
+      <type>Boss</type>
+      <wintime>20</wintime>
+      <sector>2</sector>
+      <enemy unit="JOMVIKING" count="10" />
+      <enemy unit="HOUSECARL" count="100" />
+      <enemy unit="VALKYRIE" count="50" />
+    </camp>
+    <camp>
+      <name>16</name>
+      <type>Normal</type>
+      <wintime>20</wintime>
+      <sector>3</sector>
+      <enemy unit="HOUSECARL" count="50" />
+      <enemy unit="KARL" count="75" />
+    </camp>
+    <camp>
+      <name>17</name>
+      <type>Normal</type>
+      <wintime>20</wintime>
+      <sector>3</sector>
+      <enemy unit="HOUSECARL" count="75" />
+      <enemy unit="VALKYRIE" count="50" />
+    </camp>
+    <camp>
+      <name>18</name>
+      <type>Normal</type>
+      <wintime>20</wintime>
+      <sector>3</sector>
+      <enemy unit="HOUSECARL" count="100" />
+    </camp>
+    <camp>
+      <name>19</name>
+      <type>Normal</type>
+      <wintime>20</wintime>
+      <sector>3</sector>
+      <enemy unit="VALKYRIE" count="75" />
+    </camp>
+    <camp>
+      <name>20</name>
+      <type>Normal</type>
+      <wintime>20</wintime>
+      <sector>3</sector>
+      <enemy unit="HOUSECARL" count="75" />
+    </camp>
+    <camp>
+      <name>21</name>
+      <type>Boss</type>
+      <wintime>20</wintime>
+      <sector>3</sector>
+      <enemy unit="JOMVIKING" count="20" />
+      <enemy unit="HOUSECARL" count="50" />
+      <enemy unit="VALKYRIE" count="50" />
+      <enemy unit="BERSERK" count="15" />
+    </camp>
+    <camp>
+      <name>22</name>
+      <type>Normal</type>
+      <wintime>20</wintime>
+      <sector>4</sector>
+      <enemy unit="HOUSECARL" count="50" />
+      <enemy unit="VALKYRIE" count="25" />
+    </camp>
+    <camp>
+      <name>23</name>
+      <type>Normal</type>
+      <wintime>20</wintime>
+      <sector>4</sector>
+      <enemy unit="HOUSECARL" count="75" />
+      <enemy unit="KARL" count="50" />
+    </camp>
+    <camp>
+      <name>24</name>
+      <type>Normal</type>
+      <wintime>20</wintime>
+      <sector>4</sector>
+      <enemy unit="HOUSECARL" count="120" />
+    </camp>
+    <camp>
+      <name>25</name>
+      <type>Boss</type>
+      <wintime>20</wintime>
+      <sector>4</sector>
+      <enemy unit="JOMVIKING" count="20" />
+      <enemy unit="HOUSECARL" count="100" />
+      <enemy unit="KARL" count="50" />
+      <enemy unit="BERSERK" count="15" />
+    </camp>
+    <camp>
+      <name>26</name>
+      <type>Normal</type>
+      <wintime>20</wintime>
+      <sector>5</sector>
+      <enemy unit="HOUSECARL" count="150" />
+    </camp>
+    <camp>
+      <name>27</name>
+      <type>Normal</type>
+      <wintime>20</wintime>
+      <sector>5</sector>
+      <enemy unit="VALKYRIE" count="150" />
+    </camp>
+    <camp>
+      <name>28</name>
+      <type>Normal</type>
+      <wintime>20</wintime>
+      <sector>5</sector>
+      <enemy unit="KARL" count="150" />
+    </camp>
+    <camp>
+      <name>29</name>
+      <type>Boss</type>
+      <wintime>20</wintime>
+      <sector>5</sector>
+      <enemy unit="JOMVIKING" count="50" />
+      <enemy unit="HOUSECARL" count="120" />
+      <enemy unit="BERSERK" count="30" />
+    </camp>
+  </camps>
+</quest>

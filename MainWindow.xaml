@@ -761,6 +761,7 @@
                         </Expander.Header>
 
                         <StackPanel Orientation="Vertical">
+                            <Button Width="125" Click="Button_Click_2">Сохранить цены</Button>
                         <ItemsControl ItemsSource="{Binding Products}">
                             <ItemsControl.ItemTemplate>
                                 <DataTemplate>
@@ -780,6 +781,7 @@
                                 </DataTemplate>
                             </ItemsControl.ItemTemplate>
                         </ItemsControl>
+                            <Button Width="125" Click="Button_Click_2">Сохранить цены</Button>
                         </StackPanel>
                     </Expander>                    
                 </StackPanel>

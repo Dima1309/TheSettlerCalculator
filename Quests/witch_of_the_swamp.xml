@@ -1,0 +1,95 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<quest>
+  <name>QUEST_WITCH_OF_THE_SWAMP</name>
+  <map>\Quests\Maps\</map>
+  <icon>\Quests\Icons\Sumpfhexe.png</icon>
+  <enemies>
+    <enemy>CULTIST</enemy>
+    <enemy>SWAMP_WITCH</enemy>
+    <enemy>SHADOWS_NEAKER</enemy>
+    <enemy>FANATIC</enemy>
+    <enemy>DARK_PRIEST</enemy>
+    <enemy>DARK_HIGH_PRIEST</enemy>
+  </enemies>
+  <camps>
+    <camp>
+      <name>1</name>
+      <type>Boss</type>
+      <wintime>20</wintime>
+      <sector>1</sector>
+      <enemy unit="CULTIST" count="40" />
+    </camp>
+    <camp>
+      <name>2</name>
+      <type>Normal</type>
+      <wintime>20</wintime>
+      <sector>2</sector>
+      <enemy unit="CULTIST" count="50" />
+    </camp>
+    <camp>
+      <name>3</name>
+      <type>Boss</type>
+      <wintime>20</wintime>
+      <sector>2</sector>
+      <enemy unit="CULTIST" count="40" />
+      <enemy unit="FANATIC" count="40" />
+    </camp>
+    <camp>
+      <name>4</name>
+      <type>Normal</type>
+      <wintime>20</wintime>
+      <sector>3</sector>
+      <enemy unit="CULTIST" count="60" />
+    </camp>
+    <camp>
+      <name>5</name>
+      <type>Normal</type>
+      <wintime>20</wintime>
+      <sector>3</sector>
+      <enemy unit="SHADOWS_NEAKER" count="60" />
+      <enemy unit="DARK_PRIEST" count="40" />
+    </camp>
+    <camp>
+      <name>6</name>
+      <type>Boss</type>
+      <wintime>20</wintime>
+      <sector>3</sector>
+      <enemy unit="CULTIST" count="33" />
+      <enemy unit="SHADOWS_NEAKER" count="33" />
+      <enemy unit="DARK_PRIEST" count="33" />
+    </camp>
+    <camp>
+      <name>7</name>
+      <type>Normal</type>
+      <wintime>20</wintime>
+      <sector>4</sector>
+      <enemy unit="CULTIST" count="120" />
+    </camp>
+    <camp>
+      <name>8</name>
+      <type>Normal</type>
+      <wintime>20</wintime>
+      <sector>4</sector>
+      <enemy unit="CULTIST" count="80" />
+      <enemy unit="DARK_PRIEST" count="60" />
+    </camp>
+    <camp>
+      <name>9</name>
+      <type>Boss</type>
+      <wintime>20</wintime>
+      <sector>4</sector>
+      <enemy unit="CULTIST" count="40" />
+      <enemy unit="SHADOWS_NEAKER" count="120" />
+      <enemy unit="DARK_HIGH_PRIEST" count="1" />
+    </camp>
+    <camp>
+      <name>10</name>
+      <type>Boss</type>
+      <wintime>140</wintime>
+      <sector>5</sector>
+      <enemy unit="CULTIST" count="100" />
+      <enemy unit="SWAMP_WITCH" count="1" />
+      <enemy unit="DARK_PRIEST" count="99" />
+    </camp>
+  </camps>
+</quest>

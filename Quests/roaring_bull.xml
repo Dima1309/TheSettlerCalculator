@@ -1,0 +1,349 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<quest>
+  <name>QUEST_ROARING_BULL</name>
+  <map>\Quests\Maps\</map>
+  <icon>\Quests\Icons\Rasender_Bulle.png</icon>
+  <enemies>
+    <enemy>CULTIST</enemy>
+    <enemy>SHADOWS_NEAKER</enemy>
+    <enemy>DARK_PRIEST</enemy>
+    <enemy>FIRE_DANCER</enemy>
+    <enemy>DARK_HIGH_PRIEST</enemy>
+    <enemy>NOMAD</enemy>
+    <enemy>LANCE_RIDER</enemy>
+    <enemy>RIDING_BOWMAN</enemy>
+    <enemy>RIDING_AMAZONIAN</enemy>
+    <enemy>CATAPHRACT</enemy>
+    <enemy>UPROARIOUS_BULL</enemy>
+    <enemy>COMPOSITE_BOW</enemy>
+  </enemies>
+  <camps>
+    <camp>
+      <name>1</name>
+      <type>Normal</type>
+      <wintime>20</wintime>
+      <sector>1</sector>
+      <enemy unit="NOMAD" count="100" />
+      <enemy unit="COMPOSITE_BOW" count="100" />
+    </camp>
+    <camp>
+      <name>2</name>
+      <type>Normal</type>
+      <wintime>20</wintime>
+      <sector>1</sector>
+      <enemy unit="NOMAD" count="80" />
+      <enemy unit="LANCE_RIDER" count="50" />
+      <enemy unit="RIDING_BOWMAN" count="70" />
+    </camp>
+    <camp>
+      <name>3</name>
+      <type>Normal</type>
+      <wintime>20</wintime>
+      <sector>1</sector>
+      <enemy unit="NOMAD" count="100" />
+      <enemy unit="RIDING_BOWMAN" count="100" />
+    </camp>
+    <camp>
+      <name>4</name>
+      <type>Normal</type>
+      <wintime>20</wintime>
+      <sector>1</sector>
+      <enemy unit="NOMAD" count="100" />
+      <enemy unit="LANCE_RIDER" count="30" />
+      <enemy unit="COMPOSITE_BOW" count="50" />
+    </camp>
+    <camp>
+      <name>5</name>
+      <type>Boss</type>
+      <wintime>20</wintime>
+      <sector>1</sector>
+      <enemy unit="LANCE_RIDER" count="70" />
+      <enemy unit="RIDING_BOWMAN" count="80" />
+      <enemy unit="RIDING_AMAZONIAN" count="20" />
+    </camp>
+    <camp>
+      <name>6</name>
+      <type>Normal</type>
+      <wintime>20</wintime>
+      <sector>2</sector>
+      <enemy unit="NOMAD" count="120" />
+      <enemy unit="COMPOSITE_BOW" count="80" />
+    </camp>
+    <camp>
+      <name>7</name>
+      <type>Normal</type>
+      <wintime>20</wintime>
+      <sector>2</sector>
+      <enemy unit="NOMAD" count="120" />
+      <enemy unit="LANCE_RIDER" count="40" />
+      <enemy unit="COMPOSITE_BOW" count="30" />
+    </camp>
+    <camp>
+      <name>8</name>
+      <type>Normal</type>
+      <wintime>20</wintime>
+      <sector>2</sector>
+      <enemy unit="LANCE_RIDER" count="80" />
+      <enemy unit="RIDING_BOWMAN" count="80" />
+    </camp>
+    <camp>
+      <name>9</name>
+      <type>Normal</type>
+      <wintime>20</wintime>
+      <sector>2</sector>
+      <enemy unit="LANCE_RIDER" count="80" />
+      <enemy unit="RIDING_BOWMAN" count="100" />
+    </camp>
+    <camp>
+      <name>10</name>
+      <type>Boss</type>
+      <wintime>20</wintime>
+      <sector>2</sector>
+      <enemy unit="NOMAD" count="50" />
+      <enemy unit="LANCE_RIDER" count="50" />
+      <enemy unit="RIDING_AMAZONIAN" count="60" />
+    </camp>
+    <camp>
+      <name>11</name>
+      <type>Normal</type>
+      <wintime>20</wintime>
+      <sector>3</sector>
+      <enemy unit="NOMAD" count="80" />
+      <enemy unit="LANCE_RIDER" count="40" />
+      <enemy unit="RIDING_BOWMAN" count="80" />
+    </camp>
+    <camp>
+      <name>12</name>
+      <type>Normal</type>
+      <wintime>20</wintime>
+      <sector>3</sector>
+      <enemy unit="LANCE_RIDER" count="80" />
+      <enemy unit="RIDING_BOWMAN" count="120" />
+    </camp>
+    <camp>
+      <name>13</name>
+      <type>Normal</type>
+      <wintime>20</wintime>
+      <sector>3</sector>
+      <enemy unit="NOMAD" count="80" />
+      <enemy unit="LANCE_RIDER" count="70" />
+      <enemy unit="RIDING_AMAZONIAN" count="40" />
+    </camp>
+    <camp>
+      <name>14</name>
+      <type>Normal</type>
+      <wintime>20</wintime>
+      <sector>3</sector>
+      <enemy unit="NOMAD" count="50" />
+      <enemy unit="LANCE_RIDER" count="80" />
+      <enemy unit="CATAPHRACT" count="50" />
+    </camp>
+    <camp>
+      <name>15</name>
+      <type>Boss</type>
+      <wintime>20</wintime>
+      <sector>3</sector>
+      <enemy unit="LANCE_RIDER" count="70" />
+      <enemy unit="RIDING_AMAZONIAN" count="80" />
+      <enemy unit="CATAPHRACT" count="40" />
+    </camp>
+    <camp>
+      <name>16</name>
+      <type>Normal</type>
+      <wintime>20</wintime>
+      <sector>4</sector>
+      <enemy unit="NOMAD" count="50" />
+      <enemy unit="RIDING_BOWMAN" count="150" />
+    </camp>
+    <camp>
+      <name>17</name>
+      <type>Normal</type>
+      <wintime>20</wintime>
+      <sector>4</sector>
+      <enemy unit="NOMAD" count="100" />
+      <enemy unit="RIDING_AMAZONIAN" count="90" />
+    </camp>
+    <camp>
+      <name>18</name>
+      <type>Normal</type>
+      <wintime>20</wintime>
+      <sector>4</sector>
+      <enemy unit="LANCE_RIDER" count="100" />
+      <enemy unit="RIDING_BOWMAN" count="100" />
+    </camp>
+    <camp>
+      <name>19</name>
+      <type>Normal</type>
+      <wintime>20</wintime>
+      <sector>4</sector>
+      <enemy unit="NOMAD" count="60" />
+      <enemy unit="LANCE_RIDER" count="50" />
+      <enemy unit="RIDING_AMAZONIAN" count="80" />
+    </camp>
+    <camp>
+      <name>20</name>
+      <type>Boss</type>
+      <wintime>20</wintime>
+      <sector>4</sector>
+      <enemy unit="NOMAD" count="60" />
+      <enemy unit="RIDING_AMAZONIAN" count="70" />
+      <enemy unit="CATAPHRACT" count="40" />
+    </camp>
+    <camp>
+      <name>21</name>
+      <type>Normal</type>
+      <wintime>20</wintime>
+      <sector>5</sector>
+      <enemy unit="NOMAD" count="120" />
+      <enemy unit="COMPOSITE_BOW" count="80" />
+    </camp>
+    <camp>
+      <name>22</name>
+      <type>Normal</type>
+      <wintime>20</wintime>
+      <sector>5</sector>
+      <enemy unit="NOMAD" count="150" />
+      <enemy unit="COMPOSITE_BOW" count="50" />
+    </camp>
+    <camp>
+      <name>23</name>
+      <type>Normal</type>
+      <wintime>20</wintime>
+      <sector>5</sector>
+      <enemy unit="NOMAD" count="80" />
+      <enemy unit="COMPOSITE_BOW" count="120" />
+    </camp>
+    <camp>
+      <name>24</name>
+      <type>Normal</type>
+      <wintime>20</wintime>
+      <sector>5</sector>
+      <enemy unit="NOMAD" count="50" />
+      <enemy unit="LANCE_RIDER" count="50" />
+      <enemy unit="RIDING_BOWMAN" count="80" />
+    </camp>
+    <camp>
+      <name>25</name>
+      <type>Normal</type>
+      <wintime>20</wintime>
+      <sector>5</sector>
+      <enemy unit="NOMAD" count="100" />
+      <enemy unit="RIDING_BOWMAN" count="60" />
+    </camp>
+    <camp>
+      <name>26</name>
+      <type>Boss</type>
+      <wintime>20</wintime>
+      <sector>5</sector>
+      <enemy unit="LANCE_RIDER" count="80" />
+      <enemy unit="RIDING_BOWMAN" count="40" />
+      <enemy unit="RIDING_AMAZONIAN" count="60" />
+    </camp>
+    <camp>
+      <name>27</name>
+      <type>Normal</type>
+      <wintime>20</wintime>
+      <sector>6</sector>
+      <enemy unit="LANCE_RIDER" count="90" />
+      <enemy unit="CATAPHRACT" count="100" />
+    </camp>
+    <camp>
+      <name>28</name>
+      <type>Normal</type>
+      <wintime>20</wintime>
+      <sector>0</sector>
+      <enemy unit="NOMAD" count="110" />
+      <enemy unit="RIDING_AMAZONIAN" count="40" />
+      <enemy unit="CATAPHRACT" count="50" />
+    </camp>
+    <camp>
+      <name>29</name>
+      <type>Normal</type>
+      <wintime>20</wintime>
+      <sector>6</sector>
+      <enemy unit="NOMAD" count="90" />
+      <enemy unit="LANCE_RIDER" count="60" />
+      <enemy unit="CATAPHRACT" count="50" />
+    </camp>
+    <camp>
+      <name>30</name>
+      <type>Boss</type>
+      <wintime>140</wintime>
+      <sector>6</sector>
+      <enemy unit="NOMAD" count="70" />
+      <enemy unit="LANCE_RIDER" count="100" />
+      <enemy unit="CATAPHRACT" count="30" />
+      <enemy unit="UPROARIOUS_BULL" count="1" />
+    </camp>
+    <camp>
+      <name>31</name>
+      <type>Normal</type>
+      <wintime>20</wintime>
+      <sector>7</sector>
+      <enemy unit="CULTIST" count="100" />
+      <enemy unit="FIRE_DANCER" count="100" />
+    </camp>
+    <camp>
+      <name>32</name>
+      <type>Normal</type>
+      <wintime>20</wintime>
+      <sector>7</sector>
+      <enemy unit="CULTIST" count="40" />
+      <enemy unit="DARK_PRIEST" count="60" />
+      <enemy unit="FIRE_DANCER" count="100" />
+    </camp>
+    <camp>
+      <name>33</name>
+      <type>Normal</type>
+      <wintime>20</wintime>
+      <sector>7</sector>
+      <enemy unit="CULTIST" count="70" />
+      <enemy unit="SHADOWS_NEAKER" count="50" />
+      <enemy unit="FIRE_DANCER" count="80" />
+    </camp>
+    <camp>
+      <name>34</name>
+      <type>Normal</type>
+      <wintime>20</wintime>
+      <sector>7</sector>
+      <enemy unit="CULTIST" count="100" />
+      <enemy unit="SHADOWS_NEAKER" count="80" />
+      <enemy unit="DARK_PRIEST" count="20" />
+    </camp>
+    <camp>
+      <name>35</name>
+      <type>Boss</type>
+      <wintime>140</wintime>
+      <sector>7</sector>
+      <enemy unit="CULTIST" count="80" />
+      <enemy unit="FIRE_DANCER" count="120" />
+    </camp>
+    <camp>
+      <name>36</name>
+      <type>Normal</type>
+      <wintime>20</wintime>
+      <sector>8</sector>
+      <enemy unit="CULTIST" count="100" />
+      <enemy unit="SHADOWS_NEAKER" count="40" />
+      <enemy unit="FIRE_DANCER" count="60" />
+    </camp>
+    <camp>
+      <name>37</name>
+      <type>Normal</type>
+      <wintime>20</wintime>
+      <sector>8</sector>
+      <enemy unit="CULTIST" count="150" />
+      <enemy unit="FIRE_DANCER" count="50" />
+    </camp>
+    <camp>
+      <name>38</name>
+      <type>Boss</type>
+      <wintime>140</wintime>
+      <sector>8</sector>
+      <enemy unit="CULTIST" count="80" />
+      <enemy unit="SHADOWS_NEAKER" count="50" />
+      <enemy unit="FIRE_DANCER" count="70" />
+      <enemy unit="DARK_HIGH_PRIEST" count="1" />
+    </camp>
+  </camps>
+</quest>

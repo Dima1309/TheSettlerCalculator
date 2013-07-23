@@ -19,15 +19,15 @@ namespace TheSettlersCalculator.Quests
 			Units = InitializeUnits().ToArray();
 			Camps = InitializeCamps().ToArray();
 
-			Icon = ImageHelper.LoadPng("TheSettlersCalculator.Quests.Icons.Kopfgeldjager.png");
+			IconPath = "TheSettlersCalculator.Quests.Icons.Kopfgeldjager.png";
 		}
 		#endregion
 
 		private static List<Unit> InitializeUnits()
 		{
 			List<Unit> units = new List<Unit>();
-			units.Add(EnemyUnits.Units[EnemyUnits.SCAVENGER]);
-			units.Add(EnemyUnits.Units[EnemyUnits.STONE_THROWER]);
+			units.Add(EnemyUnits.Units[(int)EnemyUnitsEnum.SCAVENGER]);
+			units.Add(EnemyUnits.Units[(int)EnemyUnitsEnum.STONE_THROWER]);
 			return units;
 		}
 

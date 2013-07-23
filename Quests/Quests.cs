@@ -1,9 +1,16 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.IO;
+using System.Xml;
 
 namespace TheSettlersCalculator.Quests
 {
 	internal static class Quests
 	{
+		#region Constants
+		private static string QUESTS_FOLDER = "quests";
+		#endregion
+
 		#region Fields
 		private static Quest[] s_quests;
 		#endregion
@@ -15,8 +22,9 @@ namespace TheSettlersCalculator.Quests
 			{				
 				if (s_quests == null)
 				{
-					InitializeQuests();
-				}
+					//InitializeQuests();
+					Load();
+				}				
 
 				return s_quests;
 			}
@@ -51,6 +59,48 @@ namespace TheSettlersCalculator.Quests
 							new WildMaryQuest(),
 							new WitchoftheSwampQuest()
 			           	};
+		}
+
+		internal static void Load()
+		{
+			List<Quest> result = new List<Quest>();
+			if (Directory.Exists(QUESTS_FOLDER))
+			{
+				foreach(String file in Directory.GetFiles(QUESTS_FOLDER, "*.xml"))
+				{
+					String fileName = QUESTS_FOLDER + "\\" + file;
+					XmlReader reader = XmlReader.Create(fileName);
+					Quest quest = new Quest();
+					quest.FileName = fileName;
+					quest.Load(reader);
+					reader.Close();
+
+					result.Add(quest);
+				}
+			}
+
+			s_quests = result.ToArray();
+		}
+
+		internal static void Save()
+		{
+			XmlWriterSettings settings = new XmlWriterSettings();
+			settings.Indent = true;
+			foreach(Quest quest in QuestList)
+			{
+				string filename = quest.FileName;
+				if (string.IsNullOrEmpty(filename))
+				{
+					filename = Helper.Helper.getResourceName(quest.Name);
+					if(filename.StartsWith("QUEST_"))
+					{
+						filename = "Quests\\" + filename.Substring(6).ToLower() + ".xml";
+					}
+				}
+				XmlWriter writer = XmlWriter.Create(filename, settings);
+				quest.Save(writer);
+				writer.Close();
+			}
 		}
 		#endregion
 	}

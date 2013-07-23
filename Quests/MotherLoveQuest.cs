@@ -23,19 +23,19 @@ namespace TheSettlersCalculator.Quests
 			Units = InitializeUnits().ToArray();
 			Camps = InitializeCamps().ToArray();
 
-			Icon = ImageHelper.LoadPng("TheSettlersCalculator.Quests.Icons.Mutterliebe.png");
+			IconPath = "TheSettlersCalculator.Quests.Icons.Mutterliebe.png";
 		}
 		#endregion
 
 		private static List<Unit> InitializeUnits()
 		{
 			List<Unit> units = new List<Unit>();
-			units.Add(EnemyUnits.Units[EnemyUnits.WILD_MARY]);
-			units.Add(EnemyUnits.Units[EnemyUnits.CALTROP]);
-			units.Add(EnemyUnits.Units[EnemyUnits.CRAZY_COOK]);
-			units.Add(EnemyUnits.Units[EnemyUnits.GUNMAN]);
-			units.Add(EnemyUnits.Units[EnemyUnits.PETTY_OFFICER_2ND_CLASS]);
-			units.Add(EnemyUnits.Units[EnemyUnits.WOLF]);
+			units.Add(EnemyUnits.Units[(int)EnemyUnitsEnum.WILD_MARY]);
+			units.Add(EnemyUnits.Units[(int)EnemyUnitsEnum.CALTROP]);
+			units.Add(EnemyUnits.Units[(int)EnemyUnitsEnum.CRAZY_COOK]);
+			units.Add(EnemyUnits.Units[(int)EnemyUnitsEnum.GUNMAN]);
+			units.Add(EnemyUnits.Units[(int)EnemyUnitsEnum.PETTY_OFFICER_2ND_CLASS]);
+			units.Add(EnemyUnits.Units[(int)EnemyUnitsEnum.WOLF]);
 			return units;
 		}
 

@@ -5,74 +5,6 @@ namespace TheSettlersCalculator.Types
 {
 	internal static class EnemyUnits
 	{
-		#region Constants
-		internal const int SCAVENGER = 0;
-		internal const int THUG = 1;
-		internal const int STONE_THROWER = 2;
-		internal const int GUARD_DOG = 3;
-		internal const int RANGER = 4;
-		internal const int SKUNK = 5;
-		internal const int CULTIST = 6;
-		internal const int SWAMP_WITCH = 7;
-		internal const int SHADOWS_NEAKER = 8;
-		internal const int FANATIC = 9;
-		internal const int DARK_PRIEST = 10;
-		internal const int FIRE_DANCER = 11;
-		internal const int DARK_HIGH_PRIEST = 12;
-		internal const int WOLF = 13;
-		internal const int ROUGHNECK = 14;
-		internal const int ONE_EYED_BERT = 15;
-		internal const int METAL_TOOTHED = 16;
-		internal const int CHUCK = 17;
-		internal const int WILD_MARY = 18;
-		internal const int BOWMAN_DESERTER = 19;
-		internal const int CANNONEER_DESERTER = 20;
-		internal const int CAVALRY_DESERTER = 21;
-		internal const int ELITE_SOLDIER_DESERTER = 22;
-		internal const int LONGBOWMAN_DESERTER = 23;
-		internal const int MILITIA_DESERTER = 24;
-		internal const int RECRUIT_DESERTER = 25;
-		internal const int SOLDIER_DESERTER = 26;
-		internal const int CROSSBOWMAN_DESERTER = 27;
-		internal const int SIR_ROBIN = 28;
-		internal const int BIG_BERTHA = 29;
-		internal const int DECKSCRUBBER = 30;
-		internal const int SABER_RATTLER = 31;
-		internal const int KNIFETHROWER = 32;
-		internal const int GUNMAN = 33;
-		internal const int CALTROP = 34;
-		internal const int PETTY_OFFICER_2ND_CLASS = 35;
-		internal const int CRAZY_COOK = 36;
-		internal const int DANCING_DERVISH = 37;
-		internal const int NIGHT_SPAWN = 38;
-		
-		internal const int NOMAD = 39;
-		internal const int COMPOSITE_BOW = 40;
-		internal const int LANCE_RIDER = 41;
-		internal const int RIDING_BOWMAN = 42;
-		internal const int RIDING_AMAZONIAN = 43;
-		internal const int CATAPHRACT = 44;
-		internal const int UPROARIOUS_BULL = 45;
-		
-		internal const int THRALL = 46;
-		internal const int KARL = 47;
-		internal const int HOUSECARL = 48;
-		internal const int JOMVIKING = 49;
-		internal const int VALKYRIE = 50;
-		internal const int BERSERK = 51;
-		
-		internal const int CROAKER = 52;
-		internal const int JAGUAR_WARRIOR = 53;
-		internal const int SHAMAN = 54;
-		internal const int TRIBESMAN = 55;
-		internal const int FULLBACK	= 56;
-		internal const int GOALKEEPER = 57;
-		internal const int MIDFIELDER = 58;
-		internal const int STRIKER = 59;
-		
-		private const int COUNT = 60;
-		#endregion
-
 		#region Fields
 		private static Unit[] s_units;
 		#endregion
@@ -92,7 +24,7 @@ namespace TheSettlersCalculator.Types
 
 		private static void InitializeUnits()
 		{
-			s_units = new Unit[COUNT];
+			s_units = new Unit[(int)EnemyUnitsEnum.MAX];
 
 			Unit unit = new Unit();
 			unit.Name = Resources.UNIT_SCAVENGER;
@@ -103,7 +35,7 @@ namespace TheSettlersCalculator.Types
 			unit.Experience = 4;
 			unit.AttackPriority = AttackPriority.Normal;
 			unit.Icon = ImageHelper.LoadPng("TheSettlersCalculator.Quests.Images.scavenger.png");
-			s_units[SCAVENGER] = unit;
+			s_units[(int)EnemyUnitsEnum.SCAVENGER] = unit;
 
 			unit = new Unit();
 			unit.Name = Resources.UNIT_THUG;
@@ -114,7 +46,7 @@ namespace TheSettlersCalculator.Types
 			unit.Experience = 3;
 			unit.AttackPriority = AttackPriority.Normal;
 			unit.Icon = ImageHelper.LoadPng("TheSettlersCalculator.Quests.Images.thug.png");
-			s_units[THUG] = unit;
+			s_units[(int)EnemyUnitsEnum.THUG] = unit;
 
 			unit = new Unit();
 			unit.Name = Resources.UNIT_STONE_THROWER;
@@ -126,7 +58,7 @@ namespace TheSettlersCalculator.Types
 			unit.TowerBonus = true;
 			unit.AttackPriority = AttackPriority.Normal;
 			unit.Icon = ImageHelper.LoadPng("TheSettlersCalculator.Quests.Images.stoneThrower.png");
-			s_units[STONE_THROWER] = unit;
+			s_units[(int)EnemyUnitsEnum.STONE_THROWER] = unit;
 
 			unit = new Unit();
 			unit.Name = Resources.UNIT_GUARD_DOG;
@@ -138,7 +70,7 @@ namespace TheSettlersCalculator.Types
 			unit.AttackPriority = AttackPriority.AvantGarde;
 			unit.AttackWeaknessTarget = true;
 			unit.Icon = ImageHelper.LoadPng("TheSettlersCalculator.Quests.Images.dog.png");
-			s_units[GUARD_DOG] = unit;
+			s_units[(int)EnemyUnitsEnum.GUARD_DOG] = unit;
 
 			unit = new Unit();
 			unit.Name = Resources.UNIT_RANGER;
@@ -150,7 +82,7 @@ namespace TheSettlersCalculator.Types
 			unit.TowerBonus = true;
 			unit.AttackPriority = AttackPriority.Normal;
 			unit.Icon = ImageHelper.LoadPng("TheSettlersCalculator.Quests.Images.ranger.png");
-			s_units[RANGER] = unit;
+			s_units[(int)EnemyUnitsEnum.RANGER] = unit;
 
 			unit = new Unit();
 			unit.Name = Resources.UNIT_SKUNK;
@@ -162,7 +94,7 @@ namespace TheSettlersCalculator.Types
 			unit.AttackPriority = AttackPriority.RearGuard;
 			unit.AttackOnArea = true;
 			unit.Icon = ImageHelper.LoadPng("TheSettlersCalculator.Quests.Images.skunk.png");
-			s_units[SKUNK] = unit;
+			s_units[(int)EnemyUnitsEnum.SKUNK] = unit;
 
 			unit = new Unit();
 			unit.Name = Resources.UNIT_CULTIST;
@@ -173,7 +105,7 @@ namespace TheSettlersCalculator.Types
 			unit.Experience = 3;
 			unit.AttackPriority = AttackPriority.Normal;
 			unit.Icon = ImageHelper.LoadPng("TheSettlersCalculator.Quests.Images.Cultist.png");
-			s_units[CULTIST] = unit;
+			s_units[(int)EnemyUnitsEnum.CULTIST] = unit;
 
 			unit = new Unit();
 			unit.Name = Resources.UNIT_SWAMP_WITCH;
@@ -185,7 +117,7 @@ namespace TheSettlersCalculator.Types
 			unit.AttackPriority = AttackPriority.AvantGarde;
 			unit.AttackOnArea = true;
 			unit.Icon = ImageHelper.LoadPng("TheSettlersCalculator.Quests.Images.swampWitch.png");
-			s_units[SWAMP_WITCH] = unit;
+			s_units[(int)EnemyUnitsEnum.SWAMP_WITCH] = unit;
 
 			unit = new Unit();
 			unit.Name = Resources.UNIT_SHADOW_SNEAKER;
@@ -197,7 +129,7 @@ namespace TheSettlersCalculator.Types
 			unit.AttackPriority = AttackPriority.AvantGarde;
 			unit.AttackWeaknessTarget = true;
 			unit.Icon = ImageHelper.LoadPng("TheSettlersCalculator.Quests.Images.ShadowSneaker.png");
-			s_units[SHADOWS_NEAKER] = unit;
+			s_units[(int)EnemyUnitsEnum.SHADOWS_NEAKER] = unit;
 
 			unit = new Unit();
 			unit.Name = Resources.UNIT_FANATIC;
@@ -209,7 +141,7 @@ namespace TheSettlersCalculator.Types
 			unit.TowerBonus = true;
 			unit.AttackPriority = AttackPriority.Normal;
 			unit.Icon = ImageHelper.LoadPng("TheSettlersCalculator.Quests.Images.Fanatic.png");
-			s_units[FANATIC] = unit;
+			s_units[(int)EnemyUnitsEnum.FANATIC] = unit;
 
 			unit = new Unit();
 			unit.Name = Resources.UNIT_DARK_PRIEST;
@@ -221,7 +153,7 @@ namespace TheSettlersCalculator.Types
 			unit.TowerBonus = true;
 			unit.AttackPriority = AttackPriority.Normal;
 			unit.Icon = ImageHelper.LoadPng("TheSettlersCalculator.Quests.Images.DarkPriest.png");
-			s_units[DARK_PRIEST] = unit;
+			s_units[(int)EnemyUnitsEnum.DARK_PRIEST] = unit;
 
 			unit = new Unit();
 			unit.Name = Resources.UNIT_FIRE_DANCER;
@@ -233,7 +165,7 @@ namespace TheSettlersCalculator.Types
 			unit.TowerBonus = true;
 			unit.AttackPriority = AttackPriority.Normal;
 			unit.Icon = ImageHelper.LoadPng("TheSettlersCalculator.Quests.Images.Firedancer.png");
-			s_units[FIRE_DANCER] = unit;
+			s_units[(int)EnemyUnitsEnum.FIRE_DANCER] = unit;
 
 			unit = new Unit();
 			unit.Name = Resources.UNIT_DARK_HIGH_PRIEST;
@@ -245,7 +177,7 @@ namespace TheSettlersCalculator.Types
 			unit.AttackPriority = AttackPriority.RearGuard;
 			unit.AttackOnArea = true;
 			unit.Icon = ImageHelper.LoadPng("TheSettlersCalculator.Quests.Images.DarkHighPriest.png");
-			s_units[DARK_HIGH_PRIEST] = unit;
+			s_units[(int)EnemyUnitsEnum.DARK_HIGH_PRIEST] = unit;
 
 			unit = new Unit();
 			unit.Name = Resources.UNIT_WOLF;
@@ -256,7 +188,7 @@ namespace TheSettlersCalculator.Types
 			unit.Experience = 1;
 			unit.AttackPriority = AttackPriority.AvantGarde;
 			unit.Icon = ImageHelper.LoadPng("TheSettlersCalculator.Quests.Images.wolf.png");
-			s_units[WOLF] = unit;
+			s_units[(int)EnemyUnitsEnum.WOLF] = unit;
 
 			unit = new Unit();
 			unit.Name = Resources.UNIT_ROUGHNECK;
@@ -267,7 +199,7 @@ namespace TheSettlersCalculator.Types
 			unit.Experience = 6;
 			unit.AttackPriority = AttackPriority.Normal;
 			unit.Icon = ImageHelper.LoadPng("TheSettlersCalculator.Quests.Images.roughneck.png");
-			s_units[ROUGHNECK] = unit;
+			s_units[(int)EnemyUnitsEnum.ROUGHNECK] = unit;
 
 			unit = new Unit();
 			unit.Name = Resources.UNIT_ONE_EYED_BERT;
@@ -279,7 +211,7 @@ namespace TheSettlersCalculator.Types
 			unit.Experience = 100;
 			unit.AttackPriority = AttackPriority.RearGuard;
 			unit.Icon = ImageHelper.LoadPng("TheSettlersCalculator.Quests.Images.oneeyedbert.png");
-			s_units[ONE_EYED_BERT] = unit;
+			s_units[(int)EnemyUnitsEnum.ONE_EYED_BERT] = unit;
 
 			unit = new Unit();
 			unit.Name = Resources.UNIT_METAL_TOOTHED;
@@ -291,7 +223,7 @@ namespace TheSettlersCalculator.Types
 			unit.Experience = 160;
 			unit.AttackPriority = AttackPriority.RearGuard;
 			unit.Icon = ImageHelper.LoadPng("TheSettlersCalculator.Quests.Images.metal_toothed.png");
-			s_units[METAL_TOOTHED] = unit;
+			s_units[(int)EnemyUnitsEnum.METAL_TOOTHED] = unit;
 
 			unit = new Unit();
 			unit.Name = Resources.UNIT_CHUCK;
@@ -303,7 +235,7 @@ namespace TheSettlersCalculator.Types
 			unit.Experience = 250;
 			unit.AttackPriority = AttackPriority.RearGuard;
 			unit.Icon = ImageHelper.LoadPng("TheSettlersCalculator.Quests.Images.chuck.png");
-			s_units[CHUCK] = unit;
+			s_units[(int)EnemyUnitsEnum.CHUCK] = unit;
 
 			unit = new Unit();
 			unit.Name = Resources.UNIT_WILD_MARY;
@@ -315,7 +247,7 @@ namespace TheSettlersCalculator.Types
 			unit.Experience = 430;
 			unit.AttackPriority = AttackPriority.RearGuard;
 			unit.Icon = ImageHelper.LoadPng("TheSettlersCalculator.Quests.Images.wild_mary.png");
-			s_units[WILD_MARY] = unit;
+			s_units[(int)EnemyUnitsEnum.WILD_MARY] = unit;
 
 			unit.Name = Resources.UNIT_RECRUIT_DESERTER;
 			unit.Health = 40;
@@ -325,7 +257,7 @@ namespace TheSettlersCalculator.Types
 			unit.AttackPriority = AttackPriority.Normal;
 			unit.Experience = 2;
 			unit.Icon = ImageHelper.LoadPng("TheSettlersCalculator.Quests.Images.recruit.png");
-			s_units[RECRUIT_DESERTER] = unit;
+			s_units[(int)EnemyUnitsEnum.RECRUIT_DESERTER] = unit;
 
 			unit = new Unit();
 			unit.Name = Resources.UNIT_MILITIA_DESERTER;
@@ -336,7 +268,7 @@ namespace TheSettlersCalculator.Types
 			unit.AttackPriority = AttackPriority.Normal;
 			unit.Experience = 4;
 			unit.Icon = ImageHelper.LoadPng("TheSettlersCalculator.Quests.Images.militia.png");
-			s_units[MILITIA_DESERTER] = unit;
+			s_units[(int)EnemyUnitsEnum.MILITIA_DESERTER] = unit;
 
 			unit = new Unit();
 			unit.Name = Resources.UNIT_SOLDIER_DESERTER;
@@ -347,7 +279,7 @@ namespace TheSettlersCalculator.Types
 			unit.AttackPriority = AttackPriority.Normal;
 			unit.Experience = 6;
 			unit.Icon = ImageHelper.LoadPng("TheSettlersCalculator.Quests.Images.soldier.png");
-			s_units[SOLDIER_DESERTER] = unit;
+			s_units[(int)EnemyUnitsEnum.SOLDIER_DESERTER] = unit;
 
 			unit = new Unit();
 			unit.Name = Resources.UNIT_ELITE_SOLDIER_DESERTER;
@@ -358,7 +290,7 @@ namespace TheSettlersCalculator.Types
 			unit.AttackPriority = AttackPriority.Normal;
 			unit.Experience = 8;
 			unit.Icon = ImageHelper.LoadPng("TheSettlersCalculator.Quests.Images.elitesoldier.png");
-			s_units[ELITE_SOLDIER_DESERTER] = unit;
+			s_units[(int)EnemyUnitsEnum.ELITE_SOLDIER_DESERTER] = unit;
 
 			unit = new Unit();
 			unit.Name = Resources.UNIT_CAVALRY_DESERTER;
@@ -370,7 +302,7 @@ namespace TheSettlersCalculator.Types
 			unit.Experience = 4;
 			unit.AttackWeaknessTarget = true;
 			unit.Icon = ImageHelper.LoadPng("TheSettlersCalculator.Quests.Images.cavalry.png");
-			s_units[CAVALRY_DESERTER] = unit;
+			s_units[(int)EnemyUnitsEnum.CAVALRY_DESERTER] = unit;
 
 			unit = new Unit();
 			unit.Name = Resources.UNIT_BOWMAN_DESERTER;
@@ -382,7 +314,7 @@ namespace TheSettlersCalculator.Types
 			unit.Experience = 3;
 			unit.TowerBonus = true;
 			unit.Icon = ImageHelper.LoadPng("TheSettlersCalculator.Quests.Images.bowman.png");
-			s_units[BOWMAN_DESERTER] = unit;
+			s_units[(int)EnemyUnitsEnum.BOWMAN_DESERTER] = unit;
 
 			unit = new Unit();
 			unit.Name = Resources.UNIT_LONGBOWMAN_DESERTER;
@@ -394,7 +326,7 @@ namespace TheSettlersCalculator.Types
 			unit.Experience = 5;
 			unit.TowerBonus = true;
 			unit.Icon = ImageHelper.LoadPng("TheSettlersCalculator.Quests.Images.longbowman.png");
-			s_units[LONGBOWMAN_DESERTER] = unit;
+			s_units[(int)EnemyUnitsEnum.LONGBOWMAN_DESERTER] = unit;
 
 			unit = new Unit();
 			unit.Name = Resources.UNIT_CROSSBOWMAN_DESERTER;
@@ -406,7 +338,7 @@ namespace TheSettlersCalculator.Types
 			unit.Experience = 7;
 			unit.TowerBonus = true;
 			unit.Icon = ImageHelper.LoadPng("TheSettlersCalculator.Quests.Images.crossbowman.png");
-			s_units[CROSSBOWMAN_DESERTER] = unit;
+			s_units[(int)EnemyUnitsEnum.CROSSBOWMAN_DESERTER] = unit;
 
 			unit = new Unit();
 			unit.Name = Resources.UNIT_CANNONNEER_DESERTER;
@@ -419,7 +351,7 @@ namespace TheSettlersCalculator.Types
 			unit.TowerBonus = true;
 			unit.IgnoreTowerBonus = 100;
 			unit.Icon = ImageHelper.LoadPng("TheSettlersCalculator.Quests.Images.cannoneer.png");
-			s_units[CANNONEER_DESERTER] = unit;
+			s_units[(int)EnemyUnitsEnum.CANNONEER_DESERTER] = unit;
 
 			unit = new Unit();
 			unit.Name = Resources.UNIT_SIR_ROBIN;
@@ -432,7 +364,7 @@ namespace TheSettlersCalculator.Types
 			unit.AttackOnArea = true;
 			unit.AttackWeaknessTarget = true;
 			unit.Icon = ImageHelper.LoadPng("TheSettlersCalculator.Quests.Images.sir_robin.png");
-			s_units[SIR_ROBIN] = unit;
+			s_units[(int)EnemyUnitsEnum.SIR_ROBIN] = unit;
 
 			unit = new Unit();
 			unit.Name = Resources.UNIT_BIG_BERTHA;
@@ -445,7 +377,7 @@ namespace TheSettlersCalculator.Types
 			unit.AttackOnArea = true;
 			unit.AttackWeaknessTarget = true;
 			unit.Icon = ImageHelper.LoadPng("TheSettlersCalculator.Quests.Images.big_bertha.png");
-			s_units[BIG_BERTHA] = unit;
+			s_units[(int)EnemyUnitsEnum.BIG_BERTHA] = unit;
 
 			unit = new Unit();
 			unit.Name = Resources.UNIT_DECKSCRUBBER;
@@ -456,7 +388,7 @@ namespace TheSettlersCalculator.Types
 			unit.AttackPriority = AttackPriority.Normal;
 			unit.Experience = 1;
 			unit.Icon = ImageHelper.LoadPng("TheSettlersCalculator.Quests.Images.deckscrubber.png");
-			s_units[DECKSCRUBBER] = unit;
+			s_units[(int)EnemyUnitsEnum.DECKSCRUBBER] = unit;
 
 			unit = new Unit();
 			unit.Name = Resources.UNIT_SABER_RATTLER;
@@ -467,7 +399,7 @@ namespace TheSettlersCalculator.Types
 			unit.AttackPriority = AttackPriority.Normal;
 			unit.Experience = 2;
 			unit.Icon = ImageHelper.LoadPng("TheSettlersCalculator.Quests.Images.saber_rattler.png");
-			s_units[SABER_RATTLER] = unit;
+			s_units[(int)EnemyUnitsEnum.SABER_RATTLER] = unit;
 
 			unit = new Unit();
 			unit.Name = Resources.UNIT_KNIFETHROWER;
@@ -479,7 +411,7 @@ namespace TheSettlersCalculator.Types
 			unit.TowerBonus = true;
 			unit.Experience = 1;
 			unit.Icon = ImageHelper.LoadPng("TheSettlersCalculator.Quests.Images.knifethrower.png");
-			s_units[KNIFETHROWER] = unit;
+			s_units[(int)EnemyUnitsEnum.KNIFETHROWER] = unit;
 
 			unit = new Unit();
 			unit.Name = Resources.UNIT_GUNMAN;
@@ -491,7 +423,7 @@ namespace TheSettlersCalculator.Types
 			unit.TowerBonus = true;
 			unit.Experience = 2;
 			unit.Icon = ImageHelper.LoadPng("TheSettlersCalculator.Quests.Images.gunman.png");
-			s_units[GUNMAN] = unit;
+			s_units[(int)EnemyUnitsEnum.GUNMAN] = unit;
 
 			unit = new Unit();
 			unit.Name = Resources.UNIT_CALTROP;
@@ -503,7 +435,7 @@ namespace TheSettlersCalculator.Types
 			unit.AttackWeaknessTarget = true;
 			unit.Experience = 1;
 			unit.Icon = ImageHelper.LoadPng("TheSettlersCalculator.Quests.Images.caltrop.png");
-			s_units[CALTROP] = unit;
+			s_units[(int)EnemyUnitsEnum.CALTROP] = unit;
 
 			unit = new Unit();
 			unit.Name = Resources.UNIT_PETTY_OFFICER_2ND_CLASS;
@@ -516,7 +448,7 @@ namespace TheSettlersCalculator.Types
 			unit.AttackOnArea = true;
 			unit.Experience = 6;
 			unit.Icon = ImageHelper.LoadPng("TheSettlersCalculator.Quests.Images.petty_officer_2nd_class.png");
-			s_units[PETTY_OFFICER_2ND_CLASS] = unit;
+			s_units[(int)EnemyUnitsEnum.PETTY_OFFICER_2ND_CLASS] = unit;
 
 			unit = new Unit();
 			unit.Name = Resources.UNIT_CRAZY_COOK;
@@ -528,7 +460,7 @@ namespace TheSettlersCalculator.Types
 			unit.AttackOnArea = true;
 			unit.Experience = 200;
 			unit.Icon = ImageHelper.LoadPng("TheSettlersCalculator.Quests.Images.crazy_cook.png");
-			s_units[CRAZY_COOK] = unit;
+			s_units[(int)EnemyUnitsEnum.CRAZY_COOK] = unit;
 
 			unit = new Unit();
 			unit.Name = Resources.UNIT_DANCING_DERVISH;
@@ -540,7 +472,7 @@ namespace TheSettlersCalculator.Types
 			unit.AttackOnArea = true;
 			unit.Experience = 20;
 			unit.Icon = ImageHelper.LoadPng("TheSettlersCalculator.Quests.Images.dancing_dervish.png");
-			s_units[DANCING_DERVISH] = unit;
+			s_units[(int)EnemyUnitsEnum.DANCING_DERVISH] = unit;
 
 			unit = new Unit();
 			unit.Name = Resources.UNIT_NIGHT_SPAWN;
@@ -553,7 +485,7 @@ namespace TheSettlersCalculator.Types
 			unit.AttackWeaknessTarget = true;
 			unit.Experience = 500;
 			unit.Icon = ImageHelper.LoadPng("TheSettlersCalculator.Quests.Images.night_spawn.png");
-			s_units[NIGHT_SPAWN] = unit;
+			s_units[(int)EnemyUnitsEnum.NIGHT_SPAWN] = unit;
 
 			unit = new Unit();
 			unit.Name = Resources.UNIT_NOMAD;
@@ -564,7 +496,7 @@ namespace TheSettlersCalculator.Types
 			unit.AttackPriority = AttackPriority.Normal;
 			unit.Experience = 2;
 			unit.Icon = ImageHelper.LoadPng("TheSettlersCalculator.Quests.Images.nomad.png");
-			s_units[NOMAD] = unit;
+			s_units[(int)EnemyUnitsEnum.NOMAD] = unit;
 
 			unit = new Unit();
 			unit.Name = Resources.UNIT_COMPOSITE_BOW;
@@ -575,7 +507,7 @@ namespace TheSettlersCalculator.Types
 			unit.AttackPriority = AttackPriority.RearGuard;
 			unit.Experience = 2;
 			unit.Icon = ImageHelper.LoadPng("TheSettlersCalculator.Quests.Images.composite_bow.png");
-			s_units[COMPOSITE_BOW] = unit;
+			s_units[(int)EnemyUnitsEnum.COMPOSITE_BOW] = unit;
 
 			unit = new Unit();
 			unit.Name = Resources.UNIT_LANCE_RIDER;
@@ -587,7 +519,7 @@ namespace TheSettlersCalculator.Types
 			unit.AttackWeaknessTarget = true;
 			unit.Experience = 4;
 			unit.Icon = ImageHelper.LoadPng("TheSettlersCalculator.Quests.Images.lance_rider.png");
-			s_units[LANCE_RIDER] = unit;
+			s_units[(int)EnemyUnitsEnum.LANCE_RIDER] = unit;
 
 			unit = new Unit();
 			unit.Name = Resources.UNIT_RIDING_BOWMAN;
@@ -599,7 +531,7 @@ namespace TheSettlersCalculator.Types
 			unit.AttackWeaknessTarget = true;
 			unit.Experience = 6;
 			unit.Icon = ImageHelper.LoadPng("TheSettlersCalculator.Quests.Images.riding_bowman.png");
-			s_units[RIDING_BOWMAN] = unit;
+			s_units[(int)EnemyUnitsEnum.RIDING_BOWMAN] = unit;
 
 			unit = new Unit();
 			unit.Name = Resources.UNIT_RIDING_AMAZONIAN;
@@ -611,7 +543,7 @@ namespace TheSettlersCalculator.Types
 			unit.AttackWeaknessTarget = true;
 			unit.Experience = 8;
 			unit.Icon = ImageHelper.LoadPng("TheSettlersCalculator.Quests.Images.riding_amazonian.png");
-			s_units[RIDING_AMAZONIAN] = unit;
+			s_units[(int)EnemyUnitsEnum.RIDING_AMAZONIAN] = unit;
 
 			unit = new Unit();
 			unit.Name = Resources.UNIT_CATAPHRACT;
@@ -623,7 +555,7 @@ namespace TheSettlersCalculator.Types
 			unit.AttackWeaknessTarget = true;
 			unit.Experience = 12;
 			unit.Icon = ImageHelper.LoadPng("TheSettlersCalculator.Quests.Images.cataphract.png");
-			s_units[CATAPHRACT] = unit;
+			s_units[(int)EnemyUnitsEnum.CATAPHRACT] = unit;
 
 			unit = new Unit();
 			unit.Name = Resources.UNIT_UPROARIOUS_BULL;
@@ -634,7 +566,7 @@ namespace TheSettlersCalculator.Types
 			unit.AttackPriority = AttackPriority.AvantGarde;
 			unit.Experience = 50;
 			unit.Icon = ImageHelper.LoadPng("TheSettlersCalculator.Quests.Images.uproarious_bull.png");
-			s_units[UPROARIOUS_BULL] = unit;
+			s_units[(int)EnemyUnitsEnum.UPROARIOUS_BULL] = unit;
 
 			unit = new Unit();
 			unit.Name = Resources.UNIT_THRALL;
@@ -645,7 +577,7 @@ namespace TheSettlersCalculator.Types
 			unit.AttackPriority = AttackPriority.RearGuard;
 			unit.Experience = 3;
 			unit.Icon = ImageHelper.LoadPng("TheSettlersCalculator.Quests.Images.thrall.png");
-			s_units[THRALL] = unit;
+			s_units[(int)EnemyUnitsEnum.THRALL] = unit;
 
 			unit = new Unit();
 			unit.Name = Resources.UNIT_KARL;
@@ -656,7 +588,7 @@ namespace TheSettlersCalculator.Types
 			unit.AttackPriority = AttackPriority.RearGuard;
 			unit.Experience = 6;
 			unit.Icon = ImageHelper.LoadPng("TheSettlersCalculator.Quests.Images.karl.png");
-			s_units[KARL] = unit;
+			s_units[(int)EnemyUnitsEnum.KARL] = unit;
 
 			unit = new Unit();
 			unit.Name = Resources.UNIT_HOUSECARL;
@@ -667,7 +599,7 @@ namespace TheSettlersCalculator.Types
 			unit.AttackPriority = AttackPriority.RearGuard;
 			unit.Experience = 10;
 			unit.Icon = ImageHelper.LoadPng("TheSettlersCalculator.Quests.Images.housecarl.png");
-			s_units[HOUSECARL] = unit;
+			s_units[(int)EnemyUnitsEnum.HOUSECARL] = unit;
 
 			unit = new Unit();
 			unit.Name = Resources.UNIT_JOMVIKING;
@@ -678,7 +610,7 @@ namespace TheSettlersCalculator.Types
 			unit.AttackPriority = AttackPriority.RearGuard;
 			unit.Experience = 14;
 			unit.Icon = ImageHelper.LoadPng("TheSettlersCalculator.Quests.Images.jomviking.png");
-			s_units[JOMVIKING] = unit;
+			s_units[(int)EnemyUnitsEnum.JOMVIKING] = unit;
 
 			unit = new Unit();
 			unit.Name = Resources.UNIT_VALKYRIE;
@@ -689,7 +621,7 @@ namespace TheSettlersCalculator.Types
 			unit.AttackPriority = AttackPriority.Normal;
 			unit.Experience = 14;
 			unit.Icon = ImageHelper.LoadPng("TheSettlersCalculator.Quests.Images.valkyrie.png");
-			s_units[VALKYRIE] = unit;
+			s_units[(int)EnemyUnitsEnum.VALKYRIE] = unit;
 
 			unit = new Unit();
 			unit.Name = Resources.UNIT_BERSERK;
@@ -701,7 +633,7 @@ namespace TheSettlersCalculator.Types
 			unit.AttackOnArea = true;
 			unit.Experience = 20;
 			unit.Icon = ImageHelper.LoadPng("TheSettlersCalculator.Quests.Images.berserk.png");
-			s_units[BERSERK] = unit;
+			s_units[(int)EnemyUnitsEnum.BERSERK] = unit;
 
 			unit = new Unit();
 			unit.Name = Resources.UNIT_CROAKER;
@@ -713,7 +645,7 @@ namespace TheSettlersCalculator.Types
 			unit.AttackWeaknessTarget = true;
 			unit.Experience = 200;
 			unit.Icon = ImageHelper.LoadPng("TheSettlersCalculator.Quests.Images.croaker.png");
-			s_units[CROAKER] = unit;
+			s_units[(int)EnemyUnitsEnum.CROAKER] = unit;
 
 			unit = new Unit();
 			unit.Name = Resources.UNIT_TRIBESMAN;
@@ -724,7 +656,7 @@ namespace TheSettlersCalculator.Types
 			unit.AttackPriority = AttackPriority.Normal;
 			unit.Experience = 2;
 			unit.Icon = ImageHelper.LoadPng("TheSettlersCalculator.Quests.Images.tribesman.png");
-			s_units[TRIBESMAN] = unit;
+			s_units[(int)EnemyUnitsEnum.TRIBESMAN] = unit;
 
 			unit = new Unit();
 			unit.Name = Resources.UNIT_SHAMAN;
@@ -736,7 +668,7 @@ namespace TheSettlersCalculator.Types
 			unit.AttackWeaknessTarget = true;
 			unit.Experience = 1;
 			unit.Icon = ImageHelper.LoadPng("TheSettlersCalculator.Quests.Images.shaman.png");
-			s_units[SHAMAN] = unit;
+			s_units[(int)EnemyUnitsEnum.SHAMAN] = unit;
 
 			unit = new Unit();
 			unit.Name = Resources.UNIT_JAGUAR_WARRIOR;
@@ -748,7 +680,7 @@ namespace TheSettlersCalculator.Types
 			unit.AttackOnArea = true;
 			unit.Experience = 2;
 			unit.Icon = ImageHelper.LoadPng("TheSettlersCalculator.Quests.Images.jaguar_warrior.png");
-			s_units[JAGUAR_WARRIOR] = unit;
+			s_units[(int)EnemyUnitsEnum.JAGUAR_WARRIOR] = unit;
 
 			unit = new Unit();
 			unit.Name = Resources.UNIT_STRIKER;
@@ -760,7 +692,7 @@ namespace TheSettlersCalculator.Types
 			unit.AttackWeaknessTarget = true;
 			unit.Experience = 10;
 			unit.Icon = ImageHelper.LoadPng("TheSettlersCalculator.Quests.Images.striker.png");
-			s_units[STRIKER] = unit;
+			s_units[(int)EnemyUnitsEnum.STRIKER] = unit;
 
 			unit = new Unit();
 			unit.Name = Resources.UNIT_FULLBACK;
@@ -771,7 +703,7 @@ namespace TheSettlersCalculator.Types
 			unit.AttackPriority = AttackPriority.Normal;
 			unit.Experience = 10;
 			unit.Icon = ImageHelper.LoadPng("TheSettlersCalculator.Quests.Images.fullback.png");
-			s_units[FULLBACK] = unit;
+			s_units[(int)EnemyUnitsEnum.FULLBACK] = unit;
 
 			unit = new Unit();
 			unit.Name = Resources.UNIT_MIDFIELDER;
@@ -783,7 +715,7 @@ namespace TheSettlersCalculator.Types
 			unit.TowerBonus = true;
 			unit.Experience = 5;
 			unit.Icon = ImageHelper.LoadPng("TheSettlersCalculator.Quests.Images.midfielder.png");
-			s_units[MIDFIELDER] = unit;
+			s_units[(int)EnemyUnitsEnum.MIDFIELDER] = unit;
 
 			unit = new Unit();
 			unit.Name = Resources.UNIT_GOALKEEPER;
@@ -795,7 +727,7 @@ namespace TheSettlersCalculator.Types
 			unit.AttackOnArea = true;
 			unit.Experience = 20;
 			unit.Icon = ImageHelper.LoadPng("TheSettlersCalculator.Quests.Images.goalkeeper.png");
-			s_units[GOALKEEPER] = unit;
+			s_units[(int)EnemyUnitsEnum.GOALKEEPER] = unit;
 		}
 	}
 }

@@ -27,23 +27,23 @@ namespace TheSettlersCalculator.Quests
 			Units = InitializeUnits().ToArray();
 			Camps = InitializeCamps().ToArray();
 
-			Icon = ImageHelper.LoadPng("TheSettlersCalculator.Quests.Icons.Viktor_der_Verschlagene.png");
+			IconPath = "TheSettlersCalculator.Quests.Icons.Viktor_der_Verschlagene.png";
 		}
 		#endregion
 
 		private static List<Unit> InitializeUnits()
 		{
 			List<Unit> units = new List<Unit>();
-			units.Add(EnemyUnits.Units[EnemyUnits.WILD_MARY]);
-			units.Add(EnemyUnits.Units[EnemyUnits.METAL_TOOTHED]);
-			units.Add(EnemyUnits.Units[EnemyUnits.SCAVENGER]);
-			units.Add(EnemyUnits.Units[EnemyUnits.THUG]);
-			units.Add(EnemyUnits.Units[EnemyUnits.GUARD_DOG]);
-			units.Add(EnemyUnits.Units[EnemyUnits.ROUGHNECK]);
-			units.Add(EnemyUnits.Units[EnemyUnits.RANGER]);
-			units.Add(EnemyUnits.Units[EnemyUnits.SKUNK]);
-			units.Add(EnemyUnits.Units[EnemyUnits.ONE_EYED_BERT]);
-			units.Add(EnemyUnits.Units[EnemyUnits.WOLF]);
+			units.Add(EnemyUnits.Units[(int)EnemyUnitsEnum.WILD_MARY]);
+			units.Add(EnemyUnits.Units[(int)EnemyUnitsEnum.METAL_TOOTHED]);
+			units.Add(EnemyUnits.Units[(int)EnemyUnitsEnum.SCAVENGER]);
+			units.Add(EnemyUnits.Units[(int)EnemyUnitsEnum.THUG]);
+			units.Add(EnemyUnits.Units[(int)EnemyUnitsEnum.GUARD_DOG]);
+			units.Add(EnemyUnits.Units[(int)EnemyUnitsEnum.ROUGHNECK]);
+			units.Add(EnemyUnits.Units[(int)EnemyUnitsEnum.RANGER]);
+			units.Add(EnemyUnits.Units[(int)EnemyUnitsEnum.SKUNK]);
+			units.Add(EnemyUnits.Units[(int)EnemyUnitsEnum.ONE_EYED_BERT]);
+			units.Add(EnemyUnits.Units[(int)EnemyUnitsEnum.WOLF]);
 			return units;
 		}
 

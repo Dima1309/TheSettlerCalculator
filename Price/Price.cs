@@ -1,11 +1,23 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.Globalization;
+using System.IO;
+using System.Xml;
 using TheSettlersCalculator.Properties;
 
 namespace TheSettlersCalculator.Price
 {
 	public static class Price
 	{
+		#region Constants
+		private const string PRICE = "price";
+		private const string PRODUCT = "product";
+		private const string NAME = "name";
+		private const string COST = "cost";
+		private const string FILENAME = "prices.xml";
+		#endregion
+
 		#region Fields
 		private static SortedDictionary<ProductEnum, Product> s_products;
 		private static ObservableCollection<Product> s_productList;
@@ -44,7 +56,7 @@ namespace TheSettlersCalculator.Price
 		{
 			s_products = new SortedDictionary<ProductEnum, Product>();
 			
-			AddProduct(ProductEnum.RESOURCE_PINE_WOOD ,Resources.RESOURCE_PINE_WOOD, ProductType.BASIC, 4.8, "pine_wood");
+			AddProduct(ProductEnum.RESOURCE_PINE_WOOD ,Resources.RESOURCE_PINE_WOOD, ProductType.BASIC, 0, "pine_wood");
 			AddProduct(ProductEnum.RESOURCE_PINE_WOOD_PLANKS ,Resources.RESOURCE_PINE_WOOD_PLANKS, ProductType.BASIC, 5.7, "pine_wood_planks");
 			AddProduct(ProductEnum.RESOURCE_STONE ,Resources.RESOURCE_STONE, ProductType.BASIC, 9.7, "stone");
 			AddProduct(ProductEnum.RESOURCE_FISH ,Resources.RESOURCE_FISH, ProductType.BASIC, 7.8, "fish");
@@ -115,11 +127,79 @@ namespace TheSettlersCalculator.Price
 			AddProduct(ProductEnum.QUEST_RASENDER_BULLE ,Resources.QUEST_RASENDER_BULLE, ProductType.QUEST, 1786.75, "Rasender_Bulle");
 			AddProduct(ProductEnum.QUEST_OLD_FRIENDS ,Resources.QUEST_OLD_FRIENDS, ProductType.QUEST, 300, "Alte_Bekannte");
 			AddProduct(ProductEnum.QUEST_MOTHER_LOVE ,Resources.QUEST_MOTHER_LOVE, ProductType.QUEST, 600, "Mutterliebe");
+
+			try
+			{
+				using(XmlReader reader = XmlReader.Create(FILENAME))
+				{
+					Load(reader);
+				}
+			}
+			catch
+			{}
 		}
 
 		private static void AddProduct(ProductEnum index, string name, ProductType productType, double cost, string imagePath)
 		{
 			s_products.Add(index, new Product(index, name, productType, cost, imagePath));
+		}
+
+		private static void Load(XmlReader reader)
+		{
+			int level = reader.Depth;
+			Type productEnumType = typeof(ProductEnum);
+			while (reader.Read())
+			{
+				if (string.Equals(reader.Name, PRICE, StringComparison.OrdinalIgnoreCase) ||
+					level > reader.Depth)
+				{
+					break;
+				}
+
+				if (!reader.IsStartElement())
+				{
+					continue;
+				}
+
+				try
+				{
+					if (string.Equals(reader.Name, PRODUCT, StringComparison.OrdinalIgnoreCase))
+					{						
+						ProductEnum productIndex = (ProductEnum)Enum.Parse(productEnumType, reader.GetAttribute(NAME), true);
+						double cost = double.Parse(reader.GetAttribute(COST), CultureInfo.InvariantCulture);
+						Products[productIndex].Cost = cost;
+					}
+				}
+				catch (Exception e)
+				{
+					Console.WriteLine(e);
+				}
+			}
+		}
+
+		internal static void Save()
+		{
+			XmlWriterSettings settings = new XmlWriterSettings();
+			settings.Indent = true;
+			using(XmlWriter xmlWriter = XmlWriter.Create(FILENAME, settings))
+			{
+				Save(xmlWriter);
+			}
+		}
+
+		private static void Save(XmlWriter writer)
+		{
+			writer.WriteStartElement(PRICE);
+
+			foreach(Product product in ProductList)
+			{
+				writer.WriteStartElement(PRODUCT);
+				writer.WriteAttributeString(NAME, product.Index.ToString());
+				writer.WriteAttributeString(COST, product.Cost.ToString(CultureInfo.InvariantCulture));
+				writer.WriteEndElement();
+			}
+
+			writer.WriteEndElement();
 		}
 		#endregion
 	}
