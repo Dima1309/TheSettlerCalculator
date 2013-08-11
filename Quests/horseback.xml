@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <quest>
   <name>QUEST_HORSEBACK</name>
-  <map>\Quests\Maps\</map>
-  <icon>\Quests\Icons\Sattelfest.png</icon>
+  <map>Quests\Maps\</map>
+  <icon>Quests\Icons\Sattelfest.png</icon>
   <enemies>
     <enemy>NOMAD</enemy>
     <enemy>LANCE_RIDER</enemy>

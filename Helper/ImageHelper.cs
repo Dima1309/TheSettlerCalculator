@@ -1,5 +1,5 @@
-﻿
-using System;
+﻿using System;
+using System.IO;
 using System.Reflection;
 using System.Windows.Media.Imaging;
 
@@ -7,39 +7,64 @@ namespace TheSettlersCalculator.Helper
 {
 	internal static class ImageHelper
 	{
-		internal static BitmapSource LoadPng(string fileName)
+		internal static BitmapSource LoadFromResources(string fileName)
 		{
+			Stream stream = null;
 			try
 			{
 				Assembly assembly = Assembly.GetExecutingAssembly();
-				PngBitmapDecoder pngBitmapDecoder = new PngBitmapDecoder(
-					assembly.GetManifestResourceStream(fileName),
-					BitmapCreateOptions.PreservePixelFormat,
-					BitmapCacheOption.Default);
-				return pngBitmapDecoder.Frames[0];
+				stream = assembly.GetManifestResourceStream(fileName);
+				return LoadImage(stream, fileName);
 
 			}
 			catch(Exception)
 			{
-				return null;
 			}
+			finally
+			{
+				if (stream != null)
+				{
+					stream.Close();
+				}
+			}
+			return null;
 		}
 
-		internal static BitmapSource LoadJpg(string fileName)
+		internal static BitmapSource LoadFromFile(string fileName)
 		{
+			Stream stream = null;
 			try
 			{
-				Assembly assembly = Assembly.GetExecutingAssembly();
-				JpegBitmapDecoder jpegBitmapDecoder = new JpegBitmapDecoder(
-					assembly.GetManifestResourceStream(fileName),
-					BitmapCreateOptions.PreservePixelFormat,
-					BitmapCacheOption.Default);
-				return jpegBitmapDecoder.Frames[0];
+				stream = new FileStream(fileName, FileMode.Open, FileAccess.Read, FileShare.Read);
+				return LoadImage(stream, fileName);
 			}
 			catch(Exception)
 			{
-				return null;
 			}
+			finally
+			{
+				if (stream != null)
+				{
+					//stream.Close();
+				}
+			}
+
+			return null;
+		}
+
+		private static BitmapSource LoadImage(Stream stream, string filename)
+		{
+			filename = filename.ToUpperInvariant();
+			BitmapDecoder decoder = null;
+			if (filename.EndsWith(".PNG"))
+			{
+				decoder = new PngBitmapDecoder(stream, BitmapCreateOptions.PreservePixelFormat, BitmapCacheOption.Default);				
+			}else if (filename.EndsWith(".JPG"))
+			{
+				decoder = new JpegBitmapDecoder(stream, BitmapCreateOptions.PreservePixelFormat, BitmapCacheOption.Default);				
+			}
+
+			return decoder!=null?decoder.Frames[0]:null;
 		}
 	}
 }

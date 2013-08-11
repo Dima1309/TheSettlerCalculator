@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <quest>
   <name>QUEST_SOHNE_DER_STEPPE</name>
-  <map>\Quests\Maps\</map>
-  <icon>\Quests\Icons\Sohne_der_Steppe.png</icon>
+  <map>Quests\Maps\</map>
+  <icon>Quests\Icons\Sohne_der_Steppe.png</icon>
   <enemies>
     <enemy>CHUCK</enemy>
     <enemy>METAL_TOOTHED</enemy>

@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <quest>
   <name>QUEST_ISLAND_OF_THE_PIRATES</name>
-  <map>\Quests\Maps\</map>
-  <icon>\Quests\Icons\Insel_der_Freibeuter.png</icon>
+  <map>Quests\Maps\</map>
+  <icon>Quests\Icons\Insel_der_Freibeuter.png</icon>
   <enemies>
     <enemy>CALTROP</enemy>
     <enemy>DECKSCRUBBER</enemy>

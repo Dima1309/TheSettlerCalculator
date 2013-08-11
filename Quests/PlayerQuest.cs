@@ -15,7 +15,7 @@ namespace TheSettlersCalculator.Quests
 			Name = Resources.QUEST_PLAYER;
 			Units = InitializeUnits().ToArray();
 
-			//Icon = ImageHelper.LoadPng("TheSettlersCalculator.Quests.Icons.Das_Banditennest.png");
+			//Icon = ImageHelper.LoadFromResources("TheSettlersCalculator.Quests.Icons.Das_Banditennest.png");
 		}
 		#endregion
 

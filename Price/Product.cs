@@ -1,5 +1,6 @@
 ﻿using System.Windows.Media.Imaging;
 using TheSettlersCalculator.Helper;
+using TheSettlersCalculator.Types;
 
 namespace TheSettlersCalculator.Price
 {
@@ -51,9 +52,9 @@ namespace TheSettlersCalculator.Price
 				if (m_icon == null && m_iconSource != null)
 				{
 					string prefix = m_productType == ProductType.QUEST
-						? "TheSettlersCalculator.Quests.Icons."
-						: "TheSettlersCalculator.Price.Icons.";
-					m_icon = ImageHelper.LoadPng(prefix + m_iconSource +".png");
+						? Options.QUESTS_FOLDER
+						: Options.PRICE_FOLDER;
+					m_icon = ImageHelper.LoadFromFile(prefix + "\\Icons\\" + m_iconSource +".png");
 				}
 
 				return m_icon;

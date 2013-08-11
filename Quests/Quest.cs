@@ -61,12 +61,12 @@ namespace TheSettlersCalculator.Quests
 
 		public BitmapSource Icon
 		{
-			get { return m_icon ?? (m_icon = ImageHelper.LoadPng(m_iconPath)); }
+			get { return m_icon ?? (m_icon = ImageHelper.LoadFromFile(m_iconPath)); }
 		}
 
 		public BitmapSource Map
 		{
-			get { return m_map ?? (m_map = ImageHelper.LoadJpg(m_mapPath)); }
+			get { return m_map ?? (m_map = ImageHelper.LoadFromFile(m_mapPath)); }
 		}
 
 		internal string MapPath
@@ -104,19 +104,19 @@ namespace TheSettlersCalculator.Quests
 
 				if(reader.Name.Equals(NAME, StringComparison.OrdinalIgnoreCase))
 				{
-					m_name = reader.Value;
+					m_name = Helper.Helper.getResourceText(reader.ReadElementString().Trim());
 				}
 				else if(reader.Name.Equals(MAP_PATH, StringComparison.OrdinalIgnoreCase))
 				{
-					m_mapPath = reader.Value;
+					m_mapPath = reader.ReadElementString().Trim();
 				}
 				else if(reader.Name.Equals(ICON_PATH, StringComparison.OrdinalIgnoreCase))
 				{
-					m_iconPath = reader.Value;
+					m_iconPath = reader.ReadElementString().Trim();
 				}
 				else if(reader.Name.Equals(ENEMY, StringComparison.OrdinalIgnoreCase))
 				{
-					string value = reader.Value;					
+					string value = reader.ReadElementString().Trim();					
 					EnemyUnitsEnum enemyUnitsEnum = (EnemyUnitsEnum) Enum.Parse(enumType, value);
 					if (!enemies.Contains(value))
 					{
@@ -238,34 +238,34 @@ namespace TheSettlersCalculator.Quests
 			Type campWinTimeType = typeof(CampWinTime);
 			while (reader.Read())
 			{
-				if (level > reader.Depth)
+				if (level >= reader.Depth)
 				{
 					break;
 				}
 
 				if (reader.Name.Equals(NAME, StringComparison.OrdinalIgnoreCase))
 				{
-					result.Name = reader.Value;
+					result.Name = reader.ReadElementString().Trim();
 				}
 				else if (reader.Name.Equals(CAMP_TYPE, StringComparison.OrdinalIgnoreCase))
 				{
-					result.CampType = (CampType) Enum.Parse(campType, reader.Value);
+					result.CampType = (CampType) Enum.Parse(campType, reader.ReadElementString().Trim());
 				}
 				else if (reader.Name.Equals(WIN_TIME, StringComparison.OrdinalIgnoreCase))
 				{
-					result.WinTime = (int)(CampWinTime)Enum.Parse(campWinTimeType, reader.Value);
+					result.WinTime = (int)(CampWinTime)Enum.Parse(campWinTimeType, reader.ReadElementString().Trim());
 				}
 				else if (reader.Name.Equals(SECTOR, StringComparison.OrdinalIgnoreCase))
 				{
-					result.SectorId = byte.Parse(reader.Value);
+					result.SectorId = byte.Parse(reader.ReadElementString().Trim());
 				}
 				else if (reader.Name.Equals(LEFT, StringComparison.OrdinalIgnoreCase))
 				{
-					result.Left = double.Parse(reader.Value, CultureInfo.InvariantCulture);
+					result.Left = double.Parse(reader.ReadElementString().Trim(), CultureInfo.InvariantCulture);
 				}
 				else if (reader.Name.Equals(TOP, StringComparison.OrdinalIgnoreCase))
 				{
-					result.Top = double.Parse(reader.Value, CultureInfo.InvariantCulture);
+					result.Top = double.Parse(reader.ReadElementString().Trim(), CultureInfo.InvariantCulture);
 				}
 				else if (reader.Name.Equals(ENEMY, StringComparison.OrdinalIgnoreCase))
 				{

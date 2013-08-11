@@ -2,15 +2,12 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Xml;
+using TheSettlersCalculator.Types;
 
 namespace TheSettlersCalculator.Quests
 {
 	internal static class Quests
 	{
-		#region Constants
-		private static string QUESTS_FOLDER = "quests";
-		#endregion
-
 		#region Fields
 		private static Quest[] s_quests;
 		#endregion
@@ -64,14 +61,14 @@ namespace TheSettlersCalculator.Quests
 		internal static void Load()
 		{
 			List<Quest> result = new List<Quest>();
-			if (Directory.Exists(QUESTS_FOLDER))
+			if (Directory.Exists(Options.QUESTS_FOLDER))
 			{
-				foreach(String file in Directory.GetFiles(QUESTS_FOLDER, "*.xml"))
+				foreach (String file in Directory.GetFiles(Options.QUESTS_FOLDER, "*.xml"))
 				{
-					String fileName = QUESTS_FOLDER + "\\" + file;
-					XmlReader reader = XmlReader.Create(fileName);
+					//String fileName = QUESTS_FOLDER + "\\" + file;
+					XmlReader reader = XmlReader.Create(file);
 					Quest quest = new Quest();
-					quest.FileName = fileName;
+					quest.FileName = file;
 					quest.Load(reader);
 					reader.Close();
 

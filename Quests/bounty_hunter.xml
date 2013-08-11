@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <quest>
   <name>QUEST_BOUNTY_HUNTER</name>
-  <map>\Quests\Maps\</map>
-  <icon>\Quests\Icons\Kopfgeldjager.png</icon>
+  <map>Quests\Maps\</map>
+  <icon>Quests\Icons\Kopfgeldjager.png</icon>
   <enemies>
     <enemy>SCAVENGER</enemy>
     <enemy>STONE_THROWER</enemy>

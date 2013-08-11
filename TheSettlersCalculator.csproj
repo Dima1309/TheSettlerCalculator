@@ -227,12 +227,6 @@
     <EmbeddedResource Include="Quests\Images\wolf.png" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Quests\Icons\Die_schwarzen_Priester.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Quests\Maps\die-schwarzen-priester.jpg" />
-  </ItemGroup>
-  <ItemGroup>
     <EmbeddedResource Include="Quests\Images\general.png" />
   </ItemGroup>
   <ItemGroup>
@@ -298,80 +292,6 @@
     <Resource Include="Properties\map.png" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Price\Icons\bow.png" />
-    <EmbeddedResource Include="Price\Icons\bread.png" />
-    <EmbeddedResource Include="Price\Icons\brew.png" />
-    <EmbeddedResource Include="Price\Icons\bronze.png" />
-    <EmbeddedResource Include="Price\Icons\bronze_ore.png" />
-    <EmbeddedResource Include="Price\Icons\bronze_sword.png" />
-    <EmbeddedResource Include="Price\Icons\cannon.png" />
-    <EmbeddedResource Include="Price\Icons\carriage.png" />
-    <EmbeddedResource Include="Price\Icons\coal.png" />
-    <EmbeddedResource Include="Price\Icons\coins.png" />
-    <EmbeddedResource Include="Price\Icons\crossbow.png" />
-    <EmbeddedResource Include="Price\Icons\damascene_sword.png" />
-    <EmbeddedResource Include="Price\Icons\easter_egg.png" />
-    <EmbeddedResource Include="Price\Icons\exotic_wood.png" />
-    <EmbeddedResource Include="Price\Icons\exotic_wood_planks.png" />
-    <EmbeddedResource Include="Price\Icons\fish.png" />
-    <EmbeddedResource Include="Price\Icons\flour.png" />
-    <EmbeddedResource Include="Price\Icons\gift.png" />
-    <EmbeddedResource Include="Price\Icons\gold.png" />
-    <EmbeddedResource Include="Price\Icons\gold_ore.png" />
-    <EmbeddedResource Include="Price\Icons\granite.png" />
-    <EmbeddedResource Include="Price\Icons\guild_coins.png" />
-    <EmbeddedResource Include="Price\Icons\gun_powder.png" />
-    <EmbeddedResource Include="Price\Icons\hardwood.png" />
-    <EmbeddedResource Include="Price\Icons\hardwood_planks.png" />
-    <EmbeddedResource Include="Price\Icons\horse.png" />
-    <EmbeddedResource Include="Price\Icons\iron.png" />
-    <EmbeddedResource Include="Price\Icons\iron_ore.png" />
-    <EmbeddedResource Include="Price\Icons\iron_sword.png" />
-    <EmbeddedResource Include="Price\Icons\longbow.png" />
-    <EmbeddedResource Include="Price\Icons\map_fragment.png" />
-    <EmbeddedResource Include="Price\Icons\marble.png" />
-    <EmbeddedResource Include="Price\Icons\meat.png" />
-    <EmbeddedResource Include="Price\Icons\pine_wood.png" />
-    <EmbeddedResource Include="Price\Icons\pine_wood_planks.png" />
-    <EmbeddedResource Include="Price\Icons\pumpkin.png" />
-    <EmbeddedResource Include="Price\Icons\salpetre.png" />
-    <EmbeddedResource Include="Price\Icons\sausage.png" />
-    <EmbeddedResource Include="Price\Icons\soccer_ball.png" />
-    <EmbeddedResource Include="Price\Icons\steel.png" />
-    <EmbeddedResource Include="Price\Icons\steel_sword.png" />
-    <EmbeddedResource Include="Price\Icons\stone.png" />
-    <EmbeddedResource Include="Price\Icons\titanium.png" />
-    <EmbeddedResource Include="Price\Icons\titanium_ore.png" />
-    <EmbeddedResource Include="Price\Icons\tools.png" />
-    <EmbeddedResource Include="Price\Icons\water.png" />
-    <EmbeddedResource Include="Price\Icons\wheat.png" />
-    <EmbeddedResource Include="Price\Icons\wheel.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Quests\Icons\Beutelschneider.png" />
-    <EmbeddedResource Include="Quests\Icons\Das_Banditennest.png" />
-    <EmbeddedResource Include="Quests\Icons\Die_dunkle_Bruderschaft.png" />
-    <EmbeddedResource Include="Quests\Icons\Die_Nordmanner.png" />
-    <EmbeddedResource Include="Quests\Icons\Die_schwarzen_Ritter.png" />
-    <EmbeddedResource Include="Quests\Icons\Die_Wilde_Waltraut.png" />
-    <EmbeddedResource Include="Quests\Icons\Einsame_Experimente.png" />
-    <EmbeddedResource Include="Quests\Icons\Insel_der_Freibeuter.png" />
-    <EmbeddedResource Include="Quests\Icons\Kopfgeldjager.png" />
-    <EmbeddedResource Include="Quests\Icons\Mutterliebe.png" />
-    <EmbeddedResource Include="Quests\Icons\Rasender_Bulle.png" />
-    <EmbeddedResource Include="Quests\Icons\Rauberbande.png" />
-    <EmbeddedResource Include="Quests\Icons\Sattelfest.png" />
-    <EmbeddedResource Include="Quests\Icons\Schiespulver.png" />
-    <EmbeddedResource Include="Quests\Icons\Sohne_der_Steppe.png" />
-    <EmbeddedResource Include="Quests\Icons\Sumpfhexe.png" />
-    <EmbeddedResource Include="Quests\Icons\Uberraschungsangriff.png" />
-    <EmbeddedResource Include="Quests\Icons\Verrater.png" />
-    <EmbeddedResource Include="Quests\Icons\Viktor_der_Verschlagene.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Quests\Icons\Alte_Bekannte.png" />
-  </ItemGroup>
-  <ItemGroup>
     <EmbeddedResource Include="Quests\Images\berserk.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
@@ -379,10 +299,14 @@
     <PostBuildEvent>mkdir "$(TargetDir)Quests"
 mkdir "$(TargetDir)Quests\Maps"
 mkdir "$(TargetDir)Quests\Icons"
+mkdir "$(TargetDir)Price"
+mkdir "$(TargetDir)Price\Icons"
 
 xcopy /D /Y "$(ProjectDir)Quests\*.xml" "$(TargetDir)Quests"
 xcopy /D /Y "$(ProjectDir)Quests\Icons" "$(TargetDir)Quests\Icons"
-xcopy /D /Y "$(ProjectDir)Quests\Maps" "$(TargetDir)Quests\Maps"</PostBuildEvent>
+xcopy /D /Y "$(ProjectDir)Quests\Maps" "$(TargetDir)Quests\Maps"
+
+xcopy /D /Y "$(ProjectDir)Price\Icons" "$(TargetDir)Price\Icons"</PostBuildEvent>
   </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

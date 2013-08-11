@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <quest>
   <name>QUEST_VERRATER</name>
-  <map>\Quests\Maps\</map>
-  <icon>\Quests\Icons\Verrater.png</icon>
+  <map>Quests\Maps\</map>
+  <icon>Quests\Icons\Verrater.png</icon>
   <enemies>
     <enemy>MILITIA_DESERTER</enemy>
     <enemy>CAVALRY_DESERTER</enemy>

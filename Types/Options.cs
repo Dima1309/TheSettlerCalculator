@@ -5,11 +5,16 @@ namespace TheSettlersCalculator.Types
 {
 	public class Options : IXMLSerializable
 	{
+		#region Constants
 		private const string OPTIONS = "options";
 		private const string ROUNDS = "rounds";
 		private const string SERVER = "server";
 		private const string BARACK = "barackLevel";
 		private const string MULTI_WAVE_BATTLE_TYPE = "multiWaveBattleType";
+		
+		internal static string QUESTS_FOLDER = "quests";
+		internal static string PRICE_FOLDER = "price";
+		#endregion
 
 		#region Fields
 		private readonly static Options s_instance = new Options();

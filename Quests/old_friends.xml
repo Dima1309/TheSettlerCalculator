@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <quest>
   <name>QUEST_OLD_FRIENDS</name>
-  <map>\Quests\Maps\</map>
-  <icon>\Quests\Icons\Alte_Bekannte.png</icon>
+  <map>Quests\Maps\</map>
+  <icon>Quests\Icons\Alte_Bekannte.png</icon>
   <enemies>
     <enemy>CULTIST</enemy>
     <enemy>SWAMP_WITCH</enemy>

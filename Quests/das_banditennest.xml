@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <quest>
   <name>QUEST_DAS_BANDITENNEST</name>
-  <map>\Quests\Maps\</map>
-  <icon>\Quests\Icons\Das_Banditennest.png</icon>
+  <map>Quests\Maps\</map>
+  <icon>Quests\Icons\Das_Banditennest.png</icon>
   <enemies>
     <enemy>CHUCK</enemy>
     <enemy>METAL_TOOTHED</enemy>

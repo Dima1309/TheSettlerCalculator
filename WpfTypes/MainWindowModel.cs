@@ -60,7 +60,7 @@ namespace TheSettlersCalculator.WpfTypes
 
 			ActiveQuest = Quests[0];
 
-			TheSettlersCalculator.Quests.Quests.Save();
+			//TheSettlersCalculator.Quests.Quests.Save();
 		}
 		#endregion
 
