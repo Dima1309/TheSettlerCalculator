@@ -66,6 +66,11 @@ namespace TheSettlersCalculator
 		{
 			double delta = e.Delta > 0 ? 0.1 : -0.1;
 
+			if (imageScale.ScaleX + delta <= 0 || imageScale.ScaleY + delta <= 0)
+			{
+				return;
+			}
+
 			imageScale.ScaleX += delta;
 			imageScale.ScaleY += delta;
 		}
