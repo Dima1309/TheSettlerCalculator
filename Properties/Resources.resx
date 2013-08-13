@@ -381,11 +381,23 @@
   <data name="RESOURCE_WHEEL" xml:space="preserve">
     <value>Колёса</value>
   </data>
+  <data name="UNIT_ASSASSINE" xml:space="preserve">
+    <value>Убийца</value>
+  </data>
+  <data name="UNIT_BEAR" xml:space="preserve">
+    <value>Медведь</value>
+  </data>
   <data name="UNIT_BERSERK" xml:space="preserve">
     <value>Берсерк</value>
   </data>
   <data name="UNIT_BIG_BERTHA" xml:space="preserve">
     <value>Большая Берта</value>
+  </data>
+  <data name="UNIT_BLACK_BULL" xml:space="preserve">
+    <value>Чёрный бык</value>
+  </data>
+  <data name="UNIT_BOAR" xml:space="preserve">
+    <value>Кабан</value>
   </data>
   <data name="UNIT_BOWMAN" xml:space="preserve">
     <value>Лучник</value>
@@ -441,6 +453,9 @@
   <data name="UNIT_DARK_PRIEST" xml:space="preserve">
     <value>Тёмный священник</value>
   </data>
+  <data name="UNIT_DARK_WIZARD" xml:space="preserve">
+    <value>Тёмный маг</value>
+  </data>
   <data name="UNIT_DECKSCRUBBER" xml:space="preserve">
     <value>Скребок</value>
   </data>
@@ -450,11 +465,17 @@
   <data name="UNIT_ELITE_SOLDIER_DESERTER" xml:space="preserve">
     <value>Элитный солдат дезертир</value>
   </data>
+  <data name="UNIT_EVIL_KING" xml:space="preserve">
+    <value>Злой король</value>
+  </data>
   <data name="UNIT_FANATIC" xml:space="preserve">
     <value>Фанатик</value>
   </data>
   <data name="UNIT_FIRE_DANCER" xml:space="preserve">
     <value>Танцор огня</value>
+  </data>
+  <data name="UNIT_FOX" xml:space="preserve">
+    <value>Лиса</value>
   </data>
   <data name="UNIT_FULLBACK" xml:space="preserve">
     <value>Защитник</value>
@@ -462,8 +483,26 @@
   <data name="UNIT_GENERAL" xml:space="preserve">
     <value>Генерал</value>
   </data>
+  <data name="UNIT_GIANT" xml:space="preserve">
+    <value>Гигант</value>
+  </data>
+  <data name="UNIT_GIANT_BEAR" xml:space="preserve">
+    <value>Огромный медведь</value>
+  </data>
+  <data name="UNIT_GIANT_BOAR" xml:space="preserve">
+    <value>Бешеный кабан</value>
+  </data>
+  <data name="UNIT_GIANT_LEADER_1" xml:space="preserve">
+    <value>Предводитель гигантов 1</value>
+  </data>
+  <data name="UNIT_GIANT_LEADER_2" xml:space="preserve">
+    <value>Предводитель гигантов 2</value>
+  </data>
   <data name="UNIT_GOALKEEPER" xml:space="preserve">
     <value>Вратарь</value>
+  </data>
+  <data name="UNIT_GREEDY_INNKEEPER" xml:space="preserve">
+    <value>Жадный трактирщик</value>
   </data>
   <data name="UNIT_GUARD_DOG" xml:space="preserve">
     <value>Сторожевая собака</value>
@@ -473,6 +512,9 @@
   </data>
   <data name="UNIT_HOUSECARL" xml:space="preserve">
     <value>Хускерл</value>
+  </data>
+  <data name="UNIT_IRON_FIST" xml:space="preserve">
+    <value>Железный кулак</value>
   </data>
   <data name="UNIT_JAGUAR_WARRIOR" xml:space="preserve">
     <value>Воин ягуар</value>
@@ -494,6 +536,9 @@
   </data>
   <data name="UNIT_LONGBOWMAN_DESERTER" xml:space="preserve">
     <value>Лучник с длинным луком дезертир</value>
+  </data>
+  <data name="UNIT_LYING_GOAT" xml:space="preserve">
+    <value>Lying Goat</value>
   </data>
   <data name="UNIT_METAL_TOOTHED" xml:space="preserve">
     <value>Фиксатый</value>
@@ -534,8 +579,29 @@
   <data name="UNIT_RIDING_BOWMAN" xml:space="preserve">
     <value>Всадник с луком</value>
   </data>
+  <data name="UNIT_RIVAL_DRESSMAKER" xml:space="preserve">
+    <value>Rival Dressmaker</value>
+  </data>
   <data name="UNIT_ROUGHNECK" xml:space="preserve">
     <value>Хулиган</value>
+  </data>
+  <data name="UNIT_ROYAL_BOWMAN" xml:space="preserve">
+    <value>Королевский лучник</value>
+  </data>
+  <data name="UNIT_ROYAL_CANNONEER" xml:space="preserve">
+    <value>Королевский канонир</value>
+  </data>
+  <data name="UNIT_ROYAL_CAVALRY" xml:space="preserve">
+    <value>Королевский кавалерия</value>
+  </data>
+  <data name="UNIT_ROYAL_LONGBOWMAN" xml:space="preserve">
+    <value>Королевский стрелок из длинного лука</value>
+  </data>
+  <data name="UNIT_ROYAL_MILITIA" xml:space="preserve">
+    <value>Королевский ополченец</value>
+  </data>
+  <data name="UNIT_ROYAL_RECRUIT" xml:space="preserve">
+    <value>Королевский новобранец</value>
   </data>
   <data name="UNIT_SABER_RATTLER" xml:space="preserve">
     <value>Подстрекатель</value>
@@ -576,8 +642,14 @@
   <data name="UNIT_THUG" xml:space="preserve">
     <value>Головорез</value>
   </data>
+  <data name="UNIT_THUG_LEADER" xml:space="preserve">
+    <value>Главарь разбойников</value>
+  </data>
   <data name="UNIT_TRIBESMAN" xml:space="preserve">
     <value>Член племени</value>
+  </data>
+  <data name="UNIT_UNICORN" xml:space="preserve">
+    <value>Единорог</value>
   </data>
   <data name="UNIT_UPROARIOUS_BULL" xml:space="preserve">
     <value>Ревущий бык</value>
@@ -589,6 +661,9 @@
     <value>Дикия Мери</value>
   </data>
   <data name="UNIT_WOLF" xml:space="preserve">
+    <value>Волк</value>
+  </data>
+  <data name="UNIT_WOLF_PACKLOADER" xml:space="preserve">
     <value>Волк</value>
   </data>
 </root>
