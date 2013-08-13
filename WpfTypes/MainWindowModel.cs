@@ -33,7 +33,7 @@ namespace TheSettlersCalculator.WpfTypes
 		private readonly double[] m_enemyCampDestroyTime = new double[MAX_WAVES_COUNT];
 		private Quest m_activeQuest;
 		private EnemyCamp m_activeEnemyCamp;
-		private bool m_veteranAvailable;
+		private int m_userUnitsCount = 200;
 		private bool m_userUnitsCountWarning;
 		private MultyWaveBattleSimulation m_simulation;
 		#endregion
@@ -235,21 +235,12 @@ namespace TheSettlersCalculator.WpfTypes
 
 		public int PlayerUnitLimit
 		{
-			get { return m_veteranAvailable ? 250 : 200; }
-		}
-
-		public bool VeteranAvailable
-		{
-			get { return m_veteranAvailable; }
+			get { return m_userUnitsCount; }
 			set
 			{
-				if (m_veteranAvailable != value)
-				{
-					m_veteranAvailable = value;
-					OnPropertyChanged("PlayerUnitLimit");
-					CheckUserUnitsCount();					
-				}
-			}
+				m_userUnitsCount = value;
+				CheckUserUnitsCount();
+			}			
 		}
 
 		public bool UserUnitsCountWarning

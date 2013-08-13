@@ -412,9 +412,12 @@
 				</Grid.RowDefinitions>
 
 				<StackPanel Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="3" Orientation="Horizontal">
-					<CheckBox Margin="10,10,10,0" Grid.Column="0" Grid.Row="0" IsChecked="{Binding Model.VeteranAvailable, ElementName=Win}">
-						Ветеран
-					</CheckBox>
+                    <ComboBox Margin="10,5,10,5" Grid.Column="0" Grid.Row="0" Text="{Binding Model.PlayerUnitLimit, ElementName=Win}">
+                        <ComboBoxItem IsSelected="True">200</ComboBoxItem>
+                        <ComboBoxItem>220</ComboBoxItem>
+                        <ComboBoxItem>250</ComboBoxItem>
+                        <ComboBoxItem>270</ComboBoxItem>
+                    </ComboBox>
 
 					<ComboBox HorizontalAlignment="Right" Margin="0,2,16,2" MinWidth="200" ItemsSource="{Binding Model.Quests,ElementName=Win}" SelectedValue="{Binding Model.ActiveQuest, ElementName=Win, Mode=TwoWay}">
 						<ComboBox.ItemTemplate>
