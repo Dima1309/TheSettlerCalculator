@@ -1,6 +1,4 @@
 ﻿using System.Windows;
-using System.Windows.Controls;
-using System.Xml;
 using TheSettlersCalculator.WpfTypes;
 
 namespace TheSettlersCalculator

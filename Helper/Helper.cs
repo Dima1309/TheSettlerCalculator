@@ -33,7 +33,7 @@ namespace TheSettlersCalculator.Helper
 			DictionaryEntry entry = resourceSet.OfType<DictionaryEntry>()
 				  .FirstOrDefault(e => e.Key.ToString().Equals(text, StringComparison.OrdinalIgnoreCase));
 
-			return text.Equals(entry.Key.ToString(), StringComparison.OrdinalIgnoreCase) ? entry.Value.ToString() : text;
+			return entry.Value!=null && text.Equals(entry.Key.ToString(), StringComparison.OrdinalIgnoreCase) ? entry.Value.ToString() : text;
 		}
 	}
 }

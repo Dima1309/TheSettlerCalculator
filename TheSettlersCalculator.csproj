@@ -299,11 +299,13 @@
     <PostBuildEvent>mkdir "$(TargetDir)Quests"
 mkdir "$(TargetDir)Quests\Maps"
 mkdir "$(TargetDir)Quests\Icons"
+mkdir "$(TargetDir)Quests\Image"
 mkdir "$(TargetDir)Price"
 mkdir "$(TargetDir)Price\Icons"
 
 xcopy /D /Y "$(ProjectDir)Quests\*.xml" "$(TargetDir)Quests"
 xcopy /D /Y "$(ProjectDir)Quests\Icons" "$(TargetDir)Quests\Icons"
+xcopy /D /Y "$(ProjectDir)Quests\Images" "$(TargetDir)Quests\Images"
 xcopy /D /Y "$(ProjectDir)Quests\Maps" "$(TargetDir)Quests\Maps"
 
 xcopy /D /Y "$(ProjectDir)Price\Icons" "$(TargetDir)Price\Icons"</PostBuildEvent>
