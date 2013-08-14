@@ -11,7 +11,7 @@
     <enemy>SKUNK</enemy>
     <enemy>CULTIST</enemy>
     <enemy>SWAMP_WITCH</enemy>
-    <enemy>SHADOWS_NEAKER</enemy>
+    <enemy>SHADOW_SNEAKER</enemy>
     <enemy>FANATIC</enemy>
     <enemy>DARK_PRIEST</enemy>
     <enemy>FIRE_DANCER</enemy>
@@ -134,7 +134,7 @@
       <sector>2</sector>
       <left>246</left>
       <top>99</top>
-      <enemy unit="SHADOWS_NEAKER" count="30" />
+      <enemy unit="SHADOW_SNEAKER" count="30" />
       <enemy unit="DARK_PRIEST" count="30" />
     </camp>
     <camp>
@@ -145,7 +145,7 @@
       <left>212</left>
       <top>131</top>
       <enemy unit="CULTIST" count="30" />
-      <enemy unit="SHADOWS_NEAKER" count="20" />
+      <enemy unit="SHADOW_SNEAKER" count="20" />
       <enemy unit="FIRE_DANCER" count="10" />
     </camp>
     <camp>
@@ -157,7 +157,7 @@
       <top>143</top>
       <enemy unit="CULTIST" count="40" />
       <enemy unit="SWAMP_WITCH" count="1" />
-      <enemy unit="SHADOWS_NEAKER" count="20" />
+      <enemy unit="SHADOW_SNEAKER" count="20" />
       <enemy unit="DARK_PRIEST" count="30" />
     </camp>
     <camp>
@@ -178,7 +178,7 @@
       <left>755</left>
       <top>117</top>
       <enemy unit="CULTIST" count="25" />
-      <enemy unit="SHADOWS_NEAKER" count="25" />
+      <enemy unit="SHADOW_SNEAKER" count="25" />
       <enemy unit="FANATIC" count="30" />
       <enemy unit="FIRE_DANCER" count="10" />
     </camp>
@@ -189,7 +189,7 @@
       <sector>4</sector>
       <left>589</left>
       <top>92</top>
-      <enemy unit="SHADOWS_NEAKER" count="30" />
+      <enemy unit="SHADOW_SNEAKER" count="30" />
       <enemy unit="FANATIC" count="50" />
       <enemy unit="FIRE_DANCER" count="10" />
     </camp>
@@ -200,7 +200,7 @@
       <sector>4</sector>
       <left>567</left>
       <top>137</top>
-      <enemy unit="SHADOWS_NEAKER" count="30" />
+      <enemy unit="SHADOW_SNEAKER" count="30" />
       <enemy unit="DARK_PRIEST" count="40" />
     </camp>
     <camp>
@@ -211,7 +211,7 @@
       <left>683</left>
       <top>65</top>
       <enemy unit="CULTIST" count="40" />
-      <enemy unit="SHADOWS_NEAKER" count="40" />
+      <enemy unit="SHADOW_SNEAKER" count="40" />
       <enemy unit="DARK_PRIEST" count="40" />
       <enemy unit="DARK_HIGH_PRIEST" count="1" />
     </camp>

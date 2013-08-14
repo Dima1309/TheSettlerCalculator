@@ -34,6 +34,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <RunPostBuildEvent>Always</RunPostBuildEvent>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -64,31 +67,9 @@
     <Compile Include="QuestMapWindow.xaml.cs">
       <DependentUpon>QuestMapWindow.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Quests\BanditNestQuest.cs" />
-    <Compile Include="Quests\BountyHunterQuest.cs" />
-    <Compile Include="Quests\DarkTemplareQuest.cs" />
-    <Compile Include="Quests\GunpowderQuest.cs" />
-    <Compile Include="Quests\HorsebackQuest.cs" />
-    <Compile Include="Quests\IslandofthePiratesQuest.cs" />
-    <Compile Include="Quests\MainIsland.cs" />
-    <Compile Include="Quests\MotherLoveQuest.cs" />
-    <Compile Include="Quests\OldFriendsQuest.cs" />
-    <Compile Include="Quests\OutlawsQuest.cs" />
     <Compile Include="Quests\PlayerQuest.cs" />
     <Compile Include="Quests\Quest.cs" />
     <Compile Include="Quests\Quests.cs" />
-    <Compile Include="Quests\RoaringBullQuest.cs" />
-    <Compile Include="Quests\SecludedExperimentsQuest.cs" />
-    <Compile Include="Quests\SonsoftheveldtQuest.cs" />
-    <Compile Include="Quests\StealingfromtherichQuest.cs" />
-    <Compile Include="Quests\SurpriseAttackQuest.cs" />
-    <Compile Include="Quests\TheBlackKnightsQuest.cs" />
-    <Compile Include="Quests\TheDarkBrotherhoodQuest.cs" />
-    <Compile Include="Quests\TheNordsQuest.cs" />
-    <Compile Include="Quests\TraitorsQuest.cs" />
-    <Compile Include="Quests\VictortheviciousQuest.cs" />
-    <Compile Include="Quests\WildMaryQuest.cs" />
-    <Compile Include="Quests\WitchoftheSwampQuest.cs" />
     <Compile Include="Statistics\MultiWaveStatistics.cs" />
     <Compile Include="Statistics\Statistics.cs" />
     <Compile Include="Statistics\WaveKey.cs" />
@@ -101,7 +82,6 @@
     <Compile Include="Types\BattleSideType.cs" />
     <Compile Include="Types\CampWinTime.cs" />
     <Compile Include="Types\EnemyUnits.cs" />
-    <Compile Include="Types\EnemyUnitsEnum.cs" />
     <Compile Include="Types\IXMLSerializable.cs" />
     <Compile Include="Types\LossesPrice.cs" />
     <Compile Include="Types\LossesProduct.cs" />
@@ -299,7 +279,7 @@
     <PostBuildEvent>mkdir "$(TargetDir)Quests"
 mkdir "$(TargetDir)Quests\Maps"
 mkdir "$(TargetDir)Quests\Icons"
-mkdir "$(TargetDir)Quests\Image"
+mkdir "$(TargetDir)Quests\Images"
 mkdir "$(TargetDir)Price"
 mkdir "$(TargetDir)Price\Icons"
 

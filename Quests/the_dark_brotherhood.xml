@@ -7,7 +7,7 @@
     <enemy>NIGHT_SPAWN</enemy>
     <enemy>CULTIST</enemy>
     <enemy>SWAMP_WITCH</enemy>
-    <enemy>SHADOWS_NEAKER</enemy>
+    <enemy>SHADOW_SNEAKER</enemy>
     <enemy>FANATIC</enemy>
     <enemy>DARK_PRIEST</enemy>
     <enemy>FIRE_DANCER</enemy>
@@ -29,7 +29,7 @@
       <wintime>20</wintime>
       <sector>1</sector>
       <enemy unit="CULTIST" count="100" />
-      <enemy unit="SHADOWS_NEAKER" count="100" />
+      <enemy unit="SHADOW_SNEAKER" count="100" />
     </camp>
     <camp>
       <name>1</name>
@@ -45,7 +45,7 @@
       <wintime>20</wintime>
       <sector>101</sector>
       <enemy unit="CULTIST" count="100" />
-      <enemy unit="SHADOWS_NEAKER" count="100" />
+      <enemy unit="SHADOW_SNEAKER" count="100" />
     </camp>
     <camp>
       <name>1</name>
@@ -61,7 +61,7 @@
       <wintime>20</wintime>
       <sector>201</sector>
       <enemy unit="CULTIST" count="100" />
-      <enemy unit="SHADOWS_NEAKER" count="100" />
+      <enemy unit="SHADOW_SNEAKER" count="100" />
     </camp>
     <camp>
       <name>3</name>
@@ -69,7 +69,7 @@
       <wintime>20</wintime>
       <sector>2</sector>
       <enemy unit="CULTIST" count="80" />
-      <enemy unit="SHADOWS_NEAKER" count="40" />
+      <enemy unit="SHADOW_SNEAKER" count="40" />
       <enemy unit="FANATIC" count="80" />
     </camp>
     <camp>
@@ -78,7 +78,7 @@
       <wintime>20</wintime>
       <sector>2</sector>
       <enemy unit="CULTIST" count="80" />
-      <enemy unit="SHADOWS_NEAKER" count="40" />
+      <enemy unit="SHADOW_SNEAKER" count="40" />
       <enemy unit="FANATIC" count="40" />
       <enemy unit="DARK_PRIEST" count="40" />
     </camp>
@@ -88,7 +88,7 @@
       <wintime>20</wintime>
       <sector>102</sector>
       <enemy unit="CULTIST" count="80" />
-      <enemy unit="SHADOWS_NEAKER" count="40" />
+      <enemy unit="SHADOW_SNEAKER" count="40" />
       <enemy unit="FANATIC" count="80" />
     </camp>
     <camp>
@@ -97,7 +97,7 @@
       <wintime>20</wintime>
       <sector>102</sector>
       <enemy unit="CULTIST" count="80" />
-      <enemy unit="SHADOWS_NEAKER" count="40" />
+      <enemy unit="SHADOW_SNEAKER" count="40" />
       <enemy unit="FANATIC" count="40" />
       <enemy unit="DARK_PRIEST" count="40" />
     </camp>
@@ -107,7 +107,7 @@
       <wintime>20</wintime>
       <sector>202</sector>
       <enemy unit="CULTIST" count="80" />
-      <enemy unit="SHADOWS_NEAKER" count="40" />
+      <enemy unit="SHADOW_SNEAKER" count="40" />
       <enemy unit="FANATIC" count="80" />
     </camp>
     <camp>
@@ -116,7 +116,7 @@
       <wintime>20</wintime>
       <sector>202</sector>
       <enemy unit="CULTIST" count="80" />
-      <enemy unit="SHADOWS_NEAKER" count="40" />
+      <enemy unit="SHADOW_SNEAKER" count="40" />
       <enemy unit="FANATIC" count="40" />
       <enemy unit="DARK_PRIEST" count="40" />
     </camp>
@@ -141,7 +141,7 @@
       <wintime>20</wintime>
       <sector>3</sector>
       <enemy unit="CULTIST" count="70" />
-      <enemy unit="SHADOWS_NEAKER" count="70" />
+      <enemy unit="SHADOW_SNEAKER" count="70" />
       <enemy unit="DARK_PRIEST" count="60" />
     </camp>
     <camp>
@@ -165,7 +165,7 @@
       <wintime>20</wintime>
       <sector>103</sector>
       <enemy unit="CULTIST" count="70" />
-      <enemy unit="SHADOWS_NEAKER" count="70" />
+      <enemy unit="SHADOW_SNEAKER" count="70" />
       <enemy unit="DARK_PRIEST" count="60" />
     </camp>
     <camp>
@@ -189,7 +189,7 @@
       <wintime>20</wintime>
       <sector>203</sector>
       <enemy unit="CULTIST" count="50" />
-      <enemy unit="SHADOWS_NEAKER" count="50" />
+      <enemy unit="SHADOW_SNEAKER" count="50" />
       <enemy unit="DARK_PRIEST" count="100" />
     </camp>
     <camp>
@@ -213,7 +213,7 @@
       <type>Boss</type>
       <wintime>20</wintime>
       <sector>4</sector>
-      <enemy unit="SHADOWS_NEAKER" count="100" />
+      <enemy unit="SHADOW_SNEAKER" count="100" />
       <enemy unit="DARK_PRIEST" count="100" />
     </camp>
     <camp>
@@ -238,7 +238,7 @@
       <wintime>20</wintime>
       <sector>104</sector>
       <enemy unit="CULTIST" count="80" />
-      <enemy unit="SHADOWS_NEAKER" count="120" />
+      <enemy unit="SHADOW_SNEAKER" count="120" />
     </camp>
     <camp>
       <name>11</name>
@@ -289,7 +289,7 @@
       <type>Normal</type>
       <wintime>20</wintime>
       <sector>16</sector>
-      <enemy unit="SHADOWS_NEAKER" count="125" />
+      <enemy unit="SHADOW_SNEAKER" count="125" />
       <enemy unit="DARK_PRIEST" count="75" />
     </camp>
     <camp>
@@ -298,7 +298,7 @@
       <wintime>20</wintime>
       <sector>16</sector>
       <enemy unit="CULTIST" count="60" />
-      <enemy unit="SHADOWS_NEAKER" count="70" />
+      <enemy unit="SHADOW_SNEAKER" count="70" />
       <enemy unit="DARK_PRIEST" count="70" />
     </camp>
     <camp>
@@ -306,7 +306,7 @@
       <type>Normal</type>
       <wintime>20</wintime>
       <sector>16</sector>
-      <enemy unit="SHADOWS_NEAKER" count="50" />
+      <enemy unit="SHADOW_SNEAKER" count="50" />
       <enemy unit="DARK_PRIEST" count="150" />
     </camp>
     <camp>
@@ -315,7 +315,7 @@
       <wintime>20</wintime>
       <sector>16</sector>
       <enemy unit="CULTIST" count="50" />
-      <enemy unit="SHADOWS_NEAKER" count="50" />
+      <enemy unit="SHADOW_SNEAKER" count="50" />
       <enemy unit="FANATIC" count="50" />
       <enemy unit="DARK_PRIEST" count="50" />
     </camp>
@@ -333,7 +333,7 @@
       <wintime>20</wintime>
       <sector>16</sector>
       <enemy unit="CULTIST" count="50" />
-      <enemy unit="SHADOWS_NEAKER" count="100" />
+      <enemy unit="SHADOW_SNEAKER" count="100" />
       <enemy unit="FIRE_DANCER" count="50" />
     </camp>
     <camp>
@@ -342,7 +342,7 @@
       <wintime>20</wintime>
       <sector>16</sector>
       <enemy unit="CULTIST" count="50" />
-      <enemy unit="SHADOWS_NEAKER" count="49" />
+      <enemy unit="SHADOW_SNEAKER" count="49" />
       <enemy unit="DARK_PRIEST" count="100" />
       <enemy unit="DARK_HIGH_PRIEST" count="1" />
     </camp>
@@ -362,7 +362,7 @@
       <wintime>20</wintime>
       <sector>18</sector>
       <enemy unit="CULTIST" count="66" />
-      <enemy unit="SHADOWS_NEAKER" count="66" />
+      <enemy unit="SHADOW_SNEAKER" count="66" />
       <enemy unit="DARK_PRIEST" count="66" />
     </camp>
     <camp>
@@ -390,7 +390,7 @@
       <wintime>20</wintime>
       <sector>20</sector>
       <enemy unit="NIGHT_SPAWN" count="2" />
-      <enemy unit="SHADOWS_NEAKER" count="66" />
+      <enemy unit="SHADOW_SNEAKER" count="66" />
       <enemy unit="FIRE_DANCER" count="66" />
       <enemy unit="DANCING_DERVISH" count="66" />
     </camp>

@@ -5,7 +5,7 @@
   <icon>Quests\Icons\Rasender_Bulle.png</icon>
   <enemies>
     <enemy>CULTIST</enemy>
-    <enemy>SHADOWS_NEAKER</enemy>
+    <enemy>SHADOW_SNEAKER</enemy>
     <enemy>DARK_PRIEST</enemy>
     <enemy>FIRE_DANCER</enemy>
     <enemy>DARK_HIGH_PRIEST</enemy>
@@ -298,7 +298,7 @@
       <wintime>20</wintime>
       <sector>7</sector>
       <enemy unit="CULTIST" count="70" />
-      <enemy unit="SHADOWS_NEAKER" count="50" />
+      <enemy unit="SHADOW_SNEAKER" count="50" />
       <enemy unit="FIRE_DANCER" count="80" />
     </camp>
     <camp>
@@ -307,7 +307,7 @@
       <wintime>20</wintime>
       <sector>7</sector>
       <enemy unit="CULTIST" count="100" />
-      <enemy unit="SHADOWS_NEAKER" count="80" />
+      <enemy unit="SHADOW_SNEAKER" count="80" />
       <enemy unit="DARK_PRIEST" count="20" />
     </camp>
     <camp>
@@ -324,7 +324,7 @@
       <wintime>20</wintime>
       <sector>8</sector>
       <enemy unit="CULTIST" count="100" />
-      <enemy unit="SHADOWS_NEAKER" count="40" />
+      <enemy unit="SHADOW_SNEAKER" count="40" />
       <enemy unit="FIRE_DANCER" count="60" />
     </camp>
     <camp>
@@ -341,7 +341,7 @@
       <wintime>140</wintime>
       <sector>8</sector>
       <enemy unit="CULTIST" count="80" />
-      <enemy unit="SHADOWS_NEAKER" count="50" />
+      <enemy unit="SHADOW_SNEAKER" count="50" />
       <enemy unit="FIRE_DANCER" count="70" />
       <enemy unit="DARK_HIGH_PRIEST" count="1" />
     </camp>

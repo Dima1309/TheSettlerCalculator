@@ -50,7 +50,7 @@ namespace TheSettlersCalculator.Types
 					s_general.MaxDamage = 120;
 					s_general.Accuracy = 100;
 					s_general.AttackPriority = AttackPriority.Normal;
-					s_general.IconPath = "Images\\general.png";
+					s_general.IconPath = "Quests\\Images\\general.png";
 				}
 				
 				return s_general;
@@ -68,7 +68,7 @@ namespace TheSettlersCalculator.Types
 			unit.Accuracy = 80;
 			unit.AttackPriority = AttackPriority.Normal;
 			unit.Experience = 2;
-			unit.IconPath = "Images\\recruit.png";
+			unit.IconPath = "Quests\\Images\\recruit.png";
 			unit.ProductionTime = 3 * 60;
 			unit.LossesProduct = new LossesProduct[]
 			                     	{
@@ -85,7 +85,7 @@ namespace TheSettlersCalculator.Types
 			unit.Accuracy = 80;
 			unit.AttackPriority = AttackPriority.Normal;
 			unit.Experience = 9;
-			unit.IconPath = "Images\\militia.png";
+			unit.IconPath = "Quests\\Images\\militia.png";
 			unit.ProductionTime = 8 * 60;
 			unit.LossesProduct = new LossesProduct[]
 			                     	{
@@ -102,7 +102,7 @@ namespace TheSettlersCalculator.Types
 			unit.Accuracy = 85;
 			unit.AttackPriority = AttackPriority.Normal;
 			unit.Experience = 10;
-			unit.IconPath = "Images\\soldier.png";
+			unit.IconPath = "Quests\\Images\\soldier.png";
 			unit.ProductionTime = 12 * 60;
 			unit.LossesProduct = new LossesProduct[]
 			                     	{
@@ -119,7 +119,7 @@ namespace TheSettlersCalculator.Types
 			unit.Accuracy = 90;
 			unit.AttackPriority = AttackPriority.Normal;
 			unit.Experience = 20;
-			unit.IconPath = "Images\\elitesoldier.png";
+			unit.IconPath = "Quests\\Images\\elitesoldier.png";
 			unit.ProductionTime = 32 * 60;
 			unit.LossesProduct = new LossesProduct[]
 			                     	{
@@ -138,7 +138,7 @@ namespace TheSettlersCalculator.Types
 			unit.AttackPriority = AttackPriority.AvantGarde;
 			unit.Experience = 8;
 			unit.AttackWeaknessTarget = true;
-			unit.IconPath = "Images\\cavalry.png";
+			unit.IconPath = "Quests\\Images\\cavalry.png";
 			unit.ProductionTime = 18 * 60;
 			unit.LossesProduct = new LossesProduct[]
 			                     	{
@@ -156,7 +156,7 @@ namespace TheSettlersCalculator.Types
 			unit.AttackPriority = AttackPriority.Normal;
 			unit.Experience = 3;
 			unit.TowerBonus = true;
-			unit.IconPath = "Images\\bowman.png";
+			unit.IconPath = "Quests\\Images\\bowman.png";
 			unit.ProductionTime = 4 * 60;
 			unit.LossesProduct = new LossesProduct[]
 			                     	{
@@ -174,7 +174,7 @@ namespace TheSettlersCalculator.Types
 			unit.AttackPriority = AttackPriority.Normal;
 			unit.Experience = 8;
 			unit.TowerBonus = true;
-			unit.IconPath = "Images\\longbowman.png";
+			unit.IconPath = "Quests\\Images\\longbowman.png";
 			unit.ProductionTime = 8 * 60;
 			unit.LossesProduct = new LossesProduct[]
 			                     	{
@@ -192,7 +192,7 @@ namespace TheSettlersCalculator.Types
 			unit.AttackPriority = AttackPriority.Normal;
 			unit.Experience = 20;
 			unit.TowerBonus = true;			
-			unit.IconPath = "Images\\crossbowman.png";
+			unit.IconPath = "Quests\\Images\\crossbowman.png";
 			unit.ProductionTime = 20 * 60;
 			unit.LossesProduct = new LossesProduct[]
 			                     	{
@@ -211,7 +211,7 @@ namespace TheSettlersCalculator.Types
 			unit.Experience = 30;
 			unit.TowerBonus = true;
 			unit.IgnoreTowerBonus = 100;
-			unit.IconPath = "Images\\cannoneer.png";
+			unit.IconPath = "Quests\\Images\\cannoneer.png";
 			unit.ProductionTime = 30 * 60;
 			unit.LossesProduct = new LossesProduct[]
 			                     	{

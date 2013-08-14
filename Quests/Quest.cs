@@ -11,22 +11,22 @@ namespace TheSettlersCalculator.Quests
 	public class Quest : IXMLSerializable
 	{
 		#region Consts
-		private static string QUEST = "quest";
-		private static string NAME = "name";
-		private static string MAP_PATH = "map";
-		private static string ICON_PATH = "icon";
-		private static string ENEMIES = "enemies";
-		private static string ENEMY = "enemy";
-		private static string CAMPS = "camps";
-		private static string CAMP = "camp";
+		private const string QUEST = "quest";
+		private const string NAME = "name";
+		private const string MAP_PATH = "map";
+		private const string ICON_PATH = "icon";
+		private const string ENEMIES = "enemies";
+		private const string ENEMY = "enemy";
+		private const string CAMPS = "camps";
+		private const string CAMP = "camp";
 
-		private static string CAMP_TYPE = "type";
-		private static string WIN_TIME = "wintime";
-		private static string SECTOR = "sector";
-		private static string LEFT = "left";
-		private static string TOP = "top";
-		private static string UNIT = "unit";
-		private static string COUNT = "count";
+		private const string CAMP_TYPE = "type";
+		private const string WIN_TIME = "wintime";
+		private const string SECTOR = "sector";
+		private const string LEFT = "left";
+		private const string TOP = "top";
+		private const string UNIT = "unit";
+		private const string COUNT = "count";
 		#endregion
 
 		#region Fields
@@ -90,7 +90,6 @@ namespace TheSettlersCalculator.Quests
 
 		public void Load(XmlReader reader)
 		{
-			Type enumType = typeof(EnemyUnitsEnum);
 			List<string> enemies = new List<string>();
 			List<Unit> units = new List<Unit>();
 			List<Camp> camps = new List<Camp>();
@@ -117,12 +116,16 @@ namespace TheSettlersCalculator.Quests
 				else if(reader.Name.Equals(ENEMY, StringComparison.OrdinalIgnoreCase))
 				{
 					string value = reader.ReadElementString().Trim();					
-					EnemyUnitsEnum enemyUnitsEnum = (EnemyUnitsEnum) Enum.Parse(enumType, value);
 					if (!enemies.Contains(value))
 					{
 						enemies.Add(value);
 					}
-					units.Add(EnemyUnits.Units[(int)enemyUnitsEnum]);
+					if (!EnemyUnits.Units.ContainsKey(value))
+					{
+						units.Add(EnemyUnits.Units[value]);	
+					}
+
+					units.Add(EnemyUnits.Units[value]);
 				}
 				else if(reader.Name.Equals(CAMP, StringComparison.OrdinalIgnoreCase))
 				{
@@ -159,8 +162,7 @@ namespace TheSettlersCalculator.Quests
 			foreach(Unit unit in Units)
 			{
 				writer.WriteStartElement(ENEMY);
-				enemies[i] = ((EnemyUnitsEnum) Array.IndexOf(EnemyUnits.Units, unit)).ToString();
-				writer.WriteValue(enemies[i]);
+				writer.WriteValue(unit.Id);
 				writer.WriteEndElement();
 				i++;
 			}

@@ -11,7 +11,7 @@
     <enemy>BOWMAN_DESERTER</enemy>
     <enemy>LONGBOWMAN_DESERTER</enemy>
     <enemy>CROSSBOWMAN_DESERTER</enemy>
-    <enemy>CANNONEER_DESERTER</enemy>
+    <enemy>CANNONNEER_DESERTER</enemy>
     <enemy>SIR_ROBIN</enemy>
     <enemy>BIG_BERTHA</enemy>
   </enemies>
@@ -48,7 +48,7 @@
       <enemy unit="CAVALRY_DESERTER" count="60" />
       <enemy unit="ELITE_SOLDIER_DESERTER" count="60" />
       <enemy unit="LONGBOWMAN_DESERTER" count="60" />
-      <enemy unit="CANNONEER_DESERTER" count="10" />
+      <enemy unit="CANNONNEER_DESERTER" count="10" />
     </camp>
     <camp>
       <name>1</name>
@@ -82,7 +82,7 @@
       <enemy unit="CAVALRY_DESERTER" count="60" />
       <enemy unit="ELITE_SOLDIER_DESERTER" count="60" />
       <enemy unit="LONGBOWMAN_DESERTER" count="60" />
-      <enemy unit="CANNONEER_DESERTER" count="10" />
+      <enemy unit="CANNONNEER_DESERTER" count="10" />
     </camp>
     <camp>
       <name>1</name>
@@ -116,7 +116,7 @@
       <enemy unit="CAVALRY_DESERTER" count="60" />
       <enemy unit="ELITE_SOLDIER_DESERTER" count="60" />
       <enemy unit="LONGBOWMAN_DESERTER" count="60" />
-      <enemy unit="CANNONEER_DESERTER" count="10" />
+      <enemy unit="CANNONNEER_DESERTER" count="10" />
     </camp>
     <camp>
       <name>5</name>
@@ -159,7 +159,7 @@
       <sector>3</sector>
       <enemy unit="ELITE_SOLDIER_DESERTER" count="60" />
       <enemy unit="LONGBOWMAN_DESERTER" count="60" />
-      <enemy unit="CANNONEER_DESERTER" count="10" />
+      <enemy unit="CANNONNEER_DESERTER" count="10" />
     </camp>
     <camp>
       <name>8</name>
@@ -185,7 +185,7 @@
       <sector>3</sector>
       <enemy unit="ELITE_SOLDIER_DESERTER" count="60" />
       <enemy unit="CROSSBOWMAN_DESERTER" count="60" />
-      <enemy unit="CANNONEER_DESERTER" count="20" />
+      <enemy unit="CANNONNEER_DESERTER" count="20" />
     </camp>
     <camp>
       <name>11</name>
@@ -209,7 +209,7 @@
       <wintime>20</wintime>
       <sector>4</sector>
       <enemy unit="SOLDIER_DESERTER" count="110" />
-      <enemy unit="CANNONEER_DESERTER" count="25" />
+      <enemy unit="CANNONNEER_DESERTER" count="25" />
     </camp>
     <camp>
       <name>14</name>
@@ -250,7 +250,7 @@
       <sector>4</sector>
       <enemy unit="ELITE_SOLDIER_DESERTER" count="50" />
       <enemy unit="CROSSBOWMAN_DESERTER" count="50" />
-      <enemy unit="CANNONEER_DESERTER" count="25" />
+      <enemy unit="CANNONNEER_DESERTER" count="25" />
       <enemy unit="BIG_BERTHA" count="1" />
     </camp>
   </camps>

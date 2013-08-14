@@ -4,7 +4,7 @@
   <map>Quests\Maps\</map>
   <icon>Quests\Icons\Beutelschneider.png</icon>
   <enemies>
-    <enemy>WILD_MARY</enemy>
+    <enemy>RECRUIT_DESERTER</enemy>
     <enemy>MILITIA_DESERTER</enemy>
     <enemy>CAVALRY_DESERTER</enemy>
     <enemy>SOLDIER_DESERTER</enemy>
@@ -12,7 +12,7 @@
     <enemy>BOWMAN_DESERTER</enemy>
     <enemy>LONGBOWMAN_DESERTER</enemy>
     <enemy>CROSSBOWMAN_DESERTER</enemy>
-    <enemy>CANNONEER_DESERTER</enemy>
+    <enemy>CANNONNEER_DESERTER</enemy>
     <enemy>SIR_ROBIN</enemy>
     <enemy>BIG_BERTHA</enemy>
     <enemy>WOLF</enemy>
@@ -44,7 +44,7 @@
       <type>Normal</type>
       <wintime>20</wintime>
       <sector>1</sector>
-      <enemy unit="WILD_MARY" count="30" />
+      <enemy unit="RECRUIT_DESERTER" count="30" />
       <enemy unit="BOWMAN_DESERTER" count="40" />
     </camp>
     <camp>
@@ -52,7 +52,7 @@
       <type>Normal</type>
       <wintime>20</wintime>
       <sector>1</sector>
-      <enemy unit="WILD_MARY" count="40" />
+      <enemy unit="RECRUIT_DESERTER" count="40" />
       <enemy unit="BOWMAN_DESERTER" count="30" />
     </camp>
     <camp>
@@ -60,7 +60,7 @@
       <type>Boss</type>
       <wintime>20</wintime>
       <sector>1</sector>
-      <enemy unit="WILD_MARY" count="85" />
+      <enemy unit="RECRUIT_DESERTER" count="85" />
       <enemy unit="BOWMAN_DESERTER" count="65" />
     </camp>
     <camp>
@@ -96,7 +96,7 @@
       <type>Normal</type>
       <wintime>20</wintime>
       <sector>2</sector>
-      <enemy unit="WILD_MARY" count="30" />
+      <enemy unit="RECRUIT_DESERTER" count="30" />
       <enemy unit="BOWMAN_DESERTER" count="40" />
     </camp>
     <camp>
@@ -104,7 +104,7 @@
       <type>Normal</type>
       <wintime>20</wintime>
       <sector>2</sector>
-      <enemy unit="WILD_MARY" count="40" />
+      <enemy unit="RECRUIT_DESERTER" count="40" />
       <enemy unit="BOWMAN_DESERTER" count="30" />
     </camp>
     <camp>
@@ -112,7 +112,7 @@
       <type>Boss</type>
       <wintime>20</wintime>
       <sector>2</sector>
-      <enemy unit="WILD_MARY" count="65" />
+      <enemy unit="RECRUIT_DESERTER" count="65" />
       <enemy unit="BOWMAN_DESERTER" count="85" />
     </camp>
     <camp>
@@ -277,7 +277,7 @@
       <sector>6</sector>
       <enemy unit="ELITE_SOLDIER_DESERTER" count="20" />
       <enemy unit="CROSSBOWMAN_DESERTER" count="20" />
-      <enemy unit="CANNONEER_DESERTER" count="20" />
+      <enemy unit="CANNONNEER_DESERTER" count="20" />
       <enemy unit="SIR_ROBIN" count="1" />
     </camp>
     <camp>

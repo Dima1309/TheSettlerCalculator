@@ -145,7 +145,7 @@ namespace TheSettlersCalculator.Types
 			set { m_iconPath = value; }
 		}
 
-		public string MId
+		public string Id
 		{
 			get { return m_id; }
 			set { m_id = value; }

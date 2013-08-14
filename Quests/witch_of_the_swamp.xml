@@ -6,7 +6,7 @@
   <enemies>
     <enemy>CULTIST</enemy>
     <enemy>SWAMP_WITCH</enemy>
-    <enemy>SHADOWS_NEAKER</enemy>
+    <enemy>SHADOW_SNEAKER</enemy>
     <enemy>FANATIC</enemy>
     <enemy>DARK_PRIEST</enemy>
     <enemy>DARK_HIGH_PRIEST</enemy>
@@ -46,7 +46,7 @@
       <type>Normal</type>
       <wintime>20</wintime>
       <sector>3</sector>
-      <enemy unit="SHADOWS_NEAKER" count="60" />
+      <enemy unit="SHADOW_SNEAKER" count="60" />
       <enemy unit="DARK_PRIEST" count="40" />
     </camp>
     <camp>
@@ -55,7 +55,7 @@
       <wintime>20</wintime>
       <sector>3</sector>
       <enemy unit="CULTIST" count="33" />
-      <enemy unit="SHADOWS_NEAKER" count="33" />
+      <enemy unit="SHADOW_SNEAKER" count="33" />
       <enemy unit="DARK_PRIEST" count="33" />
     </camp>
     <camp>
@@ -79,7 +79,7 @@
       <wintime>20</wintime>
       <sector>4</sector>
       <enemy unit="CULTIST" count="40" />
-      <enemy unit="SHADOWS_NEAKER" count="120" />
+      <enemy unit="SHADOW_SNEAKER" count="120" />
       <enemy unit="DARK_HIGH_PRIEST" count="1" />
     </camp>
     <camp>

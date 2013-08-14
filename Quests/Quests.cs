@@ -29,35 +29,6 @@ namespace TheSettlersCalculator.Quests
 		#endregion
 
 		#region Methods
-		private static void InitializeQuests()
-		{
-			s_quests = new Quest[]
-			           	{
-							new BanditNestQuest(),
-							new BountyHunterQuest(),
-			           		new DarkTemplareQuest(),
-							new GunpowderQuest(),
-							new HorsebackQuest(),
-							new IslandofthePiratesQuest(),
-							new MainIsland(),
-							new MotherLoveQuest(),
-							new OldFriendsQuest(),
-							new OutlawsQuest(),
-							new RoaringBullQuest(),
-							new SecludedExperimentsQuest(),
-							new SonsoftheveldtQuest(),
-							new StealingfromtherichQuest(),
-							new SurpriseAttackQuest(),
-							new TheBlackKnightsQuest(),
-							new TheDarkBrotherhoodQuest(),
-							new TheNordsQuest(),
-							new TraitorsQuest(),
-							new VictortheviciousQuest(),
-							new WildMaryQuest(),
-							new WitchoftheSwampQuest()
-			           	};
-		}
-
 		internal static void Load()
 		{
 			List<Quest> result = new List<Quest>();
