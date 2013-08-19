@@ -207,14 +207,29 @@
   <data name="QUEST_SURPRISE_ATTACK" xml:space="preserve">
     <value>Неожиданное нападение</value>
   </data>
+  <data name="QUEST_THE_BETRAYED_LITTLE_TAILOR" xml:space="preserve">
+    <value>Преданный маленький портняжка</value>
+  </data>
   <data name="QUEST_THE_BLACK_KNIGHTS" xml:space="preserve">
     <value>Чёрные рыцари</value>
+  </data>
+  <data name="QUEST_THE_CLEVER_LITTLE_TAILOR" xml:space="preserve">
+    <value>Умный портняжка</value>
   </data>
   <data name="QUEST_THE_DARK_BROTHERHOOD" xml:space="preserve">
     <value>Тёмное братство</value>
   </data>
+  <data name="QUEST_THE_HEROIC_LITTLE_TAILOR" xml:space="preserve">
+    <value>Потняжка герой</value>
+  </data>
   <data name="QUEST_THE_NORDS" xml:space="preserve">
     <value>Северяне</value>
+  </data>
+  <data name="QUEST_THE_SONS_OF_THE_LITTLE_TAILOR" xml:space="preserve">
+    <value>Сыновья портняжки</value>
+  </data>
+  <data name="QUEST_THE_VALIANT_LITTLE_TAILOR" xml:space="preserve">
+    <value>Храбрый портняжка</value>
   </data>
   <data name="QUEST_TRAITORS" xml:space="preserve">
     <value>Предатели</value>
@@ -538,7 +553,7 @@
     <value>Лучник с длинным луком дезертир</value>
   </data>
   <data name="UNIT_LYING_GOAT" xml:space="preserve">
-    <value>Lying Goat</value>
+    <value>Лежащий козёл</value>
   </data>
   <data name="UNIT_METAL_TOOTHED" xml:space="preserve">
     <value>Фиксатый</value>
@@ -664,6 +679,6 @@
     <value>Волк</value>
   </data>
   <data name="UNIT_WOLF_PACKLOADER" xml:space="preserve">
-    <value>Волк</value>
+    <value>Волк вожак</value>
   </data>
 </root>
