@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<quest>
+  <name>QUEST_THE_VALIANT_LITTLE_TAILOR</name>
+  <map>Quests\Maps\</map>
+  <icon>Quests\Icons\the-valiant-little-tailor.png</icon>
+  <enemies>
+    <enemy>BOAR</enemy>
+    <enemy>BEAR</enemy>
+    <enemy>WOLF2</enemy>
+    <enemy>FOX</enemy>
+    <enemy>ROYAL_RECRUIT</enemy>
+    <enemy>ROYAL_MILITIA</enemy>
+    <enemy>ROYAL_BOWMAN</enemy>
+    <enemy>ROYAL_LONGBOWMAN</enemy>
+    <enemy>ROYAL_CAVALRY</enemy>
+    <enemy>ROYAL_CANNONEER</enemy>
+    <enemy>GIANT_LEADER1</enemy>
+    <enemy>GIANT_LEADER2</enemy>
+    <enemy>UNICORN</enemy>
+    <enemy>GIANT_BOAR</enemy>
+    <enemy>EVIL_KING</enemy>
+  </enemies>
+  <camps>
+  </camps>
+</quest>
+
