@@ -14,8 +14,8 @@
     <enemy>WOLF_PACKLOADER</enemy>
     <enemy>FOX</enemy>
     <enemy>GIANT</enemy>
-    <enemy>GIANT_LEADER1</enemy>
-    <enemy>GIANT_LEADER1</enemy>
+    <enemy>GIANT_LEADER_1</enemy>
+    <enemy>GIANT_LEADER_2</enemy>
     <enemy>GIANT_BEAR</enemy>
     <enemy>LYING_GOAT</enemy>
     <enemy>THUG_LEADER</enemy>

@@ -14,8 +14,8 @@
     <enemy>ROYAL_LONGBOWMAN</enemy>
     <enemy>ROYAL_CAVALRY</enemy>
     <enemy>ROYAL_CANNONEER</enemy>
-    <enemy>GIANT_LEADER1</enemy>
-    <enemy>GIANT_LEADER2</enemy>
+    <enemy>GIANT_LEADER_1</enemy>
+    <enemy>GIANT_LEADER_2</enemy>
     <enemy>UNICORN</enemy>
     <enemy>GIANT_BOAR</enemy>
     <enemy>EVIL_KING</enemy>
