@@ -331,11 +331,29 @@ namespace TheSettlersCalculator.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Преданный маленький портняжка.
+        /// </summary>
+        public static string QUEST_THE_BETRAYED_LITTLE_TAILOR {
+            get {
+                return ResourceManager.GetString("QUEST_THE_BETRAYED_LITTLE_TAILOR", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Чёрные рыцари.
         /// </summary>
         public static string QUEST_THE_BLACK_KNIGHTS {
             get {
                 return ResourceManager.GetString("QUEST_THE_BLACK_KNIGHTS", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Умный портняжка.
+        /// </summary>
+        public static string QUEST_THE_CLEVER_LITTLE_TAILOR {
+            get {
+                return ResourceManager.GetString("QUEST_THE_CLEVER_LITTLE_TAILOR", resourceCulture);
             }
         }
         
@@ -349,11 +367,38 @@ namespace TheSettlersCalculator.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Потняжка герой.
+        /// </summary>
+        public static string QUEST_THE_HEROIC_LITTLE_TAILOR {
+            get {
+                return ResourceManager.GetString("QUEST_THE_HEROIC_LITTLE_TAILOR", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Северяне.
         /// </summary>
         public static string QUEST_THE_NORDS {
             get {
                 return ResourceManager.GetString("QUEST_THE_NORDS", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Сыновья портняжки.
+        /// </summary>
+        public static string QUEST_THE_SONS_OF_THE_LITTLE_TAILOR {
+            get {
+                return ResourceManager.GetString("QUEST_THE_SONS_OF_THE_LITTLE_TAILOR", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Храбрый портняжка.
+        /// </summary>
+        public static string QUEST_THE_VALIANT_LITTLE_TAILOR {
+            get {
+                return ResourceManager.GetString("QUEST_THE_VALIANT_LITTLE_TAILOR", resourceCulture);
             }
         }
         
@@ -1321,7 +1366,7 @@ namespace TheSettlersCalculator.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Lying Goat.
+        ///   Looks up a localized string similar to Лежащий козёл.
         /// </summary>
         public static string UNIT_LYING_GOAT {
             get {
@@ -1699,7 +1744,7 @@ namespace TheSettlersCalculator.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Волк.
+        ///   Looks up a localized string similar to Волк вожак.
         /// </summary>
         public static string UNIT_WOLF_PACKLOADER {
             get {

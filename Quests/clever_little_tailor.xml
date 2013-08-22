@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<quest>
+  <name>QUEST_THE_CLEVER_LITTLE_TAILOR</name>
+  <map>Quests\Maps\</map>
+  <icon>Quests\Icons\the-clever-little-tailor.png</icon>
+  <enemies>
+    <enemy>CHUCK</enemy>
+    <enemy>METAL_TOOTHED</enemy>
+    <enemy>GUARD_DOG</enemy>
+    <enemy>ROUGHNECK</enemy>
+    <enemy>RANGER</enemy>
+    <enemy>BOAR</enemy>
+    <enemy>BEAR</enemy>
+    <enemy>WOLF2</enemy>
+    <enemy>WOLF_PACKLOADER</enemy>
+    <enemy>FOX</enemy>
+    <enemy>GIANT</enemy>
+    <enemy>IRON_FIST</enemy>
+    <enemy>GIANT_BEAR</enemy>
+    <enemy>RIVAL_DRESSER</enemy>
+  </enemies>
+  <camps>
+  </camps>
+</quest>
+
+

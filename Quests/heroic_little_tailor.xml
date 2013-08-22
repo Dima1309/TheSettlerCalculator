@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<quest>
+  <name>QUEST_THE_HEROIC_LITTLE_TAILOR</name>
+  <map>Quests\Maps\</map>
+  <icon>Quests\Icons\the-heroic-little-tailor.png</icon>
+  <enemies>
+    <enemy>NIGHT_SPAWN</enemy>
+    <enemy>CULTIST</enemy>
+    <enemy>SWAMP_WITCH</enemy>
+    <enemy>SHADOW_SNEAKER</enemy>
+    <enemy>FANATIC</enemy>
+    <enemy>DARK_PRIEST</enemy>
+    <enemy>FIRE_DANCER</enemy>
+    <enemy>DANCING_DERVISH</enemy>
+    <enemy>DARK_HIGH_PRIEST</enemy>
+    <enemy>BOAR</enemy>
+    <enemy>BEAR</enemy>
+    <enemy>WOLF2</enemy>
+    <enemy>WOLF_PACKLOADER</enemy>
+    <enemy>FOX</enemy>
+    <enemy>GIANT</enemy>
+    <enemy>BLACK_BULL</enemy>
+    <enemy>DARK_WIZARD</enemy>
+  </enemies>
+  <camps>
+  </camps>
+</quest>
+
+
