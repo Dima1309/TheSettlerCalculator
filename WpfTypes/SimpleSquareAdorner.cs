@@ -11,7 +11,7 @@ namespace TheSettlersCalculator.WpfTypes
 	{
 		#region Fields
 		private readonly EnemyCamp m_camp;
-		private readonly Brush m_brush;
+		private Brush m_brush;
 		#endregion
 
 		// Be sure to call the base class constructor.
@@ -19,6 +19,55 @@ namespace TheSettlersCalculator.WpfTypes
 			: base(adornedElement)
 		{
 			m_camp = camp;
+			m_camp.PropertyChanged += CampPropertyChanged;
+
+			InitializeSquadPropertyChanged();
+
+			InitializeTooltip(camp);
+			InitializeBrush(camp);
+		}
+
+		void SquadPropertyChanged(object sender, System.ComponentModel.PropertyChangedEventArgs e)
+		{
+			InitializeTooltip(m_camp);
+		}
+
+		void CampPropertyChanged(object sender, System.ComponentModel.PropertyChangedEventArgs e)
+		{
+			if (e.PropertyName.Equals("CampType"))
+			{
+				InitializeBrush(m_camp);
+			}
+			else if (e.PropertyName.Equals("Name") ||
+				e.PropertyName.Equals("Squads"))
+			{
+				InitializeTooltip(m_camp);
+				InitializeSquadPropertyChanged();
+			} else if (e.PropertyName.Equals("Left") ||
+				e.PropertyName.Equals("Top"))
+			{
+				InvalidateVisual();
+			}
+		}
+
+		private void InitializeSquadPropertyChanged()
+		{
+			foreach (UnitSquad squad in m_camp.Squads)
+			{
+				squad.PropertyChanged -= SquadPropertyChanged;
+				squad.PropertyChanged += SquadPropertyChanged;
+			}
+		}
+
+		private void InitializeBrush(EnemyCamp camp)
+		{
+			CampTypeBrushConverter converter = new CampTypeBrushConverter();
+			m_brush = converter.Convert(camp.CampType, typeof(Brush), null, CultureInfo.InvariantCulture) as Brush;
+			InvalidateVisual();
+		}
+
+		private void InitializeTooltip(EnemyCamp camp)
+		{
 			ToolTip toolTip = new ToolTip();
 			StackPanel panel = new StackPanel();
 			panel.Orientation = Orientation.Horizontal;
@@ -31,9 +80,6 @@ namespace TheSettlersCalculator.WpfTypes
 			
 			toolTip.Content = panel;
 			ToolTip = toolTip;
-
-			CampTypeConverter converter = new CampTypeConverter();
-			m_brush = converter.Convert(camp.CampType, typeof(Brush), null, CultureInfo.InvariantCulture) as Brush;
 		}
 
 		public EnemyCamp Camp
@@ -45,6 +91,11 @@ namespace TheSettlersCalculator.WpfTypes
 		// method, which is called by the layout system as part of a rendering pass.
 		protected override void OnRender(DrawingContext drawingContext)
 		{
+			if (Camp.Left <=0 && Camp.Top <= 0)
+			{
+				return;
+			}
+
 			Rect adornedElementRect = new Rect(Camp.Left, Camp.Top, 46, 46);
 
 			Pen renderPen = new Pen(new SolidColorBrush(Colors.Transparent), 0);

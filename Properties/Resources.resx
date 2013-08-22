@@ -117,6 +117,33 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="CAMP_TYPE_AMBUSH" xml:space="preserve">
+    <value>Засада</value>
+  </data>
+  <data name="CAMP_TYPE_BOSS" xml:space="preserve">
+    <value>Главарь</value>
+  </data>
+  <data name="CAMP_TYPE_NORMAL" xml:space="preserve">
+    <value>Обычный</value>
+  </data>
+  <data name="CAMP_TYPE_UNKNOWN" xml:space="preserve">
+    <value>Неизвестный</value>
+  </data>
+  <data name="CAMP_WIN_TIME_BLACK_CASTLE" xml:space="preserve">
+    <value>Чёрный замок/Церковь из костей(120 сек.)</value>
+  </data>
+  <data name="CAMP_WIN_TIME_NORMAL" xml:space="preserve">
+    <value>Обычный(20 сек.)</value>
+  </data>
+  <data name="CAMP_WIN_TIME_UNKNOWN" xml:space="preserve">
+    <value>Неизвестный</value>
+  </data>
+  <data name="CAMP_WIN_TIME_WHITE_CASTLE" xml:space="preserve">
+    <value>Белый замок(40 сек.)</value>
+  </data>
+  <data name="CAMP_WIN_TIME_WITCH_TOWER" xml:space="preserve">
+    <value>Башня ведьмы(140 сек.)</value>
+  </data>
   <data name="QUEST_BANDIT_NEST" xml:space="preserve">
     <value>Убежище разбойников</value>
   </data>

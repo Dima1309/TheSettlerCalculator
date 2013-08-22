@@ -1,8 +1,13 @@
-﻿using System.Collections.ObjectModel;
+﻿using System;
+using System.Collections.Generic;
+using System.Collections.ObjectModel;
+using System.ComponentModel;
 using System.Windows;
+using System.Windows.Controls;
 using System.Windows.Documents;
 using System.Windows.Input;
 using TheSettlersCalculator.Quests;
+using TheSettlersCalculator.Types;
 using TheSettlersCalculator.WpfTypes;
 
 namespace TheSettlersCalculator
@@ -10,21 +15,25 @@ namespace TheSettlersCalculator
 	/// <summary>
 	/// Interaction logic for QuestMapWindow.xaml
 	/// </summary>
-	public partial class QuestMapWindow : Window
+	public partial class QuestMapWindow : Window, INotifyPropertyChanged
 	{
 		#region Fields
+		private bool m_isEditorMode = false;
 		private readonly Quest m_model;
-		private readonly Collection<EnemyCamp> m_camps;
+		private readonly List<Unit> m_units;
+		private readonly ObservableCollection<EnemyCamp> m_camps;
 		private EnemyCamp m_selectedCamp;
 		private Point? m_lastDragPoint;
+		private Point? m_lastClickPosition;
 		#endregion
 
-		public QuestMapWindow(Quest quest, Collection<EnemyCamp> camps)
+		public QuestMapWindow(Quest quest, IEnumerable<EnemyCamp> camps)
 		{
+			m_units = new List<Unit>(quest.Units);
 			m_model = quest;
-			m_camps = camps;
+			m_camps = new ObservableCollection<EnemyCamp>(camps);
 
-			InitializeComponent();				
+			InitializeComponent();
 		}
 
 		public Quest Model
@@ -32,9 +41,29 @@ namespace TheSettlersCalculator
 			get { return m_model; }
 		}
 
+		public ObservableCollection<EnemyCamp> Camps
+		{
+			get { return m_camps; }
+		}
+
 		public EnemyCamp SelectedCamp
 		{
 			get { return m_selectedCamp; }
+		}
+
+		public List<Unit> Units
+		{
+			get { return m_units; }
+		}
+
+		public bool IsEditorMode
+		{
+			get { return m_isEditorMode; }
+			set 
+			{ 
+				m_isEditorMode = value;
+				OnPropertyChanged("IsEditorMode");
+			}
 		}
 
 		private void Win_Loaded(object sender, RoutedEventArgs e)
@@ -43,18 +72,23 @@ namespace TheSettlersCalculator
 
 			foreach (EnemyCamp camp in m_camps)
 			{
-				SimpleSquareAdorner adorner = new SimpleSquareAdorner(MapImage, camp);
-				adorner.DataContext = Model;
-				adorner.MouseUp += adorner_MouseUp;
-				
-				adornerLayer.Add(adorner);
+				AddAdorner(camp, adornerLayer);
 			}
 		}
 
-		void adorner_MouseUp(object sender, System.Windows.Input.MouseButtonEventArgs e)
+		private void AddAdorner(EnemyCamp camp, AdornerLayer adornerLayer)
+		{
+			SimpleSquareAdorner adorner = new SimpleSquareAdorner(MapImage, camp);
+			adorner.DataContext = Model;
+			adorner.MouseUp += adorner_MouseUp;
+				
+			adornerLayer.Add(adorner);
+		}
+
+		void adorner_MouseUp(object sender, MouseButtonEventArgs e)
 		{
 			SimpleSquareAdorner simpleSquareAdorner = sender as SimpleSquareAdorner;
-			if (simpleSquareAdorner != null)
+			if (simpleSquareAdorner != null && !IsEditorMode)
 			{
 				m_selectedCamp = simpleSquareAdorner.Camp;
 				DialogResult = true;
@@ -62,7 +96,7 @@ namespace TheSettlersCalculator
 			}
 		}
 
-		private void MapImage_MouseWheel(object sender, System.Windows.Input.MouseWheelEventArgs e)
+		private void MapImage_MouseWheel(object sender, MouseWheelEventArgs e)
 		{
 			double delta = e.Delta > 0 ? 0.1 : -0.1;
 
@@ -112,6 +146,90 @@ namespace TheSettlersCalculator
 				scrollViewer.Cursor = Cursors.SizeAll;
 				m_lastDragPoint = mousePos;
 				Mouse.Capture(scrollViewer);
+			}
+		}
+
+		private void Win_KeyDown(object sender, KeyEventArgs e)
+		{
+			if (e.Key == Key.F2)
+			{
+				IsEditorMode = !IsEditorMode;
+			}
+		}
+
+		public event PropertyChangedEventHandler PropertyChanged;
+
+		protected void OnPropertyChanged(string propertyName)
+		{
+			PropertyChangedEventHandler handler = PropertyChanged;
+
+			if (handler != null)
+			{
+				handler(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+
+		private void MapImage_MouseUp(object sender, MouseButtonEventArgs e)
+		{
+			if (IsEditorMode)
+			{
+				m_lastClickPosition = e.GetPosition(e.Device.Target);
+				
+			}
+		}
+
+		private void Button_Paste_Position_Click(object sender, RoutedEventArgs e)
+		{
+			if (!m_lastClickPosition.HasValue)
+			{
+				return;
+			}
+
+			Button button = sender as Button;
+			if (button ==null)
+			{
+				return;
+			}
+
+			EnemyCamp camp = button.DataContext as EnemyCamp;
+			if (camp == null)
+			{
+				return;
+			}
+
+			camp.Left = Math.Round(m_lastClickPosition.Value.X);
+			camp.Top = Math.Round(m_lastClickPosition.Value.Y);
+		}
+
+		private void Button_Add_Click(object sender, RoutedEventArgs e)
+		{
+			Camp camp = new Camp();
+			camp.Name = "Без названия";
+
+			EnemyCamp enemyCamp = new EnemyCamp(Model, camp);
+			m_camps.Add(enemyCamp);
+
+			AddAdorner(enemyCamp, AdornerLayer.GetAdornerLayer(MapImage));
+		}
+
+		private void Button_Delete_Click(object sender, RoutedEventArgs e)
+		{
+			Button button = sender as Button;
+			if (button ==null)
+			{
+				return;
+			}
+
+			EnemyCamp camp = button.DataContext as EnemyCamp;
+			if (camp == null)
+			{
+				return;
+			}
+
+			if (MessageBox.Show("Удалить лагерь?", "Подтверждение", MessageBoxButton.YesNo)==MessageBoxResult.Yes)
+			{
+				camp.Left = -1;//for delete adorner
+				m_camps.Remove(camp);
 			}
 		}
 	}

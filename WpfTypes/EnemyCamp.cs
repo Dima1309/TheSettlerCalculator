@@ -5,23 +5,15 @@ using TheSettlersCalculator.Types;
 
 namespace TheSettlersCalculator.WpfTypes
 {
-	public class EnemyCamp
+	public class EnemyCamp : Camp
 	{
 		#region Fields
-		private readonly string m_name;
-		private readonly CampType m_campType;
 		private readonly ObservableCollection<UnitSquad> m_squads = new ObservableCollection<UnitSquad>();
-		private readonly double m_left;
-		private readonly double m_top;
-		private readonly double m_destroyCampTime;
 		#endregion
 
 		#region Constructor
-		internal EnemyCamp(Quest quest, Camp camp)
+		internal EnemyCamp(Quest quest, Camp camp) : base(camp)
 		{
-			m_name = camp.Name;
-			m_campType = camp.CampType;
-
 			foreach(KeyValuePair<short, short> pair in camp.Counts)
 			{
 				if (pair.Value > 0)
@@ -29,43 +21,23 @@ namespace TheSettlersCalculator.WpfTypes
 					m_squads.Add(new UnitSquad(quest.Units[pair.Key], pair.Value));
 				}
 			}
-
-			m_left = camp.Left;
-			m_top = camp.Top;
-			m_destroyCampTime = camp.WinTime;
+			m_squads.CollectionChanged += CollectionChanged;
 		}
 		#endregion
 
 		#region Properties
-		public string Name
-		{
-			get { return m_name; }
-		}
-
-		public CampType CampType
-		{
-			get { return m_campType; }
-		}
-
 		public ObservableCollection<UnitSquad> Squads
 		{
 			get { return m_squads; }
 		}
+		#endregion
 
-		public double Left
+		#region Methods
+		void CollectionChanged(object sender, System.Collections.Specialized.NotifyCollectionChangedEventArgs e)
 		{
-			get { return m_left; }
+			OnPropertyChanged("Squads");
 		}
 
-		public double Top
-		{
-			get { return m_top; }
-		}
-
-		public double DestroyCampTime
-		{
-			get { return m_destroyCampTime; }
-		}
 		#endregion
 	}
 }

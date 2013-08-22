@@ -13,14 +13,14 @@ namespace TheSettlersCalculator.WpfTypes
 		public event PropertyChangedEventHandler PropertyChanged;
 
         #region Fields
-        private readonly Unit m_unit;
+        private Unit m_unit;
         private int m_count;
         #endregion
 
         #region Constructor
         internal UnitSquad(Unit unit, int count)
         {
-            m_unit = unit;
+            Unit = unit;
             Count = count;
         }
         #endregion
@@ -51,11 +51,12 @@ namespace TheSettlersCalculator.WpfTypes
         }
 
 		public Unit Unit
-    	{
-    		get { return m_unit; }
-    	}
+		{
+			get { return m_unit; }
+			set { m_unit = value; }
+		}
 
-		#region Methods
+    	#region Methods
 		protected void OnPropertyChanged(string propertyName)
 		{
 			PropertyChangedEventHandler handler = PropertyChanged;

@@ -170,7 +170,7 @@ namespace TheSettlersCalculator.WpfTypes
 							enemyUnit.Count = count;
 						}
 
-						EnemyCampDestroyTime = m_activeEnemyCamp.DestroyCampTime;
+						EnemyCampDestroyTime = m_activeEnemyCamp.WinTime;
 						OnPropertyChanged("EnemyCampDestroyTime");
 					}
 				}

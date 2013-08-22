@@ -22,7 +22,7 @@
         <Converters:ProductTypeConverter x:Key="productTypeConverter" />
         <Converters:MultyWaveBattleTypeConverter x:Key="multyWaveBattleTypeConverter" />
         <Converters:ServerTypeConverter x:Key="serverTypeConverter" />
-        <Converters:CampTypeConverter x:Key="campTypeConverter" />
+        <Converters:CampTypeBrushConverter x:Key="campTypeConverter" />
 		<Converters:TowerBonusConverter x:Key="towerBonusConverter" />
 		<Converters:BoolVisibilityConverter x:Key="boolVisibilityConverter" />
 		<Converters:ByteVisibilityConverter x:Key="byteVisibilityConverter" />

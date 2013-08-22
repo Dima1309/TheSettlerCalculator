@@ -4,12 +4,33 @@
         Title="QuestMapWindow" 
         Height="{Binding Model.Map.Height, ElementName=Win}" 
         Width="{Binding Model.Map.Width, ElementName=Win}"
-        SizeToContent="WidthAndHeight"
-        x:Name="Win" Loaded="Win_Loaded">
+        xmlns:src="clr-namespace:TheSettlersCalculator.WpfTypes" xmlns:Converters="clr-namespace:TheSettlersCalculator.WpfTypes.Converters" xmlns:System="clr-namespace:System;assembly=mscorlib" xmlns:Types="clr-namespace:TheSettlersCalculator.Types" SizeToContent="WidthAndHeight"
+        x:Name="Win" Loaded="Win_Loaded" KeyDown="Win_KeyDown">
+    <Window.Resources>
+        <Converters:BoolVisibilityConverter x:Key="boolVisibilityConverter" />
+        <Converters:CampTypeStringConverter x:Key="campTypeConverter" />
+        <Converters:CampWinTimeStringConverter x:Key="campWinTimeStringConverter" />
+        
+        <ObjectDataProvider MethodName="GetValues"
+        ObjectType="{x:Type System:Enum}"
+        x:Key="CampTypeEnumValues">
+            <ObjectDataProvider.MethodParameters>
+                <x:Type TypeName="Types:CampType" />
+            </ObjectDataProvider.MethodParameters>
+        </ObjectDataProvider>
 
+        <ObjectDataProvider MethodName="GetValues"
+        ObjectType="{x:Type System:Enum}"
+        x:Key="WinTimeEnumValues">
+            <ObjectDataProvider.MethodParameters>
+                <x:Type TypeName="Types:CampWinTime" />
+            </ObjectDataProvider.MethodParameters>
+        </ObjectDataProvider>
+    </Window.Resources>
     <Grid>           
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="4*"></ColumnDefinition>
+            <ColumnDefinition Width="Auto" ></ColumnDefinition>           
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Height="*"></RowDefinition>
@@ -25,11 +46,123 @@
             <Image Name="MapImage" Source="{Binding Model.Map, ElementName=Win}" 
                Height="{Binding Model.Map.Height, ElementName=Win}" 
                Width="{Binding Model.Map.Width, ElementName=Win}"
-                   MouseWheel="MapImage_MouseWheel" >
+                   MouseWheel="MapImage_MouseWheel" MouseUp="MapImage_MouseUp">
                 <Image.LayoutTransform>
                     <ScaleTransform x:Name="imageScale" CenterX="0" CenterY="0" ScaleX="1" ScaleY="1"/>
                 </Image.LayoutTransform>
             </Image>
+        </ScrollViewer>
+
+        <ScrollViewer Visibility="{Binding IsEditorMode, ElementName=Win, Converter={StaticResource boolVisibilityConverter}}" Grid.Row="0" Grid.Column="1"
+                      VerticalScrollBarVisibility="Visible" Height="{Binding Path=Height, ElementName=Win}">
+        <StackPanel Orientation="Vertical"  >
+            <ItemsControl ItemsSource="{Binding Camps, ElementName=Win}">
+                <ItemsControl.ItemTemplate>
+                    <DataTemplate>
+                        <Expander>
+                            <Expander.Header>
+                                <StackPanel Orientation="Horizontal">
+                                    <Label Name="lblCampTitle" Content="{Binding Name}" FontWeight="Bold" VerticalAlignment="Center" Margin="0,0,15,0" />
+                                    <ItemsControl ItemsSource="{Binding Squads}">
+                                        <ItemsControl.ItemsPanel>
+                                            <ItemsPanelTemplate>
+                                                <StackPanel Orientation="Horizontal" />
+                                            </ItemsPanelTemplate>
+                                        </ItemsControl.ItemsPanel>
+                                        <ItemsControl.ItemTemplate>
+                                            <DataTemplate>
+                                                <StackPanel Orientation="Horizontal">
+                                                    <Image Width="30" Height="30" Grid.Column="0" Source="{Binding Icon}"></Image>
+                                                    <Label Grid.Column="1" Content="{Binding Count}" />
+                                                </StackPanel>
+                                            </DataTemplate>
+                                        </ItemsControl.ItemTemplate>
+                                    </ItemsControl>
+                                </StackPanel>
+                            </Expander.Header>
+                            <StackPanel Orientation="Vertical">
+                                    <Grid >                                        
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="*"></ColumnDefinition>
+                                            <ColumnDefinition Width="*" MaxWidth="60"></ColumnDefinition>
+                                        </Grid.ColumnDefinitions>
+
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="32"></RowDefinition>
+                                            <RowDefinition Height="32"></RowDefinition>
+                                            <RowDefinition Height="32"></RowDefinition>
+                                            <RowDefinition Height="32"></RowDefinition>
+                                            <RowDefinition Height="32"></RowDefinition>
+                                            <RowDefinition Height="32"></RowDefinition>
+                                            <RowDefinition Height="32"></RowDefinition>
+                                            <RowDefinition Height="32"></RowDefinition>
+                                        </Grid.RowDefinitions>
+
+                                        <Label Grid.Column="0" Grid.Row="0">Сектор</Label>
+                                        <src:NumberTextBox Grid.Column="1" Grid.Row="0" MaxWidth="100" MinWidth="50" Margin="0,5" MinValue="0" MaxValue="255" Text="{Binding SectorId}"/>
+
+                                        <Label Grid.Column="0" Grid.Row="1">Наименование</Label>
+                                        <TextBox Grid.Column="1" Grid.Row="1" MaxWidth="100" MinWidth="50" Margin="0,5" Text="{Binding Name}"/>
+
+                                        <Label Grid.Column="0" Grid.Row="2">Тип лагеря</Label>
+                                        <ComboBox Grid.Column="1" Grid.Row="2" MaxWidth="100" MinWidth="50" Margin="0,5" SelectedValue="{Binding CampType}" ItemsSource="{Binding Source={StaticResource CampTypeEnumValues}}">
+                                            <ComboBox.ItemTemplate>
+                                                <DataTemplate>
+                                                    <TextBlock Text="{Binding Converter={StaticResource campTypeConverter}}"/>
+                                                </DataTemplate>
+                                            </ComboBox.ItemTemplate>
+                                        </ComboBox>
+
+                                        <Label Grid.Column="0" Grid.Row="3">Время победы</Label>
+                                        <ComboBox Grid.Column="1" Grid.Row="3" MaxWidth="100" MinWidth="50" Margin="0,5" SelectedValue="{Binding WinTime, Converter={StaticResource ResourceKey=campWinTimeStringConverter}}" ItemsSource="{Binding Source={StaticResource ResourceKey=WinTimeEnumValues}}">
+                                            <ComboBox.ItemTemplate>
+                                                <DataTemplate>
+                                                    <TextBlock Text="{Binding Converter={StaticResource campWinTimeStringConverter}}"/>
+                                                </DataTemplate>
+                                            </ComboBox.ItemTemplate>
+                                        </ComboBox>                                            
+
+                                        <Label Grid.Column="0" Grid.Row="4">X</Label>
+                                        <src:NumberTextBox Grid.Column="1" Grid.Row="4" MaxWidth="100" MinWidth="50" Margin="0,5" MinValue="0" Text="{Binding Left}"/>
+
+                                        <Label Grid.Column="0" Grid.Row="5">Y</Label>
+                                        <src:NumberTextBox Grid.Column="1" Grid.Row="5" MaxWidth="100" MinWidth="50" Margin="0,5" MinValue="0" Text="{Binding Top}"/>
+
+                                        <Button Grid.Column="0" Grid.Row="6" Grid.ColumnSpan="2" Margin="5,5" Content="Вставить координаты последнего нажатия" Click="Button_Paste_Position_Click"/>
+
+                                        <Button Grid.Column="0" Grid.Row="7" Grid.ColumnSpan="2" Margin="5,5" Content="Удалить лагерь" Click="Button_Delete_Click"/>
+                                    </Grid>
+                                    <ItemsControl ItemsSource="{Binding Squads}">
+                                        <ItemsControl.ItemTemplate>
+                                            <DataTemplate>
+                                                <Grid>
+                                                    <Grid.ColumnDefinitions>
+                                                        <ColumnDefinition Width="*"></ColumnDefinition>
+                                                        <ColumnDefinition Width="*" MaxWidth="60"></ColumnDefinition>
+                                                    </Grid.ColumnDefinitions>
+                                                    <ComboBox Grid.Column="0" Margin="0,5" ItemsSource="{Binding Units, ElementName=Win}" SelectedValue="{Binding Unit}">
+                                                        <ComboBox.ItemTemplate>
+                                                            <DataTemplate>
+                                                                <StackPanel Orientation="Horizontal">
+                                                                    <Image Width="30" Height="30" Source="{Binding Icon}"></Image>
+                                                                    <Label Content="{Binding Name}" />
+                                                                </StackPanel>
+                                                            </DataTemplate>
+                                                        </ComboBox.ItemTemplate>
+                                                    </ComboBox>
+                                                    <src:NumberTextBox Grid.Column="1" Margin="0,5" MinValue="0" MaxWidth="50" MinWidth="50" Text="{Binding Count}"/>
+                                                </Grid>
+                                            </DataTemplate>
+                                        </ItemsControl.ItemTemplate>
+                                    </ItemsControl>
+                            </StackPanel>
+                        </Expander>
+                    </DataTemplate>
+                </ItemsControl.ItemTemplate>
+            </ItemsControl>
+            
+            <Button Click="Button_Add_Click">Добавить</Button>
+        </StackPanel>
         </ScrollViewer>
     </Grid>
 </Window>

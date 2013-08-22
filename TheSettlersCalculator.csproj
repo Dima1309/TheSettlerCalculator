@@ -117,7 +117,9 @@
     <Compile Include="WpfTypes\Converters\BattleTimeConverter.cs" />
     <Compile Include="WpfTypes\Converters\BoolVisibilityConverter.cs" />
     <Compile Include="WpfTypes\Converters\ByteVisibilityConverter.cs" />
-    <Compile Include="WpfTypes\Converters\CampTypeConverter.cs" />
+    <Compile Include="WpfTypes\Converters\CampTypeBrushConverter.cs" />
+    <Compile Include="WpfTypes\Converters\CampTypeStringConverter.cs" />
+    <Compile Include="WpfTypes\Converters\CampWinTimeStringConverter.cs" />
     <Compile Include="WpfTypes\Converters\HealthBrushConverter.cs" />
     <Compile Include="WpfTypes\Converters\IntNegativeVisibilityConverter.cs" />
     <Compile Include="WpfTypes\Converters\LossesVisibilityConverter.cs" />

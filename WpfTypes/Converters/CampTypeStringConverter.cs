@@ -2,57 +2,54 @@
 using System.Globalization;
 using System.Windows;
 using System.Windows.Data;
-using System.Windows.Media;
+using TheSettlersCalculator.Properties;
 using TheSettlersCalculator.Types;
 
 namespace TheSettlersCalculator.WpfTypes.Converters
 {
-	[ValueConversion(typeof(CampType), typeof(Brush))]
-	public class CampTypeConverter : IValueConverter
+	[ValueConversion(typeof(CampType), typeof(String))]
+	public class CampTypeStringConverter : IValueConverter
 	{
 		public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
 		{
 			CampType campType = (CampType)value;
 
-			Color color;
-			switch(campType)
+			String result;
+			switch (campType)
 			{
 				case CampType.Normal:
-					color = Colors.White;
+					result = Resources.CAMP_TYPE_NORMAL;
 					break;
 				case CampType.Boss:
-					color = Colors.Red;
+					result = Resources.CAMP_TYPE_BOSS;
 					break;
 				case CampType.Ambush:
-					color = Colors.Yellow;
+					result = Resources.CAMP_TYPE_AMBUSH;
 					break;
 				default:
-					color = Colors.Transparent;
+					result = Resources.CAMP_TYPE_UNKNOWN;
 					break;
 			}
 
-			SolidColorBrush brush = new SolidColorBrush(color);
-			brush.Opacity = 0.3;
-
-			return brush;
+			return result;
 		}
 
 		public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
 		{
-			SolidColorBrush brush = value as SolidColorBrush;
-			if (brush != null)
+			string text = value as string;
+			if (text != null)
 			{
-				if(brush.Color == Colors.White)
+				if (text.Equals(Resources.CAMP_TYPE_NORMAL))
 				{
 					return CampType.Normal;
-				} 
+				}
 
-				if(brush.Color == Colors.Yellow)
+				if (text.Equals(Resources.CAMP_TYPE_AMBUSH))
 				{
 					return CampType.Ambush;
 				}
 
-				if (brush.Color == Colors.Red)
+				if (text.Equals(Resources.CAMP_TYPE_BOSS))
 				{
 					return CampType.Boss;
 				}
@@ -62,4 +59,3 @@ namespace TheSettlersCalculator.WpfTypes.Converters
 		}
 	}
 }
-

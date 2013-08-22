@@ -61,6 +61,87 @@ namespace TheSettlersCalculator.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Засада.
+        /// </summary>
+        public static string CAMP_TYPE_AMBUSH {
+            get {
+                return ResourceManager.GetString("CAMP_TYPE_AMBUSH", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Главарь.
+        /// </summary>
+        public static string CAMP_TYPE_BOSS {
+            get {
+                return ResourceManager.GetString("CAMP_TYPE_BOSS", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Обычный.
+        /// </summary>
+        public static string CAMP_TYPE_NORMAL {
+            get {
+                return ResourceManager.GetString("CAMP_TYPE_NORMAL", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Неизвестный.
+        /// </summary>
+        public static string CAMP_TYPE_UNKNOWN {
+            get {
+                return ResourceManager.GetString("CAMP_TYPE_UNKNOWN", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Чёрный замок/Церковь из костей(120 сек.).
+        /// </summary>
+        public static string CAMP_WIN_TIME_BLACK_CASTLE {
+            get {
+                return ResourceManager.GetString("CAMP_WIN_TIME_BLACK_CASTLE", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Обычный(20 сек.).
+        /// </summary>
+        public static string CAMP_WIN_TIME_NORMAL {
+            get {
+                return ResourceManager.GetString("CAMP_WIN_TIME_NORMAL", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Неизвестный.
+        /// </summary>
+        public static string CAMP_WIN_TIME_UNKNOWN {
+            get {
+                return ResourceManager.GetString("CAMP_WIN_TIME_UNKNOWN", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Белый замок(40 сек.).
+        /// </summary>
+        public static string CAMP_WIN_TIME_WHITE_CASTLE {
+            get {
+                return ResourceManager.GetString("CAMP_WIN_TIME_WHITE_CASTLE", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Башня ведьмы(140 сек.).
+        /// </summary>
+        public static string CAMP_WIN_TIME_WITCH_TOWER {
+            get {
+                return ResourceManager.GetString("CAMP_WIN_TIME_WITCH_TOWER", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Убежище разбойников.
         /// </summary>
         public static string QUEST_BANDIT_NEST {
