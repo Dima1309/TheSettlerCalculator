@@ -932,7 +932,7 @@
   </unit>
   <unit>
     <id>WOLF2</id>
-    <name>UNIT_WOLF2</name>
+    <name>UNIT_WOLF</name>
     <health>40</health>
     <minDamage>60</minDamage>
     <maxDamage>100</maxDamage>

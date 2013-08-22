@@ -289,7 +289,7 @@ xcopy /D /Y "$(ProjectDir)Quests\Images" "$(TargetDir)Quests\Images"
 xcopy /D /Y "$(ProjectDir)Quests\Maps" "$(TargetDir)Quests\Maps"
 
 xcopy /D /Y "$(ProjectDir)Price\Icons" "$(TargetDir)Price\Icons"
-xcopy /Y "$(ProjectDir)Quests\enemies.xml" "$(TargetDir)"</PostBuildEvent>
+xcopy /D /Y "$(ProjectDir)Quests\Enemies\enemies.xml" "$(TargetDir)"</PostBuildEvent>
   </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
