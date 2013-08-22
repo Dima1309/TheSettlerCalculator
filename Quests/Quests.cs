@@ -57,14 +57,6 @@ namespace TheSettlersCalculator.Quests
 			foreach(Quest quest in QuestList)
 			{
 				string filename = quest.FileName;
-				if (string.IsNullOrEmpty(filename))
-				{
-					filename = Helper.Helper.getResourceName(quest.Name);
-					if(filename.StartsWith("QUEST_"))
-					{
-						filename = "Quests\\" + filename.Substring(6).ToLower() + ".xml";
-					}
-				}
 				XmlWriter writer = XmlWriter.Create(filename, settings);
 				quest.Save(writer);
 				writer.Close();

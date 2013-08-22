@@ -31,6 +31,7 @@ namespace TheSettlersCalculator.Quests
 
 		#region Fields
 		private string m_fileName;
+		private string m_resourceName;
 		private string m_name;
 		private BitmapSource m_icon;
 		private Unit[] m_units;
@@ -43,7 +44,15 @@ namespace TheSettlersCalculator.Quests
 		#region Properties
 		public string Name
 		{
-			get { return m_name; }
+			get
+			{
+				if (string.IsNullOrEmpty(m_name))
+				{
+					m_name = Helper.Helper.getResourceText(m_resourceName);
+				}
+				return m_name;
+			}
+
 			set { m_name = value; }
 		}
 
@@ -103,7 +112,7 @@ namespace TheSettlersCalculator.Quests
 
 				if(reader.Name.Equals(NAME, StringComparison.OrdinalIgnoreCase))
 				{
-					m_name = Helper.Helper.getResourceText(reader.ReadElementString().Trim());
+					m_resourceName = reader.ReadElementString().Trim();
 				}
 				else if(reader.Name.Equals(MAP_PATH, StringComparison.OrdinalIgnoreCase))
 				{
@@ -143,28 +152,26 @@ namespace TheSettlersCalculator.Quests
 
 			//m_name;//resource
 			writer.WriteStartElement(NAME);
-			writer.WriteValue(Helper.Helper.getResourceName(m_name));
+			writer.WriteValue(m_resourceName??m_name);
 			writer.WriteEndElement();
 
 			writer.WriteStartElement(MAP_PATH);
-			writer.WriteValue("\\Quests\\Maps\\" + m_mapPath);
+			writer.WriteValue(m_mapPath);
 			writer.WriteEndElement();
 
 			//m_iconPath;
 			writer.WriteStartElement(ICON_PATH);
-			writer.WriteValue("\\Quests\\Icons\\" + m_iconPath);
+			writer.WriteValue(m_iconPath);
 			writer.WriteEndElement();
 
 			//m_units;//convert to EnemyUnit
 			string[] enemies = new string[Units.Length];
-			int i = 0;
 			writer.WriteStartElement(ENEMIES);
 			foreach(Unit unit in Units)
 			{
 				writer.WriteStartElement(ENEMY);
 				writer.WriteValue(unit.Id);
 				writer.WriteEndElement();
-				i++;
 			}
 			writer.WriteEndElement();
 
@@ -179,7 +186,7 @@ namespace TheSettlersCalculator.Quests
 			writer.WriteEndElement();
 		}
 
-		private static void SaveCamps(XmlWriter writer, Camp camp, string[] enemies)
+		private void SaveCamps(XmlWriter writer, Camp camp, string[] enemies)
 		{
 			writer.WriteStartElement(CAMP);
 
@@ -204,7 +211,7 @@ namespace TheSettlersCalculator.Quests
 			writer.WriteEndElement();
 
 			//m_left;//double
-			if (camp.Left != 0)
+			if (camp.Left > 0)
 			{
 				writer.WriteStartElement(LEFT);
 				writer.WriteValue(camp.Left.ToString(CultureInfo.InvariantCulture));
@@ -212,7 +219,7 @@ namespace TheSettlersCalculator.Quests
 			}
 
 			//m_top;//double
-			if (camp.Top != 0)
+			if (camp.Top > 0)
 			{
 				writer.WriteStartElement(TOP);
 				writer.WriteValue(camp.Top.ToString(CultureInfo.InvariantCulture));
@@ -224,7 +231,7 @@ namespace TheSettlersCalculator.Quests
 			foreach (KeyValuePair<short, short> pair in camp.Counts)
 			{
 				writer.WriteStartElement(ENEMY);
-				writer.WriteAttributeString(UNIT, enemies[pair.Key]);
+				writer.WriteAttributeString(UNIT, m_units[pair.Key].Id);
 				writer.WriteAttributeString(COUNT, pair.Value.ToString(CultureInfo.InvariantCulture));
 				writer.WriteEndElement();
 			}

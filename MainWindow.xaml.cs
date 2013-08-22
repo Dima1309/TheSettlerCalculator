@@ -41,5 +41,10 @@ namespace TheSettlersCalculator
 		{
 			Price.Price.Save();
 		}
+
+		private void Win_Closed(object sender, System.EventArgs e)
+		{
+			Quests.Quests.Save();
+		}
     }
 }

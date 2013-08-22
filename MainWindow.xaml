@@ -5,7 +5,7 @@
         xmlns:src="clr-namespace:TheSettlersCalculator.WpfTypes" 
         xmlns:types="clr-namespace:TheSettlersCalculator.Types"
         xmlns:Converters="clr-namespace:TheSettlersCalculator.WpfTypes.Converters"
-        xmlns:System="clr-namespace:System;assembly=mscorlib" Title="MainWindow" Height="640" Width="800" x:Name="Win">
+        xmlns:System="clr-namespace:System;assembly=mscorlib" Title="MainWindow" Height="640" Width="800" x:Name="Win" Closed="Win_Closed">
 	<Window.Resources>
         <ObjectDataProvider x:Key="serverTypeEnum" MethodName="GetValues" ObjectType="{x:Type System:Enum}">
             <ObjectDataProvider.MethodParameters>
