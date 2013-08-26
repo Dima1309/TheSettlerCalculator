@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <quest>
   <name>QUEST_THE_SONS_OF_THE_LITTLE_TAILOR</name>
-  <map>Quests\Maps\</map>
+  <map>Quests\Maps\the-sons-of-the-little-tailor.jpeg</map>
   <icon>Quests\Icons\the-sons-of-the-little-tailor.png</icon>
   <enemies>
     <enemy>GUARD_DOG</enemy>

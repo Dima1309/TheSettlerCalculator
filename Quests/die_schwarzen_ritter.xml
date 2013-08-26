@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <quest>
   <name>QUEST_DIE_SCHWARZEN_RITTER</name>
-  <map>Quests\Maps\</map>
+  <map>Quests\Maps\the-black-knights.jpeg</map>
   <icon>Quests\Icons\Die_schwarzen_Ritter.png</icon>
   <enemies>
     <enemy>MILITIA_DESERTER</enemy>

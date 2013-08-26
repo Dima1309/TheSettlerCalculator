@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <quest>
   <name>QUEST_VERRATER</name>
-  <map>Quests\Maps\</map>
+  <map>Quests\Maps\traitors.jpeg</map>
   <icon>Quests\Icons\Verrater.png</icon>
   <enemies>
     <enemy>MILITIA_DESERTER</enemy>

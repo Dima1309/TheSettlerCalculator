@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <quest>
   <name>QUEST_DIE_SCHWARZEN_PRIESTER</name>
-  <map>Quests\Maps\die-schwarzen-priester.jpg</map>
+  <map>Quests\Maps\the-dark-priests.jpeg</map>
   <icon>Quests\Icons\Die_schwarzen_Priester.png</icon>
   <enemies>
     <enemy>THUG</enemy>

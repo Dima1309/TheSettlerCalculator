@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <quest>
   <name>QUEST_BEUTELSCHNEIDER</name>
-  <map>Quests\Maps\</map>
+  <map>Quests\Maps\stealing-from-the-rich.jpeg</map>
   <icon>Quests\Icons\Beutelschneider.png</icon>
   <enemies>
     <enemy>RECRUIT_DESERTER</enemy>

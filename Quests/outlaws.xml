@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <quest>
   <name>QUEST_OUTLAWS</name>
-  <map>Quests\Maps\</map>
+  <map>Quests\Maps\outlaws.jpeg</map>
   <icon>Quests\Icons\Rauberbande.png</icon>
   <enemies>
     <enemy>METAL_TOOTHED</enemy>

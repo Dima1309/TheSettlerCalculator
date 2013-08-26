@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <quest>
   <name>QUEST_ISLAND_OF_THE_PIRATES</name>
-  <map>Quests\Maps\</map>
+  <map>Quests\Maps\the-island-of-the-pirates.jpeg</map>
   <icon>Quests\Icons\Insel_der_Freibeuter.png</icon>
   <enemies>
     <enemy>CALTROP</enemy>

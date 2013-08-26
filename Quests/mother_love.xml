@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <quest>
   <name>QUEST_MOTHER_LOVE</name>
-  <map>Quests\Maps\</map>
+  <map>Quests\Maps\mother-love.jpeg</map>
   <icon>Quests\Icons\Mutterliebe.png</icon>
   <enemies>
     <enemy>WILD_MARY</enemy>

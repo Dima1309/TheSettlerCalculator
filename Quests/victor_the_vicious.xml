@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <quest>
   <name>QUEST_VICTOR_THE_VICIOUS</name>
-  <map>Quests\Maps\</map>
+  <map>Quests\Maps\victor-the-vicious.jpeg</map>
   <icon>Quests\Icons\Viktor_der_Verschlagene.png</icon>
   <enemies>
     <enemy>WILD_MARY</enemy>

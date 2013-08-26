@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <quest>
   <name>QUEST_ROARING_BULL</name>
-  <map>Quests\Maps\</map>
+  <map>Quests\Maps\roaring-bull.jpeg</map>
   <icon>Quests\Icons\Rasender_Bulle.png</icon>
   <enemies>
     <enemy>CULTIST</enemy>

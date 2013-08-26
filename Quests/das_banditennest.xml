@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <quest>
   <name>QUEST_DAS_BANDITENNEST</name>
-  <map>Quests\Maps\</map>
+  <map>Quests\Maps\bandit-nest.jpeg</map>
   <icon>Quests\Icons\Das_Banditennest.png</icon>
   <enemies>
     <enemy>CHUCK</enemy>

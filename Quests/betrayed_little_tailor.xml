@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <quest>
   <name>QUEST_THE_BETRAYED_LITTLE_TAILOR</name>
-  <map>Quests\Maps\</map>
+  <map>Quests\Maps\the-betrayed-little-tailor.jpeg</map>
   <icon>Quests\Icons\the-betrayed-little-tailor.png</icon>
   <enemies>
     <enemy>METAL_TOOTHED</enemy>
@@ -20,8 +20,5 @@
     <enemy>ASSASSINE</enemy>
     <enemy>GREEDY_INNKEEPER</enemy>
   </enemies>
-  <camps>
-  </camps>
+  <camps />
 </quest>
-
-

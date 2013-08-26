@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <quest>
   <name>QUEST_DIE_NORDMANNER</name>
-  <map>Quests\Maps\</map>
+  <map>Quests\Maps\the-nords.jpeg</map>
   <icon>Quests\Icons\Die_Nordmanner.png</icon>
   <enemies>
     <enemy>JOMVIKING</enemy>

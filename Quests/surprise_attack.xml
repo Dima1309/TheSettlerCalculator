@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <quest>
   <name>QUEST_SURPRISE_ATTACK</name>
-  <map>Quests\Maps\</map>
+  <map>Quests\Maps\surprise-attack.jpeg</map>
   <icon>Quests\Icons\Uberraschungsangriff.png</icon>
   <enemies>
     <enemy>JOMVIKING</enemy>

@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <quest>
   <name>QUEST_THE_DARK_BROTHERHOOD</name>
-  <map>Quests\Maps\</map>
+  <map>Quests\Maps\the-dark-brotherhood.jpeg</map>
   <icon>Quests\Icons\Die_dunkle_Bruderschaft.png</icon>
   <enemies>
     <enemy>NIGHT_SPAWN</enemy>

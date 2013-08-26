@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <quest>
   <name>QUEST_SOHNE_DER_STEPPE</name>
-  <map>Quests\Maps\</map>
+  <map>Quests\Maps\sons-of-the-veld.jpeg</map>
   <icon>Quests\Icons\Sohne_der_Steppe.png</icon>
   <enemies>
     <enemy>CHUCK</enemy>

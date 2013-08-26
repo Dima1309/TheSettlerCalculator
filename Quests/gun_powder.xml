@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <quest>
   <name>RESOURCE_GUN_POWDER</name>
-  <map>Quests\Maps\</map>
+  <map>Quests\Maps\gunpowder.jpeg</map>
   <icon>Quests\Icons\Schiespulver.png</icon>
   <enemies>
     <enemy>MILITIA_DESERTER</enemy>

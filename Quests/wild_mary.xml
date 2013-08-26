@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <quest>
   <name>QUEST_WILD_MARY</name>
-  <map>Quests\Maps\</map>
+  <map>Quests\Maps\wild-mary.jpeg</map>
   <icon>Quests\Icons\Die_Wilde_Waltraut.png</icon>
   <enemies>
     <enemy>WILD_MARY</enemy>
