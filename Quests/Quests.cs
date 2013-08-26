@@ -47,6 +47,7 @@ namespace TheSettlersCalculator.Quests
 				}
 			}
 
+			result.Sort(new QuestComparerByName());
 			s_quests = result.ToArray();
 		}
 

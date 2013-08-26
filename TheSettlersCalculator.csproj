@@ -69,6 +69,7 @@
     </Compile>
     <Compile Include="Quests\PlayerQuest.cs" />
     <Compile Include="Quests\Quest.cs" />
+    <Compile Include="Quests\QuestComparerByName.cs" />
     <Compile Include="Quests\Quests.cs" />
     <Compile Include="Statistics\MultiWaveStatistics.cs" />
     <Compile Include="Statistics\Statistics.cs" />

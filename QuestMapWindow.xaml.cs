@@ -6,6 +6,7 @@ using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Documents;
 using System.Windows.Input;
+using System.Windows.Interop;
 using TheSettlersCalculator.Quests;
 using TheSettlersCalculator.Types;
 using TheSettlersCalculator.WpfTypes;
@@ -34,6 +35,28 @@ namespace TheSettlersCalculator
 			m_camps = new ObservableCollection<EnemyCamp>(camps);
 
 			InitializeComponent();
+
+			Left = 0;
+			Top = 0;
+			Height = Model.Map.Height;
+			Width = Model.Map.Width;
+/*
+			double maxWidth = Width;
+			double maxHeigth = Height;
+
+					
+
+			double ky = maxWidth / Height;
+			
+			double kx = maxHeigth / Width;
+			if (kx > 1 || ky > 1)
+			{				
+				double k = Math.Max(kx, ky);
+				Height = Height / k;
+				Width = Width / k;
+				imageScale.ScaleX = 1 / k;
+				imageScale.ScaleY = 1 / k;
+			}*/
 		}
 
 		public Quest Model
@@ -231,6 +254,51 @@ namespace TheSettlersCalculator
 				camp.Left = -1;//for delete adorner
 				m_camps.Remove(camp);
 			}
+		}
+
+		private void Button_Save_Click(object sender, RoutedEventArgs e)
+		{
+			if (IsEditorMode)
+			{
+				Model.Camps = new Camp[Camps.Count];
+				int i = 0;
+				foreach(EnemyCamp camp in Camps)
+				{
+					Model.Camps[i] = new Camp(camp);
+					foreach(UnitSquad squad in camp.Squads)
+					{
+						int unitIndex = Array.IndexOf(Model.Units, squad.Unit);
+						short value;
+						if (Model.Camps[i].Counts.TryGetValue((short)unitIndex, out value))
+						{
+							Model.Camps[i].Counts[(short) unitIndex] = (short) (value + squad.Count);
+						} else
+						{
+							Model.Camps[i].Counts[(short)unitIndex] = (short)squad.Count;
+						}
+					}
+					i++;
+				}
+				DialogResult = true;
+				Close();
+			}
+		}
+
+		private void Button_Add_Enemy_Click(object sender, RoutedEventArgs e)
+		{
+			Button button = sender as Button;
+			if (button == null)
+			{
+				return;
+			}
+
+			EnemyCamp camp = button.DataContext as EnemyCamp;
+			if (camp == null)
+			{
+				return;
+			}
+
+			camp.Squads.Add(new UnitSquad(Model.Units[0], 0));
 		}
 	}
 }

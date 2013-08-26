@@ -58,10 +58,16 @@ namespace TheSettlersCalculator.Helper
 			BitmapDecoder decoder = null;
 			if (filename.EndsWith(".PNG"))
 			{
-				decoder = new PngBitmapDecoder(stream, BitmapCreateOptions.PreservePixelFormat, BitmapCacheOption.Default);				
-			}else if (filename.EndsWith(".JPG"))
+				decoder = new PngBitmapDecoder(stream, BitmapCreateOptions.PreservePixelFormat, BitmapCacheOption.Default);
+			}
+			else if (filename.EndsWith(".JPG") || filename.EndsWith(".JPEG"))
 			{
 				decoder = new JpegBitmapDecoder(stream, BitmapCreateOptions.PreservePixelFormat, BitmapCacheOption.Default);				
+			}
+
+			if (filename.ToLowerInvariant().Contains("assassine"))
+			{
+				
 			}
 
 			return decoder!=null?decoder.Frames[0]:null;

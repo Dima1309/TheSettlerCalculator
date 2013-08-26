@@ -28,7 +28,14 @@ namespace TheSettlersCalculator
 			bool? result = questMapWindow.ShowDialog();
 			if (result.HasValue && result.Value)
 			{
-				Model.ActiveEnemyCamp = questMapWindow.SelectedCamp;
+				if (questMapWindow.IsEditorMode)
+				{
+					Model.UpdateActiveQuestCamps();	
+				}
+				else
+				{
+					Model.ActiveEnemyCamp = questMapWindow.SelectedCamp;
+				}				
 			}
 		}
 

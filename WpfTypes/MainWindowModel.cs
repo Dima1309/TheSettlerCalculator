@@ -112,23 +112,7 @@ namespace TheSettlersCalculator.WpfTypes
 					m_activeQuest = value;
 					OnPropertyChanged("ActiveQuest");
 
-					m_activeQuestCamps.Clear();
-					if (m_activeQuest != null)
-					{
-						foreach(Camp camp in ActiveQuest.Camps)
-						{
-							m_activeQuestCamps.Add(new EnemyCamp(m_activeQuest, camp));
-						}
-
-						for(int i=0;i<MAX_WAVES_COUNT;i++)
-						{
-							EnemyWaves[i].Clear();
-							foreach (Unit unit in m_activeQuest.Units)
-							{
-								EnemyWaves[i].Add(new UnitSquad(unit, 0));
-							}
-						}
-					}
+					UpdateActiveQuestCamps();
 				}
 			}
 		}
@@ -343,6 +327,27 @@ namespace TheSettlersCalculator.WpfTypes
 			if (handler != null)
 			{
 				handler(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+
+		internal void UpdateActiveQuestCamps()
+		{
+			m_activeQuestCamps.Clear();
+			if (m_activeQuest != null)
+			{
+				foreach (Camp camp in ActiveQuest.Camps)
+				{
+					m_activeQuestCamps.Add(new EnemyCamp(m_activeQuest, camp));
+				}
+
+				for (int i = 0; i < MAX_WAVES_COUNT; i++)
+				{
+					EnemyWaves[i].Clear();
+					foreach (Unit unit in m_activeQuest.Units)
+					{
+						EnemyWaves[i].Add(new UnitSquad(unit, 0));
+					}
+				}
 			}
 		}
 

@@ -75,7 +75,7 @@
 				<ItemsControl.ItemTemplate>
 					<DataTemplate>
 						<StackPanel Orientation="Horizontal" Visibility="{Binding Count, Converter={StaticResource intVisibilityConverter}}">
-							<Image Width="30" Height="30" Grid.Column="0" Source="{Binding Unit.Icon}" ToolTip="{StaticResource UnitTooltipTemplate}" />
+							<Image Grid.Column="0" Source="{Binding Unit.Icon}" ToolTip="{StaticResource UnitTooltipTemplate}" />
 							<Label Content="{Binding Count}" />
 						</StackPanel>
 					</DataTemplate>
@@ -85,7 +85,7 @@
 
 		<DataTemplate x:Key="Losses">
 			<StackPanel Orientation="Horizontal">
-				<Image Width="30" Height="30" Grid.Column="0" Source="{Binding Unit.Icon}" ToolTip="{StaticResource UnitTooltipTemplate}"></Image>
+				<Image Grid.Column="0" Source="{Binding Unit.Icon}" ToolTip="{StaticResource UnitTooltipTemplate}"></Image>
 				<Label Content="{Binding Count}" ContentStringFormat="{}-{0}" Foreground="Red" Visibility="{Binding Count, Converter={StaticResource intVisibilityConverter}}"></Label>
 				<Label Content="{Binding Health}" ContentStringFormat="{}-{0}HP" Foreground="Red" Visibility="{Binding Count, Converter={StaticResource intNegativeVisibilityConverter}}"></Label>
 			</StackPanel>
@@ -95,7 +95,7 @@
 			<Expander Margin="40,0,0,0">
 				<Expander.Header>
 					<StackPanel Orientation="Horizontal">
-						<Image Width="30" Height="30" Source="{Binding Unit.Icon}" ToolTip="{StaticResource UnitTooltipTemplate}"></Image>
+						<Image Source="{Binding Unit.Icon}" ToolTip="{StaticResource UnitTooltipTemplate}"></Image>
 						<Label Content="{Binding Count}"></Label>
 						<Label Content=" атакуют "></Label>
 						<ItemsControl ItemsSource="{Binding TotalDamage}" ItemTemplate="{StaticResource Losses}">
@@ -112,11 +112,11 @@
 					<ItemsControl.ItemTemplate>
 						<DataTemplate>
 							<StackPanel Orientation="Horizontal" Background="{Binding Health, Converter={StaticResource healthBrushConverter}}">
-								<Image Width="30" Height="30" Source="{Binding Attacker.Icon}" ToolTip="{StaticResource UnitTooltipTemplate}"></Image>
+								<Image Source="{Binding Attacker.Icon}" ToolTip="{StaticResource UnitTooltipTemplate}"></Image>
 								<Label Content="{Binding AttackerId}" ContentStringFormat="{}({0})"></Label>
 								<Label Content=" наносит "></Label>
 								<Label Content="{Binding Damage}"></Label>
-								<Image Width="30" Height="30" Source="{Binding Defender.Icon}" ToolTip="{StaticResource UnitTooltipTemplate}"></Image>
+								<Image Source="{Binding Defender.Icon}" ToolTip="{StaticResource UnitTooltipTemplate}"></Image>
 								<Label Content="{Binding Health}" ContentStringFormat="{}({0})"></Label>
 							</StackPanel>
 						</DataTemplate>
@@ -150,7 +150,7 @@
 							<ItemsControl.ItemTemplate>
 								<DataTemplate>
 									<StackPanel Orientation="Horizontal">
-										<Image Width="30" Height="30" Grid.Column="0" Source="{Binding Icon}" ToolTip="{StaticResource UnitTooltipTemplate}"></Image>
+										<Image Grid.Column="0" Source="{Binding Icon}" ToolTip="{StaticResource UnitTooltipTemplate}"></Image>
 										<Label Grid.Column="1" Content="{Binding Name}"></Label>
 									</StackPanel>
 								</DataTemplate>
@@ -212,7 +212,7 @@
 							<ItemsControl.ItemTemplate>
 								<DataTemplate>
 									<StackPanel Orientation="Horizontal">
-										<Image Width="30" Height="30" Grid.Column="0" Source="{Binding Icon}" ToolTip="{StaticResource UnitTooltipTemplate}"></Image>
+										<Image Grid.Column="0" Source="{Binding Icon}" ToolTip="{StaticResource UnitTooltipTemplate}"></Image>
 										<Label Grid.Column="1" Content="{Binding Name}"></Label>
 									</StackPanel>
 								</DataTemplate>
@@ -444,7 +444,7 @@
 										<ItemsControl.ItemTemplate>
 											<DataTemplate>
 												<StackPanel Orientation="Horizontal">
-													<Image Width="30" Height="30" Grid.Column="0" Source="{Binding Icon}"></Image>
+													<Image Grid.Column="0" Source="{Binding Icon}"></Image>
 													<Label Grid.Column="1" Content="{Binding Count}" />
 												</StackPanel>
 											</DataTemplate>
@@ -480,7 +480,7 @@
 											<ColumnDefinition Width="*"></ColumnDefinition>
 											<ColumnDefinition Width="60"></ColumnDefinition>
 										</Grid.ColumnDefinitions>
-										<Image Width="30" Height="30" Grid.Column="0" Source="{Binding Icon}" ToolTip="{StaticResource UnitTooltipTemplate}"></Image>
+										<Image Grid.Column="0" Source="{Binding Icon}" ToolTip="{StaticResource UnitTooltipTemplate}"></Image>
 										<Label Grid.Column="1" Content="{Binding Name}" />
 										<src:NumberTextBox MaxWidth="50" MinWidth="50" Margin="0,5" Grid.Column="2" MinValue="0" MaxValue="{Binding Model.PlayerUnitLimit, ElementName=Win}">
 											<src:NumberTextBox.Text>
@@ -530,7 +530,7 @@
 											<ColumnDefinition Width="*"></ColumnDefinition>
 											<ColumnDefinition Width="60"></ColumnDefinition>
 										</Grid.ColumnDefinitions>
-										<Image Width="30" Height="30" Grid.Column="0" Source="{Binding Icon}" ToolTip="{StaticResource UnitTooltipTemplate}"></Image>
+										<Image Grid.Column="0" Source="{Binding Icon}" ToolTip="{StaticResource UnitTooltipTemplate}"></Image>
 										<Label Grid.Column="1" Content="{Binding Name}" />
 										<src:NumberTextBox MaxWidth="50" MinWidth="50" Margin="0,5" Grid.Column="2" Text="{Binding Count}" />
 									</Grid>
@@ -626,7 +626,7 @@
 													<ItemsControl.ItemTemplate>
 														<DataTemplate>
 															<StackPanel Orientation="Horizontal">
-																<Image Width="30" Height="30" Source="{Binding Unit.Icon}" ToolTip="{StaticResource UnitTooltipTemplate}"></Image>
+																<Image Source="{Binding Unit.Icon}" ToolTip="{StaticResource UnitTooltipTemplate}"></Image>
 																<Label VerticalAlignment="Center" Content="{Binding Count}" />
 															</StackPanel>
 														</DataTemplate>
@@ -637,7 +637,7 @@
 													<ItemsControl.ItemTemplate>
 														<DataTemplate>
 															<StackPanel Orientation="Horizontal">
-																<Image Width="30" Height="30" Source="{Binding Unit.Icon}" ToolTip="{StaticResource UnitTooltipTemplate}"></Image>
+																<Image Source="{Binding Unit.Icon}" ToolTip="{StaticResource UnitTooltipTemplate}"></Image>
 																<Label VerticalAlignment="Center" Content="{Binding Count}" />
 															</StackPanel>
 														</DataTemplate>
