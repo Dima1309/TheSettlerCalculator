@@ -21,6 +21,404 @@
     <enemy>EVIL_KING</enemy>
   </enemies>
   <camps>
+    <camp>
+      <name>1</name>
+      <type>Normal</type>
+      <wintime>20</wintime>
+      <sector>1</sector>
+      <left>2745</left>
+      <top>1310</top>
+      <enemy unit="BOAR" count="120" />
+    </camp>
+    <camp>
+      <name>2</name>
+      <type>Normal</type>
+      <wintime>20</wintime>
+      <sector>1</sector>
+      <left>2408</left>
+      <top>1387</top>
+      <enemy unit="BOAR" count="100" />
+      <enemy unit="FOX" count="30" />
+    </camp>
+    <camp>
+      <name>3</name>
+      <type>Normal</type>
+      <wintime>20</wintime>
+      <sector>1</sector>
+      <left>2332</left>
+      <top>1087</top>
+      <enemy unit="BOAR" count="90" />
+      <enemy unit="WOLF2" count="40" />
+    </camp>
+    <camp>
+      <name>4</name>
+      <type>Normal</type>
+      <wintime>20</wintime>
+      <sector>1</sector>
+      <left>1998</left>
+      <top>1070</top>
+      <enemy unit="BOAR" count="160" />
+    </camp>
+    <camp>
+      <name>5</name>
+      <type>Normal</type>
+      <wintime>20</wintime>
+      <sector>1</sector>
+      <left>1893</left>
+      <top>1040</top>
+      <enemy unit="BOAR" count="80" />
+      <enemy unit="WOLF2" count="70" />
+    </camp>
+    <camp>
+      <name>6</name>
+      <type>Normal</type>
+      <wintime>20</wintime>
+      <sector>1</sector>
+      <left>1944</left>
+      <top>1263</top>
+      <enemy unit="WOLF2" count="120" />
+    </camp>
+    <camp>
+      <name>7</name>
+      <type>Normal</type>
+      <wintime>20</wintime>
+      <sector>1</sector>
+      <left>1713</left>
+      <top>1120</top>
+      <enemy unit="FOX" count="110" />
+    </camp>
+    <camp>
+      <name>8</name>
+      <type>Normal</type>
+      <wintime>20</wintime>
+      <sector>1</sector>
+      <left>1610</left>
+      <top>1405</top>
+      <enemy unit="BOAR" count="130" />
+      <enemy unit="WOLF2" count="30" />
+    </camp>
+    <camp>
+      <name>9</name>
+      <type>Normal</type>
+      <wintime>20</wintime>
+      <sector>1</sector>
+      <left>1303</left>
+      <top>1247</top>
+      <enemy unit="BOAR" count="90" />
+      <enemy unit="WOLF2" count="40" />
+      <enemy unit="FOX" count="40" />
+    </camp>
+    <camp>
+      <name>10</name>
+      <type>Normal</type>
+      <wintime>20</wintime>
+      <sector>1</sector>
+      <left>1096</left>
+      <top>1565</top>
+      <enemy unit="WOLF2" count="90" />
+      <enemy unit="FOX" count="90" />
+    </camp>
+    <camp>
+      <name>11</name>
+      <type>Normal</type>
+      <wintime>20</wintime>
+      <sector>1</sector>
+      <left>1122</left>
+      <top>1738</top>
+      <enemy unit="BOAR" count="120" />
+      <enemy unit="FOX" count="30" />
+    </camp>
+    <camp>
+      <name>12</name>
+      <type>Boss</type>
+      <wintime>20</wintime>
+      <sector>1</sector>
+      <left>1022</left>
+      <top>1737</top>
+      <enemy unit="BOAR" count="80" />
+      <enemy unit="FOX" count="60" />
+      <enemy unit="GIANT_LEADER_1" count="1" />
+      <enemy unit="GIANT_LEADER_2" count="1" />
+    </camp>
+    <camp>
+      <name>13</name>
+      <type>Normal</type>
+      <wintime>20</wintime>
+      <sector>2</sector>
+      <left>760</left>
+      <top>1802</top>
+      <enemy unit="BOAR" count="170" />
+    </camp>
+    <camp>
+      <name>14</name>
+      <type>Normal</type>
+      <wintime>20</wintime>
+      <sector>2</sector>
+      <left>426</left>
+      <top>1691</top>
+      <enemy unit="WOLF2" count="140" />
+    </camp>
+    <camp>
+      <name>15</name>
+      <type>Normal</type>
+      <wintime>20</wintime>
+      <sector>2</sector>
+      <left>273</left>
+      <top>1595</top>
+      <enemy unit="WOLF2" count="150" />
+      <enemy unit="FOX" count="50" />
+    </camp>
+    <camp>
+      <name>16</name>
+      <type>Normal</type>
+      <wintime>20</wintime>
+      <sector>2</sector>
+      <left>503</left>
+      <top>1325</top>
+      <enemy unit="BOAR" count="90" />
+      <enemy unit="WOLF2" count="60" />
+    </camp>
+    <camp>
+      <name>17</name>
+      <type>Normal</type>
+      <wintime>20</wintime>
+      <sector>2</sector>
+      <left>914</left>
+      <top>1324</top>
+      <enemy unit="FOX" count="140" />
+    </camp>
+    <camp>
+      <name>18</name>
+      <type>Normal</type>
+      <wintime>20</wintime>
+      <sector>2</sector>
+      <left>350</left>
+      <top>1102</top>
+      <enemy unit="BOAR" count="180" />
+    </camp>
+    <camp>
+      <name>19</name>
+      <type>Normal</type>
+      <wintime>20</wintime>
+      <sector>2</sector>
+      <left>425</left>
+      <top>770</top>
+      <enemy unit="BOAR" count="100" />
+      <enemy unit="FOX" count="60" />
+    </camp>
+    <camp>
+      <name>20</name>
+      <type>Boss</type>
+      <wintime>20</wintime>
+      <sector>2</sector>
+      <left>453</left>
+      <top>720</top>
+      <enemy unit="BOAR" count="50" />
+      <enemy unit="WOLF2" count="80" />
+      <enemy unit="FOX" count="60" />
+      <enemy unit="UNICORN" count="1" />
+    </camp>
+    <camp>
+      <name>21</name>
+      <type>Normal</type>
+      <wintime>20</wintime>
+      <sector>3</sector>
+      <left>300</left>
+      <top>407</top>
+      <enemy unit="BOAR" count="100" />
+      <enemy unit="BEAR" count="20" />
+      <enemy unit="FOX" count="40" />
+    </camp>
+    <camp>
+      <name>22</name>
+      <type>Normal</type>
+      <wintime>20</wintime>
+      <sector>3</sector>
+      <left>530</left>
+      <top>300</top>
+      <enemy unit="BOAR" count="80" />
+      <enemy unit="BEAR" count="30" />
+      <enemy unit="WOLF2" count="60" />
+    </camp>
+    <camp>
+      <name>23</name>
+      <type>Normal</type>
+      <wintime>20</wintime>
+      <sector>3</sector>
+      <left>580</left>
+      <top>642</top>
+      <enemy unit="WOLF2" count="60" />
+      <enemy unit="FOX" count="140" />
+    </camp>
+    <camp>
+      <name>24</name>
+      <type>Normal</type>
+      <wintime>20</wintime>
+      <sector>3</sector>
+      <left>890</left>
+      <top>268</top>
+      <enemy unit="BEAR" count="40" />
+      <enemy unit="FOX" count="60" />
+    </camp>
+    <camp>
+      <name>25</name>
+      <type>Normal</type>
+      <wintime>20</wintime>
+      <sector>3</sector>
+      <left>1045</left>
+      <top>457</top>
+      <enemy unit="BEAR" count="50" />
+      <enemy unit="WOLF2" count="80" />
+    </camp>
+    <camp>
+      <name>26</name>
+      <type>Normal</type>
+      <wintime>20</wintime>
+      <sector>3</sector>
+      <left>815</left>
+      <top>660</top>
+      <enemy unit="BOAR" count="120" />
+      <enemy unit="BEAR" count="30" />
+    </camp>
+    <camp>
+      <name>27</name>
+      <type>Normal</type>
+      <wintime>20</wintime>
+      <sector>3</sector>
+      <left>1043</left>
+      <top>803</top>
+      <enemy unit="BEAR" count="100" />
+    </camp>
+    <camp>
+      <name>28</name>
+      <type>Normal</type>
+      <wintime>20</wintime>
+      <sector>3</sector>
+      <left>1353</left>
+      <top>708</top>
+      <enemy unit="FOX" count="160" />
+    </camp>
+    <camp>
+      <name>29</name>
+      <type>Normal</type>
+      <wintime>20</wintime>
+      <sector>3</sector>
+      <left>1355</left>
+      <top>515</top>
+      <enemy unit="WOLF2" count="190" />
+    </camp>
+    <camp>
+      <name>30</name>
+      <type>Boss</type>
+      <wintime>20</wintime>
+      <sector>3</sector>
+      <left>1305</left>
+      <top>450</top>
+      <enemy unit="BEAR" count="50" />
+      <enemy unit="WOLF2" count="69" />
+      <enemy unit="FOX" count="80" />
+      <enemy unit="GIANT_BOAR" count="1" />
+    </camp>
+    <camp>
+      <name>31</name>
+      <type>Normal</type>
+      <wintime>20</wintime>
+      <sector>4</sector>
+      <left>1660</left>
+      <top>420</top>
+      <enemy unit="ROYAL_RECRUIT" count="80" />
+      <enemy unit="ROYAL_BOWMAN" count="60" />
+    </camp>
+    <camp>
+      <name>32</name>
+      <type>Normal</type>
+      <wintime>20</wintime>
+      <sector>4</sector>
+      <left>1587</left>
+      <top>783</top>
+      <enemy unit="ROYAL_RECRUIT" count="90" />
+      <enemy unit="ROYAL_CAVALRY" count="70" />
+    </camp>
+    <camp>
+      <name>33</name>
+      <type>Normal</type>
+      <wintime>20</wintime>
+      <sector>4</sector>
+      <left>1865</left>
+      <top>770</top>
+      <enemy unit="ROYAL_MILITIA" count="50" />
+      <enemy unit="ROYAL_LONGBOWMAN" count="60" />
+    </camp>
+    <camp>
+      <name>34</name>
+      <type>Normal</type>
+      <wintime>20</wintime>
+      <sector>4</sector>
+      <left>2075</left>
+      <top>610</top>
+      <enemy unit="ROYAL_MILITIA" count="60" />
+      <enemy unit="ROYAL_CANNONEER" count="30" />
+    </camp>
+    <camp>
+      <name>35</name>
+      <type>Normal</type>
+      <wintime>20</wintime>
+      <sector>4</sector>
+      <left>2149</left>
+      <top>660</top>
+      <enemy unit="ROYAL_LONGBOWMAN" count="120" />
+    </camp>
+    <camp>
+      <name>36</name>
+      <type>Normal</type>
+      <wintime>20</wintime>
+      <sector>4</sector>
+      <left>2485</left>
+      <top>355</top>
+      <enemy unit="ROYAL_RECRUIT" count="170" />
+    </camp>
+    <camp>
+      <name>37</name>
+      <type>Normal</type>
+      <wintime>20</wintime>
+      <sector>4</sector>
+      <left>2665</left>
+      <top>499</top>
+      <enemy unit="ROYAL_BOWMAN" count="150" />
+      <enemy unit="ROYAL_CAVALRY" count="30" />
+    </camp>
+    <camp>
+      <name>38</name>
+      <type>Normal</type>
+      <wintime>20</wintime>
+      <sector>4</sector>
+      <left>3075</left>
+      <top>595</top>
+      <enemy unit="ROYAL_RECRUIT" count="120" />
+      <enemy unit="ROYAL_MILITIA" count="40" />
+    </camp>
+    <camp>
+      <name>39</name>
+      <type>Normal</type>
+      <wintime>20</wintime>
+      <sector>4</sector>
+      <left>2585</left>
+      <top>768</top>
+      <enemy unit="ROYAL_MILITIA" count="30" />
+      <enemy unit="ROYAL_LONGBOWMAN" count="80" />
+      <enemy unit="ROYAL_CAVALRY" count="40" />
+    </camp>
+    <camp>
+      <name>40</name>
+      <type>Boss</type>
+      <wintime>20</wintime>
+      <sector>4</sector>
+      <left>2425</left>
+      <top>810</top>
+      <enemy unit="ROYAL_MILITIA" count="60" />
+      <enemy unit="ROYAL_LONGBOWMAN" count="80" />
+      <enemy unit="ROYAL_CAVALRY" count="40" />
+      <enemy unit="EVIL_KING" count="1" />
+    </camp>
   </camps>
 </quest>
-
