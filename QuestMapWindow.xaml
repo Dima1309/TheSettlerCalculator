@@ -1,9 +1,9 @@
 ﻿<Window x:Class="TheSettlersCalculator.QuestMapWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="QuestMapWindow" 
+        Title="Карта приключения" 
         xmlns:src="clr-namespace:TheSettlersCalculator.WpfTypes" xmlns:Converters="clr-namespace:TheSettlersCalculator.WpfTypes.Converters" xmlns:System="clr-namespace:System;assembly=mscorlib" xmlns:Types="clr-namespace:TheSettlersCalculator.Types" SizeToContent="WidthAndHeight"
-        x:Name="Win" Loaded="Win_Loaded" KeyDown="Win_KeyDown" WindowStartupLocation="CenterScreen" WindowState="Maximized">
+        x:Name="Win" Loaded="Win_Loaded" KeyDown="Win_KeyDown" WindowStartupLocation="CenterScreen">
     <Window.Resources>
         <Converters:BoolVisibilityConverter x:Key="boolVisibilityConverter" />
         <Converters:CampTypeStringConverter x:Key="campTypeConverter" />

@@ -34,29 +34,31 @@ namespace TheSettlersCalculator
 			m_model = quest;
 			m_camps = new ObservableCollection<EnemyCamp>(camps);
 
-			InitializeComponent();
-
-			Left = 0;
-			Top = 0;
 			Height = Model.Map.Height;
 			Width = Model.Map.Width;
-/*
-			double maxWidth = Width;
-			double maxHeigth = Height;
 
-					
+			double maxWidth = SystemParameters.FullPrimaryScreenWidth - SystemParameters.CaptionWidth -
+			                  SystemParameters.BorderWidth * 2;
+			double maxHeigth = SystemParameters.FullPrimaryScreenHeight - SystemParameters.CaptionHeight -
+			                   SystemParameters.BorderWidth * 2;
 
-			double ky = maxWidth / Height;
-			
-			double kx = maxHeigth / Width;
-			if (kx > 1 || ky > 1)
-			{				
+			double kx = Width / maxWidth;
+			double ky = Height / maxHeigth;
+			if(kx > 1 || ky > 1)
+			{
 				double k = Math.Max(kx, ky);
 				Height = Height / k;
 				Width = Width / k;
+			}
+
+			InitializeComponent();
+
+			if(kx > 1 || ky > 1)
+			{
+				double k = Math.Max(kx, ky);
 				imageScale.ScaleX = 1 / k;
 				imageScale.ScaleY = 1 / k;
-			}*/
+			}
 		}
 
 		public Quest Model
