@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
+using System.Globalization;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Documents;
@@ -230,7 +231,17 @@ namespace TheSettlersCalculator
 		{
 			Camp camp = new Camp();
 			camp.Name = "Без названия";
-
+			if (m_camps.Count > 0)
+			{
+				camp.SectorId = m_camps[m_camps.Count - 1].SectorId;
+				int id;
+				if (int.TryParse(m_camps[m_camps.Count - 1].Name, NumberStyles.Integer, CultureInfo.InvariantCulture, out  id))
+				{
+					id++;
+					camp.Name = id.ToString(CultureInfo.InvariantCulture);
+				}
+			}
+		
 			EnemyCamp enemyCamp = new EnemyCamp(Model, camp);
 			m_camps.Add(enemyCamp);
 
