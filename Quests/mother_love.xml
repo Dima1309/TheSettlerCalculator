@@ -17,6 +17,8 @@
       <type>Ambush</type>
       <wintime>20</wintime>
       <sector>1</sector>
+      <left>813</left>
+      <top>246</top>
       <enemy unit="WOLF" count="200" />
     </camp>
     <camp>
@@ -24,6 +26,8 @@
       <type>Ambush</type>
       <wintime>20</wintime>
       <sector>1</sector>
+      <left>940</left>
+      <top>340</top>
       <enemy unit="WOLF" count="200" />
     </camp>
     <camp>
@@ -31,6 +35,8 @@
       <type>Ambush</type>
       <wintime>20</wintime>
       <sector>1</sector>
+      <left>955</left>
+      <top>390</top>
       <enemy unit="CALTROP" count="100" />
     </camp>
     <camp>
@@ -38,6 +44,8 @@
       <type>Normal</type>
       <wintime>20</wintime>
       <sector>1</sector>
+      <left>674</left>
+      <top>220</top>
       <enemy unit="GUNMAN" count="100" />
       <enemy unit="PETTY_OFFICER_2ND_CLASS" count="100" />
     </camp>
@@ -46,6 +54,8 @@
       <type>Normal</type>
       <wintime>20</wintime>
       <sector>1</sector>
+      <left>1070</left>
+      <top>385</top>
       <enemy unit="CALTROP" count="100" />
       <enemy unit="PETTY_OFFICER_2ND_CLASS" count="100" />
     </camp>
@@ -54,6 +64,8 @@
       <type>Boss</type>
       <wintime>20</wintime>
       <sector>1</sector>
+      <left>915</left>
+      <top>235</top>
       <enemy unit="WILD_MARY" count="1" />
       <enemy unit="CRAZY_COOK" count="1" />
       <enemy unit="GUNMAN" count="50" />

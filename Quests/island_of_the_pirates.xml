@@ -18,6 +18,8 @@
       <type>Normal</type>
       <wintime>20</wintime>
       <sector>1</sector>
+      <left>295</left>
+      <top>765</top>
       <enemy unit="DECKSCRUBBER" count="100" />
       <enemy unit="GUNMAN" count="50" />
     </camp>
@@ -26,6 +28,8 @@
       <type>Normal</type>
       <wintime>20</wintime>
       <sector>1</sector>
+      <left>363</left>
+      <top>670</top>
       <enemy unit="CALTROP" count="50" />
       <enemy unit="DECKSCRUBBER" count="100" />
     </camp>
@@ -34,6 +38,8 @@
       <type>Boss</type>
       <wintime>20</wintime>
       <sector>1</sector>
+      <left>230</left>
+      <top>645</top>
       <enemy unit="CALTROP" count="50" />
       <enemy unit="SABER_RATTLER" count="100" />
       <enemy unit="GUNMAN" count="50" />
@@ -43,6 +49,8 @@
       <type>Normal</type>
       <wintime>20</wintime>
       <sector>2</sector>
+      <left>315</left>
+      <top>427</top>
       <enemy unit="CALTROP" count="60" />
       <enemy unit="DECKSCRUBBER" count="60" />
       <enemy unit="KNIFETHROWER" count="60" />
@@ -52,6 +60,8 @@
       <type>Normal</type>
       <wintime>20</wintime>
       <sector>2</sector>
+      <left>405</left>
+      <top>320</top>
       <enemy unit="CALTROP" count="40" />
       <enemy unit="SABER_RATTLER" count="40" />
       <enemy unit="GUNMAN" count="40" />
@@ -61,6 +71,8 @@
       <type>Boss</type>
       <wintime>20</wintime>
       <sector>2</sector>
+      <left>492</left>
+      <top>213</top>
       <enemy unit="CALTROP" count="80" />
       <enemy unit="SABER_RATTLER" count="80" />
       <enemy unit="PETTY_OFFICER_2ND_CLASS" count="2" />
@@ -70,6 +82,8 @@
       <type>Ambush</type>
       <wintime>20</wintime>
       <sector>3</sector>
+      <left>867</left>
+      <top>360</top>
       <enemy unit="CALTROP" count="100" />
     </camp>
     <camp>
@@ -77,6 +91,8 @@
       <type>Normal</type>
       <wintime>20</wintime>
       <sector>3</sector>
+      <left>840</left>
+      <top>240</top>
       <enemy unit="CALTROP" count="90" />
       <enemy unit="SABER_RATTLER" count="90" />
     </camp>
@@ -85,6 +101,8 @@
       <type>Normal</type>
       <wintime>20</wintime>
       <sector>3</sector>
+      <left>952</left>
+      <top>333</top>
       <enemy unit="CALTROP" count="30" />
       <enemy unit="DECKSCRUBBER" count="100" />
       <enemy unit="GUNMAN" count="40" />
@@ -94,6 +112,8 @@
       <type>Normal</type>
       <wintime>20</wintime>
       <sector>3</sector>
+      <left>976</left>
+      <top>455</top>
       <enemy unit="CALTROP" count="100" />
       <enemy unit="SABER_RATTLER" count="70" />
     </camp>
@@ -102,6 +122,8 @@
       <type>Boss</type>
       <wintime>20</wintime>
       <sector>3</sector>
+      <left>886</left>
+      <top>535</top>
       <enemy unit="SABER_RATTLER" count="100" />
       <enemy unit="CRAZY_COOK" count="1" />
       <enemy unit="GUNMAN" count="70" />

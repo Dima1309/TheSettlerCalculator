@@ -18,6 +18,8 @@
       <type>Normal</type>
       <wintime>20</wintime>
       <sector>1</sector>
+      <left>1168</left>
+      <top>444</top>
       <enemy unit="NOMAD" count="70" />
     </camp>
     <camp>
@@ -25,6 +27,8 @@
       <type>Normal</type>
       <wintime>20</wintime>
       <sector>1</sector>
+      <left>970</left>
+      <top>380</top>
       <enemy unit="NOMAD" count="40" />
       <enemy unit="COMPOSITE_BOW" count="40" />
     </camp>
@@ -33,6 +37,8 @@
       <type>Boss</type>
       <wintime>20</wintime>
       <sector>1</sector>
+      <left>755</left>
+      <top>433</top>
       <enemy unit="NOMAD" count="90" />
       <enemy unit="COMPOSITE_BOW" count="90" />
     </camp>
@@ -41,6 +47,8 @@
       <type>Normal</type>
       <wintime>20</wintime>
       <sector>2</sector>
+      <left>709</left>
+      <top>518</top>
       <enemy unit="LANCE_RIDER" count="60" />
     </camp>
     <camp>
@@ -48,6 +56,8 @@
       <type>Boss</type>
       <wintime>20</wintime>
       <sector>2</sector>
+      <left>537</left>
+      <top>380</top>
       <enemy unit="LANCE_RIDER" count="80" />
       <enemy unit="COMPOSITE_BOW" count="120" />
     </camp>
@@ -56,6 +66,8 @@
       <type>Normal</type>
       <wintime>20</wintime>
       <sector>3</sector>
+      <left>1366</left>
+      <top>815</top>
       <enemy unit="NOMAD" count="30" />
       <enemy unit="LANCE_RIDER" count="70" />
     </camp>
@@ -64,6 +76,8 @@
       <type>Normal</type>
       <wintime>20</wintime>
       <sector>3</sector>
+      <left>1145</left>
+      <top>950</top>
       <enemy unit="RIDING_BOWMAN" count="40" />
       <enemy unit="RIDING_AMAZONIAN" count="30" />
     </camp>
@@ -72,6 +86,8 @@
       <type>Boss</type>
       <wintime>20</wintime>
       <sector>3</sector>
+      <left>1147</left>
+      <top>1025</top>
       <enemy unit="NOMAD" count="60" />
       <enemy unit="RIDING_BOWMAN" count="75" />
     </camp>
@@ -80,6 +96,8 @@
       <type>Normal</type>
       <wintime>20</wintime>
       <sector>4</sector>
+      <left>904</left>
+      <top>1040</top>
       <enemy unit="NOMAD" count="50" />
       <enemy unit="RIDING_AMAZONIAN" count="10" />
     </camp>
@@ -88,6 +106,8 @@
       <type>Boss</type>
       <wintime>20</wintime>
       <sector>4</sector>
+      <left>670</left>
+      <top>947</top>
       <enemy unit="NOMAD" count="70" />
       <enemy unit="CATAPHRACT" count="20" />
     </camp>
@@ -96,6 +116,8 @@
       <type>Normal</type>
       <wintime>20</wintime>
       <sector>5</sector>
+      <left>1125</left>
+      <top>555</top>
       <enemy unit="NOMAD" count="40" />
       <enemy unit="COMPOSITE_BOW" count="40" />
     </camp>
@@ -104,6 +126,8 @@
       <type>Normal</type>
       <wintime>20</wintime>
       <sector>5</sector>
+      <left>1255</left>
+      <top>665</top>
       <enemy unit="NOMAD" count="40" />
       <enemy unit="LANCE_RIDER" count="40" />
     </camp>
@@ -112,6 +136,8 @@
       <type>Normal</type>
       <wintime>20</wintime>
       <sector>5</sector>
+      <left>1170</left>
+      <top>773</top>
       <enemy unit="RIDING_AMAZONIAN" count="40" />
     </camp>
     <camp>
@@ -119,6 +145,8 @@
       <type>Normal</type>
       <wintime>20</wintime>
       <sector>5</sector>
+      <left>905</left>
+      <top>554</top>
       <enemy unit="RIDING_BOWMAN" count="40" />
     </camp>
     <camp>
@@ -126,6 +154,8 @@
       <type>Normal</type>
       <wintime>20</wintime>
       <sector>5</sector>
+      <left>883</left>
+      <top>678</top>
       <enemy unit="NOMAD" count="30" />
       <enemy unit="LANCE_RIDER" count="30" />
     </camp>
@@ -134,6 +164,8 @@
       <type>Boss</type>
       <wintime>20</wintime>
       <sector>5</sector>
+      <left>1064</left>
+      <top>680</top>
       <enemy unit="NOMAD" count="60" />
       <enemy unit="LANCE_RIDER" count="40" />
       <enemy unit="COMPOSITE_BOW" count="60" />
@@ -143,6 +175,8 @@
       <type>Normal</type>
       <wintime>20</wintime>
       <sector>6</sector>
+      <left>510</left>
+      <top>745</top>
       <enemy unit="NOMAD" count="70" />
       <enemy unit="RIDING_AMAZONIAN" count="40" />
     </camp>
@@ -151,6 +185,8 @@
       <type>Normal</type>
       <wintime>20</wintime>
       <sector>6</sector>
+      <left>660</left>
+      <top>760</top>
       <enemy unit="NOMAD" count="70" />
       <enemy unit="LANCE_RIDER" count="40" />
     </camp>
@@ -159,6 +195,8 @@
       <type>Normal</type>
       <wintime>20</wintime>
       <sector>6</sector>
+      <left>640</left>
+      <top>880</top>
       <enemy unit="NOMAD" count="70" />
       <enemy unit="LANCE_RIDER" count="40" />
     </camp>
@@ -167,6 +205,8 @@
       <type>Boss</type>
       <wintime>20</wintime>
       <sector>6</sector>
+      <left>577</left>
+      <top>813</top>
       <enemy unit="RIDING_AMAZONIAN" count="90" />
       <enemy unit="UPROARIOUS_BULL" count="10" />
     </camp>

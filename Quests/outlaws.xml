@@ -20,6 +20,8 @@
       <type>Normal</type>
       <wintime>20</wintime>
       <sector>1</sector>
+      <left>930</left>
+      <top>438</top>
       <enemy unit="THUG" count="100" />
       <enemy unit="RANGER" count="60" />
     </camp>
@@ -28,6 +30,8 @@
       <type>Normal</type>
       <wintime>20</wintime>
       <sector>1</sector>
+      <left>989</left>
+      <top>420</top>
       <enemy unit="THUG" count="60" />
       <enemy unit="RANGER" count="100" />
     </camp>
@@ -36,6 +40,8 @@
       <type>Normal</type>
       <wintime>20</wintime>
       <sector>1</sector>
+      <left>945</left>
+      <top>390</top>
       <enemy unit="THUG" count="40" />
       <enemy unit="ROUGHNECK" count="40" />
       <enemy unit="RANGER" count="80" />
@@ -45,6 +51,8 @@
       <type>Normal</type>
       <wintime>20</wintime>
       <sector>1</sector>
+      <left>1062</left>
+      <top>215</top>
       <enemy unit="ROUGHNECK" count="80" />
       <enemy unit="RANGER" count="100" />
     </camp>
@@ -53,6 +61,8 @@
       <type>Normal</type>
       <wintime>20</wintime>
       <sector>1</sector>
+      <left>1017</left>
+      <top>188</top>
       <enemy unit="ROUGHNECK" count="150" />
     </camp>
     <camp>
@@ -60,6 +70,8 @@
       <type>Normal</type>
       <wintime>20</wintime>
       <sector>1</sector>
+      <left>1104</left>
+      <top>186</top>
       <enemy unit="GUARD_DOG" count="80" />
       <enemy unit="ROUGHNECK" count="40" />
       <enemy unit="RANGER" count="60" />
@@ -69,6 +81,8 @@
       <type>Boss</type>
       <wintime>20</wintime>
       <sector>1</sector>
+      <left>1060</left>
+      <top>178</top>
       <enemy unit="METAL_TOOTHED" count="1" />
       <enemy unit="SKUNK" count="2" />
     </camp>
@@ -77,6 +91,8 @@
       <type>Normal</type>
       <wintime>20</wintime>
       <sector>2</sector>
+      <left>1145</left>
+      <top>625</top>
       <enemy unit="SCAVENGER" count="60" />
       <enemy unit="STONE_THROWER" count="60" />
     </camp>
@@ -85,6 +101,8 @@
       <type>Normal</type>
       <wintime>20</wintime>
       <sector>2</sector>
+      <left>1188</left>
+      <top>685</top>
       <enemy unit="GUARD_DOG" count="60" />
       <enemy unit="STONE_THROWER" count="60" />
     </camp>
@@ -93,6 +111,8 @@
       <type>Normal</type>
       <wintime>20</wintime>
       <sector>2</sector>
+      <left>1348</left>
+      <top>908</top>
       <enemy unit="SCAVENGER" count="80" />
     </camp>
     <camp>
@@ -100,6 +120,8 @@
       <type>Normal</type>
       <wintime>20</wintime>
       <sector>2</sector>
+      <left>1335</left>
+      <top>810</top>
       <enemy unit="SCAVENGER" count="80" />
     </camp>
     <camp>
@@ -107,6 +129,8 @@
       <type>Normal</type>
       <wintime>20</wintime>
       <sector>2</sector>
+      <left>1494</left>
+      <top>890</top>
       <enemy unit="STONE_THROWER" count="80" />
     </camp>
     <camp>
@@ -114,6 +138,8 @@
       <type>Boss</type>
       <wintime>20</wintime>
       <sector>2</sector>
+      <left>1480</left>
+      <top>580</top>
       <enemy unit="THUG" count="30" />
       <enemy unit="GUARD_DOG" count="80" />
       <enemy unit="RANGER" count="50" />
@@ -123,6 +149,8 @@
       <type>Normal</type>
       <wintime>20</wintime>
       <sector>3</sector>
+      <left>1508</left>
+      <top>400</top>
       <enemy unit="SCAVENGER" count="100" />
       <enemy unit="GUARD_DOG" count="30" />
       <enemy unit="STONE_THROWER" count="30" />
@@ -132,6 +160,8 @@
       <type>Normal</type>
       <wintime>20</wintime>
       <sector>3</sector>
+      <left>1580</left>
+      <top>390</top>
       <enemy unit="SCAVENGER" count="30" />
       <enemy unit="GUARD_DOG" count="30" />
       <enemy unit="STONE_THROWER" count="100" />
@@ -141,6 +171,8 @@
       <type>Normal</type>
       <wintime>20</wintime>
       <sector>3</sector>
+      <left>1450</left>
+      <top>186</top>
       <enemy unit="THUG" count="60" />
       <enemy unit="GUARD_DOG" count="60" />
       <enemy unit="RANGER" count="60" />
@@ -150,6 +182,8 @@
       <type>Normal</type>
       <wintime>20</wintime>
       <sector>3</sector>
+      <left>1538</left>
+      <top>185</top>
       <enemy unit="THUG" count="60" />
       <enemy unit="GUARD_DOG" count="60" />
       <enemy unit="RANGER" count="60" />
@@ -159,6 +193,8 @@
       <type>Boss</type>
       <wintime>20</wintime>
       <sector>3</sector>
+      <left>1492</left>
+      <top>125</top>
       <enemy unit="THUG" count="180" />
       <enemy unit="ONE_EYED_BERT" count="1" />
     </camp>
@@ -167,6 +203,8 @@
       <type>Normal</type>
       <wintime>20</wintime>
       <sector>4</sector>
+      <left>641</left>
+      <top>564</top>
       <enemy unit="SCAVENGER" count="80" />
       <enemy unit="STONE_THROWER" count="20" />
     </camp>
@@ -175,6 +213,8 @@
       <type>Normal</type>
       <wintime>20</wintime>
       <sector>4</sector>
+      <left>668</left>
+      <top>510</top>
       <enemy unit="SCAVENGER" count="50" />
       <enemy unit="STONE_THROWER" count="50" />
     </camp>
@@ -183,6 +223,8 @@
       <type>Normal</type>
       <wintime>20</wintime>
       <sector>4</sector>
+      <left>510</left>
+      <top>410</top>
       <enemy unit="SCAVENGER" count="60" />
       <enemy unit="STONE_THROWER" count="60" />
     </camp>
@@ -191,6 +233,8 @@
       <type>Boss</type>
       <wintime>20</wintime>
       <sector>4</sector>
+      <left>452</left>
+      <top>320</top>
       <enemy unit="SCAVENGER" count="50" />
       <enemy unit="GUARD_DOG" count="50" />
       <enemy unit="STONE_THROWER" count="50" />
@@ -200,6 +244,8 @@
       <type>Normal</type>
       <wintime>20</wintime>
       <sector>5</sector>
+      <left>335</left>
+      <top>210</top>
       <enemy unit="SCAVENGER" count="100" />
       <enemy unit="STONE_THROWER" count="50" />
     </camp>
@@ -208,6 +254,8 @@
       <type>Normal</type>
       <wintime>20</wintime>
       <sector>5</sector>
+      <left>364</left>
+      <top>176</top>
       <enemy unit="SCAVENGER" count="50" />
       <enemy unit="GUARD_DOG" count="50" />
       <enemy unit="STONE_THROWER" count="50" />
@@ -217,6 +265,8 @@
       <type>Boss</type>
       <wintime>20</wintime>
       <sector>5</sector>
+      <left>305</left>
+      <top>175</top>
       <enemy unit="GUARD_DOG" count="100" />
       <enemy unit="STONE_THROWER" count="80" />
       <enemy unit="SKUNK" count="1" />

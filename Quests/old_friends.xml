@@ -18,6 +18,8 @@
       <type>Normal</type>
       <wintime>20</wintime>
       <sector>1</sector>
+      <left>340</left>
+      <top>348</top>
       <enemy unit="CULTIST" count="80" />
       <enemy unit="DARK_PRIEST" count="50" />
     </camp>
@@ -26,6 +28,8 @@
       <type>Normal</type>
       <wintime>20</wintime>
       <sector>1</sector>
+      <left>470</left>
+      <top>317</top>
       <enemy unit="CULTIST" count="40" />
       <enemy unit="SHADOW_SNEAKER" count="40" />
       <enemy unit="DARK_PRIEST" count="40" />
@@ -35,6 +39,8 @@
       <type>Boss</type>
       <wintime>20</wintime>
       <sector>1</sector>
+      <left>668</left>
+      <top>387</top>
       <enemy unit="CULTIST" count="80" />
       <enemy unit="SHADOW_SNEAKER" count="40" />
       <enemy unit="FIRE_DANCER" count="40" />
@@ -44,6 +50,8 @@
       <type>Normal</type>
       <wintime>20</wintime>
       <sector>2</sector>
+      <left>933</left>
+      <top>523</top>
       <enemy unit="CULTIST" count="100" />
       <enemy unit="SHADOW_SNEAKER" count="50" />
     </camp>
@@ -52,6 +60,8 @@
       <type>Normal</type>
       <wintime>20</wintime>
       <sector>2</sector>
+      <left>715</left>
+      <top>655</top>
       <enemy unit="CULTIST" count="70" />
       <enemy unit="SHADOW_SNEAKER" count="50" />
       <enemy unit="FIRE_DANCER" count="10" />
@@ -61,6 +71,8 @@
       <type>Boss</type>
       <wintime>120</wintime>
       <sector>2</sector>
+      <left>890</left>
+      <top>627</top>
       <enemy unit="CULTIST" count="100" />
       <enemy unit="DARK_PRIEST" count="50" />
       <enemy unit="DARK_HIGH_PRIEST" count="1" />
@@ -70,6 +82,8 @@
       <type>Normal</type>
       <wintime>20</wintime>
       <sector>3</sector>
+      <left>1065</left>
+      <top>765</top>
       <enemy unit="CULTIST" count="100" />
       <enemy unit="SHADOW_SNEAKER" count="50" />
       <enemy unit="DANCING_DERVISH" count="20" />
@@ -79,6 +93,8 @@
       <type>Boss</type>
       <wintime>140</wintime>
       <sector>3</sector>
+      <left>1118</left>
+      <top>884</top>
       <enemy unit="CULTIST" count="50" />
       <enemy unit="SWAMP_WITCH" count="1" />
       <enemy unit="DARK_PRIEST" count="50" />
