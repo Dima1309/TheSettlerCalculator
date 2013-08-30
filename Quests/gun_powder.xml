@@ -20,6 +20,8 @@
       <type>Normal</type>
       <wintime>20</wintime>
       <sector>1</sector>
+      <left>352</left>
+      <top>1015</top>
       <enemy unit="MILITIA_DESERTER" count="100" />
       <enemy unit="BOWMAN_DESERTER" count="50" />
     </camp>
@@ -28,6 +30,8 @@
       <type>Normal</type>
       <wintime>20</wintime>
       <sector>1</sector>
+      <left>410</left>
+      <top>956</top>
       <enemy unit="MILITIA_DESERTER" count="60" />
       <enemy unit="BOWMAN_DESERTER" count="120" />
     </camp>
@@ -36,6 +40,8 @@
       <type>Boss</type>
       <wintime>20</wintime>
       <sector>1</sector>
+      <left>430</left>
+      <top>897</top>
       <enemy unit="MILITIA_DESERTER" count="80" />
       <enemy unit="CAVALRY_DESERTER" count="50" />
       <enemy unit="BOWMAN_DESERTER" count="40" />
@@ -44,7 +50,9 @@
       <name>4</name>
       <type>Normal</type>
       <wintime>20</wintime>
-      <sector>1</sector>
+      <sector>4</sector>
+      <left>565</left>
+      <top>811</top>
       <enemy unit="MILITIA_DESERTER" count="50" />
       <enemy unit="CAVALRY_DESERTER" count="80" />
       <enemy unit="BOWMAN_DESERTER" count="70" />
@@ -54,6 +62,8 @@
       <type>Normal</type>
       <wintime>20</wintime>
       <sector>2</sector>
+      <left>949</left>
+      <top>1120</top>
       <enemy unit="MILITIA_DESERTER" count="120" />
       <enemy unit="BOWMAN_DESERTER" count="30" />
     </camp>
@@ -62,6 +72,8 @@
       <type>Normal</type>
       <wintime>20</wintime>
       <sector>2</sector>
+      <left>930</left>
+      <top>1015</top>
       <enemy unit="MILITIA_DESERTER" count="90" />
       <enemy unit="BOWMAN_DESERTER" count="90" />
     </camp>
@@ -70,6 +82,8 @@
       <type>Boss</type>
       <wintime>20</wintime>
       <sector>2</sector>
+      <left>815</left>
+      <top>948</top>
       <enemy unit="MILITIA_DESERTER" count="100" />
       <enemy unit="CAVALRY_DESERTER" count="30" />
       <enemy unit="BOWMAN_DESERTER" count="40" />
@@ -79,6 +93,8 @@
       <type>Normal</type>
       <wintime>20</wintime>
       <sector>3</sector>
+      <left>390</left>
+      <top>420</top>
       <enemy unit="MILITIA_DESERTER" count="90" />
       <enemy unit="BOWMAN_DESERTER" count="60" />
     </camp>
@@ -87,6 +103,8 @@
       <type>Normal</type>
       <wintime>20</wintime>
       <sector>3</sector>
+      <left>407</left>
+      <top>530</top>
       <enemy unit="MILITIA_DESERTER" count="90" />
       <enemy unit="BOWMAN_DESERTER" count="90" />
     </camp>
@@ -95,6 +113,8 @@
       <type>Boss</type>
       <wintime>20</wintime>
       <sector>3</sector>
+      <left>471</left>
+      <top>590</top>
       <enemy unit="MILITIA_DESERTER" count="90" />
       <enemy unit="CAVALRY_DESERTER" count="30" />
       <enemy unit="BOWMAN_DESERTER" count="60" />
@@ -103,7 +123,9 @@
       <name>4</name>
       <type>Normal</type>
       <wintime>20</wintime>
-      <sector>3</sector>
+      <sector>4</sector>
+      <left>505</left>
+      <top>682</top>
       <enemy unit="MILITIA_DESERTER" count="100" />
       <enemy unit="BOWMAN_DESERTER" count="100" />
     </camp>
@@ -112,6 +134,8 @@
       <type>Normal</type>
       <wintime>20</wintime>
       <sector>4</sector>
+      <left>695</left>
+      <top>780</top>
       <enemy unit="MILITIA_DESERTER" count="60" />
       <enemy unit="CAVALRY_DESERTER" count="60" />
       <enemy unit="BOWMAN_DESERTER" count="80" />
@@ -121,6 +145,8 @@
       <type>Normal</type>
       <wintime>20</wintime>
       <sector>4</sector>
+      <left>620</left>
+      <top>707</top>
       <enemy unit="MILITIA_DESERTER" count="80" />
       <enemy unit="CAVALRY_DESERTER" count="20" />
       <enemy unit="LONGBOWMAN_DESERTER" count="80" />
@@ -130,6 +156,8 @@
       <type>Normal</type>
       <wintime>20</wintime>
       <sector>4</sector>
+      <left>738</left>
+      <top>755</top>
       <enemy unit="MILITIA_DESERTER" count="50" />
       <enemy unit="CAVALRY_DESERTER" count="70" />
       <enemy unit="LONGBOWMAN_DESERTER" count="50" />
@@ -139,6 +167,8 @@
       <type>Boss</type>
       <wintime>20</wintime>
       <sector>4</sector>
+      <left>740</left>
+      <top>707</top>
       <enemy unit="CAVALRY_DESERTER" count="50" />
       <enemy unit="SOLDIER_DESERTER" count="50" />
       <enemy unit="LONGBOWMAN_DESERTER" count="70" />
@@ -148,6 +178,8 @@
       <type>Normal</type>
       <wintime>20</wintime>
       <sector>5</sector>
+      <left>1048</left>
+      <top>685</top>
       <enemy unit="SOLDIER_DESERTER" count="75" />
       <enemy unit="LONGBOWMAN_DESERTER" count="75" />
     </camp>
@@ -156,6 +188,8 @@
       <type>Normal</type>
       <wintime>20</wintime>
       <sector>5</sector>
+      <left>1123</left>
+      <top>733</top>
       <enemy unit="CAVALRY_DESERTER" count="50" />
       <enemy unit="SOLDIER_DESERTER" count="100" />
     </camp>
@@ -164,6 +198,8 @@
       <type>Normal</type>
       <wintime>20</wintime>
       <sector>5</sector>
+      <left>1220</left>
+      <top>720</top>
       <enemy unit="CAVALRY_DESERTER" count="40" />
       <enemy unit="SOLDIER_DESERTER" count="70" />
       <enemy unit="LONGBOWMAN_DESERTER" count="70" />
@@ -173,6 +209,8 @@
       <type>Boss</type>
       <wintime>20</wintime>
       <sector>5</sector>
+      <left>1295</left>
+      <top>674</top>
       <enemy unit="CAVALRY_DESERTER" count="50" />
       <enemy unit="SOLDIER_DESERTER" count="100" />
       <enemy unit="LONGBOWMAN_DESERTER" count="50" />
@@ -182,6 +220,8 @@
       <type>Normal</type>
       <wintime>20</wintime>
       <sector>6</sector>
+      <left>1553</left>
+      <top>638</top>
       <enemy unit="CAVALRY_DESERTER" count="100" />
       <enemy unit="SOLDIER_DESERTER" count="100" />
     </camp>
@@ -190,6 +230,8 @@
       <type>Normal</type>
       <wintime>20</wintime>
       <sector>6</sector>
+      <left>1570</left>
+      <top>528</top>
       <enemy unit="CAVALRY_DESERTER" count="50" />
       <enemy unit="SOLDIER_DESERTER" count="80" />
       <enemy unit="LONGBOWMAN_DESERTER" count="70" />
@@ -199,6 +241,8 @@
       <type>Normal</type>
       <wintime>20</wintime>
       <sector>6</sector>
+      <left>1702</left>
+      <top>660</top>
       <enemy unit="SOLDIER_DESERTER" count="120" />
       <enemy unit="LONGBOWMAN_DESERTER" count="80" />
     </camp>
@@ -207,6 +251,8 @@
       <type>Boss</type>
       <wintime>20</wintime>
       <sector>6</sector>
+      <left>1650</left>
+      <top>575</top>
       <enemy unit="SOLDIER_DESERTER" count="200" />
     </camp>
     <camp>
@@ -214,6 +260,8 @@
       <type>Normal</type>
       <wintime>20</wintime>
       <sector>7</sector>
+      <left>1725</left>
+      <top>815</top>
       <enemy unit="SOLDIER_DESERTER" count="130" />
       <enemy unit="LONGBOWMAN_DESERTER" count="70" />
     </camp>
@@ -222,6 +270,8 @@
       <type>Normal</type>
       <wintime>20</wintime>
       <sector>7</sector>
+      <left>1895</left>
+      <top>875</top>
       <enemy unit="CAVALRY_DESERTER" count="50" />
       <enemy unit="SOLDIER_DESERTER" count="100" />
       <enemy unit="LONGBOWMAN_DESERTER" count="50" />
@@ -231,6 +281,8 @@
       <type>Normal</type>
       <wintime>20</wintime>
       <sector>7</sector>
+      <left>1875</left>
+      <top>765</top>
       <enemy unit="CAVALRY_DESERTER" count="50" />
       <enemy unit="SOLDIER_DESERTER" count="150" />
     </camp>
@@ -239,6 +291,8 @@
       <type>Boss</type>
       <wintime>20</wintime>
       <sector>7</sector>
+      <left>1935</left>
+      <top>803</top>
       <enemy unit="SOLDIER_DESERTER" count="100" />
       <enemy unit="CROSSBOWMAN_DESERTER" count="100" />
     </camp>
@@ -247,6 +301,8 @@
       <type>Normal</type>
       <wintime>20</wintime>
       <sector>8</sector>
+      <left>2090</left>
+      <top>660</top>
       <enemy unit="CAVALRY_DESERTER" count="50" />
       <enemy unit="SOLDIER_DESERTER" count="80" />
       <enemy unit="CROSSBOWMAN_DESERTER" count="60" />
@@ -256,6 +312,8 @@
       <type>Normal</type>
       <wintime>20</wintime>
       <sector>8</sector>
+      <left>2222</left>
+      <top>530</top>
       <enemy unit="SOLDIER_DESERTER" count="90" />
       <enemy unit="CROSSBOWMAN_DESERTER" count="90" />
     </camp>
@@ -264,6 +322,8 @@
       <type>Normal</type>
       <wintime>20</wintime>
       <sector>8</sector>
+      <left>2261</left>
+      <top>315</top>
       <enemy unit="CAVALRY_DESERTER" count="40" />
       <enemy unit="SOLDIER_DESERTER" count="80" />
       <enemy unit="CROSSBOWMAN_DESERTER" count="80" />
@@ -273,6 +333,8 @@
       <type>Boss</type>
       <wintime>20</wintime>
       <sector>8</sector>
+      <left>2165</left>
+      <top>209</top>
       <enemy unit="CAVALRY_DESERTER" count="40" />
       <enemy unit="SOLDIER_DESERTER" count="100" />
       <enemy unit="CROSSBOWMAN_DESERTER" count="60" />
@@ -282,6 +344,8 @@
       <type>Normal</type>
       <wintime>20</wintime>
       <sector>9</sector>
+      <left>2050</left>
+      <top>112</top>
       <enemy unit="SOLDIER_DESERTER" count="120" />
       <enemy unit="CROSSBOWMAN_DESERTER" count="80" />
     </camp>
@@ -290,6 +354,8 @@
       <type>Normal</type>
       <wintime>20</wintime>
       <sector>9</sector>
+      <left>1798</left>
+      <top>148</top>
       <enemy unit="CAVALRY_DESERTER" count="70" />
       <enemy unit="SOLDIER_DESERTER" count="130" />
     </camp>
@@ -298,6 +364,8 @@
       <type>Normal</type>
       <wintime>20</wintime>
       <sector>9</sector>
+      <left>1569</left>
+      <top>195</top>
       <enemy unit="SOLDIER_DESERTER" count="200" />
     </camp>
     <camp>
@@ -305,6 +373,8 @@
       <type>Boss</type>
       <wintime>20</wintime>
       <sector>9</sector>
+      <left>1527</left>
+      <top>270</top>
       <enemy unit="SOLDIER_DESERTER" count="100" />
       <enemy unit="CROSSBOWMAN_DESERTER" count="100" />
     </camp>
@@ -313,6 +383,8 @@
       <type>Normal</type>
       <wintime>20</wintime>
       <sector>10</sector>
+      <left>1744</left>
+      <top>325</top>
       <enemy unit="ELITE_SOLDIER_DESERTER" count="60" />
       <enemy unit="CANNONNEER_DESERTER" count="40" />
     </camp>
@@ -321,6 +393,8 @@
       <type>Normal</type>
       <wintime>20</wintime>
       <sector>10</sector>
+      <left>1820</left>
+      <top>280</top>
       <enemy unit="ELITE_SOLDIER_DESERTER" count="50" />
       <enemy unit="CANNONNEER_DESERTER" count="50" />
     </camp>
@@ -329,6 +403,8 @@
       <type>Normal</type>
       <wintime>20</wintime>
       <sector>10</sector>
+      <left>1760</left>
+      <top>410</top>
       <enemy unit="ELITE_SOLDIER_DESERTER" count="50" />
       <enemy unit="CROSSBOWMAN_DESERTER" count="70" />
     </camp>
@@ -337,6 +413,8 @@
       <type>Normal</type>
       <wintime>20</wintime>
       <sector>10</sector>
+      <left>1910</left>
+      <top>330</top>
       <enemy unit="ELITE_SOLDIER_DESERTER" count="60" />
       <enemy unit="CROSSBOWMAN_DESERTER" count="60" />
     </camp>
@@ -345,6 +423,8 @@
       <type>Boss</type>
       <wintime>120</wintime>
       <sector>10</sector>
+      <left>1910</left>
+      <top>390</top>
       <enemy unit="ELITE_SOLDIER_DESERTER" count="50" />
       <enemy unit="CROSSBOWMAN_DESERTER" count="50" />
       <enemy unit="CANNONNEER_DESERTER" count="20" />

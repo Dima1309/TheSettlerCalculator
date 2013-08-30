@@ -23,6 +23,8 @@
       <type>Normal</type>
       <wintime>20</wintime>
       <sector>1</sector>
+      <left>448</left>
+      <top>1125</top>
       <enemy unit="NOMAD" count="100" />
       <enemy unit="COMPOSITE_BOW" count="100" />
     </camp>
@@ -31,6 +33,8 @@
       <type>Normal</type>
       <wintime>20</wintime>
       <sector>1</sector>
+      <left>545</left>
+      <top>995</top>
       <enemy unit="NOMAD" count="80" />
       <enemy unit="LANCE_RIDER" count="50" />
       <enemy unit="RIDING_BOWMAN" count="70" />
@@ -40,6 +44,8 @@
       <type>Normal</type>
       <wintime>20</wintime>
       <sector>1</sector>
+      <left>467</left>
+      <top>853</top>
       <enemy unit="NOMAD" count="100" />
       <enemy unit="RIDING_BOWMAN" count="100" />
     </camp>
@@ -48,6 +54,8 @@
       <type>Normal</type>
       <wintime>20</wintime>
       <sector>1</sector>
+      <left>545</left>
+      <top>754</top>
       <enemy unit="NOMAD" count="100" />
       <enemy unit="LANCE_RIDER" count="30" />
       <enemy unit="COMPOSITE_BOW" count="50" />
@@ -57,6 +65,8 @@
       <type>Boss</type>
       <wintime>20</wintime>
       <sector>1</sector>
+      <left>585</left>
+      <top>805</top>
       <enemy unit="LANCE_RIDER" count="70" />
       <enemy unit="RIDING_BOWMAN" count="80" />
       <enemy unit="RIDING_AMAZONIAN" count="20" />
@@ -66,6 +76,8 @@
       <type>Normal</type>
       <wintime>20</wintime>
       <sector>2</sector>
+      <left>449</left>
+      <top>295</top>
       <enemy unit="NOMAD" count="120" />
       <enemy unit="COMPOSITE_BOW" count="80" />
     </camp>
@@ -74,6 +86,8 @@
       <type>Normal</type>
       <wintime>20</wintime>
       <sector>2</sector>
+      <left>660</left>
+      <top>280</top>
       <enemy unit="NOMAD" count="120" />
       <enemy unit="LANCE_RIDER" count="40" />
       <enemy unit="COMPOSITE_BOW" count="30" />
@@ -83,6 +97,8 @@
       <type>Normal</type>
       <wintime>20</wintime>
       <sector>2</sector>
+      <left>832</left>
+      <top>270</top>
       <enemy unit="LANCE_RIDER" count="80" />
       <enemy unit="RIDING_BOWMAN" count="80" />
     </camp>
@@ -91,6 +107,8 @@
       <type>Normal</type>
       <wintime>20</wintime>
       <sector>2</sector>
+      <left>834</left>
+      <top>410</top>
       <enemy unit="LANCE_RIDER" count="80" />
       <enemy unit="RIDING_BOWMAN" count="100" />
     </camp>
@@ -99,6 +117,8 @@
       <type>Boss</type>
       <wintime>20</wintime>
       <sector>2</sector>
+      <left>792</left>
+      <top>340</top>
       <enemy unit="NOMAD" count="50" />
       <enemy unit="LANCE_RIDER" count="50" />
       <enemy unit="RIDING_AMAZONIAN" count="60" />
@@ -108,6 +128,8 @@
       <type>Normal</type>
       <wintime>20</wintime>
       <sector>3</sector>
+      <left>815</left>
+      <top>780</top>
       <enemy unit="NOMAD" count="80" />
       <enemy unit="LANCE_RIDER" count="40" />
       <enemy unit="RIDING_BOWMAN" count="80" />
@@ -117,6 +139,8 @@
       <type>Normal</type>
       <wintime>20</wintime>
       <sector>3</sector>
+      <left>891</left>
+      <top>923</top>
       <enemy unit="LANCE_RIDER" count="80" />
       <enemy unit="RIDING_BOWMAN" count="120" />
     </camp>
@@ -125,6 +149,8 @@
       <type>Normal</type>
       <wintime>20</wintime>
       <sector>3</sector>
+      <left>1028</left>
+      <top>1075</top>
       <enemy unit="NOMAD" count="80" />
       <enemy unit="LANCE_RIDER" count="70" />
       <enemy unit="RIDING_AMAZONIAN" count="40" />
@@ -134,6 +160,8 @@
       <type>Normal</type>
       <wintime>20</wintime>
       <sector>3</sector>
+      <left>1025</left>
+      <top>1220</top>
       <enemy unit="NOMAD" count="50" />
       <enemy unit="LANCE_RIDER" count="80" />
       <enemy unit="CATAPHRACT" count="50" />
@@ -143,6 +171,8 @@
       <type>Boss</type>
       <wintime>20</wintime>
       <sector>3</sector>
+      <left>1060</left>
+      <top>1290</top>
       <enemy unit="LANCE_RIDER" count="70" />
       <enemy unit="RIDING_AMAZONIAN" count="80" />
       <enemy unit="CATAPHRACT" count="40" />
@@ -152,6 +182,8 @@
       <type>Normal</type>
       <wintime>20</wintime>
       <sector>4</sector>
+      <left>1067</left>
+      <top>530</top>
       <enemy unit="NOMAD" count="50" />
       <enemy unit="RIDING_BOWMAN" count="150" />
     </camp>
@@ -160,6 +192,8 @@
       <type>Normal</type>
       <wintime>20</wintime>
       <sector>4</sector>
+      <left>1182</left>
+      <top>363</top>
       <enemy unit="NOMAD" count="100" />
       <enemy unit="RIDING_AMAZONIAN" count="90" />
     </camp>
@@ -168,6 +202,8 @@
       <type>Normal</type>
       <wintime>20</wintime>
       <sector>4</sector>
+      <left>1356</left>
+      <top>420</top>
       <enemy unit="LANCE_RIDER" count="100" />
       <enemy unit="RIDING_BOWMAN" count="100" />
     </camp>
@@ -176,6 +212,8 @@
       <type>Normal</type>
       <wintime>20</wintime>
       <sector>4</sector>
+      <left>1280</left>
+      <top>305</top>
       <enemy unit="NOMAD" count="60" />
       <enemy unit="LANCE_RIDER" count="50" />
       <enemy unit="RIDING_AMAZONIAN" count="80" />
@@ -185,6 +223,8 @@
       <type>Boss</type>
       <wintime>20</wintime>
       <sector>4</sector>
+      <left>1105</left>
+      <top>270</top>
       <enemy unit="NOMAD" count="60" />
       <enemy unit="RIDING_AMAZONIAN" count="70" />
       <enemy unit="CATAPHRACT" count="40" />
@@ -194,6 +234,8 @@
       <type>Normal</type>
       <wintime>20</wintime>
       <sector>5</sector>
+      <left>1587</left>
+      <top>400</top>
       <enemy unit="NOMAD" count="120" />
       <enemy unit="COMPOSITE_BOW" count="80" />
     </camp>
@@ -202,6 +244,8 @@
       <type>Normal</type>
       <wintime>20</wintime>
       <sector>5</sector>
+      <left>1935</left>
+      <top>400</top>
       <enemy unit="NOMAD" count="150" />
       <enemy unit="COMPOSITE_BOW" count="50" />
     </camp>
@@ -210,6 +254,8 @@
       <type>Normal</type>
       <wintime>20</wintime>
       <sector>5</sector>
+      <left>2130</left>
+      <top>400</top>
       <enemy unit="NOMAD" count="80" />
       <enemy unit="COMPOSITE_BOW" count="120" />
     </camp>
@@ -218,6 +264,8 @@
       <type>Normal</type>
       <wintime>20</wintime>
       <sector>5</sector>
+      <left>1840</left>
+      <top>530</top>
       <enemy unit="NOMAD" count="50" />
       <enemy unit="LANCE_RIDER" count="50" />
       <enemy unit="RIDING_BOWMAN" count="80" />
@@ -227,6 +275,8 @@
       <type>Normal</type>
       <wintime>20</wintime>
       <sector>5</sector>
+      <left>1992</left>
+      <top>552</top>
       <enemy unit="NOMAD" count="100" />
       <enemy unit="RIDING_BOWMAN" count="60" />
     </camp>
@@ -235,6 +285,8 @@
       <type>Boss</type>
       <wintime>20</wintime>
       <sector>5</sector>
+      <left>1855</left>
+      <top>590</top>
       <enemy unit="LANCE_RIDER" count="80" />
       <enemy unit="RIDING_BOWMAN" count="40" />
       <enemy unit="RIDING_AMAZONIAN" count="60" />
@@ -244,6 +296,8 @@
       <type>Normal</type>
       <wintime>20</wintime>
       <sector>6</sector>
+      <left>1320</left>
+      <top>684</top>
       <enemy unit="LANCE_RIDER" count="90" />
       <enemy unit="CATAPHRACT" count="100" />
     </camp>
@@ -252,6 +306,8 @@
       <type>Normal</type>
       <wintime>20</wintime>
       <sector>0</sector>
+      <left>1450</left>
+      <top>698</top>
       <enemy unit="NOMAD" count="110" />
       <enemy unit="RIDING_AMAZONIAN" count="40" />
       <enemy unit="CATAPHRACT" count="50" />
@@ -261,6 +317,8 @@
       <type>Normal</type>
       <wintime>20</wintime>
       <sector>6</sector>
+      <left>1260</left>
+      <top>770</top>
       <enemy unit="NOMAD" count="90" />
       <enemy unit="LANCE_RIDER" count="60" />
       <enemy unit="CATAPHRACT" count="50" />
@@ -270,6 +328,8 @@
       <type>Boss</type>
       <wintime>140</wintime>
       <sector>6</sector>
+      <left>1368</left>
+      <top>735</top>
       <enemy unit="NOMAD" count="70" />
       <enemy unit="LANCE_RIDER" count="100" />
       <enemy unit="CATAPHRACT" count="30" />
@@ -280,6 +340,8 @@
       <type>Normal</type>
       <wintime>20</wintime>
       <sector>7</sector>
+      <left>1680</left>
+      <top>905</top>
       <enemy unit="CULTIST" count="100" />
       <enemy unit="FIRE_DANCER" count="100" />
     </camp>
@@ -288,6 +350,8 @@
       <type>Normal</type>
       <wintime>20</wintime>
       <sector>7</sector>
+      <left>1665</left>
+      <top>1014</top>
       <enemy unit="CULTIST" count="40" />
       <enemy unit="DARK_PRIEST" count="60" />
       <enemy unit="FIRE_DANCER" count="100" />
@@ -297,6 +361,8 @@
       <type>Normal</type>
       <wintime>20</wintime>
       <sector>7</sector>
+      <left>1856</left>
+      <top>1013</top>
       <enemy unit="CULTIST" count="70" />
       <enemy unit="SHADOW_SNEAKER" count="50" />
       <enemy unit="FIRE_DANCER" count="80" />
@@ -306,6 +372,8 @@
       <type>Normal</type>
       <wintime>20</wintime>
       <sector>7</sector>
+      <left>1836</left>
+      <top>908</top>
       <enemy unit="CULTIST" count="100" />
       <enemy unit="SHADOW_SNEAKER" count="80" />
       <enemy unit="DARK_PRIEST" count="20" />
@@ -315,6 +383,8 @@
       <type>Boss</type>
       <wintime>140</wintime>
       <sector>7</sector>
+      <left>1755</left>
+      <top>925</top>
       <enemy unit="CULTIST" count="80" />
       <enemy unit="FIRE_DANCER" count="120" />
     </camp>
@@ -323,6 +393,8 @@
       <type>Normal</type>
       <wintime>20</wintime>
       <sector>8</sector>
+      <left>2088</left>
+      <top>1180</top>
       <enemy unit="CULTIST" count="100" />
       <enemy unit="SHADOW_SNEAKER" count="40" />
       <enemy unit="FIRE_DANCER" count="60" />
@@ -332,6 +404,8 @@
       <type>Normal</type>
       <wintime>20</wintime>
       <sector>8</sector>
+      <left>2165</left>
+      <top>1130</top>
       <enemy unit="CULTIST" count="150" />
       <enemy unit="FIRE_DANCER" count="50" />
     </camp>
@@ -340,6 +414,8 @@
       <type>Boss</type>
       <wintime>140</wintime>
       <sector>8</sector>
+      <left>2201</left>
+      <top>1190</top>
       <enemy unit="CULTIST" count="80" />
       <enemy unit="SHADOW_SNEAKER" count="50" />
       <enemy unit="FIRE_DANCER" count="70" />
