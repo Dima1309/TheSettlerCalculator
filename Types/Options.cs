@@ -6,6 +6,7 @@ namespace TheSettlersCalculator.Types
 	public class Options : IXMLSerializable
 	{
 		#region Constants
+		private const string FILENAME = "options.xml";
 		private const string OPTIONS = "options";
 		private const string ROUNDS = "rounds";
 		private const string SERVER = "server";
@@ -17,10 +18,10 @@ namespace TheSettlersCalculator.Types
 		#endregion
 
 		#region Fields
-		private readonly static Options s_instance = new Options();
+		private static Options s_instance;
 		private int m_rounds = 10000;
 		private ServerType m_server;
-		private int m_baracksLevel;
+		private int m_baracksLevel = 1;
 		private MultiWaveBattleType m_multiWaveBattleType = MultiWaveBattleType.TakeWorstWave;
 		#endregion
 
@@ -55,11 +56,42 @@ namespace TheSettlersCalculator.Types
 
 		internal static Options Instance
 		{
-			get { return s_instance; }
+			get
+			{
+				if (s_instance == null)
+				{
+					s_instance = new Options();
+					s_instance.Load();
+				}
+				return s_instance;
+			}
 		}
 		#endregion
 
 		#region Methods
+		internal void Save()
+		{
+			XmlWriterSettings settings = new XmlWriterSettings();
+			settings.Indent = true;
+			using (XmlWriter xmlWriter = XmlWriter.Create(FILENAME, settings))
+			{
+				Save(xmlWriter);
+			}
+		}
+
+		internal void Load()
+		{
+			try
+			{
+				using (XmlReader reader = XmlReader.Create(FILENAME))
+				{
+					Load(reader);
+				}
+			}
+			catch
+			{ }
+		}
+
 		public void Load(XmlReader reader)
 		{
 			int level = reader.Depth;
@@ -80,19 +112,19 @@ namespace TheSettlersCalculator.Types
 				{
 					if(string.Equals(reader.Name, ROUNDS, StringComparison.OrdinalIgnoreCase))
 					{
-						m_rounds = int.Parse(reader.Value);
+						m_rounds = int.Parse(reader.ReadElementString().Trim());
 					}
 					else if(string.Equals(reader.Name, SERVER, StringComparison.OrdinalIgnoreCase))
 					{
-						m_server = (ServerType)Enum.Parse(typeof(ServerType), reader.Value, true);
+						m_server = (ServerType)Enum.Parse(typeof(ServerType), reader.ReadElementString().Trim(), true);
 					}
 					else if(string.Equals(reader.Name, BARACK, StringComparison.OrdinalIgnoreCase))
 					{
-						m_baracksLevel = int.Parse(reader.Value);
+						m_baracksLevel = int.Parse( reader.ReadElementString().Trim());
 					}
 					else if(string.Equals(reader.Name, MULTI_WAVE_BATTLE_TYPE, StringComparison.OrdinalIgnoreCase))
 					{
-						m_multiWaveBattleType = (MultiWaveBattleType) int.Parse(reader.Value);
+						m_multiWaveBattleType = (MultiWaveBattleType) int.Parse( reader.ReadElementString().Trim());
 					}
 				}
 				catch (Exception)

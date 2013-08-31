@@ -75,7 +75,7 @@
 				<ItemsControl.ItemTemplate>
 					<DataTemplate>
 						<StackPanel Orientation="Horizontal" Visibility="{Binding Count, Converter={StaticResource intVisibilityConverter}}">
-							<Image Grid.Column="0" Source="{Binding Unit.Icon}" ToolTip="{StaticResource UnitTooltipTemplate}" />
+                            <Image Width="30" Height="30" Grid.Column="0" Source="{Binding Unit.Icon}" ToolTip="{StaticResource UnitTooltipTemplate}" />
 							<Label Content="{Binding Count}" />
 						</StackPanel>
 					</DataTemplate>
@@ -85,7 +85,7 @@
 
 		<DataTemplate x:Key="Losses">
 			<StackPanel Orientation="Horizontal">
-				<Image Grid.Column="0" Source="{Binding Unit.Icon}" ToolTip="{StaticResource UnitTooltipTemplate}"></Image>
+                <Image Grid.Column="0" Width="30" Height="30" Source="{Binding Unit.Icon}" ToolTip="{StaticResource UnitTooltipTemplate}"></Image>
 				<Label Content="{Binding Count}" ContentStringFormat="{}-{0}" Foreground="Red" Visibility="{Binding Count, Converter={StaticResource intVisibilityConverter}}"></Label>
 				<Label Content="{Binding Health}" ContentStringFormat="{}-{0}HP" Foreground="Red" Visibility="{Binding Count, Converter={StaticResource intNegativeVisibilityConverter}}"></Label>
 			</StackPanel>
@@ -95,7 +95,7 @@
 			<Expander Margin="40,0,0,0">
 				<Expander.Header>
 					<StackPanel Orientation="Horizontal">
-						<Image Source="{Binding Unit.Icon}" ToolTip="{StaticResource UnitTooltipTemplate}"></Image>
+                        <Image Width="30" Height="30" Source="{Binding Unit.Icon}" ToolTip="{StaticResource UnitTooltipTemplate}"></Image>
 						<Label Content="{Binding Count}"></Label>
 						<Label Content=" атакуют "></Label>
 						<ItemsControl ItemsSource="{Binding TotalDamage}" ItemTemplate="{StaticResource Losses}">
@@ -112,7 +112,7 @@
 					<ItemsControl.ItemTemplate>
 						<DataTemplate>
 							<StackPanel Orientation="Horizontal" Background="{Binding Health, Converter={StaticResource healthBrushConverter}}">
-								<Image Source="{Binding Attacker.Icon}" ToolTip="{StaticResource UnitTooltipTemplate}"></Image>
+                                <Image Width="30" Height="30" Source="{Binding Attacker.Icon}" ToolTip="{StaticResource UnitTooltipTemplate}"></Image>
 								<Label Content="{Binding AttackerId}" ContentStringFormat="{}({0})"></Label>
 								<Label Content=" наносит "></Label>
 								<Label Content="{Binding Damage}"></Label>

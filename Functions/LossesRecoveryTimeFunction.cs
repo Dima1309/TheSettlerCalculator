@@ -31,7 +31,7 @@ namespace TheSettlersCalculator.Functions
 				result += units[i].ProductionTime * losses[i];
 			}
 
-			return result;
+			return result / Options.Instance.BaracksLevel;
 		}
 
 		internal double CalculateTime(IList<Unit> units, double[] losses)
@@ -48,7 +48,7 @@ namespace TheSettlersCalculator.Functions
 				result += units[i].ProductionTime * losses[i];
 			}
 
-			return result;
+			return result / Options.Instance.BaracksLevel;
 		}
 	}
 }

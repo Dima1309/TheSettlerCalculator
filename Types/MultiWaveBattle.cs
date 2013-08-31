@@ -214,13 +214,23 @@ namespace TheSettlersCalculator.Types
 
 					bool empty = true;
 					short[] attackerLosses = GetPlayerLosses(statistics);
-					for(int i = 0; i < attackerLosses.Length; i++)
+					int i = 0;
+					int j = 0;
+					while (i < attackerLosses.Length)
 					{
-						playerSquads[i].Count -= attackerLosses[i];
-						if(playerSquads[i].Count > 0)
+						if (playerSquads[j].Count <= 0)
+						{
+							j++;
+							continue;
+						}
+
+						playerSquads[j].Count -= attackerLosses[i];
+						if(playerSquads[j].Count > 0)
 						{
 							empty = false;
 						}
+						i++;
+						j++;
 					}
 
 					if(empty)
@@ -231,13 +241,23 @@ namespace TheSettlersCalculator.Types
 
 					empty = true;
 					short[] defenderLosses = GetEnemyLosses(statistics);
-					for(int i = 0; i < defenderLosses.Length; i++)
+					i = 0;
+					j = 0;
+					while (i < defenderLosses.Length)
 					{
-						enemySquads[i].Count -= defenderLosses[i];
-						if(enemySquads[i].Count > 0)
+						if (enemySquads[j].Count <= 0)
+						{
+							j++;
+							continue;
+						}
+
+						enemySquads[j].Count -= defenderLosses[i];
+						if(enemySquads[j].Count > 0)
 						{
 							empty = false;
 						}
+						i++;
+						j++;
 					}
 
 					if(empty)

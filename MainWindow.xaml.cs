@@ -1,4 +1,5 @@
 ﻿using System.Windows;
+using TheSettlersCalculator.Types;
 using TheSettlersCalculator.WpfTypes;
 
 namespace TheSettlersCalculator
@@ -52,6 +53,7 @@ namespace TheSettlersCalculator
 		private void Win_Closed(object sender, System.EventArgs e)
 		{
 			Quests.Quests.Save();
+			Options.Instance.Save();
 		}
     }
 }
