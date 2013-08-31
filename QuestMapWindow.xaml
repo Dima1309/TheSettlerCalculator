@@ -70,7 +70,7 @@
                                         <ItemsControl.ItemTemplate>
                                             <DataTemplate>
                                                 <StackPanel Orientation="Horizontal">
-                                                    <Image Grid.Column="0" Source="{Binding Icon}"></Image>
+                                                    <Image Width="30" Height="30" Grid.Column="0" Source="{Binding Icon}"></Image>
                                                     <Label Grid.Column="1" Content="{Binding Count}" />
                                                 </StackPanel>
                                             </DataTemplate>
@@ -142,7 +142,7 @@
                                                         <ComboBox.ItemTemplate>
                                                             <DataTemplate>
                                                                 <StackPanel Orientation="Horizontal">
-                                                                    <Image Source="{Binding Icon}"></Image>
+                                                                    <Image Width="30" Height="30" Source="{Binding Icon}"></Image>
                                                                     <Label Content="{Binding Name}" />
                                                                 </StackPanel>
                                                             </DataTemplate>

@@ -33,9 +33,9 @@ namespace TheSettlersCalculator.Functions
 
 			foreach(KeyValuePair<int, int> roundStatistic in statistics.RoundStatistics)
 			{
-				double time = Math.Abs(roundStatistic.Key) * ROUND_TIME + roundStatistic.Key > 0
+				double time = Math.Abs(roundStatistic.Key) * ROUND_TIME + (roundStatistic.Key > 0
 				              	? statistics.Battle.WinBattleTime
-				              	: 0;
+				              	: 0);
 				minBattleTime = Math.Min(minBattleTime, time);
 				maxBattleTime = Math.Max(maxBattleTime, time);
 				avgBattleTime = battleCount / (battleCount + roundStatistic.Value) * avgBattleTime +

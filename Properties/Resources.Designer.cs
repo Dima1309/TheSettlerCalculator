@@ -1573,7 +1573,7 @@ namespace TheSettlersCalculator.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Rival Dressmaker.
+        ///   Looks up a localized string similar to Портной конкурент.
         /// </summary>
         public static string UNIT_RIVAL_DRESSMAKER {
             get {

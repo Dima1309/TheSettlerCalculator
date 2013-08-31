@@ -45,7 +45,6 @@ namespace TheSettlersCalculator.WpfTypes
             set
             {
             	m_count = value;
-
             	OnPropertyChanged("Count");
             }
         }
@@ -53,7 +52,11 @@ namespace TheSettlersCalculator.WpfTypes
 		public Unit Unit
 		{
 			get { return m_unit; }
-			set { m_unit = value; }
+			set
+			{
+				m_unit = value;
+				OnPropertyChanged("Icon");
+			}
 		}
 
     	#region Methods

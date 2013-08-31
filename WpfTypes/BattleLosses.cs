@@ -1,5 +1,4 @@
 ﻿using System.Collections.Generic;
-using TheSettlersCalculator.Price;
 using TheSettlersCalculator.Types;
 
 namespace TheSettlersCalculator.WpfTypes

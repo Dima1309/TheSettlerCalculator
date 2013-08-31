@@ -20,19 +20,19 @@ namespace TheSettlersCalculator.WpfTypes.Converters
 
 			if (time.Hours > 0 || result.Length > 0)
 			{
-				result.AppendFormat("{0:2}", time.Hours);
+				result.AppendFormat("{0:00}", time.Hours);
 				result.Append(":");
 			}
 
 			if (time.Minutes > 0 || result.Length > 0)
 			{
-				result.AppendFormat("{0:2}", time.Minutes);
+				result.AppendFormat("{0:00}", time.Minutes);
 				result.Append(":");
 			}
 
 			if (time.Seconds > 0 || result.Length > 0)
 			{
-				result.AppendFormat("{0:2}", time.Seconds);
+				result.AppendFormat("{0:00}", time.Seconds);
 			}
 
 			return result;

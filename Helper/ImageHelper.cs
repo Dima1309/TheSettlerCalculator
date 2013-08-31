@@ -65,11 +65,6 @@ namespace TheSettlersCalculator.Helper
 				decoder = new JpegBitmapDecoder(stream, BitmapCreateOptions.PreservePixelFormat, BitmapCacheOption.Default);				
 			}
 
-			if (filename.ToLowerInvariant().Contains("assassine"))
-			{
-				
-			}
-
 			return decoder!=null?decoder.Frames[0]:null;
 		}
 	}

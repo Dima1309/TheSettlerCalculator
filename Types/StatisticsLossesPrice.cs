@@ -42,7 +42,7 @@ namespace TheSettlersCalculator.Types
 				{
 					byProducts.Add(
 						lossesProduct.Product.Index,
-						new StatisticsLossesProduct(lossesProduct.Product, lossesProduct.Count, 0, 0));
+						new StatisticsLossesProduct(lossesProduct.Product, 0, lossesProduct.Count, 0));
 				}
 			}
 
