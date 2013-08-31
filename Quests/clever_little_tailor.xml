@@ -19,5 +19,449 @@
     <enemy>GIANT_BEAR</enemy>
     <enemy>RIVAL_DRESSMAKER</enemy>
   </enemies>
-  <camps />
+  <camps>
+    <camp>
+      <name>1</name>
+      <type>Normal</type>
+      <wintime>20</wintime>
+      <sector>1</sector>
+      <left>2280</left>
+      <top>1525</top>
+      <enemy unit="ROUGHNECK" count="100" />
+      <enemy unit="RANGER" count="100" />
+    </camp>
+    <camp>
+      <name>2</name>
+      <type>Normal</type>
+      <wintime>20</wintime>
+      <sector>1</sector>
+      <left>2613</left>
+      <top>1440</top>
+      <enemy unit="RANGER" count="200" />
+    </camp>
+    <camp>
+      <name>3</name>
+      <type>Normal</type>
+      <wintime>20</wintime>
+      <sector>1</sector>
+      <left>2950</left>
+      <top>1618</top>
+      <enemy unit="ROUGHNECK" count="60" />
+      <enemy unit="RANGER" count="140" />
+    </camp>
+    <camp>
+      <name>4</name>
+      <type>Normal</type>
+      <wintime>20</wintime>
+      <sector>1</sector>
+      <left>3078</left>
+      <top>1444</top>
+      <enemy unit="GUARD_DOG" count="80" />
+      <enemy unit="ROUGHNECK" count="60" />
+      <enemy unit="RANGER" count="60" />
+    </camp>
+    <camp>
+      <name>5</name>
+      <type>Normal</type>
+      <wintime>20</wintime>
+      <sector>1</sector>
+      <left>2923</left>
+      <top>1060</top>
+      <enemy unit="ROUGHNECK" count="110" />
+      <enemy unit="RANGER" count="90" />
+    </camp>
+    <camp>
+      <name>6</name>
+      <type>Boss</type>
+      <wintime>20</wintime>
+      <sector>1</sector>
+      <left>2975</left>
+      <top>1000</top>
+      <enemy unit="CHUCK" count="1" />
+      <enemy unit="ROUGHNECK" count="89" />
+      <enemy unit="RANGER" count="110" />
+    </camp>
+    <camp>
+      <name>7</name>
+      <type>Normal</type>
+      <wintime>20</wintime>
+      <sector>2</sector>
+      <left>3105</left>
+      <top>890</top>
+      <enemy unit="ROUGHNECK" count="130" />
+      <enemy unit="RANGER" count="70" />
+    </camp>
+    <camp>
+      <name>8</name>
+      <type>Normal</type>
+      <wintime>20</wintime>
+      <sector>2</sector>
+      <left>2870</left>
+      <top>682</top>
+      <enemy unit="GUARD_DOG" count="100" />
+      <enemy unit="ROUGHNECK" count="100" />
+    </camp>
+    <camp>
+      <name>9</name>
+      <type>Normal</type>
+      <wintime>20</wintime>
+      <sector>2</sector>
+      <left>3080</left>
+      <top>685</top>
+      <enemy unit="GUARD_DOG" count="80" />
+      <enemy unit="RANGER" count="120" />
+    </camp>
+    <camp>
+      <name>10</name>
+      <type>Normal</type>
+      <wintime>20</wintime>
+      <sector>2</sector>
+      <left>2950</left>
+      <top>476</top>
+      <enemy unit="ROUGHNECK" count="150" />
+      <enemy unit="RANGER" count="50" />
+    </camp>
+    <camp>
+      <name>11</name>
+      <type>Normal</type>
+      <wintime>20</wintime>
+      <sector>2</sector>
+      <left>2638</left>
+      <top>223</top>
+      <enemy unit="ROUGHNECK" count="200" />
+    </camp>
+    <camp>
+      <name>12</name>
+      <type>Normal</type>
+      <wintime>20</wintime>
+      <sector>2</sector>
+      <left>2485</left>
+      <top>505</top>
+      <enemy unit="ROUGHNECK" count="110" />
+      <enemy unit="RANGER" count="90" />
+    </camp>
+    <camp>
+      <name>13</name>
+      <type>Boss</type>
+      <wintime>20</wintime>
+      <sector>2</sector>
+      <left>2355</left>
+      <top>490</top>
+      <enemy unit="ROUGHNECK" count="99" />
+      <enemy unit="RANGER" count="100" />
+      <enemy unit="IRON_FIST" count="1" />
+    </camp>
+    <camp>
+      <name>14</name>
+      <type>Normal</type>
+      <wintime>20</wintime>
+      <sector>3</sector>
+      <left>2200</left>
+      <top>745</top>
+      <enemy unit="BOAR" count="80" />
+      <enemy unit="WOLF2" count="60" />
+    </camp>
+    <camp>
+      <name>15</name>
+      <type>Normal</type>
+      <wintime>20</wintime>
+      <sector>3</sector>
+      <left>2669</left>
+      <top>900</top>
+      <enemy unit="BOAR" count="90" />
+      <enemy unit="FOX" count="50" />
+    </camp>
+    <camp>
+      <name>16</name>
+      <type>Normal</type>
+      <wintime>20</wintime>
+      <sector>3</sector>
+      <left>2720</left>
+      <top>1220</top>
+      <enemy unit="BEAR" count="50" />
+      <enemy unit="WOLF2" count="50" />
+    </camp>
+    <camp>
+      <name>17</name>
+      <type>Normal</type>
+      <wintime>20</wintime>
+      <sector>3</sector>
+      <left>2360</left>
+      <top>1280</top>
+      <enemy unit="WOLF_PACKLOADER" count="110" />
+    </camp>
+    <camp>
+      <name>18</name>
+      <type>Normal</type>
+      <wintime>20</wintime>
+      <sector>3</sector>
+      <left>2258</left>
+      <top>1028</top>
+      <enemy unit="BEAR" count="50" />
+      <enemy unit="WOLF_PACKLOADER" count="40" />
+    </camp>
+    <camp>
+      <name>19</name>
+      <type>Normal</type>
+      <wintime>20</wintime>
+      <sector>3</sector>
+      <left>2026</left>
+      <top>853</top>
+      <enemy unit="BOAR" count="110" />
+      <enemy unit="WOLF_PACKLOADER" count="30" />
+    </camp>
+    <camp>
+      <name>20</name>
+      <type>Normal</type>
+      <wintime>20</wintime>
+      <sector>3</sector>
+      <left>1817</left>
+      <top>635</top>
+      <enemy unit="BEAR" count="110" />
+    </camp>
+    <camp>
+      <name>21</name>
+      <type>Boss</type>
+      <wintime>20</wintime>
+      <sector>3</sector>
+      <left>1743</left>
+      <top>585</top>
+      <enemy unit="BEAR" count="80" />
+      <enemy unit="FOX" count="40" />
+      <enemy unit="GIANT" count="30" />
+    </camp>
+    <camp>
+      <name>22</name>
+      <type>Normal</type>
+      <wintime>20</wintime>
+      <sector>3</sector>
+      <left>1405</left>
+      <top>540</top>
+      <enemy unit="BEAR" count="90" />
+      <enemy unit="FOX" count="80" />
+    </camp>
+    <camp>
+      <name>23</name>
+      <type>Normal</type>
+      <wintime>20</wintime>
+      <sector>4</sector>
+      <left>1843</left>
+      <top>1095</top>
+      <enemy unit="FOX" count="150" />
+    </camp>
+    <camp>
+      <name>24</name>
+      <type>Normal</type>
+      <wintime>20</wintime>
+      <sector>4</sector>
+      <left>1615</left>
+      <top>1210</top>
+      <enemy unit="WOLF_PACKLOADER" count="80" />
+      <enemy unit="FOX" count="60" />
+    </camp>
+    <camp>
+      <name>25</name>
+      <type>Normal</type>
+      <wintime>20</wintime>
+      <sector>4</sector>
+      <left>1770</left>
+      <top>1270</top>
+      <enemy unit="BOAR" count="50" />
+      <enemy unit="BEAR" count="130" />
+    </camp>
+    <camp>
+      <name>26</name>
+      <type>Boss</type>
+      <wintime>20</wintime>
+      <sector>4</sector>
+      <left>1565</left>
+      <top>1268</top>
+      <enemy unit="BEAR" count="90" />
+      <enemy unit="FOX" count="50" />
+      <enemy unit="GIANT" count="40" />
+    </camp>
+    <camp>
+      <name>27</name>
+      <type>Normal</type>
+      <wintime>20</wintime>
+      <sector>5</sector>
+      <left>1250</left>
+      <top>1300</top>
+      <enemy unit="WOLF_PACKLOADER" count="180" />
+    </camp>
+    <camp>
+      <name>28</name>
+      <type>Normal</type>
+      <wintime>20</wintime>
+      <sector>5</sector>
+      <left>1320</left>
+      <top>1150</top>
+      <enemy unit="BOAR" count="80" />
+      <enemy unit="BEAR" count="40" />
+      <enemy unit="WOLF_PACKLOADER" count="60" />
+    </camp>
+    <camp>
+      <name>29</name>
+      <type>Normal</type>
+      <wintime>20</wintime>
+      <sector>5</sector>
+      <left>1175</left>
+      <top>1000</top>
+      <enemy unit="WOLF2" count="110" />
+      <enemy unit="WOLF_PACKLOADER" count="70" />
+    </camp>
+    <camp>
+      <name>30</name>
+      <type>Normal</type>
+      <wintime>20</wintime>
+      <sector>5</sector>
+      <left>1230</left>
+      <top>715</top>
+      <enemy unit="BEAR" count="110" />
+      <enemy unit="WOLF2" count="70" />
+    </camp>
+    <camp>
+      <name>31</name>
+      <type>Boss</type>
+      <wintime>20</wintime>
+      <sector>5</sector>
+      <left>1225</left>
+      <top>648</top>
+      <enemy unit="BEAR" count="70" />
+      <enemy unit="FOX" count="110" />
+      <enemy unit="GIANT" count="20" />
+    </camp>
+    <camp>
+      <name>32</name>
+      <type>Normal</type>
+      <wintime>20</wintime>
+      <sector>6</sector>
+      <left>1175</left>
+      <top>430</top>
+      <enemy unit="BEAR" count="90" />
+      <enemy unit="WOLF_PACKLOADER" count="70" />
+    </camp>
+    <camp>
+      <name>33</name>
+      <type>Normal</type>
+      <wintime>20</wintime>
+      <sector>6</sector>
+      <left>772</left>
+      <top>347</top>
+      <enemy unit="BEAR" count="100" />
+      <enemy unit="FOX" count="80" />
+    </camp>
+    <camp>
+      <name>34</name>
+      <type>Boss</type>
+      <wintime>20</wintime>
+      <sector>6</sector>
+      <left>868</left>
+      <top>458</top>
+      <enemy unit="BEAR" count="110" />
+      <enemy unit="GIANT" count="69" />
+      <enemy unit="GIANT_BEAR" count="1" />
+    </camp>
+    <camp>
+      <name>35</name>
+      <type>Normal</type>
+      <wintime>20</wintime>
+      <sector>7</sector>
+      <left>890</left>
+      <top>635</top>
+      <enemy unit="GUARD_DOG" count="100" />
+      <enemy unit="ROUGHNECK" count="120" />
+    </camp>
+    <camp>
+      <name>36</name>
+      <type>Normal</type>
+      <wintime>20</wintime>
+      <sector>7</sector>
+      <left>939</left>
+      <top>1080</top>
+      <enemy unit="GUARD_DOG" count="140" />
+      <enemy unit="RANGER" count="80" />
+    </camp>
+    <camp>
+      <name>37</name>
+      <type>Normal</type>
+      <wintime>20</wintime>
+      <sector>7</sector>
+      <left>680</left>
+      <top>1048</top>
+      <enemy unit="ROUGHNECK" count="220" />
+    </camp>
+    <camp>
+      <name>38</name>
+      <type>Boss</type>
+      <wintime>20</wintime>
+      <sector>7</sector>
+      <left>580</left>
+      <top>1050</top>
+      <enemy unit="METAL_TOOTHED" count="1" />
+      <enemy unit="ROUGHNECK" count="180" />
+      <enemy unit="RANGER" count="100" />
+    </camp>
+    <camp>
+      <name>39</name>
+      <type>Normal</type>
+      <wintime>20</wintime>
+      <sector>8</sector>
+      <left>450</left>
+      <top>1222</top>
+      <enemy unit="GUARD_DOG" count="60" />
+      <enemy unit="ROUGHNECK" count="100" />
+      <enemy unit="RANGER" count="80" />
+    </camp>
+    <camp>
+      <name>40</name>
+      <type>Normal</type>
+      <wintime>20</wintime>
+      <sector>8</sector>
+      <left>865</left>
+      <top>1316</top>
+      <enemy unit="RANGER" count="300" />
+    </camp>
+    <camp>
+      <name>41</name>
+      <type>Normal</type>
+      <wintime>20</wintime>
+      <sector>8</sector>
+      <left>247</left>
+      <top>1380</top>
+      <enemy unit="GUARD_DOG" count="190" />
+      <enemy unit="ROUGHNECK" count="70" />
+    </camp>
+    <camp>
+      <name>42</name>
+      <type>Normal</type>
+      <wintime>20</wintime>
+      <sector>8</sector>
+      <left>555</left>
+      <top>1570</top>
+      <enemy unit="GUARD_DOG" count="120" />
+      <enemy unit="ROUGHNECK" count="160" />
+    </camp>
+    <camp>
+      <name>43</name>
+      <type>Normal</type>
+      <wintime>20</wintime>
+      <sector>8</sector>
+      <left>295</left>
+      <top>1632</top>
+      <enemy unit="ROUGHNECK" count="200" />
+      <enemy unit="RANGER" count="80" />
+    </camp>
+    <camp>
+      <name>44</name>
+      <type>Boss</type>
+      <wintime>20</wintime>
+      <sector>8</sector>
+      <left>193</left>
+      <top>1665</top>
+      <enemy unit="GUARD_DOG" count="80" />
+      <enemy unit="ROUGHNECK" count="200" />
+      <enemy unit="RIVAL_DRESSMAKER" count="1" />
+    </camp>
+  </camps>
 </quest>
