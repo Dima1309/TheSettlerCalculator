@@ -20,8 +20,5 @@
     <enemy>LYING_GOAT</enemy>
     <enemy>THUG_LEADER</enemy>
   </enemies>
-  <camps>
-  </camps>
+  <camps />
 </quest>
-
-

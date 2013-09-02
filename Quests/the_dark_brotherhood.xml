@@ -20,6 +20,8 @@
       <type>Normal</type>
       <wintime>20</wintime>
       <sector>1</sector>
+      <left>179</left>
+      <top>378</top>
       <enemy unit="CULTIST" count="100" />
       <enemy unit="FANATIC" count="100" />
     </camp>
@@ -28,6 +30,8 @@
       <type>Boss</type>
       <wintime>20</wintime>
       <sector>1</sector>
+      <left>280</left>
+      <top>475</top>
       <enemy unit="CULTIST" count="100" />
       <enemy unit="SHADOW_SNEAKER" count="100" />
     </camp>
@@ -36,6 +40,8 @@
       <type>Normal</type>
       <wintime>20</wintime>
       <sector>101</sector>
+      <left>265</left>
+      <top>1070</top>
       <enemy unit="CULTIST" count="100" />
       <enemy unit="FANATIC" count="100" />
     </camp>
@@ -44,6 +50,8 @@
       <type>Boss</type>
       <wintime>20</wintime>
       <sector>101</sector>
+      <left>455</left>
+      <top>938</top>
       <enemy unit="CULTIST" count="100" />
       <enemy unit="SHADOW_SNEAKER" count="100" />
     </camp>
@@ -52,6 +60,8 @@
       <type>Normal</type>
       <wintime>20</wintime>
       <sector>201</sector>
+      <left>1688</left>
+      <top>303</top>
       <enemy unit="CULTIST" count="100" />
       <enemy unit="FANATIC" count="100" />
     </camp>
@@ -60,6 +70,8 @@
       <type>Boss</type>
       <wintime>20</wintime>
       <sector>201</sector>
+      <left>1528</left>
+      <top>243</top>
       <enemy unit="CULTIST" count="100" />
       <enemy unit="SHADOW_SNEAKER" count="100" />
     </camp>
@@ -68,6 +80,8 @@
       <type>Normal</type>
       <wintime>20</wintime>
       <sector>2</sector>
+      <left>428</left>
+      <top>350</top>
       <enemy unit="CULTIST" count="80" />
       <enemy unit="SHADOW_SNEAKER" count="40" />
       <enemy unit="FANATIC" count="80" />
@@ -77,6 +91,8 @@
       <type>Boss</type>
       <wintime>20</wintime>
       <sector>2</sector>
+      <left>542</left>
+      <top>420</top>
       <enemy unit="CULTIST" count="80" />
       <enemy unit="SHADOW_SNEAKER" count="40" />
       <enemy unit="FANATIC" count="40" />
@@ -87,6 +103,8 @@
       <type>Normal</type>
       <wintime>20</wintime>
       <sector>102</sector>
+      <left>309</left>
+      <top>778</top>
       <enemy unit="CULTIST" count="80" />
       <enemy unit="SHADOW_SNEAKER" count="40" />
       <enemy unit="FANATIC" count="80" />
@@ -96,6 +114,8 @@
       <type>Boss</type>
       <wintime>20</wintime>
       <sector>102</sector>
+      <left>370</left>
+      <top>672</top>
       <enemy unit="CULTIST" count="80" />
       <enemy unit="SHADOW_SNEAKER" count="40" />
       <enemy unit="FANATIC" count="40" />
@@ -106,6 +126,8 @@
       <type>Normal</type>
       <wintime>20</wintime>
       <sector>202</sector>
+      <left>1500</left>
+      <top>82</top>
       <enemy unit="CULTIST" count="80" />
       <enemy unit="SHADOW_SNEAKER" count="40" />
       <enemy unit="FANATIC" count="80" />
@@ -115,6 +137,8 @@
       <type>Boss</type>
       <wintime>20</wintime>
       <sector>202</sector>
+      <left>1354</left>
+      <top>136</top>
       <enemy unit="CULTIST" count="80" />
       <enemy unit="SHADOW_SNEAKER" count="40" />
       <enemy unit="FANATIC" count="40" />
@@ -125,6 +149,8 @@
       <type>Normal</type>
       <wintime>20</wintime>
       <sector>3</sector>
+      <left>690</left>
+      <top>438</top>
       <enemy unit="CULTIST" count="200" />
     </camp>
     <camp>
@@ -132,6 +158,8 @@
       <type>Normal</type>
       <wintime>20</wintime>
       <sector>3</sector>
+      <left>658</left>
+      <top>562</top>
       <enemy unit="CULTIST" count="120" />
       <enemy unit="DARK_PRIEST" count="80" />
     </camp>
@@ -140,6 +168,8 @@
       <type>Boss</type>
       <wintime>20</wintime>
       <sector>3</sector>
+      <left>935</left>
+      <top>500</top>
       <enemy unit="CULTIST" count="70" />
       <enemy unit="SHADOW_SNEAKER" count="70" />
       <enemy unit="DARK_PRIEST" count="60" />
@@ -149,6 +179,8 @@
       <type>Normal</type>
       <wintime>20</wintime>
       <sector>103</sector>
+      <left>545</left>
+      <top>652</top>
       <enemy unit="CULTIST" count="200" />
     </camp>
     <camp>
@@ -156,6 +188,8 @@
       <type>Normal</type>
       <wintime>20</wintime>
       <sector>103</sector>
+      <left>629</left>
+      <top>760</top>
       <enemy unit="CULTIST" count="120" />
       <enemy unit="DARK_PRIEST" count="80" />
     </camp>
@@ -164,6 +198,8 @@
       <type>Boss</type>
       <wintime>20</wintime>
       <sector>103</sector>
+      <left>558</left>
+      <top>840</top>
       <enemy unit="CULTIST" count="70" />
       <enemy unit="SHADOW_SNEAKER" count="70" />
       <enemy unit="DARK_PRIEST" count="60" />
@@ -173,6 +209,8 @@
       <type>Normal</type>
       <wintime>20</wintime>
       <sector>203</sector>
+      <left>1063</left>
+      <top>135</top>
       <enemy unit="CULTIST" count="200" />
     </camp>
     <camp>
@@ -180,6 +218,8 @@
       <type>Normal</type>
       <wintime>20</wintime>
       <sector>203</sector>
+      <left>1194</left>
+      <top>253</top>
       <enemy unit="CULTIST" count="120" />
       <enemy unit="DARK_PRIEST" count="80" />
     </camp>
@@ -188,6 +228,8 @@
       <type>Boss</type>
       <wintime>20</wintime>
       <sector>203</sector>
+      <left>1338</left>
+      <top>340</top>
       <enemy unit="CULTIST" count="50" />
       <enemy unit="SHADOW_SNEAKER" count="50" />
       <enemy unit="DARK_PRIEST" count="100" />
@@ -197,6 +239,8 @@
       <type>Normal</type>
       <wintime>20</wintime>
       <sector>4</sector>
+      <left>675</left>
+      <top>945</top>
       <enemy unit="CULTIST" count="80" />
       <enemy unit="DARK_PRIEST" count="120" />
     </camp>
@@ -205,6 +249,8 @@
       <type>Normal</type>
       <wintime>20</wintime>
       <sector>4</sector>
+      <left>834</left>
+      <top>1010</top>
       <enemy unit="CULTIST" count="100" />
       <enemy unit="DARK_PRIEST" count="100" />
     </camp>
@@ -213,6 +259,8 @@
       <type>Boss</type>
       <wintime>20</wintime>
       <sector>4</sector>
+      <left>890</left>
+      <top>958</top>
       <enemy unit="SHADOW_SNEAKER" count="100" />
       <enemy unit="DARK_PRIEST" count="100" />
     </camp>
@@ -221,6 +269,8 @@
       <type>Normal</type>
       <wintime>20</wintime>
       <sector>104</sector>
+      <left>1470</left>
+      <top>330</top>
       <enemy unit="CULTIST" count="80" />
       <enemy unit="DARK_PRIEST" count="120" />
     </camp>
@@ -229,6 +279,8 @@
       <type>Normal</type>
       <wintime>20</wintime>
       <sector>104</sector>
+      <left>1529</left>
+      <top>460</top>
       <enemy unit="CULTIST" count="50" />
       <enemy unit="DARK_PRIEST" count="150" />
     </camp>
@@ -237,6 +289,8 @@
       <type>Boss</type>
       <wintime>20</wintime>
       <sector>104</sector>
+      <left>1255</left>
+      <top>573</top>
       <enemy unit="CULTIST" count="80" />
       <enemy unit="SHADOW_SNEAKER" count="120" />
     </camp>
@@ -245,6 +299,8 @@
       <type>Normal</type>
       <wintime>20</wintime>
       <sector>5</sector>
+      <left>790</left>
+      <top>855</top>
       <enemy unit="CULTIST" count="200" />
     </camp>
     <camp>
@@ -252,6 +308,8 @@
       <type>Normal</type>
       <wintime>20</wintime>
       <sector>5</sector>
+      <left>715</left>
+      <top>690</top>
       <enemy unit="CULTIST" count="200" />
     </camp>
     <camp>
@@ -259,6 +317,8 @@
       <type>Boss</type>
       <wintime>20</wintime>
       <sector>5</sector>
+      <left>775</left>
+      <top>762</top>
       <enemy unit="CULTIST" count="100" />
       <enemy unit="FANATIC" count="100" />
     </camp>
@@ -267,6 +327,8 @@
       <type>Normal</type>
       <wintime>20</wintime>
       <sector>6</sector>
+      <left>830</left>
+      <top>388</top>
       <enemy unit="CULTIST" count="200" />
     </camp>
     <camp>
@@ -274,6 +336,8 @@
       <type>Normal</type>
       <wintime>20</wintime>
       <sector>6</sector>
+      <left>1250</left>
+      <top>465</top>
       <enemy unit="CULTIST" count="200" />
     </camp>
     <camp>
@@ -281,6 +345,8 @@
       <type>Boss</type>
       <wintime>20</wintime>
       <sector>6</sector>
+      <left>965</left>
+      <top>320</top>
       <enemy unit="CULTIST" count="120" />
       <enemy unit="FANATIC" count="80" />
     </camp>
@@ -289,6 +355,8 @@
       <type>Normal</type>
       <wintime>20</wintime>
       <sector>16</sector>
+      <left>1138</left>
+      <top>625</top>
       <enemy unit="SHADOW_SNEAKER" count="125" />
       <enemy unit="DARK_PRIEST" count="75" />
     </camp>
@@ -297,6 +365,8 @@
       <type>Normal</type>
       <wintime>20</wintime>
       <sector>16</sector>
+      <left>1065</left>
+      <top>598</top>
       <enemy unit="CULTIST" count="60" />
       <enemy unit="SHADOW_SNEAKER" count="70" />
       <enemy unit="DARK_PRIEST" count="70" />
@@ -306,6 +376,8 @@
       <type>Normal</type>
       <wintime>20</wintime>
       <sector>16</sector>
+      <left>1021</left>
+      <top>625</top>
       <enemy unit="SHADOW_SNEAKER" count="50" />
       <enemy unit="DARK_PRIEST" count="150" />
     </camp>
@@ -314,6 +386,8 @@
       <type>Normal</type>
       <wintime>20</wintime>
       <sector>16</sector>
+      <left>977</left>
+      <top>652</top>
       <enemy unit="CULTIST" count="50" />
       <enemy unit="SHADOW_SNEAKER" count="50" />
       <enemy unit="FANATIC" count="50" />
@@ -324,6 +398,8 @@
       <type>Normal</type>
       <wintime>20</wintime>
       <sector>16</sector>
+      <left>1020</left>
+      <top>697</top>
       <enemy unit="CULTIST" count="60" />
       <enemy unit="DARK_PRIEST" count="140" />
     </camp>
@@ -332,6 +408,8 @@
       <type>Normal</type>
       <wintime>20</wintime>
       <sector>16</sector>
+      <left>1092</left>
+      <top>706</top>
       <enemy unit="CULTIST" count="50" />
       <enemy unit="SHADOW_SNEAKER" count="100" />
       <enemy unit="FIRE_DANCER" count="50" />
@@ -341,6 +419,8 @@
       <type>Boss</type>
       <wintime>20</wintime>
       <sector>16</sector>
+      <left>1065</left>
+      <top>653</top>
       <enemy unit="CULTIST" count="50" />
       <enemy unit="SHADOW_SNEAKER" count="49" />
       <enemy unit="DARK_PRIEST" count="100" />
@@ -351,6 +431,8 @@
       <type>Boss</type>
       <wintime>20</wintime>
       <sector>17</sector>
+      <left>1240</left>
+      <top>813</top>
       <enemy unit="CULTIST" count="66" />
       <enemy unit="SWAMP_WITCH" count="1" />
       <enemy unit="DARK_PRIEST" count="66" />
@@ -361,6 +443,8 @@
       <type>Normal</type>
       <wintime>20</wintime>
       <sector>18</sector>
+      <left>1750</left>
+      <top>962</top>
       <enemy unit="CULTIST" count="66" />
       <enemy unit="SHADOW_SNEAKER" count="66" />
       <enemy unit="DARK_PRIEST" count="66" />
@@ -370,6 +454,8 @@
       <type>Boss</type>
       <wintime>20</wintime>
       <sector>18</sector>
+      <left>1778</left>
+      <top>788</top>
       <enemy unit="CULTIST" count="66" />
       <enemy unit="DARK_PRIEST" count="66" />
       <enemy unit="FIRE_DANCER" count="66" />
@@ -379,6 +465,8 @@
       <type>Boss</type>
       <wintime>20</wintime>
       <sector>19</sector>
+      <left>1458</left>
+      <top>680</top>
       <enemy unit="CULTIST" count="66" />
       <enemy unit="FIRE_DANCER" count="66" />
       <enemy unit="DANCING_DERVISH" count="66" />
@@ -389,6 +477,8 @@
       <type>Boss</type>
       <wintime>20</wintime>
       <sector>20</sector>
+      <left>1522</left>
+      <top>810</top>
       <enemy unit="NIGHT_SPAWN" count="2" />
       <enemy unit="SHADOW_SNEAKER" count="66" />
       <enemy unit="FIRE_DANCER" count="66" />

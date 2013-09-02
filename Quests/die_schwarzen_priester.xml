@@ -24,8 +24,8 @@
       <type>Ambush</type>
       <wintime>20</wintime>
       <sector>1</sector>
-      <left>400</left>
-      <top>345</top>
+      <left>700</left>
+      <top>400</top>
       <enemy unit="WOLF" count="50" />
     </camp>
     <camp>
@@ -33,8 +33,8 @@
       <type>Ambush</type>
       <wintime>20</wintime>
       <sector>1</sector>
-      <left>530</left>
-      <top>350</top>
+      <left>1070</left>
+      <top>630</top>
       <enemy unit="WOLF" count="50" />
     </camp>
     <camp>
@@ -42,8 +42,8 @@
       <type>Ambush</type>
       <wintime>20</wintime>
       <sector>1</sector>
-      <left>590</left>
-      <top>320</top>
+      <left>681</left>
+      <top>692</top>
       <enemy unit="WOLF" count="40" />
     </camp>
     <camp>
@@ -51,8 +51,8 @@
       <type>Ambush</type>
       <wintime>20</wintime>
       <sector>1</sector>
-      <left>380</left>
-      <top>190</top>
+      <left>981</left>
+      <top>703</top>
       <enemy unit="WOLF" count="30" />
     </camp>
     <camp>
@@ -60,8 +60,8 @@
       <type>Normal</type>
       <wintime>20</wintime>
       <sector>1</sector>
-      <left>314</left>
-      <top>311</top>
+      <left>578</left>
+      <top>615</top>
       <enemy unit="THUG" count="10" />
       <enemy unit="GUARD_DOG" count="15" />
     </camp>
@@ -70,8 +70,8 @@
       <type>Normal</type>
       <wintime>20</wintime>
       <sector>1</sector>
-      <left>238</left>
-      <top>231</top>
+      <left>435</left>
+      <top>470</top>
       <enemy unit="THUG" count="10" />
       <enemy unit="STONE_THROWER" count="15" />
     </camp>
@@ -80,8 +80,8 @@
       <type>Normal</type>
       <wintime>20</wintime>
       <sector>1</sector>
-      <left>531</left>
-      <top>315</top>
+      <left>970</left>
+      <top>625</top>
       <enemy unit="THUG" count="10" />
       <enemy unit="STONE_THROWER" count="15" />
     </camp>
@@ -90,8 +90,8 @@
       <type>Normal</type>
       <wintime>20</wintime>
       <sector>1</sector>
-      <left>411</left>
-      <top>222</top>
+      <left>753</left>
+      <top>455</top>
       <enemy unit="THUG" count="20" />
       <enemy unit="RANGER" count="10" />
     </camp>
@@ -100,8 +100,8 @@
       <type>Normal</type>
       <wintime>20</wintime>
       <sector>1</sector>
-      <left>464</left>
-      <top>241</top>
+      <left>853</left>
+      <top>480</top>
       <enemy unit="THUG" count="20" />
       <enemy unit="GUARD_DOG" count="10" />
     </camp>
@@ -110,8 +110,8 @@
       <type>Boss</type>
       <wintime>20</wintime>
       <sector>1</sector>
-      <left>464</left>
-      <top>200</top>
+      <left>856</left>
+      <top>410</top>
       <enemy unit="THUG" count="20" />
       <enemy unit="GUARD_DOG" count="20" />
       <enemy unit="RANGER" count="20" />
@@ -122,8 +122,8 @@
       <type>Normal</type>
       <wintime>20</wintime>
       <sector>2</sector>
-      <left>308</left>
-      <top>94</top>
+      <left>565</left>
+      <top>220</top>
       <enemy unit="CULTIST" count="30" />
       <enemy unit="DARK_PRIEST" count="40" />
     </camp>
@@ -132,8 +132,8 @@
       <type>Normal</type>
       <wintime>20</wintime>
       <sector>2</sector>
-      <left>246</left>
-      <top>99</top>
+      <left>450</left>
+      <top>233</top>
       <enemy unit="SHADOW_SNEAKER" count="30" />
       <enemy unit="DARK_PRIEST" count="30" />
     </camp>
@@ -142,8 +142,8 @@
       <type>Normal</type>
       <wintime>20</wintime>
       <sector>2</sector>
-      <left>212</left>
-      <top>131</top>
+      <left>392</left>
+      <top>287</top>
       <enemy unit="CULTIST" count="30" />
       <enemy unit="SHADOW_SNEAKER" count="20" />
       <enemy unit="FIRE_DANCER" count="10" />
@@ -153,8 +153,8 @@
       <type>Boss</type>
       <wintime>120</wintime>
       <sector>2</sector>
-      <left>143</left>
-      <top>143</top>
+      <left>262</left>
+      <top>307</top>
       <enemy unit="CULTIST" count="40" />
       <enemy unit="SWAMP_WITCH" count="1" />
       <enemy unit="SHADOW_SNEAKER" count="20" />
@@ -165,8 +165,8 @@
       <type>Normal</type>
       <wintime>20</wintime>
       <sector>3</sector>
-      <left>748</left>
-      <top>172</top>
+      <left>1378</left>
+      <top>360</top>
       <enemy unit="CULTIST" count="60" />
       <enemy unit="DARK_PRIEST" count="20" />
     </camp>
@@ -175,8 +175,8 @@
       <type>Boss</type>
       <wintime>20</wintime>
       <sector>3</sector>
-      <left>755</left>
-      <top>117</top>
+      <left>1390</left>
+      <top>260</top>
       <enemy unit="CULTIST" count="25" />
       <enemy unit="SHADOW_SNEAKER" count="25" />
       <enemy unit="FANATIC" count="30" />
@@ -187,8 +187,8 @@
       <type>Boss</type>
       <wintime>20</wintime>
       <sector>4</sector>
-      <left>589</left>
-      <top>92</top>
+      <left>1087</left>
+      <top>217</top>
       <enemy unit="SHADOW_SNEAKER" count="30" />
       <enemy unit="FANATIC" count="50" />
       <enemy unit="FIRE_DANCER" count="10" />
@@ -198,8 +198,8 @@
       <type>Normal</type>
       <wintime>20</wintime>
       <sector>4</sector>
-      <left>567</left>
-      <top>137</top>
+      <left>1044</left>
+      <top>293</top>
       <enemy unit="SHADOW_SNEAKER" count="30" />
       <enemy unit="DARK_PRIEST" count="40" />
     </camp>
@@ -208,8 +208,8 @@
       <type>Boss</type>
       <wintime>120</wintime>
       <sector>5</sector>
-      <left>683</left>
-      <top>65</top>
+      <left>1260</left>
+      <top>180</top>
       <enemy unit="CULTIST" count="40" />
       <enemy unit="SHADOW_SNEAKER" count="40" />
       <enemy unit="DARK_PRIEST" count="40" />

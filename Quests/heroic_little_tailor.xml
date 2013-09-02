@@ -22,8 +22,5 @@
     <enemy>BLACK_BULL</enemy>
     <enemy>DARK_WIZARD</enemy>
   </enemies>
-  <camps>
-  </camps>
+  <camps />
 </quest>
-
-

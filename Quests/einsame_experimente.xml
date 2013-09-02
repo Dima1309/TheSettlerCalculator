@@ -19,14 +19,18 @@
       <type>Normal</type>
       <wintime>20</wintime>
       <sector>1</sector>
+      <left>268</left>
+      <top>326</top>
       <enemy unit="SABER_RATTLER" count="100" />
       <enemy unit="GUNMAN" count="100" />
     </camp>
     <camp>
       <name>2</name>
-      <type>Boss</type>
+      <type>Normal</type>
       <wintime>20</wintime>
       <sector>1</sector>
+      <left>315</left>
+      <top>400</top>
       <enemy unit="CALTROP" count="150" />
       <enemy unit="PETTY_OFFICER_2ND_CLASS" count="100" />
     </camp>
@@ -35,6 +39,8 @@
       <type>Boss</type>
       <wintime>20</wintime>
       <sector>1</sector>
+      <left>294</left>
+      <top>430</top>
       <enemy unit="CRAZY_COOK" count="1" />
       <enemy unit="GUNMAN" count="50" />
       <enemy unit="PETTY_OFFICER_2ND_CLASS" count="100" />
@@ -43,23 +49,29 @@
       <name>4</name>
       <type>Normal</type>
       <wintime>20</wintime>
-      <sector>1</sector>
+      <sector>101</sector>
+      <left>440</left>
+      <top>220</top>
       <enemy unit="SABER_RATTLER" count="100" />
       <enemy unit="GUNMAN" count="100" />
     </camp>
     <camp>
       <name>5</name>
-      <type>Boss</type>
+      <type>Normal</type>
       <wintime>20</wintime>
-      <sector>1</sector>
+      <sector>101</sector>
+      <left>572</left>
+      <top>228</top>
       <enemy unit="CALTROP" count="150" />
       <enemy unit="PETTY_OFFICER_2ND_CLASS" count="100" />
     </camp>
     <camp>
       <name>6</name>
-      <type>Normal</type>
+      <type>Boss</type>
       <wintime>20</wintime>
-      <sector>1</sector>
+      <sector>101</sector>
+      <left>582</left>
+      <top>265</top>
       <enemy unit="CRAZY_COOK" count="1" />
       <enemy unit="GUNMAN" count="50" />
       <enemy unit="PETTY_OFFICER_2ND_CLASS" count="100" />
@@ -69,6 +81,8 @@
       <type>Normal</type>
       <wintime>20</wintime>
       <sector>2</sector>
+      <left>742</left>
+      <top>272</top>
       <enemy unit="GUNMAN" count="100" />
       <enemy unit="PETTY_OFFICER_2ND_CLASS" count="100" />
     </camp>
@@ -77,6 +91,8 @@
       <type>Normal</type>
       <wintime>20</wintime>
       <sector>2</sector>
+      <left>890</left>
+      <top>226</top>
       <enemy unit="CALTROP" count="100" />
       <enemy unit="GUNMAN" count="150" />
     </camp>
@@ -85,6 +101,8 @@
       <type>Boss</type>
       <wintime>20</wintime>
       <sector>2</sector>
+      <left>780</left>
+      <top>190</top>
       <enemy unit="CALTROP" count="50" />
       <enemy unit="CRAZY_COOK" count="1" />
       <enemy unit="GUNMAN" count="50" />
@@ -94,7 +112,9 @@
       <name>10</name>
       <type>Normal</type>
       <wintime>20</wintime>
-      <sector>2</sector>
+      <sector>201</sector>
+      <left>622</left>
+      <top>377</top>
       <enemy unit="GUNMAN" count="100" />
       <enemy unit="PETTY_OFFICER_2ND_CLASS" count="100" />
     </camp>
@@ -102,7 +122,9 @@
       <name>11</name>
       <type>Normal</type>
       <wintime>20</wintime>
-      <sector>2</sector>
+      <sector>201</sector>
+      <left>523</left>
+      <top>453</top>
       <enemy unit="CALTROP" count="50" />
       <enemy unit="GUNMAN" count="150" />
     </camp>
@@ -110,7 +132,9 @@
       <name>12</name>
       <type>Boss</type>
       <wintime>20</wintime>
-      <sector>2</sector>
+      <sector>201</sector>
+      <left>658</left>
+      <top>460</top>
       <enemy unit="CALTROP" count="50" />
       <enemy unit="CRAZY_COOK" count="1" />
       <enemy unit="GUNMAN" count="50" />
@@ -120,7 +144,9 @@
       <name>13</name>
       <type>Normal</type>
       <wintime>20</wintime>
-      <sector>2</sector>
+      <sector>201</sector>
+      <left>510</left>
+      <top>535</top>
       <enemy unit="CALTROP" count="100" />
       <enemy unit="PETTY_OFFICER_2ND_CLASS" count="100" />
     </camp>
@@ -129,6 +155,8 @@
       <type>Normal</type>
       <wintime>20</wintime>
       <sector>3</sector>
+      <left>352</left>
+      <top>602</top>
       <enemy unit="PETTY_OFFICER_2ND_CLASS" count="110" />
     </camp>
     <camp>
@@ -136,6 +164,8 @@
       <type>Boss</type>
       <wintime>20</wintime>
       <sector>3</sector>
+      <left>255</left>
+      <top>602</top>
       <enemy unit="CRAZY_COOK" count="2" />
       <enemy unit="GUNMAN" count="50" />
       <enemy unit="PETTY_OFFICER_2ND_CLASS" count="50" />
@@ -145,6 +175,8 @@
       <type>Normal</type>
       <wintime>20</wintime>
       <sector>3</sector>
+      <left>207</left>
+      <top>618</top>
       <enemy unit="SABER_RATTLER" count="100" />
       <enemy unit="PETTY_OFFICER_2ND_CLASS" count="50" />
     </camp>
@@ -153,6 +185,8 @@
       <type>Normal</type>
       <wintime>20</wintime>
       <sector>3</sector>
+      <left>75</left>
+      <top>685</top>
       <enemy unit="GUNMAN" count="200" />
     </camp>
     <camp>
@@ -160,6 +194,8 @@
       <type>Normal</type>
       <wintime>20</wintime>
       <sector>3</sector>
+      <left>222</left>
+      <top>776</top>
       <enemy unit="CALTROP" count="50" />
       <enemy unit="GUNMAN" count="150" />
     </camp>
@@ -168,6 +204,8 @@
       <type>Normal</type>
       <wintime>20</wintime>
       <sector>3</sector>
+      <left>232</left>
+      <top>705</top>
       <enemy unit="SABER_RATTLER" count="100" />
       <enemy unit="GUNMAN" count="100" />
     </camp>
@@ -176,6 +214,8 @@
       <type>Normal</type>
       <wintime>20</wintime>
       <sector>3</sector>
+      <left>378</left>
+      <top>767</top>
       <enemy unit="CALTROP" count="100" />
       <enemy unit="GUNMAN" count="50" />
       <enemy unit="PETTY_OFFICER_2ND_CLASS" count="50" />
@@ -185,6 +225,8 @@
       <type>Normal</type>
       <wintime>20</wintime>
       <sector>3</sector>
+      <left>390</left>
+      <top>670</top>
       <enemy unit="SABER_RATTLER" count="200" />
     </camp>
     <camp>
@@ -192,6 +234,8 @@
       <type>Boss</type>
       <wintime>20</wintime>
       <sector>3</sector>
+      <left>462</left>
+      <top>639</top>
       <enemy unit="SABER_RATTLER" count="100" />
       <enemy unit="CRAZY_COOK" count="2" />
       <enemy unit="PETTY_OFFICER_2ND_CLASS" count="50" />
@@ -201,6 +245,8 @@
       <type>Normal</type>
       <wintime>20</wintime>
       <sector>3</sector>
+      <left>462</left>
+      <top>714</top>
       <enemy unit="GUNMAN" count="100" />
       <enemy unit="PETTY_OFFICER_2ND_CLASS" count="50" />
     </camp>
@@ -209,6 +255,8 @@
       <type>Normal</type>
       <wintime>20</wintime>
       <sector>3</sector>
+      <left>512</left>
+      <top>790</top>
       <enemy unit="CALTROP" count="50" />
       <enemy unit="GUNMAN" count="150" />
     </camp>
@@ -217,6 +265,8 @@
       <type>Normal</type>
       <wintime>20</wintime>
       <sector>3</sector>
+      <left>425</left>
+      <top>859</top>
       <enemy unit="CALTROP" count="100" />
       <enemy unit="PETTY_OFFICER_2ND_CLASS" count="75" />
     </camp>
@@ -225,6 +275,8 @@
       <type>Boss</type>
       <wintime>20</wintime>
       <sector>3</sector>
+      <left>292</left>
+      <top>850</top>
       <enemy unit="CRAZY_COOK" count="3" />
       <enemy unit="GUNMAN" count="50" />
       <enemy unit="PETTY_OFFICER_2ND_CLASS" count="50" />
@@ -234,6 +286,8 @@
       <type>Normal</type>
       <wintime>20</wintime>
       <sector>4</sector>
+      <left>890</left>
+      <top>482</top>
       <enemy unit="CALTROP" count="50" />
       <enemy unit="PETTY_OFFICER_2ND_CLASS" count="100" />
     </camp>
@@ -242,6 +296,8 @@
       <type>Normal</type>
       <wintime>20</wintime>
       <sector>4</sector>
+      <left>863</left>
+      <top>392</top>
       <enemy unit="SABER_RATTLER" count="200" />
     </camp>
     <camp>
@@ -249,6 +305,8 @@
       <type>Boss</type>
       <wintime>20</wintime>
       <sector>4</sector>
+      <left>950</left>
+      <top>415</top>
       <enemy unit="CRAZY_COOK" count="3" />
       <enemy unit="GUNMAN" count="150" />
     </camp>
@@ -257,6 +315,8 @@
       <type>Normal</type>
       <wintime>20</wintime>
       <sector>4</sector>
+      <left>1024</left>
+      <top>400</top>
       <enemy unit="DECKSCRUBBER" count="50" />
       <enemy unit="PETTY_OFFICER_2ND_CLASS" count="100" />
     </camp>
@@ -265,6 +325,8 @@
       <type>Normal</type>
       <wintime>20</wintime>
       <sector>4</sector>
+      <left>985</left>
+      <top>335</top>
       <enemy unit="CALTROP" count="50" />
       <enemy unit="GUNMAN" count="50" />
       <enemy unit="PETTY_OFFICER_2ND_CLASS" count="75" />
@@ -274,6 +336,8 @@
       <type>Normal</type>
       <wintime>20</wintime>
       <sector>5</sector>
+      <left>1058</left>
+      <top>260</top>
       <enemy unit="SABER_RATTLER" count="100" />
       <enemy unit="GUNMAN" count="100" />
     </camp>
@@ -282,6 +346,8 @@
       <type>Normal</type>
       <wintime>20</wintime>
       <sector>5</sector>
+      <left>998</left>
+      <top>190</top>
       <enemy unit="DECKSCRUBBER" count="50" />
       <enemy unit="SABER_RATTLER" count="50" />
       <enemy unit="PETTY_OFFICER_2ND_CLASS" count="75" />
@@ -291,6 +357,8 @@
       <type>Normal</type>
       <wintime>20</wintime>
       <sector>5</sector>
+      <left>1120</left>
+      <top>190</top>
       <enemy unit="DECKSCRUBBER" count="50" />
       <enemy unit="GUNMAN" count="50" />
       <enemy unit="PETTY_OFFICER_2ND_CLASS" count="75" />
@@ -300,6 +368,8 @@
       <type>Boss</type>
       <wintime>20</wintime>
       <sector>5</sector>
+      <left>1130</left>
+      <top>110</top>
       <enemy unit="CALTROP" count="75" />
       <enemy unit="CRAZY_COOK" count="1" />
       <enemy unit="PETTY_OFFICER_2ND_CLASS" count="100" />
@@ -309,6 +379,8 @@
       <type>Normal</type>
       <wintime>20</wintime>
       <sector>6</sector>
+      <left>1241</left>
+      <top>294</top>
       <enemy unit="SABER_RATTLER" count="75" />
       <enemy unit="PETTY_OFFICER_2ND_CLASS" count="75" />
     </camp>
@@ -317,6 +389,8 @@
       <type>Normal</type>
       <wintime>20</wintime>
       <sector>6</sector>
+      <left>1385</left>
+      <top>264</top>
       <enemy unit="DECKSCRUBBER" count="100" />
       <enemy unit="PETTY_OFFICER_2ND_CLASS" count="75" />
     </camp>
@@ -325,6 +399,8 @@
       <type>Normal</type>
       <wintime>20</wintime>
       <sector>6</sector>
+      <left>1438</left>
+      <top>160</top>
       <enemy unit="CALTROP" count="100" />
       <enemy unit="PETTY_OFFICER_2ND_CLASS" count="75" />
     </camp>
@@ -333,6 +409,8 @@
       <type>Boss</type>
       <wintime>20</wintime>
       <sector>6</sector>
+      <left>1436</left>
+      <top>100</top>
       <enemy unit="SABER_RATTLER" count="50" />
       <enemy unit="CRAZY_COOK" count="1" />
       <enemy unit="PETTY_OFFICER_2ND_CLASS" count="100" />
@@ -342,6 +420,8 @@
       <type>Normal</type>
       <wintime>20</wintime>
       <sector>6</sector>
+      <left>1400</left>
+      <top>378</top>
       <enemy unit="SABER_RATTLER" count="75" />
       <enemy unit="PETTY_OFFICER_2ND_CLASS" count="75" />
     </camp>
@@ -350,6 +430,8 @@
       <type>Boss</type>
       <wintime>20</wintime>
       <sector>6</sector>
+      <left>1485</left>
+      <top>430</top>
       <enemy unit="CALTROP" count="100" />
       <enemy unit="PETTY_OFFICER_2ND_CLASS" count="75" />
       <enemy unit="UPROARIOUS_BULL" count="2" />
@@ -359,6 +441,8 @@
       <type>Normal</type>
       <wintime>20</wintime>
       <sector>6</sector>
+      <left>1424</left>
+      <top>500</top>
       <enemy unit="GUNMAN" count="200" />
     </camp>
     <camp>
@@ -366,6 +450,8 @@
       <type>Boss</type>
       <wintime>20</wintime>
       <sector>6</sector>
+      <left>1290</left>
+      <top>371</top>
       <enemy unit="SABER_RATTLER" count="100" />
       <enemy unit="CRAZY_COOK" count="2" />
       <enemy unit="GUNMAN" count="100" />
@@ -375,6 +461,8 @@
       <type>Normal</type>
       <wintime>20</wintime>
       <sector>6</sector>
+      <left>1120</left>
+      <top>430</top>
       <enemy unit="SABER_RATTLER" count="200" />
     </camp>
     <camp>
@@ -382,6 +470,8 @@
       <type>Normal</type>
       <wintime>20</wintime>
       <sector>6</sector>
+      <left>1239</left>
+      <top>474</top>
       <enemy unit="PETTY_OFFICER_2ND_CLASS" count="125" />
     </camp>
     <camp>
@@ -389,6 +479,8 @@
       <type>Boss</type>
       <wintime>20</wintime>
       <sector>7</sector>
+      <left>692</left>
+      <top>615</top>
       <enemy unit="SABER_RATTLER" count="150" />
       <enemy unit="CRAZY_COOK" count="3" />
     </camp>
@@ -397,6 +489,8 @@
       <type>Normal</type>
       <wintime>20</wintime>
       <sector>7</sector>
+      <left>1048</left>
+      <top>595</top>
       <enemy unit="CALTROP" count="50" />
       <enemy unit="GUNMAN" count="150" />
     </camp>
@@ -405,6 +499,8 @@
       <type>Boss</type>
       <wintime>20</wintime>
       <sector>7</sector>
+      <left>913</left>
+      <top>662</top>
       <enemy unit="CRAZY_COOK" count="1" />
       <enemy unit="GUNMAN" count="50" />
       <enemy unit="PETTY_OFFICER_2ND_CLASS" count="125" />
@@ -414,6 +510,8 @@
       <type>Normal</type>
       <wintime>20</wintime>
       <sector>7</sector>
+      <left>864</left>
+      <top>678</top>
       <enemy unit="CALTROP" count="50" />
       <enemy unit="PETTY_OFFICER_2ND_CLASS" count="100" />
     </camp>
@@ -422,6 +520,8 @@
       <type>Normal</type>
       <wintime>20</wintime>
       <sector>7</sector>
+      <left>790</left>
+      <top>795</top>
       <enemy unit="SABER_RATTLER" count="50" />
       <enemy unit="PETTY_OFFICER_2ND_CLASS" count="100" />
     </camp>
@@ -430,6 +530,8 @@
       <type>Boss</type>
       <wintime>20</wintime>
       <sector>7</sector>
+      <left>730</left>
+      <top>850</top>
       <enemy unit="CALTROP" count="50" />
       <enemy unit="CRAZY_COOK" count="1" />
       <enemy unit="PETTY_OFFICER_2ND_CLASS" count="125" />
@@ -439,6 +541,8 @@
       <type>Normal</type>
       <wintime>20</wintime>
       <sector>7</sector>
+      <left>683</left>
+      <top>803</top>
       <enemy unit="GUNMAN" count="50" />
       <enemy unit="PETTY_OFFICER_2ND_CLASS" count="100" />
     </camp>
@@ -447,6 +551,8 @@
       <type>Normal</type>
       <wintime>20</wintime>
       <sector>7</sector>
+      <left>792</left>
+      <top>902</top>
       <enemy unit="CALTROP" count="50" />
       <enemy unit="GUNMAN" count="50" />
       <enemy unit="PETTY_OFFICER_2ND_CLASS" count="75" />
@@ -456,6 +562,8 @@
       <type>Normal</type>
       <wintime>20</wintime>
       <sector>7</sector>
+      <left>998</left>
+      <top>774</top>
       <enemy unit="DECKSCRUBBER" count="100" />
       <enemy unit="SABER_RATTLER" count="100" />
     </camp>
@@ -464,6 +572,8 @@
       <type>Normal</type>
       <wintime>20</wintime>
       <sector>7</sector>
+      <left>1058</left>
+      <top>856</top>
       <enemy unit="SABER_RATTLER" count="75" />
       <enemy unit="GUNMAN" count="75" />
       <enemy unit="UPROARIOUS_BULL" count="2" />
@@ -473,6 +583,8 @@
       <type>Normal</type>
       <wintime>20</wintime>
       <sector>7</sector>
+      <left>1144</left>
+      <top>804</top>
       <enemy unit="SABER_RATTLER" count="50" />
       <enemy unit="PETTY_OFFICER_2ND_CLASS" count="75" />
     </camp>
@@ -481,6 +593,8 @@
       <type>Normal</type>
       <wintime>20</wintime>
       <sector>8</sector>
+      <left>1265</left>
+      <top>760</top>
       <enemy unit="GUNMAN" count="75" />
       <enemy unit="PETTY_OFFICER_2ND_CLASS" count="75" />
     </camp>
@@ -489,6 +603,8 @@
       <type>Normal</type>
       <wintime>20</wintime>
       <sector>8</sector>
+      <left>1303</left>
+      <top>618</top>
       <enemy unit="GUNMAN" count="75" />
       <enemy unit="PETTY_OFFICER_2ND_CLASS" count="75" />
     </camp>
@@ -497,6 +613,8 @@
       <type>Normal</type>
       <wintime>20</wintime>
       <sector>8</sector>
+      <left>1328</left>
+      <top>750</top>
       <enemy unit="SABER_RATTLER" count="200" />
     </camp>
     <camp>
@@ -504,6 +622,8 @@
       <type>Boss</type>
       <wintime>20</wintime>
       <sector>8</sector>
+      <left>1362</left>
+      <top>744</top>
       <enemy unit="SABER_RATTLER" count="125" />
       <enemy unit="GUNMAN" count="50" />
       <enemy unit="UPROARIOUS_BULL" count="2" />
@@ -513,6 +633,8 @@
       <type>Normal</type>
       <wintime>20</wintime>
       <sector>8</sector>
+      <left>1363</left>
+      <top>670</top>
       <enemy unit="PETTY_OFFICER_2ND_CLASS" count="100" />
     </camp>
     <camp>
@@ -520,13 +642,17 @@
       <type>Normal</type>
       <wintime>20</wintime>
       <sector>8</sector>
-      <enemy unit="GUNMAN" count="100" />
+      <left>1484</left>
+      <top>668</top>
+      <enemy unit="GUNMAN" count="200" />
     </camp>
     <camp>
       <name>63</name>
       <type>Boss</type>
       <wintime>20</wintime>
       <sector>8</sector>
+      <left>1400</left>
+      <top>693</top>
       <enemy unit="CRAZY_COOK" count="3" />
       <enemy unit="GUNMAN" count="50" />
       <enemy unit="PETTY_OFFICER_2ND_CLASS" count="125" />

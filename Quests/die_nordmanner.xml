@@ -18,6 +18,8 @@
       <type>Ambush</type>
       <wintime>20</wintime>
       <sector>1</sector>
+      <left>337</left>
+      <top>618</top>
       <enemy unit="WOLF" count="150" />
     </camp>
     <camp>
@@ -25,6 +27,8 @@
       <type>Normal</type>
       <wintime>20</wintime>
       <sector>1</sector>
+      <left>231</left>
+      <top>695</top>
       <enemy unit="KARL" count="100" />
       <enemy unit="VALKYRIE" count="50" />
     </camp>
@@ -33,6 +37,8 @@
       <type>Normal</type>
       <wintime>20</wintime>
       <sector>1</sector>
+      <left>175</left>
+      <top>610</top>
       <enemy unit="KARL" count="50" />
       <enemy unit="VALKYRIE" count="75" />
     </camp>
@@ -41,6 +47,8 @@
       <type>Normal</type>
       <wintime>20</wintime>
       <sector>1</sector>
+      <left>273</left>
+      <top>527</top>
       <enemy unit="HOUSECARL" count="50" />
       <enemy unit="THRALL" count="100" />
     </camp>
@@ -49,6 +57,8 @@
       <type>Normal</type>
       <wintime>20</wintime>
       <sector>1</sector>
+      <left>345</left>
+      <top>375</top>
       <enemy unit="HOUSECARL" count="50" />
       <enemy unit="THRALL" count="50" />
       <enemy unit="VALKYRIE" count="25" />
@@ -58,6 +68,8 @@
       <type>Boss</type>
       <wintime>20</wintime>
       <sector>1</sector>
+      <left>505</left>
+      <top>345</top>
       <enemy unit="HOUSECARL" count="75" />
       <enemy unit="VALKYRIE" count="50" />
       <enemy unit="BERSERK" count="5" />
@@ -67,6 +79,8 @@
       <type>Normal</type>
       <wintime>20</wintime>
       <sector>1</sector>
+      <left>505</left>
+      <top>440</top>
       <enemy unit="HOUSECARL" count="50" />
       <enemy unit="THRALL" count="50" />
       <enemy unit="VALKYRIE" count="25" />
@@ -76,6 +90,8 @@
       <type>Normal</type>
       <wintime>20</wintime>
       <sector>1</sector>
+      <left>476</left>
+      <top>545</top>
       <enemy unit="HOUSECARL" count="50" />
       <enemy unit="THRALL" count="100" />
     </camp>
@@ -84,6 +100,8 @@
       <type>Normal</type>
       <wintime>20</wintime>
       <sector>1</sector>
+      <left>578</left>
+      <top>625</top>
       <enemy unit="KARL" count="50" />
       <enemy unit="VALKYRIE" count="75" />
     </camp>
@@ -92,6 +110,8 @@
       <type>Normal</type>
       <wintime>20</wintime>
       <sector>1</sector>
+      <left>505</left>
+      <top>722</top>
       <enemy unit="KARL" count="100" />
       <enemy unit="VALKYRIE" count="50" />
     </camp>
@@ -100,6 +120,8 @@
       <type>Normal</type>
       <wintime>20</wintime>
       <sector>2</sector>
+      <left>810</left>
+      <top>285</top>
       <enemy unit="KARL" count="150" />
     </camp>
     <camp>
@@ -107,6 +129,8 @@
       <type>Normal</type>
       <wintime>20</wintime>
       <sector>2</sector>
+      <left>840</left>
+      <top>375</top>
       <enemy unit="HOUSECARL" count="50" />
       <enemy unit="KARL" count="75" />
     </camp>
@@ -115,6 +139,8 @@
       <type>Normal</type>
       <wintime>20</wintime>
       <sector>2</sector>
+      <left>998</left>
+      <top>365</top>
       <enemy unit="HOUSECARL" count="75" />
       <enemy unit="KARL" count="30" />
     </camp>
@@ -123,6 +149,8 @@
       <type>Normal</type>
       <wintime>20</wintime>
       <sector>2</sector>
+      <left>895</left>
+      <top>465</top>
       <enemy unit="HOUSECARL" count="50" />
       <enemy unit="KARL" count="50" />
       <enemy unit="VALKYRIE" count="50" />
@@ -132,6 +160,8 @@
       <type>Normal</type>
       <wintime>20</wintime>
       <sector>2</sector>
+      <left>852</left>
+      <top>560</top>
       <enemy unit="HOUSECARL" count="50" />
       <enemy unit="VALKYRIE" count="50" />
     </camp>
@@ -140,6 +170,8 @@
       <type>Boss</type>
       <wintime>20</wintime>
       <sector>2</sector>
+      <left>912</left>
+      <top>595</top>
       <enemy unit="JOMVIKING" count="10" />
       <enemy unit="HOUSECARL" count="100" />
       <enemy unit="VALKYRIE" count="50" />
@@ -149,6 +181,8 @@
       <type>Normal</type>
       <wintime>20</wintime>
       <sector>3</sector>
+      <left>895</left>
+      <top>695</top>
       <enemy unit="HOUSECARL" count="50" />
       <enemy unit="KARL" count="75" />
     </camp>
@@ -157,6 +191,8 @@
       <type>Normal</type>
       <wintime>20</wintime>
       <sector>3</sector>
+      <left>1013</left>
+      <top>748</top>
       <enemy unit="HOUSECARL" count="75" />
       <enemy unit="VALKYRIE" count="50" />
     </camp>
@@ -165,6 +201,8 @@
       <type>Normal</type>
       <wintime>20</wintime>
       <sector>3</sector>
+      <left>1070</left>
+      <top>803</top>
       <enemy unit="HOUSECARL" count="100" />
     </camp>
     <camp>
@@ -172,6 +210,8 @@
       <type>Normal</type>
       <wintime>20</wintime>
       <sector>3</sector>
+      <left>1172</left>
+      <top>810</top>
       <enemy unit="VALKYRIE" count="75" />
     </camp>
     <camp>
@@ -179,6 +219,8 @@
       <type>Normal</type>
       <wintime>20</wintime>
       <sector>3</sector>
+      <left>1215</left>
+      <top>853</top>
       <enemy unit="HOUSECARL" count="75" />
     </camp>
     <camp>
@@ -186,6 +228,8 @@
       <type>Boss</type>
       <wintime>20</wintime>
       <sector>3</sector>
+      <left>1217</left>
+      <top>816</top>
       <enemy unit="JOMVIKING" count="20" />
       <enemy unit="HOUSECARL" count="50" />
       <enemy unit="VALKYRIE" count="50" />
@@ -196,6 +240,8 @@
       <type>Normal</type>
       <wintime>20</wintime>
       <sector>4</sector>
+      <left>1445</left>
+      <top>748</top>
       <enemy unit="HOUSECARL" count="50" />
       <enemy unit="VALKYRIE" count="25" />
     </camp>
@@ -204,6 +250,8 @@
       <type>Normal</type>
       <wintime>20</wintime>
       <sector>4</sector>
+      <left>1417</left>
+      <top>590</top>
       <enemy unit="HOUSECARL" count="75" />
       <enemy unit="KARL" count="50" />
     </camp>
@@ -212,6 +260,8 @@
       <type>Normal</type>
       <wintime>20</wintime>
       <sector>4</sector>
+      <left>1432</left>
+      <top>490</top>
       <enemy unit="HOUSECARL" count="120" />
     </camp>
     <camp>
@@ -219,6 +269,8 @@
       <type>Boss</type>
       <wintime>20</wintime>
       <sector>4</sector>
+      <left>1403</left>
+      <top>455</top>
       <enemy unit="JOMVIKING" count="20" />
       <enemy unit="HOUSECARL" count="100" />
       <enemy unit="KARL" count="50" />
@@ -229,6 +281,8 @@
       <type>Normal</type>
       <wintime>20</wintime>
       <sector>5</sector>
+      <left>1563</left>
+      <top>200</top>
       <enemy unit="HOUSECARL" count="150" />
     </camp>
     <camp>
@@ -236,6 +290,8 @@
       <type>Normal</type>
       <wintime>20</wintime>
       <sector>5</sector>
+      <left>1535</left>
+      <top>160</top>
       <enemy unit="VALKYRIE" count="150" />
     </camp>
     <camp>
@@ -243,6 +299,8 @@
       <type>Normal</type>
       <wintime>20</wintime>
       <sector>5</sector>
+      <left>1620</left>
+      <top>195</top>
       <enemy unit="KARL" count="150" />
     </camp>
     <camp>
@@ -250,6 +308,8 @@
       <type>Boss</type>
       <wintime>20</wintime>
       <sector>5</sector>
+      <left>1592</left>
+      <top>160</top>
       <enemy unit="JOMVIKING" count="50" />
       <enemy unit="HOUSECARL" count="120" />
       <enemy unit="BERSERK" count="30" />
