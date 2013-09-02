@@ -2,7 +2,8 @@
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="Карта приключения" 
-        xmlns:src="clr-namespace:TheSettlersCalculator.WpfTypes" xmlns:Converters="clr-namespace:TheSettlersCalculator.WpfTypes.Converters" xmlns:System="clr-namespace:System;assembly=mscorlib" xmlns:Types="clr-namespace:TheSettlersCalculator.Types" SizeToContent="WidthAndHeight"
+        xmlns:src="clr-namespace:TheSettlersCalculator.WpfTypes" xmlns:Converters="clr-namespace:TheSettlersCalculator.WpfTypes.Converters" xmlns:System="clr-namespace:System;assembly=mscorlib" xmlns:Types="clr-namespace:TheSettlersCalculator.Types"
+        xmlns:Components="clr-namespace:TheSettlersCalculator.WpfTypes.Components" SizeToContent="WidthAndHeight"
         x:Name="Win" Loaded="Win_Loaded" KeyDown="Win_KeyDown" WindowStartupLocation="CenterScreen">
     <Window.Resources>
         <Converters:BoolVisibilityConverter x:Key="boolVisibilityConverter" />
@@ -61,21 +62,7 @@
                             <Expander.Header>
                                 <StackPanel Orientation="Horizontal">
                                     <Label Name="lblCampTitle" Content="{Binding Name}" FontWeight="Bold" VerticalAlignment="Center" Margin="0,0,15,0" />
-                                    <ItemsControl ItemsSource="{Binding Squads}">
-                                        <ItemsControl.ItemsPanel>
-                                            <ItemsPanelTemplate>
-                                                <StackPanel Orientation="Horizontal" />
-                                            </ItemsPanelTemplate>
-                                        </ItemsControl.ItemsPanel>
-                                        <ItemsControl.ItemTemplate>
-                                            <DataTemplate>
-                                                <StackPanel Orientation="Horizontal">
-                                                    <Image Width="30" Height="30" Grid.Column="0" Source="{Binding Icon}"></Image>
-                                                    <Label Grid.Column="1" Content="{Binding Count}" />
-                                                </StackPanel>
-                                            </DataTemplate>
-                                        </ItemsControl.ItemTemplate>
-                                    </ItemsControl>
+                                    <Components:SquadsViewControl Squads="{Binding Squads}"></Components:SquadsViewControl>                                    
                                 </StackPanel>
                             </Expander.Header>
                             <StackPanel Orientation="Vertical">
@@ -141,10 +128,7 @@
                                                     <ComboBox Grid.Column="0" Margin="0,5" ItemsSource="{Binding Units, ElementName=Win}" SelectedValue="{Binding Unit}">
                                                         <ComboBox.ItemTemplate>
                                                             <DataTemplate>
-                                                                <StackPanel Orientation="Horizontal">
-                                                                    <Image Width="30" Height="30" Source="{Binding Icon}"></Image>
-                                                                    <Label Content="{Binding Name}" />
-                                                                </StackPanel>
+                                                                <Components:UnitViewControl></Components:UnitViewControl>
                                                             </DataTemplate>
                                                         </ComboBox.ItemTemplate>
                                                     </ComboBox>

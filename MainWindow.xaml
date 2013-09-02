@@ -5,7 +5,8 @@
         xmlns:src="clr-namespace:TheSettlersCalculator.WpfTypes" 
         xmlns:types="clr-namespace:TheSettlersCalculator.Types"
         xmlns:Converters="clr-namespace:TheSettlersCalculator.WpfTypes.Converters"
-        xmlns:System="clr-namespace:System;assembly=mscorlib" Title="MainWindow" Height="640" Width="800" x:Name="Win" Closed="Win_Closed">
+        xmlns:System="clr-namespace:System;assembly=mscorlib"
+        xmlns:Components="clr-namespace:TheSettlersCalculator.WpfTypes.Components" Title="MainWindow" Height="640" Width="800" x:Name="Win" Closed="Win_Closed">
 	<Window.Resources>
         <ObjectDataProvider x:Key="serverTypeEnum" MethodName="GetValues" ObjectType="{x:Type System:Enum}">
             <ObjectDataProvider.MethodParameters>
@@ -24,9 +25,6 @@
         <Converters:ServerTypeConverter x:Key="serverTypeConverter" />
         <Converters:CampTypeBrushConverter x:Key="campTypeConverter" />
 		<Converters:TowerBonusConverter x:Key="towerBonusConverter" />
-		<Converters:BoolVisibilityConverter x:Key="boolVisibilityConverter" />
-		<Converters:ByteVisibilityConverter x:Key="byteVisibilityConverter" />
-		<Converters:AttackPriorityVisibilityConverter x:Key="attackPriorityVisibilityConverter" />
 		<Converters:IntVisibilityConverter x:Key="intVisibilityConverter" />
 		<Converters:IntNegativeVisibilityConverter x:Key="intNegativeVisibilityConverter" />
 		<Converters:AttackPriorityStringConverter x:Key="attackPriorityStringConverter" />
@@ -37,47 +35,12 @@
 		<Converters:ObjectToBooleanConverter x:Key="objectToBooleanConverter" />
 		<Converters:SecondsToStringConverter x:Key="secondsToStringConverter" />
 		<Converters:BattleTimeConverter x:Key="battleTimeConverter" />
-		<StackPanel Orientation="Vertical" x:Key="UnitTooltipTemplate">
-			<Label Content="{Binding Unit.Name}" FontWeight="Bold"></Label>
-			<StackPanel Orientation="Horizontal">
-				<Label Content="Здоровье"></Label>
-				<Label Content="{Binding Unit.Health}"></Label>
-			</StackPanel>
-			<StackPanel Orientation="Horizontal">
-				<Label Content="Мин. урон"></Label>
-				<Label Content="{Binding Unit.MinDamage}"></Label>
-			</StackPanel>
-			<StackPanel Orientation="Horizontal">
-				<Label Content="Макс. урон"></Label>
-				<Label Content="{Binding Unit.MaxDamage}"></Label>
-			</StackPanel>
-			<StackPanel Orientation="Horizontal">
-				<Label Content="Точность"></Label>
-				<Label Content="{Binding Unit.Accuracy}"></Label>
-			</StackPanel>
-			<StackPanel Visibility="{Binding IgnoreTowerBonus}" Orientation="Horizontal">
-				<Label Content="Опыт"></Label>
-				<Label Content="{Binding Unit.Experience}"></Label>
-			</StackPanel>
-			<Label Visibility="{Binding Unit.AttackPriority, Converter={StaticResource attackPriorityVisibilityConverter}, ConverterParameter=first}" Content="Нападает первым"></Label>
-			<Label Visibility="{Binding Unit.AttackPriority, Converter={StaticResource attackPriorityVisibilityConverter}, ConverterParameter=last}" Content="Нападает последним"></Label>
-			<Label Visibility="{Binding Unit.AttackWeaknessTarget, Converter={StaticResource boolVisibilityConverter}}" Content="Атакует слабейщукю цель"></Label>
-			<Label Visibility="{Binding Unit.TowerBonus, Converter={StaticResource boolVisibilityConverter}}" Content="Бонус к защите в башне"></Label>
-			<Label Visibility="{Binding Unit.AttackOnArea, Converter={StaticResource boolVisibilityConverter}}" Content="Урон по площади"></Label>
-			<StackPanel Visibility="{Binding Unit.IgnoreTowerBonus, Converter={StaticResource byteVisibilityConverter}}" Orientation="Horizontal">
-				<Label Content="Игнорирует зашиту в башне"></Label>
-				<Label Content="{Binding Unit.IgnoreTowerBonus}"></Label>
-			</StackPanel>
-		</StackPanel>
-
 		<StackPanel Orientation="Horizontal" x:Key="WaveTooltipTemplate">
 			<ItemsControl ItemsSource="{Binding Path=.}">
 				<ItemsControl.ItemTemplate>
 					<DataTemplate>
-						<StackPanel Orientation="Horizontal" Visibility="{Binding Count, Converter={StaticResource intVisibilityConverter}}">
-                            <Image Width="30" Height="30" Grid.Column="0" Source="{Binding Unit.Icon}" ToolTip="{StaticResource UnitTooltipTemplate}" />
-							<Label Content="{Binding Count}" />
-						</StackPanel>
+                        <Components:SquadViewControl Visibility="{Binding Count, Converter={StaticResource intVisibilityConverter}}">
+                        </Components:SquadViewControl>
 					</DataTemplate>
 				</ItemsControl.ItemTemplate>
 			</ItemsControl>
@@ -85,7 +48,11 @@
 
 		<DataTemplate x:Key="Losses">
 			<StackPanel Orientation="Horizontal">
-                <Image Grid.Column="0" Width="30" Height="30" Source="{Binding Unit.Icon}" ToolTip="{StaticResource UnitTooltipTemplate}"></Image>
+                <Image Grid.Column="0" Width="30" Height="30" Source="{Binding Unit.Icon}">
+                    <Image.ToolTip>
+                        <Components:UnitTooltip Unit="{Binding Unit}"></Components:UnitTooltip>
+                    </Image.ToolTip>
+                </Image>
 				<Label Content="{Binding Count}" ContentStringFormat="{}-{0}" Foreground="Red" Visibility="{Binding Count, Converter={StaticResource intVisibilityConverter}}"></Label>
 				<Label Content="{Binding Health}" ContentStringFormat="{}-{0}HP" Foreground="Red" Visibility="{Binding Count, Converter={StaticResource intNegativeVisibilityConverter}}"></Label>
 			</StackPanel>
@@ -95,7 +62,11 @@
 			<Expander Margin="40,0,0,0">
 				<Expander.Header>
 					<StackPanel Orientation="Horizontal">
-                        <Image Width="30" Height="30" Source="{Binding Unit.Icon}" ToolTip="{StaticResource UnitTooltipTemplate}"></Image>
+                        <Image Width="30" Height="30" Source="{Binding Unit.Icon}">
+                            <Image.ToolTip>
+                                <Components:UnitTooltip Unit="{Binding Unit}"></Components:UnitTooltip>
+                            </Image.ToolTip>
+                        </Image>
 						<Label Content="{Binding Count}"></Label>
 						<Label Content=" атакуют "></Label>
 						<ItemsControl ItemsSource="{Binding TotalDamage}" ItemTemplate="{StaticResource Losses}">
@@ -112,11 +83,19 @@
 					<ItemsControl.ItemTemplate>
 						<DataTemplate>
 							<StackPanel Orientation="Horizontal" Background="{Binding Health, Converter={StaticResource healthBrushConverter}}">
-                                <Image Width="30" Height="30" Source="{Binding Attacker.Icon}" ToolTip="{StaticResource UnitTooltipTemplate}"></Image>
+                                <Image Width="30" Height="30" Source="{Binding Attacker.Icon}">
+                                    <Image.ToolTip>
+                                        <Components:UnitTooltip Unit="{Binding Attacker}"></Components:UnitTooltip>
+                                    </Image.ToolTip>
+                                </Image>
 								<Label Content="{Binding AttackerId}" ContentStringFormat="{}({0})"></Label>
 								<Label Content=" наносит "></Label>
 								<Label Content="{Binding Damage}"></Label>
-								<Image Source="{Binding Defender.Icon}" ToolTip="{StaticResource UnitTooltipTemplate}"></Image>
+								<Image Source="{Binding Defender.Icon}">
+                                    <Image.ToolTip>
+                                        <Components:UnitTooltip Unit="{Binding Defender}"></Components:UnitTooltip>
+                                    </Image.ToolTip>
+                                </Image>
 								<Label Content="{Binding Health}" ContentStringFormat="{}({0})"></Label>
 							</StackPanel>
 						</DataTemplate>
@@ -149,10 +128,7 @@
 						<ItemsControl ItemsSource="{Binding PlayerLosses}">
 							<ItemsControl.ItemTemplate>
 								<DataTemplate>
-									<StackPanel Orientation="Horizontal">
-										<Image Grid.Column="0" Source="{Binding Icon}" ToolTip="{StaticResource UnitTooltipTemplate}"></Image>
-										<Label Grid.Column="1" Content="{Binding Name}"></Label>
-									</StackPanel>
+                                    <Components:UnitViewControl></Components:UnitViewControl>
 								</DataTemplate>
 							</ItemsControl.ItemTemplate>
 						</ItemsControl>
@@ -211,10 +187,7 @@
 						<ItemsControl ItemsSource="{Binding EnemyLosses}">
 							<ItemsControl.ItemTemplate>
 								<DataTemplate>
-									<StackPanel Orientation="Horizontal">
-										<Image Grid.Column="0" Source="{Binding Icon}" ToolTip="{StaticResource UnitTooltipTemplate}"></Image>
-										<Label Grid.Column="1" Content="{Binding Name}"></Label>
-									</StackPanel>
+                                    <Components:UnitViewControl></Components:UnitViewControl>
 								</DataTemplate>
 							</ItemsControl.ItemTemplate>
 						</ItemsControl>
@@ -435,21 +408,18 @@
 							<DataTemplate>
 								<StackPanel Orientation="Horizontal">
 									<Label Name="lblCampTitle" Content="{Binding Name}" FontWeight="Bold" VerticalAlignment="Center" Margin="0,0,15,0" />
-									<ItemsControl ItemsSource="{Binding Squads}">
-										<ItemsControl.ItemsPanel>
-											<ItemsPanelTemplate>
-												<StackPanel Orientation="Horizontal" />
-											</ItemsPanelTemplate>
-										</ItemsControl.ItemsPanel>
-										<ItemsControl.ItemTemplate>
-											<DataTemplate>
-												<StackPanel Orientation="Horizontal">
-													<Image Grid.Column="0" Source="{Binding Icon}"></Image>
-													<Label Grid.Column="1" Content="{Binding Count}" />
-												</StackPanel>
-											</DataTemplate>
-										</ItemsControl.ItemTemplate>
-									</ItemsControl>
+                                    <ItemsControl ItemsSource="{Binding Squads}">
+                                        <ItemsControl.ItemsPanel>
+                                            <ItemsPanelTemplate>
+                                                <StackPanel Orientation="Horizontal" />
+                                            </ItemsPanelTemplate>
+                                        </ItemsControl.ItemsPanel>
+                                        <ItemsControl.ItemTemplate>
+                                            <DataTemplate>
+                                                <Components:SquadViewControl></Components:SquadViewControl>
+                                            </DataTemplate>
+                                        </ItemsControl.ItemTemplate>
+                                    </ItemsControl>                                    
 								</StackPanel>
 							</DataTemplate>
 						</ComboBox.ItemTemplate>
@@ -480,7 +450,11 @@
 											<ColumnDefinition Width="*"></ColumnDefinition>
 											<ColumnDefinition Width="60"></ColumnDefinition>
 										</Grid.ColumnDefinitions>
-										<Image Grid.Column="0" Source="{Binding Icon}" ToolTip="{StaticResource UnitTooltipTemplate}"></Image>
+										<Image Grid.Column="0" Source="{Binding Icon}">
+                                            <Image.ToolTip>
+                                                <Components:UnitTooltip Unit="{Binding Unit}"></Components:UnitTooltip>
+                                            </Image.ToolTip>
+                                        </Image>
 										<Label Grid.Column="1" Content="{Binding Name}" />
 										<src:NumberTextBox MaxWidth="50" MinWidth="50" Margin="0,5" Grid.Column="2" MinValue="0" MaxValue="{Binding Model.PlayerUnitLimit, ElementName=Win}">
 											<src:NumberTextBox.Text>
@@ -530,7 +504,11 @@
 											<ColumnDefinition Width="*"></ColumnDefinition>
 											<ColumnDefinition Width="60"></ColumnDefinition>
 										</Grid.ColumnDefinitions>
-										<Image Grid.Column="0" Source="{Binding Icon}" ToolTip="{StaticResource UnitTooltipTemplate}"></Image>
+										<Image Grid.Column="0" Source="{Binding Icon}">
+                                            <Image.ToolTip>
+                                                <Components:UnitTooltip Unit="{Binding Unit}"></Components:UnitTooltip>
+                                            </Image.ToolTip>
+                                        </Image>
 										<Label Grid.Column="1" Content="{Binding Name}" />
 										<src:NumberTextBox MaxWidth="50" MinWidth="50" Margin="0,5" Grid.Column="2" Text="{Binding Count}" />
 									</Grid>
@@ -626,7 +604,11 @@
 													<ItemsControl.ItemTemplate>
 														<DataTemplate>
 															<StackPanel Orientation="Horizontal">
-																<Image Source="{Binding Unit.Icon}" ToolTip="{StaticResource UnitTooltipTemplate}"></Image>
+																<Image Source="{Binding Unit.Icon}">
+                                                                    <Image.ToolTip>
+                                                                        <Components:UnitTooltip Unit="{Binding Unit}"></Components:UnitTooltip>
+                                                                    </Image.ToolTip>
+                                                                </Image>
 																<Label VerticalAlignment="Center" Content="{Binding Count}" />
 															</StackPanel>
 														</DataTemplate>
@@ -637,7 +619,11 @@
 													<ItemsControl.ItemTemplate>
 														<DataTemplate>
 															<StackPanel Orientation="Horizontal">
-																<Image Source="{Binding Unit.Icon}" ToolTip="{StaticResource UnitTooltipTemplate}"></Image>
+																<Image Source="{Binding Unit.Icon}">
+                                                                    <Image.ToolTip>
+                                                                        <Components:UnitTooltip Unit="{Binding Unit}"></Components:UnitTooltip>
+                                                                    </Image.ToolTip>                                                                    
+                                                                </Image>
 																<Label VerticalAlignment="Center" Content="{Binding Count}" />
 															</StackPanel>
 														</DataTemplate>

@@ -113,6 +113,18 @@
     <Compile Include="Types\Unit.cs" />
     <Compile Include="Types\UnitAttackHandler.cs" />
     <Compile Include="WpfTypes\BattleLosses.cs" />
+    <Compile Include="WpfTypes\Components\SquadsViewControl.xaml.cs">
+      <DependentUpon>SquadsViewControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="WpfTypes\Components\SquadViewControl.xaml.cs">
+      <DependentUpon>SquadViewControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="WpfTypes\Components\UnitTooltip.xaml.cs">
+      <DependentUpon>UnitTooltip.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="WpfTypes\Components\UnitViewControl.xaml.cs">
+      <DependentUpon>UnitViewControl.xaml</DependentUpon>
+    </Compile>
     <Compile Include="WpfTypes\Converters\AttackPriorityStringConverter.cs" />
     <Compile Include="WpfTypes\Converters\AttackPriorityVisibilityConverter.cs" />
     <Compile Include="WpfTypes\Converters\BattleTimeConverter.cs" />
@@ -155,6 +167,22 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="QuestMapWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="WpfTypes\Components\SquadsViewControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="WpfTypes\Components\SquadViewControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="WpfTypes\Components\UnitTooltip.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="WpfTypes\Components\UnitViewControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
