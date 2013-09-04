@@ -128,7 +128,7 @@
                                                     <ComboBox Grid.Column="0" Margin="0,5" ItemsSource="{Binding Units, ElementName=Win}" SelectedValue="{Binding Unit}">
                                                         <ComboBox.ItemTemplate>
                                                             <DataTemplate>
-                                                                <Components:UnitViewControl></Components:UnitViewControl>
+                                                                <Components:UnitViewControl Unit="{Binding Path=.}"></Components:UnitViewControl>
                                                             </DataTemplate>
                                                         </ComboBox.ItemTemplate>
                                                     </ComboBox>

@@ -21,11 +21,5 @@ namespace TheSettlersCalculator.WpfTypes.Components
 			get { return (Unit) GetValue(UnitProperty); }
 			set { SetValue(UnitProperty, value); }
 		}
-
-		public override void OnApplyTemplate()
-		{
-			base.OnApplyTemplate();
-			Unit = DataContext as Unit;
-		}
 	}
 }
