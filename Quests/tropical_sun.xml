@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<quest>
+  <name>QUEST_TROPICAL_SUN</name>
+  <map>Quests\Maps\</map>
+  <icon>Quests\Icons\tropical-sun.png</icon>
+  <enemies>
+    <enemy>SCAVENGER</enemy>
+    <enemy>THUG</enemy>
+    <enemy>GUARD_DOG</enemy>
+    <enemy>ROUGHNECK</enemy>
+    <enemy>RANGER</enemy>
+    <enemy>SKUNK</enemy>
+    <enemy>CALTROP</enemy>
+    <enemy>SABER_RATTLER</enemy>
+    <enemy>CRAZY_COOK</enemy>
+    <enemy>GUNMAN</enemy>
+    <enemy>KNIFETHROWER</enemy>
+    <enemy>PETTY_OFFICER_2ND_CLASS</enemy>
+  </enemies>
+  <camps>
+
+  </camps>
+</quest>

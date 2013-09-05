@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<quest>
+  <name>QUEST_LOST_SKULL</name>
+  <map>Quests\Maps\</map>
+  <icon>Quests\Icons\the-lost-skull.png</icon>
+  <enemies>
+    <enemy>CALTROP</enemy>
+    <enemy>DECKSCRUBBER</enemy>
+    <enemy>SABER_RATTLER</enemy>
+    <enemy>CRAZY_COOK</enemy>
+    <enemy>GUNMAN</enemy>
+    <enemy>KNIFETHROWER</enemy>
+    <enemy>PETTY_OFFICER_2ND_CLASS</enemy>
+  </enemies>
+  <camps>
+
+  </camps>
+</quest>
