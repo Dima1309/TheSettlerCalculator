@@ -117,6 +117,21 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="BUILDING_ARCTIC_IRON_MINE" xml:space="preserve">
+    <value>Арктический железный рудник</value>
+  </data>
+  <data name="BUILDING_DARK_CASTLE" xml:space="preserve">
+    <value>Чёрный замок</value>
+  </data>
+  <data name="BUILDING_FROZEN_MANOR" xml:space="preserve">
+    <value>Замёрзшее имение</value>
+  </data>
+  <data name="BUILDING_WHITE_CASTLE" xml:space="preserve">
+    <value>Белый замок</value>
+  </data>
+  <data name="BUILDING_WITCH_TOWER" xml:space="preserve">
+    <value>Башня ведьмы</value>
+  </data>
   <data name="CAMP_TYPE_AMBUSH" xml:space="preserve">
     <value>Засада</value>
   </data>
@@ -183,8 +198,14 @@
   <data name="QUEST_INSEL_DER_FREIBEUTER" xml:space="preserve">
     <value>Остров пиратов</value>
   </data>
+  <data name="QUEST_INVASION_OF_NORDS" xml:space="preserve">
+    <value>Вторжение северян</value>
+  </data>
   <data name="QUEST_ISLAND_OF_THE_PIRATES" xml:space="preserve">
     <value>Остров пиратов</value>
+  </data>
+  <data name="QUEST_LOST_SKULL" xml:space="preserve">
+    <value>Потерянный череп</value>
   </data>
   <data name="QUEST_MAIN_ISLAND" xml:space="preserve">
     <value>Главный остров</value>
@@ -197,6 +218,9 @@
   </data>
   <data name="QUEST_OUTLAWS" xml:space="preserve">
     <value>Преступники</value>
+  </data>
+  <data name="QUEST_PIRATE_LIFE" xml:space="preserve">
+    <value>Пиратское ремесло</value>
   </data>
   <data name="QUEST_PLAYER" xml:space="preserve">
     <value>Игрок</value>
@@ -218,6 +242,12 @@
   </data>
   <data name="QUEST_SECLUDED_EXPERIMENTS" xml:space="preserve">
     <value>Эксперименты в уединении</value>
+  </data>
+  <data name="QUEST_SLEEPING_VULKAN" xml:space="preserve">
+    <value>Спящий вулкан</value>
+  </data>
+  <data name="QUEST_SLEEPY_REEF" xml:space="preserve">
+    <value>Сонный риф</value>
   </data>
   <data name="QUEST_SOHNE_DER_STEPPE" xml:space="preserve">
     <value>Сыны степей</value>
@@ -261,6 +291,9 @@
   <data name="QUEST_TRAITORS" xml:space="preserve">
     <value>Предатели</value>
   </data>
+  <data name="QUEST_TROPICAL_SUN" xml:space="preserve">
+    <value>Тропическое солнце</value>
+  </data>
   <data name="QUEST_UBERRASCHUNGSANGRIFF" xml:space="preserve">
     <value>Внезапное нападение</value>
   </data>
@@ -278,6 +311,18 @@
   </data>
   <data name="QUEST_WITCH_OF_THE_SWAMP" xml:space="preserve">
     <value>Болотная ведьма</value>
+  </data>
+  <data name="RESOURCE_ADVANCED_PAPER" xml:space="preserve">
+    <value>Передовая бумага</value>
+  </data>
+  <data name="RESOURCE_BEAN" xml:space="preserve">
+    <value>Волшебные бобы</value>
+  </data>
+  <data name="RESOURCE_BEANSTALK" xml:space="preserve">
+    <value>Волшебные бобовые стебли</value>
+  </data>
+  <data name="RESOURCE_BOOK_FITTING" xml:space="preserve">
+    <value>Книжная обложка</value>
   </data>
   <data name="RESOURCE_BOW" xml:space="preserve">
     <value>Луки</value>
@@ -357,6 +402,9 @@
   <data name="RESOURCE_HORSE" xml:space="preserve">
     <value>Лошади</value>
   </data>
+  <data name="RESOURCE_INTERMEDIATE_PAPER" xml:space="preserve">
+    <value>Улучшенная бумага</value>
+  </data>
   <data name="RESOURCE_IRON" xml:space="preserve">
     <value>Железо</value>
   </data>
@@ -378,11 +426,17 @@
   <data name="RESOURCE_MEAT" xml:space="preserve">
     <value>Мясо</value>
   </data>
+  <data name="RESOURCE_NIB" xml:space="preserve">
+    <value>Перо</value>
+  </data>
   <data name="RESOURCE_PINE_WOOD" xml:space="preserve">
     <value>Древесина из сосны</value>
   </data>
   <data name="RESOURCE_PINE_WOOD_PLANKS" xml:space="preserve">
     <value>Доски из сосны</value>
+  </data>
+  <data name="RESOURCE_PRINTING_TYPE" xml:space="preserve">
+    <value>Типографский шрифт</value>
   </data>
   <data name="RESOURCE_PUMPKIN" xml:space="preserve">
     <value>Тыквы</value>
@@ -393,8 +447,14 @@
   <data name="RESOURCE_SAUSAGE" xml:space="preserve">
     <value>Колбасы</value>
   </data>
+  <data name="RESOURCE_SIMPLE_PAPER" xml:space="preserve">
+    <value>Простая бумага</value>
+  </data>
   <data name="RESOURCE_SOCCER_BALL" xml:space="preserve">
     <value>Футбольные мячи</value>
+  </data>
+  <data name="RESOURCE_STAR_COINS" xml:space="preserve">
+    <value>Звёздные монеты</value>
   </data>
   <data name="RESOURCE_STEEL" xml:space="preserve">
     <value>Сталь</value>

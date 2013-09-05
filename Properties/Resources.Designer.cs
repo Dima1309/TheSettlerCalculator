@@ -61,6 +61,51 @@ namespace TheSettlersCalculator.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Арктический железный рудник.
+        /// </summary>
+        public static string BUILDING_ARCTIC_IRON_MINE {
+            get {
+                return ResourceManager.GetString("BUILDING_ARCTIC_IRON_MINE", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Чёрный замок.
+        /// </summary>
+        public static string BUILDING_DARK_CASTLE {
+            get {
+                return ResourceManager.GetString("BUILDING_DARK_CASTLE", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Замёрзшее имение.
+        /// </summary>
+        public static string BUILDING_FROZEN_MANOR {
+            get {
+                return ResourceManager.GetString("BUILDING_FROZEN_MANOR", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Белый замок.
+        /// </summary>
+        public static string BUILDING_WHITE_CASTLE {
+            get {
+                return ResourceManager.GetString("BUILDING_WHITE_CASTLE", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Башня ведьмы.
+        /// </summary>
+        public static string BUILDING_WITCH_TOWER {
+            get {
+                return ResourceManager.GetString("BUILDING_WITCH_TOWER", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Засада.
         /// </summary>
         public static string CAMP_TYPE_AMBUSH {
@@ -259,11 +304,29 @@ namespace TheSettlersCalculator.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Вторжение северян.
+        /// </summary>
+        public static string QUEST_INVASION_OF_NORDS {
+            get {
+                return ResourceManager.GetString("QUEST_INVASION_OF_NORDS", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Остров пиратов.
         /// </summary>
         public static string QUEST_ISLAND_OF_THE_PIRATES {
             get {
                 return ResourceManager.GetString("QUEST_ISLAND_OF_THE_PIRATES", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Потерянный череп.
+        /// </summary>
+        public static string QUEST_LOST_SKULL {
+            get {
+                return ResourceManager.GetString("QUEST_LOST_SKULL", resourceCulture);
             }
         }
         
@@ -300,6 +363,15 @@ namespace TheSettlersCalculator.Properties {
         public static string QUEST_OUTLAWS {
             get {
                 return ResourceManager.GetString("QUEST_OUTLAWS", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Пиратское ремесло.
+        /// </summary>
+        public static string QUEST_PIRATE_LIFE {
+            get {
+                return ResourceManager.GetString("QUEST_PIRATE_LIFE", resourceCulture);
             }
         }
         
@@ -363,6 +435,24 @@ namespace TheSettlersCalculator.Properties {
         public static string QUEST_SECLUDED_EXPERIMENTS {
             get {
                 return ResourceManager.GetString("QUEST_SECLUDED_EXPERIMENTS", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Спящий вулкан.
+        /// </summary>
+        public static string QUEST_SLEEPING_VULKAN {
+            get {
+                return ResourceManager.GetString("QUEST_SLEEPING_VULKAN", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Сонный риф.
+        /// </summary>
+        public static string QUEST_SLEEPY_REEF {
+            get {
+                return ResourceManager.GetString("QUEST_SLEEPY_REEF", resourceCulture);
             }
         }
         
@@ -493,6 +583,15 @@ namespace TheSettlersCalculator.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Тропическое солнце.
+        /// </summary>
+        public static string QUEST_TROPICAL_SUN {
+            get {
+                return ResourceManager.GetString("QUEST_TROPICAL_SUN", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Внезапное нападение.
         /// </summary>
         public static string QUEST_UBERRASCHUNGSANGRIFF {
@@ -543,6 +642,42 @@ namespace TheSettlersCalculator.Properties {
         public static string QUEST_WITCH_OF_THE_SWAMP {
             get {
                 return ResourceManager.GetString("QUEST_WITCH_OF_THE_SWAMP", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Передовая бумага.
+        /// </summary>
+        public static string RESOURCE_ADVANCED_PAPER {
+            get {
+                return ResourceManager.GetString("RESOURCE_ADVANCED_PAPER", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Волшебные бобы.
+        /// </summary>
+        public static string RESOURCE_BEAN {
+            get {
+                return ResourceManager.GetString("RESOURCE_BEAN", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Волшебные бобовые стебли.
+        /// </summary>
+        public static string RESOURCE_BEANSTALK {
+            get {
+                return ResourceManager.GetString("RESOURCE_BEANSTALK", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Книжная обложка.
+        /// </summary>
+        public static string RESOURCE_BOOK_FITTING {
+            get {
+                return ResourceManager.GetString("RESOURCE_BOOK_FITTING", resourceCulture);
             }
         }
         
@@ -781,6 +916,15 @@ namespace TheSettlersCalculator.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Улучшенная бумага.
+        /// </summary>
+        public static string RESOURCE_INTERMEDIATE_PAPER {
+            get {
+                return ResourceManager.GetString("RESOURCE_INTERMEDIATE_PAPER", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Железо.
         /// </summary>
         public static string RESOURCE_IRON {
@@ -844,6 +988,15 @@ namespace TheSettlersCalculator.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Перо.
+        /// </summary>
+        public static string RESOURCE_NIB {
+            get {
+                return ResourceManager.GetString("RESOURCE_NIB", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Древесина из сосны.
         /// </summary>
         public static string RESOURCE_PINE_WOOD {
@@ -858,6 +1011,15 @@ namespace TheSettlersCalculator.Properties {
         public static string RESOURCE_PINE_WOOD_PLANKS {
             get {
                 return ResourceManager.GetString("RESOURCE_PINE_WOOD_PLANKS", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Типографский шрифт.
+        /// </summary>
+        public static string RESOURCE_PRINTING_TYPE {
+            get {
+                return ResourceManager.GetString("RESOURCE_PRINTING_TYPE", resourceCulture);
             }
         }
         
@@ -889,11 +1051,29 @@ namespace TheSettlersCalculator.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Простая бумага.
+        /// </summary>
+        public static string RESOURCE_SIMPLE_PAPER {
+            get {
+                return ResourceManager.GetString("RESOURCE_SIMPLE_PAPER", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Футбольные мячи.
         /// </summary>
         public static string RESOURCE_SOCCER_BALL {
             get {
                 return ResourceManager.GetString("RESOURCE_SOCCER_BALL", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Звёздные монеты.
+        /// </summary>
+        public static string RESOURCE_STAR_COINS {
+            get {
+                return ResourceManager.GetString("RESOURCE_STAR_COINS", resourceCulture);
             }
         }
         

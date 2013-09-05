@@ -65,6 +65,7 @@ namespace TheSettlersCalculator.Price
 			AddProduct(ProductEnum.RESOURCE_GIFT ,Resources.RESOURCE_GIFT, ProductType.BASIC, 16000, "gift");
 			AddProduct(ProductEnum.RESOURCE_SOCCER_BALL ,Resources.RESOURCE_SOCCER_BALL, ProductType.BASIC, 16000, "soccer_ball");
 			AddProduct(ProductEnum.RESOURCE_GUILD_COINS ,Resources.RESOURCE_GUILD_COINS, ProductType.BASIC, 1029, "guild_coins");
+			AddProduct(ProductEnum.RESOURCE_STAR_COINS, Resources.RESOURCE_STAR_COINS, ProductType.BASIC, 0, "star_coins");
 					   
 			AddProduct(ProductEnum.RESOURCE_COAL ,Resources.RESOURCE_COAL, ProductType.IMPROVED, 8.4, "coal");
 			AddProduct(ProductEnum.RESOURCE_BRONZE_ORE ,Resources.RESOURCE_BRONZE_ORE, ProductType.IMPROVED, 24.6, "bronze_ore");
@@ -77,6 +78,8 @@ namespace TheSettlersCalculator.Price
 			AddProduct(ProductEnum.RESOURCE_BREAD ,Resources.RESOURCE_BREAD, ProductType.IMPROVED, 22.8, "bread");
 			AddProduct(ProductEnum.RESOURCE_BRONZE_SWORD ,Resources.RESOURCE_BRONZE_SWORD, ProductType.IMPROVED, 34.1, "bronze_sword");
 			AddProduct(ProductEnum.RESOURCE_BOW ,Resources.RESOURCE_BOW, ProductType.IMPROVED, 36.6, "bow");
+			AddProduct(ProductEnum.RESOURCE_SIMPLE_PAPER, Resources.RESOURCE_SIMPLE_PAPER, ProductType.IMPROVED, 0, "simple_paper");
+			AddProduct(ProductEnum.RESOURCE_NIB, Resources.RESOURCE_NIB, ProductType.IMPROVED, 0, "nib");
 					   
 			AddProduct(ProductEnum.RESOURCE_HARDWOOD ,Resources.RESOURCE_HARDWOOD, ProductType.ADVANCED, 9.3, "hardwood");
 			AddProduct(ProductEnum.RESOURCE_HARDWOOD_PLANKS ,Resources.RESOURCE_HARDWOOD_PLANKS, ProductType.ADVANCED, 20, "hardwood_planks");
@@ -93,6 +96,8 @@ namespace TheSettlersCalculator.Price
 			AddProduct(ProductEnum.RESOURCE_IRON_SWORD ,Resources.RESOURCE_IRON_SWORD, ProductType.ADVANCED, 164.6, "iron_sword");
 			AddProduct(ProductEnum.RESOURCE_STEEL_SWORD ,Resources.RESOURCE_STEEL_SWORD, ProductType.ADVANCED, 410.1, "steel_sword");
 			AddProduct(ProductEnum.RESOURCE_LONGBOW ,Resources.RESOURCE_LONGBOW, ProductType.ADVANCED, 69.4, "longbow");
+			AddProduct(ProductEnum.RESOURCE_INTERMEDIATE_PAPER, Resources.RESOURCE_INTERMEDIATE_PAPER, ProductType.ADVANCED, 0, "intermediate_paper");
+			AddProduct(ProductEnum.RESOURCE_PRINTING_TYPE, Resources.RESOURCE_PRINTING_TYPE, ProductType.ADVANCED, 0, "printing_type");
 					   
 			AddProduct(ProductEnum.RESOURCE_EXOTIC_WOOD ,Resources.RESOURCE_EXOTIC_WOOD, ProductType.SKILLFUL, 283.4, "exotic_wood");
 			AddProduct(ProductEnum.RESOURCE_EXOTIC_WOOD_PLANKS ,Resources.RESOURCE_EXOTIC_WOOD_PLANKS, ProductType.SKILLFUL, 282.8, "exotic_wood_planks");
@@ -106,6 +111,10 @@ namespace TheSettlersCalculator.Price
 			AddProduct(ProductEnum.RESOURCE_DAMASCENE_SWORD ,Resources.RESOURCE_DAMASCENE_SWORD, ProductType.SKILLFUL, 577.42, "damascene_sword");
 			AddProduct(ProductEnum.RESOURCE_CROSSBOW ,Resources.RESOURCE_CROSSBOW, ProductType.SKILLFUL, 790.6, "crossbow");
 			AddProduct(ProductEnum.RESOURCE_CANNON, Resources.RESOURCE_CANNON, ProductType.SKILLFUL, 668.5, "cannon");
+			AddProduct(ProductEnum.RESOURCE_ADVANCED_PAPER, Resources.RESOURCE_ADVANCED_PAPER, ProductType.SKILLFUL, 0, "advanced_paper");
+			AddProduct(ProductEnum.RESOURCE_BOOK_FITTING, Resources.RESOURCE_BOOK_FITTING, ProductType.SKILLFUL, 0, "book_fitting");
+			AddProduct(ProductEnum.RESOURCE_BEAN, Resources.RESOURCE_BEAN, ProductType.SKILLFUL, 0, "bean");
+			AddProduct(ProductEnum.RESOURCE_BEANSTALK, Resources.RESOURCE_BEANSTALK, ProductType.SKILLFUL, 0, "beanstalk");
 					   
 			AddProduct(ProductEnum.QUEST_SATTELFEST ,Resources.QUEST_SATTELFEST, ProductType.QUEST, 73.1, "Sattelfest");
 			AddProduct(ProductEnum.QUEST_INSEL_DER_FREIBEUTER ,Resources.QUEST_INSEL_DER_FREIBEUTER, ProductType.QUEST, 468.4, "Insel_der_Freibeuter");
@@ -127,6 +136,18 @@ namespace TheSettlersCalculator.Price
 			AddProduct(ProductEnum.QUEST_RASENDER_BULLE ,Resources.QUEST_RASENDER_BULLE, ProductType.QUEST, 1786.75, "Rasender_Bulle");
 			AddProduct(ProductEnum.QUEST_OLD_FRIENDS ,Resources.QUEST_OLD_FRIENDS, ProductType.QUEST, 300, "Alte_Bekannte");
 			AddProduct(ProductEnum.QUEST_MOTHER_LOVE ,Resources.QUEST_MOTHER_LOVE, ProductType.QUEST, 600, "Mutterliebe");
+
+			AddProduct(ProductEnum.QUEST_LOST_SKULL, Resources.QUEST_LOST_SKULL, ProductType.QUEST, 0, "the-lost-skull");
+			AddProduct(ProductEnum.QUEST_SLEEPING_VULKAN, Resources.QUEST_SLEEPING_VULKAN, ProductType.QUEST, 0, "the-sleeping-volcano");
+			AddProduct(ProductEnum.QUEST_SLEEPY_REEF, Resources.QUEST_SLEEPY_REEF, ProductType.QUEST, 0, "sleepy-reef");
+			AddProduct(ProductEnum.QUEST_TROPICAL_SUN, Resources.QUEST_TROPICAL_SUN, ProductType.QUEST, 0, "tropical-sun");
+			AddProduct(ProductEnum.QUEST_PIRATE_LIFE, Resources.QUEST_PIRATE_LIFE, ProductType.QUEST, 0, "pirate-life");
+			AddProduct(ProductEnum.QUEST_INVASION_OF_NORDS, Resources.QUEST_INVASION_OF_NORDS, ProductType.QUEST, 0, "the-invasion-of-nords");
+			AddProduct(ProductEnum.QUEST_THE_VALIANT_LITTLE_TAILOR, Resources.QUEST_THE_VALIANT_LITTLE_TAILOR, ProductType.QUEST, 0, "the-valiant-little-tailor");
+			AddProduct(ProductEnum.QUEST_THE_CLEVER_LITTLE_TAILOR, Resources.QUEST_THE_CLEVER_LITTLE_TAILOR, ProductType.QUEST, 0, "the-clever-little-tailor");
+			AddProduct(ProductEnum.QUEST_THE_SONS_OF_THE_LITTLE_TAILOR, Resources.QUEST_THE_SONS_OF_THE_LITTLE_TAILOR, ProductType.QUEST, 0, "the-sons-of-the-little-tailor");
+			AddProduct(ProductEnum.QUEST_THE_HEROIC_LITTLE_TAILOR, Resources.QUEST_THE_HEROIC_LITTLE_TAILOR, ProductType.QUEST, 0, "the-heroic-little-tailor");
+			AddProduct(ProductEnum.QUEST_THE_BETRAYED_LITTLE_TAILOR, Resources.QUEST_THE_BETRAYED_LITTLE_TAILOR, ProductType.QUEST, 0, "the-betrayed-little-tailor");
 
 			try
 			{
