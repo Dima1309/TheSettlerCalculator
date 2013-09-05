@@ -128,7 +128,7 @@
 						<ItemsControl ItemsSource="{Binding PlayerLosses}">
 							<ItemsControl.ItemTemplate>
 								<DataTemplate>
-                                    <Components:UnitViewControl></Components:UnitViewControl>
+                                    <Components:UnitViewControl Unit="{Binding Unit}"></Components:UnitViewControl>
 								</DataTemplate>
 							</ItemsControl.ItemTemplate>
 						</ItemsControl>
@@ -187,7 +187,7 @@
 						<ItemsControl ItemsSource="{Binding EnemyLosses}">
 							<ItemsControl.ItemTemplate>
 								<DataTemplate>
-                                    <Components:UnitViewControl></Components:UnitViewControl>
+                                    <Components:UnitViewControl Unit="{Binding Unit}"></Components:UnitViewControl>
 								</DataTemplate>
 							</ItemsControl.ItemTemplate>
 						</ItemsControl>
