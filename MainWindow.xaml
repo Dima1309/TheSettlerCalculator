@@ -718,6 +718,7 @@
                             <RowDefinition Height="*"/>
                             <RowDefinition Height="*"/>
                             <RowDefinition Height="*"/>
+                            <RowDefinition Height="*"/>
                         </Grid.RowDefinitions>
                         
                         <TextBlock Grid.Column="0" Grid.Row="0">Количество раундов для симуляции</TextBlock>
@@ -725,9 +726,12 @@
 
                         <TextBlock Grid.Column="0" Grid.Row="1">Уровень казармы</TextBlock>
                         <src:NumberTextBox HorizontalAlignment="Left" Margin="16,4" Grid.Column="1" Grid.Row="1" MinValue="0" MaxValue="5" Text="{Binding Options.BaracksLevel}" MinWidth="60" MaxWidth="60"/>
+
+                        <TextBlock Grid.Column="0" Grid.Row="2">Учитывать хлеб в потерях</TextBlock>
+                        <CheckBox HorizontalAlignment="Left" Margin="16,4" Grid.Column="1" Grid.Row="2" IsChecked="{Binding Options.BreadLosses}" MinWidth="60" MaxWidth="60"/>
                     
-                        <TextBlock Grid.Column="0" Grid.Row="2">Сервер</TextBlock>
-                        <ComboBox HorizontalAlignment="Left" Margin="16,4" Grid.Column="1" Grid.Row="2" SelectedItem="{Binding Options.Server}"  ItemsSource="{Binding Source={StaticResource serverTypeEnum}}"  MinWidth="100" MaxWidth="100">
+                        <TextBlock Grid.Column="0" Grid.Row="3">Сервер</TextBlock>
+                        <ComboBox HorizontalAlignment="Left" Margin="16,4" Grid.Column="1" Grid.Row="3" SelectedItem="{Binding Options.Server}"  ItemsSource="{Binding Source={StaticResource serverTypeEnum}}"  MinWidth="100" MaxWidth="100">
                             <ComboBox.ItemTemplate>
                                 <DataTemplate>
                                     <TextBlock Text="{Binding Path=., Converter={StaticResource serverTypeConverter}}"/>                                        
@@ -735,15 +739,15 @@
                             </ComboBox.ItemTemplate>
                         </ComboBox>
 
-                        <TextBlock Grid.Column="0" Grid.Row="3">Сервер</TextBlock>
-                        <ComboBox HorizontalAlignment="Left" Margin="16,4" Grid.Column="1" Grid.Row="3" SelectedItem="{Binding Options.MultiWaveBattleType}" ItemsSource="{Binding Source={StaticResource battleTypeEnum}}" MinWidth="100" MaxWidth="100">
+                        <TextBlock Grid.Column="0" Grid.Row="4">Тип расчёта боя для нескольких волн</TextBlock>
+                        <ComboBox HorizontalAlignment="Left" Margin="16,4" Grid.Column="1" Grid.Row="4" SelectedItem="{Binding Options.MultiWaveBattleType}" ItemsSource="{Binding Source={StaticResource battleTypeEnum}}" MinWidth="100" MaxWidth="100">
                             <ComboBox.ItemTemplate>
                                 <DataTemplate>
                                     <TextBlock Text="{Binding Path=., Converter={StaticResource multyWaveBattleTypeConverter}}"/>
                                 </DataTemplate>
                             </ComboBox.ItemTemplate>
                         </ComboBox>
-                    </Grid>                                            
+                    </Grid>
                     <Expander >
                         <Expander.Header>
                             <TextBlock>Цены на ресурсы</TextBlock>

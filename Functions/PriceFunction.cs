@@ -8,6 +8,10 @@ namespace TheSettlersCalculator.Functions
 {
 	internal class PriceFunction : IFunction
 	{
+		#region CONSTANTS
+		private int BREAD_LOSSES = 25;
+		#endregion	
+
 		#region Fields
 		private readonly ICalculator m_calculator;
 		#endregion
@@ -54,6 +58,16 @@ namespace TheSettlersCalculator.Functions
 
 					lossesPrice[product.Product.Index] += product.Count * losses[i];
 				}
+
+				if (Options.Instance.BreadLosses)
+				{
+					if (!lossesPrice.ContainsKey(ProductEnum.RESOURCE_BREAD))
+					{
+						lossesPrice[ProductEnum.RESOURCE_BREAD] = 0;
+					}
+
+					lossesPrice[ProductEnum.RESOURCE_BREAD] += BREAD_LOSSES*losses[i];
+				}
 			}
 
 			List<LossesProduct> result = new List<LossesProduct>(lossesPrice.Count);
@@ -83,6 +97,16 @@ namespace TheSettlersCalculator.Functions
 					}
 
 					lossesPrice[product.Product.Index] += product.Count * losses[i];
+				}
+
+				if (Options.Instance.BreadLosses)
+				{
+					if (!lossesPrice.ContainsKey(ProductEnum.RESOURCE_BREAD))
+					{
+						lossesPrice[ProductEnum.RESOURCE_BREAD] = 0;
+					}
+
+					lossesPrice[ProductEnum.RESOURCE_BREAD] += BREAD_LOSSES * losses[i];
 				}
 			}
 
