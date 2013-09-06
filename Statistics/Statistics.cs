@@ -172,7 +172,7 @@ namespace TheSettlersCalculator.Statistics
 		internal void BattleComplete(object sender, BattleCompleteArgs args)
 		{
 			int rem;
-			int rounds = Math.DivRem(args.Steps.Count, 3, out rem);
+			int rounds = Math.DivRem(args.Steps.Count - 1, 3, out rem);
 			if (rem > 0)
 			{
 				rounds++;
