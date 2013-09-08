@@ -187,6 +187,51 @@ namespace TheSettlersCalculator.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Лог.
+        /// </summary>
+        public static string GENERAL_LOG {
+            get {
+                return ResourceManager.GetString("GENERAL_LOG", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Генерал-майор.
+        /// </summary>
+        public static string GENERAL_MAJOR {
+            get {
+                return ResourceManager.GetString("GENERAL_MAJOR", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Быстрый.
+        /// </summary>
+        public static string GENERAL_QUICK {
+            get {
+                return ResourceManager.GetString("GENERAL_QUICK", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Обычный.
+        /// </summary>
+        public static string GENERAL_TAVERN {
+            get {
+                return ResourceManager.GetString("GENERAL_TAVERN", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Ветеран.
+        /// </summary>
+        public static string GENERAL_VETERAN {
+            get {
+                return ResourceManager.GetString("GENERAL_VETERAN", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Убежище разбойников.
         /// </summary>
         public static string QUEST_BANDIT_NEST {

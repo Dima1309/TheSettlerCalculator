@@ -159,6 +159,21 @@
   <data name="CAMP_WIN_TIME_WITCH_TOWER" xml:space="preserve">
     <value>Башня ведьмы(140 сек.)</value>
   </data>
+  <data name="GENERAL_LOG" xml:space="preserve">
+    <value>Лог</value>
+  </data>
+  <data name="GENERAL_MAJOR" xml:space="preserve">
+    <value>Генерал-майор</value>
+  </data>
+  <data name="GENERAL_QUICK" xml:space="preserve">
+    <value>Быстрый</value>
+  </data>
+  <data name="GENERAL_TAVERN" xml:space="preserve">
+    <value>Обычный</value>
+  </data>
+  <data name="GENERAL_VETERAN" xml:space="preserve">
+    <value>Ветеран</value>
+  </data>
   <data name="QUEST_BANDIT_NEST" xml:space="preserve">
     <value>Убежище разбойников</value>
   </data>
