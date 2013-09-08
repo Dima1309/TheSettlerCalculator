@@ -75,6 +75,9 @@
     <Compile Include="Quests\Quest.cs" />
     <Compile Include="Quests\QuestComparerByName.cs" />
     <Compile Include="Quests\Quests.cs" />
+    <Compile Include="Specialists\Generals\Generals.cs" />
+    <Compile Include="Specialists\Generals\General.cs" />
+    <Compile Include="Specialists\Generals\GeneralType.cs" />
     <Compile Include="Statistics\MultiWaveStatistics.cs" />
     <Compile Include="Statistics\Statistics.cs" />
     <Compile Include="Statistics\WaveKey.cs" />
@@ -308,6 +311,14 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Quests\Images\berserk.png" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <EmbeddedResource Include="Specialists\Generals\Images\general_log.png" />
+    <EmbeddedResource Include="Specialists\Generals\Images\general_major.png" />
+    <EmbeddedResource Include="Specialists\Generals\Images\quick_general.png" />
+    <EmbeddedResource Include="Specialists\Generals\Images\tavern_general.png" />
+    <EmbeddedResource Include="Specialists\Generals\Images\veteran.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
