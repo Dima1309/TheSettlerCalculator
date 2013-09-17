@@ -22,5 +22,464 @@
     <enemy>BLACK_BULL</enemy>
     <enemy>DARK_WIZARD</enemy>
   </enemies>
-  <camps />
+  <camps>
+    <camp>
+      <name>1</name>
+      <type>Normal</type>
+      <wintime>20</wintime>
+      <sector>1</sector>
+      <left>1780</left>
+      <top>1590</top>
+      <enemy unit="BOAR" count="100" />
+      <enemy unit="WOLF2" count="50" />
+    </camp>
+    <camp>
+      <name>2</name>
+      <type>Normal</type>
+      <wintime>20</wintime>
+      <sector>1</sector>
+      <left>1729</left>
+      <top>1180</top>
+      <enemy unit="BEAR" count="130" />
+    </camp>
+    <camp>
+      <name>3</name>
+      <type>Normal</type>
+      <wintime>20</wintime>
+      <sector>1</sector>
+      <left>1445</left>
+      <top>1132</top>
+      <enemy unit="BOAR" count="40" />
+      <enemy unit="FOX" count="100" />
+    </camp>
+    <camp>
+      <name>4</name>
+      <type>Normal</type>
+      <wintime>20</wintime>
+      <sector>1</sector>
+      <left>1163</left>
+      <top>1114</top>
+      <enemy unit="BOAR" count="180" />
+    </camp>
+    <camp>
+      <name>5</name>
+      <type>Normal</type>
+      <wintime>20</wintime>
+      <sector>1</sector>
+      <left>1214</left>
+      <top>1273</top>
+      <enemy unit="BOAR" count="50" />
+      <enemy unit="WOLF2" count="50" />
+      <enemy unit="FOX" count="50" />
+    </camp>
+    <camp>
+      <name>6</name>
+      <type>Boss</type>
+      <wintime>20</wintime>
+      <sector>1</sector>
+      <left>1142</left>
+      <top>1287</top>
+      <enemy unit="BEAR" count="120" />
+      <enemy unit="FOX" count="50" />
+    </camp>
+    <camp>
+      <name>7</name>
+      <type>Normal</type>
+      <wintime>20</wintime>
+      <sector>1</sector>
+      <left>1285</left>
+      <top>1445</top>
+      <enemy unit="BOAR" count="120" />
+      <enemy unit="WOLF2" count="70" />
+    </camp>
+    <camp>
+      <name>8</name>
+      <type>Normal</type>
+      <wintime>20</wintime>
+      <sector>2</sector>
+      <left>1010</left>
+      <top>1370</top>
+      <enemy unit="BOAR" count="100" />
+      <enemy unit="BEAR" count="30" />
+    </camp>
+    <camp>
+      <name>9</name>
+      <type>Normal</type>
+      <wintime>20</wintime>
+      <sector>2</sector>
+      <left>958</left>
+      <top>1525</top>
+      <enemy unit="WOLF2" count="5" />
+      <enemy unit="WOLF_PACKLOADER" count="75" />
+    </camp>
+    <camp>
+      <name>10</name>
+      <type>Boss</type>
+      <wintime>20</wintime>
+      <sector>2</sector>
+      <left>936</left>
+      <top>1575</top>
+      <enemy unit="BOAR" count="50" />
+      <enemy unit="WOLF_PACKLOADER" count="100" />
+      <enemy unit="BLACK_BULL" count="1" />
+    </camp>
+    <camp>
+      <name>11</name>
+      <type>Normal</type>
+      <wintime>20</wintime>
+      <sector>3</sector>
+      <left>520</left>
+      <top>1510</top>
+      <enemy unit="BEAR" count="100" />
+      <enemy unit="WOLF2" count="50" />
+      <enemy unit="FOX" count="30" />
+    </camp>
+    <camp>
+      <name>12</name>
+      <type>Normal</type>
+      <wintime>20</wintime>
+      <sector>3</sector>
+      <left>263</left>
+      <top>1385</top>
+      <enemy unit="BOAR" count="200" />
+    </camp>
+    <camp>
+      <name>13</name>
+      <type>Normal</type>
+      <wintime>20</wintime>
+      <sector>3</sector>
+      <left>650</left>
+      <top>1242</top>
+      <enemy unit="BOAR" count="120" />
+      <enemy unit="WOLF_PACKLOADER" count="50" />
+    </camp>
+    <camp>
+      <name>14</name>
+      <type>Normal</type>
+      <wintime>20</wintime>
+      <sector>3</sector>
+      <left>210</left>
+      <top>908</top>
+      <enemy unit="BEAR" count="100" />
+      <enemy unit="WOLF2" count="80" />
+    </camp>
+    <camp>
+      <name>15</name>
+      <type>Normal</type>
+      <wintime>20</wintime>
+      <sector>3</sector>
+      <left>572</left>
+      <top>815</top>
+      <enemy unit="BEAR" count="70" />
+      <enemy unit="WOLF_PACKLOADER" count="80" />
+      <enemy unit="FOX" count="40" />
+    </camp>
+    <camp>
+      <name>16</name>
+      <type>Normal</type>
+      <wintime>20</wintime>
+      <sector>3</sector>
+      <left>291</left>
+      <top>610</top>
+      <enemy unit="BEAR" count="80" />
+      <enemy unit="GIANT" count="80" />
+    </camp>
+    <camp>
+      <name>17</name>
+      <type>Boss</type>
+      <wintime>20</wintime>
+      <sector>3</sector>
+      <enemy unit="BOAR" count="40" />
+      <enemy unit="FOX" count="60" />
+      <enemy unit="GIANT" count="80" />
+    </camp>
+    <camp>
+      <name>18</name>
+      <type>Normal</type>
+      <wintime>20</wintime>
+      <sector>4</sector>
+      <left>471</left>
+      <top>373</top>
+      <enemy unit="BEAR" count="100" />
+      <enemy unit="FOX" count="90" />
+    </camp>
+    <camp>
+      <name>19</name>
+      <type>Normal</type>
+      <wintime>20</wintime>
+      <sector>4</sector>
+      <left>675</left>
+      <top>245</top>
+      <enemy unit="BOAR" count="50" />
+      <enemy unit="WOLF2" count="70" />
+    </camp>
+    <camp>
+      <name>20</name>
+      <type>Normal</type>
+      <wintime>20</wintime>
+      <sector>4</sector>
+      <left>750</left>
+      <top>640</top>
+      <enemy unit="FOX" count="180" />
+    </camp>
+    <camp>
+      <name>21</name>
+      <type>Normal</type>
+      <wintime>20</wintime>
+      <sector>4</sector>
+      <left>960</left>
+      <top>294</top>
+      <enemy unit="BEAR" count="70" />
+      <enemy unit="FOX" count="100" />
+    </camp>
+    <camp>
+      <name>22</name>
+      <type>Normal</type>
+      <wintime>20</wintime>
+      <sector>4</sector>
+      <left>1035</left>
+      <top>340</top>
+      <enemy unit="BOAR" count="60" />
+      <enemy unit="WOLF_PACKLOADER" count="140" />
+    </camp>
+    <camp>
+      <name>23</name>
+      <type>Boss</type>
+      <wintime>20</wintime>
+      <sector>4</sector>
+      <left>1062</left>
+      <top>291</top>
+      <enemy unit="BEAR" count="100" />
+      <enemy unit="FOX" count="50" />
+      <enemy unit="GIANT" count="50" />
+    </camp>
+    <camp>
+      <name>24</name>
+      <type>Normal</type>
+      <wintime>20</wintime>
+      <sector>5</sector>
+      <left>1321</left>
+      <top>230</top>
+      <enemy unit="CULTIST" count="60" />
+      <enemy unit="SHADOW_SNEAKER" count="50" />
+      <enemy unit="FANATIC" count="80" />
+    </camp>
+    <camp>
+      <name>25</name>
+      <type>Normal</type>
+      <wintime>20</wintime>
+      <sector>5</sector>
+      <left>1681</left>
+      <top>259</top>
+      <enemy unit="CULTIST" count="140" />
+      <enemy unit="DARK_PRIEST" count="60" />
+    </camp>
+    <camp>
+      <name>26</name>
+      <type>Normal</type>
+      <wintime>20</wintime>
+      <sector>5</sector>
+      <left>1477</left>
+      <top>388</top>
+      <enemy unit="BEAR" count="120" />
+      <enemy unit="WOLF2" count="0" />
+    </camp>
+    <camp>
+      <name>27</name>
+      <type>Normal</type>
+      <wintime>20</wintime>
+      <sector>5</sector>
+      <left>1810</left>
+      <top>465</top>
+      <enemy unit="CULTIST" count="40" />
+      <enemy unit="DANCING_DERVISH" count="160" />
+    </camp>
+    <camp>
+      <name>28</name>
+      <type>Normal</type>
+      <wintime>20</wintime>
+      <sector>5</sector>
+      <left>1498</left>
+      <top>591</top>
+      <enemy unit="CULTIST" count="80" />
+      <enemy unit="SWAMP_WITCH" count="1" />
+      <enemy unit="DARK_PRIEST" count="100" />
+    </camp>
+    <camp>
+      <name>29</name>
+      <type>Normal</type>
+      <wintime>20</wintime>
+      <sector>5</sector>
+      <left>1830</left>
+      <top>637</top>
+      <enemy unit="CULTIST" count="60" />
+      <enemy unit="SWAMP_WITCH" count="1" />
+      <enemy unit="SHADOW_SNEAKER" count="90" />
+    </camp>
+    <camp>
+      <name>30</name>
+      <type>Boss</type>
+      <wintime>140</wintime>
+      <sector>5</sector>
+      <left>1827</left>
+      <top>733</top>
+      <enemy unit="NIGHT_SPAWN" count="1" />
+      <enemy unit="CULTIST" count="70" />
+      <enemy unit="FIRE_DANCER" count="0" />
+    </camp>
+    <camp>
+      <name>31</name>
+      <type>Normal</type>
+      <wintime>20</wintime>
+      <sector>6</sector>
+      <left>2240</left>
+      <top>645</top>
+      <enemy unit="SHADOW_SNEAKER" count="100" />
+      <enemy unit="FIRE_DANCER" count="70" />
+    </camp>
+    <camp>
+      <name>32</name>
+      <type>Normal</type>
+      <wintime>20</wintime>
+      <sector>6</sector>
+      <left>2041</left>
+      <top>360</top>
+      <enemy unit="BEAR" count="50" />
+      <enemy unit="WOLF2" count="70" />
+      <enemy unit="FOX" count="30" />
+    </camp>
+    <camp>
+      <name>33</name>
+      <type>Normal</type>
+      <wintime>20</wintime>
+      <sector>6</sector>
+      <left>2449</left>
+      <top>390</top>
+      <enemy unit="CULTIST" count="100" />
+      <enemy unit="DANCING_DERVISH" count="100" />
+    </camp>
+    <camp>
+      <name>34</name>
+      <type>Normal</type>
+      <wintime>20</wintime>
+      <sector>6</sector>
+      <left>2710</left>
+      <top>166</top>
+      <enemy unit="CULTIST" count="120" />
+    </camp>
+    <camp>
+      <name>35</name>
+      <type>Normal</type>
+      <wintime>20</wintime>
+      <sector>6</sector>
+      <left>2730</left>
+      <top>560</top>
+      <enemy unit="SHADOW_SNEAKER" count="40" />
+      <enemy unit="FANATIC" count="80" />
+      <enemy unit="FIRE_DANCER" count="80" />
+    </camp>
+    <camp>
+      <name>36</name>
+      <type>Normal</type>
+      <wintime>20</wintime>
+      <sector>6</sector>
+      <left>3044</left>
+      <top>563</top>
+      <enemy unit="SHADOW_SNEAKER" count="200" />
+    </camp>
+    <camp>
+      <name>37</name>
+      <type>Boss</type>
+      <wintime>20</wintime>
+      <sector>6</sector>
+      <left>2885</left>
+      <top>877</top>
+      <enemy unit="CULTIST" count="80" />
+      <enemy unit="FIRE_DANCER" count="80" />
+      <enemy unit="DARK_HIGH_PRIEST" count="1" />
+    </camp>
+    <camp>
+      <name>38</name>
+      <type>Normal</type>
+      <wintime>20</wintime>
+      <sector>7</sector>
+      <left>2627</left>
+      <top>1040</top>
+      <enemy unit="CULTIST" count="100" />
+      <enemy unit="FIRE_DANCER" count="100" />
+    </camp>
+    <camp>
+      <name>39</name>
+      <type>Normal</type>
+      <wintime>20</wintime>
+      <sector>7</sector>
+      <left>2833</left>
+      <top>1072</top>
+      <enemy unit="CULTIST" count="80" />
+      <enemy unit="SHADOW_SNEAKER" count="40" />
+      <enemy unit="DARK_PRIEST" count="80" />
+    </camp>
+    <camp>
+      <name>40</name>
+      <type>Normal</type>
+      <wintime>20</wintime>
+      <sector>7</sector>
+      <left>2420</left>
+      <top>1195</top>
+      <enemy unit="CULTIST" count="90" />
+      <enemy unit="DARK_PRIEST" count="90" />
+    </camp>
+    <camp>
+      <name>41</name>
+      <type>Normal</type>
+      <wintime>20</wintime>
+      <sector>7</sector>
+      <left>2530</left>
+      <top>1448</top>
+      <enemy unit="CULTIST" count="60" />
+      <enemy unit="SHADOW_SNEAKER" count="60" />
+      <enemy unit="DANCING_DERVISH" count="60" />
+    </camp>
+    <camp>
+      <name>42</name>
+      <type>Normal</type>
+      <wintime>20</wintime>
+      <sector>7</sector>
+      <left>3065</left>
+      <top>1368</top>
+      <enemy unit="SHADOW_SNEAKER" count="90" />
+      <enemy unit="DARK_PRIEST" count="80" />
+    </camp>
+    <camp>
+      <name>43</name>
+      <type>Normal</type>
+      <wintime>20</wintime>
+      <sector>7</sector>
+      <left>2605</left>
+      <top>1651</top>
+      <enemy unit="SHADOW_SNEAKER" count="90" />
+      <enemy unit="DANCING_DERVISH" count="80" />
+    </camp>
+    <camp>
+      <name>44</name>
+      <type>Normal</type>
+      <wintime>20</wintime>
+      <sector>7</sector>
+      <left>2735</left>
+      <top>1610</top>
+      <enemy unit="DARK_PRIEST" count="150" />
+    </camp>
+    <camp>
+      <name>45</name>
+      <type>Boss</type>
+      <wintime>120</wintime>
+      <sector>7</sector>
+      <left>2730</left>
+      <top>1717</top>
+      <enemy unit="CULTIST" count="60" />
+      <enemy unit="SWAMP_WITCH" count="1" />
+      <enemy unit="FANATIC" count="60" />
+      <enemy unit="DARK_WIZARD" count="1" />
+    </camp>
+  </camps>
 </quest>
