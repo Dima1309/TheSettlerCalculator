@@ -91,9 +91,9 @@ namespace TheSettlersCalculator.Types.Simulation
 			}
 
 			// last step in round ended
-			if (args.RoundIndex % 3 == 2 || (args.RoundIndex < 0 && m_unitAttacks.Count > 0))
+			if (args.RoundIndex % 3 == 2 || args.RoundIndex < 0)
 			{
-				if (m_currentRound != null)
+				if (m_currentRound != null && m_currentRound.Steps.Count > 0)
 				{
 					m_currentRound.Index = Rounds.Count + 1;
 					Rounds.Add(m_currentRound);
