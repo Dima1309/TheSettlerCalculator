@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.ObjectModel;
 using System.Xml;
+using TheSettlersCalculator.Specialists.Generals;
 using TheSettlersCalculator.Types;
 using TheSettlersCalculator.WpfTypes;
 
@@ -10,6 +11,7 @@ namespace TheSettlersCalculator.Guides
 	{
 		#region Fields
 		private string m_name;
+		private General m_general;
 		private int m_targetIndex;
 		private Camp m_target;
 		private AttackType m_attackType;
@@ -64,6 +66,12 @@ namespace TheSettlersCalculator.Guides
 		{
 			get { return m_targetIndex; }
 			set { m_targetIndex = value; }
+		}
+
+		public General General
+		{
+			get { return m_general; }
+			set { m_general = value; }
 		}
 		#endregion
 

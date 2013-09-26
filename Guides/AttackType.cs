@@ -3,6 +3,7 @@
 	public enum AttackType
 	{
 		Attack,
+		LockAndDie,
 		Lock
 	}
 }

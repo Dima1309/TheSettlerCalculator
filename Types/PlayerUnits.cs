@@ -1,5 +1,4 @@
-﻿using TheSettlersCalculator.Helper;
-using TheSettlersCalculator.Price;
+﻿using TheSettlersCalculator.Price;
 using TheSettlersCalculator.Properties;
 
 namespace TheSettlersCalculator.Types
@@ -61,6 +60,7 @@ namespace TheSettlersCalculator.Types
 		{				
 			s_units = new Unit[9];
 			Unit unit = new Unit();
+			unit.Id = "RECRUIT";
 			unit.Name = Resources.UNIT_RECRUIT;
 			unit.Health = 40;
 			unit.MinDamage = 15;
@@ -79,6 +79,7 @@ namespace TheSettlersCalculator.Types
 
 			unit = new Unit();
 			unit.Name = Resources.UNIT_MILITIA;
+			unit.Id = "MILITIA";
 			unit.Health = 60;
 			unit.MinDamage = 20;
 			unit.MaxDamage = 40;
@@ -96,6 +97,7 @@ namespace TheSettlersCalculator.Types
 
 			unit = new Unit();
 			unit.Name = Resources.UNIT_SOLDIER;
+			unit.Id = "SOLDIER";
 			unit.Health = 90;
 			unit.MinDamage = 20;
 			unit.MaxDamage = 40;
@@ -113,6 +115,7 @@ namespace TheSettlersCalculator.Types
 
 			unit = new Unit();
 			unit.Name = Resources.UNIT_ELITE_SOLDIER;
+			unit.Id = "ELITE_SOLDIER";
 			unit.Health = 120;
 			unit.MinDamage = 20;
 			unit.MaxDamage = 40;
@@ -131,6 +134,7 @@ namespace TheSettlersCalculator.Types
 
 			unit = new Unit();
 			unit.Name = Resources.UNIT_CAVALRY;
+			unit.Id = "CAVALRY";
 			unit.Health = 5;
 			unit.MinDamage = 5;
 			unit.MaxDamage = 10;
@@ -149,6 +153,7 @@ namespace TheSettlersCalculator.Types
 
 			unit = new Unit();
 			unit.Name = Resources.UNIT_BOWMAN;
+			unit.Id = "BOWMAN";
 			unit.Health = 10;
 			unit.MinDamage = 20;
 			unit.MaxDamage = 40;
@@ -167,6 +172,7 @@ namespace TheSettlersCalculator.Types
 
 			unit = new Unit();
 			unit.Name = Resources.UNIT_LONGBOWMAN;
+			unit.Id = "LONGBOWMAN";
 			unit.Health = 10;
 			unit.MinDamage = 30;
 			unit.MaxDamage = 60;
@@ -185,6 +191,7 @@ namespace TheSettlersCalculator.Types
 
 			unit = new Unit();
 			unit.Name = Resources.UNIT_CROSSBOWMAN;
+			unit.Id = "CROSSBOWMAN";
 			unit.Health = 10;
 			unit.MinDamage = 45;
 			unit.MaxDamage = 90;
@@ -203,6 +210,7 @@ namespace TheSettlersCalculator.Types
 
 			unit = new Unit();
 			unit.Name = Resources.UNIT_CANNONNEER;
+			unit.Id = "CANNONNEER";
 			unit.Health = 60;
 			unit.MinDamage = 60;
 			unit.MaxDamage = 120;
