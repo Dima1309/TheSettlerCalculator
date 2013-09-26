@@ -10,6 +10,16 @@ namespace TheSettlersCalculator.Guides
 {
 	public class Guide : IXMLSerializable
 	{
+		#region Constants
+		private static string FILENAME = "filename";
+		private static string TITLE = "title";
+		private static string ATTACKS = "attacks";
+		private static string IMAGES = "images";
+		private static string IMAGE = "image";
+		private static string LOSSES = "losses";
+		private static string ARMY = "army";
+		#endregion
+
 		#region Fields
 		private string m_title;
 		private string m_filename;
@@ -70,7 +80,37 @@ namespace TheSettlersCalculator.Guides
 
 		public void Save(XmlWriter writer)
 		{
-			throw new NotImplementedException();
+			writer.WriteStartElement(TITLE);
+			writer.WriteValue(m_title);
+			writer.WriteEndElement();
+
+			writer.WriteStartElement(FILENAME);
+			writer.WriteValue(m_filename);
+			writer.WriteEndElement();
+
+			writer.WriteStartElement(ATTACKS);
+			foreach(Attack attack in m_attacks)
+			{
+				attack.Save(writer, this);
+			}
+			writer.WriteEndElement();
+
+			writer.WriteStartElement(IMAGES);
+			foreach (BitmapSource image in m_images)
+			{
+
+			}
+			writer.WriteEndElement();
+
+			writer.WriteStartElement(LOSSES);
+			writer.WriteEndElement();
+
+			writer.WriteStartElement(ARMY);
+			foreach(UnitSquad squad in m_army)
+			{
+				
+			}
+			writer.WriteEndElement();
 		}
 
 		public void CalculateAll()
