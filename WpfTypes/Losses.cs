@@ -76,7 +76,7 @@ namespace TheSettlersCalculator.WpfTypes
 
 				if (reader.Name.Equals(UNIT, StringComparison.OrdinalIgnoreCase))
 				{
-					//m_unit = reader.ReadElementString().Trim();
+					m_unit = EnemyUnits.Units[reader.ReadElementString().Trim()];
 				}
 				if (reader.Name.Equals(MIN, StringComparison.OrdinalIgnoreCase))
 				{

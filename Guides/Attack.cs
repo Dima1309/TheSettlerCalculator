@@ -9,6 +9,20 @@ namespace TheSettlersCalculator.Guides
 {
 	public class Attack
 	{
+		#region Constants
+		private static string ATTACK = "attack";
+		private static string NAME = "name";
+		private static string GENERAL = "general";
+		private static string TARGET = "target";
+		private static string ATTACK_TYPE = "attackType";
+		private static string UNITS = "army";
+		private static string UNIT = "unit";
+		private static string UNIT_NAME = "name";
+		private static string LOSSES = "losses";
+		private static string COMMENT = "comment";
+		private static string IMAGE = "image";
+		#endregion
+
 		#region Fields
 		private string m_name;
 		private General m_general;
@@ -18,7 +32,7 @@ namespace TheSettlersCalculator.Guides
 		private ObservableCollection<UnitSquad> m_units;
 		private readonly BattleLosses m_losses;
 		private string m_comment;
-		private int m_imageIndex;		
+		private int m_imageIndex;
 		#endregion
 
 		#region Properties
@@ -83,7 +97,45 @@ namespace TheSettlersCalculator.Guides
 
 		public void Save(XmlWriter writer, Guide guide)
 		{
-			throw new NotImplementedException();
+			writer.WriteStartElement(ATTACK);
+
+			writer.WriteStartElement(NAME);
+			writer.WriteValue(m_name);
+			writer.WriteEndElement();
+		
+			writer.WriteStartElement(GENERAL);
+			writer.WriteValue(m_general.Id);
+			writer.WriteEndElement();
+
+			writer.WriteStartElement(TARGET);
+			writer.WriteValue(m_targetIndex);
+			writer.WriteEndElement();
+
+			writer.WriteStartElement(ATTACK_TYPE);
+			writer.WriteValue(m_attackType);
+			writer.WriteEndElement();
+		
+			writer.WriteStartElement(UNITS);
+			foreach(UnitSquad squad in m_units)
+			{
+				writer.WriteStartElement(UNIT);
+				writer.WriteAttributeString(UNIT_NAME, squad.Unit.Id);
+				writer.WriteValue(squad.Count);
+				writer.WriteEndElement();
+			}
+			writer.WriteEndElement();
+
+			//m_losses;
+
+			writer.WriteStartElement(COMMENT);
+			writer.WriteValue(m_comment);
+			writer.WriteEndElement();
+
+			writer.WriteStartElement(IMAGE);
+			writer.WriteValue(m_imageIndex);
+			writer.WriteEndElement();
+
+			writer.WriteEndElement();
 		}
 
 		internal void Calculate()

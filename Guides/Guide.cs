@@ -2,6 +2,7 @@
 using System.Collections.ObjectModel;
 using System.Windows.Media.Imaging;
 using System.Xml;
+using TheSettlersCalculator.Helper;
 using TheSettlersCalculator.Quests;
 using TheSettlersCalculator.Types;
 using TheSettlersCalculator.WpfTypes;
@@ -98,7 +99,9 @@ namespace TheSettlersCalculator.Guides
 			writer.WriteStartElement(IMAGES);
 			foreach (BitmapSource image in m_images)
 			{
-
+				writer.WriteStartElement(IMAGE);
+				ImageHelper.SaveToXml(writer, image);
+				writer.WriteEndElement();
 			}
 			writer.WriteEndElement();
 
