@@ -6,7 +6,7 @@ namespace TheSettlersCalculator.Types
 {
 	internal static class EnemyUnits
 	{
-		private const string FILENAME = "enemies.xml";
+		private const string FILENAME = "units.xml";
 		private const string UNITS_TAG = "units";
 
 		#region Fields

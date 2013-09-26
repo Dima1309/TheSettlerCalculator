@@ -1,7 +1,9 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Windows.Media.Imaging;
 using System.Xml;
 using TheSettlersCalculator.Helper;
+using TheSettlersCalculator.Price;
 
 namespace TheSettlersCalculator.Types
 {
@@ -21,7 +23,10 @@ namespace TheSettlersCalculator.Types
 		private const string TOWER_BONUS = "tower_bonus";
 		private const string IGNORE_TOWER_BONUS = "ignore_tower_bonus";
 		private const string EXPERIENCE = "experience";
-		private const string ICON_PATH = "icon";		
+		private const string ICON_PATH = "icon";
+		private const string PRODUCTION_TIME = "production_time";
+		private const string PRODUCT = "product";
+		private const string PRODUCT_NAME = "name";
 		#endregion
 
 		#region Fields
@@ -156,6 +161,7 @@ namespace TheSettlersCalculator.Types
 		public void Load(XmlReader reader)
 		{			
 			int level = reader.Depth;
+			List<Types.LossesProduct> lossesProducts = new List<LossesProduct>(2);
 			while (reader.Read())
 			{
 				if (level > reader.Depth)
@@ -225,7 +231,19 @@ namespace TheSettlersCalculator.Types
 				{
 					m_ignoreTowerBonus = byte.Parse(reader.ReadElementString().Trim());
 				}
+				else if (reader.Name.Equals(PRODUCTION_TIME, StringComparison.OrdinalIgnoreCase))
+				{
+					m_productionTime = int.Parse(reader.ReadElementString().Trim());
+				}
+				else if (reader.Name.Equals(PRODUCT, StringComparison.OrdinalIgnoreCase))
+				{
+					ProductEnum product = (ProductEnum) Enum.Parse(typeof(ProductEnum), reader.GetAttribute(PRODUCT_NAME));
+					int count = int.Parse(reader.ReadElementString().Trim());
+					lossesProducts.Add(new LossesProduct(product, count));
+				}
 			}
+
+			m_lossesProduct = lossesProducts.ToArray();
 		}
 
 		public void Save(XmlWriter writer)
@@ -282,7 +300,25 @@ namespace TheSettlersCalculator.Types
 			
 			writer.WriteStartElement(IGNORE_TOWER_BONUS);
 			writer.WriteValue(m_ignoreTowerBonus);
-			writer.WriteEndElement();				
+			writer.WriteEndElement();
+
+			if (m_productionTime > 0)
+			{
+				writer.WriteStartElement(PRODUCTION_TIME);
+				writer.WriteValue(m_productionTime);
+				writer.WriteEndElement();
+			}
+
+			if (m_lossesProduct != null)
+			{
+				foreach(LossesProduct product in m_lossesProduct)
+				{
+					writer.WriteStartElement(PRODUCT);
+					writer.WriteAttributeString(PRODUCT_NAME, product.Product.Index.ToString());
+					writer.WriteValue(product.Count);
+					writer.WriteEndElement();
+				}
+			}
 
 			writer.WriteEndElement();
 		}
