@@ -248,9 +248,8 @@
       <sector>5</sector>
       <left>1768</left>
       <top>1666</top>
-      <enemy unit="GUARD_DOG" count="0" />
+      <enemy unit="BEAR" count="80" />
       <enemy unit="WOLF2" count="50" />
-      <enemy unit="GIANT" count="80" />
     </camp>
     <camp>
       <name>24</name>
