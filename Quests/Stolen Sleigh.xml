@@ -1,0 +1,234 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<quest>
+  <name>Украденные сани</name>
+  <map>Quests\Maps\stolen sleight.jpg</map>
+  <icon>Quests\Icons\stolen sleigh.png</icon>
+  <enemies>
+    <enemy>CALTROP</enemy>
+    <enemy>SABER_RATTLER</enemy>
+    <enemy>CRAZY_COOK</enemy>
+    <enemy>GUNMAN</enemy>
+    <enemy>PETTY_OFFICER_2ND_CLASS</enemy>
+    <enemy>MILITIA_DESERTER</enemy>
+    <enemy>CAVALRY_DESERTER</enemy>
+    <enemy>SOLDIER_DESERTER</enemy>
+    <enemy>ELITE_SOLDIER_DESERTER</enemy>
+    <enemy>LONGBOWMAN_DESERTER</enemy>
+    <enemy>CROSSBOWMAN_DESERTER</enemy>
+    <enemy>CANNONNEER_DESERTER</enemy>
+    <enemy>CROAKER</enemy>
+    <enemy>METAL_TOOTHED</enemy>
+    <enemy>GUARD_DOG</enemy>
+    <enemy>ROUGHNECK</enemy>
+    <enemy>RANGER</enemy>
+    <enemy>CULTIST</enemy>
+    <enemy>SWAMP_WITCH</enemy>
+    <enemy>SHADOW_SNEAKER</enemy>
+    <enemy>FANATIC</enemy>
+    <enemy>DARK_PRIEST</enemy>
+    <enemy>FIRE_DANCER</enemy>
+    <enemy>DANCING_DERVISH</enemy>
+    <enemy>ONE_EYED_BERT</enemy>
+  </enemies>
+  <camps>
+    <camp>
+      <name>1</name>
+      <type>Ambush</type>
+      <wintime>20</wintime>
+      <sector>1</sector>
+      <left>310</left>
+      <top>680</top>
+      <enemy unit="CALTROP" count="120" />
+      <enemy unit="PETTY_OFFICER_2ND_CLASS" count="40" />
+    </camp>
+    <camp>
+      <name>2</name>
+      <type>Ambush</type>
+      <wintime>20</wintime>
+      <sector>1</sector>
+      <left>472</left>
+      <top>655</top>
+      <enemy unit="SABER_RATTLER" count="80" />
+      <enemy unit="GUNMAN" count="120" />
+    </camp>
+    <camp>
+      <name>3</name>
+      <type>Ambush</type>
+      <wintime>20</wintime>
+      <sector>1</sector>
+      <left>650</left>
+      <top>580</top>
+      <enemy unit="SOLDIER_DESERTER" count="100" />
+      <enemy unit="LONGBOWMAN_DESERTER" count="70" />
+    </camp>
+    <camp>
+      <name>4</name>
+      <type>Ambush</type>
+      <wintime>20</wintime>
+      <sector>1</sector>
+      <left>384</left>
+      <top>530</top>
+      <enemy unit="ELITE_SOLDIER_DESERTER" count="60" />
+      <enemy unit="CROSSBOWMAN_DESERTER" count="40" />
+    </camp>
+    <camp>
+      <name>5</name>
+      <type>Ambush</type>
+      <wintime>20</wintime>
+      <sector>1</sector>
+      <left>561</left>
+      <top>453</top>
+      <enemy unit="MILITIA_DESERTER" count="90" />
+      <enemy unit="CAVALRY_DESERTER" count="70" />
+    </camp>
+    <camp>
+      <name>6</name>
+      <type>Ambush</type>
+      <wintime>20</wintime>
+      <sector>1</sector>
+      <left>782</left>
+      <top>492</top>
+      <enemy unit="CULTIST" count="170" />
+      <enemy unit="SHADOW_SNEAKER" count="100" />
+      <enemy unit="FIRE_DANCER" count="80" />
+      <enemy unit="DANCING_DERVISH" count="50" />
+    </camp>
+    <camp>
+      <name>7</name>
+      <type>Boss</type>
+      <wintime>20</wintime>
+      <sector>1</sector>
+      <left>180</left>
+      <top>690</top>
+      <enemy unit="CRAZY_COOK" count="1" />
+      <enemy unit="GUNMAN" count="30" />
+      <enemy unit="PETTY_OFFICER_2ND_CLASS" count="55" />
+    </camp>
+    <camp>
+      <name>8</name>
+      <type>Boss</type>
+      <wintime>20</wintime>
+      <sector>1</sector>
+      <left>325</left>
+      <top>395</top>
+      <enemy unit="METAL_TOOTHED" count="1" />
+      <enemy unit="ROUGHNECK" count="40" />
+      <enemy unit="RANGER" count="60" />
+    </camp>
+    <camp>
+      <name>9</name>
+      <type>Ambush</type>
+      <wintime>20</wintime>
+      <sector>2</sector>
+      <left>693</left>
+      <top>808</top>
+      <enemy unit="ROUGHNECK" count="100" />
+      <enemy unit="RANGER" count="60" />
+    </camp>
+    <camp>
+      <name>10</name>
+      <type>Ambush</type>
+      <wintime>20</wintime>
+      <sector>2</sector>
+      <left>825</left>
+      <top>764</top>
+      <enemy unit="SHADOW_SNEAKER" count="40" />
+      <enemy unit="FIRE_DANCER" count="50" />
+    </camp>
+    <camp>
+      <name>11</name>
+      <type>Ambush</type>
+      <wintime>20</wintime>
+      <sector>2</sector>
+      <left>991</left>
+      <top>681</top>
+      <enemy unit="CULTIST" count="90" />
+      <enemy unit="DANCING_DERVISH" count="30" />
+    </camp>
+    <camp>
+      <name>12</name>
+      <type>Ambush</type>
+      <wintime>20</wintime>
+      <sector>2</sector>
+      <left>754</left>
+      <top>646</top>
+      <enemy unit="GUARD_DOG" count="40" />
+      <enemy unit="RANGER" count="120" />
+    </camp>
+    <camp>
+      <name>13</name>
+      <type>Boss</type>
+      <wintime>20</wintime>
+      <sector>2</sector>
+      <left>1109</left>
+      <top>662</top>
+      <enemy unit="CULTIST" count="50" />
+      <enemy unit="SWAMP_WITCH" count="1" />
+      <enemy unit="DARK_PRIEST" count="40" />
+    </camp>
+    <camp>
+      <name>14</name>
+      <type>Ambush</type>
+      <wintime>20</wintime>
+      <sector>2</sector>
+      <left>828</left>
+      <top>520</top>
+      <enemy unit="CAVALRY_DESERTER" count="90" />
+      <enemy unit="ELITE_SOLDIER_DESERTER" count="140" />
+      <enemy unit="CROSSBOWMAN_DESERTER" count="120" />
+      <enemy unit="CANNONNEER_DESERTER" count="50" />
+    </camp>
+    <camp>
+      <name>15</name>
+      <type>Ambush</type>
+      <wintime>20</wintime>
+      <sector>3</sector>
+      <left>827</left>
+      <top>362</top>
+      <enemy unit="CAVALRY_DESERTER" count="50" />
+      <enemy unit="ELITE_SOLDIER_DESERTER" count="70" />
+    </camp>
+    <camp>
+      <name>16</name>
+      <type>Ambush</type>
+      <wintime>20</wintime>
+      <sector>3</sector>
+      <left>665</left>
+      <top>334</top>
+      <enemy unit="SOLDIER_DESERTER" count="90" />
+      <enemy unit="CROSSBOWMAN_DESERTER" count="60" />
+    </camp>
+    <camp>
+      <name>17</name>
+      <type>Ambush</type>
+      <wintime>20</wintime>
+      <sector>3</sector>
+      <left>518</left>
+      <top>262</top>
+      <enemy unit="SHADOW_SNEAKER" count="30" />
+      <enemy unit="FANATIC" count="70" />
+    </camp>
+    <camp>
+      <name>18</name>
+      <type>Ambush</type>
+      <wintime>20</wintime>
+      <sector>3</sector>
+      <left>636</left>
+      <top>208</top>
+      <enemy unit="CULTIST" count="120" />
+      <enemy unit="FIRE_DANCER" count="50" />
+    </camp>
+    <camp>
+      <name>19</name>
+      <type>Boss</type>
+      <wintime>20</wintime>
+      <sector>3</sector>
+      <left>665</left>
+      <top>132</top>
+      <enemy unit="CAVALRY_DESERTER" count="20" />
+      <enemy unit="ELITE_SOLDIER_DESERTER" count="60" />
+      <enemy unit="CROSSBOWMAN_DESERTER" count="50" />
+      <enemy unit="CROAKER" count="1" />
+    </camp>
+  </camps>
+</quest>

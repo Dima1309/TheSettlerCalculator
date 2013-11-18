@@ -790,7 +790,7 @@
     <experience>200</experience>
     <icon>Quests\Images\croaker.png</icon>
     <priority>RearGuard</priority>
-    <attack_on_area>no</attack_on_area>
+    <attack_on_area>yes</attack_on_area>
     <attack_weakness>yes</attack_weakness>
     <tower_bonus>no</tower_bonus>
     <ignore_tower_bonus>0</ignore_tower_bonus>

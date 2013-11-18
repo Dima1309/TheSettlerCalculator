@@ -2,7 +2,7 @@
 <quest>
   <name>Возвращение в логово бандитов</name>
   <map>Quests\Maps\return to bandit nest.jpg</map>
-  <icon>Quests\Icons\Das_Banditennest.png</icon>
+  <icon>Quests\Icons\return_to_bandit_nest.png</icon>
   <enemies>
     <enemy>CHUCK</enemy>
     <enemy>METAL_TOOTHED</enemy>

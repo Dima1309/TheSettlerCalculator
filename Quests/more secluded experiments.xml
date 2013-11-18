@@ -1,0 +1,358 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<quest>
+  <name>Более уединённые эксперименты</name>
+  <map>Quests\Maps\more secluded experiments.jpeg</map>
+  <icon>Quests\Icons\more_secluded_experiments.png</icon>
+  <enemies>
+    <enemy>NIGHT_SPAWN</enemy>
+    <enemy>RECRUIT_DESERTER</enemy>
+    <enemy>MILITIA_DESERTER</enemy>
+    <enemy>CAVALRY_DESERTER</enemy>
+    <enemy>SOLDIER_DESERTER</enemy>
+    <enemy>ELITE_SOLDIER_DESERTER</enemy>
+    <enemy>BOWMAN_DESERTER</enemy>
+    <enemy>LONGBOWMAN_DESERTER</enemy>
+    <enemy>CROSSBOWMAN_DESERTER</enemy>
+    <enemy>CANNONNEER_DESERTER</enemy>
+    <enemy>BIG_BERTHA</enemy>
+    <enemy>CULTIST</enemy>
+    <enemy>SWAMP_WITCH</enemy>
+    <enemy>SHADOW_SNEAKER</enemy>
+    <enemy>DARK_PRIEST</enemy>
+    <enemy>FIRE_DANCER</enemy>
+    <enemy>DANCING_DERVISH</enemy>
+    <enemy>DARK_HIGH_PRIEST</enemy>
+  </enemies>
+  <camps>
+    <camp>
+      <name>1</name>
+      <type>Normal</type>
+      <wintime>20</wintime>
+      <sector>1</sector>
+      <left>265</left>
+      <top>277</top>
+      <enemy unit="MILITIA_DESERTER" count="70" />
+      <enemy unit="BOWMAN_DESERTER" count="50" />
+    </camp>
+    <camp>
+      <name>2</name>
+      <type>Normal</type>
+      <wintime>20</wintime>
+      <sector>1</sector>
+      <left>197</left>
+      <top>336</top>
+      <enemy unit="MILITIA_DESERTER" count="50" />
+      <enemy unit="CAVALRY_DESERTER" count="100" />
+    </camp>
+    <camp>
+      <name>3</name>
+      <type>Normal</type>
+      <wintime>20</wintime>
+      <sector>1</sector>
+      <left>300</left>
+      <top>357</top>
+      <enemy unit="RECRUIT_DESERTER" count="80" />
+      <enemy unit="MILITIA_DESERTER" count="80" />
+    </camp>
+    <camp>
+      <name>4</name>
+      <type>Normal</type>
+      <wintime>20</wintime>
+      <sector>1</sector>
+      <left>426</left>
+      <top>320</top>
+      <enemy unit="RECRUIT_DESERTER" count="80" />
+      <enemy unit="LONGBOWMAN_DESERTER" count="80" />
+    </camp>
+    <camp>
+      <name>5</name>
+      <type>Boss</type>
+      <wintime>20</wintime>
+      <sector>1</sector>
+      <left>428</left>
+      <top>350</top>
+      <enemy unit="RECRUIT_DESERTER" count="50" />
+      <enemy unit="MILITIA_DESERTER" count="50" />
+      <enemy unit="CAVALRY_DESERTER" count="50" />
+      <enemy unit="LONGBOWMAN_DESERTER" count="50" />
+    </camp>
+    <camp>
+      <name>6</name>
+      <type>Normal</type>
+      <wintime>20</wintime>
+      <sector>2</sector>
+      <left>425</left>
+      <top>210</top>
+      <enemy unit="MILITIA_DESERTER" count="50" />
+      <enemy unit="CAVALRY_DESERTER" count="50" />
+      <enemy unit="BOWMAN_DESERTER" count="40" />
+    </camp>
+    <camp>
+      <name>7</name>
+      <type>Normal</type>
+      <wintime>20</wintime>
+      <sector>2</sector>
+      <left>552</left>
+      <top>202</top>
+      <enemy unit="MILITIA_DESERTER" count="150" />
+    </camp>
+    <camp>
+      <name>8</name>
+      <type>Boss</type>
+      <wintime>20</wintime>
+      <sector>2</sector>
+      <left>483</left>
+      <top>285</top>
+      <enemy unit="MILITIA_DESERTER" count="40" />
+      <enemy unit="CAVALRY_DESERTER" count="40" />
+      <enemy unit="CROSSBOWMAN_DESERTER" count="60" />
+    </camp>
+    <camp>
+      <name>9</name>
+      <type>Normal</type>
+      <wintime>20</wintime>
+      <sector>3</sector>
+      <left>575</left>
+      <top>328</top>
+      <enemy unit="CAVALRY_DESERTER" count="100" />
+      <enemy unit="BOWMAN_DESERTER" count="100" />
+    </camp>
+    <camp>
+      <name>10</name>
+      <type>Normal</type>
+      <wintime>20</wintime>
+      <sector>3</sector>
+      <left>495</left>
+      <top>420</top>
+      <enemy unit="MILITIA_DESERTER" count="80" />
+      <enemy unit="BOWMAN_DESERTER" count="80" />
+    </camp>
+    <camp>
+      <name>11</name>
+      <type>Normal</type>
+      <wintime>20</wintime>
+      <sector>3</sector>
+      <left>620</left>
+      <top>427</top>
+      <enemy unit="MILITIA_DESERTER" count="90" />
+      <enemy unit="LONGBOWMAN_DESERTER" count="90" />
+    </camp>
+    <camp>
+      <name>12</name>
+      <type>Boss</type>
+      <wintime>20</wintime>
+      <sector>3</sector>
+      <left>700</left>
+      <top>418</top>
+      <enemy unit="RECRUIT_DESERTER" count="80" />
+      <enemy unit="BIG_BERTHA" count="1" />
+    </camp>
+    <camp>
+      <name>13</name>
+      <type>Normal</type>
+      <wintime>20</wintime>
+      <sector>4</sector>
+      <left>808</left>
+      <top>625</top>
+      <enemy unit="MILITIA_DESERTER" count="90" />
+      <enemy unit="CROSSBOWMAN_DESERTER" count="90" />
+    </camp>
+    <camp>
+      <name>14</name>
+      <type>Normal</type>
+      <wintime>20</wintime>
+      <sector>4</sector>
+      <left>920</left>
+      <top>613</top>
+      <enemy unit="RECRUIT_DESERTER" count="90" />
+      <enemy unit="CROSSBOWMAN_DESERTER" count="80" />
+    </camp>
+    <camp>
+      <name>15</name>
+      <type>Boss</type>
+      <wintime>20</wintime>
+      <sector>4</sector>
+      <left>886</left>
+      <top>660</top>
+      <enemy unit="MILITIA_DESERTER" count="150" />
+      <enemy unit="BIG_BERTHA" count="1" />
+    </camp>
+    <camp>
+      <name>16</name>
+      <type>Normal</type>
+      <wintime>20</wintime>
+      <sector>4</sector>
+      <left>620</left>
+      <top>753</top>
+      <enemy unit="MILITIA_DESERTER" count="70" />
+      <enemy unit="ELITE_SOLDIER_DESERTER" count="40" />
+    </camp>
+    <camp>
+      <name>17</name>
+      <type>Normal</type>
+      <wintime>20</wintime>
+      <sector>4</sector>
+      <left>748</left>
+      <top>745</top>
+      <enemy unit="MILITIA_DESERTER" count="80" />
+      <enemy unit="CAVALRY_DESERTER" count="80" />
+      <enemy unit="BOWMAN_DESERTER" count="40" />
+    </camp>
+    <camp>
+      <name>18</name>
+      <type>Boss</type>
+      <wintime>20</wintime>
+      <sector>4</sector>
+      <left>714</left>
+      <top>724</top>
+      <enemy unit="SWAMP_WITCH" count="1" />
+      <enemy unit="SHADOW_SNEAKER" count="100" />
+      <enemy unit="DARK_PRIEST" count="100" />
+    </camp>
+    <camp>
+      <name>19</name>
+      <type>Normal</type>
+      <wintime>20</wintime>
+      <sector>5</sector>
+      <left>495</left>
+      <top>718</top>
+      <enemy unit="MILITIA_DESERTER" count="80" />
+      <enemy unit="CROSSBOWMAN_DESERTER" count="80" />
+    </camp>
+    <camp>
+      <name>20</name>
+      <type>Normal</type>
+      <wintime>20</wintime>
+      <sector>5</sector>
+      <left>564</left>
+      <top>773</top>
+      <enemy unit="CAVALRY_DESERTER" count="200" />
+    </camp>
+    <camp>
+      <name>21</name>
+      <type>Boss</type>
+      <wintime>20</wintime>
+      <sector>5</sector>
+      <left>438</left>
+      <top>780</top>
+      <enemy unit="CAVALRY_DESERTER" count="100" />
+      <enemy unit="BIG_BERTHA" count="1" />
+    </camp>
+    <camp>
+      <name>22</name>
+      <type>Normal</type>
+      <wintime>20</wintime>
+      <sector>6</sector>
+      <left>977</left>
+      <top>758</top>
+      <enemy unit="ELITE_SOLDIER_DESERTER" count="120" />
+    </camp>
+    <camp>
+      <name>23</name>
+      <type>Normal</type>
+      <wintime>20</wintime>
+      <sector>6</sector>
+      <left>1138</left>
+      <top>632</top>
+      <enemy unit="CAVALRY_DESERTER" count="40" />
+      <enemy unit="SOLDIER_DESERTER" count="100" />
+      <enemy unit="LONGBOWMAN_DESERTER" count="40" />
+    </camp>
+    <camp>
+      <name>24</name>
+      <type>Boss</type>
+      <wintime>20</wintime>
+      <sector>6</sector>
+      <left>1300</left>
+      <top>784</top>
+      <enemy unit="ELITE_SOLDIER_DESERTER" count="70" />
+      <enemy unit="CROSSBOWMAN_DESERTER" count="70" />
+    </camp>
+    <camp>
+      <name>25</name>
+      <type>Boss</type>
+      <wintime>20</wintime>
+      <sector>7</sector>
+      <left>1232</left>
+      <top>420</top>
+      <enemy unit="CAVALRY_DESERTER" count="60" />
+      <enemy unit="LONGBOWMAN_DESERTER" count="60" />
+      <enemy unit="BIG_BERTHA" count="1" />
+    </camp>
+    <camp>
+      <name>26</name>
+      <type>Normal</type>
+      <wintime>20</wintime>
+      <sector>7</sector>
+      <left>1161</left>
+      <top>379</top>
+      <enemy unit="MILITIA_DESERTER" count="100" />
+      <enemy unit="CROSSBOWMAN_DESERTER" count="100" />
+    </camp>
+    <camp>
+      <name>27</name>
+      <type>Normal</type>
+      <wintime>20</wintime>
+      <sector>7</sector>
+      <left>1206</left>
+      <top>277</top>
+      <enemy unit="CAVALRY_DESERTER" count="90" />
+      <enemy unit="ELITE_SOLDIER_DESERTER" count="90" />
+    </camp>
+    <camp>
+      <name>28</name>
+      <type>Normal</type>
+      <wintime>20</wintime>
+      <sector>7</sector>
+      <left>1160</left>
+      <top>208</top>
+      <enemy unit="CAVALRY_DESERTER" count="50" />
+      <enemy unit="BOWMAN_DESERTER" count="50" />
+      <enemy unit="CANNONNEER_DESERTER" count="50" />
+    </camp>
+    <camp>
+      <name>29</name>
+      <type>Normal</type>
+      <wintime>20</wintime>
+      <sector>8</sector>
+      <left>1044</left>
+      <top>222</top>
+      <enemy unit="RECRUIT_DESERTER" count="80" />
+      <enemy unit="CAVALRY_DESERTER" count="60" />
+      <enemy unit="CANNONNEER_DESERTER" count="60" />
+    </camp>
+    <camp>
+      <name>30</name>
+      <type>Normal</type>
+      <wintime>20</wintime>
+      <sector>8</sector>
+      <left>999</left>
+      <top>137</top>
+      <enemy unit="SHADOW_SNEAKER" count="100" />
+      <enemy unit="FIRE_DANCER" count="80" />
+      <enemy unit="DARK_HIGH_PRIEST" count="1" />
+    </camp>
+    <camp>
+      <name>31</name>
+      <type>Normal</type>
+      <wintime>20</wintime>
+      <sector>8</sector>
+      <left>1079</left>
+      <top>101</top>
+      <enemy unit="CULTIST" count="100" />
+      <enemy unit="DARK_PRIEST" count="100" />
+      <enemy unit="DARK_HIGH_PRIEST" count="1" />
+    </camp>
+    <camp>
+      <name>32</name>
+      <type>Boss</type>
+      <wintime>20</wintime>
+      <sector>8</sector>
+      <left>1024</left>
+      <top>95</top>
+      <enemy unit="NIGHT_SPAWN" count="1" />
+      <enemy unit="SHADOW_SNEAKER" count="30" />
+      <enemy unit="DANCING_DERVISH" count="60" />
+    </camp>
+  </camps>
+</quest>
