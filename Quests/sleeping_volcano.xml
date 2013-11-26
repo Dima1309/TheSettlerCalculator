@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<quest>
+  <name>Спящий вулкан</name>
+  <map>Quests\Maps\the-sleeping-volcano.jpeg</map>
+  <icon>Quests\Icons\the-sleeping-volcano.png</icon>
+  <enemies>
+    <enemy>CULTIST</enemy>
+    <enemy>SHADOW_SNEAKER</enemy>
+    <enemy>FANATIC</enemy>
+    <enemy>DARK_PRIEST</enemy>
+    <enemy>FIRE_DANCER</enemy>
+    <enemy>DANCING_DERVISH</enemy>
+    <enemy>DARK_HIGH_PRIEST</enemy>
+  </enemies>
+  <camps>
+    <camp>
+      <name>1</name>
+      <type>Normal</type>
+      <wintime>20</wintime>
+      <sector>1</sector>
+      <left>1055</left>
+      <top>770</top>
+      <enemy unit="CULTIST" count="40" />
+      <enemy unit="FANATIC" count="40" />
+    </camp>
+    <camp>
+      <name>2</name>
+      <type>Normal</type>
+      <wintime>20</wintime>
+      <sector>2</sector>
+      <left>1085</left>
+      <top>395</top>
+      <enemy unit="CULTIST" count="50" />
+      <enemy unit="DARK_PRIEST" count="40" />
+    </camp>
+    <camp>
+      <name>3</name>
+      <type>Normal</type>
+      <wintime>20</wintime>
+      <sector>3</sector>
+      <left>282</left>
+      <top>510</top>
+      <enemy unit="CULTIST" count="30" />
+      <enemy unit="SHADOW_SNEAKER" count="40" />
+      <enemy unit="FIRE_DANCER" count="30" />
+    </camp>
+    <camp>
+      <name>4</name>
+      <type>Normal</type>
+      <wintime>20</wintime>
+      <sector>4</sector>
+      <left>381</left>
+      <top>758</top>
+      <enemy unit="SHADOW_SNEAKER" count="40" />
+      <enemy unit="FIRE_DANCER" count="40" />
+      <enemy unit="DANCING_DERVISH" count="30" />
+    </camp>
+    <camp>
+      <name>5</name>
+      <type>Boss</type>
+      <wintime>140</wintime>
+      <sector>5</sector>
+      <left>552</left>
+      <top>554</top>
+      <enemy unit="SHADOW_SNEAKER" count="80" />
+      <enemy unit="DANCING_DERVISH" count="40" />
+      <enemy unit="DARK_HIGH_PRIEST" count="1" />
+    </camp>
+  </camps>
+</quest>

@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<quest>
+  <name>Сонный риф</name>
+  <map>Quests\Maps\sleepy-reef.jpeg</map>
+  <icon>Quests\Icons\sleepy-reef.png</icon>
+  <enemies>
+    <enemy>RECRUIT_DESERTER</enemy>
+    <enemy>MILITIA_DESERTER</enemy>
+    <enemy>CAVALRY_DESERTER</enemy>
+    <enemy>SOLDIER_DESERTER</enemy>
+    <enemy>ELITE_SOLDIER_DESERTER</enemy>
+    <enemy>BOWMAN_DESERTER</enemy>
+    <enemy>LONGBOWMAN_DESERTER</enemy>
+    <enemy>CANNONNEER_DESERTER</enemy>
+    <enemy>SIR_ROBIN</enemy>
+  </enemies>
+  <camps>
+    <camp>
+      <name>1</name>
+      <type>Normal</type>
+      <wintime>20</wintime>
+      <sector>1</sector>
+      <left>595</left>
+      <top>656</top>
+      <enemy unit="MILITIA_DESERTER" count="60" />
+      <enemy unit="BOWMAN_DESERTER" count="60" />
+    </camp>
+    <camp>
+      <name>2</name>
+      <type>Normal</type>
+      <wintime>20</wintime>
+      <sector>1</sector>
+      <left>710</left>
+      <top>423</top>
+      <enemy unit="CAVALRY_DESERTER" count="40" />
+      <enemy unit="SOLDIER_DESERTER" count="40" />
+      <enemy unit="BOWMAN_DESERTER" count="40" />
+    </camp>
+    <camp>
+      <name>3</name>
+      <type>Normal</type>
+      <wintime>20</wintime>
+      <sector>1</sector>
+      <left>571</left>
+      <top>313</top>
+      <enemy unit="CAVALRY_DESERTER" count="40" />
+      <enemy unit="SOLDIER_DESERTER" count="30" />
+      <enemy unit="LONGBOWMAN_DESERTER" count="40" />
+    </camp>
+    <camp>
+      <name>4</name>
+      <type>Normal</type>
+      <wintime>20</wintime>
+      <sector>1</sector>
+      <left>842</left>
+      <top>122</top>
+      <enemy unit="ELITE_SOLDIER_DESERTER" count="30" />
+      <enemy unit="LONGBOWMAN_DESERTER" count="50" />
+      <enemy unit="CANNONNEER_DESERTER" count="20" />
+    </camp>
+    <camp>
+      <name>5</name>
+      <type>Boss</type>
+      <wintime>20</wintime>
+      <sector>1</sector>
+      <left>1076</left>
+      <top>170</top>
+      <enemy unit="ELITE_SOLDIER_DESERTER" count="80" />
+      <enemy unit="CANNONNEER_DESERTER" count="20" />
+      <enemy unit="SIR_ROBIN" count="1" />
+    </camp>
+  </camps>
+</quest>
