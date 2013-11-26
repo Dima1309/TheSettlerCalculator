@@ -157,8 +157,8 @@
       <sector>3</sector>
       <left>1830</left>
       <top>333</top>
-      <enemy unit="MILITIA_DESERTER" count="60" />
-      <enemy unit="LONGBOWMAN_DESERTER" count="20" />
+      <enemy unit="MILITIA_DESERTER" count="20" />
+      <enemy unit="LONGBOWMAN_DESERTER" count="60" />
     </camp>
     <camp>
       <name>7</name>
@@ -207,8 +207,8 @@
       <sector>4</sector>
       <left>598</left>
       <top>262</top>
-      <enemy unit="MILITIA_DESERTER" count="20" />
-      <enemy unit="LONGBOWMAN_DESERTER" count="60" />
+      <enemy unit="MILITIA_DESERTER" count="60" />
+      <enemy unit="LONGBOWMAN_DESERTER" count="20" />
     </camp>
     <camp>
       <name>8</name>
