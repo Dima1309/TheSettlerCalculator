@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <quest>
   <name>QUEST_LOST_SKULL</name>
-  <map>Quests\Maps\</map>
+  <map>Quests\Maps\the-lost-skull.jpeg</map>
   <icon>Quests\Icons\the-lost-skull.png</icon>
   <enemies>
     <enemy>CALTROP</enemy>
@@ -13,6 +13,46 @@
     <enemy>PETTY_OFFICER_2ND_CLASS</enemy>
   </enemies>
   <camps>
-
+    <camp>
+      <name>1</name>
+      <type>Normal</type>
+      <wintime>20</wintime>
+      <sector>1</sector>
+      <left>504</left>
+      <top>640</top>
+      <enemy unit="DECKSCRUBBER" count="80" />
+      <enemy unit="KNIFETHROWER" count="120" />
+    </camp>
+    <camp>
+      <name>2</name>
+      <type>Boss</type>
+      <wintime>20</wintime>
+      <sector>1</sector>
+      <left>859</left>
+      <top>470</top>
+      <enemy unit="CALTROP" count="80" />
+      <enemy unit="DECKSCRUBBER" count="120" />
+    </camp>
+    <camp>
+      <name>3</name>
+      <type>Normal</type>
+      <wintime>20</wintime>
+      <sector>2</sector>
+      <left>331</left>
+      <top>338</top>
+      <enemy unit="CALTROP" count="60" />
+      <enemy unit="SABER_RATTLER" count="140" />
+    </camp>
+    <camp>
+      <name>4</name>
+      <type>Boss</type>
+      <wintime>20</wintime>
+      <sector>2</sector>
+      <left>568</left>
+      <top>123</top>
+      <enemy unit="CRAZY_COOK" count="1" />
+      <enemy unit="GUNMAN" count="80" />
+      <enemy unit="PETTY_OFFICER_2ND_CLASS" count="20" />
+    </camp>
   </camps>
 </quest>

@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <quest>
   <name>QUEST_TROPICAL_SUN</name>
-  <map>Quests\Maps\</map>
+  <map>Quests\Maps\tropical-sun.jpeg</map>
   <icon>Quests\Icons\tropical-sun.png</icon>
   <enemies>
     <enemy>SCAVENGER</enemy>
@@ -18,6 +18,100 @@
     <enemy>PETTY_OFFICER_2ND_CLASS</enemy>
   </enemies>
   <camps>
-
+    <camp>
+      <name>1</name>
+      <type>Normal</type>
+      <wintime>20</wintime>
+      <sector>1</sector>
+      <left>1912</left>
+      <top>1375</top>
+      <enemy unit="SCAVENGER" count="30" />
+      <enemy unit="RANGER" count="30" />
+    </camp>
+    <camp>
+      <name>2</name>
+      <type>Normal</type>
+      <wintime>20</wintime>
+      <sector>2</sector>
+      <left>1216</left>
+      <top>1556</top>
+      <enemy unit="SCAVENGER" count="30" />
+      <enemy unit="GUARD_DOG" count="30" />
+    </camp>
+    <camp>
+      <name>3</name>
+      <type>Boss</type>
+      <wintime>20</wintime>
+      <sector>3</sector>
+      <left>1011</left>
+      <top>1378</top>
+      <enemy unit="CALTROP" count="20" />
+      <enemy unit="CRAZY_COOK" count="1" />
+      <enemy unit="KNIFETHROWER" count="20" />
+      <enemy unit="PETTY_OFFICER_2ND_CLASS" count="20" />
+    </camp>
+    <camp>
+      <name>4</name>
+      <type>Normal</type>
+      <wintime>20</wintime>
+      <sector>4</sector>
+      <left>1478</left>
+      <top>1080</top>
+      <enemy unit="CALTROP" count="40" />
+      <enemy unit="SABER_RATTLER" count="50" />
+    </camp>
+    <camp>
+      <name>5</name>
+      <type>Normal</type>
+      <wintime>20</wintime>
+      <sector>5</sector>
+      <left>1450</left>
+      <top>715</top>
+      <enemy unit="CALTROP" count="20" />
+      <enemy unit="SABER_RATTLER" count="40" />
+      <enemy unit="GUNMAN" count="40" />
+    </camp>
+    <camp>
+      <name>6</name>
+      <type>Normal</type>
+      <wintime>20</wintime>
+      <sector>6</sector>
+      <left>959</left>
+      <top>480</top>
+      <enemy unit="SCAVENGER" count="0" />
+      <enemy unit="GUARD_DOG" count="60" />
+      <enemy unit="RANGER" count="30" />
+    </camp>
+    <camp>
+      <name>7</name>
+      <type>Normal</type>
+      <wintime>20</wintime>
+      <sector>7</sector>
+      <left>1219</left>
+      <top>635</top>
+      <enemy unit="GUARD_DOG" count="50" />
+      <enemy unit="RANGER" count="40" />
+    </camp>
+    <camp>
+      <name>8</name>
+      <type>Normal</type>
+      <wintime>20</wintime>
+      <sector>8</sector>
+      <left>961</left>
+      <top>795</top>
+      <enemy unit="ROUGHNECK" count="60" />
+      <enemy unit="RANGER" count="30" />
+    </camp>
+    <camp>
+      <name>9</name>
+      <type>Boss</type>
+      <wintime>20</wintime>
+      <sector>9</sector>
+      <left>600</left>
+      <top>668</top>
+      <enemy unit="THUG" count="30" />
+      <enemy unit="GUARD_DOG" count="50" />
+      <enemy unit="SKUNK" count="1" />
+    </camp>
   </camps>
 </quest>
