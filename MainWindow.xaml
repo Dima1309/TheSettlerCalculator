@@ -6,7 +6,7 @@
         xmlns:types="clr-namespace:TheSettlersCalculator.Types"
         xmlns:Converters="clr-namespace:TheSettlersCalculator.WpfTypes.Converters"
         xmlns:System="clr-namespace:System;assembly=mscorlib"
-        xmlns:Components="clr-namespace:TheSettlersCalculator.WpfTypes.Components" Title="MainWindow" Height="640" Width="800" x:Name="Win" Closed="Win_Closed">
+        xmlns:Components="clr-namespace:TheSettlersCalculator.WpfTypes.Components" Title="Калькулятор боя - The Settlers Online" Height="640" Width="800" x:Name="Win" Closed="Win_Closed">
 	<Window.Resources>
         <ObjectDataProvider x:Key="serverTypeEnum" MethodName="GetValues" ObjectType="{x:Type System:Enum}">
             <ObjectDataProvider.MethodParameters>
@@ -91,7 +91,7 @@
 								<Label Content="{Binding AttackerId}" ContentStringFormat="{}({0})"></Label>
 								<Label Content=" наносит "></Label>
 								<Label Content="{Binding Damage}"></Label>
-								<Image Source="{Binding Defender.Icon}">
+                                <Image Width="30" Height="30" Source="{Binding Defender.Icon}">
                                     <Image.ToolTip>
                                         <Components:UnitTooltip Unit="{Binding Defender}"></Components:UnitTooltip>
                                     </Image.ToolTip>
@@ -604,7 +604,7 @@
 													<ItemsControl.ItemTemplate>
 														<DataTemplate>
 															<StackPanel Orientation="Horizontal">
-																<Image Source="{Binding Unit.Icon}">
+                                                                <Image Width="30" Height="30" Source="{Binding Unit.Icon}">
                                                                     <Image.ToolTip>
                                                                         <Components:UnitTooltip Unit="{Binding Unit}"></Components:UnitTooltip>
                                                                     </Image.ToolTip>
@@ -619,7 +619,7 @@
 													<ItemsControl.ItemTemplate>
 														<DataTemplate>
 															<StackPanel Orientation="Horizontal">
-																<Image Source="{Binding Unit.Icon}">
+                                                                <Image Width="30" Height="30" Source="{Binding Unit.Icon}">
                                                                     <Image.ToolTip>
                                                                         <Components:UnitTooltip Unit="{Binding Unit}"></Components:UnitTooltip>
                                                                     </Image.ToolTip>                                                                    
@@ -703,7 +703,7 @@
 				</ScrollViewer>
 			</Grid>
 		</TabItem>
-		<TabItem Header="Подбор состава"></TabItem>
+		<TabItem Header="Подбор состава" Visibility="Collapsed"></TabItem>
 		<TabItem Header="Опции">
             <ScrollViewer DataContext="{Binding Model, ElementName=Win}" Padding="6,6">
                 <StackPanel Orientation="Vertical">
