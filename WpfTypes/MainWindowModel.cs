@@ -15,7 +15,7 @@ namespace TheSettlersCalculator.WpfTypes
 		public event PropertyChangedEventHandler PropertyChanged;
 
 		#region Constants
-		private const int ROUNDS = 10000;
+		//private const int ROUNDS = 10000;
 		private const int MAX_WAVES_COUNT = 5;
 		#endregion
 
@@ -353,9 +353,10 @@ namespace TheSettlersCalculator.WpfTypes
 
 		internal void Calculate()
 		{
-			Calculator calculator = new Calculator(ROUNDS);
+			Calculator calculator = new Calculator(Options.Instance.Rounds);
 			//unist, counts, general, enemy units, counts, generals
-			MultiWaveBattle battle = new MultiWaveBattle(ROUNDS);
+			MultiWaveBattle battle = new MultiWaveBattle(Options.Instance.Rounds);
+			battle.BattleType = Options.Instance.MultiWaveBattleType;
 
 			bool isEnemyEmpty = true;
 			bool isAttackerEmpty = true;
