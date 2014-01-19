@@ -19,6 +19,7 @@ namespace TheSettlersCalculator.Statistics
 		{
 			m_battle = battle;
 			m_dummyTotalBattle = new Battle(battle.Units.ToArray(), false, battle.EnemyUnits.ToArray(), false);
+			m_dummyTotalBattle.StatisticsType = battle.StatisticsType;
 		}
 		#endregion
 
@@ -37,7 +38,7 @@ namespace TheSettlersCalculator.Statistics
 		{
 			get { return m_statistics; }
 		}
-		#endregion				
+		#endregion
 
 		#region Methods
 		internal void MultiWaveBattleCompleteHandler(object sender, EventArgs args)
@@ -74,29 +75,12 @@ namespace TheSettlersCalculator.Statistics
 			m_temp.Add(args.Key, args.Statistics);
 		}
 
-		internal void CalculatePrices()
+		internal void Calculate()
 		{
-			m_totalStatistics.CalculatePrices();
-			foreach(KeyValuePair<WaveKey, Statistics> pair in m_statistics)
-			{
-				pair.Value.CalculatePrices();
-			}
-		}
-
-		internal void CalculateLossesTime()
-		{
-			m_totalStatistics.CalculateLossesTime();
+			m_totalStatistics.Calculate();
 			foreach (KeyValuePair<WaveKey, Statistics> pair in m_statistics)
 			{
-				pair.Value.CalculateLossesTime();
-			}
-		}
-
-		internal void CallculateBattleTime()
-		{
-			foreach (KeyValuePair<WaveKey, Statistics> pair in m_statistics)
-			{
-				pair.Value.CalculateBattleTime();
+				pair.Value.Calculate();
 			}
 		}
 		#endregion

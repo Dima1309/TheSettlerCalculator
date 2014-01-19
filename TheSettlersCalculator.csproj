@@ -54,6 +54,9 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="ChartWindow.xaml.cs">
+      <DependentUpon>ChartWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Functions\BattleTimeFunction.cs" />
     <Compile Include="Functions\IFunction.cs" />
     <Compile Include="Functions\LossesRecoveryTimeFunction.cs" />
@@ -71,8 +74,10 @@
     <Compile Include="Quests\Quest.cs" />
     <Compile Include="Quests\QuestComparerByName.cs" />
     <Compile Include="Quests\Quests.cs" />
+    <Compile Include="Statistics\ShortArrayComparer.cs" />
     <Compile Include="Statistics\MultiWaveStatistics.cs" />
     <Compile Include="Statistics\Statistics.cs" />
+    <Compile Include="Statistics\StatisticsType.cs" />
     <Compile Include="Statistics\WaveKey.cs" />
     <Compile Include="Types\AttackPriority.cs" />
     <Compile Include="Types\Battle.cs" />
@@ -154,6 +159,10 @@
     <Compile Include="WpfTypes\Converters\TowerBonusConverter.cs" />
     <Compile Include="WpfTypes\UnitSquad.cs" />
     <Compile Include="WpfTypes\Converters\UserUnitsWarningCountBrushConverter.cs" />
+    <Page Include="ChartWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -304,6 +313,10 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Quests\Images\berserk.png" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\diagram.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>

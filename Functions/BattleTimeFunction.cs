@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using TheSettlersCalculator.Statistics;
+using TheSettlersCalculator.Types;
 
 namespace TheSettlersCalculator.Functions
 {
@@ -12,12 +13,19 @@ namespace TheSettlersCalculator.Functions
 
 		public double Evaluate(MultiWaveStatistics statistics)
 		{
-			throw new NotImplementedException();			
+			throw new NotImplementedException();
 		}
 
 		public double Evaluate(Statistics.Statistics statistics)
 		{
 			throw new NotImplementedException();
+		}
+
+		internal double CalculateBattleTime(Battle battle, int rounds)
+		{
+			return Math.Abs(rounds) * ROUND_TIME + (rounds > 0
+			                                               	? battle.WinBattleTime
+			                                               	: 0);
 		}
 
 		internal void CalculateBattleTime(
@@ -33,9 +41,7 @@ namespace TheSettlersCalculator.Functions
 
 			foreach(KeyValuePair<int, int> roundStatistic in statistics.RoundStatistics)
 			{
-				double time = Math.Abs(roundStatistic.Key) * ROUND_TIME + (roundStatistic.Key > 0
-				              	? statistics.Battle.WinBattleTime
-				              	: 0);
+				double time = CalculateBattleTime(statistics.Battle, roundStatistic.Key);
 				minBattleTime = Math.Min(minBattleTime, time);
 				maxBattleTime = Math.Max(maxBattleTime, time);
 				avgBattleTime = battleCount / (battleCount + roundStatistic.Value) * avgBattleTime +

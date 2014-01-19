@@ -18,8 +18,12 @@ namespace TheSettlersCalculator.WpfTypes
 		private readonly double m_avgLossesRecoveryTime;
 
 		private readonly double m_minBattleTime;
+		private readonly double m_minBattleTimeChance;
 		private readonly double m_maxBattleTime;
+		private readonly double m_maxBattleTimeChance;
 		private readonly double m_avgBattleTime;
+
+		private readonly IDictionary<double, double> m_battleTimeStatistics;
 		#endregion
 
 		#region Constructor
@@ -35,8 +39,11 @@ namespace TheSettlersCalculator.WpfTypes
 				m_avgLossesRecoveryTime = statistics.AvgLossesRecoveryTime;
 
 				m_minBattleTime = statistics.MinBattleTime;
+				m_minBattleTimeChance = statistics.MinBattleTimeChance;
 				m_maxBattleTime = statistics.MaxBattleTime;
+				m_maxBattleTimeChance = statistics.MaxBattleTimeChance;
 				m_avgBattleTime = statistics.AvgBattleTime;
+				m_battleTimeStatistics = statistics.BattleTimeStatistics;
 
 				m_losesPrice = statistics.LosesPrice;
 			}
@@ -97,6 +104,21 @@ namespace TheSettlersCalculator.WpfTypes
 		public double AvgBattleTime
 		{
 			get { return m_avgBattleTime; }
+		}
+
+		public double MinBattleTimeChance
+		{
+			get { return m_minBattleTimeChance; }
+		}
+
+		public double MaxBattleTimeChance
+		{
+			get { return m_maxBattleTimeChance; }
+		}
+
+		public IDictionary<double, double> BattleTimeStatistics
+		{
+			get { return m_battleTimeStatistics; }
 		}
 		#endregion
 	}

@@ -63,6 +63,7 @@ namespace TheSettlersCalculator.Types
 		private List<Unit> m_units;
 		private List<Unit> m_enemyUnits;
 
+		private StatisticsType m_statisticsType;
 		private MultiWaveBattleWaveCompleteHandler m_waveCompleteHandler;
 		private MultiWaveBattleCompleteHandler m_battleCompleteHandler;
 		#endregion
@@ -122,6 +123,12 @@ namespace TheSettlersCalculator.Types
 
 				return m_enemyUnits;
 			}
+		}
+
+		public StatisticsType StatisticsType
+		{
+			get { return m_statisticsType; }
+			set { m_statisticsType = value; }
 		}
 		#endregion
 
@@ -202,6 +209,7 @@ namespace TheSettlersCalculator.Types
 					battle.PlayerTowerBonus = m_playerWaves[playerIndex].TowerBonus;
 					battle.EnemyTowerBonus = m_enemyWaves[enemyIndex].TowerBonus;
 					battle.WinBattleTime = destroyEnemyCampTime;
+					battle.StatisticsType = m_statisticsType;
 					calculator.IterationCount = GetBattleIterationCount();
 					Statistics.Statistics statistics = new Statistics.Statistics(battle);
 					calculator.OnBattleComplete += statistics.BattleComplete;
@@ -212,6 +220,7 @@ namespace TheSettlersCalculator.Types
 						m_waveCompleteHandler(this, new MultiWaveBatleWaveCompleteArgs(new WaveKey(playerIndex, enemyIndex), statistics));
 					}
 
+					statistics.Calculate();
 					bool empty = true;
 					short[] attackerLosses = GetPlayerLosses(statistics);
 					int i = 0;

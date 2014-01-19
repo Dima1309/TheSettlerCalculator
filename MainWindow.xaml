@@ -6,7 +6,8 @@
         xmlns:types="clr-namespace:TheSettlersCalculator.Types"
         xmlns:Converters="clr-namespace:TheSettlersCalculator.WpfTypes.Converters"
         xmlns:System="clr-namespace:System;assembly=mscorlib"
-        xmlns:Components="clr-namespace:TheSettlersCalculator.WpfTypes.Components" Title="Калькулятор боя - The Settlers Online" Height="640" Width="800" x:Name="Win" Closed="Win_Closed">
+        xmlns:Components="clr-namespace:TheSettlersCalculator.WpfTypes.Components"
+        Title="Калькулятор боя - The Settlers Online" Height="640" Width="800" x:Name="Win" Closed="Win_Closed">
 	<Window.Resources>
         <ObjectDataProvider x:Key="serverTypeEnum" MethodName="GetValues" ObjectType="{x:Type System:Enum}">
             <ObjectDataProvider.MethodParameters>
@@ -229,9 +230,14 @@
 						<TextBlock FontWeight="Bold">Детали</TextBlock>
 					</Expander.Header>
 					<StackPanel Orientation="Vertical">
-						<Label FontWeight="Bold">
-							Стоимость убитых войск:
-						</Label>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+
+                            <Label FontWeight="Bold" Grid.Column="0" HorizontalContentAlignment="Left">Стоимость убитых войск:</Label>
+                        </Grid>                        
                         <Expander>
                             <Expander.Header>
                                 <StackPanel Orientation="Horizontal">
@@ -300,8 +306,24 @@
 							<Label HorizontalAlignment="Center" Grid.Row="1" Grid.Column="1" Content="{Binding AvgLossesRecoveryTime, Converter={StaticResource secondsToStringConverter}}" />
 							<Label HorizontalAlignment="Center" Grid.Row="1" Grid.Column="2" Content="{Binding MaxLossesRecoveryTime, Converter={StaticResource secondsToStringConverter}}" />
 						</Grid>
-						<Label>Время боя:</Label>
-						<Grid>
+                        
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="*" />                                    
+                            </Grid.ColumnDefinitions>
+
+                            <Label FontWeight="Bold" Grid.Column="0" HorizontalContentAlignment="Left">Время боя:</Label>
+
+                            <Button Click="Button_Click_3" HorizontalAlignment="Right" HorizontalContentAlignment="Right" Grid.Column="1">
+                                <StackPanel Orientation="Horizontal">
+                                    <Image Source="{Binding Model.Diagram, ElementName=Win}"></Image>
+                                    <Label>График</Label>
+                                </StackPanel>
+                            </Button>
+                        </Grid>
+                        
+                        <Grid>
 							<Grid.ColumnDefinitions>
 								<ColumnDefinition Width="*" />
 								<ColumnDefinition Width="*" />
@@ -317,11 +339,33 @@
 							<Label HorizontalAlignment="Center" Grid.Column="1">Сред.</Label>
 							<Label HorizontalAlignment="Center" Grid.Column="2">Макс.</Label>
 
-							<Label HorizontalAlignment="Center" Grid.Row="1" Grid.Column="0" Content="{Binding MinBattleTime, Converter={StaticResource battleTimeConverter}}" />
-							<Label HorizontalAlignment="Center" Grid.Row="1" Grid.Column="1" Content="{Binding AvgBattleTime, Converter={StaticResource battleTimeConverter}}" />
-							<Label HorizontalAlignment="Center" Grid.Row="1" Grid.Column="2" Content="{Binding MaxBattleTime, Converter={StaticResource battleTimeConverter}}" />
-						</Grid>
-					</StackPanel>
+                            <Label HorizontalAlignment="Center" Grid.Row="1" Grid.Column="0">
+                                <Label.Content>
+                                    <TextBlock>
+                                        <TextBlock.Text>
+                                            <MultiBinding StringFormat="{}{0} ({1:f2}%)">
+                                                <Binding Path="MinBattleTime" Converter="{StaticResource battleTimeConverter}"/>
+                                                <Binding Path="MinBattleTimeChance"/>
+                                            </MultiBinding>
+                                        </TextBlock.Text>
+                                    </TextBlock>
+                                </Label.Content>
+                            </Label>
+                            <Label HorizontalAlignment="Center" Grid.Row="1" Grid.Column="1" Content="{Binding AvgBattleTime, Converter={StaticResource battleTimeConverter}}" />
+                            <Label HorizontalAlignment="Center" Grid.Row="1" Grid.Column="2">
+                                <Label.Content>
+                                    <TextBlock>
+                                        <TextBlock.Text>
+                                            <MultiBinding StringFormat="{}{0} ({1:f2}%)">
+                                                <Binding Path="MaxBattleTime" Converter="{StaticResource battleTimeConverter}"/>
+                                                <Binding Path="MaxBattleTimeChance"/>
+                                            </MultiBinding>
+                                        </TextBlock.Text>
+                                    </TextBlock>
+                                </Label.Content>
+                            </Label>
+                        </Grid>
+                    </StackPanel>
 				</Expander>
 			</StackPanel>
 		</DataTemplate>

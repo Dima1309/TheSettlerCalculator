@@ -1,4 +1,5 @@
 ﻿using System.Windows;
+using System.Windows.Controls;
 using TheSettlersCalculator.Types;
 using TheSettlersCalculator.WpfTypes;
 
@@ -36,7 +37,7 @@ namespace TheSettlersCalculator
 				else
 				{
 					Model.ActiveEnemyCamp = questMapWindow.SelectedCamp;
-				}				
+				}
 			}
 		}
 
@@ -54,6 +55,24 @@ namespace TheSettlersCalculator
 		{
 			Quests.Quests.Save();
 			Options.Instance.Save();
+		}
+
+		private void Button_Click_3(object sender, RoutedEventArgs e)
+		{
+			Control control = sender as Control;
+			if (control == null)
+			{
+				return;
+			}
+
+			BattleLosses battleLosses = control.DataContext as BattleLosses;
+			if (battleLosses == null)
+			{
+				return;
+			}
+
+			ChartWindow chartWindow = new ChartWindow(battleLosses);
+			chartWindow.ShowDialog();
 		}
     }
 }

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using TheSettlersCalculator.Statistics;
 using TheSettlersCalculator.WpfTypes;
 
 namespace TheSettlersCalculator.Types
@@ -7,6 +8,7 @@ namespace TheSettlersCalculator.Types
 	internal class Battle : ICloneable
 	{
 		#region Fields
+		private StatisticsType m_statisticsType;
 		private readonly BattleSide[] m_sides;
 		private int m_winBattleTime = (int) CampWinTime.Normal;
 		#endregion
@@ -22,7 +24,7 @@ namespace TheSettlersCalculator.Types
 			Sides[(int)BattleSideType.Enemy] = new BattleSide(result.Key, result.Value, enemyGeneral);
 		}
 
-		internal Battle(Unit[] units, short[] counts, bool general, Unit[] enemyUnits, short[] enemyCounts, bool enemyGeneral)
+		internal Battle(Unit[] units, short[] counts, bool general, Unit[] enemyUnits, short[] enemyCounts, bool enemyGeneral, StatisticsType statisticsType)
 		{
 			KeyValuePair<Unit[], short[]> result = InitializeUnits(units, counts);
 			m_sides = new BattleSide[2];
@@ -30,6 +32,8 @@ namespace TheSettlersCalculator.Types
 
 			result = InitializeUnits(enemyUnits, enemyCounts);
 			Sides[(int)BattleSideType.Enemy] = new BattleSide(result.Key, result.Value, enemyGeneral);
+
+			m_statisticsType = statisticsType;
 		}
 
 		internal Battle(Unit[] units, bool general, Unit[] enemyUnits, bool enemyGeneral)
@@ -138,11 +142,17 @@ namespace TheSettlersCalculator.Types
 			get { return m_winBattleTime; }
 			set { m_winBattleTime = value; }
 		}
+
+		public StatisticsType StatisticsType
+		{
+			get { return m_statisticsType; }
+			set { m_statisticsType = value; }
+		}
 		#endregion
 
 		public object Clone()
 		{
-			return new Battle(Units, Counts, General, EnemyUnits, EnemyCounts, EnemyGeneral);
+			return new Battle(Units, Counts, General, EnemyUnits, EnemyCounts, EnemyGeneral, m_statisticsType);
 		}
 	}
 }

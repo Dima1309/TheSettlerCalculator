@@ -9,10 +9,16 @@ namespace TheSettlersCalculator.Statistics
 	{
 		#region Fields
 		private readonly Battle m_battle;
-		private BattleStep m_minAttackerResult;
-		private BattleStep m_maxAttackerResult;
-		private BattleStep m_minDefenderResult;
-		private BattleStep m_maxDefenderResult;
+		//Key - round count, Value - count of battles
+		private readonly Dictionary<int, int> m_roundStatistics = new Dictionary<int, int>();
+		//Key - losses, Value - count or chance
+		private readonly Dictionary<short[], double> m_attackerLossesStatistics = new Dictionary<short[], double>(new ShortArrayComparer());
+		private readonly Dictionary<short[], double> m_defenderLossesStatistics = new Dictionary<short[], double>(new ShortArrayComparer());
+		private bool m_isCountInAttackerLossesStatistics = true;
+		private bool m_isCountInDefenderLossesStatistics = true;
+		//Key - battle time, Value - chance
+		private SortedDictionary<double, double> m_battleTimeStatistics = new SortedDictionary<double, double>();
+
 		private short[] m_minAttackerLosses;
 		private double[] m_avgAttackerLosses;
 		private short[] m_maxAttackerLosses;
@@ -32,11 +38,10 @@ namespace TheSettlersCalculator.Statistics
 		private double m_avgLossesRecoveryTime;
 
 		private double m_minBattleTime;
+		private double m_minBattleTimeChance;
 		private double m_maxBattleTime;
+		private double m_maxBattleTimeChance;
 		private double m_avgBattleTime;
-
-		//Key - round count, Value - count of battles
-		private readonly Dictionary<int, int> m_roundStatistics = new Dictionary<int, int>();
 		#endregion
 
 		#region Constructor
@@ -85,26 +90,6 @@ namespace TheSettlersCalculator.Statistics
 		internal int Count
 		{
 			get { return m_count; }
-		}
-
-		internal BattleStep MinAttackerResult
-		{
-			get { return m_minAttackerResult; }
-		}
-
-		internal BattleStep MaxAttackerResult
-		{
-			get { return m_maxAttackerResult; }
-		}
-
-		internal BattleStep MinDefenderResult
-		{
-			get { return m_minDefenderResult; }
-		}
-
-		internal BattleStep MaxDefenderResult
-		{
-			get { return m_maxDefenderResult; }
 		}
 
 		internal int MinRounds
@@ -166,11 +151,28 @@ namespace TheSettlersCalculator.Statistics
 		{
 			get { return m_avgBattleTime; }
 		}
+
+		public double MinBattleTimeChance
+		{
+			get { return m_minBattleTimeChance; }
+		}
+
+		public double MaxBattleTimeChance
+		{
+			get { return m_maxBattleTimeChance; }
+		}
+
+		public SortedDictionary<double, double> BattleTimeStatistics
+		{
+			get { return m_battleTimeStatistics; }
+		}
 		#endregion
 
 		#region Methods
 		internal void BattleComplete(object sender, BattleCompleteArgs args)
 		{
+			m_count++;
+
 			int rem;
 			int rounds = Math.DivRem(args.Steps.Count - 1, 3, out rem);
 			if (rem > 0)
@@ -198,104 +200,28 @@ namespace TheSettlersCalculator.Statistics
 			{
 				if (attackerLoss > 0)
 				{
-					winBattle = true;					
+					winBattle = true;
 					break;
 				}
 			}
 
-			if (winBattle)
+			if (m_attackerLossesStatistics.ContainsKey(attackerLosses))
 			{
-				m_winCount++;
-
-			}
-
-			if (m_minAttackerLosses == null)
-			{
-				m_minAttackerResult = lastStep;
-				m_maxAttackerResult = lastStep;
-				m_minDefenderResult = lastStep;
-				m_maxDefenderResult = lastStep;
-
-				m_minAttackerLosses = new short[args.Battle.Units.Length];
-				m_avgAttackerLosses = new double[args.Battle.Units.Length];
-				m_maxAttackerLosses = new short[args.Battle.Units.Length];
-
-				m_minDefenderLosses = new short[args.Battle.EnemyUnits.Length];
-				m_avgDefenderLosses = new double[args.Battle.EnemyUnits.Length];
-				m_maxDefenderLosses = new short[args.Battle.EnemyUnits.Length];
-				m_count = 0;
-
-				Array.Copy(attackerLosses, m_minAttackerLosses, attackerLosses.Length);
-				Array.Copy(attackerLosses, m_maxAttackerLosses, attackerLosses.Length);
-
-				Array.Copy(defenderLosses, m_minDefenderLosses, defenderLosses.Length);
-				Array.Copy(defenderLosses, m_maxDefenderLosses, defenderLosses.Length);
-
-				for(int i=0; i< attackerLosses.Length; i++)
-				{
-					m_avgAttackerLosses[i] = attackerLosses[i];
-				}
-
-				for (int i = 0; i < defenderLosses.Length; i++)
-				{
-					m_avgDefenderLosses[i] = defenderLosses[i];
-				}
-
-				m_minRounds = m_maxRounds = rounds;
-				m_avgRounds = rounds;
+				m_attackerLossesStatistics[attackerLosses] += 1;
 			}
 			else
 			{
-				if (rounds < m_minRounds)
-				{
-					m_minRounds = rounds;
-				}
-
-				if (rounds > m_maxRounds)
-				{
-					m_maxRounds = rounds;
-				}
-
-				m_avgRounds = (double)Count / (Count + 1) * m_avgRounds + (double)rounds / (Count + 1);
-
-				if (CompareLosses(attackerLosses, m_minAttackerLosses) < 0)
-				{
-					Array.Copy(attackerLosses, m_minAttackerLosses, attackerLosses.Length);
-					m_minAttackerResult = lastStep;
-				}
-
-				if (CompareLosses(attackerLosses, m_maxAttackerLosses) > 0)
-				{
-					Array.Copy(attackerLosses, m_maxAttackerLosses, attackerLosses.Length);
-					m_maxAttackerResult = lastStep;
-				}
-
-				if (CompareLosses(defenderLosses, m_minDefenderLosses) < 0)
-				{
-					Array.Copy(defenderLosses, m_minDefenderLosses, defenderLosses.Length);
-					m_maxDefenderResult = lastStep;
-				}
-
-				if (CompareLosses(defenderLosses, m_maxDefenderLosses) > 0)
-				{
-					Array.Copy(defenderLosses, m_maxDefenderLosses, defenderLosses.Length);
-					m_maxDefenderResult = lastStep;
-				}
-
-				for(int i = 0; i < attackerLosses.Length; i++)
-				{
-					m_avgAttackerLosses[i] = (double) Count / (Count + 1) * m_avgAttackerLosses[i] +
-											 (double) attackerLosses[i] / (Count + 1);
-				}
-
-				for (int i = 0; i < defenderLosses.Length; i++)
-				{
-					m_avgDefenderLosses[i] = (double)Count / (Count + 1) * m_avgDefenderLosses[i] +
-											 (double)defenderLosses[i] / (Count + 1);
-				}
+				m_attackerLossesStatistics[attackerLosses] = 1;
 			}
 
-			m_count = Count + 1;
+			if (m_defenderLossesStatistics.ContainsKey(defenderLosses))
+			{
+				m_defenderLossesStatistics[defenderLosses] += 1;
+			}
+			else
+			{
+				m_defenderLossesStatistics[defenderLosses] = 1;
+			}
 
 			if (!winBattle)
 			{
@@ -322,83 +248,47 @@ namespace TheSettlersCalculator.Statistics
 			{
 				return;
 			}
-		 
-			if (m_minAttackerLosses==null || CompareLosses(m_minAttackerLosses, statistics.m_minAttackerLosses) > 0)
-			{
-				m_minAttackerLosses = statistics.m_minAttackerLosses;
-				m_minAttackerResult = statistics.m_minAttackerResult;
-			}
 
-			if (m_maxAttackerLosses==null || CompareLosses(m_maxAttackerLosses, statistics.m_maxAttackerLosses) < 0)
-			{
-				m_maxAttackerLosses = statistics.m_maxAttackerLosses;
-				m_maxAttackerResult = statistics.m_maxAttackerResult;
-			}
+			m_count += statistics.m_count;
 
-			if (m_minDefenderLosses == null || CompareLosses(m_minDefenderLosses, statistics.m_minDefenderLosses) > 0)
+			if (m_isCountInAttackerLossesStatistics)
 			{
-				m_minDefenderLosses = statistics.m_minDefenderLosses;
-				m_minDefenderResult = statistics.m_minDefenderResult;
-			}
-
-			if (m_maxDefenderLosses == null || CompareLosses(m_maxDefenderLosses, statistics.m_maxDefenderLosses) < 0)
-			{
-				m_maxDefenderLosses = statistics.m_maxDefenderLosses;
-				m_maxDefenderResult = statistics.m_maxDefenderResult;
-			}
-
-			if (m_minRounds == 0 || m_minRounds > statistics.m_minRounds)
-			{
-				m_minRounds = statistics.m_minRounds;
-			}
-
-			if (m_maxRounds == 0 || m_maxRounds < statistics.m_maxRounds)
-			{
-				m_maxRounds = statistics.m_maxRounds;
-			}
-
-			if (m_minBattleTime == 0 || m_minBattleTime > statistics.m_minBattleTime)
-			{
-				m_minBattleTime = statistics.m_minBattleTime;
-			}
-
-			if (m_maxBattleTime == 0 || m_maxBattleTime < statistics.m_maxBattleTime)
-			{
-				m_maxBattleTime = statistics.m_maxBattleTime;
-			}
-			
-
-			if (m_count == 0)
-			{
-				statistics.CalculateBattleTime();
-				m_avgRounds = statistics.m_avgRounds;
-				m_avgAttackerLosses = statistics.m_avgAttackerLosses;
-				m_avgDefenderLosses = statistics.m_avgDefenderLosses;
-				m_avgBattleTime = statistics.m_avgBattleTime;
+				foreach(KeyValuePair<short[], double> attackerLosses in statistics.m_attackerLossesStatistics)
+				{
+					if(m_attackerLossesStatistics.ContainsKey(attackerLosses.Key))
+					{
+						m_attackerLossesStatistics[attackerLosses.Key] += attackerLosses.Value;
+					}
+					else
+					{
+						m_attackerLossesStatistics[attackerLosses.Key] = attackerLosses.Value;
+					}
+				}
 			}
 			else
 			{
-				statistics.CalculateBattleTime();
-				double currentStatsKoef = (double) m_count / (m_count + statistics.m_count);
-				double newStatsKoef = (double) statistics.m_count / (m_count + statistics.m_count);
-
-				m_avgRounds = currentStatsKoef * m_avgRounds + newStatsKoef * statistics.m_avgRounds;
-				m_avgBattleTime = currentStatsKoef * m_avgBattleTime + newStatsKoef * statistics.m_avgBattleTime;
-				for(int i = 0; i < m_avgAttackerLosses.Length; i++)
-				{
-					m_avgAttackerLosses[i] = currentStatsKoef * m_avgAttackerLosses[i] + newStatsKoef * statistics.m_avgAttackerLosses[i];
-				}
-
-				for (int i = 0; i < m_avgDefenderLosses.Length; i++)
-				{
-					m_avgDefenderLosses[i] = currentStatsKoef * m_avgDefenderLosses[i] + newStatsKoef * statistics.m_avgDefenderLosses[i];
-				}
+				throw new NotImplementedException("AddStatistics method for m_isCountInAttackerLossesStatistics==false is not implemented.");
 			}
 
-			m_winCount += statistics.m_winCount;
-			m_count += statistics.m_count;
+			if (m_isCountInDefenderLossesStatistics)
+			{
+				foreach(KeyValuePair<short[], double> defenderLosses in statistics.m_defenderLossesStatistics)
+				{
+					if(m_defenderLossesStatistics.ContainsKey(defenderLosses.Key))
+					{
+						m_defenderLossesStatistics[defenderLosses.Key] += defenderLosses.Value;
+					}
+					else
+					{
+						m_defenderLossesStatistics[defenderLosses.Key] = defenderLosses.Value;
+					}
+				}
+			} else
+			{
+				throw new NotImplementedException("AddStatistics method for m_isCountInDefenderLossesStatistics==false is not implemented.");
+			}
 
-			foreach(KeyValuePair<int, int> roundStatistic in RoundStatistics)
+			foreach (KeyValuePair<int, int> roundStatistic in statistics.RoundStatistics)
 			{
 				if (RoundStatistics.ContainsKey(roundStatistic.Key))
 				{
@@ -407,7 +297,7 @@ namespace TheSettlersCalculator.Statistics
 				else
 				{
 					RoundStatistics[roundStatistic.Key] = roundStatistic.Value;
-				}	
+				}
 			}
 		}
 
@@ -418,33 +308,246 @@ namespace TheSettlersCalculator.Statistics
 		/// <param name="battle">Multiwave battle.</param>
 		internal void CombineStatistics(Statistics statistics, MultiWaveBattle battle)
 		{
-			m_minAttackerLosses = CombineLosses(m_minAttackerLosses, ConvertLosses(statistics.m_minAttackerLosses, statistics.Battle.Units, battle.Units));
-			m_avgAttackerLosses = CombineLosses(m_avgAttackerLosses, ConvertLosses(statistics.m_avgAttackerLosses, statistics.Battle.Units, battle.Units));
-			m_maxAttackerLosses = CombineLosses(m_maxAttackerLosses, ConvertLosses(statistics.m_maxAttackerLosses, statistics.Battle.Units, battle.Units));
-			m_minDefenderLosses = CombineLosses(m_minDefenderLosses, ConvertLosses(statistics.m_minDefenderLosses, statistics.Battle.EnemyUnits, battle.EnemyUnits));
-			m_avgDefenderLosses = CombineLosses(m_avgDefenderLosses, ConvertLosses(statistics.m_avgDefenderLosses, statistics.Battle.EnemyUnits, battle.EnemyUnits));
-			m_maxDefenderLosses = CombineLosses(m_maxDefenderLosses, ConvertLosses(statistics.m_maxDefenderLosses, statistics.Battle.EnemyUnits, battle.EnemyUnits));
-			
-			//dummy
-			m_minAttackerResult = statistics.m_minAttackerResult;
-			m_maxAttackerResult = statistics.m_maxAttackerResult;
-			m_minDefenderResult = statistics.m_minDefenderResult;
-			m_maxDefenderResult = statistics.m_maxDefenderResult;
+			ConvertLossesToChanse();
+			statistics.ConvertLossesToChanse();
+			if (m_attackerLossesStatistics.Count == 0)
+			{
+				foreach(KeyValuePair<short[], double> lossesStatistic in statistics.m_attackerLossesStatistics)
+				{
+					m_attackerLossesStatistics[ConvertLosses(lossesStatistic.Key, statistics.Battle.Units, battle.Units)] = lossesStatistic.Value;
+				}
+				m_isCountInAttackerLossesStatistics = statistics.m_isCountInAttackerLossesStatistics;
+			}
+			else
+			{
+				CombineLossesStatistics(
+					m_attackerLossesStatistics, m_count, battle.Units, 
+					statistics.m_attackerLossesStatistics, statistics.m_count, statistics.Battle.Units);
+			}
 
-			m_minRounds += statistics.m_minRounds;
-			m_maxRounds += statistics.m_maxRounds;
-			m_avgRounds += statistics.m_avgRounds;
+			if (m_defenderLossesStatistics.Count == 0)
+			{
+				foreach (KeyValuePair<short[], double> lossesStatistic in statistics.m_defenderLossesStatistics)
+				{
+					m_defenderLossesStatistics[ConvertLosses(lossesStatistic.Key, statistics.Battle.EnemyUnits, battle.EnemyUnits)] = lossesStatistic.Value;
+				}
+				m_isCountInDefenderLossesStatistics = statistics.m_isCountInDefenderLossesStatistics;
+			}
+			else
+			{
+				CombineLossesStatistics(
+					m_defenderLossesStatistics, m_count, battle.EnemyUnits,
+					statistics.m_defenderLossesStatistics, statistics.m_count, statistics.Battle.EnemyUnits);
+			}
 
 			m_count = statistics.m_count;
-			m_winCount = statistics.m_winCount;
-
+			
 			statistics.CalculateBattleTime();
 			m_minBattleTime += statistics.m_minBattleTime;
 			m_maxBattleTime += statistics.m_maxBattleTime;
 			m_avgBattleTime += statistics.m_avgBattleTime;
+
+			if (statistics.BattleTimeStatistics.Count > 0)
+			{
+				if (BattleTimeStatistics.Count == 0)
+				{
+					foreach(KeyValuePair<double, double> newTimeStatistic in statistics.BattleTimeStatistics)
+					{
+						BattleTimeStatistics[newTimeStatistic.Key] = newTimeStatistic.Value;
+					}
+				}
+				else
+				{
+					SortedDictionary<double, double> timeStatistics = new SortedDictionary<double, double>();
+					foreach(KeyValuePair<double, double> timeStatistic in BattleTimeStatistics)
+					{
+						foreach(KeyValuePair<double, double> newTimeStatistic in statistics.BattleTimeStatistics)
+						{
+							double time = timeStatistic.Key + newTimeStatistic.Key;
+							double chance = timeStatistic.Value * newTimeStatistic.Value;
+							if(!timeStatistics.ContainsKey(time))
+							{
+								timeStatistics[time] = chance;
+							}
+							else
+							{
+								timeStatistics[time] += chance;
+							}
+						}
+					}
+					m_battleTimeStatistics = timeStatistics;
+				}
+			}
 		}
 
-		internal void CalculatePrices()
+		private static void CombineLossesStatistics(
+			Dictionary<short[], double> lossesStatistics, int count, IList<Unit> units,
+			Dictionary<short[], double> newLossesStatistics, int newCount, IList<Unit> newUnits)
+		{
+			Dictionary<short[], double> result = new Dictionary<short[], double>(new ShortArrayComparer());
+			foreach (KeyValuePair<short[], double> lossesStatistic in lossesStatistics)
+			{
+				foreach (KeyValuePair<short[], double> newLossesStatistic in newLossesStatistics)
+				{
+					short[] losses = CombineLosses((short[]) lossesStatistic.Key.Clone(), ConvertLosses(newLossesStatistic.Key, newUnits, units));
+					double chance = lossesStatistic.Value * newLossesStatistic.Value;
+					if (!result.ContainsKey(losses))
+					{
+						result[losses] = chance;
+					}
+					else
+					{
+						result[losses] += chance;
+					}
+				}
+			}
+
+			lossesStatistics.Clear();
+			foreach(KeyValuePair<short[], double> pair in result)
+			{
+				lossesStatistics[pair.Key] = pair.Value;
+			}
+		}
+
+		internal void Calculate()
+		{
+			if ((m_battle.StatisticsType & StatisticsType.Losses) > 0)
+			{
+				CalculateLosses(
+					m_attackerLossesStatistics, 
+					out m_minAttackerLosses, 
+					out m_avgAttackerLosses, 
+					out m_maxAttackerLosses, 
+					m_count, 
+					ref m_isCountInAttackerLossesStatistics);
+				CalculateLosses(
+					m_defenderLossesStatistics, 
+					out m_minDefenderLosses, 
+					out m_avgDefenderLosses, 
+					out m_maxDefenderLosses, 
+					m_count,
+					ref m_isCountInDefenderLossesStatistics);
+			}
+
+			if ((m_battle.StatisticsType & StatisticsType.Rounds) > 0)
+			{
+				CalculateRounds();
+			}
+
+			if ((m_battle.StatisticsType & StatisticsType.LossesPrice) > 0)
+			{
+				CalculatePrices();
+			}
+
+			if ((m_battle.StatisticsType & StatisticsType.LossesRecoveryTime) > 0)
+			{
+				CalculateLossesTime();
+			}
+
+			if ((m_battle.StatisticsType & StatisticsType.BattleTime) > 0)
+			{
+				CalculateBattleTime();
+			}
+		}
+
+		private void ConvertLossesToChanse()
+		{
+			ConvertLossesToChanse(m_attackerLossesStatistics, m_isCountInAttackerLossesStatistics, m_count);
+			m_isCountInAttackerLossesStatistics = false;
+			ConvertLossesToChanse(m_defenderLossesStatistics, m_isCountInDefenderLossesStatistics, m_count);
+			m_isCountInDefenderLossesStatistics = false;
+		}
+
+		private static void ConvertLossesToChanse(Dictionary<short[], double> lossesStatistics, bool isLossesStatisticsInCount, int count)
+		{
+			if (isLossesStatisticsInCount)
+			{
+				Dictionary<short[], double> temp = new Dictionary<short[], double>(lossesStatistics, new ShortArrayComparer());
+				foreach (KeyValuePair<short[], double> pair in temp)
+				{
+					lossesStatistics[pair.Key] = pair.Value / count;
+				}
+			}
+		}
+
+		private static void CalculateLosses(
+			Dictionary<short[], double> lossesStatistics, 
+			out short[] minAttackerLosses, 
+			out double[] avgAttackerLosses, 
+			out short[] maxAttackerLosses,
+			int count,
+			ref bool isLossesStatisticsInCount)
+		{
+			minAttackerLosses = null;
+			avgAttackerLosses = null;
+			maxAttackerLosses = null;
+
+			// convert to chance
+			if (isLossesStatisticsInCount)
+			{
+				ConvertLossesToChanse(lossesStatistics, isLossesStatisticsInCount, count);
+				isLossesStatisticsInCount = false;
+			}
+
+			foreach (KeyValuePair<short[], double> attackerLossesStatistic in lossesStatistics)
+			{
+				if (minAttackerLosses == null)
+				{
+					minAttackerLosses = new short[attackerLossesStatistic.Key.Length];
+					Array.Copy(attackerLossesStatistic.Key, minAttackerLosses, attackerLossesStatistic.Key.Length);
+				}
+
+				if (avgAttackerLosses == null)
+				{
+					avgAttackerLosses = new double[attackerLossesStatistic.Key.Length];
+				}
+
+				if (maxAttackerLosses == null)
+				{
+					maxAttackerLosses = new short[attackerLossesStatistic.Key.Length];
+					Array.Copy(attackerLossesStatistic.Key, maxAttackerLosses, attackerLossesStatistic.Key.Length);
+				}
+
+				if (CompareLosses(attackerLossesStatistic.Key, minAttackerLosses) < 0)
+				{
+					Array.Copy(attackerLossesStatistic.Key, minAttackerLosses, attackerLossesStatistic.Key.Length);
+				}
+
+				if (CompareLosses(attackerLossesStatistic.Key, maxAttackerLosses) > 0)
+				{
+					Array.Copy(attackerLossesStatistic.Key, maxAttackerLosses, attackerLossesStatistic.Key.Length);
+				}
+
+				for(int i = 0; i < attackerLossesStatistic.Key.Length; i++)
+				{
+					avgAttackerLosses[i] += (double)attackerLossesStatistic.Value * attackerLossesStatistic.Key[i];
+				}
+			}
+		}
+
+		private void CalculateRounds()
+		{
+			m_minRounds = int.MaxValue;
+			m_avgRounds = 0;
+			m_maxRounds = 0;
+			foreach (KeyValuePair<int, int> roundStatistic in m_roundStatistics)
+			{
+				int rounds = Math.Abs(roundStatistic.Key);
+				if (m_minRounds > rounds)
+				{
+					m_minRounds = rounds;
+				}
+
+				if (m_maxRounds < rounds)
+				{
+					m_maxRounds = rounds;
+				}
+
+				m_avgRounds += (double)roundStatistic.Value * rounds / m_count;
+			}
+		}
+
+		private void CalculatePrices()
 		{
 			PriceFunction function = new PriceFunction(null);
 			if (m_losesPrice == null)
@@ -456,7 +559,7 @@ namespace TheSettlersCalculator.Statistics
 			}
 		}
 
-		internal void CalculateLossesTime()
+		private void CalculateLossesTime()
 		{
 			LossesRecoveryTimeFunction function = new LossesRecoveryTimeFunction();
 			m_minLossesRecoveryTime = function.CalculateTime(m_battle.Units, m_minAttackerLosses);
@@ -464,13 +567,83 @@ namespace TheSettlersCalculator.Statistics
 			m_avgLossesRecoveryTime = function.CalculateTime(m_battle.Units, m_avgAttackerLosses);
 		}
 
-		internal void CalculateBattleTime()
+		private void CalculateBattleTime()
 		{
-			BattleTimeFunction function = new BattleTimeFunction();
-			function.CalculateBattleTime(this, out m_minBattleTime, out m_maxBattleTime, out m_avgBattleTime);
+			m_minBattleTime = double.MaxValue;
+			m_avgBattleTime = 0;
+			m_maxBattleTime = 0;
+
+			if (RoundStatistics.Count > 0)
+			{
+				BattleTimeStatistics.Clear();
+				BattleTimeFunction func = new BattleTimeFunction();
+				foreach(KeyValuePair<int, int> roundStatistic in RoundStatistics)
+				{
+					double time = func.CalculateBattleTime(m_battle, roundStatistic.Key);
+
+					if(m_minBattleTime > time)
+					{
+						m_minBattleTime = time;
+						m_minBattleTimeChance = (double)roundStatistic.Value / m_count * 100;
+					} else if(m_minBattleTime == time)
+					{
+						m_minBattleTimeChance += (double)roundStatistic.Value / m_count * 100;
+					}
+
+					if(m_maxBattleTime < time)
+					{
+						m_maxBattleTime = time;
+						m_maxBattleTimeChance = (double)roundStatistic.Value / m_count * 100;
+					}
+					else if (m_minBattleTime == time)
+					{
+						m_maxBattleTimeChance += (double)roundStatistic.Value / m_count * 100;
+					}
+
+					m_avgBattleTime += roundStatistic.Value * time / m_count;
+
+					if(!BattleTimeStatistics.ContainsKey(time))
+					{
+						BattleTimeStatistics[time] = (double) roundStatistic.Value / m_count;
+					}
+					else
+					{
+						BattleTimeStatistics[time] += (double) roundStatistic.Value / m_count;
+					}
+				}
+			}
+
+			if (m_maxBattleTime == 0 && BattleTimeStatistics.Count > 0)
+			{
+				foreach(KeyValuePair<double, double> battleTimeStatistic in BattleTimeStatistics)
+				{
+					double time = battleTimeStatistic.Key;
+					if (m_minBattleTime > time)
+					{
+						m_minBattleTime = time;
+						m_minBattleTimeChance = battleTimeStatistic.Value * 100;
+					}
+					else if (m_minBattleTime == time)
+					{
+						m_minBattleTimeChance += battleTimeStatistic.Value * 100;
+					}
+
+					if (m_maxBattleTime < time)
+					{
+						m_maxBattleTime = time;
+						m_maxBattleTimeChance = battleTimeStatistic.Value * 100;
+					}
+					else if (m_maxBattleTime == time)
+					{
+						m_maxBattleTimeChance += battleTimeStatistic.Value * 100;
+					}
+
+					m_avgBattleTime += battleTimeStatistic.Value * time;
+				}
+			}
 		}
 
-		private static short[] CombineLosses(short[] losses1, short[] losses2)
+		internal static short[] CombineLosses(short[] losses1, short[] losses2)
 		{
 			if (losses1==null)
 			{
@@ -485,7 +658,7 @@ namespace TheSettlersCalculator.Statistics
 			return losses1;
 		}
 
-		private static double[] CombineLosses(double[] losses1, double[] losses2)
+		internal static double[] CombineLosses(double[] losses1, double[] losses2)
 		{
 			if (losses1 == null)
 			{

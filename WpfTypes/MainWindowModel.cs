@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
+using System.Windows.Media.Imaging;
+using TheSettlersCalculator.Helper;
 using TheSettlersCalculator.Price;
 using TheSettlersCalculator.Quests;
 using TheSettlersCalculator.Statistics;
@@ -36,6 +38,8 @@ namespace TheSettlersCalculator.WpfTypes
 		private int m_userUnitsCount = 200;
 		private bool m_userUnitsCountWarning;
 		private MultyWaveBattleSimulation m_simulation;
+
+		private BitmapSource m_diagramIcon;
 		#endregion
 
 		#region Constructor
@@ -317,6 +321,18 @@ namespace TheSettlersCalculator.WpfTypes
 		{
 			get { return Price.Price.ProductList; }
 		}
+
+		public BitmapSource Diagram
+		{
+			get
+			{
+				if (m_diagramIcon==null)
+				{
+					m_diagramIcon = ImageHelper.LoadFromResources("TheSettlersCalculator.Resources.diagram.png");
+				}
+				return m_diagramIcon;
+			}
+		}
 		#endregion
 
 		#region Methods
@@ -357,6 +373,7 @@ namespace TheSettlersCalculator.WpfTypes
 			//unist, counts, general, enemy units, counts, generals
 			MultiWaveBattle battle = new MultiWaveBattle(Options.Instance.Rounds);
 			battle.BattleType = Options.Instance.MultiWaveBattleType;
+			battle.StatisticsType = StatisticsType.All;
 
 			bool isEnemyEmpty = true;
 			bool isAttackerEmpty = true;
@@ -415,9 +432,7 @@ namespace TheSettlersCalculator.WpfTypes
 			battle.OnBattleComplete -= simulation.MultiWaveBattleCompleteHandler;
 			battle.OnWaveComplete -= simulation.MultiWaveBattleWaveCompleteHandler;
 
-			statistics.CalculateLossesTime();
-			statistics.CalculatePrices();
-			statistics.CallculateBattleTime();
+			statistics.Calculate();
 
 			m_totalLosses = GenerateBattleLosses(statistics.TotalStatistics, battle);
 
