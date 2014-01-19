@@ -318,9 +318,29 @@ namespace TheSettlersCalculator.Types
 							{
 								defenderSideStep.Counts[targetIndex] -= (short) killedUnits;
 								defenderSideStep.Healts[targetIndex] -= (short) remDamage;
+								int prevDamage = 0;
+								if (defenderSideStep.Healts[targetIndex] <= 0)
+								{
+									prevDamage = remDamage + defenderSideStep.Healts[targetIndex];
+									remDamage = remDamage - prevDamage;
+									defenderSideStep.Counts[targetIndex]--;
+									defenderSideStep.Healts[targetIndex] = targetUnitHealth;
+								}
+
 								damage = 0;
 								if (unitAttackHandler != null)
 								{
+									if (prevDamage > 0)
+									{
+										unitAttackHandler(null, new UnitAttackArgs(
+												attackerSide,
+												unitIndex,
+												unitId,
+												targetIndex,
+												prevDamage,
+												battle.Sides[(int)defenderSideType].Units[targetIndex].Health));
+									}
+
 									for(int i = 0; i<killedUnits;i++)
 									{
 										unitAttackHandler(null, new UnitAttackArgs(
@@ -342,7 +362,7 @@ namespace TheSettlersCalculator.Types
 												remDamage,
 												battle.Sides[(int)defenderSideType].Units[targetIndex].Health));										
 									}
-								}								
+								}
 							}
 							else
 							{
@@ -361,7 +381,7 @@ namespace TheSettlersCalculator.Types
 												targetUnitHealth));
 									}
 								}
-								defenderSideStep.Counts[targetIndex] = 0;	
+								defenderSideStep.Counts[targetIndex] = 0;
 
 								targetIndex = GetTargetIndex(unit, defenderSideStep.Counts, defenderSideStep.Healts);
 
