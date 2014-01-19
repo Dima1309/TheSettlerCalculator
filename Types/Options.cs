@@ -17,6 +17,8 @@ namespace TheSettlersCalculator.Types
 		
 		internal static string QUESTS_FOLDER = "quests";
 		internal static string PRICE_FOLDER = "price";
+
+		internal const int SEED = 328748937;
 		#endregion
 
 		#region Fields

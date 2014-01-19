@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
 namespace TheSettlersCalculator.Types
 {
@@ -30,12 +31,18 @@ namespace TheSettlersCalculator.Types
 
 		public virtual void Calculate(Battle battle)
 		{
+			Random random = new Random(Options.SEED);
+			Calculate(battle, random);
+		}
+
+		public virtual void Calculate(Battle battle, Random random)
+		{
 			BattleWaves waves = SplitByWaves(battle);
 
 			for (int j = 0; j < IterationCount; j++)
 			{
-				BattleComplete(battle, BattleHelper.CalculateBattle2(battle, waves));
-			}		
+				BattleComplete(battle, BattleHelper.CalculateBattle2(battle, waves, random));
+			}
 		}
 
 		internal static BattleWaves SplitByWaves(Battle battle)

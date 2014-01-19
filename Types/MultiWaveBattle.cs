@@ -7,6 +7,8 @@ namespace TheSettlersCalculator.Types
 {
 	internal class MultiWaveBattle
 	{
+		
+
 		#region Private class
 		private class BattleWave
 		{
@@ -145,6 +147,7 @@ namespace TheSettlersCalculator.Types
 
 		internal void Calculate(ICalculator calculator)
 		{
+			Random random = new Random(Options.SEED);
 			int iterationCount = GetRepeatCount();
 
 			for(int iter = 0 ; iter < iterationCount; iter++)
@@ -159,6 +162,11 @@ namespace TheSettlersCalculator.Types
 
 				while(playerIndex < m_playerWaves.Count && enemyIndex < m_enemyWaves.Count)
 				{
+					if (iterationCount == 1)
+					{
+						random = new Random(Options.SEED);
+					}
+
 					if(playerSquads == null)
 					{
 						playerSquads = new List<UnitSquad>(m_playerWaves[playerIndex].Squads);
@@ -213,7 +221,7 @@ namespace TheSettlersCalculator.Types
 					calculator.IterationCount = GetBattleIterationCount();
 					Statistics.Statistics statistics = new Statistics.Statistics(battle);
 					calculator.OnBattleComplete += statistics.BattleComplete;
-					calculator.Calculate(battle);
+					calculator.Calculate(battle, random);
 					calculator.OnBattleComplete -= statistics.BattleComplete;
 					if (m_waveCompleteHandler!=null)
 					{

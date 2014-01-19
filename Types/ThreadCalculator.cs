@@ -4,7 +4,7 @@ using System.Threading;
 
 namespace TheSettlersCalculator.Types
 {
-	internal class Calculator2 : Calculator
+	internal class ThreadCalculator : Calculator
 	{
 		#region Fields
 		private Thread[] m_threads;
@@ -12,12 +12,12 @@ namespace TheSettlersCalculator.Types
 		private Queue<List<BattleStep>> m_battles;
 		#endregion
 
-		internal Calculator2(int iterationCount) : base(iterationCount)
+		internal ThreadCalculator(int iterationCount) : base(iterationCount)
 		{
 		}
 
 		#region Methods
-		public override void Calculate(Battle battle)
+		public override void Calculate(Battle battle, Random random)
 		{
 			BattleWaves battleWaves = SplitByWaves(battle);
 
@@ -33,7 +33,8 @@ namespace TheSettlersCalculator.Types
 				                   	i,
 				                   	IterationCount / threadCounts,
 				                   	battle,
-									battleWaves));
+									battleWaves,
+									new Random(random.Next())));
 			}			
 
 			while (true)
@@ -70,11 +71,10 @@ namespace TheSettlersCalculator.Types
 		private void ThreadMethod(object parameter)
 		{
 			ThreadParameter threadParameter = (ThreadParameter) parameter;
-			Random random = new Random();
 
 			for(int i = 0; i < threadParameter.IterationCount; i++)
 			{
-				List<BattleStep> result = BattleHelper.CalculateBattle2(threadParameter.Battle, threadParameter.BattleWaves, random, null, null);
+				List<BattleStep> result = BattleHelper.CalculateBattle2(threadParameter.Battle, threadParameter.BattleWaves, threadParameter.Random, null, null);
 
 				lock(m_battles)
 				{
@@ -95,6 +95,7 @@ namespace TheSettlersCalculator.Types
 
 			private readonly int m_index;
 			private readonly int m_iterationCount;
+			private readonly Random m_random;
 			#endregion
 
 			#region Constructor
@@ -102,12 +103,14 @@ namespace TheSettlersCalculator.Types
 				int index, 
 				int iterationCount, 
 				Battle battle,
-				BattleWaves battleWaves)
+				BattleWaves battleWaves,
+				Random random)
 			{
 				m_index = index;
 				m_battleWaves = battleWaves;
 				m_battle = battle;
 				m_iterationCount = iterationCount;
+				m_random = random;
 			}
 			#endregion
 
@@ -129,6 +132,11 @@ namespace TheSettlersCalculator.Types
 			public BattleWaves BattleWaves
 			{
 				get { return m_battleWaves; }
+			}
+
+			public Random Random
+			{
+				get { return m_random; }
 			}
 		}
 		#endregion

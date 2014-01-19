@@ -6,7 +6,6 @@ namespace TheSettlersCalculator.Types
 	internal static class BattleHelper
 	{
 		private const int GENERAL_DAMAGE = 120;
-		private static readonly Random s_random = new Random();
 
 		private static BattleSideType GetEnemySide(BattleSideType side)
 		{
@@ -51,9 +50,9 @@ namespace TheSettlersCalculator.Types
 			return -1;
 		}
 
-		internal static List<BattleStep> CalculateBattle2(Battle battle, BattleWaves waves)
+		internal static List<BattleStep> CalculateBattle2(Battle battle, BattleWaves waves, Random random)
 		{
-			return CalculateBattle2(battle, waves, s_random, null, null);
+			return CalculateBattle2(battle, waves, random, null, null);
 		}			
 
 		internal static List<BattleStep> CalculateBattle2(
