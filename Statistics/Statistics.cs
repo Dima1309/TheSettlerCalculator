@@ -502,19 +502,11 @@ namespace TheSettlersCalculator.Statistics
 					Array.Copy(attackerLossesStatistic.Key, maxAttackerLosses, attackerLossesStatistic.Key.Length);
 				}
 
-				if (CompareLosses(attackerLossesStatistic.Key, minAttackerLosses) < 0)
-				{
-					Array.Copy(attackerLossesStatistic.Key, minAttackerLosses, attackerLossesStatistic.Key.Length);
-				}
-
-				if (CompareLosses(attackerLossesStatistic.Key, maxAttackerLosses) > 0)
-				{
-					Array.Copy(attackerLossesStatistic.Key, maxAttackerLosses, attackerLossesStatistic.Key.Length);
-				}
-
 				for(int i = 0; i < attackerLossesStatistic.Key.Length; i++)
 				{
+					minAttackerLosses[i] = Math.Min(minAttackerLosses[i], attackerLossesStatistic.Key[i]);					
 					avgAttackerLosses[i] += (double)attackerLossesStatistic.Value * attackerLossesStatistic.Key[i];
+					maxAttackerLosses[i] = Math.Max(maxAttackerLosses[i], attackerLossesStatistic.Key[i]);
 				}
 			}
 		}
