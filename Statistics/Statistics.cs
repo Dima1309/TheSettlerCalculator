@@ -28,7 +28,6 @@ namespace TheSettlersCalculator.Statistics
 		private int m_minRounds;
 		private int m_maxRounds;
 		private double m_avgRounds;
-		private int m_winCount;
 		private int m_count;
 
 		private StatisticsLossesPrice m_losesPrice;
@@ -105,11 +104,6 @@ namespace TheSettlersCalculator.Statistics
 		internal double AvgRounds
 		{
 			get { return m_avgRounds; }
-		}
-
-		internal int WinCount
-		{
-			get { return m_winCount; }
 		}
 
 		public StatisticsLossesPrice LosesPrice

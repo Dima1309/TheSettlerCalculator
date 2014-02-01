@@ -1,5 +1,4 @@
-﻿using TheSettlersCalculator.Helper;
-using TheSettlersCalculator.Price;
+﻿using TheSettlersCalculator.Price;
 using TheSettlersCalculator.Properties;
 
 namespace TheSettlersCalculator.Types
@@ -62,6 +61,7 @@ namespace TheSettlersCalculator.Types
 			s_units = new Unit[9];
 			Unit unit = new Unit();
 			unit.Name = Resources.UNIT_RECRUIT;
+			unit.Id = "recruit";
 			unit.Health = 40;
 			unit.MinDamage = 15;
 			unit.MaxDamage = 30;
@@ -79,6 +79,7 @@ namespace TheSettlersCalculator.Types
 
 			unit = new Unit();
 			unit.Name = Resources.UNIT_MILITIA;
+			unit.Id = "militia";
 			unit.Health = 60;
 			unit.MinDamage = 20;
 			unit.MaxDamage = 40;
@@ -96,6 +97,7 @@ namespace TheSettlersCalculator.Types
 
 			unit = new Unit();
 			unit.Name = Resources.UNIT_SOLDIER;
+			unit.Id = "soldier";
 			unit.Health = 90;
 			unit.MinDamage = 20;
 			unit.MaxDamage = 40;
@@ -113,6 +115,7 @@ namespace TheSettlersCalculator.Types
 
 			unit = new Unit();
 			unit.Name = Resources.UNIT_ELITE_SOLDIER;
+			unit.Id = "elite_soldier";
 			unit.Health = 120;
 			unit.MinDamage = 20;
 			unit.MaxDamage = 40;
@@ -131,6 +134,7 @@ namespace TheSettlersCalculator.Types
 
 			unit = new Unit();
 			unit.Name = Resources.UNIT_CAVALRY;
+			unit.Id = "cavalry";
 			unit.Health = 5;
 			unit.MinDamage = 5;
 			unit.MaxDamage = 10;
@@ -149,6 +153,7 @@ namespace TheSettlersCalculator.Types
 
 			unit = new Unit();
 			unit.Name = Resources.UNIT_BOWMAN;
+			unit.Id = "bowman";
 			unit.Health = 10;
 			unit.MinDamage = 20;
 			unit.MaxDamage = 40;
@@ -167,6 +172,7 @@ namespace TheSettlersCalculator.Types
 
 			unit = new Unit();
 			unit.Name = Resources.UNIT_LONGBOWMAN;
+			unit.Id = "longbowman";
 			unit.Health = 10;
 			unit.MinDamage = 30;
 			unit.MaxDamage = 60;
@@ -185,13 +191,14 @@ namespace TheSettlersCalculator.Types
 
 			unit = new Unit();
 			unit.Name = Resources.UNIT_CROSSBOWMAN;
+			unit.Id = "crossbowman";
 			unit.Health = 10;
 			unit.MinDamage = 45;
 			unit.MaxDamage = 90;
 			unit.Accuracy = 80;
 			unit.AttackPriority = AttackPriority.Normal;
 			unit.Experience = 20;
-			unit.TowerBonus = true;			
+			unit.TowerBonus = true;
 			unit.IconPath = "Quests\\Images\\crossbowman.png";
 			unit.ProductionTime = 20 * 60;
 			unit.LossesProduct = new LossesProduct[]
@@ -203,6 +210,7 @@ namespace TheSettlersCalculator.Types
 
 			unit = new Unit();
 			unit.Name = Resources.UNIT_CANNONNEER;
+			unit.Id = "cannonneer";
 			unit.Health = 60;
 			unit.MinDamage = 60;
 			unit.MaxDamage = 120;

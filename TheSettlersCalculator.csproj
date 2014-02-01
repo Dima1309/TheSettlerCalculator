@@ -37,6 +37,9 @@
   <PropertyGroup>
     <RunPostBuildEvent>Always</RunPostBuildEvent>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Resources\general.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -80,6 +83,7 @@
     <Compile Include="Statistics\StatisticsType.cs" />
     <Compile Include="Statistics\WaveKey.cs" />
     <Compile Include="Types\AttackPriority.cs" />
+    <Compile Include="Types\BaseBattleHelper.cs" />
     <Compile Include="Types\Battle.cs" />
     <Compile Include="Types\BattleCompleteHandler.cs" />
     <Compile Include="Types\BattleHelper.cs" />
@@ -91,6 +95,7 @@
     <Compile Include="Types\IXMLSerializable.cs" />
     <Compile Include="Types\LossesPrice.cs" />
     <Compile Include="Types\LossesProduct.cs" />
+    <Compile Include="Types\MinMaxBattleHelper.cs" />
     <Compile Include="Types\MultiWaveBattleCompleteHandler.cs" />
     <Compile Include="Types\MultiWaveBattleWaveCompleteHandler.cs" />
     <Compile Include="Types\MultiWaveBattle.cs" />
@@ -106,7 +111,7 @@
     <Compile Include="Types\BattleStep.cs" />
     <Compile Include="Types\BattleWaves.cs" />
     <Compile Include="Types\Calculator.cs" />
-    <Compile Include="Types\Calculator2.cs" />
+    <Compile Include="Types\ThreadCalculator.cs" />
     <Compile Include="Types\CampType.cs" />
     <Compile Include="Types\ICalculator.cs" />
     <Compile Include="Types\PlayerUnits.cs" />
@@ -314,9 +319,11 @@
   <ItemGroup>
     <EmbeddedResource Include="Quests\Images\berserk.png" />
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
     <EmbeddedResource Include="Resources\diagram.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\general.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>

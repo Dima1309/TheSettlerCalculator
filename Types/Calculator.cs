@@ -41,8 +41,18 @@ namespace TheSettlersCalculator.Types
 
 			for (int j = 0; j < IterationCount; j++)
 			{
-				BattleComplete(battle, BattleHelper.CalculateBattle2(battle, waves, random));
+				BattleComplete(battle, BattleHelper.Instance.CalculateBattle2(battle, waves, random));
 			}
+		}
+
+		public virtual void Calculate(Battle battle, double targetAttackerChance, double targetDefenderChance)
+		{
+			BattleWaves waves = SplitByWaves(battle);
+
+			MinMaxBattleHelper battleHelper = new MinMaxBattleHelper();
+			battleHelper.TargetAttackerChance = targetAttackerChance;
+			battleHelper.TargetDefenderChance = targetDefenderChance;
+			BattleComplete(battle, battleHelper.CalculateBattle2(battle, waves, new Random()));
 		}
 
 		internal static BattleWaves SplitByWaves(Battle battle)

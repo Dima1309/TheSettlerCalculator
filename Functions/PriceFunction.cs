@@ -31,12 +31,8 @@ namespace TheSettlersCalculator.Functions
 
 		public double Evaluate(Statistics.Statistics statistics)
 		{
-			//стоимость максимальных потерь + вероятность поражения (сумма(ср урон * общее здоровье))
 			double calculatePrice = CalculatePrice(statistics);
-			//Console.Write(calculatePrice);
-			//Console.Write(" {0}/{1} = ", statistics.WinCount, statistics.Count);
-			return calculatePrice +
-				   (1 - statistics.WinCount / statistics.Count) * 1000000;
+			return calculatePrice;
 		}
 
 		internal List<LossesProduct> CalculateLosses(IList<Unit> units, short[] losses)

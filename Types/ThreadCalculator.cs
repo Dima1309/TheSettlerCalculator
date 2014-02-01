@@ -74,13 +74,13 @@ namespace TheSettlersCalculator.Types
 
 			for(int i = 0; i < threadParameter.IterationCount; i++)
 			{
-				List<BattleStep> result = BattleHelper.CalculateBattle2(threadParameter.Battle, threadParameter.BattleWaves, threadParameter.Random, null, null);
+				List<BattleStep> result = BattleHelper.Instance.CalculateBattle2(threadParameter.Battle, threadParameter.BattleWaves, threadParameter.Random, null, null);
 
 				lock(m_battles)
 				{
 					m_battles.Enqueue(result);
 				}
-			}			
+			}
 
 			m_events[threadParameter.Index].Set();
 		}

@@ -22,7 +22,7 @@ namespace TheSettlersCalculator.Types.Simulation
 			m_currentRound.SetBeginState(battle);
 			m_prevState = null;
 
-			BattleHelper.CalculateBattle2(
+			BattleHelper.Instance.CalculateBattle2(
 				battle,
 				Calculator.SplitByWaves(battle),
 				new Random(),

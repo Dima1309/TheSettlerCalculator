@@ -7,8 +7,6 @@ namespace TheSettlersCalculator.Types
 {
 	internal class MultiWaveBattle
 	{
-		
-
 		#region Private class
 		private class BattleWave
 		{
