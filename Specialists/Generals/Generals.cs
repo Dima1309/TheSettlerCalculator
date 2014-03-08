@@ -1,37 +1,110 @@
 ﻿using System.Collections.Generic;
+using System.IO;
+using System.Xml;
 using TheSettlersCalculator.Properties;
 
 namespace TheSettlersCalculator.Specialists.Generals
 {
 	public class Generals
 	{
+		internal const string DEFAULT_GENERAL = "TavernGeneral";
+		private const string FILENAME = "generals.xml";
+		private const string GENERALS_TAG = "generals";
+
 		#region Fields
-		private static List<General> s_generals;
+		private static Dictionary<string, General> s_generals;
 		#endregion
 
 		#region Properties
-		public static List<General> GeneralList
+		public static Dictionary<string, General> GeneralsDictionary
 		{
 			get
 			{
 				if (s_generals == null)
 				{
-					InitializeGenerals();
+					Load();
 				}
 				return s_generals;
+			}
+		}
+
+		public static IEnumerable<General> GeneralList
+		{
+			get
+			{
+				if (s_generals == null)
+				{
+					Load();
+				}
+				return s_generals.Values;
 			}
 		}
 		#endregion
 
 		#region Methods
-		private static void InitializeGenerals()
+		internal static void Load()
 		{
-			s_generals = new List<General>(5);
-			s_generals.Add(new General(GeneralType.Tavern, Resources.GENERAL_TAVERN, 200, false, "TheSettlesCalculator.Specialists.Generals.Images.tavern_general.png"));
-			s_generals.Add(new General(GeneralType.Quick, Resources.GENERAL_QUICK, 200, false, "TheSettlesCalculator.Specialists.Generals.Images.quick_general.png"));
-			s_generals.Add(new General(GeneralType.Log, Resources.GENERAL_LOG, 220, false, "TheSettlesCalculator.Specialists.Generals.Images.general_log.png"));
-			s_generals.Add(new General(GeneralType.Veteran, Resources.GENERAL_VETERAN, 250, false, "TheSettlesCalculator.Specialists.Generals.Images.veteran.png"));
-			s_generals.Add(new General(GeneralType.Major, Resources.GENERAL_MAJOR, 270, false, "TheSettlesCalculator.Specialists.Generals.Images.general_major.png"));
+			if (File.Exists(FILENAME))
+			{
+				Dictionary<string, General> result = new Dictionary<string, General>(10);
+				XmlReader reader = null;
+
+				try
+				{
+					reader = XmlReader.Create(FILENAME);
+
+					while (!reader.EOF)
+					{
+						if (reader.IsStartElement(General.ROOT))
+						{
+							General unit = new General();
+							unit.Load(reader);
+							result.Add(unit.Id, unit);
+							continue;
+						}
+
+						if (!reader.Read())
+						{
+							break;
+						}
+					}
+				}
+				finally
+				{
+					if (reader != null)
+					{
+						reader.Close();
+					}
+				}
+
+				s_generals = result;
+			}
+		}
+
+		internal static void Save()
+		{
+			XmlWriterSettings settings = new XmlWriterSettings();
+			settings.Indent = true;
+			XmlWriter writer = null;
+
+			try
+			{
+				writer = XmlWriter.Create(FILENAME, settings);
+
+				writer.WriteStartElement(GENERALS_TAG);
+				foreach (General general in GeneralsDictionary.Values)
+				{
+					general.Save(writer);
+				}
+				writer.WriteEndElement();
+			}
+			finally
+			{
+				if (writer != null)
+				{
+					writer.Close();
+				}
+			}
 		}
 		#endregion
 	}

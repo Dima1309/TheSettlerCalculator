@@ -1,0 +1,16 @@
+﻿<UserControl x:Class="TheSettlersCalculator.WpfTypes.Components.GeneralViewControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" x:Name="GeneralViewControl1"
+             d:DesignHeight="300" d:DesignWidth="300">
+    <Grid>
+        <StackPanel Orientation="Horizontal" DataContext="{Binding ElementName=GeneralViewControl1}">
+            <Label Content="{Binding General.ArmySize}" />
+            <Image Width="30" Height="30" Source="{Binding General.Icon}">
+            </Image>
+            <Label Content="{Binding General.Name}" />
+        </StackPanel>
+    </Grid>
+</UserControl>

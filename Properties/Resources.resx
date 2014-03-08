@@ -166,10 +166,10 @@
     <value>Генерал-майор</value>
   </data>
   <data name="GENERAL_QUICK" xml:space="preserve">
-    <value>Быстрый</value>
+    <value>Опытный генерал</value>
   </data>
   <data name="GENERAL_TAVERN" xml:space="preserve">
-    <value>Обычный</value>
+    <value>Генерал</value>
   </data>
   <data name="GENERAL_VETERAN" xml:space="preserve">
     <value>Ветеран</value>

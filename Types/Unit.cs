@@ -5,10 +5,10 @@ using TheSettlersCalculator.Helper;
 
 namespace TheSettlersCalculator.Types
 {
-	public class Unit	 : IXMLSerializable
+	public class Unit : IXMLSerializable
 	{
 		#region Consts
-		internal const string UNIT = "unit";
+		internal const string ROOT = "unit";
 		private const string ID = "id";
 		private const string NAME = "name";
 		private const string HEALTH = "health";
@@ -21,7 +21,7 @@ namespace TheSettlersCalculator.Types
 		private const string TOWER_BONUS = "tower_bonus";
 		private const string IGNORE_TOWER_BONUS = "ignore_tower_bonus";
 		private const string EXPERIENCE = "experience";
-		private const string ICON_PATH = "icon";		
+		private const string ICON_PATH = "icon";
 		#endregion
 
 		#region Fields
@@ -163,128 +163,143 @@ namespace TheSettlersCalculator.Types
 					break;
 				}
 
-				if (reader.NodeType == XmlNodeType.EndElement && reader.Name.Equals(UNIT, StringComparison.OrdinalIgnoreCase))
+                if (reader.NodeType == XmlNodeType.EndElement && reader.Name.Equals(GetRootNode(), StringComparison.OrdinalIgnoreCase))
 				{
 					break;
 				}
 
-				if (reader.Name.Equals(ID, StringComparison.OrdinalIgnoreCase))
-				{
-					m_id = reader.ReadElementString().Trim();
-				}
-				else if (reader.Name.Equals(NAME, StringComparison.OrdinalIgnoreCase))
-				{
-					m_name = Helper.Helper.getResourceText(reader.ReadElementString().Trim());
-				}
-				else if (reader.Name.Equals(ICON_PATH, StringComparison.OrdinalIgnoreCase))
-				{
-					m_iconPath = reader.ReadElementString().Trim();
-				}
-				else if (reader.Name.Equals(ATTACK_PRIORITY, StringComparison.OrdinalIgnoreCase))
-				{
-					string value = reader.ReadElementString().Trim();
-					m_attackPriority = (AttackPriority)Enum.Parse(s_attackPriorityType, value);
-				}
-				else if (reader.Name.Equals(HEALTH, StringComparison.OrdinalIgnoreCase))
-				{
-					m_health = int.Parse(reader.ReadElementString().Trim());
-				}
-				else if (reader.Name.Equals(MIN_DAMAGE, StringComparison.OrdinalIgnoreCase))
-				{
-					m_minDamage = int.Parse(reader.ReadElementString().Trim());
-				}
-				else if (reader.Name.Equals(MAX_DAMAGE, StringComparison.OrdinalIgnoreCase))
-				{
-					m_maxDamage = int.Parse(reader.ReadElementString().Trim());
-				}
-				else if (reader.Name.Equals(ACCURACY, StringComparison.OrdinalIgnoreCase))
-				{
-					m_accuracy = byte.Parse(reader.ReadElementString().Trim());
-					if (m_accuracy < 0 || m_accuracy > 100)
-					{
-						m_accuracy = 0;
-					}
-				}
-				else if (reader.Name.Equals(EXPERIENCE, StringComparison.OrdinalIgnoreCase))
-				{
-					m_experience = int.Parse(reader.ReadElementString().Trim());
-				}
-				else if (reader.Name.Equals(ON_AREA, StringComparison.OrdinalIgnoreCase))
-				{
-					m_attackOnArea = reader.ReadElementString().Trim().Equals("yes", StringComparison.OrdinalIgnoreCase);
-				}
-				else if (reader.Name.Equals(WEAKNESS, StringComparison.OrdinalIgnoreCase))
-				{
-					m_attackWeaknessTarget = reader.ReadElementString().Trim().Equals("yes", StringComparison.OrdinalIgnoreCase);
-				}
-				else if (reader.Name.Equals(TOWER_BONUS, StringComparison.OrdinalIgnoreCase))
-				{
-					m_towerBonus = reader.ReadElementString().Trim().Equals("yes", StringComparison.OrdinalIgnoreCase);
-				}
-				else if (reader.Name.Equals(IGNORE_TOWER_BONUS, StringComparison.OrdinalIgnoreCase))
-				{
-					m_ignoreTowerBonus = byte.Parse(reader.ReadElementString().Trim());
-				}
+                LoadAttribute(reader);
 			}
 		}
 
-		public void Save(XmlWriter writer)
-		{
-			writer.WriteStartElement(UNIT);
+        public void Save(XmlWriter writer)
+        {
+            writer.WriteStartElement(GetRootNode());
 
-			writer.WriteStartElement(ID);
-			writer.WriteValue(m_id);
-			writer.WriteEndElement();
-			
-			writer.WriteStartElement(NAME);
-			writer.WriteValue("UNIT_" + m_id);
-			writer.WriteEndElement();
+            SaveAttributes(writer);
 
-			writer.WriteStartElement(HEALTH);
-			writer.WriteValue(Health);
-			writer.WriteEndElement();
+            writer.WriteEndElement();
+        }
 
-			writer.WriteStartElement(MIN_DAMAGE);
-			writer.WriteValue(MinDamage);
-			writer.WriteEndElement();
+        internal virtual string GetRootNode()
+        {
+            return ROOT;
+        }
 
-			writer.WriteStartElement(MAX_DAMAGE);
-			writer.WriteValue(MaxDamage);
-			writer.WriteEndElement();
+        internal virtual void LoadAttribute(XmlReader reader)
+        {
+            if (reader.Name.Equals(ID, StringComparison.OrdinalIgnoreCase))
+            {
+                m_id = reader.ReadElementString().Trim();
+            }
+            else if (reader.Name.Equals(NAME, StringComparison.OrdinalIgnoreCase))
+            {
+                m_name = Helper.Helper.getResourceText(reader.ReadElementString().Trim());
+            }
+            else if (reader.Name.Equals(ICON_PATH, StringComparison.OrdinalIgnoreCase))
+            {
+                m_iconPath = reader.ReadElementString().Trim();
+            }
+            else if (reader.Name.Equals(ATTACK_PRIORITY, StringComparison.OrdinalIgnoreCase))
+            {
+                string value = reader.ReadElementString().Trim();
+                m_attackPriority = (AttackPriority)Enum.Parse(s_attackPriorityType, value);
+            }
+            else if (reader.Name.Equals(HEALTH, StringComparison.OrdinalIgnoreCase))
+            {
+                m_health = int.Parse(reader.ReadElementString().Trim());
+            }
+            else if (reader.Name.Equals(MIN_DAMAGE, StringComparison.OrdinalIgnoreCase))
+            {
+                m_minDamage = int.Parse(reader.ReadElementString().Trim());
+            }
+            else if (reader.Name.Equals(MAX_DAMAGE, StringComparison.OrdinalIgnoreCase))
+            {
+                m_maxDamage = int.Parse(reader.ReadElementString().Trim());
+            }
+            else if (reader.Name.Equals(ACCURACY, StringComparison.OrdinalIgnoreCase))
+            {
+                m_accuracy = byte.Parse(reader.ReadElementString().Trim());
+                if (m_accuracy < 0 || m_accuracy > 100)
+                {
+                    m_accuracy = 0;
+                }
+            }
+            else if (reader.Name.Equals(EXPERIENCE, StringComparison.OrdinalIgnoreCase))
+            {
+                m_experience = int.Parse(reader.ReadElementString().Trim());
+            }
+            else if (reader.Name.Equals(ON_AREA, StringComparison.OrdinalIgnoreCase))
+            {
+                m_attackOnArea = reader.ReadElementString().Trim().Equals("yes", StringComparison.OrdinalIgnoreCase);
+            }
+            else if (reader.Name.Equals(WEAKNESS, StringComparison.OrdinalIgnoreCase))
+            {
+                m_attackWeaknessTarget = reader.ReadElementString().Trim().Equals("yes", StringComparison.OrdinalIgnoreCase);
+            }
+            else if (reader.Name.Equals(TOWER_BONUS, StringComparison.OrdinalIgnoreCase))
+            {
+                m_towerBonus = reader.ReadElementString().Trim().Equals("yes", StringComparison.OrdinalIgnoreCase);
+            }
+            else if (reader.Name.Equals(IGNORE_TOWER_BONUS, StringComparison.OrdinalIgnoreCase))
+            {
+                m_ignoreTowerBonus = byte.Parse(reader.ReadElementString().Trim());
+            }
+        }
 
-			writer.WriteStartElement(ACCURACY);
-			writer.WriteValue(Accuracy);
-			writer.WriteEndElement();
+        internal virtual void SaveAttributes(XmlWriter writer)
+        {
+            writer.WriteStartElement(ID);
+            writer.WriteValue(m_id);
+            writer.WriteEndElement();
 
-			writer.WriteStartElement(EXPERIENCE);
-			writer.WriteValue(Experience);
-			writer.WriteEndElement();
+            writer.WriteStartElement(NAME);
+            writer.WriteValue("UNIT_" + m_id);
+            writer.WriteEndElement();
 
-			writer.WriteStartElement(ICON_PATH);
-			writer.WriteValue(IconPath);
-			writer.WriteEndElement();
+            writer.WriteStartElement(HEALTH);
+            writer.WriteValue(Health);
+            writer.WriteEndElement();
 
-			writer.WriteStartElement(ATTACK_PRIORITY);
-			writer.WriteValue(AttackPriority.ToString());
-			writer.WriteEndElement();			
+            writer.WriteStartElement(MIN_DAMAGE);
+            writer.WriteValue(MinDamage);
+            writer.WriteEndElement();
 
-			writer.WriteStartElement(ON_AREA);
-			writer.WriteValue(m_attackOnArea?"yes":"no");
-			writer.WriteEndElement();
+            writer.WriteStartElement(MAX_DAMAGE);
+            writer.WriteValue(MaxDamage);
+            writer.WriteEndElement();
 
-			writer.WriteStartElement(WEAKNESS);
-			writer.WriteValue(m_attackWeaknessTarget ? "yes" : "no");
-			writer.WriteEndElement();
-			
-			writer.WriteStartElement(TOWER_BONUS);
-			writer.WriteValue(m_towerBonus ? "yes" : "no");
-			writer.WriteEndElement();
-			
-			writer.WriteStartElement(IGNORE_TOWER_BONUS);
-			writer.WriteValue(m_ignoreTowerBonus);
-			writer.WriteEndElement();				
+            writer.WriteStartElement(ACCURACY);
+            writer.WriteValue(Accuracy);
+            writer.WriteEndElement();
 
-			writer.WriteEndElement();
-		}
+            writer.WriteStartElement(EXPERIENCE);
+            writer.WriteValue(Experience);
+            writer.WriteEndElement();
+
+            writer.WriteStartElement(ICON_PATH);
+            writer.WriteValue(IconPath);
+            writer.WriteEndElement();
+
+            writer.WriteStartElement(ATTACK_PRIORITY);
+            writer.WriteValue(AttackPriority.ToString());
+            writer.WriteEndElement();
+
+            writer.WriteStartElement(ON_AREA);
+            writer.WriteValue(m_attackOnArea ? "yes" : "no");
+            writer.WriteEndElement();
+
+            writer.WriteStartElement(WEAKNESS);
+            writer.WriteValue(m_attackWeaknessTarget ? "yes" : "no");
+            writer.WriteEndElement();
+
+            writer.WriteStartElement(TOWER_BONUS);
+            writer.WriteValue(m_towerBonus ? "yes" : "no");
+            writer.WriteEndElement();
+
+            writer.WriteStartElement(IGNORE_TOWER_BONUS);
+            writer.WriteValue(m_ignoreTowerBonus);
+            writer.WriteEndElement();
+        }
 	}
 }

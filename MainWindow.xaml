@@ -7,6 +7,7 @@
         xmlns:Converters="clr-namespace:TheSettlersCalculator.WpfTypes.Converters"
         xmlns:System="clr-namespace:System;assembly=mscorlib"
         xmlns:Components="clr-namespace:TheSettlersCalculator.WpfTypes.Components"
+        xmlns:Generals="clr-namespace:TheSettlersCalculator.Specialists.Generals"
         Title="Калькулятор боя - The Settlers Online" Height="640" Width="800" x:Name="Win" Closed="Win_Closed">
 	<Window.Resources>
         <ObjectDataProvider x:Key="serverTypeEnum" MethodName="GetValues" ObjectType="{x:Type System:Enum}">
@@ -429,14 +430,8 @@
 				</Grid.RowDefinitions>
 
 				<StackPanel Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="3" Orientation="Horizontal">
-                    <ComboBox Margin="10,5,10,5" Grid.Column="0" Grid.Row="0" Text="{Binding Model.PlayerUnitLimit, ElementName=Win}">
-                        <ComboBoxItem IsSelected="True">200</ComboBoxItem>
-                        <ComboBoxItem>220</ComboBoxItem>
-                        <ComboBoxItem>250</ComboBoxItem>
-                        <ComboBoxItem>270</ComboBoxItem>
-                    </ComboBox>
 
-					<ComboBox HorizontalAlignment="Right" Margin="0,2,16,2" MinWidth="200" ItemsSource="{Binding Model.Quests,ElementName=Win}" SelectedValue="{Binding Model.ActiveQuest, ElementName=Win, Mode=TwoWay}">
+                    <ComboBox HorizontalAlignment="Right" Margin="0,2,16,2" MinWidth="200" ItemsSource="{Binding Model.Quests,ElementName=Win}" SelectedValue="{Binding Model.ActiveQuest, ElementName=Win, Mode=TwoWay}">
 						<ComboBox.ItemTemplate>
 							<DataTemplate>
 								<StackPanel Orientation="Horizontal">
@@ -485,7 +480,14 @@
 							<Label>Волны:</Label>
 							<ListBox Style="{StaticResource HorizontalRadioButtonList}" SelectedIndex="{Binding PlayerWaveIndex}" ItemsSource="{Binding PlayerWaves}" />
 						</StackPanel>
-						<ItemsControl ItemsSource="{Binding Model.PlayerUnits,ElementName=Win}">
+                        <ComboBox Margin="10,5,10,5" ItemsSource="{Binding Source={x:Static Generals:Generals.GeneralList}}" SelectedValue="{Binding Model.PlayerGeneral, ElementName=Win}">
+                            <ComboBox.ItemTemplate>
+                                <DataTemplate>
+                                    <Components:GeneralViewControl General="{Binding Path=.}"></Components:GeneralViewControl>
+                                </DataTemplate>
+                            </ComboBox.ItemTemplate>
+                        </ComboBox>
+                        <ItemsControl ItemsSource="{Binding Model.PlayerUnits,ElementName=Win}">
 							<ItemsControl.ItemTemplate>
 								<DataTemplate>
 									<Grid>

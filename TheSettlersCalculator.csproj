@@ -80,7 +80,6 @@
     <Compile Include="Statistics\ShortArrayComparer.cs" />
     <Compile Include="Specialists\Generals\Generals.cs" />
     <Compile Include="Specialists\Generals\General.cs" />
-    <Compile Include="Specialists\Generals\GeneralType.cs" />
     <Compile Include="Statistics\MultiWaveStatistics.cs" />
     <Compile Include="Statistics\Statistics.cs" />
     <Compile Include="Statistics\StatisticsType.cs" />
@@ -126,6 +125,9 @@
     <Compile Include="Types\Unit.cs" />
     <Compile Include="Types\UnitAttackHandler.cs" />
     <Compile Include="WpfTypes\BattleLosses.cs" />
+    <Compile Include="WpfTypes\Components\GeneralViewControl.xaml.cs">
+      <DependentUpon>GeneralViewControl.xaml</DependentUpon>
+    </Compile>
     <Compile Include="WpfTypes\Components\SquadsViewControl.xaml.cs">
       <DependentUpon>SquadsViewControl.xaml</DependentUpon>
     </Compile>
@@ -184,6 +186,10 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="QuestMapWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="WpfTypes\Components\GeneralViewControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -340,17 +346,20 @@
     <PostBuildEvent>mkdir "$(TargetDir)Quests"
 mkdir "$(TargetDir)Quests\Maps"
 mkdir "$(TargetDir)Quests\Icons"
+mkdir "$(TargetDir)Quests\Icons\Generals"
 mkdir "$(TargetDir)Quests\Images"
 mkdir "$(TargetDir)Price"
 mkdir "$(TargetDir)Price\Icons"
 
 xcopy /D /Y "$(ProjectDir)Quests\*.xml" "$(TargetDir)Quests"
 xcopy /D /Y "$(ProjectDir)Quests\Icons" "$(TargetDir)Quests\Icons"
+xcopy /D /Y "$(ProjectDir)\Specialists\Generals\Images" "$(TargetDir)Quests\Icons\Generals"
 xcopy /D /Y "$(ProjectDir)Quests\Images" "$(TargetDir)Quests\Images"
 xcopy /D /Y "$(ProjectDir)Quests\Maps" "$(TargetDir)Quests\Maps"
 
 xcopy /D /Y "$(ProjectDir)Price\Icons" "$(TargetDir)Price\Icons"
-xcopy /D /Y "$(ProjectDir)Quests\Enemies\enemies.xml" "$(TargetDir)"</PostBuildEvent>
+xcopy /D /Y "$(ProjectDir)Quests\Enemies\enemies.xml" "$(TargetDir)"
+xcopy /D /Y "$(ProjectDir)Quests\Generals\generals.xml" "$(TargetDir)"</PostBuildEvent>
   </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

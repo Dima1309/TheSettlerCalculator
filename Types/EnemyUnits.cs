@@ -40,7 +40,7 @@ namespace TheSettlersCalculator.Types
 
 					while (!reader.EOF)
 					{
-						if (reader.IsStartElement(Unit.UNIT))
+						if (reader.IsStartElement(Unit.ROOT))
 						{
 							Unit unit = new Unit();
 							unit.Load(reader);

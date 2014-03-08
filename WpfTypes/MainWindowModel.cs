@@ -6,6 +6,7 @@ using System.Windows.Media.Imaging;
 using TheSettlersCalculator.Helper;
 using TheSettlersCalculator.Price;
 using TheSettlersCalculator.Quests;
+using TheSettlersCalculator.Specialists.Generals;
 using TheSettlersCalculator.Statistics;
 using TheSettlersCalculator.Types;
 using TheSettlersCalculator.Types.Simulation;
@@ -23,6 +24,7 @@ namespace TheSettlersCalculator.WpfTypes
 
 		#region Fields
 		private readonly ObservableCollection<UnitSquad>[] m_playerWaves = new ObservableCollection<UnitSquad>[MAX_WAVES_COUNT];
+		private readonly General[] m_playerGenerals = new General[MAX_WAVES_COUNT];
 		private readonly ObservableCollection<UnitSquad>[] m_enemyWaves = new ObservableCollection<UnitSquad>[MAX_WAVES_COUNT];
 		private int m_playerWaveIndex = 0;
 		private int m_enemyWaveIndex = 0;
@@ -35,7 +37,6 @@ namespace TheSettlersCalculator.WpfTypes
 		private readonly double[] m_enemyCampDestroyTime = new double[MAX_WAVES_COUNT];
 		private Quest m_activeQuest;
 		private EnemyCamp m_activeEnemyCamp;
-		private int m_userUnitsCount = 200;
 		private bool m_userUnitsCountWarning;
 		private MultyWaveBattleSimulation m_simulation;
 
@@ -49,6 +50,7 @@ namespace TheSettlersCalculator.WpfTypes
 			{
 				PlayerWaves[i] = new ObservableCollection<UnitSquad>();
 				EnemyWaves[i] = new ObservableCollection<UnitSquad>();
+				PlayerGenerals[i] = Generals.GeneralsDictionary[Generals.DEFAULT_GENERAL];
 			}
 
 			for(int i = 0; i < MAX_WAVES_COUNT; i++)
@@ -63,9 +65,6 @@ namespace TheSettlersCalculator.WpfTypes
 			}
 
 			ActiveQuest = Quests[0];
-
-			//Types.EnemyUnits.Save();
-			//TheSettlersCalculator.Quests.Quests.Save();
 		}
 		#endregion
 
@@ -100,6 +99,17 @@ namespace TheSettlersCalculator.WpfTypes
 		public ObservableCollection<Quest> Quests
 		{
 			get { return m_quests; }
+		}
+
+		public General PlayerGeneral
+		{
+			get { return m_playerGenerals[m_playerWaveIndex]; }
+
+			set 
+			{ 
+				m_playerGenerals[m_playerWaveIndex] = value;
+				CheckUserUnitsCount();
+			}
 		}
 
 		public Quest ActiveQuest
@@ -224,12 +234,7 @@ namespace TheSettlersCalculator.WpfTypes
 
 		public int PlayerUnitLimit
 		{
-			get { return m_userUnitsCount; }
-			set
-			{
-				m_userUnitsCount = value;
-				CheckUserUnitsCount();
-			}			
+			get { return m_playerGenerals[m_playerWaveIndex].ArmySize; }
 		}
 
 		public bool UserUnitsCountWarning
@@ -279,6 +284,8 @@ namespace TheSettlersCalculator.WpfTypes
 					OnPropertyChanged("PlayerUnits");
 					OnPropertyChanged("PlayerUnitsCount");
 					OnPropertyChanged("PlayerTowerBonus");
+					OnPropertyChanged("PlayerGeneral");
+					CheckUserUnitsCount();
 				}
 			}
 		}
@@ -305,6 +312,11 @@ namespace TheSettlersCalculator.WpfTypes
 		public ObservableCollection<UnitSquad>[] PlayerWaves
 		{
 			get { return m_playerWaves; }
+		}
+
+		public General[] PlayerGenerals
+		{
+			get { return m_playerGenerals; }
 		}
 
 		public ObservableCollection<UnitSquad>[] EnemyWaves

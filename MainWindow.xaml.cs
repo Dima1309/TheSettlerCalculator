@@ -1,5 +1,6 @@
 ﻿using System.Windows;
 using System.Windows.Controls;
+using TheSettlersCalculator.Specialists.Generals;
 using TheSettlersCalculator.Types;
 using TheSettlersCalculator.WpfTypes;
 
@@ -16,7 +17,7 @@ namespace TheSettlersCalculator
 
         public MainWindow()
 		{
-			InitializeComponent();        	
+			InitializeComponent();
 		}
 
 		public MainWindowModel Model
