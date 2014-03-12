@@ -23,9 +23,16 @@ namespace TheSettlersCalculator.Functions
 
 		internal double CalculateBattleTime(Battle battle, int rounds)
 		{
-			return Math.Abs(rounds) * ROUND_TIME + (rounds > 0
+			double result = Math.Abs(rounds) * ROUND_TIME + (rounds > 0
 			                                               	? battle.WinBattleTime
 			                                               	: 0);
+
+			if (battle.General != null && battle.General.Quick)
+			{
+				result /= 2;
+			}
+
+			return result;
 		}
 
 		internal void CalculateBattleTime(
