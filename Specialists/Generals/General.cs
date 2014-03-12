@@ -9,7 +9,7 @@ namespace TheSettlersCalculator.Specialists.Generals
 	public class General : Unit
 	{
         #region Consts
-		internal const string ROOT = "general";
+		internal new const string ROOT = "general";
         internal const string ARMY_SIZE = "armySize";
         private const string QUICK = "quick";
         #endregion

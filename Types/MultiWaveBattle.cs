@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using TheSettlersCalculator.Specialists.Generals;
 using TheSettlersCalculator.Statistics;
 using TheSettlersCalculator.WpfTypes;
 
@@ -12,13 +13,13 @@ namespace TheSettlersCalculator.Types
 		{
 			#region Fields
 			private readonly IList<UnitSquad> m_squads;
-			private readonly bool m_general;
+			private readonly General m_general;
 			private readonly double m_towerBonus;
 			private readonly double m_destroyCampTime;
 			#endregion
 
 			#region Constructor
-			internal BattleWave(IList<UnitSquad> squads, bool general, double towerBonus, double destroyCampTime)
+			internal BattleWave(IList<UnitSquad> squads, General general, double towerBonus, double destroyCampTime)
 			{
 				m_squads = new List<UnitSquad>(squads.Count);
 				foreach(UnitSquad squad in squads)
@@ -37,7 +38,7 @@ namespace TheSettlersCalculator.Types
 				get { return m_squads; }
 			}
 
-			public bool General
+			public General General
 			{
 				get { return m_general; }
 			}
@@ -133,12 +134,12 @@ namespace TheSettlersCalculator.Types
 		#endregion
 
 		#region Methods
-		internal void AddAttackerWave(IList<UnitSquad> units, bool general, double towerBonus)
+		internal void AddAttackerWave(IList<UnitSquad> units, General general, double towerBonus)
 		{
 			m_playerWaves.Add(new BattleWave(units, general, towerBonus, 0));
 		}
 
-		internal void AddEnemyWave(IList<UnitSquad> units, bool general, double towerBonus, double destroyCampTime)
+		internal void AddEnemyWave(IList<UnitSquad> units, General general, double towerBonus, double destroyCampTime)
 		{
 			m_enemyWaves.Add(new BattleWave(units, general, towerBonus, destroyCampTime));
 		}
@@ -153,9 +154,9 @@ namespace TheSettlersCalculator.Types
 				int playerIndex = 0;
 				int enemyIndex = 0;
 				IList<UnitSquad> playerSquads = null;
-				bool playerGeneral = false;
+				General playerGeneral = null;
 				IList<UnitSquad> enemySquads = null;
-				bool enemyGeneral = false;
+				General enemyGeneral = null;
 				int destroyEnemyCampTime = 0;
 
 				while(playerIndex < m_playerWaves.Count && enemyIndex < m_enemyWaves.Count)

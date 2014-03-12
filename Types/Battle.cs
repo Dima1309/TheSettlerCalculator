@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using TheSettlersCalculator.Specialists.Generals;
 using TheSettlersCalculator.Statistics;
 using TheSettlersCalculator.WpfTypes;
 
@@ -14,7 +15,7 @@ namespace TheSettlersCalculator.Types
 		#endregion
 
 		#region Constructor
-		internal Battle(IList<UnitSquad> units, bool general, IList<UnitSquad> enemyUnits, bool enemyGeneral)
+		internal Battle(IList<UnitSquad> units, General general, IList<UnitSquad> enemyUnits, General enemyGeneral)
 		{
 			KeyValuePair<Unit[], short[]> result = InitializeUnits(units);
 			m_sides = new BattleSide[2];
@@ -24,7 +25,7 @@ namespace TheSettlersCalculator.Types
 			Sides[(int)BattleSideType.Enemy] = new BattleSide(result.Key, result.Value, enemyGeneral);
 		}
 
-		internal Battle(Unit[] units, short[] counts, bool general, Unit[] enemyUnits, short[] enemyCounts, bool enemyGeneral, StatisticsType statisticsType)
+		internal Battle(Unit[] units, short[] counts, General general, Unit[] enemyUnits, short[] enemyCounts, General enemyGeneral, StatisticsType statisticsType)
 		{
 			KeyValuePair<Unit[], short[]> result = InitializeUnits(units, counts);
 			m_sides = new BattleSide[2];
@@ -36,7 +37,7 @@ namespace TheSettlersCalculator.Types
 			m_statisticsType = statisticsType;
 		}
 
-		internal Battle(Unit[] units, bool general, Unit[] enemyUnits, bool enemyGeneral)
+		internal Battle(Unit[] units, General general, Unit[] enemyUnits, General enemyGeneral)
 		{
 			m_sides = new BattleSide[2];
 			Sides[(int)BattleSideType.Player] = new BattleSide(units, new short[units.Length], general);
@@ -110,12 +111,12 @@ namespace TheSettlersCalculator.Types
 			get { return m_sides[(int)BattleSideType.Enemy].Counts; }
 		}
 
-		public bool EnemyGeneral
+		public General EnemyGeneral
 		{
 			get { return m_sides[(int)BattleSideType.Enemy].General;  }
 		}
 
-		public bool General
+		public General General
 		{
 			get { return m_sides[(int)BattleSideType.Player].General; }
 		}

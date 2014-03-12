@@ -1,4 +1,5 @@
 ﻿using System;
+using TheSettlersCalculator.Specialists.Generals;
 
 namespace TheSettlersCalculator.Types
 {
@@ -7,7 +8,7 @@ namespace TheSettlersCalculator.Types
 		#region Fields
 		private readonly short[] m_counts;
 		private readonly int[] m_healts;
-		private readonly bool m_general;
+		private readonly General m_general;
 		#endregion
 
 		#region Constructor
@@ -44,7 +45,7 @@ namespace TheSettlersCalculator.Types
 			get { return m_healts; }
 		}
 
-		internal bool General
+		internal General General
 		{
 			get { return m_general; }
 		}

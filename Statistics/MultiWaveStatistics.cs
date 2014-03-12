@@ -18,7 +18,7 @@ namespace TheSettlersCalculator.Statistics
 		internal MultiWaveStatistics(MultiWaveBattle battle)
 		{
 			m_battle = battle;
-			m_dummyTotalBattle = new Battle(battle.Units.ToArray(), false, battle.EnemyUnits.ToArray(), false);
+			m_dummyTotalBattle = new Battle(battle.Units.ToArray(), null, battle.EnemyUnits.ToArray(), null);
 			m_dummyTotalBattle.StatisticsType = battle.StatisticsType;
 		}
 		#endregion

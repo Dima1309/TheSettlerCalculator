@@ -391,8 +391,8 @@ namespace TheSettlersCalculator.WpfTypes
 			bool isAttackerEmpty = true;
 			for(int i=0;i<MAX_WAVES_COUNT;i++)
 			{
-				battle.AddAttackerWave(PlayerWaves[i], true, m_playerTowerBonus[i]);
-				battle.AddEnemyWave(EnemyWaves[i], false, m_enemyTowerBonus[i], m_enemyCampDestroyTime[i]);
+				battle.AddAttackerWave(PlayerWaves[i], m_playerGenerals[i], m_playerTowerBonus[i]);
+				battle.AddEnemyWave(EnemyWaves[i], null, m_enemyTowerBonus[i], m_enemyCampDestroyTime[i]);
 
 				if (isAttackerEmpty)
 				{

@@ -1,4 +1,5 @@
-﻿namespace TheSettlersCalculator.Types
+﻿using TheSettlersCalculator.Specialists.Generals;
+namespace TheSettlersCalculator.Types
 {
 	internal struct BattleStep
 	{
@@ -44,12 +45,12 @@
 			get { return m_sides[(int)BattleSideType.Enemy].Healts; }
 		}
 
-		public bool General
+		public General General
 		{
 			get { return m_sides[(int)BattleSideType.Player].General; }
 		}
 
-		public bool EnemyGeneral
+		public General EnemyGeneral
 		{
 			get { return m_sides[(int)BattleSideType.Enemy].General; }
 		}

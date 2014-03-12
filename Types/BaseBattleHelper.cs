@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using TheSettlersCalculator.Specialists.Generals;
 
 namespace TheSettlersCalculator.Types
 {
@@ -67,10 +68,47 @@ namespace TheSettlersCalculator.Types
 			List<BattleStep> steps = new List<BattleStep>();
 			steps.Add(new BattleStep(battle));
 			int roundIndex = 0;
+			General avantgardGeneral = null;
+			General general = null;
+			General rearguardGeneral = null;
+			if (battle.General != null)
+			{
+				switch(battle.General.AttackPriority)
+				{
+					case AttackPriority.AvantGarde:
+						avantgardGeneral = battle.General;
+						break;
+					case AttackPriority.Normal:
+						general = battle.General;
+						break;
+					case AttackPriority.RearGuard:
+						rearguardGeneral = battle.General;
+						break;
+				}
+			}
+			
+			General avantgardEnemyGeneral = null;
+			General enemyGeneral = null;
+			General rearguardEnemyGeneral = null;
+			if (battle.EnemyGeneral != null)
+			{
+				switch (battle.EnemyGeneral.AttackPriority)
+				{
+					case AttackPriority.AvantGarde:
+						avantgardEnemyGeneral = battle.EnemyGeneral;
+						break;
+					case AttackPriority.Normal:
+						enemyGeneral = battle.EnemyGeneral;
+						break;
+					case AttackPriority.RearGuard:
+						rearguardEnemyGeneral = battle.EnemyGeneral;
+						break;
+				}
+			}
 
 			while (true)
 			{
-				if (!Attack2(battle, waves.Avantgard, waves.EnemyAvantgard, steps, false, random, unitAttackHandler))
+				if (!Attack2(battle, waves.Avantgard, waves.EnemyAvantgard, steps, avantgardGeneral, avantgardEnemyGeneral, random, unitAttackHandler))
 				{
 					break;
 				}
@@ -80,7 +118,7 @@ namespace TheSettlersCalculator.Types
 					roundStateHandler(null, new RoundStateArgs(steps[steps.Count - 1], roundIndex++));
 				}
 
-				if (!Attack2(battle, waves.Normal, waves.EnemyNormal, steps, true, random, unitAttackHandler))
+				if (!Attack2(battle, waves.Normal, waves.EnemyNormal, steps, general, enemyGeneral, random, unitAttackHandler))
 				{
 					break;
 				}
@@ -90,7 +128,7 @@ namespace TheSettlersCalculator.Types
 					roundStateHandler(null, new RoundStateArgs(steps[steps.Count - 1], roundIndex++));
 				}
 
-				if (!Attack2(battle, waves.RearGuard, waves.EnemyRearGuard, steps, false, random, unitAttackHandler))
+				if (!Attack2(battle, waves.RearGuard, waves.EnemyRearGuard, steps, rearguardGeneral, rearguardEnemyGeneral, random, unitAttackHandler))
 				{
 					break;
 				}
@@ -115,7 +153,8 @@ namespace TheSettlersCalculator.Types
 			IEnumerable<int> units,
 			IEnumerable<int> enemyUnits,
 			IList<BattleStep> steps,
-			bool generalAttack,
+			General general,
+			General enemyGeneral,
 			Random random,
 			UnitAttackHandler unitAttackHandler)
 		{
@@ -145,19 +184,12 @@ namespace TheSettlersCalculator.Types
 				}
 			}
 
-			if (generalAttack && battle.General && targetIndex >= 0)
+			if (general != null)
 			{
-				// general attack
-				if (unitAttackHandler != null)
+				targetIndex = -1;
+				if (AttackUnits2(general, -1, 1, targetIndex, battle, newStep, BattleSideType.Player, random, unitAttackHandler) < 0)
 				{
-					unitAttackHandler(null, new UnitAttackArgs(BattleSideType.Player, PlayerUnits.GENERAL, 1, targetIndex, GENERAL_DAMAGE, newStep.EnemyHealts[targetIndex]));
-				}
-
-				newStep.EnemyHealts[targetIndex] -= GENERAL_DAMAGE;
-				if (newStep.EnemyHealts[targetIndex] <= 0)
-				{
-					newStep.EnemyCounts[targetIndex]--;
-					newStep.EnemyHealts[targetIndex] = battle.EnemyUnits[targetIndex].Health;
+					result = false;
 				}
 			}
 
@@ -180,18 +212,12 @@ namespace TheSettlersCalculator.Types
 				}
 			}
 
-			if (generalAttack && battle.EnemyGeneral && targetIndex >= 0)
+			if (enemyGeneral != null)
 			{
-				if (unitAttackHandler != null)
+				targetIndex = -1;
+				if (AttackUnits2(enemyGeneral, -1, 1, targetIndex, battle, newStep, BattleSideType.Enemy, random, unitAttackHandler) < 0)
 				{
-					unitAttackHandler(null, new UnitAttackArgs(BattleSideType.Enemy, -1, 1, targetIndex, GENERAL_DAMAGE, newStep.Healts[targetIndex]));
-				}
-
-				newStep.Healts[targetIndex] -= GENERAL_DAMAGE;
-				if (newStep.Healts[targetIndex] <= 0)
-				{
-					newStep.Counts[targetIndex]--;
-					newStep.Healts[targetIndex] = battle.Units[targetIndex].Health;
+					result = false;
 				}
 			}
 
@@ -220,10 +246,24 @@ namespace TheSettlersCalculator.Types
 			Random random,
 			UnitAttackHandler unitAttackHandler)
 		{
+			Unit unit = battle.Sides[(int)attackerSide].Units[unitIndex];
+
+			return AttackUnits2(unit, unitIndex, unitCount, targetIndex, battle, newStep, attackerSide, random, unitAttackHandler);
+		}
+
+		private int AttackUnits2(
+			Unit unit,
+			int unitIndex,
+			int unitCount,
+			int targetIndex,
+			Battle battle,
+			BattleStep newStep,
+			BattleSideType attackerSide,
+			Random random,
+			UnitAttackHandler unitAttackHandler)
+		{
 			BattleSideType defenderSideType = GetEnemySide(attackerSide);
 			BattleSideStep defenderSideStep = newStep.Sides[(int)defenderSideType];
-
-			Unit unit = battle.Sides[(int)attackerSide].Units[unitIndex];
 
 			int[] originalDamages = GetUnitsDamage(attackerSide, unit, unitCount, random);
 

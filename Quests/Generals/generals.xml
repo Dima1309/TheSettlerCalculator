@@ -85,4 +85,21 @@
     <armySize>270</armySize>
     <quick>yes</quick>
   </general>
+  <general>
+    <id>MartialArts</id>
+    <name>GENERAL_MARTIAL_ARTS</name>
+    <health>1</health>
+    <minDamage>450</minDamage>
+    <maxDamage>500</maxDamage>
+    <accuracy>80</accuracy>
+    <experience>0</experience>
+    <icon>.\Quests\Icons\Generals\martial-arts.png</icon>
+    <priority>AvantGarde</priority>
+    <attack_on_area>yes</attack_on_area>
+    <attack_weakness>yes</attack_weakness>
+    <tower_bonus>no</tower_bonus>
+    <ignore_tower_bonus>0</ignore_tower_bonus>
+    <armySize>220</armySize>
+    <quick>yes</quick>
+  </general>
 </generals>

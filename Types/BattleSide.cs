@@ -1,16 +1,17 @@
-﻿namespace TheSettlersCalculator.Types
+﻿using TheSettlersCalculator.Specialists.Generals;
+namespace TheSettlersCalculator.Types
 {
 	internal class BattleSide
 	{
 		#region Fields
 		private readonly Unit[] m_units;
 		private readonly short[] m_counts;
-		private bool m_general;
+		private General m_general;
 		private double m_towerBonus;
 		#endregion
 
 		#region Constructor
-		public BattleSide(Unit[] units, short[] counts, bool general)
+		public BattleSide(Unit[] units, short[] counts, General general)
 		{
 			m_units = units;
 			m_counts = counts;
@@ -29,7 +30,7 @@
 			get { return m_counts; }
 		}
 
-		public bool General
+		public General General
 		{
 			get { return m_general; }
 			set { m_general = value; }

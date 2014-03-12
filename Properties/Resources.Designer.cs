@@ -205,6 +205,15 @@ namespace TheSettlersCalculator.Properties {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на Мастер боевых искусств.
+        /// </summary>
+        public static string GENERAL_MARTIAL_ARTS {
+            get {
+                return ResourceManager.GetString("GENERAL_MARTIAL_ARTS", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на Опытный генерал.
         /// </summary>
         public static string GENERAL_QUICK {
