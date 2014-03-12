@@ -24,13 +24,13 @@ namespace TheSettlersCalculator.Types.Simulation
 				Unit target;
 				if (arg.AttackerSide==BattleSideType.Player)
 				{
-					attacker = arg.AttackerUnit == PlayerUnits.GENERAL ? PlayerUnits.General : battle.Units[arg.AttackerUnit];
-					target = arg.TargetUnit == PlayerUnits.GENERAL ? PlayerUnits.General : battle.EnemyUnits[arg.TargetUnit];
+					attacker = arg.AttackerUnit == PlayerUnits.GENERAL ? battle.General : battle.Units[arg.AttackerUnit];
+					target = arg.TargetUnit == PlayerUnits.GENERAL ? battle.EnemyGeneral : battle.EnemyUnits[arg.TargetUnit];
 				}
 				else
 				{
-					attacker = arg.AttackerUnit == PlayerUnits.GENERAL ? PlayerUnits.General : battle.EnemyUnits[arg.AttackerUnit];
-					target = arg.TargetUnit == PlayerUnits.GENERAL ? PlayerUnits.General : battle.Units[arg.TargetUnit];					
+					attacker = arg.AttackerUnit == PlayerUnits.GENERAL ? battle.General : battle.EnemyUnits[arg.AttackerUnit];
+					target = arg.TargetUnit == PlayerUnits.GENERAL ? battle.EnemyGeneral : battle.Units[arg.TargetUnit];					
 				}
 
 				m_unit = attacker;
