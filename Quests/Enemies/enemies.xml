@@ -1290,4 +1290,19 @@
     <tower_bonus>no</tower_bonus>
     <ignore_tower_bonus>0</ignore_tower_bonus>
   </unit>
+  <unit>
+    <id>CANNONEER</id>
+    <name>UNIT_CANNONNEER</name>
+    <health>60</health>
+    <minDamage>60</minDamage>
+    <maxDamage>120</maxDamage>
+    <accuracy>90</accuracy>
+    <experience>30</experience>
+    <icon>Quests\Images\cannoneer.png</icon>
+    <priority>RearGuard</priority>
+    <attack_on_area>no</attack_on_area>
+    <attack_weakness>no</attack_weakness>
+    <tower_bonus>yes</tower_bonus>
+    <ignore_tower_bonus>100</ignore_tower_bonus>
+  </unit>
 </units>

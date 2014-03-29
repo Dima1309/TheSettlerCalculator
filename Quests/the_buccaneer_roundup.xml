@@ -1,0 +1,176 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<quest>
+  <name>QUEST_THE_BUCCANEER_ROUNDUP</name>
+  <map>Quests\Maps\the_buccaneer_roundup.jpg</map>
+  <icon>Quests\Icons\the_buccaneer_roundup.png</icon>
+  <enemies>
+    <enemy>CALTROP</enemy>
+    <enemy>DECKSCRUBBER</enemy>
+    <enemy>SABER_RATTLER</enemy>
+    <enemy>CRAZY_COOK</enemy>
+    <enemy>GUNMAN</enemy>
+    <enemy>PETTY_OFFICER_2ND_CLASS</enemy>
+    <enemy>CANNONEER</enemy>
+  </enemies>
+  <camps>
+    <camp>
+      <name>1</name>
+      <type>Normal</type>
+      <wintime>20</wintime>
+      <sector>1</sector>
+      <left>348</left>
+      <top>870</top>
+      <enemy unit="SABER_RATTLER" count="100" />
+      <enemy unit="GUNMAN" count="80" />
+    </camp>
+    <camp>
+      <name>2</name>
+      <type>Normal</type>
+      <wintime>20</wintime>
+      <sector>1</sector>
+      <left>555</left>
+      <top>957</top>
+      <enemy unit="DECKSCRUBBER" count="100" />
+      <enemy unit="SABER_RATTLER" count="20" />
+      <enemy unit="GUNMAN" count="80" />
+    </camp>
+    <camp>
+      <name>3</name>
+      <type>Boss</type>
+      <wintime>20</wintime>
+      <sector>1</sector>
+      <left>675</left>
+      <top>1098</top>
+      <enemy unit="DECKSCRUBBER" count="120" />
+      <enemy unit="PETTY_OFFICER_2ND_CLASS" count="40" />
+      <enemy unit="CANNONEER" count="40" />
+    </camp>
+    <camp>
+      <name>4</name>
+      <type>Normal</type>
+      <wintime>20</wintime>
+      <sector>2</sector>
+      <left>465</left>
+      <top>360</top>
+      <enemy unit="SABER_RATTLER" count="100" />
+      <enemy unit="GUNMAN" count="80" />
+    </camp>
+    <camp>
+      <name>5</name>
+      <type>Normal</type>
+      <wintime>20</wintime>
+      <sector>2</sector>
+      <left>526</left>
+      <top>505</top>
+      <enemy unit="DECKSCRUBBER" count="100" />
+      <enemy unit="SABER_RATTLER" count="20" />
+      <enemy unit="GUNMAN" count="80" />
+    </camp>
+    <camp>
+      <name>6</name>
+      <type>Boss</type>
+      <wintime>20</wintime>
+      <sector>2</sector>
+      <left>712</left>
+      <top>682</top>
+      <enemy unit="DECKSCRUBBER" count="120" />
+      <enemy unit="PETTY_OFFICER_2ND_CLASS" count="40" />
+      <enemy unit="CANNONEER" count="40" />
+    </camp>
+    <camp>
+      <name>7</name>
+      <type>Normal</type>
+      <wintime>20</wintime>
+      <sector>3</sector>
+      <left>1678</left>
+      <top>445</top>
+      <enemy unit="SABER_RATTLER" count="100" />
+      <enemy unit="GUNMAN" count="80" />
+    </camp>
+    <camp>
+      <name>8</name>
+      <type>Normal</type>
+      <wintime>20</wintime>
+      <sector>3</sector>
+      <left>1766</left>
+      <top>647</top>
+      <enemy unit="DECKSCRUBBER" count="100" />
+      <enemy unit="SABER_RATTLER" count="20" />
+      <enemy unit="GUNMAN" count="80" />
+    </camp>
+    <camp>
+      <name>9</name>
+      <type>Boss</type>
+      <wintime>20</wintime>
+      <sector>3</sector>
+      <left>1651</left>
+      <top>825</top>
+      <enemy unit="DECKSCRUBBER" count="120" />
+      <enemy unit="PETTY_OFFICER_2ND_CLASS" count="40" />
+      <enemy unit="CANNONEER" count="40" />
+    </camp>
+    <camp>
+      <name>10</name>
+      <type>Normal</type>
+      <wintime>20</wintime>
+      <sector>4</sector>
+      <left>1055</left>
+      <top>1168</top>
+      <enemy unit="CALTROP" count="100" />
+      <enemy unit="DECKSCRUBBER" count="50" />
+      <enemy unit="GUNMAN" count="50" />
+    </camp>
+    <camp>
+      <name>11</name>
+      <type>Normal</type>
+      <wintime>20</wintime>
+      <sector>4</sector>
+      <left>1145</left>
+      <top>1184</top>
+      <enemy unit="CALTROP" count="100" />
+      <enemy unit="DECKSCRUBBER" count="50" />
+      <enemy unit="GUNMAN" count="50" />
+    </camp>
+    <camp>
+      <name>12</name>
+      <type>Normal</type>
+      <wintime>20</wintime>
+      <sector>4</sector>
+      <left>1083</left>
+      <top>1223</top>
+      <enemy unit="CALTROP" count="100" />
+      <enemy unit="DECKSCRUBBER" count="50" />
+      <enemy unit="GUNMAN" count="50" />
+    </camp>
+    <camp>
+      <name>13</name>
+      <type>Normal</type>
+      <wintime>20</wintime>
+      <sector>4</sector>
+      <left>1145</left>
+      <top>1367</top>
+      <enemy unit="CALTROP" count="200" />
+    </camp>
+    <camp>
+      <name>14</name>
+      <type>Normal</type>
+      <wintime>20</wintime>
+      <sector>4</sector>
+      <left>1205</left>
+      <top>1330</top>
+      <enemy unit="CALTROP" count="200" />
+    </camp>
+    <camp>
+      <name>15</name>
+      <type>Boss</type>
+      <wintime>20</wintime>
+      <sector>4</sector>
+      <left>1452</left>
+      <top>1447</top>
+      <enemy unit="SABER_RATTLER" count="50" />
+      <enemy unit="CRAZY_COOK" count="2" />
+      <enemy unit="GUNMAN" count="100" />
+      <enemy unit="CANNONEER" count="40" />
+    </camp>
+  </camps>
+</quest>
