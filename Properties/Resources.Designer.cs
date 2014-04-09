@@ -376,6 +376,15 @@ namespace TheSettlersCalculator.Properties {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на Сокровища у озера.
+        /// </summary>
+        public static string QUEST_LAKESIDE_TREASURE {
+            get {
+                return ResourceManager.GetString("QUEST_LAKESIDE_TREASURE", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на Потерянный череп.
         /// </summary>
         public static string QUEST_LOST_SKULL {
@@ -439,6 +448,15 @@ namespace TheSettlersCalculator.Properties {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на Налёт на налётчиков.
+        /// </summary>
+        public static string QUEST_RAIDING_THE_RAIDERS {
+            get {
+                return ResourceManager.GetString("QUEST_RAIDING_THE_RAIDERS", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на Ревущий бык.
         /// </summary>
         public static string QUEST_RASENDER_BULLE {
@@ -489,6 +507,15 @@ namespace TheSettlersCalculator.Properties {
         public static string QUEST_SECLUDED_EXPERIMENTS {
             get {
                 return ResourceManager.GetString("QUEST_SECLUDED_EXPERIMENTS", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Осада.
+        /// </summary>
+        public static string QUEST_SIEGE {
+            get {
+                return ResourceManager.GetString("QUEST_SIEGE", resourceCulture);
             }
         }
         
@@ -574,6 +601,15 @@ namespace TheSettlersCalculator.Properties {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на Облава на пиратов.
+        /// </summary>
+        public static string QUEST_THE_BUCCANEER_ROUNDUP {
+            get {
+                return ResourceManager.GetString("QUEST_THE_BUCCANEER_ROUNDUP", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на Умный портняжка.
         /// </summary>
         public static string QUEST_THE_CLEVER_LITTLE_TAILOR {
@@ -628,6 +664,15 @@ namespace TheSettlersCalculator.Properties {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на Грабители могил.
+        /// </summary>
+        public static string QUEST_TOMB_RAIDERS {
+            get {
+                return ResourceManager.GetString("QUEST_TOMB_RAIDERS", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на Предатели.
         /// </summary>
         public static string QUEST_TRAITORS {
@@ -678,6 +723,15 @@ namespace TheSettlersCalculator.Properties {
         public static string QUEST_VIKTOR_DER_VERSCHLAGENE {
             get {
                 return ResourceManager.GetString("QUEST_VIKTOR_DER_VERSCHLAGENE", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Вихрь.
+        /// </summary>
+        public static string QUEST_WHIRLWIND {
+            get {
+                return ResourceManager.GetString("QUEST_WHIRLWIND", resourceCulture);
             }
         }
         

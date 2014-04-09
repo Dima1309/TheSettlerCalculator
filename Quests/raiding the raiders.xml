@@ -1,0 +1,236 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<quest>
+  <name>QUEST_RAIDING_THE_RAIDERS</name>
+  <map>Quests\Maps\raiding the raiders.jpeg</map>
+  <icon>Quests\Icons\raiding the raiders.png</icon>
+  <enemies>
+    <enemy>NOMAD</enemy>
+    <enemy>LANCE_RIDER</enemy>
+    <enemy>RIDING_BOWMAN</enemy>
+    <enemy>RIDING_AMAZONIAN</enemy>
+    <enemy>CATAPHRACT</enemy>
+    <enemy>UPROARIOUS_BULL</enemy>
+    <enemy>COMPOSITE_BOW</enemy>
+  </enemies>
+  <camps>
+    <camp>
+      <name>1a</name>
+      <type>Normal</type>
+      <wintime>20</wintime>
+      <sector>1</sector>
+      <left>182</left>
+      <top>367</top>
+      <enemy unit="NOMAD" count="100" />
+      <enemy unit="LANCE_RIDER" count="100" />
+    </camp>
+    <camp>
+      <name>2a</name>
+      <type>Normal</type>
+      <wintime>20</wintime>
+      <sector>1</sector>
+      <left>296</left>
+      <top>356</top>
+      <enemy unit="LANCE_RIDER" count="180" />
+    </camp>
+    <camp>
+      <name>3a</name>
+      <type>Normal</type>
+      <wintime>20</wintime>
+      <sector>1</sector>
+      <left>446</left>
+      <top>305</top>
+      <enemy unit="NOMAD" count="150" />
+      <enemy unit="RIDING_AMAZONIAN" count="50" />
+    </camp>
+    <camp>
+      <name>4a</name>
+      <type>Boss</type>
+      <wintime>20</wintime>
+      <sector>1</sector>
+      <left>595</left>
+      <top>228</top>
+      <enemy unit="NOMAD" count="100" />
+      <enemy unit="LANCE_RIDER" count="50" />
+      <enemy unit="RIDING_AMAZONIAN" count="48" />
+      <enemy unit="UPROARIOUS_BULL" count="2" />
+    </camp>
+    <camp>
+      <name>5a</name>
+      <type>Normal</type>
+      <wintime>20</wintime>
+      <sector>2</sector>
+      <left>708</left>
+      <top>160</top>
+      <enemy unit="NOMAD" count="30" />
+      <enemy unit="RIDING_BOWMAN" count="100" />
+    </camp>
+    <camp>
+      <name>6a</name>
+      <type>Normal</type>
+      <wintime>20</wintime>
+      <sector>2</sector>
+      <left>858</left>
+      <top>250</top>
+      <enemy unit="NOMAD" count="50" />
+      <enemy unit="RIDING_AMAZONIAN" count="150" />
+    </camp>
+    <camp>
+      <name>7a</name>
+      <type>Boss</type>
+      <wintime>20</wintime>
+      <sector>2</sector>
+      <left>1105</left>
+      <top>224</top>
+      <enemy unit="NOMAD" count="49" />
+      <enemy unit="CATAPHRACT" count="100" />
+      <enemy unit="UPROARIOUS_BULL" count="1" />
+      <enemy unit="COMPOSITE_BOW" count="50" />
+    </camp>
+    <camp>
+      <name>1b</name>
+      <type>Normal</type>
+      <wintime>20</wintime>
+      <sector>3</sector>
+      <left>314</left>
+      <top>769</top>
+      <enemy unit="NOMAD" count="100" />
+      <enemy unit="LANCE_RIDER" count="100" />
+    </camp>
+    <camp>
+      <name>2b</name>
+      <type>Normal</type>
+      <wintime>20</wintime>
+      <sector>3</sector>
+      <left>477</left>
+      <top>748</top>
+      <enemy unit="LANCE_RIDER" count="180" />
+    </camp>
+    <camp>
+      <name>3b</name>
+      <type>Normal</type>
+      <wintime>20</wintime>
+      <sector>3</sector>
+      <left>560</left>
+      <top>618</top>
+      <enemy unit="NOMAD" count="150" />
+      <enemy unit="RIDING_AMAZONIAN" count="50" />
+    </camp>
+    <camp>
+      <name>4b</name>
+      <type>Boss</type>
+      <wintime>20</wintime>
+      <sector>3</sector>
+      <left>776</left>
+      <top>561</top>
+      <enemy unit="NOMAD" count="100" />
+      <enemy unit="LANCE_RIDER" count="50" />
+      <enemy unit="RIDING_AMAZONIAN" count="48" />
+      <enemy unit="UPROARIOUS_BULL" count="2" />
+    </camp>
+    <camp>
+      <name>5b</name>
+      <type>Normal</type>
+      <wintime>20</wintime>
+      <sector>4</sector>
+      <left>904</left>
+      <top>484</top>
+      <enemy unit="NOMAD" count="30" />
+      <enemy unit="RIDING_BOWMAN" count="100" />
+    </camp>
+    <camp>
+      <name>6b</name>
+      <type>Normal</type>
+      <wintime>20</wintime>
+      <sector>4</sector>
+      <left>1036</left>
+      <top>404</top>
+      <enemy unit="NOMAD" count="50" />
+      <enemy unit="RIDING_AMAZONIAN" count="150" />
+    </camp>
+    <camp>
+      <name>7b</name>
+      <type>Boss</type>
+      <wintime>20</wintime>
+      <sector>4</sector>
+      <left>1203</left>
+      <top>262</top>
+      <enemy unit="NOMAD" count="49" />
+      <enemy unit="CATAPHRACT" count="100" />
+      <enemy unit="UPROARIOUS_BULL" count="1" />
+      <enemy unit="COMPOSITE_BOW" count="50" />
+    </camp>
+    <camp>
+      <name>1c</name>
+      <type>Normal</type>
+      <wintime>20</wintime>
+      <sector>5</sector>
+      <left>890</left>
+      <top>984</top>
+      <enemy unit="NOMAD" count="100" />
+      <enemy unit="LANCE_RIDER" count="100" />
+    </camp>
+    <camp>
+      <name>2c</name>
+      <type>Normal</type>
+      <wintime>20</wintime>
+      <sector>5</sector>
+      <left>1004</left>
+      <top>971</top>
+      <enemy unit="LANCE_RIDER" count="180" />
+    </camp>
+    <camp>
+      <name>3c</name>
+      <type>Normal</type>
+      <wintime>20</wintime>
+      <sector>5</sector>
+      <left>1005</left>
+      <top>854</top>
+      <enemy unit="NOMAD" count="150" />
+      <enemy unit="RIDING_AMAZONIAN" count="50" />
+    </camp>
+    <camp>
+      <name>4c</name>
+      <type>Boss</type>
+      <wintime>20</wintime>
+      <sector>5</sector>
+      <left>1056</left>
+      <top>692</top>
+      <enemy unit="NOMAD" count="100" />
+      <enemy unit="LANCE_RIDER" count="50" />
+      <enemy unit="RIDING_AMAZONIAN" count="48" />
+      <enemy unit="UPROARIOUS_BULL" count="2" />
+    </camp>
+    <camp>
+      <name>5c</name>
+      <type>Normal</type>
+      <wintime>20</wintime>
+      <sector>6</sector>
+      <left>1101</left>
+      <top>585</top>
+      <enemy unit="NOMAD" count="30" />
+      <enemy unit="RIDING_BOWMAN" count="100" />
+    </camp>
+    <camp>
+      <name>6c</name>
+      <type>Normal</type>
+      <wintime>20</wintime>
+      <sector>6</sector>
+      <left>1234</left>
+      <top>485</top>
+      <enemy unit="NOMAD" count="50" />
+      <enemy unit="RIDING_AMAZONIAN" count="150" />
+    </camp>
+    <camp>
+      <name>7c</name>
+      <type>Boss</type>
+      <wintime>20</wintime>
+      <sector>6</sector>
+      <left>1303</left>
+      <top>304</top>
+      <enemy unit="NOMAD" count="49" />
+      <enemy unit="CATAPHRACT" count="100" />
+      <enemy unit="UPROARIOUS_BULL" count="1" />
+      <enemy unit="COMPOSITE_BOW" count="50" />
+    </camp>
+  </camps>
+</quest>

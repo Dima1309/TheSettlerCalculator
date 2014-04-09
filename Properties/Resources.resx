@@ -222,6 +222,9 @@
   <data name="QUEST_ISLAND_OF_THE_PIRATES" xml:space="preserve">
     <value>Остров пиратов</value>
   </data>
+  <data name="QUEST_LAKESIDE_TREASURE" xml:space="preserve">
+    <value>Сокровища у озера</value>
+  </data>
   <data name="QUEST_LOST_SKULL" xml:space="preserve">
     <value>Потерянный череп</value>
   </data>
@@ -243,6 +246,9 @@
   <data name="QUEST_PLAYER" xml:space="preserve">
     <value>Игрок</value>
   </data>
+  <data name="QUEST_RAIDING_THE_RAIDERS" xml:space="preserve">
+    <value>Налёт на налётчиков</value>
+  </data>
   <data name="QUEST_RASENDER_BULLE" xml:space="preserve">
     <value>Ревущий бык</value>
   </data>
@@ -260,6 +266,9 @@
   </data>
   <data name="QUEST_SECLUDED_EXPERIMENTS" xml:space="preserve">
     <value>Эксперименты в уединении</value>
+  </data>
+  <data name="QUEST_SIEGE" xml:space="preserve">
+    <value>Осада</value>
   </data>
   <data name="QUEST_SLEEPING_VULKAN" xml:space="preserve">
     <value>Спящий вулкан</value>
@@ -288,6 +297,9 @@
   <data name="QUEST_THE_BLACK_KNIGHTS" xml:space="preserve">
     <value>Чёрные рыцари</value>
   </data>
+  <data name="QUEST_THE_BUCCANEER_ROUNDUP" xml:space="preserve">
+    <value>Облава на пиратов</value>
+  </data>
   <data name="QUEST_THE_CLEVER_LITTLE_TAILOR" xml:space="preserve">
     <value>Умный портняжка</value>
   </data>
@@ -306,6 +318,9 @@
   <data name="QUEST_THE_VALIANT_LITTLE_TAILOR" xml:space="preserve">
     <value>Храбрый портняжка</value>
   </data>
+  <data name="QUEST_TOMB_RAIDERS" xml:space="preserve">
+    <value>Грабители могил</value>
+  </data>
   <data name="QUEST_TRAITORS" xml:space="preserve">
     <value>Предатели</value>
   </data>
@@ -323,6 +338,9 @@
   </data>
   <data name="QUEST_VIKTOR_DER_VERSCHLAGENE" xml:space="preserve">
     <value>Злобный Виктор</value>
+  </data>
+  <data name="QUEST_WHIRLWIND" xml:space="preserve">
+    <value>Вихрь</value>
   </data>
   <data name="QUEST_WILD_MARY" xml:space="preserve">
     <value>Дикая Мери</value>

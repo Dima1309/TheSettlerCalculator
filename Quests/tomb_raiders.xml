@@ -1,0 +1,201 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<quest>
+  <name>QUEST_TOMB_RAIDERS</name>
+  <map>Quests\Maps\tomb_raiders.jpeg</map>
+  <icon>Quests\Icons\tomb_raiders.png</icon>
+  <enemies>
+    <enemy>CULTIST</enemy>
+    <enemy>SHADOW_SNEAKER</enemy>
+    <enemy>FANATIC</enemy>
+    <enemy>DARK_PRIEST</enemy>
+    <enemy>FIRE_DANCER</enemy>
+    <enemy>DANCING_DERVISH</enemy>
+    <enemy>DARK_HIGH_PRIEST</enemy>
+  </enemies>
+  <camps>
+    <camp>
+      <name>1a</name>
+      <type>Normal</type>
+      <wintime>20</wintime>
+      <sector>1</sector>
+      <left>375</left>
+      <top>795</top>
+      <enemy unit="CULTIST" count="100" />
+      <enemy unit="SHADOW_SNEAKER" count="50" />
+      <enemy unit="FIRE_DANCER" count="50" />
+    </camp>
+    <camp>
+      <name>2a</name>
+      <type>Normal</type>
+      <wintime>20</wintime>
+      <sector>1</sector>
+      <left>498</left>
+      <top>693</top>
+      <enemy unit="CULTIST" count="50" />
+      <enemy unit="SHADOW_SNEAKER" count="50" />
+      <enemy unit="FIRE_DANCER" count="50" />
+      <enemy unit="DANCING_DERVISH" count="50" />
+    </camp>
+    <camp>
+      <name>3a</name>
+      <type>Normal</type>
+      <wintime>20</wintime>
+      <sector>1</sector>
+      <left>645</left>
+      <top>640</top>
+      <enemy unit="CULTIST" count="50" />
+      <enemy unit="DARK_PRIEST" count="100" />
+      <enemy unit="DANCING_DERVISH" count="50" />
+    </camp>
+    <camp>
+      <name>4a</name>
+      <type>Boss</type>
+      <wintime>20</wintime>
+      <sector>1</sector>
+      <left>765</left>
+      <top>600</top>
+      <enemy unit="CULTIST" count="100" />
+      <enemy unit="SHADOW_SNEAKER" count="50" />
+      <enemy unit="FIRE_DANCER" count="48" />
+      <enemy unit="DARK_HIGH_PRIEST" count="2" />
+    </camp>
+    <camp>
+      <name>1b</name>
+      <type>Normal</type>
+      <wintime>20</wintime>
+      <sector>2</sector>
+      <left>1385</left>
+      <top>875</top>
+      <enemy unit="CULTIST" count="100" />
+      <enemy unit="SHADOW_SNEAKER" count="50" />
+      <enemy unit="FIRE_DANCER" count="50" />
+    </camp>
+    <camp>
+      <name>2b</name>
+      <type>Normal</type>
+      <wintime>20</wintime>
+      <sector>2</sector>
+      <left>1326</left>
+      <top>765</top>
+      <enemy unit="CULTIST" count="50" />
+      <enemy unit="SHADOW_SNEAKER" count="50" />
+      <enemy unit="FIRE_DANCER" count="50" />
+      <enemy unit="DANCING_DERVISH" count="50" />
+    </camp>
+    <camp>
+      <name>3b</name>
+      <type>Normal</type>
+      <wintime>20</wintime>
+      <sector>2</sector>
+      <left>1152</left>
+      <top>726</top>
+      <enemy unit="CULTIST" count="50" />
+      <enemy unit="DARK_PRIEST" count="100" />
+      <enemy unit="DANCING_DERVISH" count="50" />
+    </camp>
+    <camp>
+      <name>4b</name>
+      <type>Boss</type>
+      <wintime>20</wintime>
+      <sector>2</sector>
+      <left>1010</left>
+      <top>670</top>
+      <enemy unit="CULTIST" count="100" />
+      <enemy unit="SHADOW_SNEAKER" count="50" />
+      <enemy unit="FIRE_DANCER" count="48" />
+      <enemy unit="DARK_HIGH_PRIEST" count="2" />
+    </camp>
+    <camp>
+      <name>1c</name>
+      <type>Normal</type>
+      <wintime>20</wintime>
+      <sector>3</sector>
+      <left>1385</left>
+      <top>292</top>
+      <enemy unit="CULTIST" count="100" />
+      <enemy unit="SHADOW_SNEAKER" count="50" />
+      <enemy unit="FIRE_DANCER" count="50" />
+    </camp>
+    <camp>
+      <name>2c</name>
+      <type>Normal</type>
+      <wintime>20</wintime>
+      <sector>3</sector>
+      <left>1295</left>
+      <top>346</top>
+      <enemy unit="CULTIST" count="50" />
+      <enemy unit="SHADOW_SNEAKER" count="50" />
+      <enemy unit="FIRE_DANCER" count="50" />
+      <enemy unit="DANCING_DERVISH" count="50" />
+    </camp>
+    <camp>
+      <name>3c</name>
+      <type>Normal</type>
+      <wintime>20</wintime>
+      <sector>3</sector>
+      <left>1178</left>
+      <top>421</top>
+      <enemy unit="CULTIST" count="50" />
+      <enemy unit="DARK_PRIEST" count="100" />
+      <enemy unit="DANCING_DERVISH" count="50" />
+    </camp>
+    <camp>
+      <name>4c</name>
+      <type>Boss</type>
+      <wintime>20</wintime>
+      <sector>3</sector>
+      <left>1060</left>
+      <top>489</top>
+      <enemy unit="CULTIST" count="100" />
+      <enemy unit="SHADOW_SNEAKER" count="50" />
+      <enemy unit="FIRE_DANCER" count="48" />
+      <enemy unit="DARK_HIGH_PRIEST" count="2" />
+    </camp>
+    <camp>
+      <name>1d</name>
+      <type>Normal</type>
+      <wintime>20</wintime>
+      <sector>4</sector>
+      <left>582</left>
+      <top>201</top>
+      <enemy unit="CULTIST" count="100" />
+      <enemy unit="SHADOW_SNEAKER" count="50" />
+      <enemy unit="FIRE_DANCER" count="50" />
+    </camp>
+    <camp>
+      <name>2d</name>
+      <type>Normal</type>
+      <wintime>20</wintime>
+      <sector>4</sector>
+      <left>674</left>
+      <top>289</top>
+      <enemy unit="CULTIST" count="50" />
+      <enemy unit="SHADOW_SNEAKER" count="50" />
+      <enemy unit="FIRE_DANCER" count="50" />
+      <enemy unit="DANCING_DERVISH" count="50" />
+    </camp>
+    <camp>
+      <name>3d</name>
+      <type>Normal</type>
+      <wintime>20</wintime>
+      <sector>4</sector>
+      <left>795</left>
+      <top>365</top>
+      <enemy unit="CULTIST" count="50" />
+      <enemy unit="DARK_PRIEST" count="100" />
+      <enemy unit="DANCING_DERVISH" count="50" />
+    </camp>
+    <camp>
+      <name>4d</name>
+      <type>Boss</type>
+      <wintime>20</wintime>
+      <sector>4</sector>
+      <left>855</left>
+      <top>435</top>
+      <enemy unit="CULTIST" count="100" />
+      <enemy unit="SHADOW_SNEAKER" count="50" />
+      <enemy unit="FIRE_DANCER" count="48" />
+      <enemy unit="DARK_HIGH_PRIEST" count="2" />
+    </camp>
+  </camps>
+</quest>

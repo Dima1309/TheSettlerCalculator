@@ -14,7 +14,7 @@
   </enemies>
   <camps>
     <camp>
-      <name>1</name>
+      <name>1a</name>
       <type>Normal</type>
       <wintime>20</wintime>
       <sector>1</sector>
@@ -24,7 +24,7 @@
       <enemy unit="GUNMAN" count="80" />
     </camp>
     <camp>
-      <name>2</name>
+      <name>2a</name>
       <type>Normal</type>
       <wintime>20</wintime>
       <sector>1</sector>
@@ -35,7 +35,7 @@
       <enemy unit="GUNMAN" count="80" />
     </camp>
     <camp>
-      <name>3</name>
+      <name>3a</name>
       <type>Boss</type>
       <wintime>20</wintime>
       <sector>1</sector>
@@ -46,7 +46,7 @@
       <enemy unit="CANNONEER" count="40" />
     </camp>
     <camp>
-      <name>4</name>
+      <name>1b</name>
       <type>Normal</type>
       <wintime>20</wintime>
       <sector>2</sector>
@@ -56,7 +56,7 @@
       <enemy unit="GUNMAN" count="80" />
     </camp>
     <camp>
-      <name>5</name>
+      <name>2b</name>
       <type>Normal</type>
       <wintime>20</wintime>
       <sector>2</sector>
@@ -67,7 +67,7 @@
       <enemy unit="GUNMAN" count="80" />
     </camp>
     <camp>
-      <name>6</name>
+      <name>3b</name>
       <type>Boss</type>
       <wintime>20</wintime>
       <sector>2</sector>
@@ -78,7 +78,7 @@
       <enemy unit="CANNONEER" count="40" />
     </camp>
     <camp>
-      <name>7</name>
+      <name>1c</name>
       <type>Normal</type>
       <wintime>20</wintime>
       <sector>3</sector>
@@ -88,7 +88,7 @@
       <enemy unit="GUNMAN" count="80" />
     </camp>
     <camp>
-      <name>8</name>
+      <name>2c</name>
       <type>Normal</type>
       <wintime>20</wintime>
       <sector>3</sector>
@@ -99,7 +99,7 @@
       <enemy unit="GUNMAN" count="80" />
     </camp>
     <camp>
-      <name>9</name>
+      <name>3c</name>
       <type>Boss</type>
       <wintime>20</wintime>
       <sector>3</sector>
@@ -110,7 +110,7 @@
       <enemy unit="CANNONEER" count="40" />
     </camp>
     <camp>
-      <name>10</name>
+      <name>4a</name>
       <type>Normal</type>
       <wintime>20</wintime>
       <sector>4</sector>
@@ -121,7 +121,7 @@
       <enemy unit="GUNMAN" count="50" />
     </camp>
     <camp>
-      <name>11</name>
+      <name>4b</name>
       <type>Normal</type>
       <wintime>20</wintime>
       <sector>4</sector>
@@ -132,7 +132,7 @@
       <enemy unit="GUNMAN" count="50" />
     </camp>
     <camp>
-      <name>12</name>
+      <name>4c</name>
       <type>Normal</type>
       <wintime>20</wintime>
       <sector>4</sector>
@@ -143,7 +143,7 @@
       <enemy unit="GUNMAN" count="50" />
     </camp>
     <camp>
-      <name>13</name>
+      <name>5a</name>
       <type>Normal</type>
       <wintime>20</wintime>
       <sector>4</sector>
@@ -152,7 +152,7 @@
       <enemy unit="CALTROP" count="200" />
     </camp>
     <camp>
-      <name>14</name>
+      <name>5b</name>
       <type>Normal</type>
       <wintime>20</wintime>
       <sector>4</sector>
@@ -161,7 +161,7 @@
       <enemy unit="CALTROP" count="200" />
     </camp>
     <camp>
-      <name>15</name>
+      <name>6</name>
       <type>Boss</type>
       <wintime>20</wintime>
       <sector>4</sector>

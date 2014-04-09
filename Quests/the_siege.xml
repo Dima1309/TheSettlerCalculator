@@ -18,7 +18,7 @@
   </enemies>
   <camps>
     <camp>
-      <name>1</name>
+      <name>1a</name>
       <type>Normal</type>
       <wintime>20</wintime>
       <sector>1</sector>
@@ -28,7 +28,7 @@
       <enemy unit="STONE_THROWER" count="30" />
     </camp>
     <camp>
-      <name>2</name>
+      <name>2a</name>
       <type>Normal</type>
       <wintime>20</wintime>
       <sector>1</sector>
@@ -38,7 +38,7 @@
       <enemy unit="STONE_THROWER" count="40" />
     </camp>
     <camp>
-      <name>3</name>
+      <name>3a</name>
       <type>Boss</type>
       <wintime>20</wintime>
       <sector>1</sector>
@@ -48,7 +48,7 @@
       <enemy unit="STONE_THROWER" count="65" />
     </camp>
     <camp>
-      <name>4</name>
+      <name>4a</name>
       <type>Normal</type>
       <wintime>20</wintime>
       <sector>2</sector>
@@ -58,7 +58,7 @@
       <enemy unit="RANGER" count="40" />
     </camp>
     <camp>
-      <name>5</name>
+      <name>5a</name>
       <type>Normal</type>
       <wintime>20</wintime>
       <sector>2</sector>
@@ -68,7 +68,7 @@
       <enemy unit="RANGER" count="60" />
     </camp>
     <camp>
-      <name>6</name>
+      <name>6a</name>
       <type>Boss</type>
       <wintime>20</wintime>
       <sector>2</sector>
@@ -79,7 +79,7 @@
       <enemy unit="SKUNK" count="1" />
     </camp>
     <camp>
-      <name>7</name>
+      <name>7a</name>
       <type>Normal</type>
       <wintime>20</wintime>
       <sector>3</sector>
@@ -89,7 +89,7 @@
       <enemy unit="RANGER" count="80" />
     </camp>
     <camp>
-      <name>8</name>
+      <name>8a</name>
       <type>Normal</type>
       <wintime>20</wintime>
       <sector>3</sector>
@@ -99,7 +99,7 @@
       <enemy unit="RANGER" count="40" />
     </camp>
     <camp>
-      <name>9</name>
+      <name>9a</name>
       <type>Boss</type>
       <wintime>20</wintime>
       <sector>3</sector>
@@ -111,7 +111,7 @@
       <enemy unit="SKUNK" count="1" />
     </camp>
     <camp>
-      <name>10</name>
+      <name>10a</name>
       <type>Normal</type>
       <wintime>20</wintime>
       <sector>4</sector>
@@ -120,7 +120,7 @@
       <enemy unit="RANGER" count="15" />
     </camp>
     <camp>
-      <name>11</name>
+      <name>11a</name>
       <type>Normal</type>
       <wintime>20</wintime>
       <sector>4</sector>
@@ -129,7 +129,7 @@
       <enemy unit="RANGER" count="15" />
     </camp>
     <camp>
-      <name>12</name>
+      <name>12a</name>
       <type>Boss</type>
       <wintime>20</wintime>
       <sector>4</sector>
@@ -141,7 +141,7 @@
       <enemy unit="ONE_EYED_BERT" count="1" />
     </camp>
     <camp>
-      <name>13</name>
+      <name>1b</name>
       <type>Normal</type>
       <wintime>20</wintime>
       <sector>5</sector>
@@ -151,7 +151,7 @@
       <enemy unit="STONE_THROWER" count="40" />
     </camp>
     <camp>
-      <name>14</name>
+      <name>2b</name>
       <type>Normal</type>
       <wintime>20</wintime>
       <sector>5</sector>
@@ -161,7 +161,7 @@
       <enemy unit="STONE_THROWER" count="30" />
     </camp>
     <camp>
-      <name>15</name>
+      <name>3b</name>
       <type>Boss</type>
       <wintime>20</wintime>
       <sector>5</sector>
@@ -171,7 +171,7 @@
       <enemy unit="STONE_THROWER" count="65" />
     </camp>
     <camp>
-      <name>16</name>
+      <name>4b</name>
       <type>Normal</type>
       <wintime>20</wintime>
       <sector>6</sector>
@@ -181,7 +181,7 @@
       <enemy unit="RANGER" count="40" />
     </camp>
     <camp>
-      <name>17</name>
+      <name>5b</name>
       <type>Normal</type>
       <wintime>20</wintime>
       <sector>6</sector>
@@ -191,7 +191,7 @@
       <enemy unit="RANGER" count="60" />
     </camp>
     <camp>
-      <name>18</name>
+      <name>6b</name>
       <type>Boss</type>
       <wintime>20</wintime>
       <sector>6</sector>
@@ -202,7 +202,7 @@
       <enemy unit="SKUNK" count="1" />
     </camp>
     <camp>
-      <name>19</name>
+      <name>7b</name>
       <type>Normal</type>
       <wintime>20</wintime>
       <sector>7</sector>
@@ -212,7 +212,7 @@
       <enemy unit="RANGER" count="80" />
     </camp>
     <camp>
-      <name>20</name>
+      <name>8b</name>
       <type>Normal</type>
       <wintime>20</wintime>
       <sector>7</sector>
@@ -222,7 +222,7 @@
       <enemy unit="RANGER" count="40" />
     </camp>
     <camp>
-      <name>21</name>
+      <name>9b</name>
       <type>Boss</type>
       <wintime>20</wintime>
       <sector>7</sector>
@@ -234,7 +234,7 @@
       <enemy unit="SKUNK" count="1" />
     </camp>
     <camp>
-      <name>22</name>
+      <name>10b</name>
       <type>Normal</type>
       <wintime>20</wintime>
       <sector>8</sector>
@@ -243,7 +243,7 @@
       <enemy unit="RANGER" count="15" />
     </camp>
     <camp>
-      <name>23</name>
+      <name>11b</name>
       <type>Normal</type>
       <wintime>20</wintime>
       <sector>8</sector>
@@ -252,7 +252,7 @@
       <enemy unit="RANGER" count="15" />
     </camp>
     <camp>
-      <name>24</name>
+      <name>12b</name>
       <type>Boss</type>
       <wintime>20</wintime>
       <sector>8</sector>

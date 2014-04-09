@@ -1,0 +1,492 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<quest>
+  <name>QUEST_WHIRLWIND</name>
+  <map>Quests\Maps\whirlwind.jpeg</map>
+  <icon>Quests\Icons\whirlwind.png</icon>
+  <enemies>
+    <enemy>CHUCK</enemy>
+    <enemy>METAL_TOOTHED</enemy>
+    <enemy>SCAVENGER</enemy>
+    <enemy>THUG</enemy>
+    <enemy>GUARD_DOG</enemy>
+    <enemy>ROUGHNECK</enemy>
+    <enemy>STONE_THROWER</enemy>
+    <enemy>RANGER</enemy>
+    <enemy>SKUNK</enemy>
+    <enemy>ONE_EYED_BERT</enemy>
+  </enemies>
+  <camps>
+    <camp>
+      <name>1a</name>
+      <type>Normal</type>
+      <wintime>20</wintime>
+      <sector>1</sector>
+      <left>675</left>
+      <top>987</top>
+      <enemy unit="SCAVENGER" count="100" />
+      <enemy unit="RANGER" count="100" />
+    </camp>
+    <camp>
+      <name>2a</name>
+      <type>Normal</type>
+      <wintime>20</wintime>
+      <sector>1</sector>
+      <left>733</left>
+      <top>1040</top>
+      <enemy unit="THUG" count="120" />
+      <enemy unit="RANGER" count="80" />
+    </camp>
+    <camp>
+      <name>3a</name>
+      <type>Boss</type>
+      <wintime>20</wintime>
+      <sector>1</sector>
+      <left>835</left>
+      <top>1013</top>
+      <enemy unit="SCAVENGER" count="100" />
+      <enemy unit="GUARD_DOG" count="50" />
+      <enemy unit="RANGER" count="50" />
+    </camp>
+    <camp>
+      <name>4a</name>
+      <type>Normal</type>
+      <wintime>20</wintime>
+      <sector>2</sector>
+      <left>1127</left>
+      <top>961</top>
+      <enemy unit="THUG" count="200" />
+    </camp>
+    <camp>
+      <name>5a</name>
+      <type>Normal</type>
+      <wintime>20</wintime>
+      <sector>2</sector>
+      <left>1258</left>
+      <top>952</top>
+      <enemy unit="THUG" count="50" />
+      <enemy unit="GUARD_DOG" count="50" />
+      <enemy unit="RANGER" count="100" />
+    </camp>
+    <camp>
+      <name>6a</name>
+      <type>Normal</type>
+      <wintime>20</wintime>
+      <sector>2</sector>
+      <left>1332</left>
+      <top>887</top>
+      <enemy unit="THUG" count="80" />
+      <enemy unit="GUARD_DOG" count="100" />
+      <enemy unit="RANGER" count="20" />
+    </camp>
+    <camp>
+      <name>7a</name>
+      <type>Boss</type>
+      <wintime>20</wintime>
+      <sector>2</sector>
+      <left>1419</left>
+      <top>816</top>
+      <enemy unit="THUG" count="100" />
+      <enemy unit="RANGER" count="89" />
+      <enemy unit="ONE_EYED_BERT" count="1" />
+    </camp>
+    <camp>
+      <name>8a</name>
+      <type>Normal</type>
+      <wintime>20</wintime>
+      <sector>3</sector>
+      <left>1302</left>
+      <top>709</top>
+      <enemy unit="GUARD_DOG" count="100" />
+      <enemy unit="ROUGHNECK" count="90" />
+    </camp>
+    <camp>
+      <name>9a</name>
+      <type>Normal</type>
+      <wintime>20</wintime>
+      <sector>3</sector>
+      <left>1317</left>
+      <top>612</top>
+      <enemy unit="GUARD_DOG" count="70" />
+      <enemy unit="ROUGHNECK" count="70" />
+      <enemy unit="RANGER" count="70" />
+    </camp>
+    <camp>
+      <name>10a</name>
+      <type>Boss</type>
+      <wintime>20</wintime>
+      <sector>3</sector>
+      <left>1273</left>
+      <top>563</top>
+      <enemy unit="METAL_TOOTHED" count="1" />
+      <enemy unit="GUARD_DOG" count="50" />
+      <enemy unit="ROUGHNECK" count="60" />
+      <enemy unit="RANGER" count="80" />
+    </camp>
+    <camp>
+      <name>1b</name>
+      <type>Normal</type>
+      <wintime>20</wintime>
+      <sector>4</sector>
+      <left>1537</left>
+      <top>653</top>
+      <enemy unit="SCAVENGER" count="100" />
+      <enemy unit="RANGER" count="100" />
+    </camp>
+    <camp>
+      <name>2b</name>
+      <type>Normal</type>
+      <wintime>20</wintime>
+      <sector>4</sector>
+      <left>1610</left>
+      <top>592</top>
+      <enemy unit="THUG" count="120" />
+      <enemy unit="RANGER" count="80" />
+    </camp>
+    <camp>
+      <name>3b</name>
+      <type>Boss</type>
+      <wintime>20</wintime>
+      <sector>4</sector>
+      <left>1568</left>
+      <top>545</top>
+      <enemy unit="SCAVENGER" count="100" />
+      <enemy unit="GUARD_DOG" count="50" />
+      <enemy unit="RANGER" count="50" />
+    </camp>
+    <camp>
+      <name>4b</name>
+      <type>Normal</type>
+      <wintime>20</wintime>
+      <sector>5</sector>
+      <left>1506</left>
+      <top>404</top>
+      <enemy unit="THUG" count="200" />
+    </camp>
+    <camp>
+      <name>5b</name>
+      <type>Normal</type>
+      <wintime>20</wintime>
+      <sector>5</sector>
+      <left>1507</left>
+      <top>328</top>
+      <enemy unit="THUG" count="50" />
+      <enemy unit="GUARD_DOG" count="50" />
+      <enemy unit="RANGER" count="100" />
+    </camp>
+    <camp>
+      <name>6b</name>
+      <type>Normal</type>
+      <wintime>20</wintime>
+      <sector>5</sector>
+      <left>1374</left>
+      <top>248</top>
+      <enemy unit="THUG" count="80" />
+      <enemy unit="GUARD_DOG" count="100" />
+      <enemy unit="RANGER" count="20" />
+    </camp>
+    <camp>
+      <name>7b</name>
+      <type>Boss</type>
+      <wintime>20</wintime>
+      <sector>5</sector>
+      <left>1244</left>
+      <top>237</top>
+      <enemy unit="THUG" count="100" />
+      <enemy unit="RANGER" count="89" />
+      <enemy unit="ONE_EYED_BERT" count="1" />
+    </camp>
+    <camp>
+      <name>8b</name>
+      <type>Normal</type>
+      <wintime>20</wintime>
+      <sector>6</sector>
+      <left>936</left>
+      <top>392</top>
+      <enemy unit="GUARD_DOG" count="100" />
+      <enemy unit="ROUGHNECK" count="90" />
+    </camp>
+    <camp>
+      <name>9b</name>
+      <type>Normal</type>
+      <wintime>20</wintime>
+      <sector>6</sector>
+      <left>937</left>
+      <top>448</top>
+      <enemy unit="GUARD_DOG" count="70" />
+      <enemy unit="ROUGHNECK" count="70" />
+      <enemy unit="RANGER" count="70" />
+    </camp>
+    <camp>
+      <name>10b</name>
+      <type>Boss</type>
+      <wintime>20</wintime>
+      <sector>6</sector>
+      <left>835</left>
+      <top>438</top>
+      <enemy unit="METAL_TOOTHED" count="1" />
+      <enemy unit="GUARD_DOG" count="50" />
+      <enemy unit="ROUGHNECK" count="60" />
+      <enemy unit="RANGER" count="80" />
+    </camp>
+    <camp>
+      <name>1c</name>
+      <type>Normal</type>
+      <wintime>20</wintime>
+      <sector>7</sector>
+      <left>1038</left>
+      <top>77</top>
+      <enemy unit="SCAVENGER" count="100" />
+      <enemy unit="RANGER" count="100" />
+    </camp>
+    <camp>
+      <name>2c</name>
+      <type>Normal</type>
+      <wintime>20</wintime>
+      <sector>7</sector>
+      <left>980</left>
+      <top>130</top>
+      <enemy unit="THUG" count="120" />
+      <enemy unit="RANGER" count="80" />
+    </camp>
+    <camp>
+      <name>3c</name>
+      <type>Boss</type>
+      <wintime>20</wintime>
+      <sector>7</sector>
+      <left>895</left>
+      <top>94</top>
+      <enemy unit="SCAVENGER" count="100" />
+      <enemy unit="GUARD_DOG" count="50" />
+      <enemy unit="RANGER" count="50" />
+    </camp>
+    <camp>
+      <name>4c</name>
+      <type>Normal</type>
+      <wintime>20</wintime>
+      <sector>8</sector>
+      <left>498</left>
+      <top>123</top>
+      <enemy unit="THUG" count="200" />
+    </camp>
+    <camp>
+      <name>5c</name>
+      <type>Normal</type>
+      <wintime>20</wintime>
+      <sector>8</sector>
+      <left>482</left>
+      <top>205</top>
+      <enemy unit="THUG" count="50" />
+      <enemy unit="GUARD_DOG" count="50" />
+      <enemy unit="RANGER" count="100" />
+    </camp>
+    <camp>
+      <name>6c</name>
+      <type>Normal</type>
+      <wintime>20</wintime>
+      <sector>8</sector>
+      <left>320</left>
+      <top>232</top>
+      <enemy unit="THUG" count="80" />
+      <enemy unit="GUARD_DOG" count="100" />
+      <enemy unit="RANGER" count="20" />
+    </camp>
+    <camp>
+      <name>7c</name>
+      <type>Boss</type>
+      <wintime>20</wintime>
+      <sector>8</sector>
+      <left>309</left>
+      <top>384</top>
+      <enemy unit="THUG" count="100" />
+      <enemy unit="RANGER" count="89" />
+      <enemy unit="ONE_EYED_BERT" count="1" />
+    </camp>
+    <camp>
+      <name>8c</name>
+      <type>Normal</type>
+      <wintime>20</wintime>
+      <sector>9</sector>
+      <left>379</left>
+      <top>465</top>
+      <enemy unit="GUARD_DOG" count="100" />
+      <enemy unit="ROUGHNECK" count="90" />
+    </camp>
+    <camp>
+      <name>9c</name>
+      <type>Normal</type>
+      <wintime>20</wintime>
+      <sector>9</sector>
+      <left>454</left>
+      <top>455</top>
+      <enemy unit="GUARD_DOG" count="70" />
+      <enemy unit="ROUGHNECK" count="70" />
+      <enemy unit="RANGER" count="70" />
+    </camp>
+    <camp>
+      <name>10c</name>
+      <type>Boss</type>
+      <wintime>20</wintime>
+      <sector>9</sector>
+      <left>455</left>
+      <top>507</top>
+      <enemy unit="METAL_TOOTHED" count="1" />
+      <enemy unit="GUARD_DOG" count="50" />
+      <enemy unit="ROUGHNECK" count="60" />
+      <enemy unit="RANGER" count="80" />
+    </camp>
+    <camp>
+      <name>1d</name>
+      <type>Normal</type>
+      <wintime>20</wintime>
+      <sector>10</sector>
+      <left>190</left>
+      <top>490</top>
+      <enemy unit="SCAVENGER" count="100" />
+      <enemy unit="RANGER" count="100" />
+    </camp>
+    <camp>
+      <name>2d</name>
+      <type>Normal</type>
+      <wintime>20</wintime>
+      <sector>10</sector>
+      <left>132</left>
+      <top>562</top>
+      <enemy unit="THUG" count="120" />
+      <enemy unit="RANGER" count="80" />
+    </camp>
+    <camp>
+      <name>3d</name>
+      <type>Boss</type>
+      <wintime>20</wintime>
+      <sector>10</sector>
+      <left>176</left>
+      <top>627</top>
+      <enemy unit="SCAVENGER" count="100" />
+      <enemy unit="GUARD_DOG" count="50" />
+      <enemy unit="RANGER" count="50" />
+    </camp>
+    <camp>
+      <name>4d</name>
+      <type>Normal</type>
+      <wintime>20</wintime>
+      <sector>11</sector>
+      <left>175</left>
+      <top>770</top>
+      <enemy unit="THUG" count="200" />
+    </camp>
+    <camp>
+      <name>5d</name>
+      <type>Normal</type>
+      <wintime>20</wintime>
+      <sector>11</sector>
+      <left>321</left>
+      <top>807</top>
+      <enemy unit="THUG" count="50" />
+      <enemy unit="GUARD_DOG" count="50" />
+      <enemy unit="RANGER" count="100" />
+    </camp>
+    <camp>
+      <name>6d</name>
+      <type>Normal</type>
+      <wintime>20</wintime>
+      <sector>11</sector>
+      <left>335</left>
+      <top>891</top>
+      <enemy unit="THUG" count="80" />
+      <enemy unit="GUARD_DOG" count="100" />
+      <enemy unit="RANGER" count="20" />
+    </camp>
+    <camp>
+      <name>7d</name>
+      <type>Boss</type>
+      <wintime>20</wintime>
+      <sector>11</sector>
+      <left>440</left>
+      <top>896</top>
+      <enemy unit="THUG" count="100" />
+      <enemy unit="RANGER" count="89" />
+      <enemy unit="ONE_EYED_BERT" count="1" />
+    </camp>
+    <camp>
+      <name>8d</name>
+      <type>Normal</type>
+      <wintime>20</wintime>
+      <sector>12</sector>
+      <left>803</left>
+      <top>727</top>
+      <enemy unit="GUARD_DOG" count="100" />
+      <enemy unit="ROUGHNECK" count="90" />
+    </camp>
+    <camp>
+      <name>9d</name>
+      <type>Normal</type>
+      <wintime>20</wintime>
+      <sector>12</sector>
+      <left>790</left>
+      <top>661</top>
+      <enemy unit="GUARD_DOG" count="70" />
+      <enemy unit="ROUGHNECK" count="70" />
+      <enemy unit="RANGER" count="70" />
+    </camp>
+    <camp>
+      <name>10d</name>
+      <type>Boss</type>
+      <wintime>20</wintime>
+      <sector>12</sector>
+      <left>878</left>
+      <top>662</top>
+      <enemy unit="METAL_TOOTHED" count="1" />
+      <enemy unit="GUARD_DOG" count="50" />
+      <enemy unit="ROUGHNECK" count="60" />
+      <enemy unit="RANGER" count="80" />
+    </camp>
+    <camp>
+      <name>11a</name>
+      <type>Normal</type>
+      <wintime>20</wintime>
+      <sector>13</sector>
+      <left>907</left>
+      <top>535</top>
+      <enemy unit="STONE_THROWER" count="200" />
+    </camp>
+    <camp>
+      <name>11b</name>
+      <type>Normal</type>
+      <wintime>20</wintime>
+      <sector>13</sector>
+      <left>835</left>
+      <top>488</top>
+      <enemy unit="STONE_THROWER" count="200" />
+    </camp>
+    <camp>
+      <name>11c</name>
+      <type>Normal</type>
+      <wintime>20</wintime>
+      <sector>13</sector>
+      <left>775</left>
+      <top>525</top>
+      <enemy unit="STONE_THROWER" count="200" />
+    </camp>
+    <camp>
+      <name>11d</name>
+      <type>Normal</type>
+      <wintime>20</wintime>
+      <sector>13</sector>
+      <left>850</left>
+      <top>570</top>
+      <enemy unit="STONE_THROWER" count="200" />
+    </camp>
+    <camp>
+      <name>12</name>
+      <type>Boss</type>
+      <wintime>20</wintime>
+      <sector>13</sector>
+      <left>848</left>
+      <top>528</top>
+      <enemy unit="CHUCK" count="1" />
+      <enemy unit="GUARD_DOG" count="50" />
+      <enemy unit="ROUGHNECK" count="100" />
+      <enemy unit="RANGER" count="50" />
+    </camp>
+  </camps>
+</quest>
