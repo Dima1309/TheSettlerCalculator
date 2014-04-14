@@ -446,6 +446,11 @@ namespace TheSettlersCalculator.Statistics
 
 		private void ConvertLossesToChanse()
 		{
+			if (m_count <= 1)
+			{
+				return;
+			}
+
 			ConvertLossesToChanse(m_attackerLossesStatistics, m_isCountInAttackerLossesStatistics, m_count);
 			m_isCountInAttackerLossesStatistics = false;
 			ConvertLossesToChanse(m_defenderLossesStatistics, m_isCountInDefenderLossesStatistics, m_count);
@@ -477,7 +482,7 @@ namespace TheSettlersCalculator.Statistics
 			maxAttackerLosses = null;
 
 			// convert to chance
-			if (isLossesStatisticsInCount)
+			if (isLossesStatisticsInCount && count > 1)
 			{
 				ConvertLossesToChanse(lossesStatistics, isLossesStatisticsInCount, count);
 				isLossesStatisticsInCount = false;

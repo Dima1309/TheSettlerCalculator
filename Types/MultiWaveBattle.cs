@@ -168,7 +168,12 @@ namespace TheSettlersCalculator.Types
 
 					if(playerSquads == null)
 					{
-						playerSquads = new List<UnitSquad>(m_playerWaves[playerIndex].Squads);
+						playerSquads = new List<UnitSquad>();
+						foreach(UnitSquad squad  in m_playerWaves[playerIndex].Squads)
+						{
+							playerSquads.Add(new UnitSquad(squad.Unit, squad.Count));
+						}
+
 						playerGeneral = m_playerWaves[playerIndex].General;
 						bool emptyWave = true;
 						foreach(UnitSquad squad in playerSquads)
@@ -190,7 +195,11 @@ namespace TheSettlersCalculator.Types
 
 					if(enemySquads == null)
 					{
-						enemySquads = new List<UnitSquad>(m_enemyWaves[enemyIndex].Squads);
+						enemySquads = new List<UnitSquad>();
+						foreach (UnitSquad squad in m_enemyWaves[enemyIndex].Squads)
+						{
+							enemySquads.Add(new UnitSquad(squad.Unit, squad.Count));
+						}
 						enemyGeneral = m_enemyWaves[enemyIndex].General;
 						destroyEnemyCampTime = (int)m_enemyWaves[enemyIndex].DestroyCampTime;
 
