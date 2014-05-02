@@ -1,4 +1,5 @@
-﻿using System.Windows;
+﻿using System.IO;
+using System.Windows;
 using System.Windows.Controls;
 using TheSettlersCalculator.Specialists.Generals;
 using TheSettlersCalculator.Types;
@@ -25,8 +26,22 @@ namespace TheSettlersCalculator
 			get { return m_model; }
 		}
 
-		private void Button_Click(object sender, RoutedEventArgs e)
+		private void Button_MapClick(object sender, RoutedEventArgs e)
 		{
+			if (Model.ActiveQuest.Map == null)
+			{
+				if (!File.Exists(Model.ActiveQuest.MapPath))
+				{
+					DownloadWindow downloadWindow = new DownloadWindow(Model.ActiveQuest.MapPath);
+					downloadWindow.ShowDialog();
+				}
+			}
+
+			if (Model.ActiveQuest.Map == null)
+			{
+				return;
+			}
+
 			QuestMapWindow questMapWindow = new QuestMapWindow(Model.ActiveQuest, Model.ActiveQuestCamps);
 			bool? result = questMapWindow.ShowDialog();
 			if (result.HasValue && result.Value)

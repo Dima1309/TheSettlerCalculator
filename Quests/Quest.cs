@@ -78,7 +78,7 @@ namespace TheSettlersCalculator.Quests
 			get { return m_map ?? (m_map = ImageHelper.LoadFromFile(m_mapPath)); }
 		}
 
-		internal string MapPath
+		public string MapPath
 		{
 			get { return m_mapPath; }
 			set { m_mapPath = value; }

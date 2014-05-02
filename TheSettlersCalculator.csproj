@@ -60,6 +60,9 @@
     <Compile Include="ChartWindow.xaml.cs">
       <DependentUpon>ChartWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="DownloadWindow.xaml.cs">
+      <DependentUpon>DownloadWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Functions\BattleTimeFunction.cs" />
     <Compile Include="Functions\IFunction.cs" />
     <Compile Include="Functions\LossesRecoveryTimeFunction.cs" />
@@ -170,6 +173,10 @@
     <Compile Include="WpfTypes\UnitSquad.cs" />
     <Compile Include="WpfTypes\Converters\UserUnitsWarningCountBrushConverter.cs" />
     <Page Include="ChartWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="DownloadWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
