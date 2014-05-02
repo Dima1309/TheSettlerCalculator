@@ -117,6 +117,7 @@
       <sector>2</sector>
       <left>755</left>
       <top>635</top>
+      <enemy unit="WOLF_PACKLOADER" count="120" />
     </camp>
     <camp>
       <name>11</name>
