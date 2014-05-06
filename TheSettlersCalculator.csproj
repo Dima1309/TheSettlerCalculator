@@ -44,6 +44,7 @@
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -63,6 +64,30 @@
     <Compile Include="DownloadWindow.xaml.cs">
       <DependentUpon>DownloadWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="EuroCup2014\Buff.cs" />
+    <Compile Include="EuroCup2014\Buffs.cs" />
+    <Compile Include="EuroCup2014\BuffWithCount.cs" />
+    <Compile Include="EuroCup2014\Camp.cs" />
+    <Compile Include="EuroCup2014\Comparers\ComparerByName.cs" />
+    <Compile Include="EuroCup2014\Components\BuffControl.xaml.cs">
+      <DependentUpon>BuffControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="EuroCup2014\Components\ResourceControl.xaml.cs">
+      <DependentUpon>ResourceControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="EuroCup2014\Components\SkillControl.xaml.cs">
+      <DependentUpon>SkillControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="EuroCup2014\Quest.cs" />
+    <Compile Include="EuroCup2014\Quests.cs" />
+    <Compile Include="EuroCup2014\ResourceWithCount.cs" />
+    <Compile Include="EuroCup2014\Model.cs" />
+    <Compile Include="EuroCup2014\ObjectWithId.cs" />
+    <Compile Include="EuroCup2014\Resource.cs" />
+    <Compile Include="EuroCup2014\Resources.cs" />
+    <Compile Include="EuroCup2014\Skill.cs" />
+    <Compile Include="EuroCup2014\Skills.cs" />
+    <Compile Include="EuroCup2014\SkillWithCount.cs" />
     <Compile Include="Functions\BattleTimeFunction.cs" />
     <Compile Include="Functions\IFunction.cs" />
     <Compile Include="Functions\LossesRecoveryTimeFunction.cs" />
@@ -177,6 +202,18 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="DownloadWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="EuroCup2014\Components\BuffControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="EuroCup2014\Components\ResourceControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="EuroCup2014\Components\SkillControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -357,7 +394,8 @@ mkdir "$(TargetDir)Quests\Icons\Generals"
 mkdir "$(TargetDir)Quests\Images"
 mkdir "$(TargetDir)Price"
 mkdir "$(TargetDir)Price\Icons"
-
+mkdir "$(TargetDir)EuroCup2014"
+mkdir "$(TargetDir)EuroCup2014\Icons"
 xcopy /D /Y "$(ProjectDir)Quests\*.xml" "$(TargetDir)Quests"
 xcopy /D /Y "$(ProjectDir)Quests\Icons" "$(TargetDir)Quests\Icons"
 xcopy /D /Y "$(ProjectDir)\Specialists\Generals\Images" "$(TargetDir)Quests\Icons\Generals"
@@ -366,7 +404,9 @@ xcopy /D /Y "$(ProjectDir)Quests\Maps" "$(TargetDir)Quests\Maps"
 
 xcopy /D /Y "$(ProjectDir)Price\Icons" "$(TargetDir)Price\Icons"
 xcopy /D /Y "$(ProjectDir)Quests\Enemies\enemies.xml" "$(TargetDir)"
-xcopy /D /Y "$(ProjectDir)Quests\Generals\generals.xml" "$(TargetDir)"</PostBuildEvent>
+xcopy /D /Y "$(ProjectDir)Quests\Generals\generals.xml" "$(TargetDir)"
+xcopy /D /Y "$(ProjectDir)EuroCup2014\*.xml" "$(TargetDir)EuroCup2014"
+xcopy /D /Y "$(ProjectDir)EuroCup2014\Icons" "$(TargetDir)EuroCup2014\Icons"</PostBuildEvent>
   </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

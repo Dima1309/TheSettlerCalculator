@@ -1,0 +1,289 @@
+<quests>
+  <quest id="OPENING_MATCH" icon="wm2014_01.png">
+    <camp id="FORWARD">
+       <skill id="DIVER" count="1"/>
+    </camp>
+    <camp id="FORWARD">
+       <skill id="DIVER" count="1"/>
+    </camp>
+    <camp id="MIDFIELDER">
+       <skill id="DRIBBLER" count="1"/>
+    </camp>
+    <camp id="MIDFIELDER">
+       <skill id="DRIBBLER" count="2"/>
+    </camp>
+    <camp id="MIDFIELDER">
+       <skill id="BACK_HEEL" count="1"/>
+    </camp>
+    <camp id="MIDFIELDER">
+       <skill id="BACK_HEEL" count="1"/>
+    </camp>
+    <camp id="DEFENDER">
+       <skill id="ONE_ON_ONE_DEFENCE" count="1"/>
+    </camp>
+    <camp id="DEFENDER">
+       <skill id="ONE_ON_ONE_DEFENCE" count="1"/>
+    </camp>
+    <camp id="DEFENDER">
+       <skill id="ONE_ON_ONE_DEFENCE" count="1"/>
+    </camp>
+    <camp id="DEFENDER">
+       <skill id="ONE_ON_ONE_DEFENCE" count="1"/>
+    </camp>
+    <camp id="GOAL_CAMP">
+       <skill id="FAST_REFLEX" count="1"/>
+    </camp>
+  </quest>
+  <quest id="MATCH_TWO" icon="wm2014_02.png">
+    <camp id="FORWARD">
+       <skill id="FAST_RUNNER" count="1"/>
+    </camp>
+    <camp id="FORWARD">
+       <skill id="DIVER" count="2"/>
+    </camp>
+    <camp id="FORWARD">
+       <skill id="DIVER" count="1"/>
+    </camp>
+    <camp id="MIDFIELDER">
+       <skill id="FAST_RUNNER" count="2"/>
+    </camp>
+    <camp id="MIDFIELDER">
+       <skill id="ONE_ON_ONE_DEFENCE" count="2"/>
+    </camp>
+    <camp id="MIDFIELDER">
+       <skill id="FAST_RUNNER" count="2"/>
+    </camp>
+    <camp id="DEFENDER">
+       <skill id="ONE_ON_ONE_DEFENCE" count="1"/>
+    </camp>
+    <camp id="DEFENDER">
+       <skill id="ONE_ON_ONE_DEFENCE" count="2"/>
+    </camp>
+    <camp id="DEFENDER">
+       <skill id="ONE_ON_ONE_DEFENCE" count="2"/>
+    </camp>
+    <camp id="DEFENDER">
+       <skill id="ONE_ON_ONE_DEFENCE" count="1"/>
+    </camp>
+    <camp id="GOAL_CAMP">
+       <skill id="HIGH_JUMPER" count="1"/>
+       <skill id="FAST_REFLEX" count="1"/>
+    </camp>
+  </quest>
+  <quest id="MATCH_THREE" icon="wm2014_03.png">
+    <camp id="FORWARD">
+       <skill id="DIVER" count="1"/>
+       <skill id="DRIBBLER" count="1"/>
+    </camp>
+    <camp id="FORWARD">
+       <skill id="FAST_RUNNER" count="1"/>
+       <skill id="DIVER" count="1"/>
+    </camp>
+    <camp id="MIDFIELDER">
+       <skill id="DRIBBLER" count="1"/>
+       <skill id="ONE_ON_ONE_DEFENCE" count="1"/>
+    </camp>
+    <camp id="MIDFIELDER">
+       <skill id="DRIBBLER" count="1"/>
+       <skill id="BACK_HEEL" count="1"/>
+    </camp>
+    <camp id="MIDFIELDER">
+       <skill id="DRIBBLER" count="1"/>
+       <skill id="ONE_ON_ONE_DEFENCE" count="1"/>
+    </camp>
+    <camp id="DEFENDER">
+       <skill id="FAST_RUNNER" count="1"/>
+       <skill id="ZONE_DEFENSE" count="1"/>
+    </camp>
+    <camp id="DEFENDER">
+       <skill id="ZONE_DEFENSE" count="1"/>
+    </camp>
+    <camp id="DEFENDER">
+       <skill id="ONE_ON_ONE_DEFENCE" count="1"/>
+    </camp>
+    <camp id="DEFENDER">
+       <skill id="ZONE_DEFENSE" count="1"/>
+    </camp>
+    <camp id="DEFENDER">
+       <skill id="FAST_RUNNER" count="1"/>
+       <skill id="ZONE_DEFENSE" count="1"/>
+    </camp>
+    <camp id="GOAL_CAMP">
+       <skill id="HIGH_JUMPER" count="4"/>
+    </camp>
+  </quest>
+  <quest id="MATCH_FOUR" icon="wm2014_04.png">
+    <camp id="FORWARD">
+       <skill id="FAST_RUNNER" count="1"/>
+       <skill id="DRIBBLER" count="1"/>
+    </camp>
+    <camp id="FORWARD">
+       <skill id="DIVER" count="3"/>
+    </camp>
+    <camp id="FORWARD">
+       <skill id="DIVER" count="3"/>
+       <skill id="DRIBBLER" count="2"/>
+    </camp>
+    <camp id="FORWARD">
+       <skill id="FAST_RUNNER" count="2"/>
+       <skill id="DIVER" count="1"/>
+    </camp>
+    <camp id="DEFENDER">
+       <skill id="DRIBBLER" count="3"/>
+    </camp>
+    <camp id="DEFENDER">
+       <skill id="DRIBBLER" count="1"/>
+       <skill id="ONE_ON_ONE_DEFENCE" count="2"/>
+    </camp>
+    <camp id="DEFENDER">
+       <skill id="ZONE_DEFENSE" count="2"/>
+    </camp>
+    <camp id="DEFENDER">
+       <skill id="ZONE_DEFENSE" count="1"/>
+       <skill id="ONE_ON_ONE_DEFENCE" count="1"/>
+    </camp>
+    <camp id="DEFENDER">
+       <skill id="ZONE_DEFENSE" count="1"/>
+    </camp>
+    <camp id="DEFENDER">
+       <skill id="ZONE_DEFENSE" count="3"/>
+    </camp>
+    <camp id="GOAL_CAMP">
+       <skill id="HIGH_JUMPER" count="5"/>
+       <skill id="FAST_REFLEX" count="4"/>
+    </camp>
+  </quest>
+  <quest id="MATCH_FIVE" icon="wm2014_05.png">
+    <camp id="FORWARD">
+       <skill id="FAST_RUNNER" count="2"/>
+    </camp>
+    <camp id="FORWARD">
+       <skill id="DIVER" count="5"/>
+    </camp>
+    <camp id="FORWARD">
+       <skill id="FAST_RUNNER" count="2"/>
+       <skill id="DIVER" count="3"/>
+    </camp>
+    <camp id="MIDFIELDER">
+       <skill id="DRIBBLER" count="2"/>
+       <skill id="BACK_HEEL" count="2"/>
+    </camp>
+    <camp id="MIDFIELDER">
+       <skill id="DRIBBLER" count="2"/>
+       <skill id="ONE_ON_ONE_DEFENCE" count="2"/>
+    </camp>
+    <camp id="MIDFIELDER">
+       <skill id="BACK_HEEL" count="2"/>
+       <skill id="ONE_ON_ONE_DEFENCE" count="2"/>
+    </camp>
+    <camp id="DEFENDER">
+       <skill id="ZONE_DEFENSE" count="2"/>
+       <skill id="ONE_ON_ONE_DEFENCE" count="2"/>
+    </camp>
+    <camp id="DEFENDER">
+       <skill id="ONE_ON_ONE_DEFENCE" count="4"/>
+    </camp>
+    <camp id="DEFENDER">
+       <skill id="ONE_ON_ONE_DEFENCE" count="4"/>
+    </camp>
+    <camp id="DEFENDER">
+       <skill id="ZONE_DEFENSE" count="2"/>
+       <skill id="ONE_ON_ONE_DEFENCE" count="2"/>
+    </camp>
+    <camp id="GOAL_CAMP">
+       <skill id="HIGH_JUMPER" count="4"/>
+       <skill id="FAST_REFLEX" count="6"/>
+    </camp>
+  </quest>
+  <quest id="FINAL_MATCH" icon="wm2014_06.png">
+    <camp id="FORWARD">
+       <skill id="DIVER" count="5"/>
+    </camp>
+    <camp id="MIDFIELDER">
+       <skill id="DRIBBLER" count="4"/>
+       <skill id="BACK_HEEL" count="2"/>
+    </camp>
+    <camp id="MIDFIELDER">
+       <skill id="FAST_RUNNER" count="2"/>
+       <skill id="DRIBBLER" count="4"/>
+    </camp>
+    <camp id="MIDFIELDER">
+       <skill id="FAST_RUNNER" count="1"/>
+       <skill id="DRIBBLER" count="3"/>
+       <skill id="BACK_HEEL" count="2"/>
+    </camp>
+    <camp id="MIDFIELDER">
+       <skill id="DRIBBLER" count="2"/>
+       <skill id="BACK_HEEL" count="4"/>
+    </camp>
+    <camp id="MIDFIELDER">
+       <skill id="DRIBBLER" count="1"/>
+       <skill id="BACK_HEEL" count="1"/>
+       <skill id="ONE_ON_ONE_DEFENCE" count="5"/>
+    </camp>
+    <camp id="DEFENDER">
+       <skill id="ZONE_DEFENSE" count="1"/>
+    </camp>
+    <camp id="DEFENDER">
+       <skill id="ZONE_DEFENSE" count="1"/>
+    </camp>
+    <camp id="DEFENDER">
+       <skill id="ZONE_DEFENSE" count="1"/>
+    </camp>
+    <camp id="DEFENDER">
+       <skill id="ZONE_DEFENSE" count="1"/>
+    </camp>
+    <camp id="GOAL_CAMP">
+       <skill id="HIGH_JUMPER" count="8"/>
+       <skill id="FAST_REFLEX" count="10"/>
+    </camp>
+  </quest>
+  <quest id="FINALS" icon="wm2014_07.png">
+    <camp id="FORWARD">
+       <skill id="DIVER" count="10"/>
+    </camp>
+    <camp id="MIDFIELDER">
+       <skill id="FAST_FUNNER" count="2"/>
+       <skill id="BACK_HEEL" count="7"/>
+    </camp>
+    <camp id="MIDFIELDER">
+       <skill id="FAST_FUNNER" count="3"/>
+       <skill id="DRIBBLER" count="4"/>
+       <skill id="BACK_HEEL" count="2"/>
+    </camp>
+    <camp id="MIDFIELDER">
+       <skill id="FAST_FUNNER" count="3"/>
+       <skill id="BACK_HEEL" count="6"/>
+    </camp>
+    <camp id="MIDFIELDER">
+       <skill id="BACK_HEEL" count="7"/>
+       <skill id="ONE_ON_ONE_DEFENCE" count="3"/>
+    </camp>
+    <camp id="MIDFIELDER">
+       <skill id="DRIBBLER" count="6"/>
+       <skill id="ONE_ON_ONE_DEFENCE" count="2"/>
+    </camp>
+    <camp id="DEFENDER">
+       <skill id="FAST_RUNNER" count="3"/>
+       <skill id="ZONE_DEFENSE" count="4"/>
+    </camp>
+    <camp id="DEFENDER">
+       <skill id="FAST_RUNNER" count="2"/>
+       <skill id="ZONE_DEFENSE" count="5"/>
+       <skill id="ONE_ON_ONE_DEFENCE" count="1"/>
+    </camp>
+    <camp id="DEFENDER">
+       <skill id="FAST_RUNNER" count="2"/>
+       <skill id="ZONE_DEFENSE" count="5"/>
+       <skill id="ONE_ON_ONE_DEFENCE" count="1"/>
+    </camp>
+    <camp id="DEFENDER">
+       <skill id="FAST_RUNNER" count="3"/>
+       <skill id="ZONE_DEFENSE" count="4"/>
+    </camp>
+    <camp id="GOAL_CAMP">
+       <skill id="HIGH_JUMPER" count="8"/>
+       <skill id="FAST_REFLEX" count="10"/>
+    </camp>
+  </quest>
+</quests>

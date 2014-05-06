@@ -187,6 +187,366 @@ namespace TheSettlersCalculator.Properties {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на Удар пяткой.
+        /// </summary>
+        public static string EUROCUP2014_BACK_HEEL {
+            get {
+                return ResourceManager.GetString("EUROCUP2014_BACK_HEEL", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Банановая кожура.
+        /// </summary>
+        public static string EUROCUP2014_BANANA_PEEL {
+            get {
+                return ResourceManager.GetString("EUROCUP2014_BANANA_PEEL", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Удар ножницы.
+        /// </summary>
+        public static string EUROCUP2014_BICYCLE_KICK {
+            get {
+                return ResourceManager.GetString("EUROCUP2014_BICYCLE_KICK", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Угол.
+        /// </summary>
+        public static string EUROCUP2014_CORNER {
+            get {
+                return ResourceManager.GetString("EUROCUP2014_CORNER", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Угловой удар.
+        /// </summary>
+        public static string EUROCUP2014_CORNER_KICK {
+            get {
+                return ResourceManager.GetString("EUROCUP2014_CORNER_KICK", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Защитник.
+        /// </summary>
+        public static string EUROCUP2014_DEFENDER {
+            get {
+                return ResourceManager.GetString("EUROCUP2014_DEFENDER", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Симулянт.
+        /// </summary>
+        public static string EUROCUP2014_DIVER {
+            get {
+                return ResourceManager.GetString("EUROCUP2014_DIVER", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Дриблер.
+        /// </summary>
+        public static string EUROCUP2014_DRIBBLER {
+            get {
+                return ResourceManager.GetString("EUROCUP2014_DRIBBLER", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Пружина.
+        /// </summary>
+        public static string EUROCUP2014_ELASTIC_SPRING {
+            get {
+                return ResourceManager.GetString("EUROCUP2014_ELASTIC_SPRING", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Быстрая реакция.
+        /// </summary>
+        public static string EUROCUP2014_FAST_REFLEX {
+            get {
+                return ResourceManager.GetString("EUROCUP2014_FAST_REFLEX", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Бегун.
+        /// </summary>
+        public static string EUROCUP2014_FAST_RUNNER {
+            get {
+                return ResourceManager.GetString("EUROCUP2014_FAST_RUNNER", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Полуфинал.
+        /// </summary>
+        public static string EUROCUP2014_FINAL_MATCH {
+            get {
+                return ResourceManager.GetString("EUROCUP2014_FINAL_MATCH", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Финал.
+        /// </summary>
+        public static string EUROCUP2014_FINALS {
+            get {
+                return ResourceManager.GetString("EUROCUP2014_FINALS", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Кулак.
+        /// </summary>
+        public static string EUROCUP2014_FIST {
+            get {
+                return ResourceManager.GetString("EUROCUP2014_FIST", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Нападающий.
+        /// </summary>
+        public static string EUROCUP2014_FORWARD {
+            get {
+                return ResourceManager.GetString("EUROCUP2014_FORWARD", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Фол.
+        /// </summary>
+        public static string EUROCUP2014_FOUL {
+            get {
+                return ResourceManager.GetString("EUROCUP2014_FOUL", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Вратарь.
+        /// </summary>
+        public static string EUROCUP2014_GOAL_CAMP {
+            get {
+                return ResourceManager.GetString("EUROCUP2014_GOAL_CAMP", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Смазка.
+        /// </summary>
+        public static string EUROCUP2014_GREASE {
+            get {
+                return ResourceManager.GetString("EUROCUP2014_GREASE", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Удар головой.
+        /// </summary>
+        public static string EUROCUP2014_HEADER {
+            get {
+                return ResourceManager.GetString("EUROCUP2014_HEADER", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Шлем.
+        /// </summary>
+        public static string EUROCUP2014_HELMET {
+            get {
+                return ResourceManager.GetString("EUROCUP2014_HELMET", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Прыгун.
+        /// </summary>
+        public static string EUROCUP2014_HIGH_JUMPER {
+            get {
+                return ResourceManager.GetString("EUROCUP2014_HIGH_JUMPER", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Пятый матч.
+        /// </summary>
+        public static string EUROCUP2014_MATCH_FIVE {
+            get {
+                return ResourceManager.GetString("EUROCUP2014_MATCH_FIVE", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Чётвёртый матч.
+        /// </summary>
+        public static string EUROCUP2014_MATCH_FOUR {
+            get {
+                return ResourceManager.GetString("EUROCUP2014_MATCH_FOUR", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Третий матч.
+        /// </summary>
+        public static string EUROCUP2014_MATCH_THREE {
+            get {
+                return ResourceManager.GetString("EUROCUP2014_MATCH_THREE", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Второй матч.
+        /// </summary>
+        public static string EUROCUP2014_MATCH_TWO {
+            get {
+                return ResourceManager.GetString("EUROCUP2014_MATCH_TWO", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Полузащитник.
+        /// </summary>
+        public static string EUROCUP2014_MIDFIELDER {
+            get {
+                return ResourceManager.GetString("EUROCUP2014_MIDFIELDER", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Защита один на один.
+        /// </summary>
+        public static string EUROCUP2014_ONE_ON_ONE_DEFENCE {
+            get {
+                return ResourceManager.GetString("EUROCUP2014_ONE_ON_ONE_DEFENCE", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Матч открытие.
+        /// </summary>
+        public static string EUROCUP2014_OPENING_MATCH {
+            get {
+                return ResourceManager.GetString("EUROCUP2014_OPENING_MATCH", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Пас.
+        /// </summary>
+        public static string EUROCUP2014_PASS {
+            get {
+                return ResourceManager.GetString("EUROCUP2014_PASS", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Пенальти.
+        /// </summary>
+        public static string EUROCUP2014_PENALTY {
+            get {
+                return ResourceManager.GetString("EUROCUP2014_PENALTY", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Красная карточка.
+        /// </summary>
+        public static string EUROCUP2014_RED_CARD {
+            get {
+                return ResourceManager.GetString("EUROCUP2014_RED_CARD", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Красный цвет.
+        /// </summary>
+        public static string EUROCUP2014_RED_COLOR {
+            get {
+                return ResourceManager.GetString("EUROCUP2014_RED_COLOR", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Ботинок.
+        /// </summary>
+        public static string EUROCUP2014_SHOE {
+            get {
+                return ResourceManager.GetString("EUROCUP2014_SHOE", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Защита плеч.
+        /// </summary>
+        public static string EUROCUP2014_SHOULDER_PAD {
+            get {
+                return ResourceManager.GetString("EUROCUP2014_SHOULDER_PAD", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Подкат.
+        /// </summary>
+        public static string EUROCUP2014_SLIDING_TACKLE {
+            get {
+                return ResourceManager.GetString("EUROCUP2014_SLIDING_TACKLE", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Шипы.
+        /// </summary>
+        public static string EUROCUP2014_STUDS {
+            get {
+                return ResourceManager.GetString("EUROCUP2014_STUDS", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Перехват.
+        /// </summary>
+        public static string EUROCUP2014_TACKLE {
+            get {
+                return ResourceManager.GetString("EUROCUP2014_TACKLE", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Телескоп.
+        /// </summary>
+        public static string EUROCUP2014_TELESCOPE {
+            get {
+                return ResourceManager.GetString("EUROCUP2014_TELESCOPE", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Закрученный мяч.
+        /// </summary>
+        public static string EUROCUP2014_TWISTER {
+            get {
+                return ResourceManager.GetString("EUROCUP2014_TWISTER", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Мокрая трава.
+        /// </summary>
+        public static string EUROCUP2014_WET_GRASS {
+            get {
+                return ResourceManager.GetString("EUROCUP2014_WET_GRASS", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на Лог.
         /// </summary>
         public static string GENERAL_LOG {

@@ -30,10 +30,15 @@ namespace TheSettlersCalculator.Helper
 
 		internal static string getResourceText(string text)
 		{
+			return getResourceText(text, text);
+		}
+
+		internal static string getResourceText(string text, string defaultValue)
+		{
 			DictionaryEntry entry = resourceSet.OfType<DictionaryEntry>()
 				  .FirstOrDefault(e => e.Key.ToString().Equals(text, StringComparison.OrdinalIgnoreCase));
 
-			return entry.Value!=null && text.Equals(entry.Key.ToString(), StringComparison.OrdinalIgnoreCase) ? entry.Value.ToString() : text;
+			return entry.Value != null && text.Equals(entry.Key.ToString(), StringComparison.OrdinalIgnoreCase) ? entry.Value.ToString() : defaultValue;
 		}
 	}
 }

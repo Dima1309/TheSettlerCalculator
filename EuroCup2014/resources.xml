@@ -1,0 +1,94 @@
+<resources>
+  <resource id="BANANA_PEEL" icon="banana_peel.png">
+    <collectible_rate>7.5</collectible_rate>
+    <short_treasure_search_rate>0</short_treasure_search_rate>
+    <medium_treasure_search_rate>0</medium_treasure_search_rate>
+    <long_treasure_search_rate>0</long_treasure_search_rate>
+    <very_long_treasure_search_rate>0</very_long_treasure_search_rate>
+  </resource>
+  <resource id="CORNER" icon="corner.png">
+    <collectible_rate>2</collectible_rate>
+    <short_treasure_search_rate>0</short_treasure_search_rate>
+    <medium_treasure_search_rate>0</medium_treasure_search_rate>
+    <long_treasure_search_rate>0</long_treasure_search_rate>
+    <very_long_treasure_search_rate>0</very_long_treasure_search_rate>
+  </resource>
+  <resource id="ELASTIC_SPRING" icon="elastic_spring.png">
+    <collectible_rate>3</collectible_rate>
+    <short_treasure_search_rate>0</short_treasure_search_rate>
+    <medium_treasure_search_rate>0</medium_treasure_search_rate>
+    <long_treasure_search_rate>0</long_treasure_search_rate>
+    <very_long_treasure_search_rate>0</very_long_treasure_search_rate>
+  </resource>
+  <resource id="FIST" icon="fist.png">
+    <collectible_rate>0.01</collectible_rate>
+    <short_treasure_search_rate>0</short_treasure_search_rate>
+    <medium_treasure_search_rate>0</medium_treasure_search_rate>
+    <long_treasure_search_rate>0</long_treasure_search_rate>
+    <very_long_treasure_search_rate>0</very_long_treasure_search_rate>
+  </resource>
+  <resource id="RED_COLOR" icon="red_color.png">
+    <collectible_rate>5.5</collectible_rate>
+    <short_treasure_search_rate>0</short_treasure_search_rate>
+    <medium_treasure_search_rate>0</medium_treasure_search_rate>
+    <long_treasure_search_rate>0</long_treasure_search_rate>
+    <very_long_treasure_search_rate>0</very_long_treasure_search_rate>
+  </resource>
+  <resource id="SHOE" icon="shoe.png">
+    <collectible_rate>12</collectible_rate>
+    <short_treasure_search_rate>0</short_treasure_search_rate>
+    <medium_treasure_search_rate>0</medium_treasure_search_rate>
+    <long_treasure_search_rate>0</long_treasure_search_rate>
+    <very_long_treasure_search_rate>0</very_long_treasure_search_rate>
+  </resource>
+  <resource id="TELESCOPE" icon="telescope.png">
+    <collectible_rate>7.5</collectible_rate>
+    <short_treasure_search_rate>0</short_treasure_search_rate>
+    <medium_treasure_search_rate>0</medium_treasure_search_rate>
+    <long_treasure_search_rate>0</long_treasure_search_rate>
+    <very_long_treasure_search_rate>0</very_long_treasure_search_rate>
+  </resource>
+
+  <resource id="GREASE" icon="grease.png">
+    <collectible_rate>0</collectible_rate>
+    <short_treasure_search_rate>0.16</short_treasure_search_rate> 
+    <medium_treasure_search_rate>0.1154</medium_treasure_search_rate>
+    <long_treasure_search_rate>0.16</long_treasure_search_rate>
+    <very_long_treasure_search_rate>0.8</very_long_treasure_search_rate>
+  </resource>
+  <resource id="HELMET" icon="helmet.png">
+    <collectible_rate>0</collectible_rate>
+    <short_treasure_search_rate>0.08</short_treasure_search_rate>
+    <medium_treasure_search_rate>0.1924</medium_treasure_search_rate>
+    <long_treasure_search_rate>0.36</long_treasure_search_rate>
+    <very_long_treasure_search_rate>0.64</very_long_treasure_search_rate>
+  </resource>
+  <resource id="SHOULDER_PAD" icon="shoulder_pad.png">
+    <collectible_rate>0</collectible_rate>
+    <short_treasure_search_rate>0.12</short_treasure_search_rate>
+    <medium_treasure_search_rate>0.3848</medium_treasure_search_rate>
+    <long_treasure_search_rate>0.52</long_treasure_search_rate>
+    <very_long_treasure_search_rate>0.56</very_long_treasure_search_rate>
+  </resource>
+  <resource id="STUDS" icon="studs.png">
+    <collectible_rate>0</collectible_rate>
+    <short_treasure_search_rate>0.04</short_treasure_search_rate>
+    <medium_treasure_search_rate>0.077</medium_treasure_search_rate>
+    <long_treasure_search_rate>0.2</long_treasure_search_rate>
+    <very_long_treasure_search_rate>0.48</very_long_treasure_search_rate>
+  </resource>
+  <resource id="TWISTER" icon="twister.png">
+    <collectible_rate>0</collectible_rate>
+    <short_treasure_search_rate>0.04</short_treasure_search_rate>
+    <medium_treasure_search_rate>0.077</medium_treasure_search_rate>
+    <long_treasure_search_rate>0.08</long_treasure_search_rate>
+    <very_long_treasure_search_rate>0.64</very_long_treasure_search_rate>
+  </resource>
+  <resource id="WET_GRASS" icon="wet_grass.png">
+    <collectible_rate>0</collectible_rate>
+    <short_treasure_search_rate>0.14</short_treasure_search_rate>
+    <medium_treasure_search_rate>0.2694</medium_treasure_search_rate>
+    <long_treasure_search_rate>0.4</long_treasure_search_rate>
+    <very_long_treasure_search_rate>0.48</very_long_treasure_search_rate>
+  </resource>
+</resources>

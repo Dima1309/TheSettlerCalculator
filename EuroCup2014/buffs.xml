@@ -1,0 +1,90 @@
+<buffs>
+  <buff id="BICYCLE_KICK" icon="bicycle_kick.png">
+    <provision_house>
+	<resource id="TWISTER" count="37"/>
+	<resource id="ELASTIC_SPRING" count="38"/>
+    </provision_house>
+    <rarity_provision_house>
+	<resource id="TWISTER" count="69"/>
+	<resource id="ELASTIC_SPRING" count="8"/>
+    </rarity_provision_house>
+  </buff>
+  <buff id="FOUL" icon="foul.png">
+    <provision_house>
+	<resource id="BANANA_PEEL" count="9"/>
+	<resource id="WET_GRASS" count="21"/>
+    </provision_house>
+    <rarity_provision_house>
+	<resource id="BANANA_PEEL" count="11"/>
+	<resource id="WET_GRASS" count="26"/>
+    </rarity_provision_house>
+  </buff>
+  <buff id="HEADER" icon="header.png">
+    <provision_house>
+	<resource id="HELMET" count="32"/>
+	<resource id="ELASTIC_SPRING" count="17"/>
+    </provision_house>
+    <rarity_provision_house>
+	<resource id="HELMET" count="40"/>
+	<resource id="ELASTIC_SPRING" count="8"/>
+    </rarity_provision_house>
+  </buff>
+  <buff id="PASS" icon="pass.png">
+    <provision_house>
+	<resource id="SHOE" count="15"/>
+	<resource id="TELESCOPE" count="15"/>
+    </provision_house>
+    <rarity_provision_house>
+	<resource id="SHOE" count="8"/>
+	<resource id="TELESCOPE" count="16"/>
+    </rarity_provision_house>
+  </buff>
+  <buff id="PENALTY" icon="penalty.png">
+    <provision_house>
+	<resource id="STUDS" count="19"/>
+	<resource id="SHOE" count="18"/>
+    </provision_house>
+    <rarity_provision_house>
+	<resource id="STUDS" count="12"/>
+	<resource id="SHOE" count="8"/>
+    </rarity_provision_house>
+  </buff>
+  <buff id="RED_CARD" icon="red_card.png">
+    <provision_house>
+	<resource id="RED_COLOR" count="27"/>
+    </provision_house>
+    <rarity_provision_house>
+	<resource id="RED_COLOR" count="46"/>
+    </rarity_provision_house>
+  </buff>
+  <buff id="SLIDING_TACKLE" icon="sliding_tackle.png">
+    <provision_house>
+	<resource id="STUDS" count="17"/>
+	<resource id="GREASE" count="17"/>
+    </provision_house>
+    <rarity_provision_house>
+	<resource id="STUDS" count="12"/>
+	<resource id="GREASE" count="21"/>
+    </rarity_provision_house>
+  </buff>
+  <buff id="TACKLE" icon="tackle.png">
+    <provision_house>
+	<resource id="SHOULDER_PAD" count="32"/>
+	<resource id="FIST" count="14"/>
+    </provision_house>
+    <rarity_provision_house>
+	<resource id="SHOULDER_PAD" count="34"/>
+	<resource id="FIST" count="15"/>
+    </rarity_provision_house>
+  </buff>
+  <buff id="CORNER_KICK" icon="corner_ball.png">
+    <provision_house>
+	<resource id="SHOE" count="28"/>
+	<resource id="CORNER" count="26"/>
+    </provision_house>
+    <rarity_provision_house>
+	<resource id="SHOE" count="8"/>
+	<resource id="CORNER" count="24"/>
+    </rarity_provision_house>
+  </buff>
+</buffs>

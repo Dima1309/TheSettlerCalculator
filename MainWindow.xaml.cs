@@ -4,6 +4,7 @@ using System.Windows.Controls;
 using TheSettlersCalculator.Specialists.Generals;
 using TheSettlersCalculator.Types;
 using TheSettlersCalculator.WpfTypes;
+using TheSettlersCalculator.EuroCup2014;
 
 namespace TheSettlersCalculator
 {
@@ -14,6 +15,7 @@ namespace TheSettlersCalculator
     {
         #region Fields
         private readonly MainWindowModel m_model = new MainWindowModel();
+		private readonly Model m_euroCupModel = new Model();
         #endregion
 
         public MainWindow()
@@ -24,6 +26,11 @@ namespace TheSettlersCalculator
 		public MainWindowModel Model
 		{
 			get { return m_model; }
+		}
+
+		public Model EuroCupModel
+		{
+			get { return m_euroCupModel; }
 		}
 
 		private void Button_MapClick(object sender, RoutedEventArgs e)

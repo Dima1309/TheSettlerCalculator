@@ -1,0 +1,34 @@
+<skills>
+  <skill id="BACK_HEEL" icon="back heel.png">
+    <buff id="SLIDING_TACKLE"/>
+    <buff id="TACKLE"/>
+  </skill>
+  <skill id="DIVER" icon="Diver.png">
+    <buff id="RED_CARD"/>
+    <buff id="FOUL"/>
+  </skill>
+  <skill id="DRIBBLER" icon="Dribbler.png">
+    <buff id="TACKLE"/>
+    <buff id="FOUL"/>
+  </skill>
+  <skill id="FAST_REFLEX" icon="fast reflex.png">
+    <buff id="BICYCLE_KICK"/>
+    <buff id="PENALTY"/>
+  </skill>
+  <skill id="ONE_ON_ONE_DEFENCE" icon="One on one defence.png">
+    <buff id="FOUL"/>
+    <buff id="HEADER"/>
+  </skill>
+  <skill id="FAST_RUNNER" icon="fast runner.png">
+    <buff id="SLIDING_TACKLE"/>
+    <buff id="PASS"/>
+  </skill>
+  <skill id="HIGH_JUMPER" icon="high jumper.png">
+    <buff id="HEADER"/>
+    <buff id="PENALTY"/>
+  </skill>
+  <skill id="ZONE_DEFENSE" icon="zone defense.png">
+    <buff id="CORNER_KICK"/>
+    <buff id="PASS"/>
+  </skill>
+</skills>

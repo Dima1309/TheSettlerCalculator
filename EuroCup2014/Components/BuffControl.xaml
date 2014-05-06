@@ -1,0 +1,66 @@
+﻿<UserControl x:Class="TheSettlersCalculator.EuroCup2014.Components.BuffControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:EuroCupComponents="clr-namespace:TheSettlersCalculator.EuroCup2014.Components"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300" x:Name="u" d:DataContext="{d:DesignInstance}">
+    <Grid DataContext="{Binding ElementName=u}">
+        <Image Source="{Binding Buff.Icon}">
+            <Image.ToolTip>
+                <StackPanel Orientation="Vertical">
+                    <Label Content="{Binding Buff.Name}" FontWeight="Bold"></Label>
+                    <Label Content="Универсальная мастерская" FontWeight="Bold"></Label>
+                    <ItemsControl ItemsSource="{Binding Buff.ProvisionHouseCost}">
+                        <ItemsControl.ItemsPanel>
+                            <ItemsPanelTemplate>
+                                <StackPanel Orientation="Horizontal" />
+                            </ItemsPanelTemplate>
+                        </ItemsControl.ItemsPanel>
+                        <ItemsControl.ItemTemplate>
+                            <DataTemplate>
+                                <Grid>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="40"/>
+                                        <RowDefinition Height="*"/>
+                                    </Grid.RowDefinitions>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*"/>
+                                    </Grid.ColumnDefinitions>
+                                    <EuroCupComponents:ResourceControl Grid.Column="0" Grid.Row="0" HorizontalAlignment="Center" Resource="{Binding Resource}"/>
+                                    <Label Content="{Binding Count}" Grid.Column="0" Grid.Row="1" HorizontalAlignment="Center"></Label>
+                                </Grid>
+                            </DataTemplate>
+                        </ItemsControl.ItemTemplate>
+                    </ItemsControl>
+
+                    <Label Content="Универсальная мастерская редкостей" FontWeight="Bold"></Label>
+                    <ItemsControl ItemsSource="{Binding Buff.RarityProvisionHouseCost}">
+                        <ItemsControl.ItemsPanel>
+                            <ItemsPanelTemplate>
+                                <StackPanel Orientation="Horizontal" />
+                            </ItemsPanelTemplate>
+                        </ItemsControl.ItemsPanel>
+                        <ItemsControl.ItemTemplate>
+                            <DataTemplate>
+                                <Grid>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="40"/>
+                                        <RowDefinition Height="*"/>
+                                    </Grid.RowDefinitions>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*"/>
+                                    </Grid.ColumnDefinitions>
+                                    <EuroCupComponents:ResourceControl Grid.Column="0" Grid.Row="0" HorizontalAlignment="Center" Resource="{Binding Resource}"/>
+                                    <Label Content="{Binding Count}" Grid.Column="0" Grid.Row="1" HorizontalAlignment="Center"></Label>
+                                </Grid>
+                            </DataTemplate>
+                        </ItemsControl.ItemTemplate>
+                    </ItemsControl>
+
+                </StackPanel>
+            </Image.ToolTip>
+        </Image>
+    </Grid>
+</UserControl>

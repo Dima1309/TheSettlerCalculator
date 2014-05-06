@@ -159,6 +159,126 @@
   <data name="CAMP_WIN_TIME_WITCH_TOWER" xml:space="preserve">
     <value>Башня ведьмы(140 сек.)</value>
   </data>
+  <data name="EUROCUP2014_BACK_HEEL" xml:space="preserve">
+    <value>Удар пяткой</value>
+  </data>
+  <data name="EUROCUP2014_BANANA_PEEL" xml:space="preserve">
+    <value>Банановая кожура</value>
+  </data>
+  <data name="EUROCUP2014_BICYCLE_KICK" xml:space="preserve">
+    <value>Удар ножницы</value>
+  </data>
+  <data name="EUROCUP2014_CORNER" xml:space="preserve">
+    <value>Угол</value>
+  </data>
+  <data name="EUROCUP2014_CORNER_KICK" xml:space="preserve">
+    <value>Угловой удар</value>
+  </data>
+  <data name="EUROCUP2014_DEFENDER" xml:space="preserve">
+    <value>Защитник</value>
+  </data>
+  <data name="EUROCUP2014_DIVER" xml:space="preserve">
+    <value>Симулянт</value>
+  </data>
+  <data name="EUROCUP2014_DRIBBLER" xml:space="preserve">
+    <value>Дриблер</value>
+  </data>
+  <data name="EUROCUP2014_ELASTIC_SPRING" xml:space="preserve">
+    <value>Пружина</value>
+  </data>
+  <data name="EUROCUP2014_FAST_REFLEX" xml:space="preserve">
+    <value>Быстрая реакция</value>
+  </data>
+  <data name="EUROCUP2014_FAST_RUNNER" xml:space="preserve">
+    <value>Бегун</value>
+  </data>
+  <data name="EUROCUP2014_FINALS" xml:space="preserve">
+    <value>Финал</value>
+  </data>
+  <data name="EUROCUP2014_FINAL_MATCH" xml:space="preserve">
+    <value>Полуфинал</value>
+  </data>
+  <data name="EUROCUP2014_FIST" xml:space="preserve">
+    <value>Кулак</value>
+  </data>
+  <data name="EUROCUP2014_FORWARD" xml:space="preserve">
+    <value>Нападающий</value>
+  </data>
+  <data name="EUROCUP2014_FOUL" xml:space="preserve">
+    <value>Фол</value>
+  </data>
+  <data name="EUROCUP2014_GOAL_CAMP" xml:space="preserve">
+    <value>Вратарь</value>
+  </data>
+  <data name="EUROCUP2014_GREASE" xml:space="preserve">
+    <value>Смазка</value>
+  </data>
+  <data name="EUROCUP2014_HEADER" xml:space="preserve">
+    <value>Удар головой</value>
+  </data>
+  <data name="EUROCUP2014_HELMET" xml:space="preserve">
+    <value>Шлем</value>
+  </data>
+  <data name="EUROCUP2014_HIGH_JUMPER" xml:space="preserve">
+    <value>Прыгун</value>
+  </data>
+  <data name="EUROCUP2014_MATCH_FIVE" xml:space="preserve">
+    <value>Пятый матч</value>
+  </data>
+  <data name="EUROCUP2014_MATCH_FOUR" xml:space="preserve">
+    <value>Чётвёртый матч</value>
+  </data>
+  <data name="EUROCUP2014_MATCH_THREE" xml:space="preserve">
+    <value>Третий матч</value>
+  </data>
+  <data name="EUROCUP2014_MATCH_TWO" xml:space="preserve">
+    <value>Второй матч</value>
+  </data>
+  <data name="EUROCUP2014_MIDFIELDER" xml:space="preserve">
+    <value>Полузащитник</value>
+  </data>
+  <data name="EUROCUP2014_ONE_ON_ONE_DEFENCE" xml:space="preserve">
+    <value>Защита один на один</value>
+  </data>
+  <data name="EUROCUP2014_OPENING_MATCH" xml:space="preserve">
+    <value>Матч открытие</value>
+  </data>
+  <data name="EUROCUP2014_PASS" xml:space="preserve">
+    <value>Пас</value>
+  </data>
+  <data name="EUROCUP2014_PENALTY" xml:space="preserve">
+    <value>Пенальти</value>
+  </data>
+  <data name="EUROCUP2014_RED_CARD" xml:space="preserve">
+    <value>Красная карточка</value>
+  </data>
+  <data name="EUROCUP2014_RED_COLOR" xml:space="preserve">
+    <value>Красный цвет</value>
+  </data>
+  <data name="EUROCUP2014_SHOE" xml:space="preserve">
+    <value>Ботинок</value>
+  </data>
+  <data name="EUROCUP2014_SHOULDER_PAD" xml:space="preserve">
+    <value>Защита плеч</value>
+  </data>
+  <data name="EUROCUP2014_SLIDING_TACKLE" xml:space="preserve">
+    <value>Подкат</value>
+  </data>
+  <data name="EUROCUP2014_STUDS" xml:space="preserve">
+    <value>Шипы</value>
+  </data>
+  <data name="EUROCUP2014_TACKLE" xml:space="preserve">
+    <value>Перехват</value>
+  </data>
+  <data name="EUROCUP2014_TELESCOPE" xml:space="preserve">
+    <value>Телескоп</value>
+  </data>
+  <data name="EUROCUP2014_TWISTER" xml:space="preserve">
+    <value>Закрученный мяч</value>
+  </data>
+  <data name="EUROCUP2014_WET_GRASS" xml:space="preserve">
+    <value>Мокрая трава</value>
+  </data>
   <data name="GENERAL_LOG" xml:space="preserve">
     <value>Лог</value>
   </data>
