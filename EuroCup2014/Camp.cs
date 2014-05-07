@@ -41,7 +41,7 @@ namespace TheSettlersCalculator.EuroCup2014
 			{
 				m_skills.Add(new SkillWithCount(
 					reader.GetAttribute(ID),
-					int.Parse(reader.GetAttribute(COUNT), CultureInfo.InvariantCulture)));				
+					int.Parse(reader.GetAttribute(COUNT), CultureInfo.InvariantCulture)));
 			}
 		}
 		#endregion

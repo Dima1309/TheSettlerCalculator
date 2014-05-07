@@ -38,6 +38,7 @@
 		<Converters:ObjectToBooleanConverter x:Key="objectToBooleanConverter" />
 		<Converters:SecondsToStringConverter x:Key="secondsToStringConverter" />
 		<Converters:BattleTimeConverter x:Key="battleTimeConverter" />
+        <Converters:ResourceConverter x:Key="resourceConverter" />
 		<StackPanel Orientation="Horizontal" x:Key="WaveTooltipTemplate">
 			<ItemsControl ItemsSource="{Binding Path=.}">
 				<ItemsControl.ItemTemplate>
@@ -828,6 +829,7 @@
             </ScrollViewer>
         </TabItem>
         <TabItem Header="Euro Cup 2014">
+            <ScrollViewer>
             <StackPanel>
                 <Expander IsExpanded="True">
                     <Expander.Header>
@@ -886,7 +888,12 @@
                                 <DataTemplate>
                                     <StackPanel Orientation="Vertical">
                                         <TextBlock Text="{Binding Name}"></TextBlock>
-                                        <ItemsControl ItemsSource="{Binding EuroCupModel.Skills, ElementName=Win}">
+                                        <StackPanel Orientation="Horizontal">
+                                            <StackPanel Orientation="Vertical" VerticalAlignment="Center">
+                                                    <Button Margin="4" VerticalAlignment="Center" Content="{Binding Source=BUTTON_EDIT, Converter={StaticResource resourceConverter}}"/>
+                                                    <Button Margin="4" VerticalAlignment="Center" Content="{Binding Source=BUTTON_DELETE, Converter={StaticResource resourceConverter}}"/>
+                                            </StackPanel>
+                                        <ItemsControl ItemsSource="{Binding Skills}">
                                             <ItemsControl.ItemsPanel>
                                                 <ItemsPanelTemplate>
                                                     <StackPanel Orientation="Horizontal" />
@@ -895,19 +902,23 @@
                                             <ItemsControl.ItemTemplate>
                                                 <DataTemplate>
                                                     <StackPanel Orientation="Vertical">
-                                                        <EuroCupComponents:SkillControl/>
-                                                        <TextBlock Text="0"/>
+                                                        <EuroCupComponents:SkillControl Skill="{Binding Skill}"/>
+                                                        <TextBox Text="{Binding Count}" VerticalAlignment="Center" HorizontalAlignment="Center"/>
                                                     </StackPanel>
                                                 </DataTemplate>
                                             </ItemsControl.ItemTemplate>
                                         </ItemsControl>
+                                        </StackPanel>
                                     </StackPanel>
                                 </DataTemplate>
                             </ItemsControl.ItemTemplate>
                         </ItemsControl>
+                            <Button Content="{Binding Source=BUTTON_ADD, Converter={StaticResource resourceConverter}}">
+                            </Button>
                     </StackPanel>
                 </Expander>
             </StackPanel>
+            </ScrollViewer>
         </TabItem>
 	</TabControl>
 </Window>

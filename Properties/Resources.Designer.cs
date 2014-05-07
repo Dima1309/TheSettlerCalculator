@@ -106,6 +106,33 @@ namespace TheSettlersCalculator.Properties {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на Добавить.
+        /// </summary>
+        public static string BUTTON_ADD {
+            get {
+                return ResourceManager.GetString("BUTTON_ADD", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Удалить.
+        /// </summary>
+        public static string BUTTON_DELETE {
+            get {
+                return ResourceManager.GetString("BUTTON_DELETE", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Редактировать.
+        /// </summary>
+        public static string BUTTON_EDIT {
+            get {
+                return ResourceManager.GetString("BUTTON_EDIT", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на Засада.
         /// </summary>
         public static string CAMP_TYPE_AMBUSH {

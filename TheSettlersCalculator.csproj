@@ -183,6 +183,7 @@
     <Compile Include="WpfTypes\Converters\ObjectToBooleanConverter.cs" />
     <Compile Include="WpfTypes\Converters\ObjectVisibilityConverter.cs" />
     <Compile Include="WpfTypes\Converters\ProductTypeConverter.cs" />
+    <Compile Include="WpfTypes\Converters\ResourceConverter.cs" />
     <Compile Include="WpfTypes\Converters\SecondsToStringConverter.cs" />
     <Compile Include="WpfTypes\Converters\ServerTypeConverter.cs" />
     <Compile Include="WpfTypes\Converters\WaveIndexConverter.cs" />

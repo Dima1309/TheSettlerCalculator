@@ -35,7 +35,10 @@ namespace TheSettlersCalculator.EuroCup2014.Components
 		public override void OnApplyTemplate()
 		{
 			base.OnApplyTemplate();
-			Skill = DataContext as Skill;
+			if (Skill == null && DataContext is Skill)
+			{
+				Skill = DataContext as Skill;
+			}
 		}
 	}
 }

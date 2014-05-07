@@ -243,16 +243,16 @@
        <skill id="DIVER" count="10"/>
     </camp>
     <camp id="MIDFIELDER">
-       <skill id="FAST_FUNNER" count="2"/>
+       <skill id="FAST_RUNNER" count="2"/>
        <skill id="BACK_HEEL" count="7"/>
     </camp>
     <camp id="MIDFIELDER">
-       <skill id="FAST_FUNNER" count="3"/>
+       <skill id="FAST_RUNNER" count="3"/>
        <skill id="DRIBBLER" count="4"/>
        <skill id="BACK_HEEL" count="2"/>
     </camp>
     <camp id="MIDFIELDER">
-       <skill id="FAST_FUNNER" count="3"/>
+       <skill id="FAST_RUNNER" count="3"/>
        <skill id="BACK_HEEL" count="6"/>
     </camp>
     <camp id="MIDFIELDER">

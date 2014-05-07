@@ -132,6 +132,15 @@
   <data name="BUILDING_WITCH_TOWER" xml:space="preserve">
     <value>Башня ведьмы</value>
   </data>
+  <data name="BUTTON_ADD" xml:space="preserve">
+    <value>Добавить</value>
+  </data>
+  <data name="BUTTON_DELETE" xml:space="preserve">
+    <value>Удалить</value>
+  </data>
+  <data name="BUTTON_EDIT" xml:space="preserve">
+    <value>Редактировать</value>
+  </data>
   <data name="CAMP_TYPE_AMBUSH" xml:space="preserve">
     <value>Засада</value>
   </data>
