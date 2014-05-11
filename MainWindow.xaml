@@ -890,8 +890,8 @@
                                         <TextBlock Text="{Binding Name}"></TextBlock>
                                         <StackPanel Orientation="Horizontal">
                                             <StackPanel Orientation="Vertical" VerticalAlignment="Center">
-                                                    <Button Margin="4" VerticalAlignment="Center" Content="{Binding Source=BUTTON_EDIT, Converter={StaticResource resourceConverter}}"/>
-                                                    <Button Margin="4" VerticalAlignment="Center" Content="{Binding Source=BUTTON_DELETE, Converter={StaticResource resourceConverter}}"/>
+                                                    <Button Margin="4" VerticalAlignment="Center" Content="{Binding Source=BUTTON_EDIT, Converter={StaticResource resourceConverter}}" Click="ButtonEuroCup2014EditCamp_Click"/>
+                                                    <Button Margin="4" VerticalAlignment="Center" Content="{Binding Source=BUTTON_DELETE, Converter={StaticResource resourceConverter}}" Click="ButtonDeleteEuroCamp_Click"/>
                                             </StackPanel>
                                         <ItemsControl ItemsSource="{Binding Skills}">
                                             <ItemsControl.ItemsPanel>
@@ -913,7 +913,7 @@
                                 </DataTemplate>
                             </ItemsControl.ItemTemplate>
                         </ItemsControl>
-                            <Button Content="{Binding Source=BUTTON_ADD, Converter={StaticResource resourceConverter}}">
+                            <Button Content="{Binding Source=BUTTON_ADD, Converter={StaticResource resourceConverter}}" Click="ButtonAddEuroCupCamp_Click">
                             </Button>
                     </StackPanel>
                 </Expander>

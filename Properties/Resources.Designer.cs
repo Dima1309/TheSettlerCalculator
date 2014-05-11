@@ -115,6 +115,15 @@ namespace TheSettlersCalculator.Properties {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на Отменить.
+        /// </summary>
+        public static string BUTTON_CANCEL {
+            get {
+                return ResourceManager.GetString("BUTTON_CANCEL", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на Удалить.
         /// </summary>
         public static string BUTTON_DELETE {
@@ -129,6 +138,15 @@ namespace TheSettlersCalculator.Properties {
         public static string BUTTON_EDIT {
             get {
                 return ResourceManager.GetString("BUTTON_EDIT", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Сохранить.
+        /// </summary>
+        public static string BUTTON_SAVE {
+            get {
+                return ResourceManager.GetString("BUTTON_SAVE", resourceCulture);
             }
         }
         
@@ -237,6 +255,15 @@ namespace TheSettlersCalculator.Properties {
         public static string EUROCUP2014_BICYCLE_KICK {
             get {
                 return ResourceManager.GetString("EUROCUP2014_BICYCLE_KICK", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Редактор.
+        /// </summary>
+        public static string EUROCUP2014_CAMP_EDITOR_TITLE {
+            get {
+                return ResourceManager.GetString("EUROCUP2014_CAMP_EDITOR_TITLE", resourceCulture);
             }
         }
         
@@ -624,6 +651,15 @@ namespace TheSettlersCalculator.Properties {
         public static string GENERAL_VETERAN {
             get {
                 return ResourceManager.GetString("GENERAL_VETERAN", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Удалить?.
+        /// </summary>
+        public static string MESSAGE_DELETE_CAMP {
+            get {
+                return ResourceManager.GetString("MESSAGE_DELETE_CAMP", resourceCulture);
             }
         }
         
@@ -1650,6 +1686,15 @@ namespace TheSettlersCalculator.Properties {
         public static string RESOURCE_WHEEL {
             get {
                 return ResourceManager.GetString("RESOURCE_WHEEL", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Подтверждение.
+        /// </summary>
+        public static string TITLE_CONFIRM {
+            get {
+                return ResourceManager.GetString("TITLE_CONFIRM", resourceCulture);
             }
         }
         

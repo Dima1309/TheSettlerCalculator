@@ -72,6 +72,9 @@
     <Compile Include="EuroCup2014\Components\BuffControl.xaml.cs">
       <DependentUpon>BuffControl.xaml</DependentUpon>
     </Compile>
+    <Compile Include="EuroCup2014\Components\CampEditor.xaml.cs">
+      <DependentUpon>CampEditor.xaml</DependentUpon>
+    </Compile>
     <Compile Include="EuroCup2014\Components\ResourceControl.xaml.cs">
       <DependentUpon>ResourceControl.xaml</DependentUpon>
     </Compile>
@@ -207,6 +210,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="EuroCup2014\Components\BuffControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="EuroCup2014\Components\CampEditor.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

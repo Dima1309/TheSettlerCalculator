@@ -135,11 +135,17 @@
   <data name="BUTTON_ADD" xml:space="preserve">
     <value>Добавить</value>
   </data>
+  <data name="BUTTON_CANCEL" xml:space="preserve">
+    <value>Отменить</value>
+  </data>
   <data name="BUTTON_DELETE" xml:space="preserve">
     <value>Удалить</value>
   </data>
   <data name="BUTTON_EDIT" xml:space="preserve">
     <value>Редактировать</value>
+  </data>
+  <data name="BUTTON_SAVE" xml:space="preserve">
+    <value>Сохранить</value>
   </data>
   <data name="CAMP_TYPE_AMBUSH" xml:space="preserve">
     <value>Засада</value>
@@ -176,6 +182,9 @@
   </data>
   <data name="EUROCUP2014_BICYCLE_KICK" xml:space="preserve">
     <value>Удар ножницы</value>
+  </data>
+  <data name="EUROCUP2014_CAMP_EDITOR_TITLE" xml:space="preserve">
+    <value>Редактор</value>
   </data>
   <data name="EUROCUP2014_CORNER" xml:space="preserve">
     <value>Угол</value>
@@ -305,6 +314,9 @@
   </data>
   <data name="GENERAL_VETERAN" xml:space="preserve">
     <value>Ветеран</value>
+  </data>
+  <data name="MESSAGE_DELETE_CAMP" xml:space="preserve">
+    <value>Удалить?</value>
   </data>
   <data name="QUEST_BANDIT_NEST" xml:space="preserve">
     <value>Убежище разбойников</value>
@@ -647,6 +659,9 @@
   </data>
   <data name="RESOURCE_WHEEL" xml:space="preserve">
     <value>Колёса</value>
+  </data>
+  <data name="TITLE_CONFIRM" xml:space="preserve">
+    <value>Подтверждение</value>
   </data>
   <data name="UNIT_ASSASSINE" xml:space="preserve">
     <value>Убийца</value>
