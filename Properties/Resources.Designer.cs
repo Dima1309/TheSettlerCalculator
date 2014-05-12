@@ -268,6 +268,15 @@ namespace TheSettlersCalculator.Properties {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на Матч.
+        /// </summary>
+        public static string EUROCUP2014_CAMPS {
+            get {
+                return ResourceManager.GetString("EUROCUP2014_CAMPS", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на Угол.
         /// </summary>
         public static string EUROCUP2014_CORNER {
@@ -597,6 +606,15 @@ namespace TheSettlersCalculator.Properties {
         public static string EUROCUP2014_WET_GRASS {
             get {
                 return ResourceManager.GetString("EUROCUP2014_WET_GRASS", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Зонная защита.
+        /// </summary>
+        public static string EUROCUP2014_ZONE_DEFENSE {
+            get {
+                return ResourceManager.GetString("EUROCUP2014_ZONE_DEFENSE", resourceCulture);
             }
         }
         

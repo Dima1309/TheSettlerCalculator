@@ -106,7 +106,7 @@ namespace TheSettlersCalculator
 			CampEditor editor = new CampEditor(newCamp);
 			if (editor.ShowDialog().Value)
 			{
-				m_euroCupModel.Camps.Add(newCamp);
+				m_euroCupModel.AddCamp(newCamp);
 			}
 		}
 
@@ -118,6 +118,7 @@ namespace TheSettlersCalculator
 				CampEditor editor = new CampEditor(control.DataContext as EuroCup2014.Camp);
 				if (editor.ShowDialog().Value)
 				{
+					m_euroCupModel.EditCamp(editor.Camp);
 				}
 			}
 		}
@@ -132,8 +133,16 @@ namespace TheSettlersCalculator
 					Properties.Resources.TITLE_CONFIRM, 
 					MessageBoxButton.YesNo) == MessageBoxResult.Yes)
 				{
-					m_euroCupModel.Camps.Remove(control.DataContext as EuroCup2014.Camp);					
+					m_euroCupModel.Camps.Remove(control.DataContext as EuroCup2014.Camp);
 				}
+			}
+		}
+
+		private void ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+		{
+			if (e.AddedItems!= null && e.AddedItems.Count > 0  && e.AddedItems[0] is EuroCup2014.Quest)
+			{
+				m_euroCupModel.SelectQuest(e.AddedItems[0] as EuroCup2014.Quest);
 			}
 		}
     }

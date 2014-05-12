@@ -17,7 +17,7 @@ namespace TheSettlersCalculator.EuroCup2014
 		#endregion
 
 		#region Properties
-		internal static List<Quest> QuestList
+		public static List<Quest> QuestList
 		{
 			get
 			{

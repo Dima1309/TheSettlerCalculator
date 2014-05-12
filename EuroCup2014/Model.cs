@@ -1,13 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using TheSettlersCalculator.EuroCup2014.Comparers;
 
 namespace TheSettlersCalculator.EuroCup2014
 {
-	public class Model
+	public class Model : INotifyPropertyChanged
 	{
 		#region Fields
 		private readonly List<ResourceWithCount> m_collectibleResources;
@@ -16,11 +17,16 @@ namespace TheSettlersCalculator.EuroCup2014
 		private readonly List<BuffWithCount> m_buffs;
 		private readonly List<Skill> m_skills;
 		private readonly ObservableCollection<Camp> m_camps = new ObservableCollection<Camp>();
+		private readonly List<SkillWithCount> m_totalSkills;
+		#endregion
+
+		#region Events
+		public event PropertyChangedEventHandler PropertyChanged;
 		#endregion
 
 		#region Model
 		internal Model()
-		{			
+		{
 			m_buffs = new List<BuffWithCount>();
 			foreach(KeyValuePair<string, Buff> pair in EuroCup2014.Buffs.BuffList)
 			{
@@ -28,8 +34,14 @@ namespace TheSettlersCalculator.EuroCup2014
 			}
 			m_buffs.Sort(new ComparerByName());
 
-			m_skills = new List<Skill>(EuroCup2014.Skills.SkillList.Values);			
+			m_skills = new List<Skill>(EuroCup2014.Skills.SkillList.Values);
 			m_skills.Sort(new ComparerByName());
+
+			m_totalSkills = new List<SkillWithCount>(m_skills.Count);
+			foreach (Skill skill in m_skills)
+			{
+				m_totalSkills.Add(new SkillWithCount(skill, 0));
+			}
 
 			m_collectibleResources = new List<ResourceWithCount>();
 			m_nonCollectibleResources = new List<ResourceWithCount>();
@@ -39,12 +51,11 @@ namespace TheSettlersCalculator.EuroCup2014
 				m_resources.Add(new ResourceWithCount(pair.Value, 0));
 			}
 			m_resources.Sort(new ComparerByName());
-
-			foreach(Camp camp in Quests.QuestList[0].Camps)
-			{
-				m_camps.Add(camp);
-			}
+			
+			m_camps.CollectionChanged += CampsCollectionChanged;
+			CalculateTotalSkills();
 		}
+
 		#endregion
 
 		#region Properties
@@ -54,6 +65,11 @@ namespace TheSettlersCalculator.EuroCup2014
 			{
 				return m_skills;
 			}
+		}
+
+		public  List<SkillWithCount> TotalSkills
+		{
+			get { return m_totalSkills; }
 		}
 
 		public List<ResourceWithCount> Resources
@@ -76,6 +92,87 @@ namespace TheSettlersCalculator.EuroCup2014
 		{
 			get { return m_camps; }
 		}
+		#endregion
+
+		#region Methods
+		internal void SelectQuest(Quest quest)
+		{
+			m_camps.Clear();
+			foreach (Camp camp in quest.Camps)
+			{
+				Camp newCamp = new Camp(camp);
+				foreach (SkillWithCount skill in newCamp.Skills)
+				{
+					skill.PropertyChanged += Model_PropertyChanged;
+				}
+				m_camps.Add(newCamp);
+			}
+		}
+
+		internal void AddCamp(Camp camp)
+		{
+			foreach (SkillWithCount skill in camp.Skills)
+			{
+				skill.PropertyChanged += Model_PropertyChanged;
+			}
+			m_camps.Add(camp);
+		}
+
+		internal void EditCamp(Camp camp)
+		{
+			foreach (SkillWithCount skill in camp.Skills)
+			{
+				skill.PropertyChanged -= Model_PropertyChanged;
+				skill.PropertyChanged += Model_PropertyChanged;
+			}
+			CalculateTotalSkills();
+		}
+
+		private void OnPropertyChanged(string propertyName)
+		{
+			if (PropertyChanged != null)
+			{
+				PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+
+		private void CalculateTotalSkills()
+		{
+			Dictionary<string, int> temp = new Dictionary<string, int>(m_skills.Count);
+			foreach(Skill skill in m_skills)
+			{
+				temp.Add(skill.Id, 0);
+			}
+
+			foreach(Camp camp in m_camps)
+			{
+				foreach(SkillWithCount skill in camp.Skills)
+				{
+					temp[skill.Skill.Id] += skill.Count;
+				}
+			}
+
+			foreach(SkillWithCount skill in m_totalSkills)
+			{
+				skill.Count = temp[skill.Skill.Id];
+			}
+
+			OnPropertyChanged("TotalSkills");
+		}
+
+		private void CampsCollectionChanged(object sender, System.Collections.Specialized.NotifyCollectionChangedEventArgs e)
+		{
+			CalculateTotalSkills();
+		}
+
+		private void Model_PropertyChanged(object sender, PropertyChangedEventArgs e)
+		{
+			if (e.PropertyName.Equals("Count", StringComparison.Ordinal))
+			{
+				CalculateTotalSkills();
+			}
+		}
+
 		#endregion
 	}
 }

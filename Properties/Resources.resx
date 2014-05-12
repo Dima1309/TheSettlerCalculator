@@ -183,6 +183,9 @@
   <data name="EUROCUP2014_BICYCLE_KICK" xml:space="preserve">
     <value>Удар ножницы</value>
   </data>
+  <data name="EUROCUP2014_CAMPS" xml:space="preserve">
+    <value>Матч</value>
+  </data>
   <data name="EUROCUP2014_CAMP_EDITOR_TITLE" xml:space="preserve">
     <value>Редактор</value>
   </data>
@@ -296,6 +299,9 @@
   </data>
   <data name="EUROCUP2014_WET_GRASS" xml:space="preserve">
     <value>Мокрая трава</value>
+  </data>
+  <data name="EUROCUP2014_ZONE_DEFENSE" xml:space="preserve">
+    <value>Зонная защита</value>
   </data>
   <data name="GENERAL_LOG" xml:space="preserve">
     <value>Лог</value>

@@ -1,12 +1,17 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 
 namespace TheSettlersCalculator.EuroCup2014
 {
-	public class SkillWithCount
+	public class SkillWithCount : INotifyPropertyChanged
 	{
+		#region Events
+		public event PropertyChangedEventHandler PropertyChanged;
+		#endregion
+
 		#region Fields
 		private Skill m_skill;
 		private int m_count;
@@ -33,11 +38,6 @@ namespace TheSettlersCalculator.EuroCup2014
 			{
 				return m_skill;
 			}
-
-			set
-			{
-				m_skill = value;
-			}
 		}
 
 		public int Count
@@ -50,6 +50,17 @@ namespace TheSettlersCalculator.EuroCup2014
 			set
 			{
 				m_count = value;
+				OnPropertyChanged("Count");
+			}
+		}
+		#endregion
+
+		#region Methods
+		private void OnPropertyChanged(string propertyName)
+		{
+			if (PropertyChanged != null)
+			{
+				PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
 			}
 		}
 		#endregion

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Globalization;
 using System.Text;
 using System.Xml;
@@ -16,11 +17,25 @@ namespace TheSettlersCalculator.EuroCup2014
 		#endregion
 
 		#region Fields
-		private List<SkillWithCount> m_skills = new List<SkillWithCount>();
+		private ObservableCollection<SkillWithCount> m_skills = new ObservableCollection<SkillWithCount>();
+		#endregion
+
+		#region Constructors
+		public Camp()
+		{
+		}
+
+		public Camp(Camp other) : base(other)
+		{
+			foreach(SkillWithCount skill in  other.Skills)
+			{
+				m_skills.Add(new SkillWithCount(skill.Skill, skill.Count));
+			}
+		}
 		#endregion
 
 		#region Properties
-		public List<SkillWithCount> Skills
+		public ObservableCollection<SkillWithCount> Skills
 		{
 			get
 			{

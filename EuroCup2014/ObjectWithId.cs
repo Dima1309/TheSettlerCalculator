@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Windows.Media.Imaging;
@@ -7,14 +8,18 @@ using System.Xml;
 
 namespace TheSettlersCalculator.EuroCup2014
 {
-	public abstract class ObjectWithId
+	public abstract class ObjectWithId : INotifyPropertyChanged
 	{
+		#region Events
+		public event PropertyChangedEventHandler PropertyChanged;
+		#endregion
+
 		#region Constants
 		private const string RESOURCE_PREFIX = "EUROCUP2014_";
 		private const string ICON_PREFIX = ".\\EUROCUP2014\\Icons\\";
 
 		private const string ID = "id";
-		private const string ICON = "icon";		
+		private const string ICON = "icon";
 		#endregion
 
 		#region Fields
@@ -22,6 +27,19 @@ namespace TheSettlersCalculator.EuroCup2014
 		private string m_name;
 		private string m_iconPath;
 		private BitmapSource m_icon;
+		#endregion
+
+		#region Constructor
+		public ObjectWithId()
+		{}
+
+		public ObjectWithId(ObjectWithId other)
+		{
+			m_id = other.m_id;
+			m_name = other.m_name;
+			m_iconPath = other.m_iconPath;
+			m_icon = other.m_icon;
+		}
 		#endregion
 
 		#region Properties
@@ -45,6 +63,7 @@ namespace TheSettlersCalculator.EuroCup2014
 			set
 			{
 				m_name = value;
+				OnPropertyChanged("Name");
 			}
 		}
 
@@ -81,6 +100,14 @@ namespace TheSettlersCalculator.EuroCup2014
 				}
 
 				ProcessChilds(reader);
+			}
+		}
+		
+		internal void OnPropertyChanged(string propertyName)
+		{
+			if (PropertyChanged != null)
+			{
+				PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
 			}
 		}
 		#endregion

@@ -8,6 +8,7 @@
         xmlns:System="clr-namespace:System;assembly=mscorlib"
         xmlns:Components="clr-namespace:TheSettlersCalculator.WpfTypes.Components"
         xmlns:EuroCupComponents="clr-namespace:TheSettlersCalculator.EuroCup2014.Components"
+        xmlns:EuroCup="clr-namespace:TheSettlersCalculator.EuroCup2014"
         xmlns:Generals="clr-namespace:TheSettlersCalculator.Specialists.Generals"
         Title="Калькулятор боя - The Settlers Online" Height="640" Width="800" x:Name="Win" Closed="Win_Closed">
 	<Window.Resources>
@@ -879,9 +880,36 @@
                     </StackPanel>
                 </Expander>
                 <Expander>
-                    <Expander.Header>
-                        <Label Content="Противники"></Label>
-                    </Expander.Header>
+                        <Expander.Header>
+                            <StackPanel Orientation="Vertical">
+                                <Label Content="{Binding Source=EUROCUP2014_CAMPS, Converter={StaticResource resourceConverter}}"/>
+                                <ComboBox ItemsSource="{x:Static EuroCup:Quests.QuestList}" SelectionChanged="ComboBox_SelectionChanged" SelectedIndex="0">
+                                    <ComboBox.ItemTemplate>
+                                        <DataTemplate>
+                                            <StackPanel Orientation="Horizontal">
+                                                <Image Source="{Binding Icon}"/>
+                                                <Label Content="{Binding Name}" VerticalAlignment="Center" />
+                                            </StackPanel>
+                                        </DataTemplate>
+                                    </ComboBox.ItemTemplate>
+                                </ComboBox>
+                                <ItemsControl ItemsSource="{Binding EuroCupModel.TotalSkills, ElementName=Win}">
+                                    <ItemsControl.ItemsPanel>
+                                        <ItemsPanelTemplate>
+                                            <StackPanel Orientation="Horizontal" />
+                                        </ItemsPanelTemplate>
+                                    </ItemsControl.ItemsPanel>
+                                    <ItemsControl.ItemTemplate>
+                                        <DataTemplate>
+                                            <StackPanel Orientation="Vertical">
+                                                <EuroCupComponents:SkillControl Skill="{Binding Skill}"/>
+                                                <Label Content="{Binding Count}" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                                            </StackPanel>
+                                        </DataTemplate>
+                                    </ItemsControl.ItemTemplate>
+                                </ItemsControl>
+                            </StackPanel>
+                        </Expander.Header>
                     <StackPanel>
                         <ItemsControl ItemsSource="{Binding EuroCupModel.Camps, ElementName=Win}" >
                             <ItemsControl.ItemTemplate>
@@ -913,9 +941,8 @@
                                 </DataTemplate>
                             </ItemsControl.ItemTemplate>
                         </ItemsControl>
-                            <Button Content="{Binding Source=BUTTON_ADD, Converter={StaticResource resourceConverter}}" Click="ButtonAddEuroCupCamp_Click">
-                            </Button>
-                    </StackPanel>
+                            <Button Content="{Binding Source=BUTTON_ADD, Converter={StaticResource resourceConverter}}" Click="ButtonAddEuroCupCamp_Click" HorizontalAlignment="Left"/>
+                        </StackPanel>
                 </Expander>
             </StackPanel>
             </ScrollViewer>
