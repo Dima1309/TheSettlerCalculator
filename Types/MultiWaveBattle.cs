@@ -238,9 +238,37 @@ namespace TheSettlersCalculator.Types
 
 					statistics.Calculate();
 					bool empty = true;
-					short[] attackerLosses = GetPlayerLosses(statistics);
+					short[] defenderLosses = GetEnemyLosses(statistics);
 					int i = 0;
 					int j = 0;
+					while (i < defenderLosses.Length)
+					{
+						if (enemySquads[j].Count <= 0)
+						{
+							j++;
+							continue;
+						}
+
+						enemySquads[j].Count -= defenderLosses[i];
+						if (enemySquads[j].Count > 0)
+						{
+							empty = false;
+						}
+						i++;
+						j++;
+					}
+
+					if (empty)
+					{
+						enemySquads = null;
+						enemyIndex++;
+					}
+
+					bool enemyEmpty = empty;
+					empty = true;
+					short[] attackerLosses = GetPlayerLosses(statistics);
+					i = 0;
+					j = 0;
 					while (i < attackerLosses.Length)
 					{
 						if (playerSquads[j].Count <= 0)
@@ -258,37 +286,10 @@ namespace TheSettlersCalculator.Types
 						j++;
 					}
 
-					if(empty)
+					if(empty || !enemyEmpty)
 					{
 						playerSquads = null;
 						playerIndex++;
-					}
-
-					empty = true;
-					short[] defenderLosses = GetEnemyLosses(statistics);
-					i = 0;
-					j = 0;
-					while (i < defenderLosses.Length)
-					{
-						if (enemySquads[j].Count <= 0)
-						{
-							j++;
-							continue;
-						}
-
-						enemySquads[j].Count -= defenderLosses[i];
-						if(enemySquads[j].Count > 0)
-						{
-							empty = false;
-						}
-						i++;
-						j++;
-					}
-
-					if(empty)
-					{
-						enemySquads = null;
-						enemyIndex++;
 					}
 				}
 
