@@ -944,6 +944,7 @@
                             <Button Content="{Binding Source=BUTTON_ADD, Converter={StaticResource resourceConverter}}" Click="ButtonAddEuroCupCamp_Click" HorizontalAlignment="Left"/>
                         </StackPanel>
                 </Expander>
+                    <Button HorizontalAlignment="Left" Click="ButtonEuroCupCalculate_Click">Подобрать наилучший вариант</Button>
             </StackPanel>
             </ScrollViewer>
         </TabItem>

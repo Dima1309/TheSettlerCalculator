@@ -4,6 +4,7 @@ using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Linq;
 using System.Text;
+using TheSettlersCalculator.EuroCup2014.Calculator;
 using TheSettlersCalculator.EuroCup2014.Comparers;
 
 namespace TheSettlersCalculator.EuroCup2014
@@ -11,8 +12,6 @@ namespace TheSettlersCalculator.EuroCup2014
 	public class Model : INotifyPropertyChanged
 	{
 		#region Fields
-		private readonly List<ResourceWithCount> m_collectibleResources;
-		private readonly List<ResourceWithCount> m_nonCollectibleResources;
 		private readonly List<ResourceWithCount> m_resources;
 		private readonly List<BuffWithCount> m_buffs;
 		private readonly List<Skill> m_skills;
@@ -24,7 +23,7 @@ namespace TheSettlersCalculator.EuroCup2014
 		public event PropertyChangedEventHandler PropertyChanged;
 		#endregion
 
-		#region Model
+		#region Constructor
 		internal Model()
 		{
 			m_buffs = new List<BuffWithCount>();
@@ -43,8 +42,6 @@ namespace TheSettlersCalculator.EuroCup2014
 				m_totalSkills.Add(new SkillWithCount(skill, 0));
 			}
 
-			m_collectibleResources = new List<ResourceWithCount>();
-			m_nonCollectibleResources = new List<ResourceWithCount>();
 			m_resources = new List<ResourceWithCount>();
 			foreach(KeyValuePair<string, Resource> pair in EuroCup2014.Resources.ResourceList)
 			{
@@ -95,6 +92,12 @@ namespace TheSettlersCalculator.EuroCup2014
 		#endregion
 
 		#region Methods
+		internal void Calculate()
+		{
+			Calculator.Calculator calculator = new Calculator.Calculator(m_resources, m_buffs);
+			calculator.Calculate(new List<Camp>(m_camps));
+		}
+
 		internal void SelectQuest(Quest quest)
 		{
 			m_camps.Clear();

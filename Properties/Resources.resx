@@ -244,16 +244,16 @@
     <value>Прыгун</value>
   </data>
   <data name="EUROCUP2014_MATCH_FIVE" xml:space="preserve">
-    <value>Пятый матч</value>
+    <value>Четвертьфинал</value>
   </data>
   <data name="EUROCUP2014_MATCH_FOUR" xml:space="preserve">
-    <value>Чётвёртый матч</value>
+    <value>1/8 финала</value>
   </data>
   <data name="EUROCUP2014_MATCH_THREE" xml:space="preserve">
-    <value>Третий матч</value>
+    <value>Последний матч группового этапа</value>
   </data>
   <data name="EUROCUP2014_MATCH_TWO" xml:space="preserve">
-    <value>Второй матч</value>
+    <value>Первый матч группового этапа</value>
   </data>
   <data name="EUROCUP2014_MIDFIELDER" xml:space="preserve">
     <value>Полузащитник</value>
@@ -262,7 +262,7 @@
     <value>Защита один на один</value>
   </data>
   <data name="EUROCUP2014_OPENING_MATCH" xml:space="preserve">
-    <value>Матч открытие</value>
+    <value>Тренировочный матч </value>
   </data>
   <data name="EUROCUP2014_PASS" xml:space="preserve">
     <value>Пас</value>

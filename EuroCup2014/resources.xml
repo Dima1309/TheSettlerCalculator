@@ -1,48 +1,48 @@
 <resources>
   <resource id="BANANA_PEEL" icon="banana_peel.png">
-    <collectible_rate>7.5</collectible_rate>
+    <collectible_rate>5.7</collectible_rate>
     <short_treasure_search_rate>0</short_treasure_search_rate>
     <medium_treasure_search_rate>0</medium_treasure_search_rate>
     <long_treasure_search_rate>0</long_treasure_search_rate>
     <very_long_treasure_search_rate>0</very_long_treasure_search_rate>
   </resource>
   <resource id="CORNER" icon="corner.png">
-    <collectible_rate>2</collectible_rate>
+    <collectible_rate>3.3</collectible_rate>
     <short_treasure_search_rate>0</short_treasure_search_rate>
     <medium_treasure_search_rate>0</medium_treasure_search_rate>
     <long_treasure_search_rate>0</long_treasure_search_rate>
     <very_long_treasure_search_rate>0</very_long_treasure_search_rate>
   </resource>
   <resource id="ELASTIC_SPRING" icon="elastic_spring.png">
-    <collectible_rate>3</collectible_rate>
+    <collectible_rate>5.6</collectible_rate>
     <short_treasure_search_rate>0</short_treasure_search_rate>
     <medium_treasure_search_rate>0</medium_treasure_search_rate>
     <long_treasure_search_rate>0</long_treasure_search_rate>
     <very_long_treasure_search_rate>0</very_long_treasure_search_rate>
   </resource>
   <resource id="FIST" icon="fist.png">
-    <collectible_rate>0.01</collectible_rate>
+    <collectible_rate>3.2</collectible_rate>
     <short_treasure_search_rate>0</short_treasure_search_rate>
     <medium_treasure_search_rate>0</medium_treasure_search_rate>
     <long_treasure_search_rate>0</long_treasure_search_rate>
     <very_long_treasure_search_rate>0</very_long_treasure_search_rate>
   </resource>
   <resource id="RED_COLOR" icon="red_color.png">
-    <collectible_rate>5.5</collectible_rate>
+    <collectible_rate>4.0</collectible_rate>
     <short_treasure_search_rate>0</short_treasure_search_rate>
     <medium_treasure_search_rate>0</medium_treasure_search_rate>
     <long_treasure_search_rate>0</long_treasure_search_rate>
     <very_long_treasure_search_rate>0</very_long_treasure_search_rate>
   </resource>
   <resource id="SHOE" icon="shoe.png">
-    <collectible_rate>12</collectible_rate>
+    <collectible_rate>6.3</collectible_rate>
     <short_treasure_search_rate>0</short_treasure_search_rate>
     <medium_treasure_search_rate>0</medium_treasure_search_rate>
     <long_treasure_search_rate>0</long_treasure_search_rate>
     <very_long_treasure_search_rate>0</very_long_treasure_search_rate>
   </resource>
   <resource id="TELESCOPE" icon="telescope.png">
-    <collectible_rate>7.5</collectible_rate>
+    <collectible_rate>5.0</collectible_rate>
     <short_treasure_search_rate>0</short_treasure_search_rate>
     <medium_treasure_search_rate>0</medium_treasure_search_rate>
     <long_treasure_search_rate>0</long_treasure_search_rate>

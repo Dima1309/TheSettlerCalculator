@@ -67,6 +67,10 @@
     <Compile Include="EuroCup2014\Buff.cs" />
     <Compile Include="EuroCup2014\Buffs.cs" />
     <Compile Include="EuroCup2014\BuffWithCount.cs" />
+    <Compile Include="EuroCup2014\Calculator\Calculator.cs" />
+    <Compile Include="EuroCup2014\Calculator\CampDisarmBuffs.cs" />
+    <Compile Include="EuroCup2014\Calculator\NextSteps.cs" />
+    <Compile Include="EuroCup2014\Calculator\Result.cs" />
     <Compile Include="EuroCup2014\Camp.cs" />
     <Compile Include="EuroCup2014\Comparers\ComparerByName.cs" />
     <Compile Include="EuroCup2014\Components\BuffControl.xaml.cs">
@@ -81,6 +85,10 @@
     <Compile Include="EuroCup2014\Components\SkillControl.xaml.cs">
       <DependentUpon>SkillControl.xaml</DependentUpon>
     </Compile>
+    <Compile Include="EuroCup2014\Expressions\BuffCountExpression.cs" />
+    <Compile Include="EuroCup2014\Expressions\ResourceCountExpression.cs" />
+    <Compile Include="EuroCup2014\Expressions\TimeExpression.cs" />
+    <Compile Include="EuroCup2014\IncomingResources.cs" />
     <Compile Include="EuroCup2014\Quest.cs" />
     <Compile Include="EuroCup2014\Quests.cs" />
     <Compile Include="EuroCup2014\ResourceWithCount.cs" />

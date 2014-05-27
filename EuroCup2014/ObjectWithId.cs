@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
@@ -8,7 +9,7 @@ using System.Xml;
 
 namespace TheSettlersCalculator.EuroCup2014
 {
-	public abstract class ObjectWithId : INotifyPropertyChanged
+	public abstract class ObjectWithId : INotifyPropertyChanged, IComparable, IEqualityComparer
 	{
 		#region Events
 		public event PropertyChangedEventHandler PropertyChanged;
@@ -81,6 +82,25 @@ namespace TheSettlersCalculator.EuroCup2014
 		#endregion
 
 		#region Methods
+		public int CompareTo(object obj)
+		{
+			ObjectWithId other = obj as ObjectWithId;
+			return m_id.CompareTo(other.m_id);
+		}
+
+		public bool Equals(object x, object y)
+		{
+			ObjectWithId xObject = x as ObjectWithId;
+			ObjectWithId yObject = y as ObjectWithId;
+			return xObject.Id.Equals(yObject.Id);
+		}
+
+		public int GetHashCode(object obj)
+		{
+			ObjectWithId @object = obj as ObjectWithId;
+			return @object.Id.GetHashCode();
+		}
+
 		internal abstract string GetNodeName();
 		internal abstract void ProcessChilds(XmlReader reader);
 

@@ -439,7 +439,7 @@ namespace TheSettlersCalculator.Properties {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на Пятый матч.
+        ///   Ищет локализованную строку, похожую на Четвертьфинал.
         /// </summary>
         public static string EUROCUP2014_MATCH_FIVE {
             get {
@@ -448,7 +448,7 @@ namespace TheSettlersCalculator.Properties {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на Чётвёртый матч.
+        ///   Ищет локализованную строку, похожую на 1/8 финала.
         /// </summary>
         public static string EUROCUP2014_MATCH_FOUR {
             get {
@@ -457,7 +457,7 @@ namespace TheSettlersCalculator.Properties {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на Третий матч.
+        ///   Ищет локализованную строку, похожую на Последний матч группового этапа.
         /// </summary>
         public static string EUROCUP2014_MATCH_THREE {
             get {
@@ -466,7 +466,7 @@ namespace TheSettlersCalculator.Properties {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на Второй матч.
+        ///   Ищет локализованную строку, похожую на Первый матч группового этапа.
         /// </summary>
         public static string EUROCUP2014_MATCH_TWO {
             get {
@@ -493,7 +493,7 @@ namespace TheSettlersCalculator.Properties {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на Матч открытие.
+        ///   Ищет локализованную строку, похожую на Тренировочный матч .
         /// </summary>
         public static string EUROCUP2014_OPENING_MATCH {
             get {

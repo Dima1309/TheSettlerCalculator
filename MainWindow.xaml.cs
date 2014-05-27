@@ -145,5 +145,10 @@ namespace TheSettlersCalculator
 				m_euroCupModel.SelectQuest(e.AddedItems[0] as EuroCup2014.Quest);
 			}
 		}
+
+		private void ButtonEuroCupCalculate_Click(object sender, RoutedEventArgs e)
+		{
+			m_euroCupModel.Calculate();
+		}
     }
 }

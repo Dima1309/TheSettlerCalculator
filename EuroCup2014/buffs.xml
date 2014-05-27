@@ -1,13 +1,14 @@
 <buffs>
   <buff id="BICYCLE_KICK" icon="bicycle_kick.png">
     <provision_house>
-	<resource id="TWISTER" count="12"/>
-	<resource id="ELASTIC_SPRING" count="19"/>
+	<resource id="TWISTER" count="6"/>
+	<resource id="ELASTIC_SPRING" count="9"/>
     </provision_house>
     <rarity_provision_house>
-	<resource id="TWISTER" count="12"/>
-	<resource id="ELASTIC_SPRING" count="19"/>
+	<resource id="TWISTER" count="6"/>
+	<resource id="ELASTIC_SPRING" count="9"/>
     </rarity_provision_house>
+    <priority>FAST_REFLEX</priority>
   </buff>
   <buff id="FOUL" icon="foul.png">
     <provision_house>
@@ -18,16 +19,21 @@
 	<resource id="BANANA_PEEL" count="7"/>
 	<resource id="WET_GRASS" count="9"/>
     </rarity_provision_house>
+    <priority>DIVER</priority>
+    <priority>DRIBBLER</priority>
+    <priority>ONE_ON_ONE_DEFENCE</priority>
   </buff>
   <buff id="HEADER" icon="header.png">
     <provision_house>
-	<resource id="HELMET" count="13"/>
-	<resource id="ELASTIC_SPRING" count="8"/>
+	<resource id="HELMET" count="7"/>
+	<resource id="ELASTIC_SPRING" count="4"/>
     </provision_house>
     <rarity_provision_house>
-	<resource id="HELMET" count="13"/>
-	<resource id="ELASTIC_SPRING" count="8"/>
+	<resource id="HELMET" count="7"/>
+	<resource id="ELASTIC_SPRING" count="4"/>
     </rarity_provision_house>
+    <priority>HIGH_JUMPER</priority>
+    <priority>ONE_ON_ONE_DEFENCE</priority>
   </buff>
   <buff id="PASS" icon="pass.png">
     <provision_house>
@@ -38,6 +44,8 @@
 	<resource id="SHOE" count="7"/>
 	<resource id="TELESCOPE" count="7"/>
     </rarity_provision_house>
+    <priority>FAST_RUNNER</priority>
+    <priority>ZONE_DEFENSE</priority>
   </buff>
   <buff id="PENALTY" icon="penalty.png">
     <provision_house>
@@ -48,14 +56,17 @@
 	<resource id="STUDS" count="11"/>
 	<resource id="SHOE" count="8"/>
     </rarity_provision_house>
+    <priority>HIGH_JUMPER</priority>
+    <priority>FAST_REFLEX</priority>
   </buff>
   <buff id="RED_CARD" icon="red_card.png">
     <provision_house>
-	<resource id="RED_COLOR" count="11"/>
+	<resource id="RED_COLOR" count="5"/>
     </provision_house>
     <rarity_provision_house>
-	<resource id="RED_COLOR" count="11"/>
+	<resource id="RED_COLOR" count="5"/>
     </rarity_provision_house>
+    <priority>DIVER</priority>
   </buff>
   <buff id="SLIDING_TACKLE" icon="sliding_tackle.png">
     <provision_house>
@@ -66,6 +77,8 @@
 	<resource id="STUDS" count="10"/>
 	<resource id="GREASE" count="9"/>
     </rarity_provision_house>
+    <priority>FAST_RUNNER</priority>
+    <priority>BACK_HEEL</priority>
   </buff>
   <buff id="TACKLE" icon="tackle.png">
     <provision_house>
@@ -76,15 +89,18 @@
 	<resource id="SHOULDER_PAD" count="13"/>
 	<resource id="FIST" count="6"/>
     </rarity_provision_house>
+    <priority>DRIBBLER</priority>
+    <priority>BACK_HEEL</priority>
   </buff>
   <buff id="CORNER_KICK" icon="corner_ball.png">
     <provision_house>
-	<resource id="SHOE" count="13"/>
-	<resource id="CORNER" count="11"/>
+	<resource id="SHOE" count="8"/>
+	<resource id="CORNER" count="5"/>
     </provision_house>
     <rarity_provision_house>
-	<resource id="SHOE" count="13"/>
-	<resource id="CORNER" count="11"/>
+	<resource id="SHOE" count="8"/>
+	<resource id="CORNER" count="5"/>
     </rarity_provision_house>
+    <priority>ZONE_DEFENSE</priority>
   </buff>
 </buffs>

@@ -16,12 +16,14 @@ namespace TheSettlersCalculator.EuroCup2014
 		private const string RESOURCE = "resource";
 		private const string ID = "id";
 		private const string COUNT = "count";
+		private const string PRIORITY = "priority";
 		#endregion
 
 		#region Fields
 		private List<ResourceWithCount> m_temp;
 		private List<ResourceWithCount> m_provisionHouseCost;
 		private List<ResourceWithCount> m_rarityProvisionHouseCost;
+		private List<string> m_skillPriority = new List<string>(3);
 		#endregion
 
 		#region Properties
@@ -32,7 +34,12 @@ namespace TheSettlersCalculator.EuroCup2014
 
 		public  List<ResourceWithCount> RarityProvisionHouseCost
 		{
-			get { return m_rarityProvisionHouseCost; }		
+			get { return m_rarityProvisionHouseCost; }
+		}
+
+		internal List<string> SkillPriority
+		{
+			get { return m_skillPriority; }
 		}
 		#endregion
 
@@ -73,6 +80,10 @@ namespace TheSettlersCalculator.EuroCup2014
 				m_temp.Add(
 						new ResourceWithCount(reader.GetAttribute(ID).Trim(),
 						int.Parse(reader.GetAttribute(COUNT).Trim(), CultureInfo.InvariantCulture)));
+			}
+			else if (reader.Name.Equals(PRIORITY, StringComparison.OrdinalIgnoreCase))
+			{
+				m_skillPriority.Add(reader.ReadElementString().Trim());
 			}
 		}
 		#endregion
