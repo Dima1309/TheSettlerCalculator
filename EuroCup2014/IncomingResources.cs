@@ -1,18 +1,19 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 
 namespace TheSettlersCalculator.EuroCup2014
 {
-	public class IncomingResources
+	public class IncomingResources : INotifyPropertyChanged
 	{
 		#region Fields
 		private double m_shortSearchInDay=0;
 		private double m_mediumSearchInDay=0;
 		private double m_longSearchInDay=0;
 		private double m_veryLongSearchInDay=0;
-		private double m_collectItemsInDay=0;		
+		private double m_collectItemsInDay=0;
 		#endregion
 
 		#region Constructor
@@ -28,35 +29,59 @@ namespace TheSettlersCalculator.EuroCup2014
 		}
 		#endregion
 
+		#region Events
+		public event PropertyChangedEventHandler PropertyChanged;
+		#endregion
+
 		#region Properties
 		public double ShortSearchInDay
 		{
 			get { return m_shortSearchInDay; }
-			set { m_shortSearchInDay = value; }
+			set 
+			{ 
+				m_shortSearchInDay = value;
+				OnPropertyChanged("ShortSearchInDay");
+			}
 		}
 
 		public double MediumSearchInDay
 		{
 			get { return m_mediumSearchInDay; }
-			set { m_mediumSearchInDay = value; }
+			set 
+			{ 
+				m_mediumSearchInDay = value;
+				OnPropertyChanged("MediumSearchInDay");
+			}
 		}
 
 		public double LongSearchInDay
 		{
 			get { return m_longSearchInDay; }
-			set { m_longSearchInDay = value; }
+			set 
+			{ 
+				m_longSearchInDay = value;
+				OnPropertyChanged("LongSearchInDay");
+			}
 		}
 
 		public double VeryLongSearchInDay
 		{
 			get { return m_veryLongSearchInDay; }
-			set { m_veryLongSearchInDay = value; }
+			set 
+			{ 
+				m_veryLongSearchInDay = value;
+				OnPropertyChanged("VeryLongSearchInDay");
+			}
 		}
 
 		public double CollectItemsInDay
 		{
 			get { return m_collectItemsInDay; }
-			set { m_collectItemsInDay = value; }
+			set 
+			{ 
+				m_collectItemsInDay = value;
+				OnPropertyChanged("CollectItemsInDay");
+			}
 		}
 		#endregion
 
@@ -74,6 +99,14 @@ namespace TheSettlersCalculator.EuroCup2014
 			}
 
 			return result;
+		}
+
+		private void OnPropertyChanged(string propertyName)
+		{
+			if (PropertyChanged != null)
+			{
+				PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
 		}
 		#endregion
 	}

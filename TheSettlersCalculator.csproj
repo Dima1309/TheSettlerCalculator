@@ -96,6 +96,7 @@
     <Compile Include="EuroCup2014\ObjectWithId.cs" />
     <Compile Include="EuroCup2014\Resource.cs" />
     <Compile Include="EuroCup2014\Resources.cs" />
+    <Compile Include="EuroCup2014\ResourceWithDouble.cs" />
     <Compile Include="EuroCup2014\Skill.cs" />
     <Compile Include="EuroCup2014\Skills.cs" />
     <Compile Include="EuroCup2014\SkillWithCount.cs" />

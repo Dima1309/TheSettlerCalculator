@@ -5,7 +5,7 @@ using System.Text;
 
 namespace TheSettlersCalculator.EuroCup2014.Comparers
 {
-	internal class ComparerByName : IComparer<BuffWithCount>, IComparer<ResourceWithCount>, IComparer<Skill>
+	internal class ComparerByName : IComparer<BuffWithCount>, IComparer<ResourceWithCount>, IComparer<Skill>, IComparer<ResourceWithDouble>
 	{
 		public int Compare(BuffWithCount x, BuffWithCount y)
 		{
@@ -13,6 +13,11 @@ namespace TheSettlersCalculator.EuroCup2014.Comparers
 		}
 
 		public int Compare(ResourceWithCount x, ResourceWithCount y)
+		{
+			return x.Resource.Name.CompareTo(y.Resource.Name);
+		}
+
+		public int Compare(ResourceWithDouble x, ResourceWithDouble y)
 		{
 			return x.Resource.Name.CompareTo(y.Resource.Name);
 		}

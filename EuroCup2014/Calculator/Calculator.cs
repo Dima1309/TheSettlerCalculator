@@ -61,7 +61,7 @@ namespace TheSettlersCalculator.EuroCup2014.Calculator
 		}
 		#endregion
 
-		internal List<Result> Calculate(IEnumerable<Camp> camps)
+		internal List<Result> Calculate(IEnumerable<Camp> camps, IncomingResources incomingResourcesObject)
 		{
 			// Calculate total skills needed
 			DateTime start = DateTime.Now;
@@ -85,7 +85,6 @@ namespace TheSettlersCalculator.EuroCup2014.Calculator
 
 			int[] skillCount = new int[skills.Count];
 			List<SkillWithCount> skillsWithCount = new List<SkillWithCount>(skills.Values);
-			IncomingResources incomingResourcesObject = new IncomingResources(0, 0, 0, 24, 2);
 			IDictionary<string, double> incomingResources = incomingResourcesObject.GetResources();
 
 			int MAX_RESULTS=10;
@@ -168,7 +167,7 @@ namespace TheSettlersCalculator.EuroCup2014.Calculator
 						{
 							int tmp;
 							string buffId = string.Format("{0}_{1}", skill.Skill.Id, j);
-							if (remainingBuffs.TryGetValue(buffId, out tmp))
+							if (remainingBuffs.TryGetValue(buffId, out tmp) && tmp > 0)
 							{
 								if (tmp >= count)
 								{

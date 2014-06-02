@@ -232,6 +232,24 @@ namespace TheSettlersCalculator.Properties {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на Коллекции.
+        /// </summary>
+        public static string COLLECTIABLE_SEARCH {
+            get {
+                return ResourceManager.GetString("COLLECTIABLE_SEARCH", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Использовать бафы:.
+        /// </summary>
+        public static string EUROCUP2014_APPLY_BUFFS {
+            get {
+                return ResourceManager.GetString("EUROCUP2014_APPLY_BUFFS", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на Удар пяткой.
         /// </summary>
         public static string EUROCUP2014_BACK_HEEL {
@@ -255,6 +273,24 @@ namespace TheSettlersCalculator.Properties {
         public static string EUROCUP2014_BICYCLE_KICK {
             get {
                 return ResourceManager.GetString("EUROCUP2014_BICYCLE_KICK", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Подобрать наилучший вариант.
+        /// </summary>
+        public static string EUROCUP2014_CALCULATE {
+            get {
+                return ResourceManager.GetString("EUROCUP2014_CALCULATE", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Наилучший вариант может меняться по мере накопления ресурсов. Не стоит торопиться делать бафы заранее..
+        /// </summary>
+        public static string EUROCUP2014_CALCULATION_WARNING {
+            get {
+                return ResourceManager.GetString("EUROCUP2014_CALCULATION_WARNING", resourceCulture);
             }
         }
         
@@ -327,6 +363,15 @@ namespace TheSettlersCalculator.Properties {
         public static string EUROCUP2014_ELASTIC_SPRING {
             get {
                 return ResourceManager.GetString("EUROCUP2014_ELASTIC_SPRING", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Имеющиеся ресурсы.
+        /// </summary>
+        public static string EUROCUP2014_EXISTING_RESOURCES {
+            get {
+                return ResourceManager.GetString("EUROCUP2014_EXISTING_RESOURCES", resourceCulture);
             }
         }
         
@@ -439,6 +484,15 @@ namespace TheSettlersCalculator.Properties {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на Сбор ресурсов.
+        /// </summary>
+        public static string EUROCUP2014_INCOMMING_RESOURCES {
+            get {
+                return ResourceManager.GetString("EUROCUP2014_INCOMMING_RESOURCES", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на Четвертьфинал.
         /// </summary>
         public static string EUROCUP2014_MATCH_FIVE {
@@ -520,6 +574,15 @@ namespace TheSettlersCalculator.Properties {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на Изготовить бафы.
+        /// </summary>
+        public static string EUROCUP2014_PRODUCE_BUFFS {
+            get {
+                return ResourceManager.GetString("EUROCUP2014_PRODUCE_BUFFS", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на Красная карточка.
         /// </summary>
         public static string EUROCUP2014_RED_CARD {
@@ -534,6 +597,33 @@ namespace TheSettlersCalculator.Properties {
         public static string EUROCUP2014_RED_COLOR {
             get {
                 return ResourceManager.GetString("EUROCUP2014_RED_COLOR", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Оставшиеся ресурсы.
+        /// </summary>
+        public static string EUROCUP2014_RESOURCES {
+            get {
+                return ResourceManager.GetString("EUROCUP2014_RESOURCES", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Результаты.
+        /// </summary>
+        public static string EUROCUP2014_RESULTS {
+            get {
+                return ResourceManager.GetString("EUROCUP2014_RESULTS", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Укажите количество поисков в день..
+        /// </summary>
+        public static string EUROCUP2014_SEARCH_IN_DAY {
+            get {
+                return ResourceManager.GetString("EUROCUP2014_SEARCH_IN_DAY", resourceCulture);
             }
         }
         
@@ -561,6 +651,15 @@ namespace TheSettlersCalculator.Properties {
         public static string EUROCUP2014_SLIDING_TACKLE {
             get {
                 return ResourceManager.GetString("EUROCUP2014_SLIDING_TACKLE", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Прохождение.
+        /// </summary>
+        public static string EUROCUP2014_SOLUTION {
+            get {
+                return ResourceManager.GetString("EUROCUP2014_SOLUTION", resourceCulture);
             }
         }
         
@@ -669,6 +768,24 @@ namespace TheSettlersCalculator.Properties {
         public static string GENERAL_VETERAN {
             get {
                 return ResourceManager.GetString("GENERAL_VETERAN", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Долгий поиск ресурсов.
+        /// </summary>
+        public static string LONG_TREASURE_SEARCH {
+            get {
+                return ResourceManager.GetString("LONG_TREASURE_SEARCH", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Средний поиск ресурсов.
+        /// </summary>
+        public static string MEDIUM_TREASURE_SEARCH {
+            get {
+                return ResourceManager.GetString("MEDIUM_TREASURE_SEARCH", resourceCulture);
             }
         }
         
@@ -1708,6 +1825,24 @@ namespace TheSettlersCalculator.Properties {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на Быстрый поиск ресурсов.
+        /// </summary>
+        public static string SHORT_TREASURE_SEARCH {
+            get {
+                return ResourceManager.GetString("SHORT_TREASURE_SEARCH", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на .
+        /// </summary>
+        public static string String1 {
+            get {
+                return ResourceManager.GetString("String1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на Подтверждение.
         /// </summary>
         public static string TITLE_CONFIRM {
@@ -2568,6 +2703,15 @@ namespace TheSettlersCalculator.Properties {
         public static string UNIT_WOLF_PACKLOADER {
             get {
                 return ResourceManager.GetString("UNIT_WOLF_PACKLOADER", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Очень долгий поиск ресурсов.
+        /// </summary>
+        public static string VERY_LONG_TREASURE_SEARCH {
+            get {
+                return ResourceManager.GetString("VERY_LONG_TREASURE_SEARCH", resourceCulture);
             }
         }
     }

@@ -4,6 +4,7 @@ using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Linq;
 using System.Text;
+using System.Windows;
 using TheSettlersCalculator.EuroCup2014.Calculator;
 using TheSettlersCalculator.EuroCup2014.Comparers;
 
@@ -17,6 +18,10 @@ namespace TheSettlersCalculator.EuroCup2014
 		private readonly List<Skill> m_skills;
 		private readonly ObservableCollection<Camp> m_camps = new ObservableCollection<Camp>();
 		private readonly List<SkillWithCount> m_totalSkills;
+		private readonly IncomingResources m_incomingResources = new IncomingResources(0, 0, 0, 1.5, 1);
+		private readonly ObservableCollection<ResourceWithDouble> m_incomingResourcesList = new ObservableCollection<ResourceWithDouble>();
+		private ObservableCollection<Result> m_results = new ObservableCollection<Result>();
+		private Result m_result = null;		
 		#endregion
 
 		#region Events
@@ -51,11 +56,23 @@ namespace TheSettlersCalculator.EuroCup2014
 			
 			m_camps.CollectionChanged += CampsCollectionChanged;
 			CalculateTotalSkills();
+			m_incomingResources.PropertyChanged += IncommingResources_Changed;
+			IncommingResources_Changed(null, null);
 		}
 
 		#endregion
 
 		#region Properties
+		public IncomingResources IncomingResources
+		{
+			get { return m_incomingResources; }
+		}
+
+		public ObservableCollection<ResourceWithDouble> IncommingResourcesList
+		{
+			get { return m_incomingResourcesList; }
+		}
+
 		public List<Skill> Skills
 		{
 			get
@@ -89,13 +106,38 @@ namespace TheSettlersCalculator.EuroCup2014
 		{
 			get { return m_camps; }
 		}
+
+		public ObservableCollection<Result> Results
+		{
+			get { return m_results; }
+		}
+
+		public Result Result
+		{
+			get { return m_result; }
+			set 
+			{ 
+				m_result = value;
+				OnPropertyChanged("Result");
+			}
+		}
 		#endregion
 
 		#region Methods
 		internal void Calculate()
 		{
-			Calculator.Calculator calculator = new Calculator.Calculator(m_resources, m_buffs);
-			calculator.Calculate(new List<Camp>(m_camps));
+			try
+			{
+				Calculator.Calculator calculator = new Calculator.Calculator(m_resources, m_buffs);
+				m_results = new ObservableCollection<Calculator.Result>(calculator.Calculate(new List<Camp>(m_camps), m_incomingResources));
+				m_result = m_results.Count > 0 ? m_results[0] : null;
+				OnPropertyChanged("Result");
+				OnPropertyChanged("Results");
+			}
+			catch(Exception e)
+			{
+				MessageBox.Show(e.Message, "Ошибка", MessageBoxButton.OK);
+			}
 		}
 
 		internal void SelectQuest(Quest quest)
@@ -176,6 +218,22 @@ namespace TheSettlersCalculator.EuroCup2014
 			}
 		}
 
+		private void IncommingResources_Changed(object sender, PropertyChangedEventArgs e)
+		{
+			IDictionary<string, double> temp = m_incomingResources.GetResources();			
+			List<ResourceWithDouble> result = new List<ResourceWithDouble>(temp.Count);
+			foreach(KeyValuePair<string, double> pair in temp)
+			{
+				result.Add(new ResourceWithDouble(pair.Key, pair.Value));
+			}
+
+			result.Sort(new ComparerByName());
+			m_incomingResourcesList.Clear();			
+			foreach(ResourceWithDouble value in result)
+			{
+				m_incomingResourcesList.Add(value);
+			}			
+		}
 		#endregion
 	}
 }

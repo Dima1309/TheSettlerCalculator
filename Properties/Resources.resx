@@ -174,6 +174,12 @@
   <data name="CAMP_WIN_TIME_WITCH_TOWER" xml:space="preserve">
     <value>Башня ведьмы(140 сек.)</value>
   </data>
+  <data name="COLLECTIABLE_SEARCH" xml:space="preserve">
+    <value>Коллекции</value>
+  </data>
+  <data name="EUROCUP2014_APPLY_BUFFS" xml:space="preserve">
+    <value>Использовать бафы:</value>
+  </data>
   <data name="EUROCUP2014_BACK_HEEL" xml:space="preserve">
     <value>Удар пяткой</value>
   </data>
@@ -182,6 +188,12 @@
   </data>
   <data name="EUROCUP2014_BICYCLE_KICK" xml:space="preserve">
     <value>Удар ножницы</value>
+  </data>
+  <data name="EUROCUP2014_CALCULATE" xml:space="preserve">
+    <value>Подобрать наилучший вариант</value>
+  </data>
+  <data name="EUROCUP2014_CALCULATION_WARNING" xml:space="preserve">
+    <value>Наилучший вариант может меняться по мере накопления ресурсов. Не стоит торопиться делать бафы заранее.</value>
   </data>
   <data name="EUROCUP2014_CAMPS" xml:space="preserve">
     <value>Матч</value>
@@ -206,6 +218,9 @@
   </data>
   <data name="EUROCUP2014_ELASTIC_SPRING" xml:space="preserve">
     <value>Пружина</value>
+  </data>
+  <data name="EUROCUP2014_EXISTING_RESOURCES" xml:space="preserve">
+    <value>Имеющиеся ресурсы</value>
   </data>
   <data name="EUROCUP2014_FAST_REFLEX" xml:space="preserve">
     <value>Быстрая реакция</value>
@@ -243,6 +258,9 @@
   <data name="EUROCUP2014_HIGH_JUMPER" xml:space="preserve">
     <value>Прыгун</value>
   </data>
+  <data name="EUROCUP2014_INCOMMING_RESOURCES" xml:space="preserve">
+    <value>Сбор ресурсов</value>
+  </data>
   <data name="EUROCUP2014_MATCH_FIVE" xml:space="preserve">
     <value>Четвертьфинал</value>
   </data>
@@ -270,11 +288,23 @@
   <data name="EUROCUP2014_PENALTY" xml:space="preserve">
     <value>Пенальти</value>
   </data>
+  <data name="EUROCUP2014_PRODUCE_BUFFS" xml:space="preserve">
+    <value>Изготовить бафы</value>
+  </data>
   <data name="EUROCUP2014_RED_CARD" xml:space="preserve">
     <value>Красная карточка</value>
   </data>
   <data name="EUROCUP2014_RED_COLOR" xml:space="preserve">
     <value>Красный цвет</value>
+  </data>
+  <data name="EUROCUP2014_RESOURCES" xml:space="preserve">
+    <value>Оставшиеся ресурсы</value>
+  </data>
+  <data name="EUROCUP2014_RESULTS" xml:space="preserve">
+    <value>Результаты</value>
+  </data>
+  <data name="EUROCUP2014_SEARCH_IN_DAY" xml:space="preserve">
+    <value>Укажите количество поисков в день.</value>
   </data>
   <data name="EUROCUP2014_SHOE" xml:space="preserve">
     <value>Ботинок</value>
@@ -284,6 +314,9 @@
   </data>
   <data name="EUROCUP2014_SLIDING_TACKLE" xml:space="preserve">
     <value>Подкат</value>
+  </data>
+  <data name="EUROCUP2014_SOLUTION" xml:space="preserve">
+    <value>Прохождение</value>
   </data>
   <data name="EUROCUP2014_STUDS" xml:space="preserve">
     <value>Шипы</value>
@@ -320,6 +353,12 @@
   </data>
   <data name="GENERAL_VETERAN" xml:space="preserve">
     <value>Ветеран</value>
+  </data>
+  <data name="LONG_TREASURE_SEARCH" xml:space="preserve">
+    <value>Долгий поиск ресурсов</value>
+  </data>
+  <data name="MEDIUM_TREASURE_SEARCH" xml:space="preserve">
+    <value>Средний поиск ресурсов</value>
   </data>
   <data name="MESSAGE_DELETE_CAMP" xml:space="preserve">
     <value>Удалить?</value>
@@ -666,6 +705,12 @@
   <data name="RESOURCE_WHEEL" xml:space="preserve">
     <value>Колёса</value>
   </data>
+  <data name="SHORT_TREASURE_SEARCH" xml:space="preserve">
+    <value>Быстрый поиск ресурсов</value>
+  </data>
+  <data name="String1" xml:space="preserve">
+    <value />
+  </data>
   <data name="TITLE_CONFIRM" xml:space="preserve">
     <value>Подтверждение</value>
   </data>
@@ -953,5 +998,8 @@
   </data>
   <data name="UNIT_WOLF_PACKLOADER" xml:space="preserve">
     <value>Волк вожак</value>
+  </data>
+  <data name="VERY_LONG_TREASURE_SEARCH" xml:space="preserve">
+    <value>Очень долгий поиск ресурсов</value>
   </data>
 </root>

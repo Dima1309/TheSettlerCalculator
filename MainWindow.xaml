@@ -834,8 +834,8 @@
             <StackPanel>
                 <Expander IsExpanded="True">
                     <Expander.Header>
-                        <Label Content="Имеющиеся ресурсы"></Label>
-                    </Expander.Header>
+                            <Label Content="{Binding Source=EUROCUP2014_EXISTING_RESOURCES, Converter={StaticResource resourceConverter}}" FontWeight="Bold"/>
+                        </Expander.Header>
                     <StackPanel Orientation="Vertical">
                 <ItemsControl ItemsSource="{Binding EuroCupModel.Resources, ElementName=Win}" >
                     <ItemsControl.ItemsPanel>
@@ -879,6 +879,59 @@
                         </ItemsControl>
                     </StackPanel>
                 </Expander>
+                    <Expander>
+                        <Expander.Header>
+                            <StackPanel Orientation="Vertical">
+                                <Label Content="{Binding Source=EUROCUP2014_INCOMMING_RESOURCES, Converter={StaticResource resourceConverter}}" FontWeight="Bold"/>
+                                <ItemsControl ItemsSource="{Binding EuroCupModel.IncommingResourcesList, ElementName=Win}">
+                                    <ItemsControl.ItemsPanel>
+                                        <ItemsPanelTemplate>
+                                            <StackPanel Orientation="Horizontal"/>
+                                        </ItemsPanelTemplate>
+                                    </ItemsControl.ItemsPanel>
+                                    <ItemsControl.ItemTemplate>
+                                        <DataTemplate>
+                                            <Grid>
+                                                <Grid.RowDefinitions>
+                                                    <RowDefinition Height="*"/>
+                                                    <RowDefinition Height="*"/>
+                                                </Grid.RowDefinitions>
+                                                <EuroCupComponents:ResourceControl Grid.Column="0" Grid.Row="0"  Resource="{Binding Resource}" VerticalAlignment="Center"/>
+                                                <Label Grid.Column="0" Grid.Row="1" Content="{Binding Count}" ContentStringFormat="0.###" VerticalAlignment="Bottom" HorizontalAlignment="Center" />
+                                            </Grid>
+                                        </DataTemplate>
+                                    </ItemsControl.ItemTemplate>
+                                </ItemsControl>
+                            </StackPanel>
+                        </Expander.Header>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                            </Grid.RowDefinitions>
+                            <Label Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="2" Content="{Binding Source=EUROCUP2014_SEARCH_IN_DAY, Converter={StaticResource resourceConverter}}"/>                            
+                            
+                            <Label Grid.Column="0" Grid.Row="1" Content="{Binding Source=SHORT_TREASURE_SEARCH, Converter={StaticResource resourceConverter}}"/>
+                            <Label Grid.Column="0" Grid.Row="2" Content="{Binding Source=MEDIUM_TREASURE_SEARCH, Converter={StaticResource resourceConverter}}"/>
+                            <Label Grid.Column="0" Grid.Row="3" Content="{Binding Source=LONG_TREASURE_SEARCH, Converter={StaticResource resourceConverter}}"/>
+                            <Label Grid.Column="0" Grid.Row="4" Content="{Binding Source=VERY_LONG_TREASURE_SEARCH, Converter={StaticResource resourceConverter}}"/>
+                            <Label Grid.Column="0" Grid.Row="5" Content="{Binding Source=COLLECTIABLE_SEARCH, Converter={StaticResource resourceConverter}}"/>
+
+                            <TextBox Grid.Column="1" Grid.Row="1" Width="50" Text="{Binding EuroCupModel.IncomingResources.ShortSearchInDay, ElementName=Win}"/>
+                            <TextBox Grid.Column="1" Grid.Row="2" Width="50" Text="{Binding EuroCupModel.IncomingResources.MediumSearchInDay, ElementName=Win}"/>
+                            <TextBox Grid.Column="1" Grid.Row="3" Width="50" Text="{Binding EuroCupModel.IncomingResources.LongSearchInDay, ElementName=Win}"/>
+                            <TextBox Grid.Column="1" Grid.Row="4" Width="50" Text="{Binding EuroCupModel.IncomingResources.VeryLongSearchInDay, ElementName=Win}"/>
+                            <TextBox Grid.Column="1" Grid.Row="5" Width="50" Text="{Binding EuroCupModel.IncomingResources.CollectItemsInDay, ElementName=Win}"/>
+                        </Grid>
+                    </Expander>
                 <Expander>
                         <Expander.Header>
                             <StackPanel Orientation="Vertical">
@@ -944,8 +997,102 @@
                             <Button Content="{Binding Source=BUTTON_ADD, Converter={StaticResource resourceConverter}}" Click="ButtonAddEuroCupCamp_Click" HorizontalAlignment="Left"/>
                         </StackPanel>
                 </Expander>
-                    <Button HorizontalAlignment="Left" Click="ButtonEuroCupCalculate_Click">Подобрать наилучший вариант</Button>
-            </StackPanel>
+                    <Button HorizontalAlignment="Left" Click="ButtonEuroCupCalculate_Click"  Content="{Binding Source=EUROCUP2014_CALCULATE, Converter={StaticResource resourceConverter}}"/>
+                    <Label Content="{Binding Source=EUROCUP2014_RESULTS, Converter={StaticResource resourceConverter}}" FontWeight="Bold"/>
+                    <ComboBox ItemsSource="{Binding EuroCupModel.Results, ElementName=Win}" SelectedItem="{Binding EuroCupModel.Result, ElementName=Win}" HorizontalAlignment="Left"> 
+                        <ComboBox.ItemTemplate>
+                            <DataTemplate>
+                                <StackPanel Orientation="Horizontal">
+                                    <Label Content="{Binding Time}" ContentStringFormat="0.#### дня" VerticalAlignment="Center" Width="100"/>
+                                    <ItemsControl ItemsSource="{Binding ProducedBuffs}">
+                                        <ItemsControl.ItemsPanel>
+                                            <ItemsPanelTemplate>
+                                                <StackPanel Orientation="Horizontal" />
+                                            </ItemsPanelTemplate>
+                                        </ItemsControl.ItemsPanel>
+                                        <ItemsControl.ItemTemplate>
+                                            <DataTemplate>
+                                                <StackPanel Orientation="Horizontal">
+                                                    <EuroCupComponents:BuffControl Buff="{Binding Buff}"/>
+                                                    <Label Content="{Binding Count}" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                                                </StackPanel>
+                                            </DataTemplate>
+                                        </ItemsControl.ItemTemplate>
+                                    </ItemsControl>
+                                </StackPanel>
+                            </DataTemplate>
+                        </ComboBox.ItemTemplate>
+                    </ComboBox>
+                    <StackPanel Orientation="Vertical" Visibility="{Binding EuroCupModel.Result, ElementName=Win, Converter={StaticResource objectVisibilityConverter}}">
+                    <Label Content="{Binding Source=EUROCUP2014_CALCULATION_WARNING, Converter={StaticResource resourceConverter}}" FontWeight="Bold" Foreground="Red"/>
+                    <Label Content="{Binding Source=EUROCUP2014_PRODUCE_BUFFS, Converter={StaticResource resourceConverter}}" />
+                    <ItemsControl ItemsSource="{Binding EuroCupModel.Result.ProducedBuffs, ElementName=Win}">
+                        <ItemsControl.ItemsPanel>
+                            <ItemsPanelTemplate>
+                                <StackPanel Orientation="Horizontal" />
+                            </ItemsPanelTemplate>
+                        </ItemsControl.ItemsPanel>
+                        <ItemsControl.ItemTemplate>
+                            <DataTemplate>
+                                <StackPanel Orientation="Horizontal">
+                                    <EuroCupComponents:BuffControl Buff="{Binding Buff}"/>
+                                    <Label Content="{Binding Count}" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                                </StackPanel>
+                            </DataTemplate>
+                        </ItemsControl.ItemTemplate>
+                    </ItemsControl>
+                    <Label Content="{Binding Source=EUROCUP2014_SOLUTION, Converter={StaticResource resourceConverter}}" />
+                        <ItemsControl ItemsSource="{Binding EuroCupModel.Result.Solution, ElementName=Win}">
+                            <ItemsControl.ItemTemplate>
+                                <DataTemplate>
+                                    <Expander>
+                                        <Expander.Header>
+                                            <StackPanel Orientation="Vertical">
+                                                <Label Content="{Binding Camp.Name}"/>
+                                                <StackPanel Orientation="Horizontal">
+                                                <ItemsControl ItemsSource="{Binding Camp.Skills}">
+                                                        <ItemsControl.ItemsPanel>
+                                                            <ItemsPanelTemplate>
+                                                                <StackPanel Orientation="Horizontal" />
+                                                            </ItemsPanelTemplate>
+                                                        </ItemsControl.ItemsPanel>
+                                                        <ItemsControl.ItemTemplate>
+                                                            <DataTemplate>
+                                                                <StackPanel Orientation="Vertical">
+                                                                    <EuroCupComponents:SkillControl Skill="{Binding Skill}"/>
+                                                                    <Label Content="{Binding Count}" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                                                                </StackPanel>
+                                                            </DataTemplate>
+                                                        </ItemsControl.ItemTemplate>
+                                                    </ItemsControl>
+                                                </StackPanel>
+                                            </StackPanel>
+                                        </Expander.Header>
+                                        <StackPanel Orientation="Horizontal" Margin="40,0,0,0">
+                                            <Label Content="{Binding Source=EUROCUP2014_APPLY_BUFFS, Converter={StaticResource resourceConverter}}" VerticalAlignment="Center"/>
+                                            <ItemsControl ItemsSource="{Binding Buffs}">
+                                                <ItemsControl.ItemsPanel>
+                                                    <ItemsPanelTemplate>
+                                                        <StackPanel Orientation="Horizontal" />
+                                                    </ItemsPanelTemplate>
+                                                </ItemsControl.ItemsPanel>
+                                                <ItemsControl.ItemTemplate>
+                                                    <DataTemplate>
+                                                        <StackPanel>
+                                                            <EuroCupComponents:BuffControl Buff="{Binding Buff}" HorizontalAlignment="Left"/>
+                                                            <Label Content="{Binding Count}" HorizontalAlignment="Center"/>
+                                                        </StackPanel>
+                                                    </DataTemplate>
+                                                </ItemsControl.ItemTemplate>
+                                            </ItemsControl>
+                                        </StackPanel>
+                                    </Expander>
+                                </DataTemplate>
+                            </ItemsControl.ItemTemplate>
+                        </ItemsControl>
+
+                    </StackPanel>
+                </StackPanel>
             </ScrollViewer>
         </TabItem>
 	</TabControl>
