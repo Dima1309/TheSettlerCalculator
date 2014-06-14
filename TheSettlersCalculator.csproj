@@ -87,6 +87,7 @@
     </Compile>
     <Compile Include="EuroCup2014\Expressions\BuffCountExpression.cs" />
     <Compile Include="EuroCup2014\Expressions\ResourceCountExpression.cs" />
+    <Compile Include="EuroCup2014\Expressions\ResourceInStorageExpression.cs" />
     <Compile Include="EuroCup2014\Expressions\TimeExpression.cs" />
     <Compile Include="EuroCup2014\IncomingResources.cs" />
     <Compile Include="EuroCup2014\Quest.cs" />

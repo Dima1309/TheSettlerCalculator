@@ -187,13 +187,13 @@
     <value>Банановая кожура</value>
   </data>
   <data name="EUROCUP2014_BICYCLE_KICK" xml:space="preserve">
-    <value>Удар ножницы</value>
+    <value>Удар "ножницами"</value>
   </data>
   <data name="EUROCUP2014_CALCULATE" xml:space="preserve">
     <value>Подобрать наилучший вариант</value>
   </data>
   <data name="EUROCUP2014_CALCULATION_WARNING" xml:space="preserve">
-    <value>Наилучший вариант может меняться по мере накопления ресурсов. Не стоит торопиться делать бафы заранее.</value>
+    <value>Наилучший вариант может меняться по мере накопления ресурсов. Не стоит торопиться и делать бафы заранее.</value>
   </data>
   <data name="EUROCUP2014_CAMPS" xml:space="preserve">
     <value>Матч</value>
@@ -217,7 +217,7 @@
     <value>Дриблер</value>
   </data>
   <data name="EUROCUP2014_ELASTIC_SPRING" xml:space="preserve">
-    <value>Пружина</value>
+    <value>Упругая пружина</value>
   </data>
   <data name="EUROCUP2014_EXISTING_RESOURCES" xml:space="preserve">
     <value>Имеющиеся ресурсы</value>
@@ -241,7 +241,7 @@
     <value>Нападающий</value>
   </data>
   <data name="EUROCUP2014_FOUL" xml:space="preserve">
-    <value>Фол</value>
+    <value>Нарушение</value>
   </data>
   <data name="EUROCUP2014_GOAL_CAMP" xml:space="preserve">
     <value>Вратарь</value>
@@ -300,6 +300,9 @@
   <data name="EUROCUP2014_RESOURCES" xml:space="preserve">
     <value>Оставшиеся ресурсы</value>
   </data>
+  <data name="EUROCUP2014_RESOURCES_IN_STORAGE" xml:space="preserve">
+    <value>Ресурсы, которые останутся на складе</value>
+  </data>
   <data name="EUROCUP2014_RESULTS" xml:space="preserve">
     <value>Результаты</value>
   </data>
@@ -307,10 +310,10 @@
     <value>Укажите количество поисков в день.</value>
   </data>
   <data name="EUROCUP2014_SHOE" xml:space="preserve">
-    <value>Ботинок</value>
+    <value>Бутса</value>
   </data>
   <data name="EUROCUP2014_SHOULDER_PAD" xml:space="preserve">
-    <value>Защита плеч</value>
+    <value>Наплечник</value>
   </data>
   <data name="EUROCUP2014_SLIDING_TACKLE" xml:space="preserve">
     <value>Подкат</value>
@@ -325,7 +328,7 @@
     <value>Перехват</value>
   </data>
   <data name="EUROCUP2014_TELESCOPE" xml:space="preserve">
-    <value>Телескоп</value>
+    <value>Зрительная труба</value>
   </data>
   <data name="EUROCUP2014_TWISTER" xml:space="preserve">
     <value>Закрученный мяч</value>

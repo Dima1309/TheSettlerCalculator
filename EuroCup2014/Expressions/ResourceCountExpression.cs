@@ -8,8 +8,8 @@ namespace TheSettlersCalculator.EuroCup2014.Expressions
 	internal class ResourceCountExpression
 	{
 		#region Fields
-		private int m_existingResource = 0;
-		private List<KeyValuePair<int, BuffCountExpression>> m_buffs = new List<KeyValuePair<int,BuffCountExpression>>();
+		protected int m_existingResource = 0;
+		protected List<KeyValuePair<int, BuffCountExpression>> m_buffs = new List<KeyValuePair<int, BuffCountExpression>>();
 		#endregion
 
 		#region Properties
@@ -26,7 +26,7 @@ namespace TheSettlersCalculator.EuroCup2014.Expressions
 			m_buffs.Add(new KeyValuePair<int, BuffCountExpression>(resourceCountInBuff, buffExpression));
 		}
 
-		public double Calculate(int[] x)
+		public virtual double Calculate(int[] x)
 		{
 			double result = 0;
 

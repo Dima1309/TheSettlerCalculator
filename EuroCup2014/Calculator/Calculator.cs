@@ -15,13 +15,16 @@ namespace TheSettlersCalculator.EuroCup2014.Calculator
 			#region Fields
 			private double m_time;
 			private int[] m_result;
+			private TimeExpression m_timeStorageCostExpression;
+			private double? m_timeStorageCost;
 			#endregion
 
 			#region Constructor
-			internal InternalResult(double time, int[] result)
+			internal InternalResult(double time, int[] result, TimeExpression timeStorageCostExpression)
 			{
 				m_time = time;
 				m_result = result;
+				m_timeStorageCostExpression = timeStorageCostExpression;
 			}
 			#endregion
 
@@ -37,12 +40,31 @@ namespace TheSettlersCalculator.EuroCup2014.Calculator
 				get { return m_result; }
 				set { m_result = value; }
 			}
+
+			internal double TimeStorageCost
+			{
+				get
+				{
+					if (!m_timeStorageCost.HasValue)
+					{
+						m_timeStorageCostExpression.SetTime(m_time);
+						m_timeStorageCost = m_timeStorageCostExpression.Calculate(m_result);
+					}
+
+					return m_timeStorageCost.Value;
+				}
+			}
 			#endregion
 
 			#region Methods
 			public int CompareTo(InternalResult other)
 			{
-				return m_time.CompareTo(other.m_time);
+				int result = m_time.CompareTo(other.m_time);
+				if (result == 0 && m_time == 0)
+				{
+					result = TimeStorageCost.CompareTo(other.TimeStorageCost);
+				}
+				return result;
 			}
 			#endregion
 		}
@@ -92,10 +114,17 @@ namespace TheSettlersCalculator.EuroCup2014.Calculator
 			
 			SortedDictionary<string, BuffCountExpression> buffExpressions = PrepareBuffExpressions(skillsWithCount);			
 			SortedDictionary<string, ResourceCountExpression> resourceExpression = PrepareResourceExpressions(buffExpressions);
-			TimeExpression timeExpression = new TimeExpression();
+			SortedDictionary<string, ResourceInStorageExpression> resourceInStorageExpression = PrepareResourceInStorageExpressions(buffExpressions, incomingResources);
+			TimeExpression timeExpression = new TimeExpression();			
 			foreach(KeyValuePair<string, ResourceCountExpression> pair in resourceExpression)
 			{
 				timeExpression.Add(incomingResources[pair.Key], pair.Value);
+			}
+
+			TimeExpression timeStorageCostExpression = new TimeExpression();
+			foreach (KeyValuePair<string, ResourceInStorageExpression> pair in resourceInStorageExpression)
+			{
+				timeStorageCostExpression.Add(incomingResources[pair.Key], pair.Value);
 			}
 
 			double totalVariantCount = 1;
@@ -119,13 +148,13 @@ namespace TheSettlersCalculator.EuroCup2014.Calculator
 
 				if (internalResults.Count < MAX_RESULTS)
 				{
-					InternalResult newResult = new InternalResult(time, (int[])skillCount.Clone());
+					InternalResult newResult = new InternalResult(time, (int[])skillCount.Clone(), timeStorageCostExpression);
 					AddResult(internalResults, newResult);
 				}
 				else if (time < internalResults[MAX_RESULTS-1].Time)
 				{
 					internalResults.RemoveAt(MAX_RESULTS - 1);
-					InternalResult newResult = new InternalResult(time, (int[])skillCount.Clone());
+					InternalResult newResult = new InternalResult(time, (int[])skillCount.Clone(), timeStorageCostExpression);
 					AddResult(internalResults, newResult);
 				}
 			}
@@ -135,10 +164,15 @@ namespace TheSettlersCalculator.EuroCup2014.Calculator
 				AdjastSolutions(skillsWithCount, internalResults, timeExpression);
 			}
 
-			return PrepareResults(camps, skillsWithCount, internalResults, buffExpressions);			
+			return PrepareResults(camps, skillsWithCount, internalResults, buffExpressions, resourceInStorageExpression);			
 		}
 
-		private static List<Result> PrepareResults(IEnumerable<Camp> camps, List<SkillWithCount> skillsWithCount, List<InternalResult> internalResults, SortedDictionary<string, BuffCountExpression> buffExpressions)
+		private static List<Result> PrepareResults(
+			IEnumerable<Camp> camps, 
+			List<SkillWithCount> skillsWithCount, 
+			List<InternalResult> internalResults, 
+			SortedDictionary<string, BuffCountExpression> buffExpressions,
+			SortedDictionary<string, ResourceInStorageExpression> resourceInStorageExpression)
 		{
 			List<Result> result = new List<Result>(internalResults.Count);
 			for (int i = 0; i < internalResults.Count; i++)
@@ -151,6 +185,14 @@ namespace TheSettlersCalculator.EuroCup2014.Calculator
 					newResult.ProducedBuffs.Add(new BuffWithCount(Buffs.BuffList[pair.Key], count));
 				}
 				newResult.ProducedBuffs.Sort(new ComparerByName());
+
+				foreach (KeyValuePair<string, ResourceInStorageExpression> pair in resourceInStorageExpression)
+				{
+					pair.Value.Time = internalResults[i].Time;
+					int count = (int)pair.Value.Calculate(internalResults[i].Solution);
+					newResult.Resources.Add(new ResourceWithCount(Resources.ResourceList[pair.Key], count));
+				}
+				newResult.Resources.Sort(new ComparerByName());
 				bool skipResult = false;
 
 				//Key: skill_buff, remain_count
@@ -424,7 +466,7 @@ namespace TheSettlersCalculator.EuroCup2014.Calculator
 
 		private SortedDictionary<string, ResourceCountExpression> PrepareResourceExpressions(SortedDictionary<string, BuffCountExpression> buffExpressions)
 		{
-			 SortedDictionary<string, ResourceCountExpression> result= new SortedDictionary<string, ResourceCountExpression>();			
+			SortedDictionary<string, ResourceCountExpression> result= new SortedDictionary<string, ResourceCountExpression>();			
 			
 			foreach (KeyValuePair<string, BuffCountExpression> pair in buffExpressions)
 			{
@@ -451,6 +493,52 @@ namespace TheSettlersCalculator.EuroCup2014.Calculator
 				if (result.TryGetValue(resource.Resource.Id, out expression))
 				{
 					expression.ExistingResource = resource.Count;
+				}
+			}
+
+			return result;
+		}
+
+		private SortedDictionary<string, ResourceInStorageExpression> PrepareResourceInStorageExpressions(
+			SortedDictionary<string, BuffCountExpression> buffExpressions,
+			IDictionary<string, double> incomingResources)
+		{
+			SortedDictionary<string, ResourceInStorageExpression> result = new SortedDictionary<string, ResourceInStorageExpression>();
+
+			foreach (KeyValuePair<string, BuffCountExpression> pair in buffExpressions)
+			{
+				Buff buff = Buffs.BuffList[pair.Key];
+
+				foreach (ResourceWithCount resource in buff.ProvisionHouseCost)
+				{
+					ResourceInStorageExpression expression = null;
+
+					if (!result.TryGetValue(resource.Resource.Id, out expression))
+					{
+						expression = new ResourceInStorageExpression();
+						result.Add(resource.Resource.Id, expression);
+					}
+
+					expression.AddBuff(resource.Count, pair.Value);
+				}
+
+			}
+
+			foreach (ResourceWithCount resource in m_existingResources)
+			{
+				ResourceInStorageExpression expression = null;
+				if (result.TryGetValue(resource.Resource.Id, out expression))
+				{
+					expression.ExistingResource = resource.Count;
+				}
+			}
+
+			foreach(KeyValuePair<string, double> pair in incomingResources)
+			{
+				ResourceInStorageExpression expression = null;
+				if (result.TryGetValue(pair.Key, out expression))
+				{
+					expression.IncommingRate = pair.Value;
 				}
 			}
 

@@ -12,9 +12,21 @@ namespace TheSettlersCalculator.EuroCup2014.Expressions
 		#endregion
 
 		#region Methods
-		public void Add(double incommingResource, ResourceCountExpression expression)
+		internal void SetTime(double time)
 		{
-			m_expressions.Add(new KeyValuePair<double, ResourceCountExpression>(incommingResource, expression));
+			foreach (KeyValuePair<double, ResourceCountExpression> pair in m_expressions)
+			{
+				ResourceInStorageExpression exp = pair.Value as ResourceInStorageExpression;
+				if (exp != null)
+				{
+					exp.Time = time;
+				}
+			}
+		}
+
+		public void Add(double incommingResourceRate, ResourceCountExpression expression)
+		{
+			m_expressions.Add(new KeyValuePair<double, ResourceCountExpression>(incommingResourceRate, expression));
 		}
 
 		public double Calculate(int[] x)

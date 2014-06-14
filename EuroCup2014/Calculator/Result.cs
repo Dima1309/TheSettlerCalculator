@@ -11,6 +11,7 @@ namespace TheSettlersCalculator.EuroCup2014.Calculator
 		private double m_time;
 		private List<BuffWithCount> m_producedBuffs = new List<BuffWithCount>();
 		private List<CampDisarmBuffs> m_solution = new List<CampDisarmBuffs>();
+		private List<ResourceWithCount> m_resources = new List<ResourceWithCount>();
 		#endregion
 
 		#region Constructor
@@ -29,6 +30,11 @@ namespace TheSettlersCalculator.EuroCup2014.Calculator
 		public List<BuffWithCount> ProducedBuffs
 		{
 			get { return m_producedBuffs;  }
+		}
+
+		public List<ResourceWithCount> Resources
+		{
+			get { return m_resources; }
 		}
 
 		public List<CampDisarmBuffs> Solution

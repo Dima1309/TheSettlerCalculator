@@ -268,7 +268,7 @@ namespace TheSettlersCalculator.Properties {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на Удар ножницы.
+        ///   Ищет локализованную строку, похожую на Удар &quot;ножницами&quot;.
         /// </summary>
         public static string EUROCUP2014_BICYCLE_KICK {
             get {
@@ -286,7 +286,7 @@ namespace TheSettlersCalculator.Properties {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на Наилучший вариант может меняться по мере накопления ресурсов. Не стоит торопиться делать бафы заранее..
+        ///   Ищет локализованную строку, похожую на Наилучший вариант может меняться по мере накопления ресурсов. Не стоит торопиться и делать бафы заранее..
         /// </summary>
         public static string EUROCUP2014_CALCULATION_WARNING {
             get {
@@ -358,7 +358,7 @@ namespace TheSettlersCalculator.Properties {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на Пружина.
+        ///   Ищет локализованную строку, похожую на Упругая пружина.
         /// </summary>
         public static string EUROCUP2014_ELASTIC_SPRING {
             get {
@@ -430,7 +430,7 @@ namespace TheSettlersCalculator.Properties {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на Фол.
+        ///   Ищет локализованную строку, похожую на Нарушение.
         /// </summary>
         public static string EUROCUP2014_FOUL {
             get {
@@ -610,6 +610,15 @@ namespace TheSettlersCalculator.Properties {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на Ресурсы, которые останутся на складе.
+        /// </summary>
+        public static string EUROCUP2014_RESOURCES_IN_STORAGE {
+            get {
+                return ResourceManager.GetString("EUROCUP2014_RESOURCES_IN_STORAGE", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на Результаты.
         /// </summary>
         public static string EUROCUP2014_RESULTS {
@@ -628,7 +637,7 @@ namespace TheSettlersCalculator.Properties {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на Ботинок.
+        ///   Ищет локализованную строку, похожую на Бутса.
         /// </summary>
         public static string EUROCUP2014_SHOE {
             get {
@@ -637,7 +646,7 @@ namespace TheSettlersCalculator.Properties {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на Защита плеч.
+        ///   Ищет локализованную строку, похожую на Наплечник.
         /// </summary>
         public static string EUROCUP2014_SHOULDER_PAD {
             get {
@@ -682,7 +691,7 @@ namespace TheSettlersCalculator.Properties {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на Телескоп.
+        ///   Ищет локализованную строку, похожую на Зрительная труба.
         /// </summary>
         public static string EUROCUP2014_TELESCOPE {
             get {

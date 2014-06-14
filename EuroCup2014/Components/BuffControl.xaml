@@ -34,31 +34,6 @@
                             </DataTemplate>
                         </ItemsControl.ItemTemplate>
                     </ItemsControl>
-
-                    <Label Content="Универсальная мастерская редкостей" FontWeight="Bold"></Label>
-                    <ItemsControl ItemsSource="{Binding Buff.RarityProvisionHouseCost}">
-                        <ItemsControl.ItemsPanel>
-                            <ItemsPanelTemplate>
-                                <StackPanel Orientation="Horizontal" />
-                            </ItemsPanelTemplate>
-                        </ItemsControl.ItemsPanel>
-                        <ItemsControl.ItemTemplate>
-                            <DataTemplate>
-                                <Grid>
-                                    <Grid.RowDefinitions>
-                                        <RowDefinition Height="40"/>
-                                        <RowDefinition Height="*"/>
-                                    </Grid.RowDefinitions>
-                                    <Grid.ColumnDefinitions>
-                                        <ColumnDefinition Width="*"/>
-                                    </Grid.ColumnDefinitions>
-                                    <EuroCupComponents:ResourceControl Grid.Column="0" Grid.Row="0" HorizontalAlignment="Center" Resource="{Binding Resource}"/>
-                                    <Label Content="{Binding Count}" Grid.Column="0" Grid.Row="1" HorizontalAlignment="Center"></Label>
-                                </Grid>
-                            </DataTemplate>
-                        </ItemsControl.ItemTemplate>
-                    </ItemsControl>
-
                 </StackPanel>
             </Image.ToolTip>
         </Image>

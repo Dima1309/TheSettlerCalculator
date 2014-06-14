@@ -829,7 +829,7 @@
                 </StackPanel>
             </ScrollViewer>
         </TabItem>
-        <TabItem Header="Euro Cup 2014">
+        <TabItem Header="Чемпионат мира по футболу 2014">
             <ScrollViewer>
             <StackPanel>
                 <Expander IsExpanded="True">
@@ -1041,7 +1041,28 @@
                             </DataTemplate>
                         </ItemsControl.ItemTemplate>
                     </ItemsControl>
-                    <Label Content="{Binding Source=EUROCUP2014_SOLUTION, Converter={StaticResource resourceConverter}}" />
+                        <Label Content="{Binding Source=EUROCUP2014_RESOURCES_IN_STORAGE, Converter={StaticResource resourceConverter}}" />
+                        <ItemsControl ItemsSource="{Binding EuroCupModel.Result.Resources, ElementName=Win}">
+                            <ItemsControl.ItemsPanel>
+                                <ItemsPanelTemplate>
+                                    <StackPanel Orientation="Horizontal"/>
+                                </ItemsPanelTemplate>
+                            </ItemsControl.ItemsPanel>
+                            <ItemsControl.ItemTemplate>
+                                <DataTemplate>
+                                    <Grid>
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="*"/>
+                                            <RowDefinition Height="*"/>
+                                        </Grid.RowDefinitions>
+                                        <EuroCupComponents:ResourceControl Grid.Column="0" Grid.Row="0"  Resource="{Binding Resource}" VerticalAlignment="Center"/>
+                                        <Label Grid.Column="0" Grid.Row="1" Content="{Binding Count}" VerticalAlignment="Bottom" HorizontalAlignment="Center" />
+                                    </Grid>
+                                </DataTemplate>
+                            </ItemsControl.ItemTemplate>
+                        </ItemsControl>
+
+                        <Label Content="{Binding Source=EUROCUP2014_SOLUTION, Converter={StaticResource resourceConverter}}" />
                         <ItemsControl ItemsSource="{Binding EuroCupModel.Result.Solution, ElementName=Win}">
                             <ItemsControl.ItemTemplate>
                                 <DataTemplate>
