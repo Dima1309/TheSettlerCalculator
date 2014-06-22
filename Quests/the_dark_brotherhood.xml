@@ -155,7 +155,7 @@
     </camp>
     <camp>
       <name>6</name>
-      <type>Normal</type>
+      <type>Boss</type>
       <wintime>20</wintime>
       <sector>3</sector>
       <left>658</left>

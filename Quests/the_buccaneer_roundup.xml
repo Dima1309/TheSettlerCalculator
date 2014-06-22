@@ -4,13 +4,13 @@
   <map>Quests\Maps\the_buccaneer_roundup.jpg</map>
   <icon>Quests\Icons\the_buccaneer_roundup.png</icon>
   <enemies>
+    <enemy>CANNONEER</enemy>
     <enemy>CALTROP</enemy>
     <enemy>DECKSCRUBBER</enemy>
     <enemy>SABER_RATTLER</enemy>
     <enemy>CRAZY_COOK</enemy>
     <enemy>GUNMAN</enemy>
     <enemy>PETTY_OFFICER_2ND_CLASS</enemy>
-    <enemy>CANNONEER</enemy>
   </enemies>
   <camps>
     <camp>
